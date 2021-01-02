@@ -1,0 +1,9 @@
+# prompt stuff
+scan_timeout = 10
+
+[directory]
+truncation_length = 5
+truncation_symbol = "~"
+
+[package]
+disabled = true

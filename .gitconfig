@@ -1,0 +1,13 @@
+[user]
+	email = derickboss1@gmail.com
+	name = Derick Tseng
+[push]
+	default = simple
+	followTags = true
+[pull]
+	rebase = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

@@ -1,0 +1,53 @@
+#!/bin/sh
+
+# if nvim exists, use that, otherwise, default to vim
+editor="vim"
+if [[ ! -z $(command -v nvim) ]];then
+    editor="nvim"
+    alias vim=$editor
+    alias nvim=$editor
+fi
+
+export EDITOR=$editor
+export VISUAL=$editor
+export TERMCMD=$TERM
+export TERMINAL=$TERM
+export GNUMAKEFLAGS=-j$(nproc)
+export PERL_DESTRUCT_LEVEL=2
+export LC_ADDRESS="C"
+export PATH=$PATH:$HOME/.local/bin
+
+# fzf settings
+export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git --color=always'
+export FZF_DEFAULT_OPTS="--ansi"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# hardware video acceleration firefox
+export MOZ_X11_EGL=1
+
+alias l="/bin/ls --group-directories-first --color=auto"
+alias ls="/bin/ls --group-directories-first --color=auto"
+alias ll="/bin/ls -lh --group-directories-first --color=auto"
+alias la="/bin/ls -a --group-directories-first --color=auto"
+alias lla="/bin/ls -lah --group-directories-first --color=auto"
+alias cd="cdls"
+alias df='/usr/bin/df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+alias np="$EDITOR PKGBUILD"
+alias kh='cut -d "," -f 1 ~/.ssh/known_hosts | cut -d " " -f 1'
+alias dusch="du -Sach * | sort -rh | head -n $1"
+alias dusach="du -Sach $(pwd) | sort -rh | head -n $1"
+alias bspconfig="$EDITOR ~/.config/bspwm/bspwmrc"
+alias i3config="$EDITOR ~/.config/i3/config"
+alias zshrc="$EDITOR $HOME/.zshrc"
+alias src="source $HOME/.zshrc"
+alias vimrc="$EDITOR $HOME/.vimrc"
+alias grep="rg"
+alias open="xdg-open"
+alias locate="locate -e"
+alias gdb="gdb -tui"
+alias nnn="nnn -e"
+alias y="yay"
+alias ytdl="youtube-dl"
+alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias hd="hexdump -C"

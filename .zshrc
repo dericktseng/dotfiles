@@ -1,0 +1,77 @@
+# ZSH defaults
+autoload -Uz compinit 
+compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+
+# enable automatic change directory
+setopt  autocd autopushd pushdignoredups
+
+# complete only directories when cd (cd is aliased to cdls), ls, or mv is involved
+compdef _dirs ls
+compdef _dirs cdls
+compdef _dirs mv
+
+# zsh history
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory
+
+# imported functions and aliases from bash
+if [ -f ~/.bash_profile ]; then
+    source ~/.bash_profile
+fi
+
+for f in ~/.shellconfig/*;
+do
+    source "$f";
+done
+
+# custom keybinds
+bindkey "^[Oc" forward-word
+bindkey "^[^[[c" forward-word
+bindkey "^[Od" backward-word
+bindkey "^[^[[d" backward-word
+bindkey "^[l" forward-char
+bindkey "^[j" forward-word
+bindkey "^[h" backward-char
+bindkey "^[k" backward-word
+bindkey "^A" vi-beginning-of-line
+bindkey "^[a" vi-beginning-of-line
+bindkey "^E" vi-end-of-line
+bindkey "^[e" vi-end-of-line
+bindkey "^[[3~" delete-char # urxvt delete key
+bindkey "^[[P" delete-char # st delete key
+bindkey "^[o" forward-char
+
+# enable globbing
+setopt ksh_glob
+setopt extended_glob
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+    export EDITOR='vim'
+else
+    export EDITOR='nvim'
+fi
+
+PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
+
+source $HOME/.config/fzf/completion.zsh
+source $HOME/.config/fzf/key-bindings.zsh
+source /etc/profile.d/vte.sh
+
+# starship prompt
+eval "$(starship init zsh)"
+
+# zsh-autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+
+# zsh syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

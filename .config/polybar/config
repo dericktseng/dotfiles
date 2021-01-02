@@ -1,0 +1,327 @@
+# colors are aarrggbb
+[colors]
+background = #fefefe
+background-alt = #ecece1
+foreground = #565656
+foreground-alt = #aaaaaa
+border = #d1d1d1
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+volume = #28b5d8
+xbacklight = #0093b8
+battery = #3ea65a
+temperature = #3bbcaa
+temperature2 = #9c48f5
+
+[fonts]
+font-0 = Inconsolata Semi Expanded SemiBold:pixelsize=13;3
+font-1 = FiraCode Nerd Font:style=Bold:pixelsize=11;3
+font-2 = FiraCode Nerd Font:style=Regular:pixelsize=15;4
+font-3 = DejaVu Sans:pixelsize=13;4
+
+[bar/main]
+width = 100%
+# offset-x = 10%
+# wm-restack = i3
+wm-restack = bspwm
+override-redirect = false
+
+height = 35
+radius = 0.0
+fixed-center = true
+bottom = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+# separator = |
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+font-3 = ${fonts.font-3}
+
+underline-size = 0
+# line-color = #{colors.foreground}
+
+border-color = ${colors.border}
+border-top-size = 1
+
+module-margin = 0
+
+# modules-left = i3 bspwm
+modules-left = bspwm
+modules-center = date
+modules-right = pulseaudio xbacklight battery cputemperature gputemperature powermenu
+
+tray-position = right
+tray-padding = 0
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/bspwm]
+type = internal/bspwm
+
+; Only show workspaces defined on the same output as the bar
+; NOTE: The bspwm and XRandR monitor names must match, which they do by default.
+; But if you rename your bspwm monitors with bspc -n this option will no longer
+; behave correctly.
+; Default: true
+pin-workspaces = true
+
+; Output mode flags after focused state label
+; Default: false
+inline-mode = false
+
+; Create click handler used to focus workspace
+; Default: true
+enable-click = false
+
+; Create scroll handlers used to cycle workspaces
+; Default: true
+enable-scroll = false
+
+; Set the scroll cycle direction 
+; Default: true
+reverse-scroll = false
+
+; Use fuzzy (partial) matching on labels when assigning 
+; icons to workspaces
+; Example: code;♚ will apply the icon to all workspaces 
+; containing 'code' in the label
+; Default: false
+fuzzy-match = false
+
+; ws-icon-[0-9]+ = <label>;<icon>
+; Note that the <label> needs to correspond with the bspwm workspace name
+; Neither <label> nor <icon> can contain a semicolon (;)
+
+; Available tags:
+;   <label-monitor>
+;   <label-state> - gets replaced with <label-(focused|urgent|occupied|empty)>
+;   <label-mode> - gets replaced with <label-(monocle|tiled|fullscreen|floating|locked|sticky|private)>
+; Default: <label-state>
+format = <label-state> <label-mode>
+
+; Available tokens:
+;   %name%
+; Default: %name%
+label-monitor = %name%
+
+ws-icon-0 = 1;1
+ws-icon-1 = 2;2
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 10;0
+
+label-mode-padding = 1
+label-mode-foreground = ${colors.foreground}
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %{T2}%icon%%{T-}
+label-focused-background = ${colors.background-alt}
+label-focused-padding = 1
+label-focused-font = 8
+
+; unfocused = Inactive workspace on any monitor
+label-occupied = %{T2}%icon%%{T-}
+label-occupied-padding = 1
+label-occupied-font = 8
+
+; empty = Active workspace on unfocused monitor
+label-empty = %{T2}%icon%%{T-}
+label-empty-padding = ${self.label-focused-padding}
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-font = 8
+
+; urgent = Workspace with urgency hint set
+label-urgent = %{T2}%icon%%{T-}
+label-urgent-foreground = #ffffff
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+label-urgent-font = 8
+
+[module/i3]
+type = internal/i3
+enable-click=false
+enable-scroll=false
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+strip-wsnumbers = true
+
+; workspace display icons
+ws-icon-0 = 1;1
+ws-icon-1 = 2;2
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 0;0
+
+label-mode-padding = 1
+label-mode-foreground = ${colors.foreground}
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %{T2}%icon%%{T-}
+label-focused-background = ${colors.background-alt}
+label-focused-padding = 1
+label-focused-font = 8
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %{T2}%icon%%{T-}
+label-unfocused-padding = 1
+label-unfocused-font = 8
+
+; visible = Active workspace on unfocused monitor
+label-visible = %{T2}%icon%%{T-}
+label-visible-background = ${self.label-focused-background}
+label-visible-padding = ${self.label-focused-padding}
+label-visible-font = 8
+
+; urgent = Workspace with urgency hint set
+label-urgent = %{T2}%icon%%{T-}
+label-urgent-foreground = #ffffff
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+label-urgent-font = 8
+
+; Separator in between workspaces
+; label-separator = |
+
+
+[module/xbacklight]
+type = internal/xbacklight
+
+ramp-foreground = ${colors.xbacklight}
+label-foreground = ${colors.xbacklight}
+format = " <ramp> <label> "
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+
+[module/backlight-acpi]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight
+
+[module/eth]
+type = internal/network
+interface = enp59s0
+interval = 3.0
+
+format-connected-prefix = ""
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = "%local_ip%"
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = "%a %b %d, %Y"
+date-alt = ${self.date}
+
+time = "%I:%M %p"
+time-alt = %I:%M:%S
+format-prefix-foreground = ${colors.foreground-alt}
+label = " %date% | %time%"
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = " %{T3}<ramp-volume>%{T-} <label-volume> "
+label-volume-foreground = ${colors.volume}
+ramp-volume-foreground = ${colors.volume}
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 墳
+ramp-volume-3 = 
+label-volume = %percentage%%
+label-muted = " 婢 muted "
+label-muted-foreground = ${colors.foreground-alt}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 100
+
+format-charging = " %{A1:notify-send -t 1500 BATTERY "$(acpi -b | cut -d ',' -f 3)":}<label-charging>%{A} "
+label-charging =  %percentage%%
+label-charging-foreground = ${colors.battery}
+
+format-discharging = " %{A1:notify-send -t 1500 BATTERY "$(acpi -b | cut -d ',' -f 3)":}<ramp-capacity> <label-discharging>%{A} "
+label-discharging-foreground = ${colors.battery}
+
+format-full = " %{A1:notify-send -t 1500 BATTERY "$(acpi -b)":} 100%%{A} "
+format-full-foreground = ${colors.battery}
+label-low =  %percentage%%
+format-low = " %{A1:notify-send -t 1500 BATTERY "$(acpi -b)":}<label-low>%{A} "
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+ramp-capacity-foreground = ${colors.battery}
+
+[module/cputemperature]
+type = custom/script
+format = %{T3} %{T-}<label>
+label = %output%
+exec = $HOME/.config/polybar/thermalcpu.sh
+format-foreground = ${colors.temperature}
+interval = 5
+
+[module/gputemperature]
+type = custom/script
+format = %{T3} ﬙%{T-}<label>
+label = %output%
+exec = $HOME/.config/polybar/thermalgpu.sh
+format-foreground = ${colors.temperature2}
+interval = 5
+
+[module/powermenu]
+type = custom/text
+content = " %{T3}襤%{T-} "
+click-left = ~/.config/rofi/powermenu.sh
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini

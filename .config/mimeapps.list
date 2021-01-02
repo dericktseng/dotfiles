@@ -1,0 +1,7 @@
+[Added Associations]
+text/x-python=nvim.desktop;
+text/plain=nvim.desktop;
+
+[Default Applications]
+application/pdf=org.pwmt.zathura.desktop
+text/plain=nvim.desktop

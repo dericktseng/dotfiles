@@ -1,0 +1,104 @@
+! XTerm CONFIGURATIONS
+! ====================
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcdfilter
+! fonts
+XTerm*renderFont: true
+XTerm.vt100.faceName: xft:FiraCode Nerd Font Mono:style=Retina:antialias=true:hinting=true
+XTerm*faceSize: 13
+XTerm*utf8: 2
+XTerm*locale: true
+
+XTerm.vt100.translations: #override \n\
+  Ctrl <Key> -: smaller-vt-font() \n\
+  Ctrl <Key> =: larger-vt-font() \n\
+  Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+  Shift Ctrl <Key> V: insert-selection(CLIPBOARD) \n\
+  Shift <Btn1Up>: exec-formatted("firefox '%t'", PRIMARY)
+! Make alt key behave normally
+XTerm.vt100.metaSendsEscape: true
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+XTerm*loginshell: true
+XTerm*savelines: 10000
+XTerm*internalBorder: 20
+! URL selection
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+
+! URXVT CONFIGURATIONS
+! ====================
+URxvt*depth: 32
+URxvt*imLocale: en_US.UTF-8
+URxvt*termName: rxvt-unicode-256color
+URxvt*buffered: true
+URxvt*intensityStyles: true
+URxvt*font: xft:FiraCode Nerd Font Mono:style=Retina:antialias=true:hinting=true:size=13
+
+! URXVT PERLS
+URxvt*perl-ext-common: default,matcher,url-select,keyboard-select,clipboard
+URxvt*url-select.underline: true
+URxvt*url-select.launcher: /usr/bin/xdg-open
+URxvt*keysym.M-s: perl:keyboard-select:search
+URxvt*keysym.M-Escape: perl:keyboard-select:activate
+URxvt*keysym.M-p: perl:url-select:select_next
+URxvt*keysym.C-C: perl:clipboard:copy
+URxvt*keysym.C-V: perl:clipboard:paste
+URxvt*keysym.C-A-V: perl:clipboard:paste_escaped
+URxvt*url-launcher: /usr/bin/xdg-open
+
+URxvt*scrollBar: false
+URxvt*internalBorder: 20
+URxvt*saveLines: 10000
+URxvt*iso14755: false
+URxvt*iso14755_52: false
+URxvt*highlightColor: #b5d9ea
+URxvt*highlightTextColor: #010577
+URxvt*letterSpace: 0
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+!! COLORS
+*.foreground: #10577b
+*.background: #fdfdfe
+*.cursorColor: #88B8D1
+
+! COLORS
+! ====================
+! black
+*.color0:       #dff4ff
+*.color8:       #a7a7a7
+
+! red
+*.color1:       #ff8671
+*.color9:       #ff8671
+
+! green
+*.color2:       #88B8D1
+*.color10:      #88B8D1
+
+! yellow
+*.color3:       #499ec8
+*.color11:      #499ec8
+
+! blue
+*.color4:       #59b6ea
+*.color12:      #59b6ea
+
+! magenta
+*.color5:       #5eb8a5
+*.color13:      #5eb8a5
+
+! cyan
+*.color6:       #008e70
+*.color14:      #008e70
+
+! white
+*.color7:       #10577b
+*.color15:      #10577b
+

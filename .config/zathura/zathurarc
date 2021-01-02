@@ -1,0 +1,28 @@
+set adjust-open "best-fit"
+set font "Inconsolata 12"
+set selection-clipboard clipboard
+set statusbar-basename false
+set window-title-basename false
+set guioptions none
+set scroll-step 150
+
+set default-bg "#fefefe"
+set notification-bg "#496087"
+set notification-fg "#ffffff"
+set highlight-color "#228dff"
+set highlight-transparency 0.2
+set first-page-column 1:1
+
+set completion-bg "#dddddd"
+set completion-fg "#000000"
+set completion-highlight-bg "#8fd1e5"
+set completion-group-bg "#4e7d8c"
+
+set inputbar-fg "#ffffff"
+
+set index-bg "#dddddd"
+set index-fg "#000000"
+set index-active-bg "#8fd1e5"
+set index-active-fg "#000000"
+
+map p print
