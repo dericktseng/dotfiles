@@ -16,7 +16,7 @@ getWindowId() {
 is_full_screen=0
 checkFullscreen() {
     # Check if Active Window (the foremost window) is in fullscreen state
-    isActivWinFullscreen=`xprop -id $activ_win_id | grep NET_WM_STATE_FULLSCREEN`
+    isActivWinFullscreen=`xprop -id $activ_win_id | /bin/grep NET_WM_STATE_FULLSCREEN`
     if [[ "$isActivWinFullscreen" = *NET_WM_STATE_FULLSCREEN* ]];then
         is_full_screen=1
     else
@@ -29,7 +29,7 @@ checkFullscreen() {
 prgm=""
 checkRunningProgram() {
     # grabs the last part of WM_CLASS(STRING)
-    prgm=$(xprop -id $activ_win_id | grep 'WM_CLASS(STRING)' | sed -r 's/^.+",\s//' | sed 's/"//g')
+    prgm=$(xprop -id $activ_win_id | /bin/grep 'WM_CLASS(STRING)' | sed -r 's/^.+",\s//' | sed 's/"//g')
 }
 
 
