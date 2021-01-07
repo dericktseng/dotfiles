@@ -18,6 +18,10 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory
 
+# same colors as dircolors
+eval "$(dircolors)"
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
 # imported functions and aliases from bash
 if [ -f ~/.bash_profile ]; then
     source ~/.bash_profile
