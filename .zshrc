@@ -27,7 +27,7 @@ if [ -f ~/.bash_profile ]; then
     source ~/.bash_profile
 fi
 
-for f in ~/.shellconfig/*;
+for f in ~/.config/zsh/*;
 do
     source "$f";
 done
