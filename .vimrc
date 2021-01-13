@@ -1,5 +1,6 @@
 " preload calls
 let g:ale_disable_lsp = 1
+let g:python_host_skip_check = 1
 
 " Plugins will be downloaded under the specified directory
 call plug#begin('~/.vim/plugins')
