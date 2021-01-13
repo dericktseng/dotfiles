@@ -4,7 +4,6 @@ nerd-fonts-fira-code
 nodejs-neovim
 polybar-git
 python-pillow-simd
-starship-bin
 systemd-boot-pacman-hook
 yay-bin
 zoom
