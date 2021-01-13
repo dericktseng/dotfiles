@@ -87,3 +87,4 @@ zathura-pdf-poppler
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
+zsh-theme-powerlevel10k
