@@ -1,3 +1,7 @@
+" Python provider speedup
+let g:python_host_skip_check=1
+"let g:loaded_python3_provider=1
+
 " preload calls
 let g:ale_disable_lsp = 1
 
