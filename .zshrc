@@ -37,6 +37,7 @@ bindkey "^[Oc" forward-word
 bindkey "^[^[[c" forward-word
 bindkey "^[Od" backward-word
 bindkey "^[^[[d" backward-word
+bindkey "^j" forward-char
 bindkey "^[l" forward-char
 bindkey "^[j" forward-word
 bindkey "^[h" backward-char

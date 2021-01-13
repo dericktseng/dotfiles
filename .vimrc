@@ -1,6 +1,6 @@
 " Python provider speedup
 let g:python_host_skip_check=1
-"let g:loaded_python3_provider=1
+let g:loaded_python3_provider=1
 
 " preload calls
 let g:ale_disable_lsp = 1
@@ -12,25 +12,27 @@ call plug#begin('~/.vim/plugins')
 Plug 'lervag/vimtex'
 Plug 'ap/vim-css-color'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'dense-analysis/ale'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
 
 " List ends here. Plugins become visible to Vim after this call
 call plug#end()
 
 " Coc Extension list
-let g:coc_global_extensions = ['coc-clangd', 'coc-julia', 'coc-pairs', 'coc-ultisnips', 'coc-vimtex']
+let g:coc_global_extensions = ['coc-clangd', 'coc-julia', 'coc-pairs', 'coc-vimtex']
 
 filetype plugin indent on
 filetype plugin on
-let g:python3_host_prog = '/usr/bin/python3'
+" let g:python3_host_prog = '/usr/bin/python3'
 
 " Correct RGB escape codes for vim inside tmux
 if !has('nvim') && $TERM ==# 'screen-256color'
@@ -39,7 +41,6 @@ if !has('nvim') && $TERM ==# 'screen-256color'
 endif
 
 " Plugins Settings
-source ~/.config/nvim/ultisnips.vim
 source ~/.config/nvim/markdown-preview.vim
 source ~/.config/nvim/papercolor.vim
 source ~/.config/nvim/vimtex.vim
@@ -47,6 +48,7 @@ source ~/.config/nvim/ale.vim
 source ~/.config/nvim/lightline.vim
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/coc-pairs.vim
+source ~/.config/nvim/snipmate.vim
 
 " Disables sign gutter
 " set scl=no
