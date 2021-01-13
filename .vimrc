@@ -121,6 +121,10 @@ tnoremap <Esc> <C-\><C-n>
 " removes highlights with <C-L>
 nnoremap <C-L> :nohl<cr><C-L>
 
+" opens split screen terminal
+nnoremap <C-Q> :vs<cr>:term<cr>a
+nnoremap <C-A> :sv<cr>:term<cr>a
+
 " End personal shortcuts.
 " ================================================
 
