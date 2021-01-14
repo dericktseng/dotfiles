@@ -19,6 +19,7 @@ firefox
 fzf
 gcc
 git
+grub
 gsfonts
 hsetroot
 htop
@@ -29,6 +30,7 @@ lxappearance
 maim
 make
 materia-gtk-theme
+mtools
 neovim
 network-manager-applet
 networkmanager
@@ -39,6 +41,7 @@ noto-fonts-emoji
 npm
 openmp
 openssh
+os-prober
 papirus-icon-theme
 parcellite
 patch
