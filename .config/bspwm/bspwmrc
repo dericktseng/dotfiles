@@ -20,7 +20,8 @@ bspc config focused_border_color '#0097ff'
 
 # warping mouse cursor
 bspc config pointer_follows_monitor true
-bspc config pointer_follows_focus true
+bspc config pointer_follows_focus false
+bspc config focus_follows_pointer true
 
 #bspc rule -a Gimp desktop='^8' state=floating follow=on
 #bspc rule -a Chromium desktop='^2'
