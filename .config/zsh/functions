@@ -18,10 +18,10 @@ mvcd() {
 
 cdls() {
     builtin cd "$@" > /dev/null 2>&1 || /usr/bin/echo "no such directory $@"
-    betterls
+    lscwd
 }
 
-betterls() {
+lscwd() {
     tot=$(ls -a | wc -l)
     num=$(ls | wc -l)
     if [[ $tot -eq 2 ]]; then

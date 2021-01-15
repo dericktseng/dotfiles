@@ -15,8 +15,7 @@ zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 setopt autocd autopushd pushdignoredups
 #This is for auto ls after cding
 function chpwd() {
-    emulate -LR zsh
-    betterls
+    lscwd
 }
 
 # complete only directories when cd (cd is aliased to cdls), ls, or mv is involved
