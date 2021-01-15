@@ -8,6 +8,7 @@ if [[ ! -z $(command -v nvim) ]];then
     alias nvim=$editor
 fi
 
+export TERM=xterm-256color
 export EDITOR=$editor
 export VISUAL=$editor
 export TERMCMD=$TERM
