@@ -13,10 +13,9 @@ zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 
 # enable automatic change directory
 setopt autocd autopushd pushdignoredups
-#This is for auto ls after cding
-function chpwd() {
-    lscwd
-}
+
+# This is for auto ls after cding. lscwd is a custom function.
+chpwd_functions=(${chpwd_functions[@]} "lscwd")
 
 # complete only directories when cd (cd is aliased to cdls), ls, or mv is involved
 compdef _dirs ls
