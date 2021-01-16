@@ -17,10 +17,11 @@ mvcd() {
 }
 
 cdls() {
-    builtin cd "$@" > /dev/null 2>&1 || /usr/bin/echo "no such directory $@"
+    builtin cd "$@" > /dev/null 2>&1 || /usr/bin/echo "no such directory '$@'"
     lscwd
 }
 
+# TODO: make this function more performant and use less disk reads.
 lscwd() {
     tot=$(ls -a | wc -l)
     num=$(ls | wc -l)
