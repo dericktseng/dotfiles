@@ -23,7 +23,7 @@ Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " Coc Extension list
-let g:coc_global_extensions = ['coc-clangd', 'coc-julia', 'coc-pairs', 'coc-ultisnips', 'coc-vimtex']
+let g:coc_global_extensions = ['coc-clangd', 'coc-pairs', 'coc-ultisnips', 'coc-vimtex']
 
 filetype plugin indent on
 filetype plugin on
