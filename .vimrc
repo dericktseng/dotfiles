@@ -106,7 +106,7 @@ set so=10
 " Personal Shortcuts
 
 " includes formatted opening and closed brace for programming functions.
-inoremap {<CR> {<CR>}<Esc>O
+inoremap <C-]> {<CR>}<Esc>O
 
 " For long lines, go up or down one row rather than one line.
 nnoremap j gj
@@ -120,7 +120,6 @@ nnoremap <C-L> :nohl<cr><C-L>
 
 " End personal shortcuts.
 " ================================================
-
 
 " help menu vertical
 augroup vimrc_help
