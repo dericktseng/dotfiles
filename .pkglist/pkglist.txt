@@ -1,6 +1,5 @@
 acpi
 acpi_call
-adobe-source-han-serif-otc-fonts
 alsa-utils
 autoconf
 automake
@@ -37,6 +36,7 @@ networkmanager
 nm-connection-editor
 nodejs
 noto-fonts
+noto-fonts-cjk
 noto-fonts-emoji
 npm
 openmp
