@@ -39,8 +39,6 @@ super + alt + {q,r}
 # close and kill
 super + {e,shift + e}
 	bspc node -{c,k}
-alt + F4
-    bspc node -c
 
 {alt,super} + Tab
     bspc node -f {next,prev}.local
@@ -130,7 +128,7 @@ super + {o,i}
 
 # focus or send to the given desktop
 # super + {_,shift + }{1-9,0}
-{_,shift + }F{1-9,10}
+alt + {_,shift + }F{1-9,10}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 super + {Left, Right, Up, Down}
