@@ -32,6 +32,10 @@ super + Delete
 # bspwm hotkeys
 #
 
+# Rotate node configuration
+super + {t,y}
+    bspc node -f @parent && bspc node -R {90,-90} && bspc node -f last.local
+
 # quit/restart bspwm
 super + alt + {q,r}
 	bspc {quit,wm -r}
