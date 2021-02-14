@@ -33,7 +33,6 @@ bspc config focus_follows_pointer false
 bspc rule -a Zathura state=tiled
 bspc rule -a discord state=floating follow=on
 bspc rule -a minecraft-launcher state=fullscreen
-bspc rule -a 'Minecraft 1.16.3' state=fullscreen
 bspc rule -a 'Gimp-2.10' state=floating follow=on
 bspc rule -a 'zoom' state=floating desktop='^2' follow=on center=true
 bspc rule -a 'Kanaconvert' state=floating follow=on center=true

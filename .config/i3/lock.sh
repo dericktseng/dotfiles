@@ -7,9 +7,9 @@ lock() {
         --insidewrongcolor=fdfdfddd \
         --insidecolor=fdfdfddd \
         --ringvercolor=bedcd9dd \
-        --ringwrongcolor=dcd7bedd \
+        --ringwrongcolor=e77834dd \
         --ringcolor=e2e2e2dd \
-        --keyhlcolor=dcd4bedd \
+        --keyhlcolor=f3a111dd \
         --bshlcolor=AAAAAAdd \
         --separatorcolor=00000000 \
         --linecolor=00000000 \
