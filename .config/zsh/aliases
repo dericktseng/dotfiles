@@ -14,6 +14,7 @@ export VISUAL=$editor
 export TERMCMD=$TERM
 export TERMINAL=$TERM
 export GNUMAKEFLAGS=-j$(nproc)
+export OMP_NUM_THREADS=$(nproc)
 export PERL_DESTRUCT_LEVEL=2
 export LC_ADDRESS="C"
 export PATH=$PATH:$HOME/.local/bin
