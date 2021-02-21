@@ -5,3 +5,4 @@ text/plain=nvim.desktop;
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
 text/plain=nvim.desktop
+image/png=feh.desktop
