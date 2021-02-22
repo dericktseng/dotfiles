@@ -23,8 +23,8 @@ cdls() {
 
 # TODO: make this function more performant and use less disk reads.
 lscwd() {
-    tot=$(ls -a | wc -l)
-    num=$(ls | wc -l)
+    tot=$(ls -1 -f | wc -l)
+    num=$(ls -1 -U | wc -l)
     if [[ $tot -eq 2 ]]; then
         /usr/bin/echo "This directory is empty"
     elif [[ $num -eq 0 ]]; then
