@@ -101,6 +101,8 @@ set noshowmode
 " sets the cursor to have a buffer. High number to always be centered.
 set so=10
 
+" only show laststatus line when multiple windows open
+set laststatus=1
 
 " ================================================
 " Personal Shortcuts
@@ -109,8 +111,8 @@ set so=10
 inoremap <C-]> {<CR>}<Esc>O
 
 " For long lines, go up or down one row rather than one line.
-nnoremap j gj
-nnoremap k gk
+nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
 
 " terminal drops focus on escape
 tnoremap <Esc> <C-\><C-n>
@@ -144,3 +146,7 @@ hi SpellBad cterm=underline ctermfg=red
 
 " clear conceal black box
 hi clear Conceal
+
+" Proper linebreak
+set wrap linebreak nolist
+set showbreak=\|
