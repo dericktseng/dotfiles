@@ -14,9 +14,11 @@ bspc config single_monocle       true
 bspc config pointer_modifier     mod1
 
 # border colors
-bspc config active_border_color '#e9e9e9'
-bspc config normal_border_color '#e9e9e9'
-bspc config focused_border_color '#0097ff'
+normal="#afafaf"
+focused="#0097ff"
+bspc config active_border_color "$normal"
+bspc config normal_border_color "$normal"
+bspc config focused_border_color "$focused"
 
 # mouse cursor configuration
 bspc config pointer_follows_monitor true
