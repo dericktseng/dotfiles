@@ -13,9 +13,12 @@ bspc config gapless_monocle      true
 bspc config single_monocle       true
 bspc config pointer_modifier     mod1
 
-# border colors
+# color definitions
 normal="#afafaf"
 focused="#0097ff"
+bg="#edead9"
+
+# border colors
 bspc config active_border_color "$normal"
 bspc config normal_border_color "$normal"
 bspc config focused_border_color "$focused"
@@ -25,26 +28,22 @@ bspc config pointer_follows_monitor true
 bspc config pointer_follows_focus false
 bspc config focus_follows_pointer false
 
-#bspc rule -a Gimp desktop='^8' state=floating follow=on
-#bspc rule -a Chromium desktop='^2'
-#bspc rule -a mplayer2 state=floating
-#bspc rule -a Kupfer.py focus=on
-#bspc rule -a Screenkey manage=off
-
 # window rules
 bspc rule -a 'Zathura' state=tiled
 bspc rule -a 'discord' state=pseudo_tiled follow=on
 bspc rule -a 'minecraft-launcher' state=fullscreen
 bspc rule -a 'Gimp-2.10' state=fullscreen follow=on
 bspc rule -a 'Gimp' state=fullscreen follow=on
-bspc rule -a 'zoom' state=fullscreen desktop='^2' follow=on center=true
+bspc rule -a 'zoom' state=floating desktop='^2' follow=on center=true
 bspc rule -a 'Kanaconvert' state=floating follow=on center=true
 bspc rule -a 'Anki' state=pseudo_tiled follow=on center=true
 bspc rule -a 'retroarch' state=fullscreen
 bspc rule -a 'Pavucontrol' state=pseudo_tiled follow=on center=true
 
-# background programs
+# polybar
 $HOME/.config/polybar/launch.sh &
+
+# background programs
 killall udiskie
 killall nm-applet
 killall checkfullscreen.sh
@@ -56,7 +55,7 @@ nm-applet &
 pkill dunst &
 
 # set background
-feh --bg-scale ~/Pictures/background.png || hsetroot -solid "#edead9" &
+feh --bg-scale ~/Pictures/background.png || hsetroot -solid "$bg" &
 
 # set live background
 # xwinwrap -ov -g 1920x1080+0+0 -- mpv -wid WID "$HOME/PATH/TO/VIDEO" \
@@ -68,9 +67,15 @@ feh --bg-scale ~/Pictures/background.png || hsetroot -solid "#edead9" &
 #    --panscan=1.0 \
 #    --no-input-default-bindings &
 
-xset s 600 600 # screensaver default 10 mins timeout
-$HOME/.config/i3/checkfullscreen.sh & # run script to disable locking if application in full screen
+# screensaver default 10 mins timeout
+xset s 600 600 
 
+# keyboard and mouse settings
 xset r rate 200 25
 xinput --set-prop 'pointer:Razer Razer Viper' 'libinput Accel Speed' -0.75
+
+# use i3lock to lock the screen
 xss-lock -v --transfer-sleep-lock ~/.config/i3/lock.sh
+
+# run script to disable locking if application in full screen
+$HOME/.config/i3/checkfullscreen.sh &
