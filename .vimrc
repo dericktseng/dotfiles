@@ -130,6 +130,7 @@ augroup vimrc_help
 augroup END
 
 " Restore cursor shape to beam on exit
+let &t_SI="\<Esc>[5 q"
 augroup restore_cursor_shape
   autocmd!
   au VimLeave * set guicursor=a:ver10-blinkwait700-blinkoff400-blinkon250
