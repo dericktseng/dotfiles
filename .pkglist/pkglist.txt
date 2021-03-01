@@ -58,6 +58,7 @@ python-pynvim
 ranger
 ripgrep
 rofi
+rlwrap
 strace
 sudo
 sxhkd
