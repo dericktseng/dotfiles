@@ -30,15 +30,11 @@ bspc config focus_follows_pointer false
 
 # window rules
 bspc rule -a 'Zathura' state=tiled
-bspc rule -a 'discord' state=pseudo_tiled follow=on
-bspc rule -a 'minecraft-launcher' state=fullscreen
 bspc rule -a 'Gimp-2.10' state=fullscreen follow=on
 bspc rule -a 'Gimp' state=fullscreen follow=on
 bspc rule -a 'zoom' state=floating desktop='^2' follow=on center=true
 bspc rule -a 'Kanaconvert' state=floating follow=on center=true
-bspc rule -a 'Anki' state=pseudo_tiled follow=on center=true
 bspc rule -a 'retroarch' state=fullscreen
-bspc rule -a 'Pavucontrol' state=pseudo_tiled follow=on center=true
 
 # polybar
 $HOME/.config/polybar/launch.sh &

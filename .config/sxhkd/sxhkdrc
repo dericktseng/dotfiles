@@ -45,17 +45,17 @@ super + {e,shift + e}
 	bspc node -{c,k}
 
 {alt,super} + Tab
-    bspc node -f {next,prev}.local
+    bspc node -f {next,prev}.local.leaf
 
 # alternate between the tiled and monocle layout
-# super + m
-#	bspc desktop -l next
+super + shift + m
+    bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
 super + y
 	bspc node newest.marked.local -n newest.!automatic.local
 
-# swap the current node and the biggest window
+# swap the current node and the biggest window locally
 super + g
 	bspc node -s biggest.local
 
