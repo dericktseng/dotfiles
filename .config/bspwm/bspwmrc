@@ -18,6 +18,9 @@ normal="#dbc7f6"
 focused="#56c6ca"
 background="#edead9"
 
+# split style
+bspc config automatic_scheme alternate
+
 # border colors
 bspc config active_border_color "$normal"
 bspc config normal_border_color "$normal"

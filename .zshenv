@@ -4,6 +4,7 @@ if [[ ! -z $(command -v nvim) ]];then
     editor="nvim"
     alias vim=$editor
     alias nvim=$editor
+    export MANPAGER='nvim +Man!'
 fi
 
 export TERM=xterm-256color
