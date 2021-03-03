@@ -80,9 +80,6 @@ source $HOME/.config/fzf/completion.zsh
 source $HOME/.config/fzf/key-bindings.zsh
 source /etc/profile.d/vte.sh
 
-# starship prompt
-# eval "$(starship init zsh)"
-
 # powerlevel10k
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
