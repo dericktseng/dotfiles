@@ -104,6 +104,13 @@ set so=10
 " only show laststatus line when multiple windows open
 set laststatus=1
 
+" Proper linebreak
+set wrap linebreak nolist
+set showbreak=\|
+
+" allow confirming of actions if fail
+set confirm
+
 " ================================================
 " Personal Shortcuts
 
@@ -148,9 +155,3 @@ hi SpellBad cterm=underline ctermfg=red
 " clear conceal black box
 hi clear Conceal
 
-" Proper linebreak
-set wrap linebreak nolist
-set showbreak=\|
-
-" allow confirming of actions if fail
-set confirm
