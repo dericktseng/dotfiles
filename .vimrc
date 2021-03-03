@@ -151,3 +151,6 @@ hi clear Conceal
 " Proper linebreak
 set wrap linebreak nolist
 set showbreak=\|
+
+" allow confirming of actions if fail
+set confirm

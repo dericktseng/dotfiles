@@ -30,7 +30,6 @@ snippet beg "begin{} / end{}" b
 \end{$1}
 endsnippet
 
-
 snippet mk "Math" w
 $${1}$`!p
 if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
@@ -40,13 +39,11 @@ else:
 `$2
 endsnippet
 
-
 snippet dm "Math" w
 \[
 $1
 .\] $0
 endsnippet
-
 
 snippet = "andequals"
 &= 
@@ -60,4 +57,19 @@ endsnippet
 
 snippet si "siunitx shortcut"
 \SI{${1:number}}{${2:units}} $0
+endsnippet
+
+snippet sec "section"
+\section{$1}
+$0
+endsnippet
+
+snippet ga "gather"
+\begin{gather*}
+	$1
+\end{gather*}
+endsnippet
+
+snippet wt "widetilde"
+\widetilde{$1}
 endsnippet
