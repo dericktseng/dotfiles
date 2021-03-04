@@ -46,7 +46,7 @@ cursor_shape = block
 # cursor = #4a545b
 # cursor_foreground = #b6c9df
 
-foreground = #4a545b
+foreground = #50545b
 #foreground_bold = #ffffff
 background = #fefefe
 
@@ -57,13 +57,13 @@ background = #fefefe
 highlight = #d5dfe2
 
 color0=       #dff4ff
-color8=       #afb8bf
+color8=       #97a5ab
 
 color1=       #ff8671
 color9=       #ff8671
 
-color2=       #3eb6a2
-color10=      #3eb6a2
+color2=       #14a57c
+color10=      #14a57c
 
 color3=       #499ec8
 color11=      #499ec8
