@@ -23,10 +23,10 @@ hyperlinks = true
 #browser = xdg-open
 
 # "system", "on" or "off"
-cursor_blink = on
+cursor_blink = off
 
 # "block", "underline" or "ibeam"
-cursor_shape = ibeam
+cursor_shape = block
 
 # Hide links that are no longer valid in url select overlay mode
 #filter_unmatched_urls = true
@@ -43,10 +43,10 @@ cursor_shape = ibeam
 [colors]
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
-cursor = #88B8D1
-cursor_foreground = #000000
+# cursor = #4a545b
+# cursor_foreground = #b6c9df
 
-foreground = #10577b
+foreground = #4a545b
 #foreground_bold = #ffffff
 background = #fefefe
 
@@ -57,7 +57,7 @@ background = #fefefe
 highlight = #d5dfe2
 
 color0=       #dff4ff
-color8=       #a7a7a7
+color8=       #afb8bf
 
 color1=       #ff8671
 color9=       #ff8671
@@ -77,8 +77,8 @@ color13=      #ee22bc
 color6=       #8f5eba
 color14=      #8f5eba
 
-color7=       #10577b
-color15=      #10577b
+color7=       #4a545b
+color15=      #4a545b
 
 [hints]
 #font = Monospace 12
