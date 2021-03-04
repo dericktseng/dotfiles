@@ -46,7 +46,7 @@ cursor_shape = block
 cursor = #77818c
 cursor_foreground = #fefefe
 
-foreground = #303334
+foreground = #2b4f76
 #foreground_bold = #ffffff
 background = #f8fafa
 
