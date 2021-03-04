@@ -43,8 +43,8 @@ cursor_shape = block
 [colors]
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
-# cursor = #4a545b
-# cursor_foreground = #b6c9df
+cursor = #77818c
+cursor_foreground = #fefefe
 
 foreground = #303334
 #foreground_bold = #ffffff
