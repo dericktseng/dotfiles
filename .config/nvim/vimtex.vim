@@ -12,16 +12,13 @@ let g:vimtex_compiler_latexmk = {
     \ 'options' : [
     \   '-verbose',
     \   '-file-line-error',
-    \   '-synctex=1',
     \   '-interaction=nonstopmode',
+    \   '-synctex=1',
     \ ],
     \}
 
 let g:vimtex_compiler_progname = "nvr"
 let g:vimtex_quickfix_mode=0
-" let g:vimtex_fold_manual=1
-" let g:vimtex_fold_enabled=1
-" let g:tex_conceal="abdmgs"
 let g:vimtex_syntax_conceal = {
     \ 'accents': 1,
     \ 'fancy': 0,
