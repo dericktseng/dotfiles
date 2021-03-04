@@ -46,9 +46,9 @@ cursor_shape = block
 # cursor = #4a545b
 # cursor_foreground = #b6c9df
 
-foreground = #50545b
+foreground = #303334
 #foreground_bold = #ffffff
-background = #fefefe
+background = #f7f9f9
 
 # 20% background transparency (requires a compositor)
 #background = rgba(63, 63, 63, 0.8)
@@ -59,14 +59,14 @@ highlight = #d5dfe2
 color0=       #dff4ff
 color8=       #97a5ab
 
-color1=       #ff8671
-color9=       #ff8671
+color1=       #db130f
+color9=       #db130f
 
 color2=       #14a57c
 color10=      #14a57c
 
-color3=       #499ec8
-color11=      #499ec8
+color3=       #e09800
+color11=      #e09800
 
 color4=       #59b6ea
 color12=      #59b6ea
