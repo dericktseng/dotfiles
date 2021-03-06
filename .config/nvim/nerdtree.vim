@@ -5,7 +5,7 @@ nnoremap <C-t> :NERDTreeToggle<CR><C-w>w
 nnoremap <C-f> :NERDTreeFind<CR><C-w>w
 
 " Start NERDTree and put the cursor back in the other window if filetype not blacklisted.
-let blacklist = ['text']
+let blacklist = ['text', 'tex']
 autocmd VimEnter * if index(blacklist, &ft) < 0 | NERDTree | wincmd p
 
 " Exit Vim if NERDTree is the only window left.
