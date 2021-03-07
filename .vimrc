@@ -18,9 +18,6 @@ Plug 'dense-analysis/ale'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
-Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " List ends here. Plugins become visible to Vim after this call
 call plug#end()
@@ -47,7 +44,6 @@ source ~/.config/nvim/ale.vim
 source ~/.config/nvim/lightline.vim
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/coc-pairs.vim
-source ~/.config/nvim/nerdtree.vim
 
 " Disables sign gutter
 " set scl=no
