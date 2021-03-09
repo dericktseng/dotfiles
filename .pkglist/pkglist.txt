@@ -81,6 +81,7 @@ xdg-utils
 xorg-font-util
 xorg-server
 xorg-xbacklight
+xorg-xmodmap
 xorg-xinit
 xorg-xinput
 xorg-xprop
