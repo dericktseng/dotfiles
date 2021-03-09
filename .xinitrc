@@ -45,9 +45,6 @@ picom --config $HOME/.config/picom/picom.conf -b --experimental-backends
 # clipboard manager
 parcellite &
 
-# setup swapping esc and caps
-[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
-
 # monitor refresh rate, set to 75 if possible
 xrandr -r 75 > /dev/null 2>&1 || true
 
