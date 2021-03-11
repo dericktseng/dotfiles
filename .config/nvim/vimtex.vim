@@ -30,3 +30,7 @@ let g:vimtex_syntax_conceal = {
     \ 'styles': 1,
   \ }
 set conceallevel=2
+
+let g:vimtex_mappings_disable = {
+    \ 'i': [']]']
+  \ }
