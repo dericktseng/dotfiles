@@ -22,6 +22,9 @@ Plug 'sheerun/vim-polyglot'
 " List ends here. Plugins become visible to Vim after this call
 call plug#end()
 
+" colorscheme customlight
+colorscheme PaperColor
+
 " Coc Extension list
 let g:coc_global_extensions = ['coc-clangd', 'coc-pairs', 'coc-ultisnips', 'coc-vimtex']
 
@@ -78,7 +81,7 @@ set number
 set belloff=all
 
 " color scheme
-syntax on
+syntax enable
 
 " search jumping
 set incsearch
@@ -111,6 +114,20 @@ set showbreak=\|
 " allow confirming of actions if fail
 set confirm
 
+" Personal Functions
+" ================================================
+
+" display group name of currently selected word
+nnoremap <C-S-P> :call SyntaxGroup()<CR>
+
+function! g:SyntaxGroup() abort
+    let l:s = synID(line('.'), col('.'), 1) 
+    echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
+endfunction
+
+" End Personal Functions
+" ================================================
+
 " ================================================
 " Personal Shortcuts
 
@@ -135,13 +152,6 @@ augroup vimrc_help
   autocmd!
   autocmd BufEnter *.txt if &buftype == 'help' | wincmd L | endif
 augroup END
-
-" Restore cursor shape to beam on exit
-" let &t_SI="\<Esc>[5 q"
-" augroup restore_cursor_shape
-"  autocmd!
-"  au VimLeave * set guicursor=a:ver10-blinkwait700-blinkoff400-blinkon250
-" augroup END
 
 " per filetype settings
 autocmd BufNewFile,BufRead *.rasi setf css
