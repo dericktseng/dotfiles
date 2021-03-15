@@ -22,6 +22,7 @@ Plug 'sheerun/vim-polyglot'
 " List ends here. Plugins become visible to Vim after this call
 call plug#end()
 
+" TODO - change to customlight
 " colorscheme customlight
 colorscheme PaperColor
 
