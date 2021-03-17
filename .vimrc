@@ -24,7 +24,7 @@ call plug#end()
 
 " TODO - change to customlight
 " colorscheme customlight
-colorscheme PaperColor
+" colorscheme PaperColor
 
 " Coc Extension list
 let g:coc_global_extensions = ['coc-clangd', 'coc-pairs', 'coc-ultisnips', 'coc-vimtex']
