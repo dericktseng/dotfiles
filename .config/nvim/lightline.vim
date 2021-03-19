@@ -1,4 +1,4 @@
 " lightline configuration
 let g:lightline = {
-  \ 'colorscheme': 'one',
+  \ 'colorscheme': 'selenized_white',
   \ }

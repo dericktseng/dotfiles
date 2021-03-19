@@ -1,10 +1,3 @@
-" Vim color file
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last Change:	2001 Jul 23
-
-" This is the default color scheme.  It doesn't define the Normal
-" highlighting, it uses whatever the colors used to be.
-
 " Set 'background' back to the default.  The value can't always be estimated
 " and is then guessed.
 hi clear Normal
@@ -46,6 +39,7 @@ let s:none='NONE'
 let s:undercurl='undercurl'
 let s:underline='underline'
 
+" {{{ highlight function
 function! <sid>hi(group, fg, bg, attr, attrsp)
   " fg, bg, attr, attrsp
   if !empty(a:fg)
@@ -64,16 +58,17 @@ function! <sid>hi(group, fg, bg, attr, attrsp)
     exec "hi " . a:group . " guisp=" . a:attrsp[0]
   endif
 endfunction
+"}}}
 
 
 " {{{ call s::hi(group, fg, bg, gui, guisp)
   call s:hi('Bold', '', '', s:bold, '')
   call s:hi('Debug', s:darkred, '', '', '')
-  call s:hi('Directory', s:purpleblue, '', '', '')
+  call s:hi('Directory', s:darkblue, '', '', '')
   call s:hi('ErrorMsg', s:darkred, s:white, '', '')
   call s:hi('Exception', s:darkred, '', '', '')
   call s:hi('FoldColumn', s:purpleblue, s:white, '', '')
-  call s:hi('Folded', s:green, s:darkred, s:italic, '')
+  call s:hi('Folded', s:darkgrey, s:grey, s:italic, '')
   call s:hi('IncSearch', s:darkred, s:orange, s:none, '')
   call s:hi('Italic', '', '', s:italic, '')
  
@@ -95,7 +90,7 @@ endfunction
   call s:hi('Cursor', s:white, s:black, '', '')
   call s:hi('NonText', s:green, '', '', '')
   call s:hi('Normal', s:black, '' , '', '')
-  call s:hi('EndOfBuffer', s:black, s:white, '', '')
+  call s:hi('EndOfBuffer', s:black, '', '', '')
   call s:hi('LineNr', s:darkgrey, '' , '', '')
   call s:hi('SignColumn', s:white, s:white, '', '')
   call s:hi('StatusLine', s:darkred, s:green, '', '')

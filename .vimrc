@@ -25,7 +25,6 @@ call plug#end()
 set t_Co=256
 set background=light
 colorscheme customlight
-" colorscheme PaperColor
 
 " Coc Extension list
 let g:coc_global_extensions = ['coc-clangd', 'coc-pairs', 'coc-ultisnips', 'coc-vimtex']
