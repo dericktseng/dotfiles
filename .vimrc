@@ -22,8 +22,9 @@ Plug 'sheerun/vim-polyglot'
 " List ends here. Plugins become visible to Vim after this call
 call plug#end()
 
-" TODO - change to customlight
-" colorscheme customlight
+set t_Co=256
+set background=light
+colorscheme customlight
 " colorscheme PaperColor
 
 " Coc Extension list
@@ -31,6 +32,8 @@ let g:coc_global_extensions = ['coc-clangd', 'coc-pairs', 'coc-ultisnips', 'coc-
 
 filetype plugin indent on
 filetype plugin on
+let g:loaded_python_provider = 0
+let g:loaded_ruby_provider = 0
 let g:python3_host_prog = '/usr/bin/python3'
 
 " Correct RGB escape codes for vim inside tmux
@@ -42,7 +45,6 @@ endif
 " Plugins Settings
 source ~/.config/nvim/ultisnips.vim
 source ~/.config/nvim/markdown-preview.vim
-source ~/.config/nvim/papercolor.vim
 source ~/.config/nvim/vimtex.vim
 source ~/.config/nvim/ale.vim
 source ~/.config/nvim/lightline.vim
