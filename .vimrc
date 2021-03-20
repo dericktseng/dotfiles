@@ -8,7 +8,6 @@ call plug#begin('~/.vim/plugins')
 " list of plugins managed by Vim Plug
 Plug 'lervag/vimtex'
 Plug 'ap/vim-css-color'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'itchyny/lightline.vim'
