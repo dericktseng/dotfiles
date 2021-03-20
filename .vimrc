@@ -159,10 +159,6 @@ autocmd BufNewFile,BufRead *.rasi setf css
 autocmd BufNewFile,BufRead *.jl set ft=julia
 autocmd FileType tex setlocal spell spelllang=en_us
 
-" Spellcheck
-hi clear SpellBad
-hi SpellBad cterm=underline ctermfg=red
-
 " clear conceal black box
 hi clear Conceal
 

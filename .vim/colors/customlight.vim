@@ -22,7 +22,7 @@ let s:green = ['#008700', '28']
 let s:teal = ['#56b6c2', '73']
 let s:darkgrey = ['#878787', '102']
 let s:lightblue = ['#03b9d5', '38']
-let s:black = ['#444444', '59']
+let s:black = ['#222222', '59']
 let s:grey = ['#bcbcbc', '145']
 let s:red = ['#d70000', '160']
 let s:purple = ['#a626a4', '127']
@@ -69,8 +69,9 @@ endfunction
   call s:hi('Exception', s:darkred, '', '', '')
   call s:hi('FoldColumn', s:purpleblue, s:white, '', '')
   call s:hi('Folded', s:darkgrey, s:grey, s:italic, '')
-  call s:hi('IncSearch', s:darkred, s:orange, s:none, '')
+  call s:hi('IncSearch', s:black, s:yellow, s:none, '')
   call s:hi('Italic', '', '', s:italic, '')
+  call s:hi('Error', s:orange, '', s:none, '')
  
   call s:hi('Macro', s:darkred, '', '', '')
   call s:hi('MatchParen', '', s:grey, '', '')
@@ -88,7 +89,7 @@ endfunction
   call s:hi('Title', s:purpleblue, '', '', '')
   call s:hi('Conceal', s:purpleblue, s:white, '', '')
   call s:hi('Cursor', s:white, s:black, '', '')
-  call s:hi('NonText', s:green, '', '', '')
+  call s:hi('NonText', s:grey, '', s:none, '')
   call s:hi('Normal', s:black, '' , '', '')
   call s:hi('EndOfBuffer', s:black, '', '', '')
   call s:hi('LineNr', s:darkgrey, '' , '', '')
@@ -136,7 +137,7 @@ endfunction
   call s:hi('Statement', s:purple, '', s:none, '')
   call s:hi('StorageClass', s:yellow, '', '', '')
   call s:hi('String', s:green, '', '', '')
-  call s:hi('Structure', s:purple, '', '', '')
+  call s:hi('Structure', s:orange, '', '', '')
   call s:hi('Tag', s:yellow, '', '', '')
   call s:hi('Todo', s:green, s:white, s:bold, '')
   call s:hi('Type', s:darkblue, '', s:none, '')
