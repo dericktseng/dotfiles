@@ -19,19 +19,22 @@ let s:white = ['#eeeeee', '231']
 let s:darkred = ['#af0000', '124']
 let s:turquoise = ['#00a979', '36']
 let s:green = ['#008700', '28']
+let s:lightgreen = ['#46d211', '76']
+let s:darkgreen = ['#006200', '22']
 let s:teal = ['#56b6c2', '73']
 let s:darkgrey = ['#878787', '102']
 let s:lightblue = ['#03b9d5', '38']
 let s:black = ['#222222', '59']
 let s:grey = ['#bcbcbc', '145']
 let s:red = ['#d70000', '160']
-let s:purple = ['#a626a4', '127']
+let s:purple = ['#a300f4', '129']
 let s:darkblue = ['#005faf', '25']
 let s:orange = ['#d75f00', '166']
 let s:yellow = ['#c69000', '172']
 let s:highlightyellow=['#f4e900', '220']
 let s:blue = ['#0787a9', '31']
 let s:purpleblue = ['#4078f2', '69']
+let s:pink = ['#f400f4', '201']
 
 let s:bold='bold'
 let s:italic='italic'
@@ -116,10 +119,10 @@ endfunction
   call s:hi('Boolean', s:orange, '', '', '')
   call s:hi('Character', s:darkred, '', '', '')
   call s:hi('Comment', s:darkgrey, '', s:italic, '')
-  call s:hi('Conditional', s:purple, '', '', '')
+  call s:hi('Conditional', s:pink, '', '', '')
   call s:hi('Constant', s:orange, '', '', '')
   call s:hi('Define', s:purple, '', '', '')
-  call s:hi('Delimiter', s:purpleblue, '', '', '')
+  call s:hi('Delimiter', s:teal, '', '', '')
   call s:hi('Float', s:orange, '', '', '')
   call s:hi('Function', s:purpleblue, '', '', '')
  
@@ -129,10 +132,10 @@ endfunction
  
   call s:hi('Label', s:yellow, '', '', '')
   call s:hi('Number', s:orange, '', '', '')
-  call s:hi('Operator', s:black, '', '', '')
+  call s:hi('Operator', s:darkgreen, '', '', '')
   call s:hi('PreProc', s:darkblue, '', '', '')
   call s:hi('Repeat', s:yellow, '', '', '')
-  call s:hi('Special', s:turquoise, '', '', '')
+  call s:hi('Special', s:darkblue, '', '', '')
   call s:hi('SpecialChar', s:orange, '', '', '')
   call s:hi('Statement', s:purple, '', s:none, '')
   call s:hi('StorageClass', s:yellow, '', '', '')
