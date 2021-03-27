@@ -40,3 +40,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # pacdiff
 export DIFFPROG="nvim -d"
+
+# temporary fix to libreoffice black
+export SAL_USE_VCLPLUGIN=gen
