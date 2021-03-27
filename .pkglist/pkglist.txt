@@ -18,7 +18,6 @@ firefox
 fzf
 gcc
 git
-grub
 gsfonts
 hsetroot
 htop
