@@ -31,7 +31,8 @@ let s:red = ['#d70000', '160']
 let s:purple = ['#a300f4', '129']
 let s:darkblue = ['#005faf', '25']
 let s:orange = ['#d75f00', '166']
-let s:yellow = ['#c69000', '172']
+let s:yelloworange = ['#c69000', '172']
+let s:yellow = ['#fbaa26', '214']
 let s:highlightyellow=['#f4e900', '220']
 let s:blue = ['#0787a9', '31']
 let s:purpleblue = ['#4078f2', '69']
@@ -105,7 +106,7 @@ endfunction
   call s:hi('CursorColumn', '', s:darkgrey, '', '')
   call s:hi('CursorLine', '', s:white, s:none, '')
   call s:hi('CursorLineNR', s:white, s:white, '', '')
-  call s:hi('CursorLineNr', s:yellow, s:white, '', '')
+  call s:hi('CursorLineNr', s:yelloworange, s:white, '', '')
   call s:hi('PMenu', '', s:lightgrey, '', '')
   call s:hi('PMenuSel', s:black, s:lightblue, '', '')
   call s:hi('PmenuSbar', '', s:darkgrey, '', '')
@@ -113,8 +114,8 @@ endfunction
   call s:hi('TabLine', s:green, s:darkred, '', '')
   call s:hi('TabLineFill', s:green, s:darkred, '', '')
   call s:hi('TabLineSel', s:green, s:darkred, '', '')
-  call s:hi('helpExample', s:yellow, '', '', '')
-  call s:hi('helpCommand', s:yellow, '', '', '')
+  call s:hi('helpExample', s:yelloworange, '', '', '')
+  call s:hi('helpCommand', s:yelloworange, '', '', '')
  
   " Standard syntax highlighting
   call s:hi('Boolean', s:orange, '', '', '')
@@ -131,21 +132,21 @@ endfunction
   call s:hi('Include', s:purpleblue, '', '', '')
   call s:hi('Keyword', s:purple, '', '', '')
  
-  call s:hi('Label', s:yellow, '', '', '')
+  call s:hi('Label', s:yelloworange, '', '', '')
   call s:hi('Number', s:orange, '', '', '')
   call s:hi('Operator', s:black, '', '', '')
   call s:hi('PreProc', s:darkblue, '', '', '')
-  call s:hi('Repeat', s:yellow, '', '', '')
+  call s:hi('Repeat', s:yelloworange, '', '', '')
   call s:hi('Special', s:darkblue, '', '', '')
   call s:hi('SpecialChar', s:darkgrey, '', '', '')
   call s:hi('Statement', s:purple, '', s:none, '')
-  call s:hi('StorageClass', s:yellow, '', '', '')
+  call s:hi('StorageClass', s:yelloworange, '', '', '')
   call s:hi('String', s:green, '', '', '')
   call s:hi('Structure', s:orange, '', '', '')
-  call s:hi('Tag', s:yellow, '', '', '')
+  call s:hi('Tag', s:yelloworange, '', '', '')
   call s:hi('Todo', s:green, s:white, s:bold, '')
   call s:hi('Type', s:darkblue, '', s:none, '')
-  call s:hi('Typedef', s:yellow, '', '', '')
+  call s:hi('Typedef', s:yelloworange, '', '', '')
  
   " LSP
   call s:hi('LspDiagnosticsDefaultError', '', '', '', '')
@@ -153,7 +154,7 @@ endfunction
   call s:hi('LspDiagnosticsUnderlineError', '', '', s:undercurl, '')
  
   call s:hi('LspDiagnosticsDefaultWarning', '', '', '', '')
-  call s:hi('LspDiagnosticsSignWarning', s:yellow, '', '', '')
+  call s:hi('LspDiagnosticsSignWarning', s:yelloworange, '', '', '')
   call s:hi('LspDiagnosticsUnderlineWarning', '', '', s:undercurl, '')
  
   call s:hi('LspDiagnosticsDefaultInformation', '', '', '', '')
@@ -173,9 +174,9 @@ endfunction
   call s:hi('TSFunction', s:blue, '', '', '')
  
   call s:hi('TSTagDelimiter', s:blue, '', '', '')
-  call s:hi('TSProperty', s:yellow, '', '', '')
+  call s:hi('TSProperty', s:yelloworange, '', '', '')
   call s:hi('TSMethod', s:purpleblue, '', '', '')
-  call s:hi('TSParameter', s:yellow, '', '', '')
+  call s:hi('TSParameter', s:yelloworange, '', '', '')
   call s:hi('TSConstructor', s:black, '', '', '')
   call s:hi('TSVariable', s:black, '', '', '')
   call s:hi('TSOperator', s:black, '', '', '')
@@ -190,8 +191,8 @@ endfunction
   call s:hi('SpellCap', '', '', s:undercurl, '')
   call s:hi('SpellRare', '', '', s:undercurl, '')
  
-  call s:hi('csClass', s:yellow, '', '', '')
-  call s:hi('csAttribute', s:yellow, '', '', '')
+  call s:hi('csClass', s:yelloworange, '', '', '')
+  call s:hi('csAttribute', s:yelloworange, '', '', '')
   call s:hi('csModifier', s:purple, '', '', '')
   call s:hi('csType', s:darkred, '', '', '')
   call s:hi('csUnspecifiedStatement', s:purpleblue, '', '', '')
@@ -218,11 +219,11 @@ endfunction
   call s:hi('gitCommitOverflow', s:darkred, '', '', '')
   call s:hi('gitCommitSummary', s:green, '', '', '')
  
-  call s:hi('htmlBold', s:yellow, '', '', '')
+  call s:hi('htmlBold', s:yelloworange, '', '', '')
   call s:hi('htmlItalic', s:purple, '', '', '')
   call s:hi('htmlTag', s:blue, '', '', '')
   call s:hi('htmlEndTag', s:blue, '', '', '')
-  call s:hi('htmlArg', s:yellow, '', '', '')
+  call s:hi('htmlArg', s:yelloworange, '', '', '')
   call s:hi('htmlTagName', s:black, '', '', '')
  
   call s:hi('javaScript', s:black, '', '', '')
@@ -236,20 +237,20 @@ endfunction
   call s:hi('markdownCodeBlock', s:green, '', '', '')
   call s:hi('markdownHeadingDelimiter', s:purpleblue, '', '', '')
   call s:hi('markdownItalic', s:purple, '', s:italic, '')
-  call s:hi('markdownBold', s:yellow, '', s:bold, '')
+  call s:hi('markdownBold', s:yelloworange, '', s:bold, '')
   call s:hi('markdownCodeDelimiter', s:turquoise, '', s:italic, '')
   call s:hi('markdownError', s:black, s:white, '', '')
  
   call s:hi('typescriptParens', s:black, '', '', '')
  
   call s:hi('NeomakeErrorSign', s:darkred, s:white, '', '')
-  call s:hi('NeomakeWarningSign', s:yellow, s:white, '', '')
+  call s:hi('NeomakeWarningSign', s:yelloworange, s:white, '', '')
   call s:hi('NeomakeInfoSign', s:white, s:white, '', '')
   call s:hi('NeomakeError', s:darkred, '', s:underline, s:darkred)
   call s:hi('NeomakeWarning', s:darkred, '', s:underline, s:darkred)
  
   call s:hi('ALEErrorSign', s:darkred,s:white, s:bold, '')
-  call s:hi('ALEWarningSign', s:yellow, s:white, s:bold, '')
+  call s:hi('ALEWarningSign', s:yelloworange, s:white, s:bold, '')
   call s:hi('ALEInfoSign', s:white, s:white, s:bold, '')
  
   call s:hi('NERDTreeExecFile', s:black, '', '', '')
@@ -265,7 +266,7 @@ endfunction
   call s:hi('pythonRepeat', s:purple, '', '', '')
   call s:hi('pythonOperator', s:purple, '', '', '')
  
-  call s:hi('rubyConstant', s:yellow, '', '', '')
+  call s:hi('rubyConstant', s:yelloworange, '', '', '')
   call s:hi('rubySymbol', s:green, '', '', '')
   call s:hi('rubyAttribute', s:purpleblue, '', '', '')
   call s:hi('rubyInterpolation', s:green, '', '', '')
@@ -301,15 +302,15 @@ endfunction
   call s:hi('Defx_filename_directory', s:purpleblue, '', '', '')
  
   call s:hi('CocErrorSign', s:darkred, '', '', '')
-  call s:hi('CocWarningSign', s:yellow, '', '', '')
+  call s:hi('CocWarningSign', s:yelloworange, '', '', '')
   call s:hi('CocInfoSign', s:purpleblue, '', '', '')
   call s:hi('CocHintSign', s:blue, '', '', '')
   call s:hi('CocErrorFloat', s:darkred, '', '', '')
-  call s:hi('CocWarningFloat', s:yellow, '', '', '')
+  call s:hi('CocWarningFloat', s:yelloworange, '', '', '')
   call s:hi('CocInfoFloat', s:purpleblue, '', '', '')
   call s:hi('CocHintFloat', s:blue, '', '', '')
   call s:hi('CocDiagnosticsError', s:darkred, '', '', '')
-  call s:hi('CocDiagnosticsWarning', s:yellow, '', '', '')
+  call s:hi('CocDiagnosticsWarning', s:yelloworange, '', '', '')
   call s:hi('CocDiagnosticsInfo', s:purpleblue, '', '', '')
   call s:hi('CocDiagnosticsHint', s:blue, '', '', '')
   call s:hi('CocSelectedText', s:purple, '', '', '')
