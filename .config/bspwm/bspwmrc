@@ -38,7 +38,7 @@ bspc rule -a 'Gimp' state=fullscreen follow=on
 bspc rule -a 'zoom' state=floating desktop='^2' follow=on center=true
 bspc rule -a 'Kanaconvert' state=floating follow=on center=true
 bspc rule -a 'retroarch' state=fullscreen
-bspc rule -a 'discord' state=floating center=true
+# bspc rule -a 'discord' state=floating center=true
 bspc rule -a 'Pavucontrol' state=floating center=true
 
 # polybar
