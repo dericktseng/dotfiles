@@ -45,9 +45,6 @@ picom --config $HOME/.config/picom/picom.conf -b --experimental-backends
 # clipboard manager
 parcellite &
 
-# swaps escape and caps lock
-setxkbmap -option caps:swapescape
-
 # monitor refresh rate, set to 75 if possible
 xrandr -r 75 > /dev/null 2>&1 || true
 

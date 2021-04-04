@@ -38,7 +38,6 @@ bspc rule -a 'Gimp' state=fullscreen follow=on
 bspc rule -a 'zoom' state=floating desktop='^2' follow=on center=true
 bspc rule -a 'Kanaconvert' state=floating follow=on center=true
 bspc rule -a 'retroarch' state=fullscreen
-# bspc rule -a 'discord' state=floating center=true
 bspc rule -a 'Pavucontrol' state=floating center=true
 
 # polybar
@@ -49,7 +48,6 @@ killall udiskie
 killall nm-applet
 killall checkfullscreen.sh
 killall feh
-killall xwinwrap
 
 udiskie -t &
 nm-applet &
@@ -57,16 +55,6 @@ pkill dunst &
 
 # set background
 feh --bg-scale ~/Pictures/background.png || hsetroot -solid "$background" &
-
-# set live background
-# xwinwrap -ov -g 1920x1080+0+0 -- mpv -wid WID "$HOME/PATH/TO/VIDEO" \
-#    --no-osc \
-#    --no-osd-bar \
-#    --loop-file \
-#    --player-operation-mode=cplayer \
-#    --no-audio \
-#    --panscan=1.0 \
-#    --no-input-default-bindings &
 
 # screensaver default 10 mins timeout
 xset s 600 600 
@@ -77,6 +65,9 @@ xinput --set-prop 'pointer:Razer Razer Viper' 'libinput Accel Speed' -0.75
 
 # use i3lock to lock the screen
 xss-lock -v --transfer-sleep-lock ~/.config/i3/lock.sh
+
+# swaps escape and caps lock
+setxkbmap -option caps:swapescape
 
 # run script to disable locking if application in full screen
 $HOME/.config/i3/checkfullscreen.sh &
