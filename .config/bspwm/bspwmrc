@@ -67,6 +67,7 @@ xinput --set-prop 'pointer:Razer Razer Viper' 'libinput Accel Speed' -0.75
 xss-lock -v --transfer-sleep-lock ~/.config/i3/lock.sh
 
 # swaps escape and caps lock
+setxkbmap -option ''
 setxkbmap -option caps:swapescape
 
 # run script to disable locking if application in full screen
