@@ -49,9 +49,17 @@ killall nm-applet
 killall checkfullscreen.sh
 killall feh
 
+# restarts background programs
 udiskie -t &
 nm-applet &
 pkill dunst &
+
+# swaps escape and caps lock
+setxkbmap -option ''
+setxkbmap -option caps:swapescape
+
+# run script to disable locking if application in full screen
+$HOME/.config/i3/checkfullscreen.sh &
 
 # set background
 feh --bg-scale ~/Pictures/background.png || hsetroot -solid "$background" &
@@ -63,12 +71,6 @@ xset s 600 600
 xset r rate 200 25
 xinput --set-prop 'pointer:Razer Razer Viper' 'libinput Accel Speed' -0.75
 
-# use i3lock to lock the screen
+# use i3lock to lock the screen 
 xss-lock -v --transfer-sleep-lock ~/.config/i3/lock.sh
-
-# swaps escape and caps lock
-setxkbmap -option ''
-setxkbmap -option caps:swapescape
-
-# run script to disable locking if application in full screen
-$HOME/.config/i3/checkfullscreen.sh &
+# DO NOT PUT ANYTHING ELSE BELOW THIS LINE! It will not get executed
