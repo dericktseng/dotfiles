@@ -297,7 +297,7 @@ format = %{T3} %{T-}<label>
 label = %output%
 exec = $HOME/.config/polybar/thermalcpu.sh
 format-foreground = ${colors.temperature}
-interval = 5
+interval = 3
 
 [module/gputemperature]
 type = custom/script
@@ -305,7 +305,7 @@ format = %{T3} ﬙%{T-}<label>
 label = %output%
 exec = $HOME/.config/polybar/thermalgpu.sh
 format-foreground = ${colors.temperature2}
-interval = 5
+interval = 3
 
 [module/powermenu]
 type = custom/text
