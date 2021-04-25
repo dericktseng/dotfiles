@@ -1,0 +1,18 @@
+#!/bin/bash
+session_name="music"
+url='https://www.youtube.com/playlist?list=PLUcR4qhATg8sMIikByQq25NEQvWsQ52Yg'
+
+function start_session() {
+    tmux new-session -d -s $session_name "/usr/bin/mpv '$url' --no-video --shuffle" > /dev/null
+}
+
+function attach_session() {
+    tmux attach-session -t $session_name
+}
+
+tmux has-session -t $session_name 2>/dev/null
+if [[ $? -ne 0 ]]; then
+    start_session
+else
+    attach_session
+fi

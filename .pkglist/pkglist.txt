@@ -69,6 +69,7 @@ ttf-dejavu
 ttf-inconsolata
 ttf-roboto
 ttf-ubuntu-font-family
+tmux
 udiskie
 ueberzug
 ufw
@@ -89,6 +90,7 @@ xorg-xrandr
 xorg-xset
 xorg-xsetroot
 xss-lock
+youtube-dl
 zathura
 zathura-pdf-mupdf
 zsh
