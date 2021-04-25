@@ -127,6 +127,7 @@ endfunction
   call s:hi('Delimiter', s:teal, '', '', '')
   call s:hi('Float', s:orange, '', '', '')
   call s:hi('Function', s:purpleblue, '', '', '')
+  call s:hi('StringDelimiter', s:green, '', '', '')
  
   call s:hi('Identifier', s:lightblue, '', '', '')
   call s:hi('Include', s:purpleblue, '', '', '')
