@@ -13,6 +13,10 @@ super + r
 ctrl + k
     /opt/KanaConvert/KanaConvert
 
+ctrl + shift + m
+    termite -e $HOME/Music/yt-playlist
+
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd && notify-send -t 1500 'sxhkd reloaded'
