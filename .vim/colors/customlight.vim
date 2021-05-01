@@ -73,7 +73,7 @@ endfunction
   call s:hi('ErrorMsg', s:darkred, s:white, '', '')
   call s:hi('Exception', s:darkred, '', '', '')
   call s:hi('FoldColumn', s:purpleblue, s:white, '', '')
-  call s:hi('Folded', s:darkgrey, s:grey, s:italic, '')
+  call s:hi('Folded', s:darkgrey, s:lightgrey, s:italic, '')
   call s:hi('IncSearch', s:black, s:yellow, s:none, '')
   call s:hi('Italic', '', '', s:italic, '')
   call s:hi('Error', '', s:orange, s:none, '')

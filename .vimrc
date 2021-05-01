@@ -76,7 +76,7 @@ set smartindent
 
 " Set Line Numbers
 set number
-" set relativenumber
+set relativenumber
 
 " Sets the bell off
 set belloff=all
@@ -144,6 +144,9 @@ tnoremap <Esc> <C-\><C-n>
 
 " removes highlights with <C-L>
 nnoremap <C-L> :nohl<cr><C-L>
+
+" enable folding with enter
+nnoremap <silent> <TAB> @=(foldlevel('.')?'za':"\<TAB>")<CR>
 
 " End personal shortcuts.
 " ================================================
