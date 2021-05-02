@@ -43,21 +43,13 @@ do
 done
 
 # custom keybinds
-bindkey "^[Oc" forward-word
-bindkey "^[^[[c" forward-word
-bindkey "^[Od" backward-word
-bindkey "^[^[[d" backward-word
-bindkey "^[l" forward-char
-bindkey "^[j" forward-word
-bindkey "^[h" backward-char
-bindkey "^[k" backward-word
+bindkey "^@" autosuggest-accept
 bindkey "^A" vi-beginning-of-line
 bindkey "^[a" vi-beginning-of-line
 bindkey "^E" vi-end-of-line
 bindkey "^[e" vi-end-of-line
 bindkey "^[[3~" delete-char # urxvt delete key
 bindkey "^[[P" delete-char # st delete key
-bindkey "^[o" forward-char
 
 # enable globbing
 setopt ksh_glob
@@ -86,6 +78,8 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # zsh syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
