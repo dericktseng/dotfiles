@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	termite
+	alacritty
 
 # program launcher
 super + r
@@ -14,7 +14,7 @@ ctrl + k
     /opt/KanaConvert/KanaConvert
 
 ctrl + shift + m
-    termite -e $HOME/Music/yt-playlist
+    alacritty -e $HOME/Music/yt-playlist
 
 
 # make sxhkd reload its configuration files:
