@@ -1,5 +1,6 @@
 acpi
 acpi_call
+alacritty
 alsa-utils
 autoconf
 automake
@@ -62,7 +63,6 @@ rlwrap
 strace
 sudo
 sxhkd
-termite
 texlive-core
 tk
 ttf-dejavu
