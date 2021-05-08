@@ -12,7 +12,6 @@ if exists("syntax_on")
 endif
 
 let colors_name = "customlight"
-set termguicolors
 
 " vim: sw=2
 let s:white = ['#eeeeee', '231']

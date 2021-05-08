@@ -34,10 +34,9 @@ let g:loaded_python_provider = 0
 let g:loaded_ruby_provider = 0
 let g:python3_host_prog = '/usr/bin/python3'
 
-" Correct RGB escape codes for vim inside tmux
-if !has('nvim') && $TERM ==# 'screen-256color'
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" Use GUI colors if possible
+if (has("termguicolors"))
+    set termguicolors
 endif
 
 " Plugins Settings
@@ -164,4 +163,3 @@ autocmd FileType tex setlocal spell spelllang=en_us
 
 " clear conceal black box
 hi clear Conceal
-
