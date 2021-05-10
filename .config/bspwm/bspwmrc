@@ -44,6 +44,7 @@ bspc rule -a 'Pavucontrol' state=floating center=true
 $HOME/.config/polybar/launch.sh &
 
 # background programs
+killall parcellite
 killall udiskie
 killall nm-applet
 killall checkfullscreen.sh
@@ -53,6 +54,7 @@ killall feh
 udiskie -t &
 nm-applet &
 pkill dunst &
+parcellite &
 
 # swaps escape and caps lock
 setxkbmap -option ''
