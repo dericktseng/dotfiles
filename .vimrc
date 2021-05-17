@@ -61,7 +61,7 @@ set ruler
 
 " autocompletion
 set omnifunc=ale#completion#OmniFunc
-set completeopt=noselect,menuone,preview
+set completeopt=noinsert,menuone,preview
 
 " show existing tab with 4 spaces width
 set tabstop=4
