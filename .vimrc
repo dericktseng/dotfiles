@@ -1,5 +1,4 @@
 " preload calls
-let g:ale_disable_lsp = 1
 let g:python_host_skip_check = 1
 
 " Plugins will be downloaded under the specified directory
@@ -15,8 +14,9 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'dense-analysis/ale'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Raimondi/delimitMate'
 
 " List ends here. Plugins become visible to Vim after this call
 call plug#end()
@@ -25,13 +25,14 @@ set t_Co=256
 set background=light
 colorscheme customlight
 
-" Coc Extension list
-let g:coc_global_extensions = ['coc-clangd', 'coc-pairs', 'coc-ultisnips', 'coc-vimtex', 'coc-pyright']
+" Deoplete settings
+let g:deoplete#enable_at_startup = 1
 
 filetype plugin indent on
 filetype plugin on
 let g:loaded_python_provider = 0
 let g:loaded_ruby_provider = 0
+let g:loaded_node_provider = 0
 let g:python3_host_prog = '/usr/bin/python3'
 
 " Use GUI colors if possible
@@ -40,13 +41,12 @@ if (has("termguicolors"))
 endif
 
 " Plugins Settings
+source ~/.config/nvim/deoplete.vim
 source ~/.config/nvim/ultisnips.vim
 source ~/.config/nvim/markdown-preview.vim
 source ~/.config/nvim/vimtex.vim
 source ~/.config/nvim/ale.vim
 source ~/.config/nvim/lightline.vim
-source ~/.config/nvim/coc.vim
-source ~/.config/nvim/coc-pairs.vim
 
 " Disables sign gutter
 " set scl=no
@@ -61,6 +61,7 @@ set ruler
 
 " autocompletion
 set omnifunc=ale#completion#OmniFunc
+set completeopt=noselect,menuone,preview
 
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -133,6 +134,10 @@ endfunction
 
 " includes formatted opening and closed brace for programming functions.
 inoremap <C-]> {<CR>}<Esc>O
+
+" allow selection of autocomplete
+inoremap <expr><C-j> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<TAB>"
 
 " For long lines, go up or down one row rather than one line.
 nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')

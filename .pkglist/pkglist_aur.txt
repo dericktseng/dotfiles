@@ -1,7 +1,6 @@
 i3lock-color
 neovim-remote
 nerd-fonts-fira-code
-nodejs-neovim
 polybar-git
 python-pillow-simd
 yay-bin
