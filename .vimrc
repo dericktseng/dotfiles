@@ -26,7 +26,7 @@ set background=light
 colorscheme customlight
 
 " Coc Extension list
-let g:coc_global_extensions = ['coc-clangd', 'coc-pairs', 'coc-ultisnips', 'coc-vimtex']
+let g:coc_global_extensions = ['coc-clangd', 'coc-pairs', 'coc-ultisnips', 'coc-vimtex', 'coc-pyright']
 
 filetype plugin indent on
 filetype plugin on
