@@ -10,7 +10,7 @@ super + Return
 super + r
 	$HOME/.config/rofi/launcher.sh
 
-ctrl + k
+ctrl + shift + k
     /opt/KanaConvert/KanaConvert
 
 ctrl + shift + m

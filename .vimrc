@@ -163,3 +163,4 @@ autocmd FileType tex setlocal spell spelllang=en_us
 
 " clear conceal black box
 hi clear Conceal
+
