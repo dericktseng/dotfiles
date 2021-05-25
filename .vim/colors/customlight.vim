@@ -186,10 +186,10 @@ endfunction
   call s:hi('TSVariableBuiltin', s:darkred, '', '', '')
   call s:hi('TSLabel', s:blue, '', '', '')
  
-  call s:hi('SpellBad', '', '', s:undercurl, '')
-  call s:hi('SpellLocal', '', '', s:undercurl, '')
-  call s:hi('SpellCap', '', '', s:undercurl, '')
-  call s:hi('SpellRare', '', '', s:undercurl, '')
+  call s:hi('SpellBad', s:red, '', s:undercurl, s:red)
+  call s:hi('SpellLocal', s:yellow, '', s:undercurl, s:yellow)
+  call s:hi('SpellCap', s:blue, '', s:undercurl, s:blue)
+  call s:hi('SpellRare', s:teal, '', s:undercurl, s:teal)
  
   call s:hi('csClass', s:yelloworange, '', '', '')
   call s:hi('csAttribute', s:yelloworange, '', '', '')

@@ -1,4 +1,4 @@
 #!/bin/sh
 hash -d derick="$HOME/Desktop/Derick"
 hash -d berk="$HOME/Desktop/Berkeley"
-hash -d curr="$HOME/Desktop/Berkeley/classes/2/2021Spring"
+hash -d curr="$HOME/Desktop/Berkeley/classes/3/2021Summer"
