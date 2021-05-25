@@ -62,7 +62,6 @@ rlwrap
 strace
 sudo
 sxhkd
-termite
 texlive-core
 tk
 ttf-dejavu
