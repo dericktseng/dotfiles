@@ -187,7 +187,7 @@ endfunction
   call s:hi('TSLabel', s:blue, '', '', '')
  
   call s:hi('SpellBad', s:red, '', s:undercurl, s:red)
-  call s:hi('SpellLocal', s:yellow, '', s:undercurl, s:yellow)
+  call s:hi('SpellLocal', s:turquoise, '', s:undercurl, s:turquoise)
   call s:hi('SpellCap', s:blue, '', s:undercurl, s:blue)
   call s:hi('SpellRare', s:teal, '', s:undercurl, s:teal)
  
