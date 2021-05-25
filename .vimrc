@@ -22,6 +22,8 @@ Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 set t_Co=256
+let &t_Cs = "\e[4:3m"
+let &t_Ce = "\e[4:0m"
 set background=light
 colorscheme customlight
 

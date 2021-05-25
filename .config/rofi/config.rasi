@@ -1,4 +1,4 @@
 configuration {
     modi: "window,run,ssh,drun";
-    terminal: "termite";
+    terminal: "st";
 }

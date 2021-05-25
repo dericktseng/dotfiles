@@ -17,13 +17,9 @@ export LESS_TERMCAP_se=$'\e[0m'        # reset reverse video
 export LESS_TERMCAP_ue=$'\e[0m'        # reset underline
 export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
 
-
 export MANPAGER='less -s -M +Gg'
-export TERM=xterm-256color
 export EDITOR=$editor
 export VISUAL=$editor
-export TERMCMD=$TERM
-export TERMINAL=$TERM
 export GNUMAKEFLAGS=-j$(nproc)
 export OMP_NUM_THREADS=$(nproc)
 export PERL_DESTRUCT_LEVEL=2

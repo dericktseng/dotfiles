@@ -1,3 +1,4 @@
+discord_arch_electron
 i3lock-color
 neovim-remote
 nerd-fonts-fira-code
