@@ -1,5 +1,6 @@
 discord_arch_electron
 i3lock-color
+libxft-bgra
 neovim-remote
 nerd-fonts-fira-code
 nodejs-neovim
