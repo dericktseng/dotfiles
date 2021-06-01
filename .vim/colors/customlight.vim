@@ -85,7 +85,7 @@ endfunction
   call s:hi('Search', '', s:highlightyellow, '', '')
   call s:hi('SpecialKey', s:green, '', '', '')
   call s:hi('TooLong', s:darkred, '', '', '')
-  call s:hi('Underlined', s:darkred, '', '', '')
+  call s:hi('Underlined', s:purpleblue, '', '', '')
   call s:hi('Visual', s:white, s:blue, '', '')
   call s:hi('VisualNOS', s:darkred, '', '', '')
   call s:hi('WarningMsg', s:darkred, '', '', '')
