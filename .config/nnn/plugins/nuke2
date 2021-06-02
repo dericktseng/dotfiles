@@ -315,8 +315,7 @@ handle_multimedia() {
                 nohup open "${FPATH}" >/dev/null 2>&1 &
                 exit 0
             elif [ "$GUI" -ne 0 ] && which feh >/dev/null 2>&1; then
-                # $HOME/.config/ranger/imageview.sh "${FPATH}" >/dev/null 2>&1 &
-                $HOME/.config/ranger/imageview.sh "${FPATH}" >>/tmp/nnnerror.log 2>&1 &
+                $HOME/.config/ranger/imageview.sh "${FPATH}" >/dev/null 2>&1 &
                 exit 0
             elif [ "$GUI" -ne 0 ] && which imvr >/dev/null 2>&1; then
                 load_dir imvr "${FPATH}" >/dev/null 2>&1 &

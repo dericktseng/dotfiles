@@ -35,6 +35,7 @@ neovim
 network-manager-applet
 networkmanager
 nm-connection-editor
+nnn
 nodejs
 noto-fonts
 noto-fonts-cjk
@@ -55,7 +56,6 @@ pulseaudio
 pulseaudio-alsa
 python-pip
 python-pynvim
-ranger
 ripgrep
 rofi
 rlwrap
