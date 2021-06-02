@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 alias l="/bin/ls --group-directories-first --color=auto"
 alias ls="/bin/ls --group-directories-first --color=auto"
@@ -13,11 +13,9 @@ alias kh='cut -d "," -f 1 ~/.ssh/known_hosts | cut -d " " -f 1'
 alias zshrc="$EDITOR $HOME/.zshrc"
 alias src="exec $SHELL"
 alias vimrc="$EDITOR $HOME/.vimrc"
-alias grep="rg"
 alias open="xdg-open"
 alias locate="locate -e"
 alias gdb="gdb -tui"
-alias nnn="nnn -e"
 alias y="yay"
 alias ytdl="youtube-dl"
 alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"

@@ -40,3 +40,11 @@ export DIFFPROG="nvim -d"
 
 # temporary fix to libreoffice black
 export SAL_USE_VCLPLUGIN=gen
+
+# nnn configs
+alias nnn="/usr/bin/nnn -ac -P p"
+
+export NNN_PLUG="p:preview-tui-ext;s:suedit;o:fzopen2;"
+export NNN_BMS="b:$HOME/Desktop/Derick/tmp/;h:$HOME"
+export NNN_OPENER="$HOME/.config/nnn/plugins/nuke2"
+export SPLIT="v"
