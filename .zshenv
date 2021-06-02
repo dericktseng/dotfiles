@@ -1,10 +1,6 @@
-# if nvim exists, use that, otherwise, default to vim
-editor="vim"
-if command -v nvim &> /dev/null;then
-    editor="nvim"
-    alias vim=$editor
-    alias nvim=$editor
-fi
+editor="nvim"
+alias vim=$editor
+alias nvim=$editor
 
 # Have less display colours
 # from: https://wiki.archlinux.org/index.php/Color_output_in_console#man
@@ -42,14 +38,14 @@ export DIFFPROG="nvim -d"
 export SAL_USE_VCLPLUGIN=gen
 
 # nnn configs
-alias nnn="/usr/bin/nnn -ac -P p"
+alias nnn="/usr/bin/nnn -adc -P p"
 
-export NNN_PLUG="p:preview-tui-ext;s:suedit;o:fzopen2;"
+export NNN_PLUG="p:preview-tui-ext;s:suedit;o:fzopen2;f:fzcd"
 export NNN_BMS="b:$HOME/Desktop/Derick/tmp/;h:$HOME"
 export NNN_OPENER="$HOME/.config/nnn/plugins/nuke2"
 export SPLIT="v"
 
-# NNN colours
+# NNN colors
 BLOCK_DEVICE="c1"
 CHAR_DEVICE="e2"
 DIRECTORY="27"
