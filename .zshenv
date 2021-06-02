@@ -44,6 +44,7 @@ export NNN_PLUG="p:preview-tui-ext;s:suedit;f:fzopen2;d:fzcd"
 export NNN_BMS="b:$HOME/Desktop/Derick/tmp/;h:$HOME;/:/"
 export NNN_OPENER="$HOME/.config/nnn/plugins/nuke2"
 export SPLIT="v"
+export USE_PISTOL=1
 
 # NNN colors
 BLOCK_DEVICE="c1"
