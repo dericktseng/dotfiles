@@ -138,6 +138,12 @@ endfunction
 " includes formatted opening and closed brace for programming functions.
 inoremap <C-]> {<CR>}<Esc>O
 
+" quick tabnew
+nnoremap <expr> t ':tabnew '
+
+" fzf files
+nnoremap <expr> f ':Files<CR>'
+
 " For long lines, go up or down one row rather than one line.
 nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
 nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
