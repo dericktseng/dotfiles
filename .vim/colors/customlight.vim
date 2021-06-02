@@ -36,6 +36,7 @@ let s:highlightyellow=['#f4e900', '220']
 let s:blue = ['#0787a9', '31']
 let s:purpleblue = ['#4078f2', '69']
 let s:pink = ['#f400f4', '201']
+let s:skyblue = ['#a0dee8', '152']
 
 let s:bold='bold'
 let s:italic='italic'
@@ -115,7 +116,7 @@ endfunction
   call s:hi('TabLineSel', s:green, s:darkred, '', '')
   call s:hi('helpExample', s:yelloworange, '', '', '')
   call s:hi('helpCommand', s:yelloworange, '', '', '')
- 
+
   " Standard syntax highlighting
   call s:hi('Boolean', s:orange, '', '', '')
   call s:hi('Character', s:darkred, '', '', '')
@@ -220,11 +221,11 @@ endfunction
   call s:hi('gitCommitSummary', s:green, '', '', '')
  
   call s:hi('htmlBold', s:yelloworange, '', '', '')
-  call s:hi('htmlItalic', s:purple, '', '', '')
+  call s:hi('htmlItalic', s:teal, '', '', '')
   call s:hi('htmlTag', s:blue, '', '', '')
   call s:hi('htmlEndTag', s:blue, '', '', '')
   call s:hi('htmlArg', s:yelloworange, '', '', '')
-  call s:hi('htmlTagName', s:black, '', '', '')
+  call s:hi('htmlTagName', s:purple, '', '', '')
  
   call s:hi('javaScript', s:black, '', '', '')
   call s:hi('javaScriptNumber', s:orange, '', '', '')
@@ -315,4 +316,5 @@ endfunction
   call s:hi('CocDiagnosticsHint', s:blue, '', '', '')
   call s:hi('CocSelectedText', s:purple, '', '', '')
   call s:hi('CocCodeLens', s:teal, '', '', '')
+  call s:hi('CocHighlightText', '', s:skyblue, '', '')
 " }}}

@@ -10,5 +10,7 @@ let g:ale_set_signs = 0
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%severity%] %s [%linter%]'
+
 nmap <silent> <M-m> <Plug>(ale_previous_wrap)
 nmap <silent> <M-n> <Plug>(ale_next_wrap)
+nmap <silent> <M-d> :ALEGoToDefinition -tab<CR>

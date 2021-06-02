@@ -7,16 +7,14 @@ call plug#begin('~/.vim/plugins')
 
 " list of plugins managed by Vim Plug
 Plug 'lervag/vimtex'
-Plug 'ap/vim-css-color'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'itchyny/lightline.vim'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'dense-analysis/ale'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'sheerun/vim-polyglot'
 
 " List ends here. Plugins become visible to Vim after this call
 call plug#end()
@@ -26,7 +24,13 @@ set background=light
 colorscheme customlight
 
 " Coc Extension list
-let g:coc_global_extensions = ['coc-pairs', 'coc-ultisnips', 'coc-vimtex']
+let g:coc_global_extensions = [
+    \ 'coc-pairs',
+    \ 'coc-ultisnips',
+    \ 'coc-vimtex',
+    \ 'coc-html',
+    \ 'coc-clangd',
+    \ ]
 
 filetype plugin indent on
 filetype plugin on
