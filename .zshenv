@@ -41,13 +41,13 @@ export SAL_USE_VCLPLUGIN=gen
 alias nnn="/usr/bin/nnn -ac -P p"
 
 export NNN_PLUG="p:preview-tui-ext;s:suedit;o:fzopen2;f:fzcd"
-export NNN_BMS="b:$HOME/Desktop/Derick/tmp/;h:$HOME"
+export NNN_BMS="b:$HOME/Desktop/Derick/tmp/;h:$HOME;/:/"
 export NNN_OPENER="$HOME/.config/nnn/plugins/nuke2"
 export SPLIT="v"
 
 # NNN colors
 BLOCK_DEVICE="c1"
-CHAR_DEVICE="e2"
+CHAR_DEVICE="d6"
 DIRECTORY="27"
 EXECUTABLE="1d"
 REGULAR="00"
