@@ -1,6 +1,6 @@
 # if nvim exists, use that, otherwise, default to vim
 editor="vim"
-if [[ ! -z $(command -v nvim) ]];then
+if command -v nvim &> /dev/null;then
     editor="nvim"
     alias vim=$editor
     alias nvim=$editor
@@ -48,3 +48,18 @@ export NNN_PLUG="p:preview-tui-ext;s:suedit;o:fzopen2;"
 export NNN_BMS="b:$HOME/Desktop/Derick/tmp/;h:$HOME"
 export NNN_OPENER="$HOME/.config/nnn/plugins/nuke2"
 export SPLIT="v"
+
+# NNN colours
+BLOCK_DEVICE="c1"
+CHAR_DEVICE="e2"
+DIRECTORY="27"
+EXECUTABLE="1d"
+REGULAR="00"
+HARD_LINK="60"
+SYMBOLIC_LINK="38"
+MISSING="f7"
+ORPHANED="c6"
+FIFO="d6"
+SOCKET="ab"
+UNKNOWN="c4"
+export NNN_FCOLORS="$BLOCK_DEVICE$CHAR_DEVICE$DIRECTORY$EXECUTABLE$REGULAR$HARD_LINK$SYMBOLIC_LINK$MISSING$ORPHANED$FIFO$SOCKET$UNKNOWN"
