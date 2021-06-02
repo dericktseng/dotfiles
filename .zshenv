@@ -38,7 +38,7 @@ export DIFFPROG="nvim -d"
 export SAL_USE_VCLPLUGIN=gen
 
 # nnn configs
-alias nnn="/usr/bin/nnn -adc -P p"
+alias nnn="/usr/bin/nnn -ac -P p"
 
 export NNN_PLUG="p:preview-tui-ext;s:suedit;o:fzopen2;f:fzcd"
 export NNN_BMS="b:$HOME/Desktop/Derick/tmp/;h:$HOME"
@@ -52,7 +52,7 @@ DIRECTORY="27"
 EXECUTABLE="1d"
 REGULAR="00"
 HARD_LINK="60"
-SYMBOLIC_LINK="38"
+SYMBOLIC_LINK="37"
 MISSING="f7"
 ORPHANED="c6"
 FIFO="d6"
