@@ -4,7 +4,6 @@ libxft-bgra
 neovim-remote
 nerd-fonts-fira-code
 nodejs-neovim
-pistol-git
 polybar-git
 python-pillow-simd
 yay

@@ -138,6 +138,9 @@ endfunction
 " includes formatted opening and closed brace for programming functions.
 inoremap <C-]> {<CR>}<Esc>O
 
+" quick window shortcut
+nnoremap <expr> z '<C-w>'
+
 " quick tabnew
 nnoremap <expr> t ':tabnew '
 
