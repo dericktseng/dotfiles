@@ -142,7 +142,7 @@ inoremap <C-]> {<CR>}<Esc>O
 nnoremap <expr> t ':tabnew '
 
 " fzf files
-nnoremap <expr> f ':Files<CR>'
+nnoremap <expr> s ':Files<CR>'
 
 " For long lines, go up or down one row rather than one line.
 nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
