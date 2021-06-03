@@ -3,8 +3,8 @@
 alias l="/bin/ls --group-directories-first --color=auto"
 alias ls="/bin/ls --group-directories-first --color=auto"
 alias ll="/bin/ls -lh --group-directories-first --color=auto"
-alias la="/bin/ls -a --group-directories-first --color=auto"
-alias lla="/bin/ls -lah --group-directories-first --color=auto"
+alias la="/bin/ls -A --group-directories-first --color=auto"
+alias lla="/bin/ls -lAh --group-directories-first --color=auto"
 alias cd="cdls"
 alias df='/usr/bin/df -h'
 alias free='free -m'

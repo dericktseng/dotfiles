@@ -106,7 +106,7 @@ elif [ "$SPLIT" != 'h' ]; then
 fi
 
 exists() {
-    type "$1" >/dev/null
+    type "$1" >/dev/null 2>&1
 }
 
 fifo_pager() {
@@ -177,7 +177,7 @@ preview_file() {
         elif exists exa; then
             fifo_pager exa -G --colour=always 2>/dev/null
         else
-            fifo_pager ls -gGh --color=always --group-directories-first
+            fifo_pager ls --color=always --group-directories-first
         fi
     elif [ "${encoding#*)}" = "binary" ]; then
         if [ "${mimetype%%/*}" = "image" ]; then
