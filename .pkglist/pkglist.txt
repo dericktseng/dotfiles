@@ -1,6 +1,5 @@
 acpi
 acpi_call
-alacritty
 alsa-utils
 autoconf
 automake
