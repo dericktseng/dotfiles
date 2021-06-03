@@ -1,6 +1,6 @@
 # starts tmux
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux new
+    tmux -u new
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
