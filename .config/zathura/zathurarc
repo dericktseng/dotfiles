@@ -1,4 +1,4 @@
-set adjust-open "best-fit"
+set adjust-open "width"
 set font "Inconsolata 12"
 set selection-clipboard clipboard
 set statusbar-basename false
