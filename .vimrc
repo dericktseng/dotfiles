@@ -120,7 +120,6 @@ set confirm
 
 " Personal Functions
 " ================================================
-
 " display group name of currently selected word
 nnoremap <C-S-P> :call SyntaxGroup()<CR>
 
@@ -129,23 +128,18 @@ function! g:SyntaxGroup() abort
     echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
 endfunction
 
-" End Personal Functions
-" ================================================
-
 " ================================================
 " Personal Shortcuts
-
-" includes formatted opening and closed brace for programming functions.
-inoremap <C-]> {<CR>}<Esc>O
-
 " quick window shortcut
-nnoremap <expr> z '<C-w>'
-
+nnoremap <expr> m '<C-w>'
 " quick tabnew
 nnoremap <expr> t ':tabnew '
-
 " fzf files
 nnoremap <expr> s ':Files<CR>'
+" removes highlights with <C-L>
+nnoremap <C-L> :nohl<cr><C-L>
+" enable folding with enter
+nnoremap <silent> <TAB> @=(foldlevel('.')?'za':"\<TAB>")<CR>
 
 " For long lines, go up or down one row rather than one line.
 nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
@@ -153,15 +147,6 @@ nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
 
 " terminal drops focus on escape
 tnoremap <Esc> <C-\><C-n>
-
-" removes highlights with <C-L>
-nnoremap <C-L> :nohl<cr><C-L>
-
-" enable folding with enter
-nnoremap <silent> <TAB> @=(foldlevel('.')?'za':"\<TAB>")<CR>
-
-" End personal shortcuts.
-" ================================================
 
 " help menu vertical
 augroup vimrc_help
