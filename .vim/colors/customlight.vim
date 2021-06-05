@@ -13,6 +13,24 @@ endif
 
 let colors_name = "customlight"
 
+" terminal colors
+let g:terminal_color_0  ='#dff4ff'
+let g:terminal_color_1  ='#ff8671'
+let g:terminal_color_2  ='#14a57c'
+let g:terminal_color_3  ='#499ec8'
+let g:terminal_color_4  ='#59b6ea'
+let g:terminal_color_5  ='#ee22bc'
+let g:terminal_color_6  ='#8f5eba'
+let g:terminal_color_7  ='#4a545b'
+let g:terminal_color_8  ='#97a5ab'
+let g:terminal_color_9  ='#ff8671'
+let g:terminal_color_10 ='#14a57c'
+let g:terminal_color_11 ='#499ec8'
+let g:terminal_color_12 ='#59b6ea'
+let g:terminal_color_13 ='#ee22bc'
+let g:terminal_color_14 ='#8f5eba'
+let g:terminal_color_15 ='#4a545b'
+
 " vim: sw=2
 let s:white = ['#eeeeee', '231']
 let s:darkred = ['#af0000', '124']
