@@ -131,7 +131,7 @@ endfunction
 " ================================================
 " Personal Shortcuts
 " quick window shortcut
-nnoremap <expr> m '<C-w>'
+nnoremap <expr> ; '<C-w>'
 " quick tabnew
 nnoremap <expr> t ':tabnew '
 " fzf files
