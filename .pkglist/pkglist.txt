@@ -65,7 +65,6 @@ sxhkd
 texlive-core
 tk
 ttf-dejavu
-ttf-fira-code
 ttf-inconsolata
 tmux
 udiskie

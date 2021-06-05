@@ -1,5 +1,5 @@
 configuration {
-	font:							"Roboto 13";
+	font:							"Noto Sans 11";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"";
