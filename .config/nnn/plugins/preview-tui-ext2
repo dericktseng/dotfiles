@@ -216,6 +216,8 @@ preview_file() {
             fifo_pager glow -s dark "$1"
         elif exists lowdown; then
             lowdown -Tterm "$1"
+        else
+            $PAGER "$1" &
         fi
     elif [ "$ext" = "htm" ] || [ "$ext" = "html" ] || [ "$ext" = "xhtml" ]; then
         if exists w3m; then
@@ -224,6 +226,8 @@ preview_file() {
             fifo_pager lynx "$1"
         elif exists elinks; then
             fifo_pager elinks "$1"
+        else
+            $PAGER "$1" &
         fi
     elif [ "$mimetype" = "text/troff" ]; then
         fifo_pager man -Pcat -l "$1"
