@@ -1,2 +1,2 @@
-#!/bin/sh
+#!/bin/bash
 pacman -S --needed - < pkglist.txt
