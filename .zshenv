@@ -29,6 +29,7 @@ export MOZ_WEBRENDER=1
 
 # fzf settings
 export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git --color=always'
+export FZF_DEFAULT_OPTS='--ansi'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # pacdiff
@@ -38,12 +39,7 @@ export DIFFPROG="nvim -d"
 export SAL_USE_VCLPLUGIN=gen
 
 # nnn configs
-alias nnn="/usr/bin/nnn -ac -P p"
-
-export NNN_PLUG="p:preview-tui-ext2;s:suedit;f:fzopen2;d:fzcd;u:getplugs"
-export NNN_BMS="b:$HOME/Desktop/Derick/tmp/;h:$HOME;/:/"
-export NNN_OPENER="$HOME/.config/nnn/plugins/nuke2"
-export SPLIT="v"
+alias nnn="/usr/bin/nnn -P p"
 
 # NNN colors
 BLOCK_DEVICE="c1"
@@ -58,4 +54,11 @@ ORPHANED="c6"
 FIFO="d6"
 SOCKET="ab"
 UNKNOWN="c4"
+
 export NNN_FCOLORS="$BLOCK_DEVICE$CHAR_DEVICE$DIRECTORY$EXECUTABLE$REGULAR$HARD_LINK$SYMBOLIC_LINK$MISSING$ORPHANED$FIFO$SOCKET$UNKNOWN"
+export NNN_PLUG="p:preview-tui-ext2;s:suedit;f:fzopen2;d:fzcd;u:getplugs"
+export NNN_BMS="b:$HOME/Desktop/Derick/tmp/;h:$HOME;/:/"
+export NNN_OPENER="$HOME/.config/nnn/plugins/nuke2"
+export NNN_OPTS="ac"
+export SPLIT="v"
+
