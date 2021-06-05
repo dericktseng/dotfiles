@@ -6,5 +6,6 @@ nerd-fonts-fira-code
 nodejs-neovim
 polybar-git
 python-pillow-simd
+ttf-ms-fonts
 yay
 zoom

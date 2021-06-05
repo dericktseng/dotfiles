@@ -65,9 +65,8 @@ sxhkd
 texlive-core
 tk
 ttf-dejavu
+ttf-fira-code
 ttf-inconsolata
-ttf-roboto
-ttf-ubuntu-font-family
 tmux
 udiskie
 ueberzug

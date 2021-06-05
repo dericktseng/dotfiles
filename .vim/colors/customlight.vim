@@ -184,32 +184,13 @@ endfunction
   call s:hi('LspDiagnosticsSignHint', s:blue, '', '', '')
   call s:hi('LspDiagnosticsUnderlineHint', '', '', s:undercurl, '')
  
-  " TreeSitter stuff
-  call s:hi('TSInclude', s:blue, '', '', '')
-  call s:hi('TSPunctBracket', s:blue, '', '', '')
-  call s:hi('TSPunctDelimiter', s:black, '', '', '')
-  call s:hi('TSParameter', s:black, '', '', '')
-  call s:hi('TSType', s:purpleblue, '', '', '')
-  call s:hi('TSFunction', s:blue, '', '', '')
- 
-  call s:hi('TSTagDelimiter', s:blue, '', '', '')
-  call s:hi('TSProperty', s:yelloworange, '', '', '')
-  call s:hi('TSMethod', s:purpleblue, '', '', '')
-  call s:hi('TSParameter', s:yelloworange, '', '', '')
-  call s:hi('TSConstructor', s:black, '', '', '')
-  call s:hi('TSVariable', s:black, '', '', '')
-  call s:hi('TSOperator', s:black, '', '', '')
-  call s:hi('TSTag', s:black, '', '', '')
-  call s:hi('TSKeyword', s:purple, '', '', '')
-  call s:hi('TSKeywordOperator', s:purple, '', '', '')
-  call s:hi('TSVariableBuiltin', s:darkred, '', '', '')
-  call s:hi('TSLabel', s:blue, '', '', '')
- 
+  " SpellCheck colors
   call s:hi('SpellBad', s:red, '', s:undercurl, s:red)
   call s:hi('SpellLocal', s:turquoise, '', s:undercurl, s:turquoise)
   call s:hi('SpellCap', s:blue, '', s:undercurl, s:blue)
   call s:hi('SpellRare', s:teal, '', s:undercurl, s:teal)
  
+  " C colors
   call s:hi('csClass', s:yelloworange, '', '', '')
   call s:hi('csAttribute', s:yelloworange, '', '', '')
   call s:hi('csModifier', s:purple, '', '', '')
@@ -224,7 +205,6 @@ endfunction
   call s:hi('cssBraces', s:black, '', '', '')
   call s:hi('cssClassName', s:purple, '', '', '')
  
- 
   call s:hi('DiffAdd', s:green, s:darkred, s:bold, '')
   call s:hi('DiffChange', s:green, s:darkred, '', '')
   call s:hi('DiffDelete', s:darkred, s:darkred, '', '')
@@ -234,7 +214,7 @@ endfunction
   call s:hi('DiffNewFile', s:green, s:white, '', '')
   call s:hi('DiffLine', s:purpleblue, s:white, '', '')
   call s:hi('DiffRemoved', s:black, s:darkred, s:bold, '')
- 
+
   call s:hi('gitCommitOverflow', s:darkred, '', '', '')
   call s:hi('gitCommitSummary', s:green, '', '', '')
  
@@ -262,21 +242,9 @@ endfunction
  
   call s:hi('typescriptParens', s:black, '', '', '')
  
-  call s:hi('NeomakeErrorSign', s:darkred, s:white, '', '')
-  call s:hi('NeomakeWarningSign', s:yelloworange, s:white, '', '')
-  call s:hi('NeomakeInfoSign', s:white, s:white, '', '')
-  call s:hi('NeomakeError', s:darkred, '', s:underline, s:darkred)
-  call s:hi('NeomakeWarning', s:darkred, '', s:underline, s:darkred)
- 
   call s:hi('ALEErrorSign', s:darkred,s:white, s:bold, '')
   call s:hi('ALEWarningSign', s:yelloworange, s:white, s:bold, '')
   call s:hi('ALEInfoSign', s:white, s:white, s:bold, '')
- 
-  call s:hi('NERDTreeExecFile', s:black, '', '', '')
-  call s:hi('NERDTreeDirSlash', s:purpleblue, '', '', '')
-  call s:hi('NERDTreeOpenable', s:purpleblue, '', '', '')
-  call s:hi('NERDTreeFile', '', '', '', '')
-  call s:hi('NERDTreeFlags', s:purpleblue, '', '', '')
  
   call s:hi('phpComparison', s:black, '', '', '')
   call s:hi('phpParent', s:black, '', '', '')
@@ -292,17 +260,14 @@ endfunction
   call s:hi('rubyInterpolationDelimiter', s:turquoise, '', '', '')
   call s:hi('rubyStringDelimiter', s:green, '', '', '')
   call s:hi('rubyRegexp', s:blue, '', '', '')
+
+  call s:hi('shQuote', s:green, '', '', '')
  
   call s:hi('sassidChar', s:darkred, '', '', '')
   call s:hi('sassClassChar', s:orange, '', '', '')
   call s:hi('sassInclude', s:purple, '', '', '')
   call s:hi('sassMixing', s:purple, '', '', '')
   call s:hi('sassMixinName', s:purpleblue, '', '', '')
- 
-  call s:hi('vimfilerLeaf', s:black, '', '', '')
-  call s:hi('vimfilerNormalFile', s:black, s:white, '', '')
-  call s:hi('vimfilerOpenedFile', s:purpleblue, '', '', '')
-  call s:hi('vimfilerClosedFile', s:purpleblue, '', '', '')
  
   call s:hi('GitGutterAdd', s:green, s:white, s:bold, '')
   call s:hi('GitGutterChange', s:purpleblue, s:white, s:bold, '')
