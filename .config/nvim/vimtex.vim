@@ -3,6 +3,8 @@ let g:tex_flavor='latex'
 let g:vimtex_view_general_viewer='zathura'
 let g:vimtex_view_method='zathura'
 let g:vimtex_fold_enabled=1
+let g:vimtex_complete_enabled=1
+
 set fillchars=fold:\ 
 
 let g:vimtex_fold_types = {
@@ -42,3 +44,7 @@ set conceallevel=2
 let g:vimtex_mappings_disable = {
     \ 'i': [']]']
   \ }
+
+if (&ft=='tex')
+    set omnifunc=vimtex#complete#omnifunc
+endif

@@ -1,6 +1,5 @@
 editor="nvim"
 alias vim=$editor
-alias nvim=$editor
 
 # Have less display colours
 # from: https://wiki.archlinux.org/index.php/Color_output_in_console#man
@@ -32,9 +31,6 @@ export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git --co
 export FZF_DEFAULT_OPTS='--ansi'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# pacdiff
-export DIFFPROG="nvim -d"
-
 # temporary fix to libreoffice black
 export SAL_USE_VCLPLUGIN=gen
 
@@ -56,7 +52,7 @@ SOCKET="ab"
 UNKNOWN="c4"
 
 export NNN_FCOLORS="$BLOCK_DEVICE$CHAR_DEVICE$DIRECTORY$EXECUTABLE$REGULAR$HARD_LINK$SYMBOLIC_LINK$MISSING$ORPHANED$FIFO$SOCKET$UNKNOWN"
-export NNN_PLUG="p:preview-tui-ext2;s:suedit;f:fzopen2;d:fzcd;u:getplugs"
+export NNN_PLUG="p:-preview-tui-ext2;s:suedit;f:-fzopen2;d:-fzcd;u:getplugs"
 export NNN_BMS="b:$HOME/Desktop/Derick/tmp/;h:$HOME;/:/"
 export NNN_OPENER="$HOME/.config/nnn/plugins/nuke2"
 export NNN_OPTS="ac"

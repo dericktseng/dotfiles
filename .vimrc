@@ -1,11 +1,14 @@
 " preload calls
-let g:ale_disable_lsp = 1
+let g:ale_completion_enabled = 0
 let g:python_host_skip_check = 1
+let g:loaded_python_provider = 0
+let g:loaded_ruby_provider = 0
+let g:loaded_node_provider = 0
+let g:python3_host_prog = '/usr/bin/python3'
 
 " Plugins will be downloaded under the specified directory
 call plug#begin('~/.vim/plugins')
 
-" list of plugins managed by Vim Plug
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -14,29 +17,23 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'dense-analysis/ale'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" List ends here. Plugins become visible to Vim after this call
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
+Plug 'prabirshrestha/asyncomplete-file.vim'
+Plug 'yami-beta/asyncomplete-omni.vim'
+
 call plug#end()
 
+" needed for vim to display colors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set t_Co=256
 set background=light
 colorscheme customlight
 
-" Coc Extension list
-let g:coc_global_extensions = [
-    \ 'coc-pairs',
-    \ 'coc-ultisnips',
-    \ 'coc-vimtex',
-    \ 'coc-html',
-    \ 'coc-clangd',
-    \ ]
-
 filetype plugin indent on
 filetype plugin on
-let g:loaded_python_provider = 0
-let g:loaded_ruby_provider = 0
-let g:python3_host_prog = '/usr/bin/python3'
 
 " Use GUI colors if possible
 if (has("termguicolors"))
@@ -49,22 +46,16 @@ source ~/.config/nvim/markdown-preview.vim
 source ~/.config/nvim/vimtex.vim
 source ~/.config/nvim/ale.vim
 source ~/.config/nvim/lightline.vim
-source ~/.config/nvim/coc.vim
-source ~/.config/nvim/coc-pairs.vim
+source ~/.config/nvim/asyncomplete.vim
 
-" Disables sign gutter
-" set scl=no
+" personal shortcuts
+source ~/.config/nvim/shortcuts.vim
 
-" vi compatibility
-if &compatible
-  set nocompatible
-endif
-
-" because why not
+" ruler
 set ruler
 
 " autocompletion
-set omnifunc=ale#completion#OmniFunc
+" set omnifunc=
 
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -118,35 +109,8 @@ set showbreak=\|
 " allow confirming of actions if fail
 set confirm
 
-" Personal Functions
-" ================================================
-" display group name of currently selected word
-nnoremap <C-S-P> :call SyntaxGroup()<CR>
-
-function! g:SyntaxGroup() abort
-    let l:s = synID(line('.'), col('.'), 1) 
-    echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
-endfunction
-
-" ================================================
-" Personal Shortcuts
-" quick window shortcut
-nnoremap <expr> ; '<C-w>'
-" quick tabnew
-nnoremap <expr> t ':tabnew '
-" fzf files
-nnoremap <expr> s ':Files<CR>'
-" removes highlights with <C-L>
-nnoremap <C-L> :nohl<cr><C-L>
-" enable folding with enter
-nnoremap <silent> <TAB> @=(foldlevel('.')?'za':"\<TAB>")<CR>
-
-" For long lines, go up or down one row rather than one line.
-nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
-nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
-
-" terminal drops focus on escape
-tnoremap <Esc> <C-\><C-n>
+" completeopt
+set completeopt=menuone,noinsert,preview
 
 " help menu vertical
 augroup vimrc_help
@@ -154,11 +118,12 @@ augroup vimrc_help
   autocmd BufEnter *.txt if &buftype == 'help' | wincmd L | endif
 augroup END
 
+" To auto close preview window when completion is done.
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+
 " per filetype settings
 autocmd BufNewFile,BufRead *.rasi setf css
-autocmd BufNewFile,BufRead *.jl set ft=julia
 autocmd FileType tex setlocal spell spelllang=en_us
 
 " clear conceal black box
 hi clear Conceal
-

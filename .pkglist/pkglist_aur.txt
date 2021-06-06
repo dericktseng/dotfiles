@@ -3,7 +3,6 @@ i3lock-color
 libxft-bgra
 neovim-remote
 nerd-fonts-fira-code
-nodejs-neovim
 polybar-git
 python-pillow-simd
 ttf-ms-fonts

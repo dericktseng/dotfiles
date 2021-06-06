@@ -1,5 +1,0 @@
-{
-    "diagnostic.displayByAle": true,
-    "python.linting.flake8Enabled": true,
-    "python.venvPath": ".venv"
-}
