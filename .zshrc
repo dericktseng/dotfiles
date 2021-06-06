@@ -34,8 +34,9 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory
 
-# same colors as dircolors
-eval "$(dircolors)"
+# same colors as dircolors, but no stat options
+# https://wiki.archlinux.org/title/Color_output_in_console#ls
+eval $(dircolors -p | perl -pe 's/^((CAP|S[ET]|O[TR]|M|E)\w+).*/$1 00/' | dircolors -)
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 for f in ~/.config/zsh/*;
