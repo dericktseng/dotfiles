@@ -21,7 +21,6 @@ Plug 'rstacruz/vim-closer'
 
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
-Plug 'prabirshrestha/asyncomplete-file.vim'
 Plug 'yami-beta/asyncomplete-omni.vim'
 
 call plug#end()
@@ -120,7 +119,8 @@ augroup vimrc_help
 augroup END
 
 " To auto close preview window when completion is done.
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+" autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+autocmd! InsertLeave * if pumvisible() == 0 | pclose | endif
 
 " per filetype settings
 autocmd BufNewFile,BufRead *.rasi setf css

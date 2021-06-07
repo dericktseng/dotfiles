@@ -13,13 +13,6 @@ au User asyncomplete_setup call asyncomplete#register_source(
     \ }))
 
 au User asyncomplete_setup call asyncomplete#register_source(
-    \ asyncomplete#sources#file#get_source_options({
-    \ 'name': 'file',
-    \ 'allowlist': ['*'],
-    \ 'completor': function('asyncomplete#sources#file#completor')
-    \ }))
-
-au User asyncomplete_setup call asyncomplete#register_source(
     \ asyncomplete#sources#omni#get_source_options({
     \ 'name': 'omni',
     \ 'allowlist': ['tex'],

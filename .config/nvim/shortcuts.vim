@@ -31,7 +31,8 @@ let mapleader=";"
 " quick tabnew
 nnoremap <Leader>t :tabnew 
 
-" fzf files
+" fzf
+inoremap <expr> <c-f> fzf#vim#complete#path('fd --hidden')
 nnoremap <silent> <Leader>f :Files<CR>
 
 " ALE definitions
@@ -39,4 +40,5 @@ nnoremap <silent> <Leader>n :ALENextWrap<CR>
 nnoremap <silent> <Leader>m :ALEPreviousWrap<CR>
 nnoremap <silent> <Leader>d :ALEGoToDefinition -tab<CR>
 nnoremap <silent> <Leader>i :ALEInfo<CR>
-
+nnoremap <silent> <Leader>r :ALEFindReferences<CR>
+nnoremap          <Leader>s :ALESymbolSearch -relative 
