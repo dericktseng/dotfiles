@@ -49,8 +49,8 @@ let s:purple = ['#a300f4', '129']
 let s:darkblue = ['#005faf', '25']
 let s:orange = ['#d75f00', '166']
 let s:yelloworange = ['#c69000', '172']
-let s:yellow = ['#fbaa26', '214']
-let s:highlightyellow=['#f4e900', '220']
+let s:yellow = ['#eace00', '214']
+let s:highlightyellow=['#fbaa26', '220']
 let s:blue = ['#0787a9', '31']
 let s:purpleblue = ['#4078f2', '69']
 let s:pink = ['#f400f4', '201']
@@ -59,6 +59,7 @@ let s:skyblue = ['#a0dee8', '152']
 let s:bold='bold'
 let s:italic='italic'
 let s:none='NONE'
+let s:colornone=['NONE', 'NONE']
 let s:undercurl='undercurl'
 let s:underline='underline'
 
@@ -96,7 +97,7 @@ endfunction
   call s:hi('Italic', '', '', s:italic, '')
   call s:hi('Error', '', s:orange, s:none, '')
  
-  call s:hi('Macro', s:darkred, '', '', '')
+  call s:hi('Macro', s:blue, '', '', '')
   call s:hi('MatchParen', '', s:lightgrey, '', '')
   call s:hi('ModeMsg', s:green, '', '', '')
   call s:hi('MoreMsg', s:green, '', '', '')
@@ -116,7 +117,7 @@ endfunction
   call s:hi('Normal', s:black, '' , '', '')
   call s:hi('EndOfBuffer', s:black, '', '', '')
   call s:hi('LineNr', s:darkgrey, '' , '', '')
-  call s:hi('SignColumn', s:white, s:white, '', '')
+  call s:hi('SignColumn', '', s:white, '', '')
   call s:hi('StatusLine', s:darkred, s:green, '', '')
   call s:hi('StatusLineNC', s:black, s:darkred, '', '')
   call s:hi('VertSplit', s:white, s:black, '', '')
@@ -140,7 +141,7 @@ endfunction
   call s:hi('Character', s:darkred, '', '', '')
   call s:hi('Comment', s:darkgrey, '', s:italic, '')
   call s:hi('Conditional', s:pink, '', '', '')
-  call s:hi('Constant', s:orange, '', '', '')
+  call s:hi('Constant', s:green, '', s:bold, '')
   call s:hi('Define', s:purple, '', '', '')
   call s:hi('Delimiter', s:teal, '', '', '')
   call s:hi('Float', s:orange, '', '', '')
@@ -166,15 +167,15 @@ endfunction
   call s:hi('Todo', s:green, s:white, s:bold, '')
   call s:hi('Type', s:darkblue, '', s:none, '')
   call s:hi('Typedef', s:yelloworange, '', '', '')
- 
-  " LSP
+  "
+   " LSP
   call s:hi('LspDiagnosticsDefaultError', '', '', '', '')
   call s:hi('LspDiagnosticsSignError', s:darkred, '', '', '')
-  call s:hi('LspDiagnosticsUnderlineError', '', '', s:undercurl, '')
+  call s:hi('LspDiagnosticsUnderlineError', '', '', s:undercurl, s:red)
  
   call s:hi('LspDiagnosticsDefaultWarning', '', '', '', '')
   call s:hi('LspDiagnosticsSignWarning', s:yelloworange, '', '', '')
-  call s:hi('LspDiagnosticsUnderlineWarning', '', '', s:undercurl, '')
+  call s:hi('LspDiagnosticsUnderlineWarning', '', '', s:undercurl, s:yellow)
  
   call s:hi('LspDiagnosticsDefaultInformation', '', '', '', '')
   call s:hi('LspDiagnosticsSignInformation', s:purpleblue, '', '', '')
@@ -183,121 +184,29 @@ endfunction
   call s:hi('LspDiagnosticsDefaultHint', '', '', '', '')
   call s:hi('LspDiagnosticsSignHint', s:blue, '', '', '')
   call s:hi('LspDiagnosticsUnderlineHint', '', '', s:undercurl, '')
- 
+
   " SpellCheck colors
-  call s:hi('SpellBad', s:red, '', s:undercurl, s:red)
-  call s:hi('SpellLocal', s:turquoise, '', s:undercurl, s:turquoise)
-  call s:hi('SpellCap', s:blue, '', s:undercurl, s:blue)
-  call s:hi('SpellRare', s:teal, '', s:undercurl, s:teal)
+  call s:hi('SpellBad', '', '', s:undercurl, s:red)
+  call s:hi('SpellLocal', '', '', s:undercurl, s:turquoise)
+  call s:hi('SpellCap', '', '', s:undercurl, s:blue)
+  call s:hi('SpellRare', '', '', s:undercurl, s:teal)
  
-  " C colors
-  call s:hi('csClass', s:yelloworange, '', '', '')
-  call s:hi('csAttribute', s:yelloworange, '', '', '')
-  call s:hi('csModifier', s:purple, '', '', '')
-  call s:hi('csType', s:darkred, '', '', '')
-  call s:hi('csUnspecifiedStatement', s:purpleblue, '', '', '')
-  call s:hi('csContextualStatement', s:purple, '', '', '')
-  call s:hi('csNewDecleration', s:darkred, '', '', '')
-  call s:hi('cOperator', s:blue, '', '', '')
-  call s:hi('cPreCondit', s:purple, '', '', '')
- 
-  call s:hi('cssColor', s:blue, '', '', '')
-  call s:hi('cssBraces', s:black, '', '', '')
-  call s:hi('cssClassName', s:purple, '', '', '')
- 
-  call s:hi('DiffAdd', s:green, s:darkred, s:bold, '')
-  call s:hi('DiffChange', s:green, s:darkred, '', '')
-  call s:hi('DiffDelete', s:darkred, s:darkred, '', '')
-  call s:hi('DiffText', s:purpleblue, s:darkred, '', '')
-  call s:hi('DiffAdded', s:black, s:green, s:bold, '')
+  " VimDiff
+  call s:hi('DiffAdded', s:green, '', s:bold, '')
+  call s:hi('DiffRemoved', s:darkred, '', s:bold, '')
+  call s:hi('DiffAdd', s:green, '', '', '')
+  call s:hi('DiffChange', s:blue, '', '', '')
+  call s:hi('DiffDelete', s:darkred, '', '', '')
+  call s:hi('DiffText', s:purpleblue, '', '', '')
   call s:hi('DiffFile', s:darkred, s:white, '', '')
   call s:hi('DiffNewFile', s:green, s:white, '', '')
   call s:hi('DiffLine', s:purpleblue, s:white, '', '')
-  call s:hi('DiffRemoved', s:black, s:darkred, s:bold, '')
 
   call s:hi('gitCommitOverflow', s:darkred, '', '', '')
   call s:hi('gitCommitSummary', s:green, '', '', '')
  
-  call s:hi('htmlBold', s:yelloworange, '', '', '')
-  call s:hi('htmlItalic', s:teal, '', '', '')
-  call s:hi('htmlTag', s:blue, '', '', '')
-  call s:hi('htmlEndTag', s:blue, '', '', '')
-  call s:hi('htmlArg', s:yelloworange, '', '', '')
-  call s:hi('htmlTagName', s:purple, '', '', '')
- 
-  call s:hi('javaScript', s:black, '', '', '')
-  call s:hi('javaScriptNumber', s:orange, '', '', '')
-  call s:hi('javaScriptBraces', s:black, '', '', '')
- 
-  call s:hi('jsonKeyword', s:green, '', '', '')
-  call s:hi('jsonQuote', s:green, '', '', '')
- 
-  call s:hi('markdownCode', s:green, '', '', '')
-  call s:hi('markdownCodeBlock', s:green, '', '', '')
-  call s:hi('markdownHeadingDelimiter', s:purpleblue, '', '', '')
-  call s:hi('markdownItalic', s:purple, '', s:italic, '')
-  call s:hi('markdownBold', s:yelloworange, '', s:bold, '')
-  call s:hi('markdownCodeDelimiter', s:turquoise, '', s:italic, '')
-  call s:hi('markdownError', s:black, s:white, '', '')
- 
-  call s:hi('typescriptParens', s:black, '', '', '')
- 
-  call s:hi('ALEErrorSign', s:darkred,s:white, s:bold, '')
-  call s:hi('ALEWarningSign', s:yelloworange, s:white, s:bold, '')
-  call s:hi('ALEInfoSign', s:white, s:white, s:bold, '')
- 
-  call s:hi('phpComparison', s:black, '', '', '')
-  call s:hi('phpParent', s:black, '', '', '')
-  call s:hi('phpMemberSelector', s:black, '', '', '')
- 
-  call s:hi('pythonRepeat', s:purple, '', '', '')
-  call s:hi('pythonOperator', s:purple, '', '', '')
- 
-  call s:hi('rubyConstant', s:yelloworange, '', '', '')
-  call s:hi('rubySymbol', s:green, '', '', '')
-  call s:hi('rubyAttribute', s:purpleblue, '', '', '')
-  call s:hi('rubyInterpolation', s:green, '', '', '')
-  call s:hi('rubyInterpolationDelimiter', s:turquoise, '', '', '')
-  call s:hi('rubyStringDelimiter', s:green, '', '', '')
-  call s:hi('rubyRegexp', s:blue, '', '', '')
-
   call s:hi('shQuote', s:green, '', '', '')
- 
-  call s:hi('sassidChar', s:darkred, '', '', '')
-  call s:hi('sassClassChar', s:orange, '', '', '')
-  call s:hi('sassInclude', s:purple, '', '', '')
-  call s:hi('sassMixing', s:purple, '', '', '')
-  call s:hi('sassMixinName', s:purpleblue, '', '', '')
- 
-  call s:hi('GitGutterAdd', s:green, s:white, s:bold, '')
-  call s:hi('GitGutterChange', s:purpleblue, s:white, s:bold, '')
-  call s:hi('GitGutterDelete', s:darkred, s:white, s:bold, '')
-  call s:hi('GitGutterChangeDelete', s:purple, s:white, s:bold, '')
- 
-  call s:hi('SignifySignAdd', s:green, s:white, s:bold, '')
-  call s:hi('SignifySignChange', s:purpleblue, s:white, s:bold, '')
-  call s:hi('SignifySignDelete', s:darkred, s:white, s:bold, '')
-  call s:hi('SignifySignChangeDelete', s:purple, s:white, s:bold, '')
-  call s:hi('SignifySignDeleteFirstLine', s:darkred, s:white, s:bold, '')
- 
-  call s:hi('xmlTag', s:blue, '', '', '')
-  call s:hi('xmlTagName', s:black, '', '', '')
-  call s:hi('xmlEndTag', s:blue, '', '', '')
-  call s:hi('Defx_filename_directory', s:purpleblue, '', '', '')
- 
-  call s:hi('CocErrorSign', s:darkred, '', '', '')
-  call s:hi('CocWarningSign', s:yelloworange, '', '', '')
-  call s:hi('CocInfoSign', s:purpleblue, '', '', '')
-  call s:hi('CocHintSign', s:blue, '', '', '')
-  call s:hi('CocErrorFloat', s:darkred, '', '', '')
-  call s:hi('CocWarningFloat', s:yelloworange, '', '', '')
-  call s:hi('CocInfoFloat', s:purpleblue, '', '', '')
-  call s:hi('CocHintFloat', s:blue, '', '', '')
-  call s:hi('CocDiagnosticsError', s:darkred, '', '', '')
-  call s:hi('CocDiagnosticsWarning', s:yelloworange, '', '', '')
-  call s:hi('CocDiagnosticsInfo', s:purpleblue, '', '', '')
-  call s:hi('CocDiagnosticsHint', s:blue, '', '', '')
-  call s:hi('CocSelectedText', s:purple, '', '', '')
-  call s:hi('CocCodeLens', s:teal, '', '', '')
-  call s:hi('CocHighlightText', '', s:skyblue, '', '')
+
+  " Vimtex
+  " call s:hi('texOpt', s:black, '', '', '')
 " }}}

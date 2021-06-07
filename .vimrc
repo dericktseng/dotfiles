@@ -1,9 +1,8 @@
 " preload calls
-let g:ale_completion_enabled = 0
-let g:python_host_skip_check = 1
 let g:loaded_python_provider = 0
 let g:loaded_ruby_provider = 0
 let g:loaded_node_provider = 0
+let g:loaded_perl_provider = 0
 let g:python3_host_prog = '/usr/bin/python3'
 
 " Plugins will be downloaded under the specified directory
@@ -23,6 +22,14 @@ Plug 'hrsh7th/nvim-compe'
 
 call plug#end()
 
+" Use GUI colors if possible
+if (has("termguicolors"))
+    set termguicolors
+endif
+
+" color scheme
+syntax enable
+
 " needed for vim to display colors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -33,11 +40,6 @@ colorscheme customlight
 
 filetype plugin indent on
 filetype plugin on
-
-" Use GUI colors if possible
-if (has("termguicolors"))
-    set termguicolors
-endif
 
 " Plugins Settings
 source ~/.config/nvim/markdown-preview.vim
@@ -71,9 +73,6 @@ set relativenumber
 " Sets the bell off
 set belloff=all
 
-" color scheme
-syntax enable
-
 " search jumping
 set incsearch
 
@@ -104,6 +103,9 @@ set showbreak=\|
 
 " allow confirming of actions if fail
 set confirm
+
+" shortmessage
+set shortmess+=c
 
 " completeopt
 set completeopt=menuone,noselect
