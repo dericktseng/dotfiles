@@ -15,19 +15,18 @@ Plug 'honza/vim-snippets'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'dense-analysis/ale'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} 
-Plug 'rstacruz/vim-closer'
+Plug 'Raimondi/delimitMate'
 
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
-Plug 'yami-beta/asyncomplete-omni.vim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
 
 call plug#end()
 
 " needed for vim to display colors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 set t_Co=256
 set background=light
 colorscheme customlight
@@ -41,12 +40,9 @@ if (has("termguicolors"))
 endif
 
 " Plugins Settings
-source ~/.config/nvim/ultisnips.vim
 source ~/.config/nvim/markdown-preview.vim
 source ~/.config/nvim/vimtex.vim
-source ~/.config/nvim/ale.vim
 source ~/.config/nvim/lightline.vim
-source ~/.config/nvim/asyncomplete.vim
 
 " personal shortcuts
 source ~/.config/nvim/shortcuts.vim
@@ -110,17 +106,13 @@ set showbreak=\|
 set confirm
 
 " completeopt
-set completeopt=menuone,noinsert,preview
+set completeopt=menuone,noselect
 
 " help menu vertical
 augroup vimrc_help
   autocmd!
   autocmd BufEnter *.txt if &buftype == 'help' | wincmd L | endif
 augroup END
-
-" To auto close preview window when completion is done.
-" autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-autocmd! InsertLeave * if pumvisible() == 0 | pclose | endif
 
 " per filetype settings
 autocmd BufNewFile,BufRead *.rasi setf css

@@ -31,7 +31,6 @@ make
 materia-gtk-theme
 mtools
 ncftp
-neovim
 network-manager-applet
 networkmanager
 nm-connection-editor
