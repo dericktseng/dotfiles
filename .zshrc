@@ -1,5 +1,5 @@
 # starts tmux
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+if command -v tmux &> /dev/null && [ -z "$TMUX" ] && [ "$TERM" != "linux" ]; then
     tmux -u new
 fi
 

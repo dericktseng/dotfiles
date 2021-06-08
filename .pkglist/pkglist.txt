@@ -86,6 +86,7 @@ xorg-xrandr
 xorg-xset
 xorg-xsetroot
 xss-lock
+yarn
 youtube-dl
 zathura
 zathura-pdf-mupdf

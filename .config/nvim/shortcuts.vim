@@ -1,7 +1,8 @@
 " UltiSnips Settings
-let g:UltiSnipsExpandTrigger="<C-j>"
-let g:UltiSnipsJumpForwardTrigger="<C-j>"
-let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips"
+let g:UltiSnipsExpandTrigger="<nop>"
+let g:UltiSnipsJumpForwardTrigger="<nop>"
+let g:UltiSnipsJumpBackwardTrigger="<nop>"
 
 " display group name of currently selected word
 function! g:SyntaxGroup() abort
@@ -27,22 +28,24 @@ nnoremap <silent> s <C-w>
 tnoremap <Esc> <C-\><C-n>
 
 " Compe
-inoremap <silent><expr> <CR>      compe#confirm({ 'keys': "\<Plug>delimitMateCR", 'mode': '' })
+inoremap <silent><expr> <CR>      v:lua.completion_confirm()
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 
-" any changes to tab completion shortcuts should be reflected in init.vim
+" any changes to tab completion shortcuts should be reflected in functions.lua
 inoremap <silent><expr> <TAB>     v:lua.tab_complete()
 inoremap <silent><expr> <S-TAB>   v:lua.s_tab_complete()
 snoremap <silent><expr> <TAB>     v:lua.tab_complete()
 snoremap <silent><expr> <S-TAB>   v:lua.s_tab_complete()
+vnoremap <silent><expr> <TAB>     v:lua.tab_complete()
+vnoremap <silent><expr> <S-TAB>   v:lua.s_tab_complete()
 
 " Leader shortcuts
 let mapleader=";"
 
 " fzf
-inoremap <expr> <c-f> fzf#vim#complete#path('fd --hidden')
-nnoremap <silent> <Leader>f :Files<CR>
+inoremap <expr>   <c-f>         fzf#vim#complete#path('fd --hidden')
+nnoremap <silent> <Leader>f     :Files<CR>
 
 " LSP configuration
 nnoremap <silent> <Leader><S-i> :LspInfo<CR>

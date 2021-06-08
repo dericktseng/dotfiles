@@ -32,34 +32,33 @@ let g:terminal_color_14 ='#8f5eba'
 let g:terminal_color_15 ='#4a545b'
 
 " vim: sw=2
-let s:white = ['#eeeeee', '231']
-let s:darkred = ['#af0000', '124']
-let s:turquoise = ['#00a979', '36']
-let s:green = ['#008700', '28']
-let s:lightgreen = ['#46d211', '76']
-let s:darkgreen = ['#006200', '22']
-let s:teal = ['#4badb9', '73']
-let s:darkgrey = ['#878787', '102']
-let s:lightblue = ['#03b9d5', '38']
-let s:black = ['#222222', '59']
-let s:grey = ['#bcbcbc', '145']
-let s:lightgrey = ['#d3d3d3', '188']
-let s:red = ['#d70000', '160']
-let s:purple = ['#a300f4', '129']
-let s:darkblue = ['#005faf', '25']
-let s:orange = ['#d75f00', '166']
-let s:yelloworange = ['#dea200', '172']
-let s:yellow = ['#eace00', '214']
-let s:highlightyellow=['#fff641', '220']
-let s:blue = ['#0787a9', '31']
-let s:purpleblue = ['#4078f2', '69']
-let s:pink = ['#f400f4', '201']
-let s:skyblue = ['#a0dee8', '152']
+let s:white = '#eeeeee'
+let s:darkred = '#af0000'
+let s:turquoise = '#00a979'
+let s:green = '#008700'
+let s:lightgreen = '#46d211'
+let s:darkgreen = '#006200'
+let s:teal = '#4badb9'
+let s:darkgrey = '#878787'
+let s:lightblue = '#03b9d5'
+let s:black = '#222222'
+let s:grey = '#bcbcbc'
+let s:lightgrey = '#d3d3d3'
+let s:red = '#d70000'
+let s:purple = '#a300f4'
+let s:darkblue = '#005faf'
+let s:orange = '#d75f00'
+let s:yelloworange = '#dea200'
+let s:yellow = '#eace00'
+let s:highlightyellow='#fff641'
+let s:blue = '#0787a9'
+let s:purpleblue = '#4078f2'
+let s:pink = '#f400f4'
+let s:skyblue = '#a0dee8'
 
 let s:bold='bold'
 let s:italic='italic'
 let s:none='NONE'
-let s:colornone=['NONE', 'NONE']
 let s:undercurl='undercurl'
 let s:underline='underline'
 
@@ -67,19 +66,16 @@ let s:underline='underline'
 function! <sid>hi(group, fg, bg, attr, attrsp)
   " fg, bg, attr, attrsp
   if !empty(a:fg)
-    exec "hi " . a:group . " guifg=" .  a:fg[0]
-    exec "hi " . a:group . " ctermfg=" . a:fg[1]
+    exec "hi " . a:group . " guifg=" .  a:fg
   endif
   if !empty(a:bg)
-    exec "hi " . a:group . " guibg=" .  a:bg[0]
-    exec "hi " . a:group . " ctermbg=" . a:bg[1]
+    exec "hi " . a:group . " guibg=" .  a:bg
   endif
   if !empty(a:attr)
     exec "hi " . a:group . " gui=" .   a:attr
-    exec "hi " . a:group . " cterm=" . a:attr
   endif
   if !empty(a:attrsp)
-    exec "hi " . a:group . " guisp=" . a:attrsp[0]
+    exec "hi " . a:group . " guisp=" . a:attrsp
   endif
 endfunction
 "}}}
@@ -97,7 +93,7 @@ endfunction
   call s:hi('Italic', '', '', s:italic, '')
   call s:hi('Error', '', s:orange, s:none, '')
  
-  call s:hi('Macro', s:blue, '', '', '')
+  call s:hi('Macro', s:turquoise, '', '', '')
   call s:hi('MatchParen', '', s:lightgrey, '', '')
   call s:hi('ModeMsg', s:green, '', '', '')
   call s:hi('MoreMsg', s:green, '', '', '')
@@ -154,7 +150,7 @@ endfunction
  
   call s:hi('Label', s:yelloworange, '', '', '')
   call s:hi('Number', s:orange, '', '', '')
-  call s:hi('Operator', s:black, '', '', '')
+  call s:hi('Operator', s:red, '', '', '')
   call s:hi('PreProc', s:darkblue, '', '', '')
   call s:hi('Repeat', s:yelloworange, '', '', '')
   call s:hi('Special', s:darkblue, '', '', '')
@@ -207,6 +203,7 @@ endfunction
  
   call s:hi('shQuote', s:green, '', '', '')
 
-  " Vimtex
-  " call s:hi('texOpt', s:black, '', '', '')
+  " Other links
+  hi link shQuote String
+  hi link vimScriptDelim Macro
 " }}}

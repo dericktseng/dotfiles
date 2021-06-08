@@ -1,68 +1,91 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath = &runtimepath
-source ~/.vimrc
+" preload calls
+let g:loaded_python_provider = 0
+let g:loaded_ruby_provider = 0
+let g:loaded_node_provider = 0
+let g:loaded_perl_provider = 0
+let g:python3_host_prog = '/usr/bin/python3'
+filetype plugin indent on
 
 lua << EOF
+
+-- load plugins before anything else
+require('plugins')
+
+-- Plugin local configs
+require('compeconfig')
+require('functions')
+
 -- LSP servers
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
 
--- Compe setup
-require'compe'.setup {
-  enabled = true;
-  autocomplete = true;
-  debug = false;
-  min_length = 1;
-  preselect = 'enable';
-  throttle_time = 80;
-  source_timeout = 200;
-  incomplete_delay = 400;
-  max_abbr_width = 100;
-  max_kind_width = 100;
-  max_menu_width = 100;
-  documentation = true;
-
-  source = {
-    path = true;
-    buffer = true;
-    nvim_lsp = true;
-    nvim_lua = true;
-    ultisnips = true;
-    omni = true;
-  };
-}
-
--- for Compe tab completion
-local t = function(str)
-  return vim.api.nvim_replace_termcodes(str, true, true, true)
-end
-
-local check_back_space = function()
-    local col = vim.fn.col('.') - 1
-    if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-        return true
-    else
-        return false
-    end
-end
-
---- move to prev/next item in completion menuone
---- jump to prev/next snippet's placeholder
-_G.tab_complete = function()
-  if vim.fn.pumvisible() == 1 then
-    return t "<C-n>"
-  elseif check_back_space() then
-    return t "<Tab>"
-  else
-    return vim.fn['compe#complete']()
-  end
-end
-
-_G.s_tab_complete = function()
-  if vim.fn.pumvisible() == 1 then
-    return t "<C-p>"
-  else
-    return t "<S-Tab>"
-  end
-end
 EOF
+
+syntax enable
+
+" Only true color settings here.
+if (has("termguicolors") && $TERM !=# "linux")
+    set t_Co=256
+    set cursorline
+    set termguicolors
+    set background=light
+    colorscheme customlight
+else
+    set background=dark
+endif
+
+" Plugins Settings
+source ~/.config/nvim/markdown-preview.vim
+source ~/.config/nvim/vimtex.vim
+source ~/.config/nvim/lightline.vim
+
+" personal shortcuts
+source ~/.config/nvim/shortcuts.vim
+
+" show existing tab with 4 spaces width
+set tabstop=4
+
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+
+" On pressing tab, insert 4 spaces
+set expandtab
+set autoindent
+set smartindent
+
+" Set Line Numbers
+set number
+set relativenumber
+
+" allow mouse input
+set mouse=a
+
+" sets yank to keyboard
+set clipboard=unnamedplus
+
+" hides the bottom line since it is covered by lightline
+set noshowmode
+
+" sets the cursor to have a buffer. High number to always be centered.
+set so=10
+
+" only show laststatus line when multiple windows open
+set laststatus=1
+
+" Proper linebreak
+set wrap linebreak nolist
+set showbreak=\|
+
+" allow confirming of actions if fail
+set confirm
+
+" shortmessage
+set shortmess+=c
+
+" completeopt
+set completeopt=menuone,noselect
+
+" per filetype settings
+autocmd FileType help wincmd L
+autocmd FileType tex setlocal spell spelllang=en_us
+autocmd BufWritePost plugins.lua PackerCompile
