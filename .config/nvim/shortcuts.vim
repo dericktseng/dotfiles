@@ -43,18 +43,20 @@ vnoremap <silent><expr> <S-TAB>   v:lua.s_tab_complete()
 " Leader shortcuts
 let mapleader=";"
 
+nnoremap          <Leader><S-S> :source ~/.config/nvim/init.vim<CR>
+
 " fzf
 inoremap <expr>   <c-f>         fzf#vim#complete#path('fd --hidden')
 nnoremap <silent> <Leader>f     :Files<CR>
 
 " LSP configuration
-nnoremap <silent> <Leader><S-i> :LspInfo<CR>
+nnoremap <silent> <Leader><S-I> :LspInfo<CR>
 nnoremap <silent> <Leader>n     :lua vim.lsp.diagnostic.goto_next()<CR>
-nnoremap <silent> <Leader><S-n> :lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> <Leader><S-N> :lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> <Leader>d     :lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> <Leader>s     :lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> <Leader>h     :lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <Leader>i     :lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> <Leader>r     :lua vim.lsp.buf.references()<CR>
 nnoremap <silent> <Leader>t     :lua vim.lsp.buf.type_definition()<CR>
-nnoremap          <Leader><S-r> :lua vim.lsp.buf.rename()<Left>
+nnoremap          <Leader><S-R> :lua vim.lsp.buf.rename()<Left>

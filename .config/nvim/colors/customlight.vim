@@ -13,24 +13,6 @@ endif
 
 let colors_name = "customlight"
 
-" terminal colors
-let g:terminal_color_0  ='#dff4ff'
-let g:terminal_color_1  ='#ff8671'
-let g:terminal_color_2  ='#14a57c'
-let g:terminal_color_3  ='#499ec8'
-let g:terminal_color_4  ='#59b6ea'
-let g:terminal_color_5  ='#ee22bc'
-let g:terminal_color_6  ='#8f5eba'
-let g:terminal_color_7  ='#4a545b'
-let g:terminal_color_8  ='#97a5ab'
-let g:terminal_color_9  ='#ff8671'
-let g:terminal_color_10 ='#14a57c'
-let g:terminal_color_11 ='#499ec8'
-let g:terminal_color_12 ='#59b6ea'
-let g:terminal_color_13 ='#ee22bc'
-let g:terminal_color_14 ='#8f5eba'
-let g:terminal_color_15 ='#4a545b'
-
 " vim: sw=2
 let s:white = '#eeeeee'
 let s:darkred = '#af0000'
@@ -47,14 +29,34 @@ let s:lightgrey = '#d3d3d3'
 let s:red = '#d70000'
 let s:purple = '#a300f4'
 let s:darkblue = '#005faf'
-let s:orange = '#d75f00'
-let s:yelloworange = '#dea200'
-let s:yellow = '#eace00'
+let s:orange = '#ea8a00'
+let s:yelloworange = '#daa500'
+let s:yellow = '#ffc900'
 let s:highlightyellow='#fff641'
 let s:blue = '#0787a9'
 let s:purpleblue = '#4078f2'
+let s:indigo = '#0c1986'
 let s:pink = '#f400f4'
 let s:skyblue = '#a0dee8'
+let s:brown = '#883f16'
+
+" terminal colors
+let g:terminal_color_0  = '#dff4ff'
+let g:terminal_color_1  = '#ff8671'
+let g:terminal_color_2  = '#14a57c'
+let g:terminal_color_3  = '#499ec8'
+let g:terminal_color_4  = '#59b6ea'
+let g:terminal_color_5  = '#ee22bc'
+let g:terminal_color_6  = '#8f5eba'
+let g:terminal_color_7  = '#4a545b'
+let g:terminal_color_8  = '#97a5ab'
+let g:terminal_color_9  = '#ff8671'
+let g:terminal_color_10 = '#14a57c'
+let g:terminal_color_11 = '#499ec8'
+let g:terminal_color_12 = '#59b6ea'
+let g:terminal_color_13 = '#ee22bc'
+let g:terminal_color_14 = '#8f5eba'
+let g:terminal_color_15 = '#4a545b'
 
 let s:bold='bold'
 let s:italic='italic'
@@ -81,97 +83,133 @@ endfunction
 "}}}
 
 
-" {{{ call s::hi(group, fg, bg, gui, guisp)
-  call s:hi('Bold', '', '', s:bold, '')
-  call s:hi('Debug', s:darkred, '', '', '')
+" {{{ builtin highlight groups according to help: highlight-groups
+  call s:hi('ColorColumn', '', s:darkgrey, '', '')
+  call s:hi('Conceal', s:purpleblue, s:white, '', '')
+  call s:hi('Cursor', s:white, s:black, '', '')
+  call s:hi('CursorColumn', '', s:darkgrey, '', '')
+  call s:hi('CursorLine', '', s:white, s:none, '')
   call s:hi('Directory', s:darkblue, '', '', '')
+
+  " Diff
+  call s:hi('DiffAdded', s:green, '', s:bold, '')
+  call s:hi('DiffRemoved', s:darkred, '', s:bold, '')
+  call s:hi('DiffAdd', s:green, '', '', '')
+  call s:hi('DiffChange', s:blue, '', '', '')
+  call s:hi('DiffDelete', s:darkred, '', '', '')
+  call s:hi('DiffText', s:purpleblue, '', '', '')
+
+  call s:hi('EndOfBuffer', s:black, '', '', '')
   call s:hi('ErrorMsg', s:darkred, s:white, '', '')
-  call s:hi('Exception', s:darkred, '', '', '')
-  call s:hi('FoldColumn', s:purpleblue, s:white, '', '')
+  call s:hi('VertSplit', s:white, s:black, '', '')
   call s:hi('Folded', s:darkgrey, s:lightgrey, s:italic, '')
+  call s:hi('FoldColumn', s:purpleblue, s:white, '', '')
+  call s:hi('SignColumn', '', s:white, '', '')
   call s:hi('IncSearch', s:black, s:yellow, s:none, '')
-  call s:hi('Italic', '', '', s:italic, '')
-  call s:hi('Error', '', s:orange, s:none, '')
- 
-  call s:hi('Macro', s:turquoise, '', '', '')
+  call s:hi('Substitute', '', s:skyblue, s:none, '')
+  call s:hi('LineNr', s:darkgrey, '' , '', '')
+  call s:hi('CursorLineNr', s:yelloworange, s:white, '', '')
   call s:hi('MatchParen', '', s:lightgrey, '', '')
   call s:hi('ModeMsg', s:green, '', '', '')
   call s:hi('MoreMsg', s:green, '', '', '')
-  call s:hi('Question', s:purpleblue, '', '', '')
-  call s:hi('Search', '', s:highlightyellow, '', '')
-  call s:hi('SpecialKey', s:green, '', '', '')
-  call s:hi('TooLong', s:darkred, '', '', '')
-  call s:hi('Underlined', s:purpleblue, '', '', '')
-  call s:hi('Visual', s:white, s:blue, '', '')
-  call s:hi('VisualNOS', s:darkred, '', '', '')
-  call s:hi('WarningMsg', s:darkred, '', '', '')
-  call s:hi('WildMenu', s:black, s:purpleblue, '', '')
-  call s:hi('Title', s:purpleblue, '', '', '')
-  call s:hi('Conceal', s:purpleblue, s:white, '', '')
-  call s:hi('Cursor', s:white, s:black, '', '')
   call s:hi('NonText', s:grey, '', s:none, '')
   call s:hi('Normal', s:black, '' , '', '')
-  call s:hi('EndOfBuffer', s:black, '', '', '')
-  call s:hi('LineNr', s:darkgrey, '' , '', '')
-  call s:hi('SignColumn', '', s:white, '', '')
-  call s:hi('StatusLine', s:darkred, s:green, '', '')
-  call s:hi('StatusLineNC', s:black, s:darkred, '', '')
-  call s:hi('VertSplit', s:white, s:black, '', '')
-  call s:hi('ColorColumn', '', s:darkgrey, '', '')
-  call s:hi('CursorColumn', '', s:darkgrey, '', '')
-  call s:hi('CursorLine', '', s:white, s:none, '')
-  call s:hi('CursorLineNR', s:white, s:white, '', '')
-  call s:hi('CursorLineNr', s:yelloworange, s:white, '', '')
+  hi link NormalFloat Normal
+  hi link NormalNC Normal
+
+  " PMenu
   call s:hi('PMenu', '', s:lightgrey, '', '')
   call s:hi('PMenuSel', s:black, s:lightblue, '', '')
   call s:hi('PmenuSbar', '', s:darkgrey, '', '')
   call s:hi('PmenuThumb', '', s:lightblue, '', '')
+
+  call s:hi('Question', s:purpleblue, '', '', '')
+  call s:hi('Search', '', s:highlightyellow, '', '')
+  call s:hi('SpecialKey', s:green, '', '', '')
+
+  " SpellCheck colors
+  call s:hi('SpellBad', '', '', s:undercurl, s:red)
+  call s:hi('SpellLocal', '', '', s:undercurl, s:turquoise)
+  call s:hi('SpellCap', '', '', s:undercurl, s:blue)
+  call s:hi('SpellRare', '', '', s:undercurl, s:teal)
+
+  " StatusLine
+  call s:hi('StatusLine', s:darkred, s:green, '', '')
+  call s:hi('StatusLineNC', s:black, s:darkred, '', '')
+
+  " Tabline
   call s:hi('TabLine', s:green, s:darkred, '', '')
   call s:hi('TabLineFill', s:green, s:darkred, '', '')
   call s:hi('TabLineSel', s:green, s:darkred, '', '')
-  call s:hi('helpExample', s:yelloworange, '', '', '')
-  call s:hi('helpCommand', s:yelloworange, '', '', '')
 
-  " Standard syntax highlighting
-  call s:hi('Boolean', s:orange, '', '', '')
-  call s:hi('Character', s:darkred, '', '', '')
+  call s:hi('Title', s:purpleblue, '', '', '')
+  call s:hi('Visual', s:black, s:skyblue, '', '')
+  call s:hi('VisualNOS', s:darkred, '', '', '')
+  call s:hi('WarningMsg', s:darkred, s:white, '', '')
+  call s:hi('WildMenu', s:black, s:purpleblue, '', '')
+
+  hi link Menu Normal
+  hi link Scrollbar PmenuSbar
+  call s:hi('Tooltip', s:indigo, s:skyblue, '', '')
+
+  call s:hi('Bold', '', '', s:bold, '')
+  call s:hi('Italic', '', '', s:italic, '')
+ 
+  " Help Menu
+  call s:hi('helpExample', s:orange, '', '', '')
+  call s:hi('helpCommand', s:orange, '', '', '')
+
+  " Syntax Group as according to help: group-name
   call s:hi('Comment', s:darkgrey, '', s:italic, '')
-  call s:hi('Conditional', s:pink, '', '', '')
+
   call s:hi('Constant', s:green, '', s:bold, '')
-  call s:hi('Define', s:purple, '', '', '')
-  call s:hi('Delimiter', s:teal, '', '', '')
-  call s:hi('Float', s:orange, '', '', '')
-  call s:hi('Function', s:purpleblue, '', '', '')
-  call s:hi('StringDelimiter', s:green, '', '', '')
- 
-  call s:hi('Identifier', s:lightblue, '', '', '')
-  call s:hi('Include', s:purpleblue, '', '', '')
-  call s:hi('Keyword', s:purple, '', '', '')
- 
-  call s:hi('Label', s:yelloworange, '', '', '')
-  call s:hi('Number', s:orange, '', '', '')
-  call s:hi('Operator', s:red, '', '', '')
-  call s:hi('PreProc', s:darkblue, '', '', '')
-  call s:hi('Repeat', s:yelloworange, '', '', '')
-  call s:hi('Special', s:darkblue, '', '', '')
-  call s:hi('SpecialChar', s:darkgrey, '', '', '')
-  call s:hi('Statement', s:purple, '', s:none, '')
-  call s:hi('StorageClass', s:yelloworange, '', '', '')
   call s:hi('String', s:green, '', '', '')
-  call s:hi('Structure', s:orange, '', '', '')
-  call s:hi('Tag', s:yelloworange, '', '', '')
+  call s:hi('Character', s:orange, '', '', '')
+  call s:hi('Number', s:darkblue, '', '', '')
+  call s:hi('Boolean', s:green, '', s:bold, '')
+  call s:hi('Float', s:teal, '', '', '')
+
+  call s:hi('Identifier', s:lightblue, '', '', '')
+  call s:hi('Function', s:purpleblue, '', '', '')
+
+  call s:hi('Statement', s:purple, '', s:none, '')
+  call s:hi('Conditional', s:pink, '', s:bold, '')
+  call s:hi('Repeat', s:brown, '', s:bold, '')
+  call s:hi('Label', s:pink, '', '', '')
+  call s:hi('Operator', s:indigo, '', '', '')
+  call s:hi('Keyword', s:purple, '', '', '')
+  call s:hi('Exception', s:darkred, '', '', '')
+
+  call s:hi('PreProc', s:darkblue, '', '', '')
+  call s:hi('Include', s:purpleblue, '', '', '')
+  call s:hi('Define', s:purple, '', '', '')
+  call s:hi('Macro', s:turquoise, '', '', '')
+  call s:hi('PreCondit', s:pink, '', '', '')
+
+  call s:hi('Type', s:indigo, '', s:none, '')
+  call s:hi('StorageClass', s:darkblue, '', '', '')
+  call s:hi('Structure', s:darkblue, '', s:bold, '')
+  call s:hi('Typedef', s:indigo, '', s:bold, '')
+
+  call s:hi('Special', s:darkblue, '', '', '')
+  call s:hi('SpecialChar', s:brown, '', '', '')
+  call s:hi('Tag', '', s:yelloworange, '', '')
+  call s:hi('Delimiter', s:teal, '', '', '')
+  call s:hi('SpecialComment', s:blue, '', '', '')
+  call s:hi('Debug', s:darkred, '', '', '')
+
+  call s:hi('Underlined', s:darkblue, '', '', '')
+  call s:hi('Error', s:red, s:white, s:none, '')
   call s:hi('Todo', s:green, s:white, s:bold, '')
-  call s:hi('Type', s:darkblue, '', s:none, '')
-  call s:hi('Typedef', s:yelloworange, '', '', '')
-  "
+
    " LSP
-  call s:hi('LspDiagnosticsDefaultError', '', '', '', '')
+  call s:hi('LspDiagnosticsDefaultError', s:red, '', '', '')
   call s:hi('LspDiagnosticsSignError', s:darkred, '', '', '')
   call s:hi('LspDiagnosticsUnderlineError', '', '', s:undercurl, s:red)
  
-  call s:hi('LspDiagnosticsDefaultWarning', '', '', '', '')
-  call s:hi('LspDiagnosticsSignWarning', s:yelloworange, '', '', '')
-  call s:hi('LspDiagnosticsUnderlineWarning', '', '', s:undercurl, s:yellow)
+  call s:hi('LspDiagnosticsDefaultWarning', s:orange, '', '', '')
+  call s:hi('LspDiagnosticsSignWarning', s:orange, '', '', '')
+  call s:hi('LspDiagnosticsUnderlineWarning', '', '', s:undercurl, s:orange)
  
   call s:hi('LspDiagnosticsDefaultInformation', '', '', '', '')
   call s:hi('LspDiagnosticsSignInformation', s:purpleblue, '', '', '')
@@ -181,29 +219,8 @@ endfunction
   call s:hi('LspDiagnosticsSignHint', s:blue, '', '', '')
   call s:hi('LspDiagnosticsUnderlineHint', '', '', s:undercurl, '')
 
-  " SpellCheck colors
-  call s:hi('SpellBad', '', '', s:undercurl, s:red)
-  call s:hi('SpellLocal', '', '', s:undercurl, s:turquoise)
-  call s:hi('SpellCap', '', '', s:undercurl, s:blue)
-  call s:hi('SpellRare', '', '', s:undercurl, s:teal)
- 
-  " VimDiff
-  call s:hi('DiffAdded', s:green, '', s:bold, '')
-  call s:hi('DiffRemoved', s:darkred, '', s:bold, '')
-  call s:hi('DiffAdd', s:green, '', '', '')
-  call s:hi('DiffChange', s:blue, '', '', '')
-  call s:hi('DiffDelete', s:darkred, '', '', '')
-  call s:hi('DiffText', s:purpleblue, '', '', '')
-  call s:hi('DiffFile', s:darkred, s:white, '', '')
-  call s:hi('DiffNewFile', s:green, s:white, '', '')
-  call s:hi('DiffLine', s:purpleblue, s:white, '', '')
-
-  call s:hi('gitCommitOverflow', s:darkred, '', '', '')
-  call s:hi('gitCommitSummary', s:green, '', '', '')
- 
-  call s:hi('shQuote', s:green, '', '', '')
-
   " Other links
   hi link shQuote String
   hi link vimScriptDelim Macro
+  hi link StringDelimiter String
 " }}}
