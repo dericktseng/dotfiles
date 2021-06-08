@@ -1,8 +1,8 @@
 " UltiSnips Settings
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips"
-let g:UltiSnipsExpandTrigger="<nop>"
-let g:UltiSnipsJumpForwardTrigger="<nop>"
-let g:UltiSnipsJumpBackwardTrigger="<nop>"
+let g:UltiSnipsExpandTrigger="<C-J>"
+let g:UltiSnipsJumpForwardTrigger="<C-J>"
+let g:UltiSnipsJumpBackwardTrigger="<C-K>"
 
 " display group name of currently selected word
 function! g:SyntaxGroup() abort
