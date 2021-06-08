@@ -35,10 +35,8 @@ inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 " any changes to tab completion shortcuts should be reflected in functions.lua
 inoremap <silent><expr> <TAB>     v:lua.tab_complete()
 inoremap <silent><expr> <S-TAB>   v:lua.s_tab_complete()
-snoremap <silent><expr> <TAB>     v:lua.tab_complete()
-snoremap <silent><expr> <S-TAB>   v:lua.s_tab_complete()
-vnoremap <silent><expr> <TAB>     v:lua.tab_complete()
-vnoremap <silent><expr> <S-TAB>   v:lua.s_tab_complete()
+snoremap <silent>       <TAB>     <Esc>:call UltiSnips#ExpandSnippetOrJump()<cr>
+snoremap <silent>       <S-TAB>   <Esc>:call UltiSnips#JumpBackwards()<cr>
 
 " Leader shortcuts
 let mapleader=";"

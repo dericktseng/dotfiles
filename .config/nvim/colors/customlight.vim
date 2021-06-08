@@ -165,15 +165,15 @@ endfunction
 
   call s:hi('Constant', s:green, '', s:bold, '')
   call s:hi('String', s:green, '', '', '')
-  call s:hi('Character', s:orange, '', '', '')
-  call s:hi('Number', s:darkblue, '', '', '')
+  call s:hi('Character', s:blue, '', '', '')
+  call s:hi('Number', s:brown, '', '', '')
   call s:hi('Boolean', s:green, '', s:bold, '')
   call s:hi('Float', s:teal, '', '', '')
 
   call s:hi('Identifier', s:lightblue, '', '', '')
   call s:hi('Function', s:purpleblue, '', '', '')
 
-  call s:hi('Statement', s:purple, '', s:none, '')
+  call s:hi('Statement', s:purple, '', s:bold, '')
   call s:hi('Conditional', s:pink, '', s:bold, '')
   call s:hi('Repeat', s:brown, '', s:bold, '')
   call s:hi('Label', s:pink, '', '', '')
@@ -193,7 +193,7 @@ endfunction
   call s:hi('Typedef', s:indigo, '', s:bold, '')
 
   call s:hi('Special', s:darkblue, '', '', '')
-  call s:hi('SpecialChar', s:brown, '', '', '')
+  call s:hi('SpecialChar', s:brown, '', s:italic, '')
   call s:hi('Tag', '', s:yelloworange, '', '')
   call s:hi('Delimiter', s:teal, '', '', '')
   call s:hi('SpecialComment', s:blue, '', '', '')
