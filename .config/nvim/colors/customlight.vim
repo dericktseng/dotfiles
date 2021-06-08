@@ -15,6 +15,7 @@ let colors_name = "customlight"
 
 " vim: sw=2
 let s:white = '#eeeeee'
+let s:offwhite = '#dedede'
 let s:darkred = '#af0000'
 let s:turquoise = '#00a979'
 let s:green = '#008700'
@@ -114,12 +115,12 @@ endfunction
   call s:hi('MoreMsg', s:green, '', '', '')
   call s:hi('NonText', s:grey, '', s:none, '')
   call s:hi('Normal', s:black, '' , '', '')
-  hi link NormalFloat Normal
-  hi link NormalNC Normal
+  call s:hi('NormalFloat', '', '', '', '')
+  call s:hi('NormalNC', '', '', '', '')
 
   " PMenu
-  call s:hi('PMenu', '', s:lightgrey, '', '')
-  call s:hi('PMenuSel', s:black, s:lightblue, '', '')
+  call s:hi('PMenu', '', s:offwhite, '', '')
+  call s:hi('PMenuSel', s:black, s:skyblue, '', '')
   call s:hi('PmenuSbar', '', s:darkgrey, '', '')
   call s:hi('PmenuThumb', '', s:lightblue, '', '')
 
@@ -202,7 +203,7 @@ endfunction
   call s:hi('Error', s:red, s:white, s:none, '')
   call s:hi('Todo', s:green, s:white, s:bold, '')
 
-   " LSP
+   " from help: lsp-highlight TODO
   call s:hi('LspDiagnosticsDefaultError', s:red, '', '', '')
   call s:hi('LspDiagnosticsSignError', s:darkred, '', '', '')
   call s:hi('LspDiagnosticsUnderlineError', '', '', s:undercurl, s:red)

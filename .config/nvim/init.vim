@@ -18,6 +18,7 @@ require('functions')
 -- LSP servers
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
+require'lspconfig'.vimls.setup{}
 
 EOF
 
