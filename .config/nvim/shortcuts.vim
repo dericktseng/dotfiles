@@ -41,7 +41,7 @@ snoremap <silent>       <S-TAB>   <Esc>:call UltiSnips#JumpBackwards()<cr>
 " Leader shortcuts
 let mapleader=";"
 
-nnoremap <Leader><S-S> :source ~/.config/nvim/init.vim<CR>
+nnoremap <silent> <Leader><S-S> :luafile ~/.config/nvim/init.lua<CR>:luafile ~/.config/nvim/lua/customlight.lua<CR>
 
 " fzf
 inoremap <expr>   <c-f>         fzf#vim#complete#path('fd --hidden')

@@ -2,7 +2,7 @@
 vim.api.nvim_command('hi clear')
 
 -- set colorscheme's name
-vim.g.colors_name = "customlight"
+-- vim.g.colors_name = "customlight"
 
 -- terminal colors
 vim.g.terminal_color_0  = '#dff4ff'
@@ -59,11 +59,11 @@ local none='NONE'
 
 -- highlighting function. AT LEAST ONE OF fg, bg, attr, attrsp MUST NOT BE NIL
 local highlightfunc = function(group, fg, bg, attr, attrsp)
-    local foreground = fg and 'guifg=' .. fg or ''
-    local background = bg and 'guibg=' .. bg or ''
-    local style = attr and 'gui=' .. attr or ''
-    local stylesp = attrsp and 'guisp=' .. attrsp or ''
-    vim.api.nvim_command('highlight ' .. group .. ' ' .. foreground .. ' ' .. background .. ' ' .. style .. ' ' .. stylesp)
+    local foreground = fg and ' guifg=' .. fg or ''
+    local background = bg and ' guibg=' .. bg or ''
+    local style = attr and ' gui=' .. attr or ''
+    local stylesp = attrsp and ' guisp=' .. attrsp or ''
+    vim.api.nvim_command('highlight ' .. group .. foreground .. background .. style .. stylesp)
 end
 
 local linkfunc = function(group1, group2)
@@ -101,7 +101,7 @@ highlightfunc('ModeMsg', green, nil, nil, nil)
 highlightfunc('MoreMsg', green, nil, nil, nil)
 highlightfunc('NonText', grey, nil, none, nil)
 highlightfunc('Normal', black, nil , nil, nil)
-highlightfunc('NormalFloat', nil, skyblue, nil, nil)
+highlightfunc('NormalFloat', nil, offwhite, nil, nil)
 highlightfunc('NormalNC', nil, none, nil, nil)
 
 -- PMenu
@@ -154,7 +154,7 @@ highlightfunc('String', green, nil, nil, nil)
 highlightfunc('Character', blue, nil, nil, nil)
 highlightfunc('Number', indigo, nil, nil, nil)
 highlightfunc('Boolean', green, nil, bold, nil)
-highlightfunc('Float', teal, nil, nil, nil)
+highlightfunc('Float', brown, nil, nil, nil)
 
 highlightfunc('Identifier', lightblue, nil, nil, nil)
 highlightfunc('Function', purpleblue, nil, nil, nil)
