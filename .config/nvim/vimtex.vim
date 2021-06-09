@@ -2,6 +2,9 @@
 let g:tex_no_error=1
 
 if (&ft=='tex')
+    " shortcuts
+    nnoremap <localleader>lt :call vimtex#fzf#run('ctli', g:fzf_colors)<cr>
+
     let g:vimtex_view_general_viewer='zathura'
     let g:vimtex_view_method='zathura'
     let g:vimtex_fold_enabled=0
@@ -52,4 +55,5 @@ if (&ft=='tex')
     set omnifunc=vimtex#complete#omnifunc
     setlocal spell spelllang=en_us
 	call TexNewMathZone("M", "align", 1)
+
 endif

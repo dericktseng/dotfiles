@@ -38,9 +38,6 @@ inoremap <silent><expr> <S-TAB>   v:lua.s_tab_complete()
 snoremap <silent>       <TAB>     <Esc>:call UltiSnips#ExpandSnippetOrJump()<cr>
 snoremap <silent>       <S-TAB>   <Esc>:call UltiSnips#JumpBackwards()<cr>
 
-" Vimtex fzf
-nnoremap <localleader>lt :call vimtex#fzf#run('ctli', g:fzf_colors)<cr>
-
 " Leader shortcuts
 let mapleader=";"
 

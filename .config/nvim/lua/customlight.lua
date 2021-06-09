@@ -56,7 +56,7 @@ local lightgrey = '#d3d3d3'
 local red = '#ff0000'
 local purple = '#a300f4'
 local darkblue = '#005faf'
-local orange = '#ea8a00'
+local orange = '#f2802d'
 local yelloworange = '#daa500'
 local yellow = '#ffc900'
 local highlightyellow='#fff641'
@@ -169,7 +169,7 @@ highlightfunc('Comment', darkgrey, nil, italic, nil)
 highlightfunc('Constant', green, nil, bold, nil)
 highlightfunc('String', green, nil, nil, nil)
 highlightfunc('Character', blue, nil, nil, nil)
-highlightfunc('Number', indigo, nil, nil, nil)
+highlightfunc('Number', orange, nil, nil, nil)
 highlightfunc('Boolean', green, nil, bold, nil)
 highlightfunc('Float', brown, nil, nil, nil)
 
@@ -186,9 +186,9 @@ highlightfunc('Exception', brown, nil, bold, nil)
 
 highlightfunc('PreProc', darkblue, nil, nil, nil)
 highlightfunc('Include', purpleblue, nil, nil, nil)
-highlightfunc('Define', purple, nil, nil, nil)
+highlightfunc('Define', pink, nil, nil, nil)
 highlightfunc('Macro', darkgreen, nil, nil, nil)
-highlightfunc('PreCondit', pink, nil, nil, nil)
+highlightfunc('PreCondit', purple, nil, nil, nil)
 
 highlightfunc('Type', indigo, nil, none, nil)
 highlightfunc('StorageClass', darkblue, nil, nil, nil)
