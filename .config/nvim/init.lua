@@ -14,20 +14,18 @@ if (vim.fn.has("termguicolors") and vim.env.TERM ~= "linux") then
     vim.o.background = 'light'
     require('customlight')
 else
-    vim.opt.background = 'dark'
+    vim.o.background = 'dark'
 end
 
 -- load plugins before anything else
 require('plugins')
 
--- Plugin local configs
-require('compeconfig')
+-- Personal functions
 require('functions')
 
 -- LSP servers
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
-require'lspconfig'.vimls.setup{}
 
 -- Plugins Settings
 vim.api.nvim_command('source ~/.config/nvim/markdown-preview.vim')

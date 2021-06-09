@@ -102,7 +102,7 @@ highlightfunc('MoreMsg', green, nil, nil, nil)
 highlightfunc('NonText', grey, nil, none, nil)
 highlightfunc('Normal', black, nil , nil, nil)
 linkfunc('NormalFloat', 'PMenu')
-linkfunc('NormalNC', 'PMenu')
+--- linkfunc('NormalNC', 'PMenu')
 
 -- PMenu
 highlightfunc('PMenu', nil, offwhite, nil, nil)
@@ -189,7 +189,7 @@ highlightfunc('Underlined', darkblue, nil, nil, nil)
 highlightfunc('Error', red, white, bold, nil)
 highlightfunc('Todo', green, white, bold, nil)
 
--- from help: lsp-highlight TODO
+-- from help: lsp-highlight
 highlightfunc('LspDiagnosticsDefaultError', red, nil, nil, nil)
 highlightfunc('LspDiagnosticsSignError', darkred, nil, nil, nil)
 highlightfunc('LspDiagnosticsUnderlineError', nil, nil, undercurl, red)
@@ -198,9 +198,11 @@ highlightfunc('LspDiagnosticsDefaultWarning', orange, nil, nil, nil)
 highlightfunc('LspDiagnosticsSignWarning', orange, nil, nil, nil)
 highlightfunc('LspDiagnosticsUnderlineWarning', nil, nil, undercurl, orange)
 
+highlightfunc('LspDiagnosticsDefaultInformation', purpleblue, nil, nil, nil)
 highlightfunc('LspDiagnosticsSignInformation', purpleblue, nil, nil, nil)
 highlightfunc('LspDiagnosticsUnderlineInformation', nil, nil, undercurl, nil)
 
+highlightfunc('LspDiagnosticsDefaultHint', purpleblue, nil, nil, nil)
 highlightfunc('LspDiagnosticsSignHint', blue, nil, nil, nil)
 highlightfunc('LspDiagnosticsUnderlineHint', nil, nil, undercurl, nil)
 

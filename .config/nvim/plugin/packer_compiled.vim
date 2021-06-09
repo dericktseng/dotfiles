@@ -95,6 +95,7 @@ _G.packer_plugins = {
     path = "/home/derickwtseng/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
   ["nvim-compe"] = {
+    config = { "\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16compeconfig\frequire\0" },
     loaded = true,
     path = "/home/derickwtseng/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
@@ -110,10 +111,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/derickwtseng/.local/share/nvim/site/pack/packer/start/ultisnips"
   },
-  ["vim-css-color"] = {
-    loaded = true,
-    path = "/home/derickwtseng/.local/share/nvim/site/pack/packer/start/vim-css-color"
-  },
   ["vim-snippets"] = {
     loaded = true,
     path = "/home/derickwtseng/.local/share/nvim/site/pack/packer/start/vim-snippets"
@@ -126,6 +123,10 @@ _G.packer_plugins = {
 }
 
 time("Defining packer_plugins", false)
+-- Config for: nvim-compe
+time("Config for nvim-compe", true)
+try_loadstring("\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16compeconfig\frequire\0", "config", "nvim-compe")
+time("Config for nvim-compe", false)
 -- Config for: nvim-autopairs
 time("Config for nvim-autopairs", true)
 try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
@@ -134,8 +135,8 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time("Defining lazy-load filetype autocommands", true)
-vim.cmd [[au FileType tex ++once lua require("packer.load")({'vimtex'}, { ft = "tex" }, _G.packer_plugins)]]
 vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType tex ++once lua require("packer.load")({'vimtex'}, { ft = "tex" }, _G.packer_plugins)]]
 time("Defining lazy-load filetype autocommands", false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]

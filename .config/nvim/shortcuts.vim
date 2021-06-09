@@ -41,7 +41,7 @@ snoremap <silent>       <S-TAB>   <Esc>:call UltiSnips#JumpBackwards()<cr>
 " Leader shortcuts
 let mapleader=";"
 
-nnoremap          <Leader><S-S> :source ~/.config/nvim/init.vim<CR>
+nnoremap <Leader><S-S> :source ~/.config/nvim/init.vim<CR>
 
 " fzf
 inoremap <expr>   <c-f>         fzf#vim#complete#path('fd --hidden')

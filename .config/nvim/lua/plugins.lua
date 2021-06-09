@@ -9,13 +9,13 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- plugins
-vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', ft = 'markdown' }
   use { 'lervag/vimtex', ft = 'tex' , opt = true }
-  use { 'windwp/nvim-autopairs', config=function() require('nvim-autopairs').setup() end }
+  use { 'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup() end }
+  use { 'hrsh7th/nvim-compe', config = function() require('compeconfig') end }
 
   use 'SirVer/ultisnips'
   use 'honza/vim-snippets'
@@ -23,5 +23,4 @@ return require('packer').startup(function()
   use 'junegunn/fzf'
   use 'junegunn/fzf.vim'
   use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/nvim-compe'
 end)
