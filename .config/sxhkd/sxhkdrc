@@ -81,7 +81,7 @@ XF86MonBrightnessDown
 
 # screenshot shortcuts
 @Print
-    maim ~/Pictures/Screenshots/$(date +%s).png
+    mkdir -p ~/Pictures/Screenshots && maim ~/Pictures/Screenshots/$(date +%s).png
 
 # screenshot copies to clipboard
 super + @Print
@@ -89,7 +89,7 @@ super + @Print
 
 # saves frame
 super + shift + @Print
-    maim -s ~/Pictures/Screenshots/$(date +%s).png
+    mkdir -p ~/Pictures/Screenshots && maim -s ~/Pictures/Screenshots/$(date +%s).png
 
 
 #

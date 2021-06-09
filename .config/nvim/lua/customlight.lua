@@ -47,7 +47,7 @@ local blue = '#0787a9'
 local purpleblue = '#4078f2'
 local indigo = '#002ba9'
 local pink = '#f400f4'
-local skyblue = '#a0dee8'
+local skyblue = '#d0f4fc'
 local brown = '#883f16'
 
 -- formatting styles
@@ -101,12 +101,12 @@ highlightfunc('ModeMsg', green, nil, nil, nil)
 highlightfunc('MoreMsg', green, nil, nil, nil)
 highlightfunc('NonText', grey, nil, none, nil)
 highlightfunc('Normal', black, nil , nil, nil)
-linkfunc('NormalFloat', 'PMenu')
---- linkfunc('NormalNC', 'PMenu')
+highlightfunc('NormalFloat', nil, skyblue, nil, nil)
+highlightfunc('NormalNC', nil, none, nil, nil)
 
 -- PMenu
-highlightfunc('PMenu', nil, offwhite, nil, nil)
-highlightfunc('PMenuSel', black, skyblue, nil, nil)
+highlightfunc('Pmenu', nil, offwhite, nil, nil)
+highlightfunc('PmenuSel', black, skyblue, nil, nil)
 highlightfunc('PmenuSbar', nil, darkgrey, nil, nil)
 highlightfunc('PmenuThumb', nil, lightblue, nil, nil)
 
@@ -210,3 +210,4 @@ highlightfunc('LspDiagnosticsUnderlineHint', nil, nil, undercurl, nil)
 linkfunc('shQuote', 'String')
 linkfunc('vimScriptDelim', 'Macro')
 linkfunc('StringDelimiter', 'String')
+linkfunc('CompeDocumentation', 'NormalFloat')

@@ -57,4 +57,4 @@ nnoremap <silent> <Leader>h     :lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <Leader>i     :lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> <Leader>r     :lua vim.lsp.buf.references()<CR>
 nnoremap <silent> <Leader>t     :lua vim.lsp.buf.type_definition()<CR>
-nnoremap          <Leader><S-R> :lua vim.lsp.buf.rename()<Left>
+nnoremap          <Leader><S-R> :lua vim.lsp.buf.rename()<CR>

@@ -123,14 +123,14 @@ _G.packer_plugins = {
 }
 
 time("Defining packer_plugins", false)
--- Config for: nvim-compe
-time("Config for nvim-compe", true)
-try_loadstring("\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16compeconfig\frequire\0", "config", "nvim-compe")
-time("Config for nvim-compe", false)
 -- Config for: nvim-autopairs
 time("Config for nvim-autopairs", true)
 try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time("Config for nvim-autopairs", false)
+-- Config for: nvim-compe
+time("Config for nvim-compe", true)
+try_loadstring("\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16compeconfig\frequire\0", "config", "nvim-compe")
+time("Config for nvim-compe", false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
