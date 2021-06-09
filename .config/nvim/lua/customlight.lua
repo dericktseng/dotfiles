@@ -4,6 +4,23 @@ vim.api.nvim_command('hi clear')
 -- set colorscheme's name
 -- vim.g.colors_name = "customlight"
 
+-- fzf colors help: fzf-explanation-of-gfzfcolors
+vim.g.fzf_colors = {
+    ['fg'] = {'fg', 'Normal'},
+    ['bg'] = {'bg', 'Normal'},
+    ['hl'] = {'fg', 'Statement'},
+    ['fg+'] = {'fg', 'Normal'},
+    ['bg+'] = {'bg', 'Pmenu'},
+    ['hl+'] = {'fg', 'Statement'},
+    ['info'] = {'fg', 'Preproc'},
+    ['border'] = {'fg', 'Ignore'},
+    ['prompt'] = {'fg', 'Conditional'},
+    ['pointer'] = {'fg', 'Exception'},
+    ['marker'] = {'fg', 'Keyword'},
+    ['spinner'] = {'fg', 'Label'},
+    ['header'] = {'fg', 'Comment'}
+}
+
 -- terminal colors
 vim.g.terminal_color_0  = '#dff4ff'
 vim.g.terminal_color_1  = '#ff8671'
@@ -47,7 +64,7 @@ local blue = '#0787a9'
 local purpleblue = '#4078f2'
 local indigo = '#002ba9'
 local pink = '#f400f4'
-local skyblue = '#d0f4fc'
+local skyblue = '#adf1f1'
 local brown = '#883f16'
 
 -- formatting styles
@@ -72,7 +89,7 @@ end
 
 -- builtin highlight groups according to help: highlight-groups
 highlightfunc('ColorColumn', nil, darkgrey, nil, nil)
-highlightfunc('Conceal', purpleblue, white, nil, nil)
+highlightfunc('Conceal', purpleblue, none, nil, nil)
 highlightfunc('Cursor', white, black, nil, nil)
 highlightfunc('CursorColumn', nil, darkgrey, nil, nil)
 highlightfunc('CursorLine', nil, white, none, nil)

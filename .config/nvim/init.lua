@@ -38,7 +38,6 @@ vim.api.nvim_command('source ~/.config/nvim/shortcuts.vim')
 
 -- per filetype settings
 vim.api.nvim_command('autocmd FileType help wincmd L')
-vim.api.nvim_command('autocmd FileType tex setlocal spell spelllang=en_us')
 
 -- REST OF VIM SETTINGS
 ---- tab settings
