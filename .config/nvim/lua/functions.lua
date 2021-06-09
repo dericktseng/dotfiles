@@ -28,10 +28,10 @@ end
 -- tab completion for compe
 _G.tab_complete = function()
     -- if popup visible and has a value selected, go down
-    if vim.fn.pumvisible() == 1 and vim.fn.complete_info()["selected"] ~= -1 then
+    if vim.fn.pumvisible() ~= 0 and vim.fn.complete_info()["selected"] ~= -1 then
         return t "<C-N>"
     -- if popup is visible, but no value selected, attempt snippet expand
-    elseif vim.fn.pumvisible() == 1 then
+    elseif vim.fn.pumvisible() ~= 0 then
         return t([[<C-R>=(v:lua.UltiSnipsNext() > 0) ? "": ]]) .. [["\<C-N>"]] .. t("<CR>")
     elseif check_back_space() then
         return t "<Tab>"
@@ -42,10 +42,10 @@ end
 
 -- s-tab completion for compe
 _G.s_tab_complete = function()
-    if vim.fn.pumvisible() == 1 and vim.fn.complete_info()["selected"] ~= -1 then
+    if vim.fn.pumvisible() ~= 0 and vim.fn.complete_info()["selected"] ~= -1 then
         return t "<C-P>"
     -- if popup is visible, but no value selected, attempt snippet previous jump
-    elseif vim.fn.pumvisible() == 1 then
+    elseif vim.fn.pumvisible() ~= 0 then
         return t([[<C-R>=(v:lua.UltiSnipsPrev() > 0) ? "": ]]) .. [["\<C-P>"]] .. t("<CR>")
     else
         return t([[<C-R>=(v:lua.UltiSnipsPrev() > 0) ? "": ]]) .. [["\<S-TAB>"]] .. t("<CR>")
