@@ -14,6 +14,12 @@ local check_back_space = function()
 end
 
 -- check if ultisnips can expand.
+_G.UltiSnipsExpand = function()
+    vim.fn["UltiSnips#ExpandSnippet"]()
+    return vim.api.nvim_get_var("ulti_expand_res")
+end
+
+-- check if ultisnips can jump or expand.
 _G.UltiSnipsNext = function()
     vim.fn["UltiSnips#ExpandSnippetOrJump"]()
     return vim.api.nvim_get_var("ulti_expand_or_jump_res")
@@ -32,7 +38,7 @@ _G.tab_complete = function()
         return t "<C-N>"
     -- if popup is visible, but no value selected, attempt snippet expand
     elseif vim.fn.pumvisible() ~= 0 then
-        return t([[<C-R>=(v:lua.UltiSnipsNext() > 0) ? "": ]]) .. [["\<C-N>"]] .. t("<CR>")
+        return t([[<C-R>=(v:lua.UltiSnipsExpand() > 0) ? "": ]]) .. [["\<C-N>"]] .. t("<CR>")
     elseif check_back_space() then
         return t "<Tab>"
     else

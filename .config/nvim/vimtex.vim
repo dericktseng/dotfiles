@@ -1,8 +1,5 @@
-" shortcuts
-if (&ft=='tex')
-    set omnifunc=vimtex#complete#omnifunc
-    setlocal spell spelllang=en_us
-endif
+autocmd FileType tex setlocal spell spelllang=en_us
+autocmd FileType tex set omnifunc=vimtex#complete#omnifunc
 
 " Settings for vimtex
 let g:vimtex_view_general_viewer='zathura'
