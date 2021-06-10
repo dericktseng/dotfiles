@@ -48,7 +48,7 @@ nnoremap <silent> <Leader><S-S> :luafile ~/.config/nvim/init.lua<CR>:luafile ~/.
 " fzf
 inoremap <expr>   <c-f>         fzf#vim#complete#path('fd --hidden')
 nnoremap <silent> <Leader>f     :Files<CR>
-nnoremap <silent> <localleader>t :call vimtex#fzf#run('ctli', g:fzf_colors)<cr>
+nnoremap <silent> <localleader>t :call vimtex#fzf#run()<cr>
 
 " LSP configuration
 nnoremap <silent> <Leader><S-I> :LspInfo<CR>
