@@ -30,7 +30,6 @@ require'lspconfig'.clangd.setup{}
 -- Plugins Settings
 vim.api.nvim_command('source ~/.config/nvim/markdown-preview.vim')
 vim.api.nvim_command('source ~/.config/nvim/vimtex.vim')
-vim.api.nvim_command('source ~/.config/nvim/lightline.vim')
 
 -- Personal shortcuts
 vim.api.nvim_command('source ~/.config/nvim/shortcuts.vim')
@@ -62,7 +61,7 @@ vim.o.showmode = false
 vim.o.so = 10
 
 ---- only show statusline when multiple windows open
-vim.o.laststatus = 1
+-- vim.o.laststatus = 1
 
 ---- proper linebreaks
 vim.o.wrap = true

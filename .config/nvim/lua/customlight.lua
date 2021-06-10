@@ -1,5 +1,5 @@
 -- Remove all existing highlighting and set the defaults.
-vim.api.nvim_command('hi clear')
+-- vim.api.nvim_command('hi clear')
 
 -- set colorscheme's name
 -- vim.g.colors_name = "customlight"

@@ -16,10 +16,11 @@ return require('packer').startup(function()
   use { 'lervag/vimtex', ft = 'tex' , opt = true }
   use { 'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup() end }
   use { 'hrsh7th/nvim-compe', config = function() require('compeconfig') end }
+  use { 'hoob3rt/lualine.nvim', config = function() require('lualineconfig') end }
+  use { 'kyazdani42/nvim-web-devicons', opt = true }
 
   use 'SirVer/ultisnips'
   use 'honza/vim-snippets'
-  use 'itchyny/lightline.vim'
   use 'junegunn/fzf'
   use 'junegunn/fzf.vim'
   use 'neovim/nvim-lspconfig'
