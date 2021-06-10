@@ -12,7 +12,7 @@ if (vim.fn.has("termguicolors") and vim.env.TERM ~= "linux") then
     vim.o.cursorline = true
     vim.o.termguicolors = true
     vim.o.background = 'light'
-    require('customlight')
+    require('colorscheme')
 else
     vim.o.background = 'dark'
 end
@@ -28,8 +28,8 @@ require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
 
 -- Plugins Settings
-vim.api.nvim_command('source ~/.config/nvim/markdown-preview.vim')
 vim.api.nvim_command('source ~/.config/nvim/vimtex.vim')
+vim.api.nvim_command('source ~/.config/nvim/markdown-preview.vim')
 
 -- Personal shortcuts
 vim.api.nvim_command('source ~/.config/nvim/shortcuts.vim')
@@ -60,6 +60,11 @@ vim.o.showmode = false
 ---- sets the cursor to have a buffer. High number to always be centered.
 vim.o.so = 10
 
+---- latex settings
+vim.o.conceallevel = 2
+vim.g.tex_no_error = 1
+vim.g.tex_flavor = 'latex'
+
 ---- only show statusline when multiple windows open
 -- vim.o.laststatus = 1
 
@@ -71,8 +76,8 @@ vim.o.showbreak = "|"
 ---- confirmation when actions fail
 vim.o.confirm = true
 
----- shortmessage (set shortmess += c)
-vim.opt.shortmess:append('c')
+---- shortmessage (set shortmess += cI)
+vim.opt.shortmess:append('cI')
 
 ---- completeopt
 vim.opt.completeopt = {'menuone', 'noselect'}

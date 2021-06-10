@@ -40,13 +40,15 @@ snoremap <silent>       <S-TAB>   <Esc>:call UltiSnips#JumpBackwards()<cr>
 
 " Leader shortcuts
 let mapleader=";"
+let maplocalleader="\\"
 
 " Source init.lua
-nnoremap <silent> <Leader><S-S> :luafile ~/.config/nvim/init.lua<CR>:luafile ~/.config/nvim/lua/customlight.lua<CR>
+nnoremap <silent> <Leader><S-S> :luafile ~/.config/nvim/init.lua<CR>:luafile ~/.config/nvim/lua/colorscheme.lua<CR>
 
 " fzf
 inoremap <expr>   <c-f>         fzf#vim#complete#path('fd --hidden')
 nnoremap <silent> <Leader>f     :Files<CR>
+nnoremap <silent> <localleader>t :call vimtex#fzf#run('ctli', g:fzf_colors)<cr>
 
 " LSP configuration
 nnoremap <silent> <Leader><S-I> :LspInfo<CR>

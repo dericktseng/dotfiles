@@ -13,12 +13,12 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', ft = 'markdown' }
-  use { 'lervag/vimtex', ft = 'tex' , opt = true }
   use { 'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup() end }
   use { 'hrsh7th/nvim-compe', config = function() require('compeconfig') end }
   use { 'hoob3rt/lualine.nvim', config = function() require('lualineconfig') end }
   use { 'kyazdani42/nvim-web-devicons', opt = true }
 
+  use 'lervag/vimtex'
   use 'SirVer/ultisnips'
   use 'honza/vim-snippets'
   use 'junegunn/fzf'
