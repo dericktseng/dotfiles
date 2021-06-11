@@ -41,6 +41,8 @@ _G.tab_complete = function()
     -- if popup is visible, but no value selected, attempt snippet expand
     elseif vim.fn.pumvisible() ~= 0 then
         return trigger_ultisnips_fwd("<C-N>")
+    elseif check_back_space() then
+        return t("<TAB>")
     else
         return trigger_ultisnips_fwd("<TAB>")
     end
