@@ -13,48 +13,48 @@ local check_back_space = function()
     end
 end
 
--- check if ultisnips can expand.
-_G.UltiSnipsExpand = function()
-    vim.fn["UltiSnips#ExpandSnippet"]()
-    return vim.api.nvim_get_var("ulti_expand_res")
+-- run through checking ultisnips viability. Returns fallthrough if fails
+local trigger_ultisnips_fwd = function(fallthrough)
+    if vim.fn["UltiSnips#CanExpandSnippet"]() == 1 then
+        return t([[<C-R>=UltiSnips#ExpandSnippet()<CR>]])
+    elseif vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
+        return t([[<C-R>=UltiSnips#JumpForwards()<CR>]])
+    else
+        return t(fallthrough)
+    end
 end
 
--- check if ultisnips can jump or expand.
-_G.UltiSnipsNext = function()
-    vim.fn["UltiSnips#ExpandSnippetOrJump"]()
-    return vim.api.nvim_get_var("ulti_expand_or_jump_res")
-end
-
--- check if ultisnips can jump back.
-_G.UltiSnipsPrev = function()
-    vim.fn["UltiSnips#JumpBackwards"]()
-    return vim.api.nvim_get_var("ulti_jump_backwards_res")
+-- run through s-tab options too
+local trigger_ultisnips_bak = function(fallthrough)
+    if vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
+        return t([[<C-R>=UltiSnips#JumpBackwards()<CR>]])
+    else
+        return t(fallthrough)
+    end
 end
 
 -- tab completion for compe
 _G.tab_complete = function()
     -- if popup visible and has a value selected, go down
     if vim.fn.pumvisible() ~= 0 and vim.fn.complete_info()["selected"] ~= -1 then
-        return t "<C-N>"
+        return t("<C-N>")
     -- if popup is visible, but no value selected, attempt snippet expand
     elseif vim.fn.pumvisible() ~= 0 then
-        return t([[<C-R>=(v:lua.UltiSnipsExpand() > 0) ? "": ]]) .. [["\<C-N>"]] .. t("<CR>")
-    elseif check_back_space() then
-        return t "<Tab>"
+        return trigger_ultisnips_fwd("<C-N>")
     else
-        return t([[<C-R>=(v:lua.UltiSnipsNext() > 0) ? "": ]]) .. [["\<TAB>"]] .. t("<CR>")
+        return trigger_ultisnips_fwd("<TAB>")
     end
 end
 
 -- s-tab completion for compe
 _G.s_tab_complete = function()
     if vim.fn.pumvisible() ~= 0 and vim.fn.complete_info()["selected"] ~= -1 then
-        return t "<C-P>"
+        return t("<C-P>")
     -- if popup is visible, but no value selected, attempt snippet previous jump
     elseif vim.fn.pumvisible() ~= 0 then
-        return t([[<C-R>=(v:lua.UltiSnipsPrev() > 0) ? "": ]]) .. [["\<C-P>"]] .. t("<CR>")
+        return trigger_ultisnips_bak("<C-P>")
     else
-        return t([[<C-R>=(v:lua.UltiSnipsPrev() > 0) ? "": ]]) .. [["\<S-TAB>"]] .. t("<CR>")
+        return trigger_ultisnips_bak("<S-TAB>")
     end
 end
 

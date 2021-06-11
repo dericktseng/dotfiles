@@ -7,5 +7,5 @@ nerd-fonts-fira-code
 polybar-git
 python-pillow-simd
 ttf-ms-fonts
-yay
+yay-bin
 zoom
