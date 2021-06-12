@@ -23,7 +23,6 @@ require('plugins')
 -- LSP servers
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
-require'lspconfig'.texlab.setup{}
 
 -- Plugins Settings
 vim.api.nvim_command('source ~/.config/nvim/vimtex.vim')
