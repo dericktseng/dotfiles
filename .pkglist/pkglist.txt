@@ -60,6 +60,7 @@ rlwrap
 strace
 sudo
 sxhkd
+texlab
 texlive-core
 tk
 ttf-dejavu
