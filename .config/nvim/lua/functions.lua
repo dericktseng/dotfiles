@@ -67,9 +67,11 @@ _G.completion_confirm = function()
         if vim.fn.complete_info()["selected"] ~= -1 then
             return vim.fn["compe#confirm"](npairs.esc("<cr>"))
         else
-            return npairs.esc("<cr>")
+            -- selects first option instead.
+            return npairs.esc("<C-N>")
         end
     else
         return npairs.autopairs_cr()
     end
 end
+

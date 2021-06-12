@@ -1,10 +1,9 @@
 autocmd FileType tex setlocal spell spelllang=en_us
-autocmd FileType tex set omnifunc=vimtex#complete#omnifunc
 
 " Settings for vimtex
 let g:vimtex_view_general_viewer='zathura'
 let g:vimtex_view_method='zathura'
-let g:vimtex_complete_enabled=1
+let g:vimtex_complete_enabled=0
 
 let g:vimtex_compiler_latexmk = {
     \ 'build_dir' : '',

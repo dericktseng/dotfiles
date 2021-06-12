@@ -1,6 +1,6 @@
-let g:UltiSnipsExpandTrigger="<C-J>"
-let g:UltiSnipsJumpForwardTrigger="<C-J>"
-let g:UltiSnipsJumpBackwardTrigger="<C-K>"
+let g:UltiSnipsExpandTrigger="<TAB>"
+let g:UltiSnipsJumpForwardTrigger="<TAB>"
+let g:UltiSnipsJumpBackwardTrigger="<S-TAB>"
 
 " display group name of currently selected word
 function! g:SyntaxGroup() abort
@@ -30,11 +30,11 @@ inoremap <silent><expr> <CR>      v:lua.completion_confirm()
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 
-" any changes to tab completion shortcuts should be reflected in functions.lua
-inoremap <silent><expr> <TAB>     v:lua.tab_complete()
-inoremap <silent><expr> <S-TAB>   v:lua.s_tab_complete()
-snoremap <silent>       <TAB>     <Esc>:call UltiSnips#ExpandSnippetOrJump()<cr>
-snoremap <silent>       <S-TAB>   <Esc>:call UltiSnips#JumpBackwards()<cr>
+" any changes to completion shortcuts should be reflected in functions.lua
+inoremap <silent><expr> <C-J> pumvisible() ? "\<C-N>" : "\<C-J>"
+inoremap <silent><expr> <C-K> pumvisible() ? "\<C-P>" : "\<C-K>"
+snoremap <silent><expr> <C-J> pumvisible() ? "\<C-N>" : "\<C-J>"
+snoremap <silent><expr> <C-K> pumvisible() ? "\<C-P>" : "\<C-K>"
 
 " Leader shortcuts
 let mapleader=";"

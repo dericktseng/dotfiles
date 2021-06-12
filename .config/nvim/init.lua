@@ -20,20 +20,18 @@ end
 -- load plugins before anything else
 require('plugins')
 
--- Personal functions
-require('functions')
-
 -- LSP servers
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
+require'lspconfig'.texlab.setup{}
 
 -- Plugins Settings
 vim.api.nvim_command('source ~/.config/nvim/vimtex.vim')
 vim.api.nvim_command('source ~/.config/nvim/markdown-preview.vim')
 
--- Personal shortcuts
+-- Personal functions and shortcuts
+require('functions')
 vim.api.nvim_command('source ~/.config/nvim/shortcuts.vim')
-
 
 -- per filetype settings
 vim.api.nvim_command('autocmd FileType help wincmd L')
