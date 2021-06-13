@@ -14,8 +14,8 @@ return require('packer').startup(function()
 
   use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', ft = 'markdown' }
   use { 'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup() end }
-  use { 'hrsh7th/nvim-compe', config = function() require('compeconfig') end }
-  use { 'hoob3rt/lualine.nvim', config = function() require('lualineconfig') end }
+  use { 'hrsh7th/nvim-compe', config = function() require('configs/compeconfig') end }
+  use { 'hoob3rt/lualine.nvim', config = function() require('configs/lualineconfig') end }
   use { 'kyazdani42/nvim-web-devicons', opt = true }
 
   use 'lervag/vimtex'

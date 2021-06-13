@@ -1,4 +1,3 @@
-autocmd FileType tex setlocal spell spelllang=en_us
 if (&ft == 'tex')
     set omnifunc=vimtex#complete#omnifunc()
 endif

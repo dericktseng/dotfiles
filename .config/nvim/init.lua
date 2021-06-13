@@ -28,12 +28,12 @@ require'lspconfig'.clangd.setup{}
 vim.api.nvim_command('source ~/.config/nvim/vimtex.vim')
 vim.api.nvim_command('source ~/.config/nvim/markdown-preview.vim')
 
--- Personal functions and shortcuts
-require('functions')
-vim.api.nvim_command('source ~/.config/nvim/shortcuts.vim')
+-- Personal mappings
+require("mappings")
 
 -- per filetype settings
 vim.api.nvim_command('autocmd FileType help wincmd L')
+vim.api.nvim_command('autocmd FileType tex setlocal spell spelllang=en_us')
 
 -- REST OF VIM SETTINGS
 ---- tab settings
