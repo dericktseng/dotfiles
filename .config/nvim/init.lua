@@ -24,10 +24,6 @@ require('plugins')
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
 
--- Plugins Settings
-vim.api.nvim_command('source ~/.config/nvim/vimtex.vim')
-vim.api.nvim_command('source ~/.config/nvim/markdown-preview.vim')
-
 -- Personal mappings
 require("mappings")
 

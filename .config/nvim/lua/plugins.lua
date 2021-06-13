@@ -12,13 +12,13 @@ end
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
-  use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', ft = 'markdown' }
   use { 'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup() end }
-  use { 'hrsh7th/nvim-compe', config = function() require('configs/compeconfig') end }
-  use { 'hoob3rt/lualine.nvim', config = function() require('configs/lualineconfig') end }
+  -- use { 'iamcco/markdown-preview.nvim', config = function() vim.api.nvim_command('source ~/.config/nvim/markdown-preview.vim') end, run = 'cd app && yarn install'}
+  use { 'iamcco/markdown-preview.nvim', config = function() require('configs/markdown-preview') end, run = 'cd app && yarn install'}
+  use { 'hrsh7th/nvim-compe', config = function() require('configs/compe') end }
+  use { 'hoob3rt/lualine.nvim', config = function() require('configs/lualine') end }
   use { 'kyazdani42/nvim-web-devicons', opt = true }
-
-  use 'lervag/vimtex'
+  use { 'lervag/vimtex', config = function() require('configs/vimtex') end }
   use 'SirVer/ultisnips'
   use 'honza/vim-snippets'
   use 'junegunn/fzf'

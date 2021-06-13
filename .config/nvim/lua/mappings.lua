@@ -44,8 +44,8 @@ fn.keymap('n', '<Leader>o', ':only<CR>')
 
 -- FZF
 fn.keymap('i', '<C-F>', [[fzf#vim#complete#path('fd --hidden')]], {expr=true})
-fn.keymap('n', '<Leader>f', fn.t[[:Files<CR>]])
-fn.keymap('n', '<LocalLeader>lt', fn.t[[:call vimtex#fzf#run()<CR>]])
+fn.keymap('n', '<Leader>f', [[:Files<CR>]])
+fn.keymap('n', '<LocalLeader>lt', [[:call vimtex#fzf#run()<CR>]])
 
 -- LSP Configurations
 fn.keymap('n', '<Leader>en', ':lua vim.lsp.diagnostic.goto_next()<CR>')
@@ -53,7 +53,7 @@ fn.keymap('n', '<Leader>ep', ':lua vim.lsp.diagnostic.goto_prev()<CR>')
 fn.keymap('n', '<Leader>ed', ':lua vim.lsp.buf.definition()<CR>')
 fn.keymap('n', '<Leader>es', ':lua vim.lsp.buf.document_symbol()<CR>')
 fn.keymap('n', '<Leader>eh', ':lua vim.lsp.buf.hover()<CR>')
-fn.keymap('n', '<Leader>ei', ':lua vim.lsp.buf.implementation()<CR> ')
+fn.keymap('n', '<Leader>ei', ':lua vim.lsp.buf.implementation()<CR>')
 fn.keymap('n', '<Leader>er', ':lua vim.lsp.buf.references()<CR>')
 fn.keymap('n', '<Leader>et', ':lua vim.lsp.buf.type_definition()<CR>')
 fn.keymap('n', '<Leader>ee', ':lua vim.lsp.buf.rename()<CR>', {silent=false})
