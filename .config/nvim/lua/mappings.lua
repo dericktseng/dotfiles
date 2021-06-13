@@ -4,6 +4,7 @@ local fn = require("functions")
 _G.completion_confirm = fn.completion_confirm
 _G.smart_nav = fn.smart_nav
 _G.p_complete = fn.pumvisible_complete
+_G.syntax_group = fn.syntax_group
 
 -- UltiSnips Settings
 vim.g.UltiSnipsExpandTrigger = "<TAB>"
@@ -18,6 +19,7 @@ vim.g.maplocalleader = ";"
 -- keymaps
 fn.keymap('t', '<ESC>', [[<C-\><C-N>]])
 
+fn.keymap('n', '<C-Q>', [[:call v:lua.syntax_group()<CR>]], {silent=false})
 fn.keymap('n', '<C-L>', [[:nohl<cr><C-L>]])
 fn.keymap('n', 'k', [[v:lua.smart_nav('k')]], {expr=true})
 fn.keymap('n', 'j', [[v:lua.smart_nav('j')]], {expr=true})

@@ -98,4 +98,12 @@ fn.pumvisible_complete = function(dirkey, key)
     return vim.fn.pumvisible() ~= 0 and fn.t(dirkey) or fn.t(key)
 end
 
+-- display syntax group names
+fn.syntax_group = function()
+    curr = vim.fn.synID(vim.fn.line('.'), vim.fn.col('.'), 1)
+    orig = vim.fn.synIDattr(curr, 'name')
+    after = vim.fn.synIDattr(vim.fn.synIDtrans(curr), 'name')
+    print(orig .. ' -> ' .. after)
+end
+
 return fn
