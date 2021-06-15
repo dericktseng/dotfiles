@@ -35,7 +35,8 @@ vim.api.nvim_command('autocmd FileType tex setlocal spell spelllang=en_us')
 ---- tab settings
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
-vim.o.expandtab = true
+vim.o.expandtab = false
+vim.o.smarttab = true
 vim.o.autoindent = true
 vim.o.smartindent = true
 

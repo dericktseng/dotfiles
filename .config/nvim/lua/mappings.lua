@@ -41,6 +41,11 @@ fn.keymap('n', '<Leader>j', '<C-W>j')
 fn.keymap('n', '<Leader>k', '<C-W>k')
 fn.keymap('n', '<Leader>l', '<C-W>l')
 fn.keymap('n', '<Leader>o', ':only<CR>')
+fn.keymap('n', '<Leader><S-H>', '<C-W><S-H>')
+fn.keymap('n', '<Leader><S-J>', '<C-W><S-J>')
+fn.keymap('n', '<Leader><S-K>', '<C-W><S-K>')
+fn.keymap('n', '<Leader><S-L>', '<C-W><S-L>')
+fn.keymap('n', '<Leader>gf', '<C-W>gf')
 
 -- FZF
 fn.keymap('i', '<C-F>', [[fzf#vim#complete#path('fd --hidden')]], {expr=true})
