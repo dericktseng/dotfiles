@@ -2,3 +2,11 @@ snippet incc "include with quotations"
 #include "$1"
 $0
 endsnippet
+
+snippet mal "malloc"
+$1 *${2:var} = ($1 *) malloc(sizeof($1));
+endsnippet
+
+snippet per "perror"
+perror("${1}\\n");
+endsnippet
