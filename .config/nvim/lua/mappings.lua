@@ -50,6 +50,7 @@ fn.keymap('n', '<Leader>gf', '<C-W>gf')
 -- FZF
 fn.keymap('i', '<C-F>', [[fzf#vim#complete#path('fd --hidden')]], {expr=true})
 fn.keymap('n', '<Leader>f', [[:Files<CR>]])
+fn.keymap('n', '<Leader>r', [[:Rg<CR>]])
 fn.keymap('n', '<LocalLeader>lt', [[:call vimtex#fzf#run()<CR>]])
 
 -- LSP Configurations
