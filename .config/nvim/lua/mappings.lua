@@ -47,6 +47,10 @@ fn.keymap('n', '<Leader><S-K>', '<C-W><S-K>')
 fn.keymap('n', '<Leader><S-L>', '<C-W><S-L>')
 fn.keymap('n', '<Leader>gf', '<C-W>gf')
 
+-- Other Leader keymaps
+fn.keymap('n', '<Leader>n', '$')
+fn.keymap('n', '<Leader>b', '^')
+
 -- FZF
 fn.keymap('i', '<C-F>', [[fzf#vim#complete#path('fd --hidden')]], {expr=true})
 fn.keymap('n', '<Leader>f', [[:Files<CR>]])
