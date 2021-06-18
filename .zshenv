@@ -8,7 +8,7 @@ export LESS='-R --use-color -Dd+g$Du+b'
 export MANPAGER='less -s -M +Gg'
 export EDITOR=$editor
 export VISUAL=$editor
-export GNUMAKEFLAGS=-j$(nproc)
+export GNUMAKEFLAGS=-j$(($(nproc) + 1))
 export OMP_NUM_THREADS=$(nproc)
 export LC_ADDRESS="C"
 
