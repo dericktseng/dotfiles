@@ -2,12 +2,14 @@
 # wm independent hotkeys
 #
 
+# personal shortcuts
+
 # terminal emulator
 super + Return
 	st
 
 # program launcher
-super + r
+super + x
 	$HOME/.config/rofi/launcher.sh
 
 ctrl + shift + k
@@ -16,21 +18,15 @@ ctrl + shift + k
 ctrl + shift + m
     st -e $HOME/Music/yt-playlist
 
+super + @space
+    firefox
+
+super + Delete
+    $HOME/.config/rofi/powermenu.sh
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd && notify-send -t 1500 'sxhkd reloaded'
-
-########################
-#  personal shortcuts  #
-########################
-super + @space
-    firefox
-super + Delete
-    $HOME/.config/rofi/powermenu.sh
-############################
-#  end personal shortcuts  #
-############################
 
 #
 # bspwm hotkeys
