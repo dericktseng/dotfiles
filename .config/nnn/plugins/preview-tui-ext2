@@ -181,7 +181,11 @@ preview_file() {
         fi
     elif [ "${encoding#*)}" = "binary" ]; then
         if [ "${mimetype%%/*}" = "image" ]; then
-            if [ ! "${mimetype#*/}" = "jpeg" ]; then
+			if [ "${mimetype#*/}" = "gif" ] && exists convert; then
+                generate_preview "$cols" "$lines" "$1" "gif"
+			elif [ "${mimetype#*/}" = "png" ] && exists convert; then
+                generate_preview "$cols" "$lines" "$1" "png"
+            elif [ ! "${mimetype#*/}" = "jpeg" ] && exists convert; then
                 generate_preview "$cols" "$lines" "$1" "image"
             else
                 image_preview "$cols" "$lines" "$1"
@@ -248,7 +252,9 @@ generate_preview() {
             audio) ffmpeg -i "$3" -filter_complex "scale=iw*min(1\,min($NNN_PREVIEWWIDTH/iw\,ih)):-1" "$NNN_PREVIEWDIR/$3.jpg" -y >/dev/null 2>&1 ;;
             epub) gnome-epub-thumbnailer "$3" "$NNN_PREVIEWDIR/$3.jpg" >/dev/null 2>&1 ;;
             font) fontpreview -i "$3" -o "$NNN_PREVIEWDIR/$3.jpg" >/dev/null 2>&1 ;;
-            image) convert "$3" -flatten -resize "$NNN_PREVIEWWIDTH"x"$NNN_PREVIEWHEIGHT"\> "$NNN_PREVIEWDIR/$3.jpg" ;;
+            png) convert "$3" -alpha on -scale "$NNN_PREVIEWWIDTH"x"$NNN_PREVIEWHEIGHT" "$NNN_PREVIEWDIR/$3.jpg" ;;
+            image) convert "$3" -sample "$NNN_PREVIEWWIDTH"x"$NNN_PREVIEWHEIGHT" "$NNN_PREVIEWDIR/$3.jpg" ;;
+			gif) convert "$3[0]" -sample "$NNN_PREVIEWWIDTH"x"$NNN_PREVIEW_HEIGHT" "$NNN_PREVIEWDIR/$3.jpg" ;;
             office) libreoffice --convert-to jpg "$3" --outdir "$NNN_PREVIEWDIR/${3%/*}" > /dev/null 2>&1
                     filename="$(echo "${3##*/}" | cut -d. -f1)"
                     mv "$NNN_PREVIEWDIR/${3%/*}/$filename.jpg" "$NNN_PREVIEWDIR/$3.jpg" ;;
