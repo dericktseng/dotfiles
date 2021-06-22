@@ -11,6 +11,7 @@ alias free='free -m'
 alias np="$EDITOR PKGBUILD"
 alias kh='cut -d "," -f 1 ~/.ssh/known_hosts | cut -d " " -f 1'
 alias zshrc="$EDITOR $HOME/.zshrc"
+alias zshenv="$EDITOR $HOME/.zshenv"
 alias src="exec $SHELL"
 alias vimrc="$EDITOR $HOME/.config/nvim/init.lua"
 alias open="xdg-open"
