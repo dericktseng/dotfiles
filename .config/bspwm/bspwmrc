@@ -34,7 +34,8 @@ bspc config focus_follows_pointer false
 # window rules
 bspc rule -a 'Zathura' state=tiled focus=off
 bspc rule -a 'Gimp-2.10' state=fullscreen follow=on
-bspc rule -a 'zoom' state=floating desktop='^2' follow=on center=true
+bspc rule -a 'zoom' state=floating desktop='^5' follow=on center=true
+bspc rule -a 'discord' desktop='^4' follow=off
 bspc rule -a 'Kanaconvert' state=floating follow=on center=true
 bspc rule -a 'retroarch' state=fullscreen
 bspc rule -a 'Pavucontrol' state=floating center=true

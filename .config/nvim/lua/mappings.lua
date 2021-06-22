@@ -76,7 +76,6 @@ fn.keymap('n', '<Leader>ee', '<Cmd>lua vim.lsp.buf.rename()<CR>', {silent=false}
 
 -- Fugitive Configurations
 fn.keymap('n', '<Leader>gs', '<Cmd>Git<CR>')
-fn.keymap('n', '<Leader>gc', '<Cmd>Git commit<CR>')
 fn.keymap('n', '<Leader>gp', '<Cmd>Git push<CR>')
 fn.keymap('n', '<Leader>gh', '<Cmd>diffget //2<CR>')
 fn.keymap('n', '<Leader>gl', '<Cmd>diffget //3<CR>')
