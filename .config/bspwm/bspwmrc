@@ -15,7 +15,7 @@ bspc config pointer_modifier     mod1
 
 # color definitions
 normal="#dbc7f6"
-focused="#6a23ef"
+focused="#1ab1d9"
 background="#c0e8f7"
 
 # split style
