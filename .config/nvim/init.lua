@@ -59,9 +59,6 @@ vim.o.conceallevel = 2
 vim.g.tex_no_error = 1
 vim.g.tex_flavor = 'latex'
 
----- only show statusline when multiple windows open
--- vim.o.laststatus = 1
-
 ---- proper linebreaks
 vim.o.wrap = true
 vim.o.linebreak = true

@@ -16,6 +16,9 @@ fn.keymap('n', "<SPACE>", "<NOP>")
 vim.g.mapleader = " "
 vim.g.maplocalleader = ";"
 
+-- gx shortcut fix
+fn.keymap('n', 'gx', [[<Cmd>execute 'silent! !xdg-open ' . shellescape(expand('<cWORD>'), 1)<CR>]])
+
 -- keymaps
 fn.keymap('t', '<ESC>', [[<C-\><C-N>]])
 
@@ -79,3 +82,4 @@ fn.keymap('n', '<Leader>gs', '<Cmd>Git<CR>')
 fn.keymap('n', '<Leader>gp', '<Cmd>Git push<CR>')
 fn.keymap('n', '<Leader>gh', '<Cmd>diffget //2<CR>')
 fn.keymap('n', '<Leader>gl', '<Cmd>diffget //3<CR>')
+
