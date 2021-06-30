@@ -12,7 +12,7 @@ require'compe'.setup {
   max_kind_width = 100;
   max_menu_width = 100;
   documentation = true;
-
+  border = 'single';
   source = {
     path = true;
     buffer = true;
@@ -20,8 +20,9 @@ require'compe'.setup {
     nvim_lua = true;
     ultisnips = true;
     omni = {
-		filetypes = {'tex'}
+		filetypes = {'tex'};
 	};
   };
 }
+
 
