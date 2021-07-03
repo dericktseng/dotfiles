@@ -52,7 +52,7 @@ vim.o.clipboard = 'unnamedplus'
 vim.o.showmode = false
 
 ---- sets the cursor to have a buffer. High number to always be centered.
-vim.o.so = 10
+vim.o.so = 9
 
 ---- latex settings
 vim.o.conceallevel = 2

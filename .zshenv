@@ -52,7 +52,7 @@ UNKNOWN="c4"
 
 export NNN_FCOLORS="$BLOCK_DEVICE$CHAR_DEVICE$DIRECTORY$EXECUTABLE$REGULAR$HARD_LINK$SYMBOLIC_LINK$MISSING$ORPHANED$FIFO$SOCKET$UNKNOWN"
 export NNN_PLUG="p:-preview-tui-ext2;s:suedit;f:-fzopen2;d:-fzcd;u:getplugs"
-export NNN_BMS="b:$HOME/Desktop/Derick/tmp/;h:$HOME;/:/"
+export NNN_BMS="b:$HOME/Desktop/Derick/tmp/;h:$HOME;/:/;z:$HOME/Desktop/Derick/books"
 export NNN_OPENER="$HOME/.config/nnn/plugins/nuke2"
 export NNN_OPTS="ac"
 export SPLIT="v"
