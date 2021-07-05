@@ -177,7 +177,7 @@ preview_file() {
 		elif exists exa; then
 			fifo_pager exa -G --colour=always 2>/dev/null
 		else
-			fifo_pager ls --color=always --group-directories-first
+			fifo_pager /usr/bin/ls -1 --color=always --group-directories-first
 		fi
 	elif [ "${encoding#*)}" = "binary" ]; then
 		if [ "${mimetype%%/*}" = "image" ]; then
@@ -253,7 +253,7 @@ generate_preview() {
 			audio) ffmpeg -i "$3" -filter_complex "scale=iw*min(1\,min($NNN_PREVIEWWIDTH/iw\,ih)):-1" "$NNN_PREVIEWDIR/$3.jpg" -y >/dev/null 2>&1 ;;
 			epub) gnome-epub-thumbnailer "$3" "$NNN_PREVIEWDIR/$3.jpg" >/dev/null 2>&1 ;;
 			font) fontpreview -i "$3" -o "$NNN_PREVIEWDIR/$3.jpg" >/dev/null 2>&1 ;;
-			png) convert "$3" -alpha on -scale "$NNN_PREVIEWWIDTH"x"$NNN_PREVIEWHEIGHT" "$NNN_PREVIEWDIR/$3.jpg" ;;
+			png) convert "$3" -sample "$NNN_PREVIEWWIDTH"x"$NNN_PREVIEWHEIGHT" "$NNN_PREVIEWDIR/$3.jpg" ;;
 			image) convert "$3" -sample "$NNN_PREVIEWWIDTH"x"$NNN_PREVIEWHEIGHT" "$NNN_PREVIEWDIR/$3.jpg" ;;
 			gif) convert "$3[0]" -sample "$NNN_PREVIEWWIDTH"x"$NNN_PREVIEW_HEIGHT" "$NNN_PREVIEWDIR/$3.jpg" ;;
 			office) libreoffice --convert-to jpg "$3" --outdir "$NNN_PREVIEWDIR/${3%/*}" > /dev/null 2>&1
