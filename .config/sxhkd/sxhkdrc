@@ -72,17 +72,17 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     xbacklight -dec 10
 
-# screenshot shortcuts
+# fullscreen screenshot shortcuts
 @Print
-    mkdir -p ~/Pictures/Screenshots && maim ~/Pictures/Screenshots/$(date +%s).png
+    mkdir -p ~/Pictures/Screenshots && maim --hidecursor ~/Pictures/Screenshots/$(date +%s).png
 
 # screenshot copies to clipboard
 super + @Print
-    maim -s | xclip -selection clipboard -t image/png
+    maim -s --hidecursor | xclip -selection clipboard -t image/png
 
 # saves frame
 super + shift + @Print
-    mkdir -p ~/Pictures/Screenshots && maim -s ~/Pictures/Screenshots/$(date +%s).png
+    mkdir -p ~/Pictures/Screenshots && maim -s --hidecursor ~/Pictures/Screenshots/$(date +%s).png
 
 
 #
