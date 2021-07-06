@@ -60,14 +60,11 @@ super + g
 	bspc node -s biggest.local
 
 # audio controls
-XF86AudioRaiseVolume
-    amixer -q -D pulse sset Master 5%+
-XF86AudioLowerVolume
-    amixer -q -D pulse sset Master 5%-
-XF86AudioMute
-    amixer -q -D pulse sset Master toggle
+{XF86AudioLowerVolume, XF86AudioRaiseVolume, XF86AudioMute}
+    amixer -q -D pulse sset Master {5%-,5%+,toggle} && dunstify -r 1000 -t 1500 "VOL: $(amixer -q -D pulse | grep Master -A 5 | tail -1 | cut -d ' ' -f 7,8)"
+
 {Scroll_Lock,Pause,super + m}
-    amixer -q -D pulse sset Master {5%-,5%+,toggle}
+    amixer -q -D pulse sset Master {5%-,5%+,toggle} && dunstify -r 1000 -t 1500 "VOL: $(amixer -q -D pulse | grep Master -A 5 | tail -1 | cut -d ' ' -f 7,8)"
 
 # laptop brightness controls
 XF86MonBrightnessUp
