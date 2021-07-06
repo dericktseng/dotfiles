@@ -61,10 +61,10 @@ setxkbmap -option ''
 setxkbmap -option caps:swapescape
 
 # run script to disable locking if application in full screen
-$HOME/.config/i3/checkfullscreen.sh &
+checkfullscreen.sh &
 
 # set background
-feh --bg-scale ~/Pictures/background.png || hsetroot -solid "$background" &
+feh --bg-scale $HOME/Pictures/background.png || hsetroot -solid "$background" &
 
 # screensaver default 10 mins timeout
 xset s 600 600 

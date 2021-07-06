@@ -30,7 +30,7 @@ export FZF_DEFAULT_OPTS='
     --color=info:#4271ae,prompt:#8959a8,pointer:#d7005f
     --color=marker:#4271ae,spinner:#4271ae,header:#4271ae'
 
-# temporary fix to libreoffice black
+# temporary fix to libreoffice black borders
 export SAL_USE_VCLPLUGIN=gen
 
 # nnn configs

@@ -46,5 +46,5 @@ picom --config $HOME/.config/picom/picom.conf -b --experimental-backends
 xrandr -r 75 > /dev/null 2>&1 || true
 
 # start WM
-$HOME/.config/i3/lock.sh
+lock.sh
 exec bspwm
