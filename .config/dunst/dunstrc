@@ -86,7 +86,7 @@
 
     ### Text ###
 
-    font = Noto Sans 12
+    font = Inconsolata 12
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -160,14 +160,13 @@
     ### Icons ###
 
     # Align icons left/right/off
-    icon_position = off
+    icon_position = left
 
     # Scale larger icons down to this size, set to 0 to disable
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_path = ~/.icons/Marwaita/
-
+    icon_path = /usr/share/icons/Papirus/16x16/actions/
     ### History ###
 
     # Should a notification popped up from history be sticky or timeout
