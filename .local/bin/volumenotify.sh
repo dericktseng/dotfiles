@@ -6,7 +6,7 @@ dunstID=1000
 timeout=1500
 
 if [[ $hasVolume == 'on' ]]; then
-	dunstify -r $dunstID -t $timeout "VOLUME: $volPercent%"
+	dunstify -r $dunstID -t $timeout "Volume $volPercent%"
 else
 	dunstify -r $dunstID -t $timeout "Volume Muted"
 fi
