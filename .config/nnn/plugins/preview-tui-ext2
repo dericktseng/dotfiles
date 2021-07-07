@@ -184,8 +184,7 @@ preview_file() {
 			if [ "${mimetype#*/}" = "gif" ] && exists convert; then
 				generate_preview "$cols" "$lines" "$1" "gif"
 			elif [ "${mimetype#*/}" = "png" ] && exists convert; then
-				# generate_preview "$cols" "$lines" "$1" "png"
-				generate_preview "$cols" "$lines" "$1" "image"
+				generate_preview "$cols" "$lines" "$1" "png"
 			elif [ ! "${mimetype#*/}" = "jpeg" ] && exists convert; then
 				generate_preview "$cols" "$lines" "$1" "image"
 			else
