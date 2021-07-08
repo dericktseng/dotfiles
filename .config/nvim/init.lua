@@ -15,11 +15,6 @@ if (vim.fn.has("termguicolors") and vim.env.TERM ~= "linux") then
     vim.o.termguicolors = true
     vim.o.background = 'light'
     require('colorscheme')
-elseif (vim.fn.exists(":GuiFont")) then
-    vim.o.cursorline = true
-    vim.o.termguicolors = true
-    vim.o.background = 'light'
-    require('colorscheme')
 else
     vim.o.background = 'dark'
 end

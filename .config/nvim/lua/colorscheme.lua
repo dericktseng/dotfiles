@@ -98,7 +98,7 @@ highlightfunc('ModeMsg', green, nil, nil, nil)
 highlightfunc('MoreMsg', green, nil, nil, nil)
 highlightfunc('NonText', grey, nil, none, nil)
 highlightfunc('Normal', black, nil , nil, nil)
-highlightfunc('NormalFloat', nil, offwhite, nil, nil)
+highlightfunc('NormalFloat', nil, white, nil, nil)
 highlightfunc('NormalNC', nil, none, nil, nil)
 
 -- PMenu
