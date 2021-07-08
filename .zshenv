@@ -3,7 +3,7 @@ alias vim=$editor
 
 # Have less display colours
 # from: https://wiki.archlinux.org/index.php/Color_output_in_console#man
-export LESS='-R --use-color -Dd+g$Du+b'
+export LESS='-R --use-color -Dd+b$Du+g'
 
 export MANPAGER='less -s -M +Gg'
 export EDITOR=$editor
