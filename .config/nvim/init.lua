@@ -8,7 +8,14 @@ vim.g.python3_host_prog      = '/usr/bin/python3'
 ---- colorscheme and true color settings
 vim.api.nvim_command('filetype plugin indent on')
 vim.api.nvim_command('syntax enable')
+
+-- allow GUI and term with termguicolors to use the light theme
 if (vim.fn.has("termguicolors") and vim.env.TERM ~= "linux") then
+    vim.o.cursorline = true
+    vim.o.termguicolors = true
+    vim.o.background = 'light'
+    require('colorscheme')
+elseif (vim.fn.exists(":GuiFont")) then
     vim.o.cursorline = true
     vim.o.termguicolors = true
     vim.o.background = 'light'

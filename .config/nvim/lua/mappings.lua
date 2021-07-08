@@ -26,6 +26,7 @@ fn.keymap('n', '<C-Q>', [[<Cmd>call v:lua.syntax_group()<CR>]], {silent=false})
 fn.keymap('n', '<C-L>', [[<Cmd>nohl<cr><C-L>]])
 fn.keymap('n', 'k', [[v:lua.smart_nav('k')]], {expr=true})
 fn.keymap('n', 'j', [[v:lua.smart_nav('j')]], {expr=true})
+fn.keymap('n', '.', [[;]])
 
 -- Compe mappings
 fn.keymap('i', '<CR>', [[v:lua.completion_confirm('<CR>')]], {expr=true})
