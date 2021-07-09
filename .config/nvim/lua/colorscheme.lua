@@ -102,10 +102,10 @@ highlightfunc('NormalFloat', nil, white, nil, nil)
 highlightfunc('NormalNC', nil, none, nil, nil)
 
 -- PMenu
-highlightfunc('Pmenu', nil, offwhite, nil, nil)
-highlightfunc('PmenuSel', black, skyblue, nil, nil)
-highlightfunc('PmenuSbar', nil, darkgrey, nil, nil)
-highlightfunc('PmenuThumb', nil, lightblue, nil, nil)
+highlightfunc('Pmenu', nil, white, nil, nil)
+highlightfunc('PmenuSel', darkblue, white, underline, nil)
+highlightfunc('PmenuSbar', nil, lightgrey, nil, nil)
+highlightfunc('PmenuThumb', nil, darkgrey, nil, nil)
 
 highlightfunc('Question', purpleblue, nil, nil, nil)
 highlightfunc('Search', nil, highlightyellow, nil, nil)
