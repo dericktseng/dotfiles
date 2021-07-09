@@ -27,6 +27,7 @@ require'compe'.setup {
 	nvim_lsp = true;
 	nvim_lua = true;
 	ultisnips = true;
+	treesitter = true;
 	omni = {
 		filetypes = {'tex'};
 	};
