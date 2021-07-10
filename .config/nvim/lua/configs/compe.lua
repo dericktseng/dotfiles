@@ -13,7 +13,7 @@ require'compe'.setup {
   max_menu_width = 100;
 
   documentation = {
-	border = "single",
+	border = "rounded",
 	winhighlight = "NormalFloat:CompeDocumentation,FloatBorder:CompeDocumentationBorder",
 	max_width = 120,
 	min_width = 60,

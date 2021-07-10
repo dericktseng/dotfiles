@@ -35,6 +35,7 @@ local grey = '#bcbcbc'
 local lightgrey = '#d3d3d3'
 local red = '#ff0000'
 local purple = '#a300f4'
+local lightpurple = '#e7e1ff'
 local darkblue = '#005faf'
 local orange = '#f2802d'
 local yelloworange = '#daa500'
@@ -98,17 +99,17 @@ highlightfunc('ModeMsg', green, nil, nil, nil)
 highlightfunc('MoreMsg', green, nil, nil, nil)
 highlightfunc('NonText', grey, nil, none, nil)
 highlightfunc('Normal', black, nil , nil, nil)
-highlightfunc('NormalFloat', nil, white, nil, nil)
+highlightfunc('NormalFloat', nil, lightpurple, nil, nil)
 highlightfunc('NormalNC', nil, none, nil, nil)
 
 -- PMenu
-highlightfunc('Pmenu', nil, white, nil, nil)
-highlightfunc('PmenuSel', darkblue, white, underline, nil)
+highlightfunc('Pmenu', nil, lightpurple, nil, nil)
+highlightfunc('PmenuSel', darkblue, lightpurple, bold, nil)
 highlightfunc('PmenuSbar', nil, lightgrey, nil, nil)
-highlightfunc('PmenuThumb', nil, darkgrey, nil, nil)
+highlightfunc('PmenuThumb', nil, purpleblue, nil, nil)
 
 highlightfunc('Question', purpleblue, nil, nil, nil)
-highlightfunc('Search', nil, highlightyellow, nil, nil)
+highlightfunc('Search', black, highlightyellow, nil, nil)
 highlightfunc('SpecialKey', green, nil, nil, nil)
 
 -- SpellCheck colors
