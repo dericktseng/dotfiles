@@ -29,23 +29,23 @@ local lightgreen = '#46d211'
 local darkgreen = '#006200'
 local teal = '#4badb9'
 local darkgrey = '#878787'
-local lightblue = '#03b9d5'
 local black = '#222222'
 local grey = '#bcbcbc'
 local lightgrey = '#d3d3d3'
 local red = '#ff0000'
 local purple = '#a300f4'
 local lightpurple = '#e7e1ff'
-local darkblue = '#005faf'
 local orange = '#f2802d'
 local yelloworange = '#daa500'
 local yellow = '#ffc900'
 local highlightyellow='#fff641'
+local lightblue = '#4194b0'
+local darkblue = '#004987'
 local blue = '#0787a9'
 local purpleblue = '#4078f2'
-local indigo = '#002ba9'
-local pink = '#f400f4'
 local skyblue = '#adf1f1'
+local indigo = '#2e00c9'
+local pink = '#f400f4'
 local brown = '#883f16'
 
 -- formatting styles
@@ -162,7 +162,7 @@ highlightfunc('Conditional', pink, nil, bold, nil)
 highlightfunc('Repeat', brown, nil, bold, nil)
 highlightfunc('Label', pink, nil, bold, nil)
 highlightfunc('Operator', indigo, nil, nil, nil)
-highlightfunc('Keyword', darkred, nil, bold, nil)
+highlightfunc('Keyword', darkred, nil, nil, nil)
 highlightfunc('Exception', brown, nil, bold, nil)
 
 highlightfunc('PreProc', darkblue, nil, nil, nil)
