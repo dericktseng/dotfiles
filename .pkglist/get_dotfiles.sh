@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# hosted on https://git.io/JCfgy
+
 # disallow if running as root
 if [ "$EUID" -eq 0 ]; then
     echo "Do not run as root!"
