@@ -8,7 +8,7 @@ fi
 while read packagename; do
     url="https://aur.archlinux.org/$packagename.git"
     git clone $url
-    cd $packagename
+    cd "$packagename"
     yes | makepkg -sri
     cd ..
     rm -rf "$packagename"
