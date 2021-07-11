@@ -12,7 +12,7 @@ end
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
-  -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = function() require('configs/treesitter') end }
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = function() require('configs/treesitter') end }
   use { 'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup() end }
   use { 'iamcco/markdown-preview.nvim', config = function() require('configs/markdown-preview') end, run = 'cd app && yarn install' }
   use { 'hrsh7th/nvim-compe', config = function() require('configs/compe') end }
