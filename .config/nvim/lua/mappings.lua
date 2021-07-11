@@ -6,6 +6,7 @@ _G.smart_nav = fn.smart_nav
 _G.p_complete = fn.pumvisible_complete
 _G.syntax_group = fn.syntax_group
 _G.lsplocationlist = fn.lsplocationlist
+_G.togglelist = fn.togglelist
 
 -- UltiSnips Settings
 vim.g.UltiSnipsExpandTrigger = "<TAB>"
@@ -30,10 +31,10 @@ fn.keymap('n', 'j', [[v:lua.smart_nav('j')]], {expr=true})
 fn.keymap('n', '.', [[;]])
 fn.keymap('n', '<C-J>', '<Cmd>cnext<CR>')
 fn.keymap('n', '<C-K>', '<Cmd>cprev<CR>')
-fn.keymap('n', '<C-Q>', [[<Cmd>copen<CR>]])
+fn.keymap('n', '<C-Q>', [[<Cmd>call v:lua.togglelist('c')<CR>]])
 fn.keymap('n', '<LocalLeader>j', '<Cmd>lnext<CR>')
 fn.keymap('n', '<LocalLeader>k', '<Cmd>lprev<CR>')
-fn.keymap('n', '<LocalLeader>q', [[<Cmd>lopen<CR>]])
+fn.keymap('n', '<LocalLeader>q', [[<Cmd>call v:lua.togglelist('l')<CR>]])
 
 -- Compe mappings
 fn.keymap('i', '<CR>', [[v:lua.completion_confirm('<CR>')]], {expr=true})
@@ -57,10 +58,6 @@ fn.keymap('n', '<Leader><S-J>', '<C-W><S-J>')
 fn.keymap('n', '<Leader><S-K>', '<C-W><S-K>')
 fn.keymap('n', '<Leader><S-L>', '<C-W><S-L>')
 fn.keymap('n', '<Leader>gf', '<C-W>gf')
-
--- Other Leader keymaps
-fn.keymap('n', '<Leader>n', '$')
-fn.keymap('n', '<Leader>b', '^')
 
 -- FZF
 fn.keymap('i', '<C-F>', [[fzf#vim#complete#path('fd --hidden')]], {expr=true})
