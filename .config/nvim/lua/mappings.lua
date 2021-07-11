@@ -5,6 +5,7 @@ _G.completion_confirm = fn.completion_confirm
 _G.smart_nav = fn.smart_nav
 _G.p_complete = fn.pumvisible_complete
 _G.syntax_group = fn.syntax_group
+_G.lsplocationlist = fn.lsplocationlist
 
 -- UltiSnips Settings
 vim.g.UltiSnipsExpandTrigger = "<TAB>"
@@ -22,11 +23,17 @@ fn.keymap('n', 'gx', [[<Cmd>execute 'silent! !xdg-open ' . shellescape(expand('<
 -- keymaps
 fn.keymap('t', '<ESC>', [[<C-\><C-N>]])
 
-fn.keymap('n', '<C-Q>', [[<Cmd>call v:lua.syntax_group()<CR>]], {silent=false})
+-- fn.keymap('n', '<>', [[<Cmd>call v:lua.syntax_group()<CR>]], {silent=false})
 fn.keymap('n', '<C-L>', [[<Cmd>nohl<cr><C-L>]])
 fn.keymap('n', 'k', [[v:lua.smart_nav('k')]], {expr=true})
 fn.keymap('n', 'j', [[v:lua.smart_nav('j')]], {expr=true})
 fn.keymap('n', '.', [[;]])
+fn.keymap('n', '<C-J>', '<Cmd>cnext<CR>')
+fn.keymap('n', '<C-K>', '<Cmd>cprev<CR>')
+fn.keymap('n', '<C-Q>', [[<Cmd>copen<CR>]])
+fn.keymap('n', '<LocalLeader>j', '<Cmd>lnext<CR>')
+fn.keymap('n', '<LocalLeader>k', '<Cmd>lprev<CR>')
+fn.keymap('n', '<LocalLeader>q', [[<Cmd>lopen<CR>]])
 
 -- Compe mappings
 fn.keymap('i', '<CR>', [[v:lua.completion_confirm('<CR>')]], {expr=true})
@@ -72,11 +79,11 @@ fn.keymap('n', '<Leader>ei', '<Cmd>lua vim.lsp.buf.implementation()<CR>')
 fn.keymap('n', '<Leader>er', '<Cmd>lua vim.lsp.buf.references()<CR>')
 fn.keymap('n', '<Leader>et', '<Cmd>lua vim.lsp.buf.type_definition()<CR>')
 fn.keymap('n', '<Leader>ea', '<Cmd>lua vim.lsp.buf.code_action()<CR>')
-fn.keymap('n', '<Leader>eld', '<Cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
-fn.keymap('n', '<Leader>ell', '<Cmd>lua vim.lsp.diagnostic.set_loclist()<CR>')
+fn.keymap('n', '<Leader>el', '<Cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
 fn.keymap("n", "<Leader>ef", "<Cmd>lua vim.lsp.buf.formatting()<CR>")
 fn.keymap('n', '<Leader>eg', '<Cmd>lua vim.lsp.buf.signature_help()<CR>')
 fn.keymap('n', '<Leader>ee', '<Cmd>lua vim.lsp.buf.rename()<CR>', {silent=false})
+vim.api.nvim_command('autocmd BufWrite,BufEnter,InsertLeave * :call v:lua.lsplocationlist()')
 
 -- Fugitive Configurations
 fn.keymap('n', '<Leader>gs', '<Cmd>Git<CR>')
