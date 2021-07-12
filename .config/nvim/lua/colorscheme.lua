@@ -1,6 +1,3 @@
--- Remove all existing highlighting and set the defaults.
--- vim.api.nvim_command('hi clear')
-
 -- terminal colors
 vim.g.terminal_color_0  = '#dff4ff'
 vim.g.terminal_color_1  = '#ff8671'
@@ -25,8 +22,8 @@ local offwhite = '#dedede'
 local darkred = '#af0000'
 local turquoise = '#00a979'
 local green = '#008700'
-local lightgreen = '#46d211'
-local darkgreen = '#006200'
+local darkgreen = '#75a57c'
+local lightgreen = '#00c715'
 local teal = '#4badb9'
 local darkgrey = '#878787'
 local black = '#222222'
@@ -36,6 +33,7 @@ local red = '#ff0000'
 local purple = '#a300f4'
 local lightpurple = '#e7e1ff'
 local orange = '#f2802d'
+local tan = '#a78443'
 local yelloworange = '#daa500'
 local yellow = '#ffc900'
 local highlightyellow='#fff641'
@@ -46,6 +44,8 @@ local purpleblue = '#4078f2'
 local skyblue = '#adf1f1'
 local indigo = '#2e00c9'
 local pink = '#f400f4'
+local magenta = '#b4217f'
+local lightmagenta = '#b66d99'
 local brown = '#883f16'
 
 -- formatting styles
@@ -141,27 +141,27 @@ highlightfunc('Bold', nil, nil, bold, nil)
 highlightfunc('Italic', nil, nil, italic, nil)
 
 -- Help Menu
-highlightfunc('helpExample', orange, nil, nil, nil)
+highlightfunc('helpExample', darkgreen, nil, nil, nil)
 highlightfunc('helpCommand', orange, nil, nil, nil)
 
 -- Syntax Group as according to help: group-name
 highlightfunc('Comment', darkgrey, nil, italic, nil)
 
-highlightfunc('Constant', green, nil, bold, nil)
+highlightfunc('Constant', lightmagenta, nil, bold, nil)
 highlightfunc('String', green, nil, nil, nil)
 highlightfunc('Character', blue, nil, nil, nil)
 highlightfunc('Number', orange, nil, nil, nil)
 highlightfunc('Boolean', green, nil, bold, nil)
 highlightfunc('Float', brown, nil, nil, nil)
 
-highlightfunc('Identifier', lightblue, nil, nil, nil)
-highlightfunc('Function', purpleblue, nil, nil, nil)
+highlightfunc('Identifier', blue, nil, nil, nil)
+highlightfunc('Function', tan, nil, nil, nil)
 
 highlightfunc('Statement', purple, nil, none, nil)
 highlightfunc('Conditional', pink, nil, bold, nil)
 highlightfunc('Repeat', brown, nil, bold, nil)
 highlightfunc('Label', pink, nil, bold, nil)
-highlightfunc('Operator', indigo, nil, nil, nil)
+highlightfunc('Operator', black, nil, nil, nil)
 highlightfunc('Keyword', darkred, nil, nil, nil)
 highlightfunc('Exception', brown, nil, bold, nil)
 
@@ -171,7 +171,7 @@ highlightfunc('Define', pink, nil, nil, nil)
 highlightfunc('Macro', purple, nil, nil, nil)
 highlightfunc('PreCondit', darkred, nil, nil, nil)
 
-highlightfunc('Type', indigo, nil, none, nil)
+highlightfunc('Type', magenta, nil, none, nil)
 highlightfunc('StorageClass', darkblue, nil, nil, nil)
 highlightfunc('Structure', darkblue, nil, bold, nil)
 highlightfunc('Typedef', indigo, nil, bold, nil)
@@ -179,7 +179,7 @@ highlightfunc('Typedef', indigo, nil, bold, nil)
 highlightfunc('Special', darkblue, nil, nil, nil)
 highlightfunc('SpecialChar', darkgrey, nil, nil, nil)
 highlightfunc('Tag', nil, yelloworange, nil, nil)
-highlightfunc('Delimiter', teal, nil, nil, nil)
+highlightfunc('Delimiter', black, nil, nil, nil)
 highlightfunc('SpecialComment', blue, nil, nil, nil)
 highlightfunc('Debug', darkred, nil, nil, nil)
 
