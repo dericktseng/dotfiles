@@ -26,3 +26,5 @@ set index-active-bg "#8fd1e5"
 set index-active-fg "#000000"
 
 map p print
+map b focus_inputbar ":blist "
+map n focus_inputbar ":bmark "
