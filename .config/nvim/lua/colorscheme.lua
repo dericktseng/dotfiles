@@ -45,7 +45,7 @@ local skyblue = '#adf1f1'
 local indigo = '#2e00c9'
 local pink = '#f400f4'
 local magenta = '#b4217f'
-local lightmagenta = '#b66d99'
+-- local lightmagenta = '#b66d99'
 local brown = '#883f16'
 
 -- formatting styles
@@ -147,7 +147,7 @@ highlightfunc('helpCommand', orange, nil, nil, nil)
 -- Syntax Group as according to help: group-name
 highlightfunc('Comment', darkgrey, nil, italic, nil)
 
-highlightfunc('Constant', lightmagenta, nil, bold, nil)
+highlightfunc('Constant', green, nil, bold, nil)
 highlightfunc('String', green, nil, nil, nil)
 highlightfunc('Character', blue, nil, nil, nil)
 highlightfunc('Number', orange, nil, nil, nil)
