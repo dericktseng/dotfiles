@@ -45,7 +45,6 @@ local skyblue = '#adf1f1'
 local indigo = '#2e00c9'
 local pink = '#f400f4'
 local magenta = '#b4217f'
--- local lightmagenta = '#b66d99'
 local brown = '#883f16'
 
 -- formatting styles
