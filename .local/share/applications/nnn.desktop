@@ -2,7 +2,7 @@
 Type=Application
 Name=nnn
 Comment=Terminal file manager
-Exec=tmux new-session 'nnn -ae -P p'
+Exec=tmux new-session "nnn -ae -P p"
 Terminal=true
 Icon=nnn
 MimeType=inode/directory

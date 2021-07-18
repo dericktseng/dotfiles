@@ -27,4 +27,5 @@ set index-active-fg "#000000"
 
 map p print
 map b focus_inputbar ":blist "
-map n focus_inputbar ":bmark "
+map B focus_inputbar ":bmark "
+map z feedkeys ":exec searchpdf.sh<Return>q"

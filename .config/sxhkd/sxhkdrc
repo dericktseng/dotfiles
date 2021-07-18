@@ -24,9 +24,13 @@ super + @space
 super + Delete
     $HOME/.config/rofi/powermenu.sh
 
+super + z
+	searchpdf.sh
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd && notify-send -t 1500 'sxhkd reloaded'
+
 
 #
 # bspwm hotkeys
