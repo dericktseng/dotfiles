@@ -34,7 +34,7 @@ export FZF_DEFAULT_OPTS='
 export SAL_USE_VCLPLUGIN=gen
 
 # nnn configs
-alias nnn="/usr/bin/nnn -P p"
+alias nnn="/usr/bin/nnn -P p -T v"
 
 # NNN colors
 BLOCK_DEVICE="c1"
