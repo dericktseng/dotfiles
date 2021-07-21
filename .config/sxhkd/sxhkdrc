@@ -27,6 +27,9 @@ super + Delete
 super + z
 	searchpdf.sh
 
+super + d
+	rofi -show window
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd && notify-send -t 1500 'sxhkd reloaded'
