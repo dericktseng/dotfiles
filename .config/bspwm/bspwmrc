@@ -48,7 +48,6 @@ killall parcellite
 killall udiskie
 killall nm-applet
 killall checkfullscreen.sh
-killall feh
 
 # restarts background programs
 udiskie -t &
@@ -57,14 +56,13 @@ pkill dunst &
 parcellite &
 
 # swaps escape and caps lock
-setxkbmap -option ''
 setxkbmap -option caps:swapescape
 
 # run script to disable locking if application in full screen
 checkfullscreen.sh &
 
 # set background
-feh --bg-scale $HOME/Pictures/background.png || hsetroot -solid "$background" &
+$HOME/.fehbg > /dev/null 2>&1 || hsetroot -solid "$background" &
 
 # screensaver default 10 mins timeout
 xset s 600 600 
