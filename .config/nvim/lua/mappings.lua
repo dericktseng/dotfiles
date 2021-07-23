@@ -61,7 +61,8 @@ fn.keymap('n', '<Leader>gf', '<C-W>gf')
 
 -- FZF
 fn.keymap('i', '<C-F>', [[fzf#vim#complete#path('fd --hidden')]], {expr=true})
-fn.keymap('n', '<Leader>f', [[(len(system('git rev-parse')) ? ':Files' : ':GFiles')."\<cr>"]], {expr=true})
+fn.keymap('n', '<Leader>f', [[(len(system('git rev-parse')) ? ':Files' : ':GFiles')."\<CR>"]], {expr=true})
+fn.keymap('n', '<Leader>vrc', "<Cmd>Files $HOME/.config/nvim/<CR>")
 fn.keymap('n', '<Leader>r', [[<Cmd>Rg<CR>]])
 fn.keymap('n', '<LocalLeader>lt', [[:call vimtex#fzf#run()<CR>]])
 
