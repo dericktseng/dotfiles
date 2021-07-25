@@ -51,8 +51,8 @@ super + alt + {q,r}
 super + {e,shift + e}
 	bspc node -{c,k}
 
-{alt,super} + Tab
-    bspc node -f {next,prev}.local.leaf
+alt + Tab
+    bspc node -f next.local.leaf
 
 # alternate between the tiled and monocle layout
 super + a
