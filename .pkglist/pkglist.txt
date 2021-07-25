@@ -17,6 +17,7 @@ firefox
 fzf
 gcc
 git
+gnome-epub-thumbnailer
 gsfonts
 hsetroot
 htop

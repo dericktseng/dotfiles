@@ -1,4 +1,9 @@
 #!/bin/bash
-mkdir -p $HOME/Pictures/Wallpaper
-wallpaper=$(fd -t f . $HOME/Pictures/Wallpaper | fzf)
-/usr/bin/feh --bg-scale $wallpaper
+
+function searchwallpaper() {
+	mkdir -p $HOME/Pictures/Wallpaper
+	wallpaper=$(fd -t f . $HOME/Pictures/Wallpaper | fzfimg.sh)
+	/usr/bin/feh --bg-scale $wallpaper > /dev/null 2>&1
+}
+
+searchwallpaper
