@@ -1,13 +1,17 @@
 #!/bin/bash
 session_name="music"
+musicdir="$HOME/Music/Music"
 url='https://www.youtube.com/playlist?list=PLUcR4qhATg8sMIikByQq25NEQvWsQ52Yg'
 volume=75
 
 function start_session() {
     if [[ $# -ne 0 ]]; then
-        url=$1
+		tmux new-session -d -s $session_name "/usr/bin/mpv '$1' --volume=$volume --no-video --shuffle" > /dev/null
+	elif [ -d $musicdir ]; then
+		tmux new-session -d -s $session_name "/usr/bin/mpv $musicdir --volume=$volume --no-video --shuffle" > /dev/null
+	else
+		tmux new-session -d -s $session_name "/usr/bin/mpv '$url' --volume=$volume --no-video --shuffle" > /dev/null
     fi
-    tmux new-session -d -s $session_name "/usr/bin/mpv '$url' --volume=$volume --no-video --shuffle" > /dev/null
 }
 
 function attach_session() {
