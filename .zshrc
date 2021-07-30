@@ -1,6 +1,7 @@
 # starts tmux
 if command -v tmux &> /dev/null && [ -z "$TMUX" ] && [ "$TERM" != "linux" ]; then
-    tmux -u new
+	tmux -u new
+	exit
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -41,7 +42,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 for f in ~/.config/zsh/*;
 do
-    source "$f";
+	source "$f";
 done
 
 # custom keybinds
