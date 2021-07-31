@@ -47,8 +47,10 @@ fn.keymap('i', '?', '?<c-g>u')
 fn.keymap('i', ';', ';<c-g>u')
 fn.keymap('i', '/', '/<c-g>u')
 
-fn.keymap('v', 'J', [[:m '>+1<CR>gv=gv]])
+fn.keymap('v', 'H', [[<gv]])
 fn.keymap('v', 'K', [[:m '<-2<CR>gv=gv]])
+fn.keymap('v', 'J', [[:m '>+1<CR>gv=gv]])
+fn.keymap('v', 'L', [[>gv]])
 
 -- Compe mappings
 fn.keymap('i', '<CR>', [[v:lua.completion_confirm('<CR>')]], {expr=true})
