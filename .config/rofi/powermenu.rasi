@@ -20,11 +20,11 @@ configuration {
 
 * {
     background:                     #FFFFFFFF;
-    background-alt:                 #f8f8f8ff;
+    background-alt:                 #f4f4f4ff;
     foreground:                     #777777ff;
-    border:                         #d9d4beff;
+    border:                         #4b87caff;
     border-alt:                     #F4BB6Cff;
-    selected:                       #f8f8f8ff;
+    selected:                       #f4f4f4ff;
     urgent:                         #DA4453FF;
 }
 
