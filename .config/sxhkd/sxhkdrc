@@ -25,6 +25,9 @@ super + Delete
     $HOME/.config/rofi/powermenu.sh
 
 super + z
+	searchpdf.sh --one-file-system
+
+super + shift + z
 	searchpdf.sh
 
 super + d
