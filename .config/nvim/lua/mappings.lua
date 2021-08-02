@@ -50,6 +50,11 @@ fn.keymap('v', 'H', [[<gv]])
 fn.keymap('v', 'K', [[:m '<-2<CR>gv=gv]])
 fn.keymap('v', 'J', [[:m '>+1<CR>gv=gv]])
 fn.keymap('v', 'L', [[>gv]])
+fn.keymap('v', '"', [[<esc>`>a"<esc>`<i"<esc>]])
+fn.keymap('v', "'", [[<esc>`>a'<esc>`<i'<esc>]])
+fn.keymap('v', '(', [[<esc>`>a)<esc>`<i(<esc>]])
+fn.keymap('v', '[', [[<esc>`>a]<esc>`<i[<esc>]])
+fn.keymap('v', '{', [[<esc>`>a}<esc>`<i{<esc>]])
 
 -- Compe mappings
 fn.keymap('i', '<CR>', [[v:lua.completion_confirm('<CR>')]], {expr=true})
