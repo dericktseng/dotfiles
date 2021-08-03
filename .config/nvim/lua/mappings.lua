@@ -62,6 +62,12 @@ fn.keymap('v', '(', [[<esc>`>a)<esc>`<i(<esc>]])
 fn.keymap('v', '[', [[<esc>`>a]<esc>`<i[<esc>]])
 fn.keymap('v', '{', [[<esc>`>a}<esc>`<i{<esc>]])
 
+-- vim easy align
+vim.cmd([[
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+]])
+
 -- Compe mappings
 fn.keymap('i', '<CR>', [[v:lua.completion_confirm('<CR>')]], {expr=true})
 fn.keymap('i', '<C-SPACE>', [[compe#complete()]], {expr=true})

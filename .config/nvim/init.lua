@@ -50,7 +50,7 @@ vim.o.relativenumber = true
 vim.o.mouse = 'a'
 vim.o.clipboard = 'unnamedplus'
 
----- hides the bottom line since it is covered by lightline
+---- hides the mode description at bottom.
 vim.o.showmode = false
 
 ---- sets the cursor to have a buffer. High number to always be centered.
