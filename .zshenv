@@ -1,7 +1,7 @@
 editor="nvim"
 alias vim=$editor
 
-# Have less display colours
+# Have less program display colours
 # from: https://wiki.archlinux.org/index.php/Color_output_in_console#man
 export LESS='-R --use-color -Dd+b$Du+g'
 
@@ -50,9 +50,22 @@ FIFO="d6"
 SOCKET="ab"
 UNKNOWN="c4"
 
+# NNN bookmarks
+dtmp="b:$HOME/Desktop/Derick/tmp/"
+h="h:$HOME"
+rt="/:/"
+docs="z:$HOME/Documents/books"
+
+# NNN Plugins
+previewtuiext="p:-preview-tui-ext2"
+suedit="s:suedit"
+fzopen="f:-fzopen2"
+fzcd="d:-fzcd"
+getplugs="u:getplugs"
+
 export NNN_FCOLORS="$BLOCK_DEVICE$CHAR_DEVICE$DIRECTORY$EXECUTABLE$REGULAR$HARD_LINK$SYMBOLIC_LINK$MISSING$ORPHANED$FIFO$SOCKET$UNKNOWN"
-export NNN_PLUG="p:-preview-tui-ext2;s:suedit;f:-fzopen2;d:-fzcd;u:getplugs"
-export NNN_BMS="b:$HOME/Desktop/Derick/tmp/;h:$HOME;/:/;z:$HOME/Desktop/Derick/books"
+export NNN_PLUG="$previewtuiext;$suedit;$fzopen;$fzcd;$getplugs"
+export NNN_BMS="$dtmp;$h;$rt;$docs"
 export NNN_OPENER="$HOME/.config/nnn/plugins/nuke2"
 export NNN_OPTS="ac"
 export SPLIT="v"
