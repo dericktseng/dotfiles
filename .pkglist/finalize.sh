@@ -11,6 +11,11 @@ sudo systemctl --now enable cronie
 # change shell to zsh.
 chsh -s /bin/zsh
 
+# drop in file for autologin
+location='/etc/systemd/system/getty@tty1.service.d'
+mkdir -p "$location"
+cp ./override.conf "$location"
+
 # tlp is optional.
 echo "please start tlp manually!"
 
