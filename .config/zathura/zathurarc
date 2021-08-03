@@ -36,4 +36,4 @@ set statusbar-bg "#FFFFFF"
 map p print
 map b focus_inputbar ":blist "
 map B focus_inputbar ":bmark "
-map z feedkeys ":exec searchpdf.sh<Return>q"
+map z feedkeys ":exec searchpdf.sh --one-file-system<Return>q"
