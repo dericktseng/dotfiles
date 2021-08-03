@@ -48,11 +48,9 @@ done
 # custom keybinds
 bindkey "^@" autosuggest-accept
 bindkey "^A" vi-beginning-of-line
-bindkey "^[a" vi-beginning-of-line
 bindkey "^E" vi-end-of-line
-bindkey "^[e" vi-end-of-line
-bindkey "^[[3~" delete-char # urxvt delete key
-bindkey "^[[P" delete-char # st delete key
+bindkey "^F" forward-word
+bindkey "^B" backward-word
 
 # enable globbing
 setopt ksh_glob
@@ -63,11 +61,11 @@ source $HOME/.config/fzf/completion.zsh
 source $HOME/.config/fzf/key-bindings.zsh
 
 # zsh-autosuggestions
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#AAAAAA'
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
 # zsh syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
