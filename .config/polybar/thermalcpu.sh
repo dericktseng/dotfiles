@@ -6,4 +6,4 @@ if [[ -z $info ]]; then
     info="$(sensors | grep pch_cannonlake-virtual-0 -A2 | tail -n 1 | cut -d '+' -f 2 | cut -d ' ' -f 1)"
 fi
 
-echo " $info "
+echo "$info"

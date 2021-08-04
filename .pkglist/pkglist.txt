@@ -21,6 +21,7 @@ gnome-epub-thumbnailer
 gsfonts
 hsetroot
 htop
+jq
 libimagequant
 linux
 linux-firmware
@@ -59,10 +60,10 @@ python-pynvim
 ripgrep
 rofi
 rlwrap
+socat
 strace
 sudo
 sxhkd
-texlab
 texlive-core
 tk
 ttf-dejavu

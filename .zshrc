@@ -56,8 +56,16 @@ setopt ksh_glob
 setopt extended_glob
 
 # fzf
-source $HOME/.config/fzf/completion.zsh
-source $HOME/.config/fzf/key-bindings.zsh
+_fzf_compgen_path() {
+    fd --hidden --follow --exclude ".git" -j$(nproc) . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+    fd --type d --hidden --follow --exclude ".git" -j$(nproc) . "$1"
+}
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
 
 # zsh-autosuggestions
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#AAAAAA'

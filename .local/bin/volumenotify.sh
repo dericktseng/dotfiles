@@ -9,9 +9,10 @@ iconSound="audio-volume-high"
 iconMuted="audio-volume-muted"
 dunstID=1000
 timeout=2000
+media=$(mpv.sh)
 
 if [[ $hasVolume == 'on' ]]; then
-	dunstify -r $dunstID -t $timeout -i $iconSound "$title" "$volPercent% $bar"
+	dunstify -r $dunstID -t $timeout -i $iconSound "$title" "$volPercent% $bar\n$media"
 else
 	dunstify -r $dunstID -t $timeout -i $iconMuted "$title" "Muted"
 fi

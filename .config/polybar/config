@@ -46,11 +46,11 @@ underline-size = 0
 border-color = ${colors.border}
 border-top-size = 1
 
-module-margin = 0
+module-margin = 1
 
 # modules-left = i3 bspwm
 modules-left = bspwm
-modules-center = date
+modules-center = date 
 modules-right = pulseaudio xbacklight battery cputemperature gputemperature powermenu
 
 tray-position = right
@@ -249,7 +249,7 @@ label = " %date% | %time%"
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = " %{T3}<ramp-volume>%{T-} <label-volume> "
+format-volume = "%{T3}<ramp-volume>%{T-} <label-volume>"
 label-volume-foreground = ${colors.volume}
 ramp-volume-foreground = ${colors.volume}
 
@@ -258,7 +258,7 @@ ramp-volume-1 = 
 ramp-volume-2 = 墳
 ramp-volume-3 = 
 label-volume = %percentage%%
-label-muted = " 婢 muted "
+label-muted = " 婢 muted"
 label-muted-foreground = ${colors.foreground-alt}
 
 [module/battery]
@@ -293,7 +293,7 @@ ramp-capacity-foreground = ${colors.battery}
 
 [module/cputemperature]
 type = custom/script
-format = %{T3} %{T-}<label>
+format = %{T3}%{T-} <label>
 label = %output%
 exec = $HOME/.config/polybar/thermalcpu.sh
 format-foreground = ${colors.temperature}
@@ -301,7 +301,7 @@ interval = 3
 
 [module/gputemperature]
 type = custom/script
-format = %{T3} ﬙%{T-}<label>
+format = %{T3}﬙%{T-} <label>
 label = %output%
 exec = $HOME/.config/polybar/thermalgpu.sh
 format-foreground = ${colors.temperature2}
@@ -309,7 +309,7 @@ interval = 3
 
 [module/powermenu]
 type = custom/text
-content = " %{T3}襤%{T-} "
+content = "%{T3}襤%{T-} "
 click-left = ~/.config/rofi/powermenu.sh
 
 [settings]
