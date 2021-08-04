@@ -14,8 +14,7 @@ fi
 # ZSH defaults
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
-zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
-
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # enable automatic change directory
 setopt autocd autopushd pushdignoredups
@@ -37,7 +36,6 @@ setopt appendhistory
 # same colors as dircolors, but no stat options
 # https://wiki.archlinux.org/title/Color_output_in_console#ls
 eval $(dircolors)
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 for f in ~/.config/zsh/*;
 do
@@ -55,12 +53,10 @@ bindkey "^B" backward-word
 setopt ksh_glob
 setopt extended_glob
 
-# fzf
+# fzf Use fd to generate the list for directory completion
 _fzf_compgen_path() {
     fd --hidden --follow --exclude ".git" -j$(nproc) . "$1"
 }
-
-# Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
     fd --type d --hidden --follow --exclude ".git" -j$(nproc) . "$1"
 }
