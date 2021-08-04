@@ -16,14 +16,12 @@ temperature2 = #9c48f5
 
 [fonts]
 font-0 = Inconsolata Semi Expanded SemiBold:pixelsize=13;3
-font-1 = FiraCode Nerd Font:style=Bold:pixelsize=11;3
-font-2 = FiraCode Nerd Font:style=Regular:pixelsize=15;4
+font-1 = FiraCode Nerd Font Mono:style=Bold:pixelsize=11;3
+font-2 = FiraCode Nerd Font Mono:style=Regular:pixelsize=20;4
 font-3 = DejaVu Sans:pixelsize=13;4
 
 [bar/main]
 width = 100%
-# offset-x = 10%
-# wm-restack = i3
 wm-restack = bspwm
 override-redirect = false
 
@@ -48,16 +46,29 @@ border-top-size = 1
 
 module-margin = 1
 
-# modules-left = i3 bspwm
 modules-left = bspwm
 modules-center = date 
-modules-right = pulseaudio xbacklight battery cputemperature gputemperature powermenu
+modules-right = mpvmenu pulseaudio xbacklight battery cputemperature gputemperature powermenu
 
 tray-position = right
 tray-padding = 0
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/mpvmenu]
+type = custom/menu
+expand-right = true
+menu-0-0 = "%{T3}玲%{T-}"
+menu-0-0-exec = mpvctl.sh previous
+menu-0-1 = "%{T3}懶%{T-}"
+menu-0-1-exec = mpvctl.sh play-pause
+menu-0-2 = "%{T3}怜%{T-}"
+menu-0-2-exec = mpvctl.sh next
+
+label-open = "%{T3}%{T-}"
+label-close = "%{T3}%{T-}"
+label-separator = "  "
 
 [module/bspwm]
 type = internal/bspwm
@@ -135,8 +146,9 @@ label-occupied-padding = 1
 label-occupied-font = 8
 
 ; empty = Active workspace on unfocused monitor
-label-empty = %{T2}%icon%%{T-}
-label-empty-padding = ${self.label-focused-padding}
+; label-empty = %{T2}%icon%%{T-}
+label-empty =
+label-empty-padding = 1
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-font = 8
 
@@ -147,68 +159,12 @@ label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 label-urgent-font = 8
 
-[module/i3]
-type = internal/i3
-enable-click=false
-enable-scroll=false
-format = <label-state> <label-mode>
-index-sort = true
-wrapping-scroll = false
-
-; Only show workspaces on the same output as the bar
-pin-workspaces = true
-strip-wsnumbers = true
-
-; workspace display icons
-ws-icon-0 = 1;1
-ws-icon-1 = 2;2
-ws-icon-2 = 3;3
-ws-icon-3 = 4;4
-ws-icon-4 = 5;5
-ws-icon-5 = 6;6
-ws-icon-6 = 7;7
-ws-icon-7 = 8;8
-ws-icon-8 = 9;9
-ws-icon-9 = 0;0
-
-label-mode-padding = 1
-label-mode-foreground = ${colors.foreground}
-label-mode-background = ${colors.primary}
-
-; focused = Active workspace on focused monitor
-label-focused = %{T2}%icon%%{T-}
-label-focused-background = ${colors.background-alt}
-label-focused-padding = 1
-label-focused-font = 8
-
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %{T2}%icon%%{T-}
-label-unfocused-padding = 1
-label-unfocused-font = 8
-
-; visible = Active workspace on unfocused monitor
-label-visible = %{T2}%icon%%{T-}
-label-visible-background = ${self.label-focused-background}
-label-visible-padding = ${self.label-focused-padding}
-label-visible-font = 8
-
-; urgent = Workspace with urgency hint set
-label-urgent = %{T2}%icon%%{T-}
-label-urgent-foreground = #ffffff
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 1
-label-urgent-font = 8
-
-; Separator in between workspaces
-; label-separator = |
-
-
 [module/xbacklight]
 type = internal/xbacklight
 
 ramp-foreground = ${colors.xbacklight}
 label-foreground = ${colors.xbacklight}
-format = " <ramp> <label> "
+format = "<ramp> <label>"
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
@@ -220,20 +176,6 @@ inherit = module/xbacklight
 type = internal/backlight
 card = intel_backlight
 
-[module/eth]
-type = internal/network
-interface = enp59s0
-interval = 3.0
-
-format-connected-prefix = ""
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = "%local_ip%"
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
 [module/date]
 type = internal/date
 interval = 1
@@ -244,7 +186,7 @@ date-alt = ${self.date}
 time = "%I:%M %p"
 time-alt = %I:%M:%S
 format-prefix-foreground = ${colors.foreground-alt}
-label = " %date% | %time%"
+label = "%date% | %time%"
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -258,7 +200,7 @@ ramp-volume-1 = 
 ramp-volume-2 = 墳
 ramp-volume-3 = 
 label-volume = %percentage%%
-label-muted = " 婢 muted"
+label-muted = "婢 muted"
 label-muted-foreground = ${colors.foreground-alt}
 
 [module/battery]
@@ -267,17 +209,17 @@ battery = BAT0
 adapter = AC
 full-at = 100
 
-format-charging = " %{A1:notify-send -t 1500 BATTERY "$(acpi -b | cut -d ',' -f 3)":}<label-charging>%{A} "
+format-charging = "%{A1:notify-send -t 1500 BATTERY "$(acpi -b | cut -d ',' -f 3)":}<label-charging>%{A}"
 label-charging =  %percentage%%
 label-charging-foreground = ${colors.battery}
 
-format-discharging = " %{A1:notify-send -t 1500 BATTERY "$(acpi -b | cut -d ',' -f 3)":}<ramp-capacity> <label-discharging>%{A} "
+format-discharging = "%{A1:notify-send -t 1500 BATTERY "$(acpi -b | cut -d ',' -f 3)":}<ramp-capacity> <label-discharging>%{A}"
 label-discharging-foreground = ${colors.battery}
 
-format-full = " %{A1:notify-send -t 1500 BATTERY "$(acpi -b)":} 100%%{A} "
+format-full = "%{A1:notify-send -t 1500 BATTERY "$(acpi -b)":} 100%%{A}"
 format-full-foreground = ${colors.battery}
 label-low =  %percentage%%
-format-low = " %{A1:notify-send -t 1500 BATTERY "$(acpi -b)":}<label-low>%{A} "
+format-low = "%{A1:notify-send -t 1500 BATTERY "$(acpi -b)":}<label-low>%{A}"
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -309,7 +251,7 @@ interval = 3
 
 [module/powermenu]
 type = custom/text
-content = "%{T3}襤%{T-} "
+content = "%{T3}襤%{T-}"
 click-left = ~/.config/rofi/powermenu.sh
 
 [settings]
