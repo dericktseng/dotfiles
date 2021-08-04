@@ -119,7 +119,7 @@ function print_on_winch {
     # also the additional bash process isn't needed
     </dev/tty \
         exec perl -e '
-            require "sys/ioctl.ph";
+            # require "sys/ioctl.ph";
             while (1) {
                 local $SIG{WINCH} = sub {
                     ioctl(STDIN, &TIOCSTI, $_) for split "", join " ", @ARGV;
