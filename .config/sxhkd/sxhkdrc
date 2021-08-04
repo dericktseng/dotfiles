@@ -33,6 +33,12 @@ super + shift + z
 super + d
 	rofi -show window
 
+super + v
+	clipmenu
+
+super + shift + v
+	rofi -show del -modi "del:clipdelrofi.sh"
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd && notify-send -t 1500 'sxhkd reloaded'

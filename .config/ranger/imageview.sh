@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ -f "$@" ]; then
-    parentdir="$(dirname "$@")"
+    parentdir=$(dirname "$@")
     case "$@" in
         *.gif)  mpv --fs --loop "$@";;
         *.svg)  feh -F --conversion-timeout 1 -Sfilename "$parentdir" --start-at "$@";;

@@ -33,6 +33,10 @@ export FZF_DEFAULT_OPTS='
 # temporary fix to libreoffice black borders
 export SAL_USE_VCLPLUGIN=gen
 
+# rofi launcher for clipmenu
+export CM_LAUNCHER=rofi
+export CM_SELECTIONS="clipboard"
+
 # nnn configs
 alias nnn="/usr/bin/nnn -P p -T v"
 
@@ -69,4 +73,3 @@ export NNN_BMS="$dtmp;$h;$rt;$docs"
 export NNN_OPENER="$HOME/.config/nnn/plugins/nuke2"
 export NNN_OPTS="ac"
 export SPLIT="v"
-
