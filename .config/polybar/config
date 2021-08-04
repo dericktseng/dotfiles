@@ -46,9 +46,9 @@ border-top-size = 1
 
 module-margin = 1
 
-modules-left = bspwm
+modules-left = bspwm mpvmenu 
 modules-center = date 
-modules-right = mpvmenu pulseaudio xbacklight battery cputemperature gputemperature powermenu
+modules-right = pulseaudio xbacklight battery cputemperature gputemperature powermenu
 
 tray-position = right
 tray-padding = 0
@@ -58,7 +58,7 @@ cursor-scroll = ns-resize
 
 [module/mpvmenu]
 type = custom/menu
-expand-right = false
+expand-right = true
 menu-0-0 = "%{T3}玲%{T-}"
 menu-0-0-exec = mpvctl.sh previous
 menu-0-1 = "%{T3}懶%{T-}"
