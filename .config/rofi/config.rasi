@@ -3,6 +3,7 @@ configuration {
 	show-icons: true;
 	terminal: "st";
 	font: "FiraCode Nerd Font Mono 11";
+	theme: "arc" ;
 /*	sort: true;*/
 /*	hide-scrollbar: false;*/
 /*	sorting-method: "fzf";*/
@@ -55,7 +56,6 @@ configuration {
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-/*	theme: ;*/
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/
