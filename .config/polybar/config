@@ -58,7 +58,7 @@ cursor-scroll = ns-resize
 
 [module/mpvmenu]
 type = custom/menu
-expand-right = true
+expand-right = false
 menu-0-0 = "%{T3}玲%{T-}"
 menu-0-0-exec = mpvctl.sh previous
 menu-0-1 = "%{T3}懶%{T-}"
