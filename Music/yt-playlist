@@ -1,6 +1,6 @@
 #!/bin/bash
 session_name="music"
-musicdir="$HOME/Music/Music"
+musicdir="$HOME/Music"
 url='https://www.youtube.com/playlist?list=PLUcR4qhATg8sMIikByQq25NEQvWsQ52Yg'
 volume=75
 ipcsock="/tmp/mpvsocket"

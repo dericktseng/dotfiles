@@ -6,7 +6,7 @@ output=$(echo $query | socat - $mpvsock 2> /dev/null || echo "$failmsg")
 
 if [[ "$output" != "$failmsg" ]]; then
 	title=$(echo "$output" | jq -Mcr '.data')
-	output="Now Playing: $title"
+	output="$title"
 fi
 
 echo $output
