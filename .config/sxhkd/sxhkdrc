@@ -61,7 +61,7 @@ super + {e,shift + e}
 	bspc node -{c,k}
 
 alt + Tab
-    bspc node -f next.local.leaf
+    bspc node -f next.local.!hidden.window
 
 # alternate between the tiled and monocle layout
 super + a
@@ -148,8 +148,13 @@ super + {o,i}
 {_,shift + }F{1-9,10}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-super + {Left, Right, Up, Down}
-    bspc desktop -f {prev, next, 1, 1}
+# hide windows
+super + w
+	bspc node -g hidden
+
+# unhide windows
+super + shift + w
+	bspc node {,$(bspc query -N -n .hidden | tail -n1)} -g hidden=off
 
 #
 # preselect
