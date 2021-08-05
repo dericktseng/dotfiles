@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ $(id -u) -eq 0 ]; then
+	echo "please do not execute as root."
+	exit 1
+fi
+
 # user systemctl services
 systemctl --user --now enable psd
 
@@ -11,10 +16,14 @@ sudo systemctl --now enable cronie
 # change shell to zsh.
 chsh -s /bin/zsh
 
+# setup tmux plugin manager
+git clone "https://github.com/tmux-plugins/tpm" "~/.tmux/plugins/tpm"
+echo "tpm: Remember to install with (prefix+I)"
+
 # drop in file for autologin
 location='/etc/systemd/system/getty@tty1.service.d'
-mkdir -p "$location"
-cp ./override.conf "$location"
+sudo mkdir -p "$location"
+cp -i override.conf "$location"
 
 # tlp is optional.
 echo "please start tlp manually!"

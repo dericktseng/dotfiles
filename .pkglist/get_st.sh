@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # gets my ST build
 mkdir st
 cd st
@@ -8,4 +7,3 @@ wget "$url"
 yes | makepkg -sri
 cd ..
 rm -rf st
-
