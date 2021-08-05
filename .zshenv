@@ -1,13 +1,10 @@
-editor="nvim"
-alias vim=$editor
-
 # Have less program display colours
 # from: https://wiki.archlinux.org/index.php/Color_output_in_console#man
 export LESS='-R --use-color -Dd+b$Du+g'
 
 export MANPAGER='less -s -M +Gg'
-export EDITOR=$editor
-export VISUAL=$editor
+export EDITOR=/usr/bin/nvim
+export VISUAL=$EDITOR
 export GNUMAKEFLAGS=-j$(($(nproc) + 1))
 export OMP_NUM_THREADS=$(nproc)
 export LC_ADDRESS="C"
@@ -37,9 +34,6 @@ export SAL_USE_VCLPLUGIN=gen
 export CM_LAUNCHER=rofi
 export CM_SELECTIONS="clipboard"
 
-# nnn configs
-alias nnn="/usr/bin/nnn -P p -T v"
-
 # NNN colors
 BLOCK_DEVICE="c1"
 CHAR_DEVICE="d6"
@@ -67,6 +61,7 @@ fzopen="f:-fzopen2"
 fzcd="d:-fzcd"
 getplugs="u:getplugs"
 
+# NNN configurations
 export NNN_FCOLORS="$BLOCK_DEVICE$CHAR_DEVICE$DIRECTORY$EXECUTABLE$REGULAR$HARD_LINK$SYMBOLIC_LINK$MISSING$ORPHANED$FIFO$SOCKET$UNKNOWN"
 export NNN_PLUG="$previewtuiext;$suedit;$fzopen;$fzcd;$getplugs"
 export NNN_BMS="$dtmp;$h;$rt;$docs"
