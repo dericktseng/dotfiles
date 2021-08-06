@@ -163,7 +163,7 @@ type = internal/xbacklight
 
 ramp-foreground = ${colors.xbacklight}
 label-foreground = ${colors.xbacklight}
-format = "<ramp> <label>"
+format = "%{T3}<ramp>%{T-} <label>"
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
