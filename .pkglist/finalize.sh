@@ -1,4 +1,6 @@
 #!/bin/bash
+xorgconf="/etc/X11/xorg.conf.d"
+systemdlogin="/etc/systemd/system/getty@tty1.service.d"
 
 if [ $(id -u) -eq 0 ]; then
 	echo "please do not execute as root."
@@ -21,9 +23,12 @@ git clone "https://github.com/tmux-plugins/tpm" "$HOME/.tmux/plugins/tpm"
 echo "tpm: Remember to install with (prefix+I)"
 
 # drop in file for autologin
-location='/etc/systemd/system/getty@tty1.service.d'
-sudo mkdir -p "$location"
-cp -i override.conf "$location"
+sudo mkdir -p "$systemdlogin"
+sudo cp -i override.conf "$systemdlogin"
+
+# X11 touchpad settings
+sudo mkdir -p "$xorgconf"
+sudo cp -i 30-touchpad.conf "$xorgconf"
 
 # tlp is optional.
 echo "please start tlp manually!"
