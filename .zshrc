@@ -12,9 +12,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # ZSH defaults
-autoload -Uz compinit && compinit
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu select
+autoload -Uz compinit
+compinit
 
 # enable automatic change directory
 setopt autocd autopushd pushdignoredups

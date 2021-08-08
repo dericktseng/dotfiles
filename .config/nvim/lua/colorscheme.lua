@@ -146,7 +146,7 @@ highlightfunc('helpCommand', orange, nil, nil, nil)
 -- Syntax Group as according to help: group-name
 highlightfunc('Comment', darkgrey, nil, italic, nil)
 
-highlightfunc('Constant', green, nil, italic, nil)
+highlightfunc('Constant', blue, nil, italic, nil)
 highlightfunc('String', green, nil, nil, nil)
 highlightfunc('Character', blue, nil, nil, nil)
 highlightfunc('Number', orange, nil, nil, nil)

@@ -12,4 +12,4 @@
 	process = git-lfs filter-process
 	required = true
 [core]
-	autocrlf = input
+	autocrlf = true
