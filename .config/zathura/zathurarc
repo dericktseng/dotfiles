@@ -37,5 +37,3 @@ map p print
 map b focus_inputbar ":blist "
 map B focus_inputbar ":bmark "
 map z feedkeys ":exec searchpdf.sh --one-file-system<Return>q"
-map <PageDown> feedkeys "<S-J><S-H>"
-map <PageUp> feedkeys "<S-K><S-H>"
