@@ -13,8 +13,8 @@ fi
 
 # ZSH defaults
 autoload -Uz compinit && compinit
-zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' menu select
 
 # enable automatic change directory
 setopt autocd autopushd pushdignoredups
