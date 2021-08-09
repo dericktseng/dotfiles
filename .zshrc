@@ -12,10 +12,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # ZSH defaults
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
-autoload -Uz compinit
-compinit
+
+# same colors as dircolors, but no stat options
+# https://wiki.archlinux.org/title/Color_output_in_console#ls
+eval $(dircolors)
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # enable automatic change directory
 setopt autocd autopushd pushdignoredups
@@ -33,10 +36,6 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory
-
-# same colors as dircolors, but no stat options
-# https://wiki.archlinux.org/title/Color_output_in_console#ls
-eval $(dircolors)
 
 for f in ~/.config/zsh/*;
 do
