@@ -38,6 +38,8 @@ echo "Make sure to install xf86-video-intel or xf86-video-amdgpu"
 
 # firefox changes
 echo "Firefox Manual about:config changes"
+echo "https://wiki.archlinux.org/title/Firefox#Hardware_video_acceleration"
+echo "https://wiki.archlinux.org/title/Hardware_video_acceleration"
 echo "browser.cache.disk.enable = false"
 echo "browser.compactmode.show = true"
 echo "media.mediasource.webm.enabled = false"
