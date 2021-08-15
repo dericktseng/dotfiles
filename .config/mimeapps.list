@@ -3,6 +3,7 @@ text/x-python=nvim.desktop;
 text/plain=nvim.desktop;
 
 [Default Applications]
-application/pdf=org.pwmt.zathura.desktop
+application/pdf=qpdfview.desktop
 text/plain=nvim.desktop
 image/png=feh.desktop
+pdf=qpdfview.desktop
