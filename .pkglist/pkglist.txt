@@ -47,7 +47,6 @@ openmp
 openssh
 os-prober
 papirus-icon-theme
-parcellite
 patch
 pavucontrol
 picom
