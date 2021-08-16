@@ -8,6 +8,7 @@ if [ "$EUID" -eq 0 ]; then
     exit 1
 fi
 
+shopt -s expand_aliases
 alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 git clone --bare 'https://github.com/MetriC-DT/dotfiles' $HOME/.dotfiles
 dot checkout
