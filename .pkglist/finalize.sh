@@ -31,8 +31,8 @@ sudo cp -i override.conf "$systemdlogin"
 sudo mkdir -p "$xorgconf"
 sudo cp -i 30-touchpad.conf "$xorgconf"
 
-# tlp is optional.
-echo "please start tlp manually!"
+# Laptop-mode-tools optional.
+echo "please start laptop-mode-tools manually!"
 
 # xf86 video drivers
 echo "Make sure to install xf86-video-intel or xf86-video-amdgpu"

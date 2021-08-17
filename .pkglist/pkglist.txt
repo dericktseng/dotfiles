@@ -1,9 +1,11 @@
 acpi
 acpi_call
+acpilight
 alsa-utils
 autoconf
 automake
 base
+bc
 bdf-unifont
 bspwm
 clang
@@ -82,7 +84,6 @@ xdg-user-dirs
 xdg-utils
 xorg-font-util
 xorg-server
-xorg-xbacklight
 xorg-xmodmap
 xorg-xinit
 xorg-xinput

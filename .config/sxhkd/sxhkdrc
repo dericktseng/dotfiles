@@ -84,9 +84,9 @@ super + g
 
 # laptop brightness controls
 XF86MonBrightnessUp
-    xbacklight -inc 10
+    xbacklight -inc 5 && brightnessnotify.sh
 XF86MonBrightnessDown
-    xbacklight -dec 10
+    xbacklight -dec 5 && brightnessnotify.sh
 
 # fullscreen screenshot shortcuts
 @Print

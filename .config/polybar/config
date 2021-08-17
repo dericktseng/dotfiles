@@ -48,7 +48,7 @@ module-margin = 1
 
 modules-left = bspwm mpvmenu 
 modules-center = date 
-modules-right = pulseaudio xbacklight battery cputemperature gputemperature powermenu
+modules-right = pulseaudio battery backlight cputemperature gputemperature powermenu
 
 tray-position = right
 tray-padding = 0
@@ -158,23 +158,6 @@ label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 label-urgent-font = 8
 
-[module/xbacklight]
-type = internal/xbacklight
-
-ramp-foreground = ${colors.xbacklight}
-label-foreground = ${colors.xbacklight}
-format = "%{T3}<ramp>%{T-} <label>"
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-ramp-4 = 
-
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
-
 [module/date]
 type = internal/date
 interval = 1
@@ -199,8 +182,48 @@ ramp-volume-1 = 
 ramp-volume-2 = 墳
 ramp-volume-3 = 
 label-volume = %percentage%%
-label-muted = "婢 muted"
+label-muted = "%{T3}婢%{T-} muted"
 label-muted-foreground = ${colors.foreground-alt}
+
+
+[module/backlight]
+type = internal/backlight
+format-foreground = ${colors.xbacklight}
+
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+card = amdgpu_bl0
+
+; (unreleased)
+; Use the `/sys/class/backlight/actual-brightness` file
+; rather than the regular `brightness` file.
+; Defaults to true unless the specified card is an amdgpu backlight.
+use-actual-brightness = true
+
+; Enable changing the backlight with the scroll wheel
+; NOTE: This may require additional configuration on some systems. Polybar will
+; write to `/sys/class/backlight/${self.card}/brightness` which requires polybar
+; to have write access to that file.
+; DO NOT RUN POLYBAR AS ROOT. 
+; The recommended way is to add the user to the
+; `video` group and give that group write-privileges for the `brightness` file.
+; See the ArchWiki for more information:
+; https://wiki.archlinux.org/index.php/Backlight#ACPI
+; Default: false
+enable-scroll = false
+format = "%{T3}<ramp>%{T-} <label>"
+
+; Available tokens:
+;   %percentage% (default)
+label = %percentage%%
+
+; Only applies if <ramp> is used
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
 
 [module/battery]
 type = internal/battery
