@@ -24,6 +24,7 @@ echo "tpm: Remember to install with (prefix+I)"
 
 # drop in file for autologin
 sudo mkdir -p "$systemdlogin"
+sed "s/\[USER\]/$USER/g" override.template.conf > override.conf
 sudo cp -i override.conf "$systemdlogin"
 
 # X11 touchpad settings
