@@ -91,6 +91,9 @@ handle_pdf() {
     if [ "$GUI" -ne 0 ] && is_mac; then
         nohup open "${FPATH}" >/dev/null 2>&1 &
         exit 0
+    elif [ "$GUI" -ne 0 ] && which qpdfview >/dev/null 2>&1; then
+        nohup qpdfview "${FPATH}" >/dev/null 2>&1 &
+        exit 0
     elif [ "$GUI" -ne 0 ] && which zathura >/dev/null 2>&1; then
         nohup zathura "${FPATH}" >/dev/null 2>&1 &
         exit 0
