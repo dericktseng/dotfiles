@@ -29,7 +29,6 @@ libimagequant
 linux
 linux-firmware
 llvm
-lxappearance
 maim
 make
 materia-gtk-theme

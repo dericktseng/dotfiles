@@ -31,6 +31,10 @@ sudo cp -i override.conf "$systemdlogin"
 sudo mkdir -p "$xorgconf"
 sudo cp -i 30-touchpad.conf "$xorgconf"
 
+# backlight settings: adds user to group video
+self=$USER
+sudo usermod -aG video "$self"
+
 # Laptop-mode-tools optional.
 echo "please start laptop-mode-tools manually!"
 
