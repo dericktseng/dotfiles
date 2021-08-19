@@ -106,8 +106,6 @@ fn.syntax_group = function()
     print(orig .. ' -> ' .. after)
 end
 
-
-
 -- populates location list with lsp diagnostics
 fn.lsplocationlist = function()
 	vim.lsp.diagnostic.set_loclist({open_loclist = false})

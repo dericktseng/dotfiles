@@ -73,4 +73,4 @@ vim.o.confirm = true
 vim.opt.shortmess:append('cI')
 
 ---- completeopt
-vim.opt.completeopt = {'menuone', 'noselect'}
+vim.opt.completeopt = 'menuone,noselect'

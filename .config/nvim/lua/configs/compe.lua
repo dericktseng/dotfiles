@@ -4,7 +4,7 @@ require'compe'.setup {
   autocomplete = true;
   debug = false;
   min_length = 1;
-  preselect = 'disable';
+  preselect = 'enable';
   throttle_time = 80;
   source_timeout = 200;
   incomplete_delay = 400;
@@ -27,7 +27,7 @@ require'compe'.setup {
 	nvim_lsp = true;
 	nvim_lua = true;
 	ultisnips = true;
-	treesitter = false;
+	treesitter = true;
 	omni = {
 		filetypes = {'tex'};
 	};
