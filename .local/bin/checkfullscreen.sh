@@ -35,7 +35,7 @@ checkRunningProgram() {
 
 # resets the screen saver if fullscreen, else, does nothing
 resetScreenSaver() {
-    if [[ $is_full_screen == 1 ]]  || [[ $prgm == 'zoom' ]] || [[ $prgm == 'qpdfview' ]];then
+    if [[ $is_full_screen == 1 ]]  || [[ $prgm == 'zoom' ]] || [[ $prgm == 'Zathura' ]];then
         xset s reset
     fi
 }

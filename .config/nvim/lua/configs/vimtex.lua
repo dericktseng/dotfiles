@@ -3,9 +3,8 @@ if (vim.bo.filetype == 'tex') then
 end
 
 -- settings for vimtex
-vim.g.vimtex_view_general_viewer = 'qpdfview'
-vim.g.vimtex_view_general_options = [[--unique @pdf\#src:@tex:@line:@col]]
-vim.g.vimtex_view_general_options_latexmk = '--unique'
+vim.g.vimtex_view_general_viewer = 'xdg-open'
+vim.g.vimtex_view_method = 'zathura'
 vim.g.vimtex_complete_enabled = 1
 vim.g.vimtex_compiler_progname = 'nvr'
 vim.g.vimtex_quickfix_mode = 0

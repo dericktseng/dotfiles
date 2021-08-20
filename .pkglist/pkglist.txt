@@ -59,7 +59,6 @@ pulseaudio
 pulseaudio-alsa
 python-pip
 python-pynvim
-qpdfview
 ripgrep
 rofi
 rlwrap
@@ -81,6 +80,7 @@ wmctrl
 xclip
 xdg-user-dirs
 xdg-utils
+xdotool
 xorg-font-util
 xorg-server
 xorg-xmodmap
@@ -93,6 +93,9 @@ xorg-xsetroot
 xss-lock
 yarn
 youtube-dl
+zathura
+zathura-pdf-mupdf
+zathura-djvu
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
