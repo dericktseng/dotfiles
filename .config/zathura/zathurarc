@@ -30,7 +30,7 @@ set index-active-bg "#8fd1e5"
 set index-active-fg "#000000"
 
 set statusbar-fg "#000000"
-set statusbar-bg "#FFFFFF"
+set statusbar-bg "#e8e8e8"
 
 map p print
 map b focus_inputbar ":blist "
