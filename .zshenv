@@ -58,7 +58,7 @@ docs="z:$HOME/Documents/books"
 previewtuiext="p:-preview-tui-ext2"
 suedit="s:suedit"
 fzopen="f:-fzopen2"
-fzcd="d:-fzcd"
+fzcd="d:-fzcd2"
 getplugs="u:getplugs"
 
 # NNN configurations
