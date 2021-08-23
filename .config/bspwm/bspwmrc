@@ -47,10 +47,12 @@ $HOME/.config/polybar/launch.sh &
 pkill -f clipmenud
 pkill -f udiskie
 pkill -f nm-applet
+pkill -f blueman-applet
 pkill -f checkfullscreen.sh
 
 # restarts background programs
 udiskie -t &
+blueman-applet &
 nm-applet &
 pkill dunst &
 clipmenud &

@@ -16,6 +16,8 @@ dunst
 fakeroot
 fd
 feh
+ffmpeg
+ffmpegthumbnailer
 firefox
 fzf
 gcc
@@ -32,6 +34,7 @@ llvm
 maim
 make
 materia-gtk-theme
+mpv
 mtools
 ncftp
 neovim
