@@ -14,6 +14,7 @@ systemctl --user --now enable psd
 sudo systemctl --now enable ufw
 sudo systemctl --now enable NetworkManager
 sudo systemctl --now enable cronie
+sudo ufw enable
 
 # change shell to zsh.
 chsh -s /bin/zsh
