@@ -1,5 +1,4 @@
 -- cmp mappings
-local lspkind = require('lspkind')
 local cmp = require('cmp')
 cmp.setup {
 	mapping = {
@@ -28,12 +27,6 @@ cmp.setup {
 	documentation = {
 		border = 'rounded'
 	},
-	formatting = {
-		format = function(entry, vim_item)
-			vim_item.kind = lspkind.presets.default[vim_item.kind]
-			return vim_item
-		end
-	}
 }
 
 
@@ -45,10 +38,10 @@ require("nvim-autopairs.completion.cmp").setup({
 })
 
 
--- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
+-- LSP servers configs
+-- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers.
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
--- LSP servers configs
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
