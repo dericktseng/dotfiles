@@ -3,7 +3,7 @@ set font "FiraCode Nerd Font Mono 10"
 set selection-clipboard clipboard
 set statusbar-basename false
 set window-title-basename false
-set guioptions "s"
+set guioptions ""
 set scroll-step 150
 
 set highlight-color "#228dff"

@@ -1,0 +1,32 @@
+\documentclass[12pt]{article}
+
+%{{{ Packages 
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1truein,letterpaper]{geometry}
+\usepackage[shortlabels]{enumitem}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{adjustbox}
+\usepackage{xurl}
+%}}}
+
+% Matrix Overrides for bmatrix
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\title{Title}
+\author{Derick Tseng}
+\date{\today}
+
+\begin{document}
+    \maketitle
+
+\end{document}
