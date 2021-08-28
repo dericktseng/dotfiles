@@ -1,4 +1,5 @@
 -- cmp mappings
+local lspkind = require('lspkind')
 local cmp = require('cmp')
 cmp.setup {
 	mapping = {
@@ -27,6 +28,12 @@ cmp.setup {
 	documentation = {
 		border = 'rounded'
 	},
+	formatting = {
+		format = function(entry, vim_item)
+			vim_item.kind = lspkind.presets.default[vim_item.kind]
+			return vim_item
+		end
+	}
 }
 
 
