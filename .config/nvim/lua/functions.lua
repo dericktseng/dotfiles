@@ -1,5 +1,3 @@
-local npairs = require('nvim-autopairs')
-
 -- module to export
 local fn = {}
 
@@ -65,19 +63,6 @@ fn.complete_or_back = function(trigger, fallthrough)
         return trigger_ultisnips_bak(fallthrough)
     else
         return trigger_ultisnips_bak(trigger)
-    end
-end
-
--- enter completion for autopairs and compe
-fn.completion_confirm = function(trigger)
-    if vim.fn.pumvisible() ~= 0  then
-        if vim.fn.complete_info()["selected"] ~= -1 then
-            return vim.fn["compe#confirm"](npairs.esc(trigger))
-        else
-            return npairs.esc(trigger)
-        end
-    else
-        return npairs.autopairs_cr()
     end
 end
 

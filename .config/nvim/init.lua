@@ -21,10 +21,6 @@ end
 -- load plugins before anything else
 require('plugins')
 
--- LSP servers
-require'lspconfig'.pyright.setup{}
-require'lspconfig'.clangd.setup{}
-
 -- Personal mappings
 require("mappings")
 

@@ -69,14 +69,6 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 ]])
 
--- Compe mappings
-fn.keymap('i', '<CR>', [[v:lua.completion_confirm('<CR>')]], {expr=true})
-fn.keymap('i', '<C-SPACE>', [[compe#complete()]], {expr=true})
-fn.keymap('i', '<C-E>', [[compe#close('<C-E>')]], {expr=true})
-fn.keymap('i', '<C-J>', [[v:lua.p_complete('<C-N>', '<C-J>')]], {expr=true})
-fn.keymap('i', '<C-K>', [[v:lua.p_complete('<C-P>', '<C-K>')]], {expr=true})
-fn.keymap('s', '<C-J>', [[v:lua.p_complete('<C-N>', '<C-J>')]], {expr=true})
-fn.keymap('s', '<C-K>', [[v:lua.p_complete('<C-P>', '<C-K>')]], {expr=true})
 
 -- Splitting
 fn.keymap('n', '<Leader>-', '<C-W>s')

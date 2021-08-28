@@ -10,15 +10,46 @@ end
 
 -- plugins
 return require('packer').startup(function()
-	use 'wbthomason/packer.nvim'
 
-	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = function() require('configs/treesitter') end }
-	use { 'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup() end }
-	use { 'iamcco/markdown-preview.nvim', config = function() require('configs/markdown-preview') end, run = 'cd app && yarn install' }
-	use { 'hrsh7th/nvim-compe', config = function() require('configs/compe') end }
-	use { 'hoob3rt/lualine.nvim', config = function() require('configs/lualine') end }
-	use { 'kyazdani42/nvim-web-devicons', opt = true }
-	use { 'lervag/vimtex', config = function() require('configs/vimtex') end }
+	use {
+		'nvim-treesitter/nvim-treesitter',
+		run = ':TSUpdate', config = function() require('configs/treesitter') end 
+	}
+
+	use {
+		'windwp/nvim-autopairs',
+		config = function() require('nvim-autopairs').setup() end
+	}
+
+	use {
+		'iamcco/markdown-preview.nvim',
+		config = function() require('configs/markdown-preview') end,
+		run = 'cd app && yarn install' 
+	}
+
+	use {
+		'hrsh7th/nvim-cmp',
+		requires = {
+			'hrsh7th/cmp-buffer',
+			'hrsh7th/cmp-nvim-lsp',
+			'hrsh7th/cmp-path',
+			'quangnguyen30192/cmp-nvim-ultisnips'
+		},
+		config = function() require('configs/cmp') end
+	}
+
+	use {
+		'hoob3rt/lualine.nvim',
+		config = function() require('configs/lualine') end,
+		requires = {'kyazdani42/nvim-web-devicons'}
+	}
+
+	use { 
+		'lervag/vimtex',
+		config = function() require('configs/vimtex') end
+	}
+
+	use 'wbthomason/packer.nvim'
 	use 'tpope/vim-fugitive'
 	use 'SirVer/ultisnips'
 	use 'honza/vim-snippets'
