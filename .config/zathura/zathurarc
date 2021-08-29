@@ -10,7 +10,7 @@ set highlight-color "#228dff"
 set highlight-transparency 0.2
 set first-page-column 1:1
 
-set default-bg "#e8e8e8"
+set default-bg "#efefef"
 
 set notification-bg "#496087"
 set notification-fg "#ffffff"

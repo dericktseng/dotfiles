@@ -106,3 +106,38 @@ endsnippet
 snippet lb "label"
 \label{$1}
 endsnippet
+
+snippet setup "setup"
+\documentclass[12pt]{article}
+
+%{{{ Packages 
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1truein,letterpaper]{geometry}
+\usepackage[shortlabels]{enumitem}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{adjustbox}
+\usepackage{xurl}
+%}}}
+
+% Matrix Overrides for bmatrix
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{#1}}
+\makeatother
+
+\title{${1:Title}}
+\author{${2:Derick Tseng}}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	$3
+\end{document}
+endsnippet
