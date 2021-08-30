@@ -77,10 +77,10 @@ super + g
 
 # audio controls
 {XF86AudioLowerVolume, XF86AudioRaiseVolume, XF86AudioMute}
-    amixer -q -D pulse sset Master {1%- unmute,1%+ unmute,toggle} && volumenotify.sh
+    amixer -q -D pulse sset Master {3%- unmute,3%+ unmute,toggle} && volumenotify.sh
 
 {Scroll_Lock,Pause,super + m}
-    amixer -q -D pulse sset Master {1%- unmute,1%+ unmute,toggle} && volumenotify.sh
+    amixer -q -D pulse sset Master {3%- unmute,3%+ unmute,toggle} && volumenotify.sh
 
 # laptop brightness controls
 XF86MonBrightnessUp
