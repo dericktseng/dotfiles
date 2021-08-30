@@ -12,36 +12,48 @@ super + Return
 super + x
 	$HOME/.config/rofi/launcher.sh
 
+# launch KanaConvert
 ctrl + shift + k
     /opt/KanaConvert/KanaConvert
 
+# Play Music
 ctrl + shift + m
     st -e $HOME/Music/yt-playlist
 
+# launch browser
 super + @space
     firefox
 
+# open powermenu
 super + Delete
     $HOME/.config/rofi/powermenu.sh
 
+# searches for local pdfs
 super + z
 	searchpdf.sh --one-file-system
 
+# searches for global pdfs
 super + shift + z
 	searchpdf.sh
 
+# window list
 super + d
 	rofi -show window
 
+# clipboard manager
 super + v
 	clipmenu
 
+# delete clipboard items
 super + shift + v
 	rofi -show del -modi "del:clipdelrofi.sh"
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd && notify-send -t 1500 'sxhkd reloaded'
+
+super + slash
+	sxhkd-help.sh
 
 
 #
