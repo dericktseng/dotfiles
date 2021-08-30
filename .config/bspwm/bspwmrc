@@ -4,8 +4,8 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
-bspc config border_width         3
-bspc config window_gap           2
+bspc config border_width         2
+bspc config window_gap           0
 
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true
@@ -15,8 +15,9 @@ bspc config pointer_modifier     mod1
 
 # color definitions
 normal="#d8d8d8"
-focused="#0ab9ec"
-background="#c0e8f7"
+focused="#ff79c6"
+background1="#d4cef3"
+background2="#c0e8f7"
 
 # split style
 bspc config automatic_scheme alternate
@@ -64,7 +65,7 @@ setxkbmap -option caps:swapescape
 checkfullscreen.sh &
 
 # set background
-$HOME/.fehbg > /dev/null 2>&1 || hsetroot -solid "$background" &
+$HOME/.fehbg > /dev/null 2>&1 || hsetroot -add "$background1" -add "$background2" -gradient 30 &
 
 # screensaver default 10 mins timeout
 xset s 600 600 
