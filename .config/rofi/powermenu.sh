@@ -1,34 +1,34 @@
 #!/usr/bin/env bash
 
-rofi_command="rofi -theme powermenu.rasi"
+rofi_command="rofi"
 
 # Options
-shutdown="襤"
-reboot="ﰇ"
-lock=""
-suspend="鈴"
-logout=""
+ishutdown=""
+ireboot=""
+ilock=""
+isuspend="鈴"
+ilogout=""
 
 # Variable passed to rofi
-options="$shutdown\n$reboot\n$lock\n$suspend\n$logout"
+options="$ishutdown\n$ireboot\n$ilock\n$isuspend\n$ilogout"
 
 chosen="$(echo -e "$options" | $rofi_command -p "POWER MENU" -dmenu -selected-row 2)"
 case $chosen in
-    $shutdown)
+    $ishutdown)
         systemctl poweroff
         ;;
-    $reboot)
+    $ireboot)
         systemctl reboot
         ;;
-    $lock)
+    $ilock)
         loginctl lock-session
         ;;
-    $suspend)
+    $isuspend)
         mpc -q pause
         amixer set Master mute
         systemctl suspend
         ;;
-    $logout)
+    $ilogout)
         loginctl terminate-user "$(whoami)"
         ;;
 esac

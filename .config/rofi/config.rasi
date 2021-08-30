@@ -2,8 +2,8 @@ configuration {
 	modi: "window,run,ssh,drun";
 	show-icons: true;
 	terminal: "st";
-	font: "FiraCode Nerd Font Mono 11";
-	theme: "arc" ;
+	font: "FiraCode Nerd Font 11";
+/*	theme: "arc" ;*/
 /*	sort: true;*/
 /*	hide-scrollbar: false;*/
 /*	sorting-method: "fzf";*/
