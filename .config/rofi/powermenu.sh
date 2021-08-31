@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-rofi_command="rofi"
+rofi_command="rofi -config powermenu.rasi"
 
 # Options
-ishutdown=""
-ireboot=""
-ilock=""
-isuspend="鈴"
-ilogout=""
+ishutdown=" shutdown"
+ireboot=" reboot"
+ilock=" lock"
+isuspend="鈴 suspend"
+ilogout=" logout"
 
 # Variable passed to rofi
 options="$ishutdown\n$ireboot\n$ilock\n$isuspend\n$ilogout"
