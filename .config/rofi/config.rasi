@@ -1,9 +1,11 @@
 configuration {
 	modi: "window,run,ssh,drun";
-	show-icons: true;
 	terminal: "st";
-	font: "FiraCode Nerd Font 11";
-/*	theme: "arc" ;*/
+	font: "Noto Sans 12";
+	theme: "base" ;
+	show-icons: true;
+	eh: 1;
+/*	icon-theme: "Papirus Light";*/
 /*	sort: true;*/
 /*	hide-scrollbar: false;*/
 /*	sorting-method: "fzf";*/
@@ -24,7 +26,6 @@ configuration {
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
-/*	icon-theme: ;*/
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-show-actions: false;*/
@@ -35,7 +36,6 @@ configuration {
 /*	case-sensitive: false;*/
 /*	cycle: true;*/
 /*	sidebar-mode: false;*/
-/*	eh: 1;*/
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/

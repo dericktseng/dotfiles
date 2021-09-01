@@ -34,6 +34,7 @@ export SAL_USE_VCLPLUGIN=gen
 # rofi launcher for clipmenu
 export CM_LAUNCHER=rofi
 export CM_SELECTIONS="clipboard"
+export CM_OUTPUT_CLIP=1
 
 # NNN colors
 BLOCK_DEVICE="c1"

@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 if [ -z "$@" ]; then
-	allclips=$(clipdel '.*')
-	echo -e ".*\n$allclips"
+	clipmenu | clipdel -d
 else
 	clipdel -d "$@"
 fi

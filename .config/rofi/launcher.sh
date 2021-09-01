@@ -1,2 +1,2 @@
 #!/bin/bash
-rofi -no-lazy-grab -show drun
+rofi -theme launcher -no-lazy-grab -show drun -show-icons -drun-display-format {name}
