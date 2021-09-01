@@ -11,8 +11,8 @@ configuration {
 
 
 window {
-	anchor: east;
-	location: east;
+	anchor: west;
+	location: west;
 }
 
 element-icon {
