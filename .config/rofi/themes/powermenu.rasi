@@ -2,13 +2,12 @@
 
 * {
 	/* change font to correct */
-	font: "FiraCode Nerd Font Mono 20";
+	font: "FiraCode Nerd Font Mono 16";
+	windowwidth: 40%;
 }
 
 window {
 	height: 0;
-	anchor: center;
-	location: center;
 }
 
 inputbar {

@@ -9,8 +9,8 @@
 	highlightselect: bold white;
 	windowwidth: 50%;
 	windowheight: 0;
-	anchorcoord: center;
-	locationcoord: center;
+	anchorcoord: north;
+	locationcoord: north;
 
 	/* Global properties */
     background-color:      transparent;
