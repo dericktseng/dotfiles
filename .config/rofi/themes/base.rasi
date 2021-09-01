@@ -1,0 +1,67 @@
+* {
+	/* Color definitions */
+	black:	#000000;
+	white:	#ffffff;
+	glass:	#efefefdd;
+	blue:	#007aff;
+	shadow: #55555544;
+	highlightregular: bold black;
+	highlightselect: bold white;
+	windowwidth: 50%;
+	windowheight: 0;
+	anchorcoord: center;
+	locationcoord: center;
+
+	/* Global properties */
+    background-color:      transparent;
+    text-color:            @black;
+    border-color:          @white;
+	transparency: "true";
+}
+
+window {
+	background-color: @glass;
+    anchor:     @anchorcoord;
+    location:   @locationcoord;
+    width:      @windowwidth;
+	height:		@windowheight;
+	transparency: "true";
+
+	/* border settings */
+	border-color: @shadow;
+	border: 1px;
+	border-radius: 1px;
+}
+
+inputbar {
+	padding: 0em 1em 0em 1em;
+}
+
+listview {
+    layout: vertical;
+}
+
+element {
+	padding: 0em 1em 0em 1em;
+	margin: 0;
+}
+
+element-text {
+	highlight: @highlightregular;
+}
+
+element-icon {
+	size: 1em;
+	enabled: false;
+}
+
+element selected {
+	background-color: @blue;
+}
+
+element-text selected {
+	highlight: @highlightselect;
+	text-color: @white;
+}
+
+/* vim:ft=css

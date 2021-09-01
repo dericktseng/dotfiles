@@ -1,0 +1,17 @@
+@theme "base"
+
+* {
+	windowwidth: 20%;
+	windowheight: 100%;
+}
+
+window {
+	anchor: east;
+	location: east;
+}
+
+element-icon {
+	enabled: true;
+}
+
+/* vim:ft=css
