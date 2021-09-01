@@ -16,14 +16,6 @@ window {
 	location: west;
 }
 
-entry {
-	placeholder: "Search Programs";
-}
-
-prompt {
-	enabled: false;
-}
-
 element-icon {
 	enabled: true;
 }

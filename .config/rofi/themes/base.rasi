@@ -52,10 +52,8 @@ case-indicator {
 }
 
 prompt {
-	enabled: false;
 	padding: 0.1em 0.5em;
-	background-color: @blue;
-	text-color: @white;
+	text-color: @black;
 }
 
 listview {

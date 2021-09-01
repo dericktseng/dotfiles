@@ -3,7 +3,6 @@ configuration {
 	terminal: "st";
 	font: "Noto Sans 12";
 	theme: "base" ;
-	show-icons: true;
 	eh: 1;
 /*	icon-theme: "Papirus Light";*/
 /*	sort: true;*/
@@ -149,4 +148,5 @@ configuration {
 /*	me-select-entry: "MousePrimary";*/
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
+/*	show-icons: true;*/
 }
