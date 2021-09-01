@@ -1,9 +1,14 @@
+configuration {
+	display-drun: "> ";
+}
+
 @theme "base"
 
 * {
 	windowwidth: 20%;
 	windowheight: 100%;
 }
+
 
 window {
 	anchor: east;
