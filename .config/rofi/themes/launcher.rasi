@@ -1,11 +1,12 @@
 configuration {
-	display-drun: "> ";
+	display-drun: "Programs";
+	drun-display-format: "{name}";
 }
 
 @theme "base"
 
 * {
-	windowwidth: 20%;
+	windowwidth: 25%;
 	windowheight: 100%;
 }
 
@@ -13,6 +14,14 @@ configuration {
 window {
 	anchor: west;
 	location: west;
+}
+
+entry {
+	placeholder: "Search Programs";
+}
+
+prompt {
+	enabled: false;
 }
 
 element-icon {

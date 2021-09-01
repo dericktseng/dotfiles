@@ -33,6 +33,7 @@ export SAL_USE_VCLPLUGIN=gen
 
 # rofi launcher for clipmenu
 export CM_LAUNCHER=rofi
+export CM_HISTLENGTH=15
 export CM_SELECTIONS="clipboard"
 export CM_OUTPUT_CLIP=1
 

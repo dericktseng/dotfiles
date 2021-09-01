@@ -4,7 +4,9 @@
 	white:	#ffffff;
 	glass:	#efefefdd;
 	blue:	#007aff;
+	grey:	#aaaaaa;
 	shadow: #55555544;
+	divider: 0px 0px 1px 0px;
 	highlightregular: bold black;
 	highlightselect: bold white;
 	windowwidth: 50%;
@@ -33,12 +35,33 @@ window {
 	border-radius: 1px;
 }
 
-inputbar {
-	padding: 0em 1em 0em 1em;
+mainbox {
+	spacing: 0em;
+}
+
+entry {
+	padding: 0.1em;
+	border: @divider;
+	border-color: @shadow;
+	placeholder-color: @grey;
+	placeholder: "Search";
+}
+
+case-indicator {
+	enabled: false;
+}
+
+prompt {
+	enabled: false;
+	padding: 0.1em 0.5em;
+	background-color: @blue;
+	text-color: @white;
 }
 
 listview {
     layout: vertical;
+	cycle: false;
+	scrollbar: false;
 }
 
 element {
