@@ -3,6 +3,7 @@ configuration {
 	terminal: "st";
 	font: "Noto Sans 12";
 	theme: "base" ;
+	scroll-method: 1;
 	eh: 1;
 /*	icon-theme: "Papirus Light";*/
 /*	sort: true;*/
@@ -50,7 +51,6 @@ configuration {
 /*	dpi: -1;*/
 /*	threads: 0;*/
 /*	scrollbar-width: 8;*/
-/*	scroll-method: 0;*/
 /*	fake-background: "screenshot";*/
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
