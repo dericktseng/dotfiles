@@ -1,3 +1,5 @@
+/* documentation here: https://github.com/davatorium/rofi/blob/next/doc/rofi-theme.5.markdown */
+
 * {
 	/* Color definitions */
 	black:	#000000;
@@ -32,7 +34,7 @@ window {
 	/* border settings */
 	border-color: @shadow;
 	border: 1px;
-	border-radius: 1px;
+	border-radius: 0px;
 }
 
 mainbox {

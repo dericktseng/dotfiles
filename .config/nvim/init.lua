@@ -22,11 +22,9 @@ end
 require('plugins')
 
 -- Personal mappings
-require("mappings")
+require('mappings')
 
 -- per filetype settings
-vim.api.nvim_command('autocmd FileType help wincmd L')
-vim.api.nvim_command('autocmd FileType man wincmd L')
 vim.api.nvim_command('autocmd FileType tex setlocal spell spelllang=en_us')
 
 -- REST OF VIM SETTINGS
@@ -70,3 +68,5 @@ vim.opt.shortmess:append('cI')
 
 ---- completeopt
 vim.opt.completeopt = 'menu,menuone,noselect'
+
+vim.o.tabline = '%!v:lua.tablinestr()'

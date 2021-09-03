@@ -1,13 +1,5 @@
 local fn = require("functions")
 
--- exporting global functions
-_G.completion_confirm = fn.completion_confirm
-_G.smart_nav = fn.smart_nav
-_G.p_complete = fn.pumvisible_complete
-_G.syntax_group = fn.syntax_group
-_G.lsplocationlist = fn.lsplocationlist
-_G.togglelist = fn.togglelist
-
 -- UltiSnips Settings
 vim.g.UltiSnipsExpandTrigger = "<TAB>"
 vim.g.UltiSnipsJumpForwardTrigger = "<TAB>"
@@ -52,6 +44,7 @@ fn.keymap('i', '!', '!<c-g>u')
 fn.keymap('i', '?', '?<c-g>u')
 fn.keymap('i', ';', ';<c-g>u')
 fn.keymap('i', '/', '/<c-g>u')
+fn.keymap('i', '=', '=<c-g>u')
 
 fn.keymap('v', 'H', [[<gv]])
 fn.keymap('v', 'K', [[:m '<-2<CR>gv=gv]])
@@ -78,11 +71,23 @@ fn.keymap('n', '<Leader>j', '<C-W>j')
 fn.keymap('n', '<Leader>k', '<C-W>k')
 fn.keymap('n', '<Leader>l', '<C-W>l')
 fn.keymap('n', '<Leader>o', ':only<CR>')
-fn.keymap('n', '<Leader><S-H>', '<C-W><S-H>')
-fn.keymap('n', '<Leader><S-J>', '<C-W><S-J>')
-fn.keymap('n', '<Leader><S-K>', '<C-W><S-K>')
-fn.keymap('n', '<Leader><S-L>', '<C-W><S-L>')
-fn.keymap('n', '<Leader>gf', '<C-W>gf')
+fn.keymap('n', '<Leader>H', '<C-W>H')
+fn.keymap('n', '<Leader>J', '<C-W>J')
+fn.keymap('n', '<Leader>K', '<C-W>K')
+fn.keymap('n', '<Leader>L', '<C-W>L')
+fn.keymap('n', 'gf', '<C-W>gf')
+
+-- Tabs
+fn.keymap('n', '<Leader>1', '1gt')
+fn.keymap('n', '<Leader>2', '2gt')
+fn.keymap('n', '<Leader>3', '3gt')
+fn.keymap('n', '<Leader>4', '4gt')
+fn.keymap('n', '<Leader>5', '5gt')
+fn.keymap('n', '<Leader>6', '6gt')
+fn.keymap('n', '<Leader>7', '7gt')
+fn.keymap('n', '<Leader>8', '8gt')
+fn.keymap('n', '<Leader>9', '9gt')
+fn.keymap('n', '<Leader>0', ':tablast<cr>')
 
 -- FZF
 fn.keymap('i', '<C-F>', [[fzf#vim#complete#path('fd --hidden')]], {expr=true})
