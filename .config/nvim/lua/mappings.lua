@@ -116,5 +116,6 @@ vim.api.nvim_command('autocmd BufWrite,BufEnter,InsertLeave * :call v:lua.lsploc
 -- Fugitive Configurations
 fn.keymap('n', '<Leader>gs', ':Git<CR>')
 fn.keymap('n', '<Leader>gp', ':Git push<CR>')
+fn.keymap('n', '<Leader>gf', ':Git fetch<CR>')
 fn.keymap('n', '<Leader>gh', ':diffget //2<CR>')
 fn.keymap('n', '<Leader>gl', ':diffget //3<CR>')
