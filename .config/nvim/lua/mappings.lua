@@ -50,11 +50,14 @@ fn.keymap('v', 'H', [[<gv]])
 fn.keymap('v', 'K', [[:m '<-2<CR>gv=gv]])
 fn.keymap('v', 'J', [[:m '>+1<CR>gv=gv]])
 fn.keymap('v', 'L', [[>gv]])
+
+-- add surrounding brackets, quotes, etc
 fn.keymap('v', '"', [[<esc>`>a"<esc>`<i"<esc>]])
 fn.keymap('v', "'", [[<esc>`>a'<esc>`<i'<esc>]])
 fn.keymap('v', '(', [[<esc>`>a)<esc>`<i(<esc>]])
 fn.keymap('v', '[', [[<esc>`>a]<esc>`<i[<esc>]])
 fn.keymap('v', '{', [[<esc>`>a}<esc>`<i{<esc>]])
+fn.keymap('v', '|', [[<esc>`>a|<esc>`<i|<esc>]])
 
 -- vim easy align
 vim.cmd([[

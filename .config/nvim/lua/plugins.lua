@@ -49,6 +49,7 @@ return require('packer').startup(function()
 		config = function() require('configs/vimtex') end
 	}
 
+	use 'tpope/vim-surround'
 	use 'wbthomason/packer.nvim'
 	use 'tpope/vim-fugitive'
 	use 'SirVer/ultisnips'
