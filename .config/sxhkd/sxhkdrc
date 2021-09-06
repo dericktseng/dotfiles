@@ -45,11 +45,11 @@ super + v
 	clipmenu
 
 # delete clipboard items
-super + shift + v
+super + ctrl + v
 	clipdelrofi.sh
 
 # delete all clipboard items
-super + alt + shift + v
+super + ctrl + alt + v
 	clipdelrofi.sh '.*' && notify-send -t 1500 'cleared all clipboard'
 
 # sxhkd reload configuration files:
