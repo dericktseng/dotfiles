@@ -37,7 +37,6 @@ require("nvim-autopairs.completion.cmp").setup({
 	auto_select = true -- automatically select the first item
 })
 
-
 -- LSP servers configs
 -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers.
 local capabilities = vim.lsp.protocol.make_client_capabilities()

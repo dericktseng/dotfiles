@@ -6,8 +6,9 @@ set window-title-basename false
 set guioptions ""
 set scroll-step 150
 
-set highlight-color "#228dff"
-set highlight-transparency 0.2
+set highlight-color "#a0def7"
+set highlight-fg "#000000"
+set highlight-transparency 0.5
 set first-page-column 1:1
 
 set default-bg "#efefef"
