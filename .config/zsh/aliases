@@ -18,7 +18,7 @@ alias vim=$EDITOR
 alias open="xdg-open"
 alias locate="locate -e"
 alias gdb="gdb -tui"
-alias y="yay"
+alias y="yay && nvim +PackerSync"
 alias ytdl="youtube-dl"
 alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias hd="hexdump -C"

@@ -18,7 +18,8 @@ temperature2 = #9c48f5
 font-0 = Inconsolata Semi Expanded SemiBold:pixelsize=13;3
 font-1 = FiraCode Nerd Font Mono:style=Bold:pixelsize=11;3
 font-2 = FiraCode Nerd Font Mono:style=Regular:pixelsize=20;4
-font-3 = DejaVu Sans:pixelsize=13;4
+font-3 = Roboto:pixelsize=13;4
+font-4 = DejaVu Sans:pixelsize=13;4
 
 [bar/main]
 width = 100%
@@ -37,6 +38,7 @@ font-0 = ${fonts.font-0}
 font-1 = ${fonts.font-1}
 font-2 = ${fonts.font-2}
 font-3 = ${fonts.font-3}
+font-4 = ${fonts.font-4}
 
 underline-size = 0
 # line-color = #{colors.foreground}
@@ -162,13 +164,13 @@ label-urgent-font = 8
 type = internal/date
 interval = 1
 
-date = "%a %b %d, %Y"
+date = %a %b %d, %Y
 date-alt = ${self.date}
 
 time = "%I:%M %p"
 time-alt = %I:%M:%S
 format-prefix-foreground = ${colors.foreground-alt}
-label = "%date% | %time%"
+label = %{T0}%date% | %time%%{T-}
 
 [module/pulseaudio]
 type = internal/pulseaudio

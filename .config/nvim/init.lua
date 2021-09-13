@@ -60,6 +60,9 @@ vim.o.wrap = true
 vim.o.linebreak = true
 vim.o.showbreak = "|"
 
+---- tabline
+vim.o.showtabline = 2
+
 ---- confirmation when actions fail
 vim.o.confirm = true
 
