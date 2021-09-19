@@ -1,10 +1,11 @@
 # colors are aarrggbb
 [colors]
-background = #fefefe
-background-alt = #ecece1
 foreground = #565656
 foreground-alt = #aaaaaa
-border = #d1d1d1
+background = #ffffffff
+background-alt = #d1dbe1
+bspwm-underline = #1ea5f7
+border = ${colors.foreground}
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
@@ -40,8 +41,8 @@ font-2 = ${fonts.font-2}
 font-3 = ${fonts.font-3}
 font-4 = ${fonts.font-4}
 
-underline-size = 0
-# line-color = #{colors.foreground}
+underline-size = 3
+# line-color = ${colors.background}
 
 border-color = ${colors.border}
 border-top-size = 1
@@ -54,6 +55,7 @@ modules-right = pulseaudio battery backlight cputemperature gputemperature power
 
 tray-position = right
 tray-padding = 0
+tray-background = ${colors.background}
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -124,7 +126,9 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %{T2}%icon%%{T-}
+label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background-alt}
+label-focused-underline = ${colors.bspwm-underline}
 label-focused-padding = 1
 label-focused-font = 8
 
@@ -141,7 +145,7 @@ label-empty-font = 8
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %{T2}%icon%%{T-}
-label-urgent-foreground = #ffffff
+label-urgent-foreground = ${colors.background}
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 label-urgent-font = 8
@@ -167,10 +171,9 @@ ramp-volume-foreground = ${colors.volume}
 
 ramp-volume-0 = 
 ramp-volume-1 = 
-ramp-volume-2 = 墳
-ramp-volume-3 = 
+ramp-volume-2 = 
 label-volume = %percentage%%
-label-muted = "%{T3}婢%{T-} muted"
+label-muted = "%{T3}婢%{T-}"
 label-muted-foreground = ${colors.foreground-alt}
 
 
