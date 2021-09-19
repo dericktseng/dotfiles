@@ -4,7 +4,7 @@
 	/* Color definitions */
 	black:	#000000;
 	white:	#ffffff;
-	glass:	#efefefdd;
+	glass:	#efefefcc;
 	blue:	#007aff;
 	grey:	#aaaaaa;
 	shadow: #55555544;
