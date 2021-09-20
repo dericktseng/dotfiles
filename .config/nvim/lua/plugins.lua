@@ -13,7 +13,9 @@ return require('packer').startup(function()
 
 	use {
 		'nvim-treesitter/nvim-treesitter',
-		run = ':TSUpdate', config = function() require('configs/treesitter') end 
+		branch = '0.5-compat',
+		run = ':TSUpdate',
+		config = function() require('configs/treesitter') end 
 	}
 
 	use {
@@ -23,8 +25,8 @@ return require('packer').startup(function()
 
 	use {
 		'iamcco/markdown-preview.nvim',
+		run = 'cd app && yarn install',
 		config = function() require('configs/markdown-preview') end,
-		run = 'cd app && yarn install' 
 	}
 
 	use {
@@ -34,7 +36,7 @@ return require('packer').startup(function()
 			'hrsh7th/cmp-nvim-lsp',
 			'hrsh7th/cmp-path',
 			'quangnguyen30192/cmp-nvim-ultisnips',
-			'hrsh7th/cmp-calc'
+			'hrsh7th/cmp-calc',
 		},
 		config = function() require('configs/cmp') end
 	}

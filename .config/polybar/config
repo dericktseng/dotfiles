@@ -2,8 +2,8 @@
 [colors]
 foreground = #565656
 foreground-alt = #aaaaaa
-background = #ffffffff
-background-alt = #d1dbe1
+background = #ffffff
+background-alt = #dde9f3
 bspwm-underline = #1ea5f7
 border = ${colors.foreground}
 primary = #ffb52a

@@ -5,7 +5,7 @@ vim.g.loaded_node_provider   = 0
 vim.g.loaded_perl_provider   = 0
 vim.g.python3_host_prog      = '/usr/bin/python3'
 
----- colorscheme and true color settings
+-- colorscheme and true color settings
 vim.api.nvim_command('filetype plugin indent on')
 
 -- allow GUI and term with termguicolors to use the light theme
@@ -28,7 +28,7 @@ require('mappings')
 vim.api.nvim_command('autocmd FileType tex setlocal spell spelllang=en_us')
 
 -- REST OF VIM SETTINGS
----- tab settings
+-- tab settings
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = false
@@ -36,40 +36,44 @@ vim.o.smarttab = true
 vim.o.autoindent = true
 vim.o.smartindent = true
 
----- set line numbers
+-- set line numbers
 vim.o.number = true
 vim.o.relativenumber = true
 
----- allow mouse input and clipboard
+-- allow mouse input and clipboard
 vim.o.mouse = 'a'
 vim.o.clipboard = 'unnamedplus'
 
----- hides the mode description at bottom.
+-- hides the mode description at bottom.
 vim.o.showmode = false
 
----- sets the cursor to have a buffer. High number to always be centered.
+-- sets the cursor to have a buffer. High number to always be centered.
 vim.o.so = 9
 
----- latex settings
+-- latex settings
 vim.o.conceallevel = 2
 vim.g.tex_no_error = 1
 vim.g.tex_flavor = 'latex'
 
----- proper linebreaks
+-- proper linebreaks
 vim.o.wrap = true
 vim.o.linebreak = true
 vim.o.showbreak = "|"
 
----- tabline
+-- tabline
 vim.o.showtabline = 2
 
----- confirmation when actions fail
+-- confirmation when actions fail
 vim.o.confirm = true
 
----- shortmessage (set shortmess += cI)
+-- shortmessage (set shortmess += cI)
 vim.opt.shortmess:append('cI')
 
----- completeopt
+-- completeopt
 vim.opt.completeopt = 'menu,menuone,noselect'
 
 vim.o.tabline = '%!v:lua.tablinestr()'
+
+-- foldexpr
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr=vim.fn['nvim_treesitter#foldexpr']()
