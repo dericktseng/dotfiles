@@ -75,5 +75,5 @@ vim.opt.completeopt = 'menu,menuone,noselect'
 vim.o.tabline = '%!v:lua.tablinestr()'
 
 -- foldexpr
-vim.o.foldmethod = 'expr'
-vim.o.foldexpr=vim.fn['nvim_treesitter#foldexpr']()
+-- vim.o.foldmethod = 'expr'
+-- vim.o.foldexpr='nvim_treesitter#foldexpr()'
