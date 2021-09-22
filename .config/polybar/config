@@ -13,6 +13,7 @@ glass = #dcfcfcfc
 font-0 = Inconsolata SemiBold:style=Regular:pixelsize=13;3
 font-1 = FiraCode Nerd Font Mono:style=Bold:pixelsize=11;3
 font-2 = FiraCode Nerd Font Mono:style=Regular:pixelsize=16;4
+font-3 = DejaVu Sans:style=Regular:pixelsize=13;4
 
 [bar/main]
 wm-restack = bspwm
@@ -32,6 +33,7 @@ border-top-size = 1
 font-0 = ${fonts.font-0}
 font-1 = ${fonts.font-1}
 font-2 = ${fonts.font-2}
+font-3 = ${fonts.font-3}
 
 line-size = 3
 module-margin = 0
@@ -192,7 +194,7 @@ use-actual-brightness = true
 ; https://wiki.archlinux.org/index.php/Backlight#ACPI
 ; Default: false
 enable-scroll = false
-format = %{T3}<ramp>%{T-} <label>
+format = <ramp> <label>
 format-padding = 1
 
 ; Available tokens:
@@ -218,7 +220,7 @@ format-charging-padding = 1
 label-charging =  %percentage%%
 label-charging-foreground = ${colors.black}
 
-format-discharging = %{A1:./batteryinfo.sh --time:}<ramp-capacity> <label-discharging>%{A}
+format-discharging = %{A1:$HOME/.config/polybar/batteryinfo.sh --time:}<ramp-capacity> <label-discharging>%{A}
 label-discharging-foreground = ${colors.black}
 format-discharging-padding = 1
 
