@@ -30,11 +30,12 @@ bspc config focused_border_color "$focused"
 # mouse cursor configuration
 bspc config pointer_follows_monitor true
 bspc config pointer_follows_focus false
-bspc config focus_follows_pointer false
+bspc config focus_follows_pointer true
 
 # window rules
 bspc rule -a 'Zathura' state=tiled focus=off
-bspc rule -a 'Gimp-2.10' state=fullscreen follow=on
+bspc rule -a 'Gimp' state=floating follow=on center=true
+bspc rule -a 'Gimp-2.10' state=floating desktop='^5' follow=on center=true
 bspc rule -a 'zoom' state=floating desktop='^5' follow=on center=true
 bspc rule -a 'discord' desktop='^4' follow=off
 bspc rule -a 'Kanaconvert' state=floating follow=on center=true
@@ -49,20 +50,24 @@ pkill -f clipmenud
 pkill -f udiskie
 pkill -f nm-applet
 pkill -f blueman-applet
-pkill -f checkfullscreen.sh
+pkill dunst &
 
 # restarts background programs
 udiskie -t &
 blueman-applet &
 nm-applet &
-pkill dunst &
 clipmenud &
+
+# run script to disable locking if application in full screen
+pkill -f checkfullscreen.sh
+checkfullscreen.sh &
+
+# set window 5 to only floating windows
+pkill -f floating.sh
+$HOME/.config/bspwm/floating.sh &
 
 # swaps escape and caps lock
 setxkbmap -option caps:swapescape
-
-# run script to disable locking if application in full screen
-checkfullscreen.sh &
 
 # set background
 $HOME/.fehbg > /dev/null 2>&1 || hsetroot -add "$background1" -add "$background2" -gradient 30 &
