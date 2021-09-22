@@ -9,10 +9,10 @@ red = #bd2c40
 yellow = #ffb52a
 
 [fonts]
-font-0 = Inconsolata Semi Expanded SemiBold:pixelsize=13;3
+font-0 = Noto Sans:pixelsize=13;3
 font-1 = FiraCode Nerd Font Mono:style=Bold:pixelsize=11;3
 font-2 = FiraCode Nerd Font Mono:style=Regular:pixelsize=20;4
-font-3 = Roboto:pixelsize=13;4
+font-3 = Roboto:pixelsize=13;3
 font-4 = DejaVu Sans:pixelsize=13;4
 
 [bar/main]
@@ -37,7 +37,7 @@ font-4 = ${fonts.font-4}
 underline-size = 3
 module-margin = 0
 
-modules-left = powermenu battery backlight cputemperature gputemperature
+modules-left = powermenu cputemperature gputemperature backlight battery 
 modules-center = bspwm 
 modules-right = pulseaudio date
 
@@ -143,12 +143,12 @@ label-urgent-font = 8
 type = internal/date
 interval = 1
 
-date =
-date-alt = "%a %b %d, "
+date = %a
+date-alt = "%d %b"
 
 time = %I:%M %p
 time-alt = %I:%M:%S
-label = %{T0}%date%%time%%{T-}
+label = %{T4}%date% %time%%{T-}
 label-padding = 1
 
 [module/pulseaudio]
@@ -194,6 +194,7 @@ use-actual-brightness = true
 ; Default: false
 enable-scroll = false
 format = %{T3}<ramp>%{T-} <label>
+format-padding = 1
 
 ; Available tokens:
 ;   %percentage% (default)
@@ -213,17 +214,22 @@ battery = BAT0
 adapter = AC
 full-at = 100
 
-format-charging = %{A1:./batteryinfo.sh --time:}<label-charging>%{A}
+format-charging = %{A1:$HOME/.config/polybar/batteryinfo.sh --time:}<label-charging>%{A}
+format-charging-padding = 1
 label-charging =  %percentage%%
 label-charging-foreground = ${colors.black}
 
 format-discharging = %{A1:./batteryinfo.sh --time:}<ramp-capacity> <label-discharging>%{A}
 label-discharging-foreground = ${colors.black}
+format-discharging-padding = 1
 
-format-full = %{A1:./batteryinfo.sh:} 100%%{A}
+format-full = %{A1:$HOME/.config/polybar/batteryinfo.sh:} 100%%{A}
 format-full-foreground = ${colors.black}
+format-full-padding = 1
+
 label-low =  %percentage%%
-format-low = %{A1:./batteryinfo.sh:}<label-low>%{A}
+format-low = %{A1:$HOME/.config/polybar/batteryinfo.sh:}<label-low>%{A}
+format-low-padding = 1
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -260,7 +266,7 @@ type = custom/text
 content = %{T3}襤%{T-}
 content-foreground = ${colors.white}
 content-background = ${colors.blue}
-content-padding = 2
+content-padding = 3
 click-left = ~/.config/rofi/powermenu.sh
 
 [settings]
