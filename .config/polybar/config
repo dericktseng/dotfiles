@@ -9,11 +9,9 @@ red = #bd2c40
 yellow = #ffb52a
 
 [fonts]
-font-0 = Noto Sans:pixelsize=13;3
+font-0 = Inconsolata SemiBold:style=Regular:pixelsize=13;3
 font-1 = FiraCode Nerd Font Mono:style=Bold:pixelsize=11;3
-font-2 = FiraCode Nerd Font Mono:style=Regular:pixelsize=20;4
-font-3 = Roboto:pixelsize=13;3
-font-4 = DejaVu Sans:pixelsize=13;4
+font-2 = FiraCode Nerd Font Mono:style=Regular:pixelsize=16;4
 
 [bar/main]
 width = 100%
@@ -31,8 +29,6 @@ border-top-size = 1
 font-0 = ${fonts.font-0}
 font-1 = ${fonts.font-1}
 font-2 = ${fonts.font-2}
-font-3 = ${fonts.font-3}
-font-4 = ${fonts.font-4}
 
 underline-size = 3
 module-margin = 0
@@ -148,7 +144,7 @@ date-alt = "%d %b"
 
 time = %I:%M %p
 time-alt = %I:%M:%S
-label = %{T4}%date% %time%%{T-}
+label = %{T3}%{T-} %date% %time%
 label-padding = 1
 
 [module/pulseaudio]
@@ -266,7 +262,7 @@ type = custom/text
 content = %{T3}襤%{T-}
 content-foreground = ${colors.white}
 content-background = ${colors.blue}
-content-padding = 3
+content-padding = 2
 click-left = ~/.config/rofi/powermenu.sh
 
 [settings]
