@@ -1,19 +1,12 @@
 # colors are aarrggbb
 [colors]
-foreground = #565656
-foreground-alt = #aaaaaa
-background = #ffffff
-background-alt = #dde9f3
-bspwm-underline = #1ea5f7
-border = ${colors.foreground}
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
-volume = #28b5d8
-xbacklight = #0093b8
-battery = #3ea65a
-temperature = #3bbcaa
-temperature2 = #9c48f5
+black = #565656
+blue = #1ea5f7
+grey = #aaaaaa
+white = #ffffff
+lightblue = #dde9f3
+red = #bd2c40
+yellow = #ffb52a
 
 [fonts]
 font-0 = Inconsolata Semi Expanded SemiBold:pixelsize=13;3
@@ -26,15 +19,15 @@ font-4 = DejaVu Sans:pixelsize=13;4
 width = 100%
 wm-restack = bspwm
 override-redirect = false
-
 height = 35
 radius = 0.0
 fixed-center = true
 bottom = true
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = ${colors.white}
+foreground = ${colors.black}
+border-color = ${colors.black}
+border-top-size = 1
 
-# separator = |
 font-0 = ${fonts.font-0}
 font-1 = ${fonts.font-1}
 font-2 = ${fonts.font-2}
@@ -42,20 +35,15 @@ font-3 = ${fonts.font-3}
 font-4 = ${fonts.font-4}
 
 underline-size = 3
-# line-color = ${colors.background}
+module-margin = 0
 
-border-color = ${colors.border}
-border-top-size = 1
-
-module-margin = 1
-
-modules-left = bspwm
-modules-center = date 
-modules-right = pulseaudio battery backlight cputemperature gputemperature powermenu
+modules-left = powermenu battery backlight cputemperature gputemperature
+modules-center = bspwm 
+modules-right = pulseaudio date
 
 tray-position = right
 tray-padding = 0
-tray-background = ${colors.background}
+tray-background = ${bar/main.background}
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -120,66 +108,69 @@ ws-icon-7 = 8;8
 ws-icon-8 = 9;9
 ws-icon-9 = 10;0
 
-label-mode-padding = 1
-label-mode-foreground = ${colors.foreground}
-label-mode-background = ${colors.primary}
+label-mode-padding = 2
+label-mode-foreground = ${colors.black}
+label-mode-background = ${colors.yellow}
 
 ; focused = Active workspace on focused monitor
 label-focused = %{T2}%icon%%{T-}
-label-focused-foreground = ${colors.foreground}
-label-focused-background = ${colors.background-alt}
-label-focused-underline = ${colors.bspwm-underline}
-label-focused-padding = 1
+label-focused-foreground = ${colors.black}
+label-focused-background = ${colors.lightblue}
+label-focused-underline = ${colors.blue}
+label-focused-padding = 2
 label-focused-font = 8
 
 ; unfocused = Inactive workspace on any monitor
 label-occupied = %{T2}%icon%%{T-}
-label-occupied-padding = 1
+label-occupied-padding = 2
 label-occupied-font = 8
 
 ; empty = Active workspace on unfocused monitor
-label-empty = %{T2}%icon%%{T-}
-label-empty-padding = 1
-label-empty-foreground = ${colors.foreground-alt}
+# label-empty = %{T2}%icon%%{T-}
+label-empty =
+label-empty-padding = 2
+label-empty-foreground = ${colors.grey}
 label-empty-font = 8
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %{T2}%icon%%{T-}
-label-urgent-foreground = ${colors.background}
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 1
+label-urgent-foreground = ${colors.white}
+label-urgent-background = ${colors.red}
+label-urgent-padding = 2
 label-urgent-font = 8
 
 [module/date]
 type = internal/date
 interval = 1
 
-date = %a %b %d, %Y
-date-alt = ${self.date}
+date =
+date-alt = "%a %b %d, "
 
-time = "%I:%M %p"
+time = %I:%M %p
 time-alt = %I:%M:%S
-format-prefix-foreground = ${colors.foreground-alt}
-label = %{T0}%date% | %time%%{T-}
+label = %{T0}%date%%time%%{T-}
+label-padding = 1
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = "%{T3}<ramp-volume>%{T-} <label-volume>"
-label-volume-foreground = ${colors.volume}
-ramp-volume-foreground = ${colors.volume}
+format-volume = %{T3}<ramp-volume>%{T-} <label-volume>
+format-volume-padding = 1
+label-volume-foreground = ${colors.black}
+ramp-volume-foreground = ${colors.black}
 
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 label-volume = %percentage%%
-label-muted = "%{T3}婢%{T-}"
-label-muted-foreground = ${colors.foreground-alt}
+label-muted = %{T3}婢%{T-} muted
+label-muted-foreground = ${colors.grey}
+label-muted-padding = 1
 
 
 [module/backlight]
 type = internal/backlight
-format-foreground = ${colors.xbacklight}
+format-foreground = ${colors.black}
 
 ; Use the following command to list available cards:
 ; $ ls -1 /sys/class/backlight/
@@ -202,7 +193,7 @@ use-actual-brightness = true
 ; https://wiki.archlinux.org/index.php/Backlight#ACPI
 ; Default: false
 enable-scroll = false
-format = "%{T3}<ramp>%{T-} <label>"
+format = %{T3}<ramp>%{T-} <label>
 
 ; Available tokens:
 ;   %percentage% (default)
@@ -222,17 +213,17 @@ battery = BAT0
 adapter = AC
 full-at = 100
 
-format-charging = "%{A1:notify-send -t 1500 BATTERY "$(acpi -b | cut -d ',' -f 3)":}<label-charging>%{A}"
+format-charging = %{A1:./batteryinfo.sh --time:}<label-charging>%{A}
 label-charging =  %percentage%%
-label-charging-foreground = ${colors.battery}
+label-charging-foreground = ${colors.black}
 
-format-discharging = "%{A1:notify-send -t 1500 BATTERY "$(acpi -b | cut -d ',' -f 3)":}<ramp-capacity> <label-discharging>%{A}"
-label-discharging-foreground = ${colors.battery}
+format-discharging = %{A1:./batteryinfo.sh --time:}<ramp-capacity> <label-discharging>%{A}
+label-discharging-foreground = ${colors.black}
 
-format-full = "%{A1:notify-send -t 1500 BATTERY "$(acpi -b)":} 100%%{A}"
-format-full-foreground = ${colors.battery}
+format-full = %{A1:./batteryinfo.sh:} 100%%{A}
+format-full-foreground = ${colors.black}
 label-low =  %percentage%%
-format-low = "%{A1:notify-send -t 1500 BATTERY "$(acpi -b)":}<label-low>%{A}"
+format-low = %{A1:./batteryinfo.sh:}<label-low>%{A}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -244,27 +235,32 @@ ramp-capacity-6 = 
 ramp-capacity-7 = 
 ramp-capacity-8 = 
 ramp-capacity-9 = 
-ramp-capacity-foreground = ${colors.battery}
+ramp-capacity-foreground = ${colors.black}
 
 [module/cputemperature]
 type = custom/script
 format = %{T3}%{T-} <label>
 label = %output%
+format-padding = 1
 exec = $HOME/.config/polybar/thermalcpu.sh
-format-foreground = ${colors.temperature}
+format-foreground = ${colors.black}
 interval = 3
 
 [module/gputemperature]
 type = custom/script
 format = %{T3}﬙%{T-} <label>
 label = %output%
+format-padding = 1
 exec = $HOME/.config/polybar/thermalgpu.sh
-format-foreground = ${colors.temperature2}
+format-foreground = ${colors.black}
 interval = 3
 
 [module/powermenu]
 type = custom/text
-content = "%{T3}襤%{T-}"
+content = %{T3}襤%{T-}
+content-foreground = ${colors.white}
+content-background = ${colors.blue}
+content-padding = 2
 click-left = ~/.config/rofi/powermenu.sh
 
 [settings]

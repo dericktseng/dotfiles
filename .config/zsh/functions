@@ -1,5 +1,10 @@
 #!/bin/sh
 
+function cht() {
+	defaultcolor=${2:-xcode}
+	curl -s "cheat.sh/$1?style=$defaultcolor"
+}
+
 function zsh_directory_name() {
   emulate -L zsh
   [[ $1 == d ]] || return

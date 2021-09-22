@@ -26,6 +26,7 @@ require('mappings')
 
 -- per filetype settings
 vim.api.nvim_command('autocmd FileType tex setlocal spell spelllang=en_us')
+vim.api.nvim_command('autocmd TermOpen * startinsert')
 
 -- REST OF VIM SETTINGS
 -- tab settings
@@ -73,6 +74,8 @@ vim.opt.shortmess:append('cI')
 vim.opt.completeopt = 'menu,menuone,noselect'
 
 vim.o.tabline = '%!v:lua.tablinestr()'
+
+vim.o.concealcursor = 'nc'
 
 -- foldexpr
 -- vim.o.foldmethod = 'expr'

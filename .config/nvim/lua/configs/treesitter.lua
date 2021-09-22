@@ -2,10 +2,7 @@ require'nvim-treesitter.configs'.setup {
 	ensure_installed = 'maintained',
 	highlight = {
 		enable = true,
-		disable = {
-			'latex',
-			'bash'
-		}
+		disable = {'latex'},
 	},
 
 	incremental_selection = {
