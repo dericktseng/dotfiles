@@ -149,12 +149,12 @@ label-urgent-font = 8
 type = internal/date
 interval = 1
 
-date = %a
-date-alt = %a %b %d |
+date = %a %b %d
+date-alt = %a %b %d
 
 time = %I:%M %p
 time-alt = %I:%M:%S
-label = %{T3}%{T-} %date% %time%
+label = %{T3}%{T-} %time% | %date%
 label-padding = 1
 
 [module/pulseaudio]
