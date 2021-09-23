@@ -122,7 +122,7 @@ label-mode-background = ${colors.yellow}
 label-focused = %{T2}%icon%%{T-}
 label-focused-foreground = ${colors.black}
 label-focused-background = ${colors.lightblue}
-label-focused-underline = ${colors.darkblue}
+label-focused-underline = ${colors.blue}
 label-focused-padding = 2
 label-focused-font = 8
 
