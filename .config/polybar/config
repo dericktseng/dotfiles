@@ -1,13 +1,18 @@
 # colors are aarrggbb
 [colors]
 black = #565656
-blue = #1ea5f7
-grey = #aaaaaa
-white = #ffffff
-lightblue = #dcdde9f3
-red = #bd2c40
+blue = #1EA5F7
+grey = #888888
+white = #FFFFFF
+lightblue = #DEEDF0
+darkblue = #2B5CEB
 yellow = #ffb52a
-glass = #dcfcfcfc
+green = #98DDCA
+lightgreen = #D5ECC2
+orange = #FFD3B4
+purple = #C9CBFF
+red = #FFAAA7
+glass = #FFFFFF
 
 [fonts]
 font-0 = Inconsolata SemiBold:style=Regular:pixelsize=13;3
@@ -44,7 +49,7 @@ modules-right = pulseaudio battery backlight cputemperature gputemperature
 
 tray-position = right
 tray-padding = 0
-tray-background = ${self.background}
+tray-background = ${colors.lightblue}
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -117,7 +122,7 @@ label-mode-background = ${colors.yellow}
 label-focused = %{T2}%icon%%{T-}
 label-focused-foreground = ${colors.black}
 label-focused-background = ${colors.lightblue}
-label-focused-underline = ${colors.blue}
+label-focused-underline = ${colors.darkblue}
 label-focused-padding = 2
 label-focused-font = 8
 
@@ -135,7 +140,7 @@ label-empty-font = 8
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %{T2}%icon%%{T-}
-label-urgent-foreground = ${colors.white}
+label-urgent-foreground = ${colors.black}
 label-urgent-background = ${colors.red}
 label-urgent-padding = 2
 label-urgent-font = 8
@@ -156,15 +161,17 @@ label-padding = 1
 type = internal/pulseaudio
 
 format-volume = %{T3}<ramp-volume>%{T-} <label-volume>
+format-volume-background = ${colors.purple}
 format-volume-padding = 1
-label-volume-foreground = ${colors.black}
-ramp-volume-foreground = ${colors.black}
 
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
+
 label-volume = %percentage%%
+
 label-muted = %{T3}婢%{T-} muted
+label-muted-background = ${colors.purple}
 label-muted-foreground = ${colors.grey}
 label-muted-padding = 1
 
@@ -172,6 +179,7 @@ label-muted-padding = 1
 [module/backlight]
 type = internal/backlight
 format-foreground = ${colors.black}
+format-background = ${colors.lightgreen}
 
 ; Use the following command to list available cards:
 ; $ ls -1 /sys/class/backlight/
@@ -216,20 +224,27 @@ adapter = AC
 full-at = 100
 
 format-charging = %{A1:$HOME/.config/polybar/batteryinfo.sh --time:}<label-charging>%{A}
-format-charging-padding = 1
+format-charging-foreground = ${colors.black}
+format-charging-background = ${colors.green}
 label-charging =  %percentage%%
-label-charging-foreground = ${colors.black}
+format-charging-padding = 1
 
 format-discharging = %{A1:$HOME/.config/polybar/batteryinfo.sh --time:}<ramp-capacity> <label-discharging>%{A}
-label-discharging-foreground = ${colors.black}
+format-discharging-foreground = ${colors.black}
+format-discharging-background = ${colors.green}
+label-discharging = %percentage%%
 format-discharging-padding = 1
 
-format-full = %{A1:$HOME/.config/polybar/batteryinfo.sh:} 100%%{A}
+format-full = %{A1:$HOME/.config/polybar/batteryinfo.sh:}<label-full>%{A}
 format-full-foreground = ${colors.black}
+format-full-background = ${colors.green}
+label-full =  100%
 format-full-padding = 1
 
-label-low =  %percentage%%
 format-low = %{A1:$HOME/.config/polybar/batteryinfo.sh:}<label-low>%{A}
+format-low-foreground = ${colors.black}
+format-low-background = ${colors.green}
+label-low =  %percentage%%
 format-low-padding = 1
 
 ramp-capacity-0 = 
@@ -251,6 +266,7 @@ label = %output%
 format-padding = 1
 exec = $HOME/.config/polybar/thermalcpu.sh
 format-foreground = ${colors.black}
+format-background = ${colors.orange}
 interval = 3
 
 [module/gputemperature]
@@ -260,6 +276,7 @@ label = %output%
 format-padding = 1
 exec = $HOME/.config/polybar/thermalgpu.sh
 format-foreground = ${colors.black}
+format-background = ${colors.red}
 interval = 3
 
 [module/powermenu]

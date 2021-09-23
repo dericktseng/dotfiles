@@ -66,7 +66,6 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 ]])
 
-
 -- Splitting
 fn.keymap('n', '<Leader>-', '<C-W>s')
 fn.keymap('n', '<Leader>\\', '<C-W>v')
@@ -91,7 +90,7 @@ fn.keymap('n', '<Leader>6', '6gt')
 fn.keymap('n', '<Leader>7', '7gt')
 fn.keymap('n', '<Leader>8', '8gt')
 fn.keymap('n', '<Leader>9', '9gt')
-fn.keymap('n', '<Leader>0', ':tablast<cr>')
+fn.keymap('n', '<Leader>0', ':tablast<CR>')
 
 -- FZF
 fn.keymap('i', '<C-F>', [[fzf#vim#complete#path('fd --hidden')]], {expr=true})

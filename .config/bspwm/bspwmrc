@@ -34,16 +34,40 @@ bspc config focus_follows_pointer true
 
 # window rules
 bspc rule -a 'Zathura' state=tiled focus=off
-bspc rule -a 'Gimp' state=floating follow=on center=true
-bspc rule -a 'Gimp-2.10' state=floating desktop='^5' follow=on center=true
-bspc rule -a 'zoom' state=floating desktop='^5' follow=on center=true
 bspc rule -a 'discord' desktop='^4' follow=off
-bspc rule -a 'Kanaconvert' state=floating follow=on center=true
-bspc rule -a 'retroarch' state=fullscreen
-bspc rule -a 'Pavucontrol' state=floating center=true
 
-# polybar
-$HOME/.config/polybar/launch.sh &
+# standard floated applications
+floatapps=(
+	'Gimp'
+	'Kanaconvert'
+	'Pavucontrol'
+	'Inkscape'
+)
+
+for appname in "${floatapps[@]}";do
+	bspc rule -a "$appname" state=floating
+done
+
+# float applications to put on desktop 5
+# (recommended for multi window applications)
+floatappsMove=(
+	'Gimp-2.10'
+	'zoom'
+	'retroarch'
+	'Anki'
+)
+
+# set window 5 to only floating windows
+pkill -f floating.sh
+$HOME/.config/bspwm/floating.sh &
+
+for appname in "${floatappsMove[@]}";do
+	bspc rule -a "$appname" state=floating follow=on center=true desktop='^5'
+done
+
+# run script to disable locking if application in full screen
+pkill -f checkfullscreen.sh
+checkfullscreen.sh &
 
 # background programs
 pkill -f clipmenud
@@ -58,13 +82,8 @@ blueman-applet &
 nm-applet &
 clipmenud &
 
-# run script to disable locking if application in full screen
-pkill -f checkfullscreen.sh
-checkfullscreen.sh &
-
-# set window 5 to only floating windows
-pkill -f floating.sh
-$HOME/.config/bspwm/floating.sh &
+# polybar
+$HOME/.config/polybar/launch.sh &
 
 # swaps escape and caps lock
 setxkbmap -option caps:swapescape
