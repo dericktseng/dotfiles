@@ -7,7 +7,43 @@ def comment():
 def env(name):
 	[x,y] = vim.eval("vimtex#env#is_inside('" + name + "')") 
 	return x != '0' and y != '0'
+
+def create_matrix_placeholders(snip):
+	# Create anonymous snippet body
+	anon_snippet_body = ""
+
+	# Get start and end line number of expanded snippet
+	start = snip.snippet_start[0]
+	end = snip.snippet_end[0]
+
+  # Append current line into anonymous snippet
+	for i in range(start, end + 1):
+		anon_snippet_body += snip.buffer[i]
+		anon_snippet_body += "" if i == end else "\n"
+
+	# Delete expanded snippet line till second to last line
+	for i in range(start, end):
+		del snip.buffer[start]
+
+	# Empty last expanded snippet line while preserving the line
+	snip.buffer[start] = ''
+
+	# Expand anonymous snippet
+	snip.expand_anon(anon_snippet_body)
+
+def create_matrix(cols, rows, sep, start, end):
+	res = ""
+	placeholder = 1
+	for _ in range(0, int(rows)):
+		res += start + f"${placeholder} "
+		placeholder += 1
+		for _ in range(0, int(cols) - 1):
+			res += sep + f" ${placeholder} "
+			placeholder += 1
+		res += end
+	return res[:-1]
 endglobal
+
 
 
 # Math snippets
@@ -181,6 +217,22 @@ endsnippet
 
 
 # others
+snippet ... "ldots" iA
+\ldots
+endsnippet
+
+snippet enuma "enumerate (a)" bA
+\\begin{enumerate}[(a)]
+	\\item $0
+\\end{enumerate}
+endsnippet
+
+snippet enumi "enumerate (i)" bA
+\\begin{enumerate}[(i)]
+	\\item $0
+\\end{enumerate}
+endsnippet
+
 snippet box "boxed environment"
 \\boxed{${1}}
 endsnippet
@@ -249,7 +301,29 @@ snippet ga "gather"
 endsnippet
 
 snippet pict "insert picture top align"
-\\adjustbox{valign=t}{\\includegraphics[scale=$1]{$2}}
+\\begin{center}
+	\\adjustbox{valign=t}{\\includegraphics[width=0.8\textwidth]{$2}}
+\\end{center}
+endsnippet
+
+snippet table "Table environment" b
+\begin{table}[${1:htpb}]
+	\centering
+	\caption{${2:caption}}
+	\label{tab:${3:label}}
+	\begin{tabular}{${5:c}}
+	$0${5/((?<=.)c|l|r)|./(?1: & )/g}
+	\end{tabular}
+\end{table}
+endsnippet
+
+snippet fig "Figure environment" b
+\begin{figure}[${1:htpb}]
+	\centering
+	${2:\includegraphics[width=0.8\textwidth]{$3}}
+	\caption{${4:$3}}
+	\label{fig:${5:${3/\W+/-/g}}}
+\end{figure}
 endsnippet
 
 snippet conc "concentration"
@@ -263,6 +337,31 @@ endsnippet
 snippet lb "label"
 \\label{$1}
 endsnippet
+
+post_jump "create_matrix_placeholders(snip)"
+snippet 'arr(\d+),(\d+)' "LaTeX array" br
+\\begin{array}{`!p
+orient = ""
+for _ in range(0, int(match.group(1))): orient += "l"
+snip.rv = orient`}
+`!p snip.rv = create_matrix(match.group(1), match.group(2), "&", "\t", "\\\\\\\\\n")`$0
+\\end{array}
+endsnippet
+
+post_jump "create_matrix_placeholders(snip)"
+snippet 'tab(\d+),(\d+)' "LaTeX tabular" br
+\\begin{tabular}{`!p
+orient = ""
+for _ in range(0, int(match.group(2))): orient += "|c"
+snip.rv = orient + "|"`}
+	\\hline
+`!p
+snip.rv = create_matrix(match.group(2), match.group(1), "&", "\t", "\\\\\\\\\n")
+`$0
+	\\hline
+\\end{tabular}
+endsnippet
+
 
 snippet setup "setup"
 \\documentclass[12pt]{article}
@@ -296,66 +395,4 @@ snippet setup "setup"
 	\\maketitle
 	$3
 \\end{document}
-endsnippet
-
-global !p
-def create_matrix_placeholders(snip):
-	# Create anonymous snippet body
-	anon_snippet_body = ""
-
-	# Get start and end line number of expanded snippet
-	start = snip.snippet_start[0]
-	end = snip.snippet_end[0]
-
-  # Append current line into anonymous snippet
-	for i in range(start, end + 1):
-		anon_snippet_body += snip.buffer[i]
-		anon_snippet_body += "" if i == end else "\n"
-
-	# Delete expanded snippet line till second to last line
-	for i in range(start, end):
-		del snip.buffer[start]
-
-	# Empty last expanded snippet line while preserving the line
-	snip.buffer[start] = ''
-
-	# Expand anonymous snippet
-	snip.expand_anon(anon_snippet_body)
-
-def create_matrix(cols, rows, sep, start, end):
-	res = ""
-	placeholder = 1
-	for _ in range(0, int(rows)):
-		res += start + f"${placeholder} "
-		placeholder += 1
-		for _ in range(0, int(cols) - 1):
-			res += sep + f" ${placeholder} "
-			placeholder += 1
-		res += end
-	return res[:-1]
-endglobal
-
-post_jump "create_matrix_placeholders(snip)"
-snippet 'arr(\d+),(\d+)' "LaTeX array" br
-\\begin{array}{`!p
-orient = ""
-for _ in range(0, int(match.group(1))): orient += "l"
-snip.rv = orient`}
-`!p snip.rv = create_matrix(match.group(1), match.group(2), "&", "\t", "\\\\\\\\\n")`$0
-\\end{array}
-endsnippet
-
-
-post_jump "create_matrix_placeholders(snip)"
-snippet 'tab(\d+),(\d+)' "LaTeX tabular" br
-\\begin{tabular}{`!p
-orient = ""
-for _ in range(0, int(match.group(2))): orient += "|c"
-snip.rv = orient + "|"`}
-	\\hline
-`!p
-snip.rv = create_matrix(match.group(2), match.group(1), "&", "\t", "\\\\\\\\\n")
-`$0
-	\\hline
-\\end{tabular}
 endsnippet
