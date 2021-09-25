@@ -1,3 +1,21 @@
+-- terminal colorschemes
+vim.g.terminal_color_0  = '#dff4ff'
+vim.g.terminal_color_1  = '#ff8671'
+vim.g.terminal_color_2  = '#14a57c'
+vim.g.terminal_color_3  = '#499ec8'
+vim.g.terminal_color_4  = '#59b6ea'
+vim.g.terminal_color_5  = '#ee22bc'
+vim.g.terminal_color_6  = '#8f5eba'
+vim.g.terminal_color_7  = '#4a545b'
+vim.g.terminal_color_8  = '#97a5ab'
+vim.g.terminal_color_9  = '#ff8671'
+vim.g.terminal_color_10 = '#14a57c'
+vim.g.terminal_color_11 = '#499ec8'
+vim.g.terminal_color_12 = '#59b6ea'
+vim.g.terminal_color_13 = '#ee22bc'
+vim.g.terminal_color_14 = '#8f5eba'
+vim.g.terminal_color_15 = '#4a545b'
+
 -- local variables colors to insert into the highlighting function
 local white = '#eeeeee'
 local offwhite = '#dedede'
