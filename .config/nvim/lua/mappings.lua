@@ -13,10 +13,14 @@ vim.g.maplocalleader = ";"
 -- gx shortcut fix
 fn.keymap('n', 'gx', [[:execute 'silent! !xdg-open ' . shellescape(expand('<cWORD>'), 1)<CR>]])
 
+-- quick spelling fixes
+fn.keymap('i', '<C-E>', [[<c-g>u<Esc>[s1z=`]a<c-g>u]])
+fn.keymap('n', '<C-E>', [[mz[s1z=`z]])
+
 -- keymaps
 fn.keymap('t', '<ESC>', [[<C-\><C-N>]])
 
-fn.keymap('n', '<C-L>', [[:nohl<cr><C-L>]])
+fn.keymap('n', '<C-L>', [[:nohl<CR><C-L>]])
 fn.keymap('n', 'k', [[(v:count > 5 ? "m'" . v:count : "") . v:lua.smart_nav('k')]], {expr=true})
 fn.keymap('n', 'j', [[(v:count > 5 ? "m'" . v:count : "") . v:lua.smart_nav('j')]], {expr=true})
 fn.keymap('n', '<C-J>', ':cnext<CR>')
