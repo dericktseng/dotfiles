@@ -55,6 +55,7 @@ floatappsMove=(
 	'zoom'
 	'retroarch'
 	'Anki'
+	'x2goclient'
 )
 
 # set window 5 to only floating windows

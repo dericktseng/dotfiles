@@ -91,7 +91,7 @@ snippet '([A-Za-z0-9])cb' "cubed" wrA
 endsnippet
 
 context "math()"
-snippet '([A-Za-df-z])(\d)' "auto subscript" wrA
+snippet '([A-Za-z])(\d)' "auto subscript" wrA
 `!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
 endsnippet
 
@@ -151,7 +151,7 @@ snippet == "and equals" wA
 endsnippet
 
 context "math()"
-snippet ap "approximately equal" wA
+snippet apr "approximately equal" wA
 \\approx $0
 endsnippet
 
@@ -171,7 +171,7 @@ snippet '([A-Za-z])wt' "wide tilde 2" riA
 endsnippet
 
 context "math()"
-snippet bar "bar"
+snippet bar "bar" i
 \\overline{$1}
 endsnippet
 
@@ -181,7 +181,7 @@ snippet '([A-Za-z])bar' "bar2" riA
 endsnippet
 
 context "math()"
-snippet hat "hat"
+snippet hat "hat" i
 \\hat{$1}
 endsnippet
 
@@ -302,7 +302,7 @@ endsnippet
 
 snippet pict "insert picture top align"
 \\begin{center}
-	\\adjustbox{valign=t}{\\includegraphics[width=0.8\textwidth]{$2}}
+	\\adjustbox{valign=t}{\\includegraphics[width=${1:0.5}\textwidth]{$2}}
 \\end{center}
 endsnippet
 
