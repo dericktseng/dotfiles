@@ -121,11 +121,6 @@ e^{$1}
 endsnippet
 
 context "math()"
-snippet 'vec([A-Za-z])' "vector" wrA
-\\vec{`!p snip.rv = match.group(1)`}$0
-endsnippet
-
-context "math()"
 snippet _ "under" iA
 _{$1}
 endsnippet
@@ -157,7 +152,7 @@ endsnippet
 
 context "math()"
 snippet bb "mathbb" wA
-\\mathbb{$1}$0
+\\mathbb{$1}
 endsnippet
 
 context "math()"
@@ -176,7 +171,7 @@ snippet eq "equivalent" wA
 endsnippet
 
 context "math()"
-snippet wt "wide tilde"
+snippet wt "wide tilde" iA
 \\widetilde{$1}
 endsnippet
 
@@ -186,7 +181,17 @@ snippet '([A-Za-z])wt' "wide tilde 2" riA
 endsnippet
 
 context "math()"
-snippet bar "bar" i
+snippet vec "vector" iA
+\\vec{$1}
+endsnippet
+
+context "math()"
+snippet '([A-Za-z])vec' "vector" riA
+\\vec{`!p snip.rv = match.group(1)`}$0
+endsnippet
+
+context "math()"
+snippet bar "bar" iA
 \\overline{$1}
 endsnippet
 
@@ -196,7 +201,7 @@ snippet '([A-Za-z])bar' "bar2" riA
 endsnippet
 
 context "math()"
-snippet hat "hat" i
+snippet hat "hat" iA
 \\hat{$1}
 endsnippet
 
