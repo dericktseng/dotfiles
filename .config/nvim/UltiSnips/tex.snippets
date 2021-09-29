@@ -116,8 +116,8 @@ snippet '([0-9])exp' "exponent" wrA
 endsnippet
 
 context "math()"
-snippet e "Euler's constant"
-e^{$1}
+snippet 'vec([A-Za-z])' "vector" wrA
+\\vec{`!p snip.rv = match.group(1)`}$0
 endsnippet
 
 # Other math snippets
@@ -284,23 +284,23 @@ snippet si "siunitx shortcut" w
 \\SI{${1:number}}{${2:units}}
 endsnippet
 
-snippet sec "section"
+snippet sec "section" w
 \\section{$1}
 endsnippet
 
-snippet al "default align environment"
+snippet al "default align environment" w
 \\begin{align*}
-$1
+	$1
 \\end{align*}
 endsnippet
 
-snippet ga "gather"
+snippet ga "gather" w
 \\begin{gather*}
 	$1
 \\end{gather*}
 endsnippet
 
-snippet pict "insert picture top align"
+snippet pict "insert picture top align" w
 \\begin{center}
 	\\adjustbox{valign=t}{\\includegraphics[width=${1:0.5}\textwidth]{$2}}
 \\end{center}
@@ -330,7 +330,7 @@ snippet conc "concentration"
 \\ch{[$1]}
 endsnippet
 
-snippet ch "chemistry"
+snippet ch "chemformula"
 \\ch{$1}
 endsnippet
 

@@ -74,9 +74,3 @@ vim.opt.shortmess:append('cI')
 vim.opt.completeopt = 'menu,menuone,noselect'
 
 vim.o.tabline = '%!v:lua.tablinestr()'
-
--- vim.o.concealcursor = 'nc'
-
--- foldexpr
--- vim.o.foldmethod = 'expr'
--- vim.o.foldexpr='nvim_treesitter#foldexpr()'
