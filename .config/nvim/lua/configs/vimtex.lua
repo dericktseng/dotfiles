@@ -1,7 +1,3 @@
-if (vim.bo.filetype == 'tex') then
-    vim.o.omnifunc = vim.fn['vimtex#complete#omnifunc']()
-end
-
 -- settings for vimtex
 vim.g.vimtex_view_general_viewer = 'xdg-open'
 vim.g.vimtex_view_method = 'zathura'

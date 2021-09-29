@@ -116,8 +116,23 @@ snippet '([0-9])exp' "exponent" wrA
 endsnippet
 
 context "math()"
+snippet e "Euler's constant" w
+e^{$1}
+endsnippet
+
+context "math()"
 snippet 'vec([A-Za-z])' "vector" wrA
 \\vec{`!p snip.rv = match.group(1)`}$0
+endsnippet
+
+context "math()"
+snippet _ "under" iA
+_{$1}
+endsnippet
+
+context "math()"
+snippet ^ "super" iA
+^{$1}
 endsnippet
 
 # Other math snippets

@@ -24,7 +24,7 @@ font-3 = DejaVu Sans:style=Regular:pixelsize=13;4
 wm-restack = bspwm
 override-redirect = false
 width = 100%
-height = 35
+height = 30
 radius = 0.0
 offset-x = 0
 offset-y = 0
