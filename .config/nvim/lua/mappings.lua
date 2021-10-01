@@ -56,6 +56,9 @@ fn.keymap('v', 'K', [[:m '<-2<CR>gv=gv]])
 fn.keymap('v', 'J', [[:m '>+1<CR>gv=gv]])
 fn.keymap('v', 'L', [[>gv]])
 
+fn.keymap('n', '<C-G>', [[:execute '!gimp ' . expand('<cfile>')<CR>]])
+fn.keymap('n', '<C-H>', [[:execute '!inkscape ' . expand('<cfile>')<CR>]])
+
 -- add surrounding brackets, quotes, etc
 fn.keymap('v', '"', [[<esc>`>a"<esc>`<i"<esc>]])
 fn.keymap('v', "'", [[<esc>`>a'<esc>`<i'<esc>]])

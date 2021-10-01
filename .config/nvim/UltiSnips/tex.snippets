@@ -120,16 +120,6 @@ snippet e "Euler's constant" w
 e^{$1}
 endsnippet
 
-context "math()"
-snippet _ "under" iA
-_{$1}
-endsnippet
-
-context "math()"
-snippet ^ "super" iA
-^{$1}
-endsnippet
-
 # Other math snippets
 context "math()"
 snippet sqr "square root" wA
@@ -322,8 +312,12 @@ endsnippet
 
 snippet pict "insert picture top align" w
 \\begin{center}
-	\\adjustbox{valign=t}{\\includegraphics[width=${1:0.5}\textwidth]{$2}}
+	\\adjustbox{valign=t}{\\includegraphics[width=${1:0.7}\textwidth]{$2}}
 \\end{center}
+endsnippet
+
+snippet code "insert code" w
+\\lstinputlisting[language=${1:Python},basicstyle=\\scriptsize]{$2}$0
 endsnippet
 
 snippet table "Table environment" b
@@ -397,6 +391,7 @@ snippet setup "setup"
 \\usepackage{graphicx}
 \\usepackage{adjustbox}
 \\usepackage{xurl}
+\\usepackage{listings}
 %}}}
 
 % Matrix Overrides for bmatrix
