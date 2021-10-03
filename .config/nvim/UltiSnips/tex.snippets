@@ -45,7 +45,6 @@ def create_matrix(cols, rows, sep, start, end):
 endglobal
 
 
-
 # Math snippets
 # fancy fractions
 context "math()"
@@ -121,6 +120,12 @@ e^{$1}
 endsnippet
 
 # Other math snippets
+context "math()"
+snippet hli "hline" wA
+\\hline
+$0
+endsnippet
+
 context "math()"
 snippet sqr "square root" wA
 \\sqrt{$1}
@@ -227,6 +232,11 @@ endsnippet
 
 
 # others
+snippet hline "horizontal line" wA
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+$0
+endsnippet
+
 snippet ... "ldots" iA
 \ldots
 endsnippet
