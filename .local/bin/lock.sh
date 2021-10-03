@@ -9,7 +9,7 @@ lock() {
         --ringver-color=bedcd9dd \
         --ringwrong-color=d90808dd \
         --ring-color=e2e2e2dd \
-        --keyhl-color=083bb9dd \
+        --keyhl-color=b1c6cddd \
         --bshl-color=AAAAAAdd \
         --separator-color=00000000 \
         --line-color=00000000 \

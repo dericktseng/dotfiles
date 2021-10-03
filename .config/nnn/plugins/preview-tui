@@ -63,7 +63,7 @@
 #   windows will be horizontal or vertical).
 #
 #   Kitty users need `allow_remote_control` set to `yes`, and `listen_on` set
-#   to e.g. "$TMPDIR/kitty". To customize the window split, `enabled_layouts`
+#   to e.g. "unix:$TMPDIR/kitty". To customize the window split, `enabled_layouts`
 #   has to be set to `all` or `splits` (the former is the default value).
 #   This terminal is also able to show images without extra dependencies.
 #
@@ -78,6 +78,7 @@ ICONLOOKUP="${ICONLOOKUP:-0}"
 PAGER="${PAGER:-less -P?n -R}"
 TMPDIR="${TMPDIR:-/tmp}"
 BAT_STYLE="${BAT_STYLE:-numbers}"
+BAT_THEME="${BAT_THEME:-ansi}"
 # Consider setting NNN_PREVIEWDIR to $XDG_CACHE_HOME/nnn/previews if you want to keep previews on disk between reboots
 NNN_PREVIEWDIR="${NNN_PREVIEWDIR:-$TMPDIR/nnn/previews}"
 NNN_PREVIEWWIDTH="${NNN_PREVIEWWIDTH:-1920}"
@@ -110,8 +111,8 @@ start_preview() {
             if [ "$SPLIT" = "v" ]; then DSPLIT="h"; else DSPLIT="v"; fi
             tmux split-window -e "NNN_FIFO=$NNN_FIFO" -e "PREVIEW_MODE=1"  \
                 -e "CURSEL=$CURSEL" -e "TMPDIR=$TMPDIR" -e "FIFOPID=$FIFOPID" \
-                -e "BAT_STYLE=$BAT_STYLE" -e "PREVIEWPID=$PREVIEWPID" -e "PAGER=$PAGER" \
-                -e "ICONLOOKUP=$ICONLOOKUP" -e "NNN_PREVIEWWIDTH=$NNN_PREVIEWWIDTH" \
+                -e "BAT_STYLE=$BAT_STYLE" -e "BAT_THEME=$BAT_THEME" -e "PREVIEWPID=$PREVIEWPID" \
+                -e "PAGER=$PAGER" -e "ICONLOOKUP=$ICONLOOKUP" -e "NNN_PREVIEWWIDTH=$NNN_PREVIEWWIDTH" \
                 -e "USE_SCOPE=$USE_SCOPE" -e "SPLIT=$SPLIT" -e "USE_PISTOL=$USE_PISTOL" \
                 -e "NNN_PREVIEWDIR=$NNN_PREVIEWDIR" -e "NNN_PREVIEWHEIGHT=$NNN_PREVIEWHEIGHT" \
                 -e "FIFO_UEBERZUG=$FIFO_UEBERZUG" -e "QLPATH=$2" -d"$DSPLIT" "$0" "$1" ;;
@@ -126,7 +127,8 @@ start_preview() {
                 --env "PREVIEWPID=$PREVIEWPID" --env "FIFO_UEBERZUG=$FIFO_UEBERZUG" \
                 --env "ICONLOOKUP=$ICONLOOKUP" --env "NNN_PREVIEWHEIGHT=$NNN_PREVIEWHEIGHT" \
                 --env "NNN_PREVIEWWIDTH=$NNN_PREVIEWWIDTH" --env "NNN_PREVIEWDIR=$NNN_PREVIEWDIR" \
-                --env "USE_PISTOL=$USE_PISTOL" --env "BAT_STYLE=$BAT_STYLE" --env "FIFOPID=$FIFOPID" \
+                --env "USE_PISTOL=$USE_PISTOL" --env "BAT_STYLE=$BAT_STYLE" \
+                --env "BAT_THEME=$BAT_THEME" --env "FIFOPID=$FIFOPID" \
                 --env "CURSEL=$CURSEL" --location "${SPLIT}split" "$0" "$1" ;;
         *)  if [ -n "$2" ]; then
                 QUICKLOOK=1 QLPATH="$2" PREVIEW_MODE=1 "$0" "$1" &
@@ -144,12 +146,14 @@ toggle_preview() {
         QLPATH="Bridge.exe"
     fi
     if kill "$(cat "$FIFOPID")"; then
+        [ -p "$NNN_PPIPE" ] && printf "0" > "$NNN_PPIPE"
         kill "$(cat "$PREVIEWPID")"
         pkill -f "tail --follow $FIFO_UEBERZUG"
         if [ -n "$QLPATH" ] && stat "$1"; then
             f="$(wslpath -w "$1")" && "$QLPATH" "$f" &
         fi
     else
+        [ -p "$NNN_PPIPE" ] && printf "1" > "$NNN_PPIPE"
         start_preview "$1" "$QLPATH"
     fi
 } >/dev/null 2>&1
@@ -174,7 +178,7 @@ fifo_pager() {
         if [ "$cmd" = "pager" ]; then
             if exists bat; then
                 bat --terminal-width="$(tput cols)" --decorations=always --color=always \
-                    --paging=never --style="$BAT_STYLE" "$@" &
+                    --paging=never --style="$BAT_STYLE" --theme="$BAT_THEME" "$@" &
             else
                 $PAGER "$@" &
             fi
@@ -329,7 +333,11 @@ generate_preview() {
                     image_preview "$1" "$2" "$3"
                     return
                  fi ;;
-            image) convert "$3" -flatten -resize "$NNN_PREVIEWWIDTH"x"$NNN_PREVIEWHEIGHT"\> "$NNN_PREVIEWDIR/$3.jpg" ;;
+            image) if exists convert; then
+                       convert "$3" -flatten -resize "$NNN_PREVIEWWIDTH"x"$NNN_PREVIEWHEIGHT"\> "$NNN_PREVIEWDIR/$3.jpg"
+                   else
+                       image_preview "$1" "$2" "$3" && return
+                   fi ;;
             office) libreoffice --convert-to jpg "$3" --outdir "$NNN_PREVIEWDIR/${3%/*}"
                     filename="$(printf "%s" "${3##*/}" | cut -d. -f1)"
                     mv "$NNN_PREVIEWDIR/${3%/*}/$filename.jpg" "$NNN_PREVIEWDIR/$3.jpg" ;;
@@ -387,6 +395,7 @@ preview_fifo() {
         if [ -n "$selection" ]; then
             kill "$(cat "$PREVIEWPID")"
             [ -p "$FIFO_UEBERZUG" ] && ueberzug_remove
+            [ "$selection" = "close" ] && sleep 0.15 && break
             preview_file "$selection"
             printf "%s" "$selection" > "$CURSEL"
         fi
