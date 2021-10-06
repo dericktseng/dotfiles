@@ -30,18 +30,6 @@ cmp.setup {
 	},
 }
 
-
--- nvim auto pairs; you need setup cmp first put this after cmp.setup()
-require("nvim-autopairs.completion.cmp").setup({
-	map_cr = true, --  map <CR> on insert mode
-	map_complete = true, -- it will auto insert `(` after select function or method item
-	auto_select = true -- automatically select the first item
-})
-
--- LSP servers configs
--- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers.
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
-
-require'lspconfig'.pyright.setup{}
-require'lspconfig'.clangd.setup{}
+-- source nvim-autopairs configuration
+require('configs/pairs')
+require('configs/lspservers')
