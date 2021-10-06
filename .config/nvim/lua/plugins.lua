@@ -10,25 +10,6 @@ end
 
 -- plugins
 return require('packer').startup(function()
-
-	use {
-		'nvim-treesitter/nvim-treesitter',
-		branch = '0.5-compat',
-		run = ':TSUpdate',
-		config = function() require('configs/treesitter') end 
-	}
-
-	use {
-		'windwp/nvim-autopairs',
-		config = function() require('nvim-autopairs').setup() end
-	}
-
-	use {
-		'iamcco/markdown-preview.nvim',
-		run = 'cd app && yarn install',
-		config = function() require('configs/markdown-preview') end,
-	}
-
 	use {
 		'hrsh7th/nvim-cmp',
 		requires = {
@@ -39,6 +20,25 @@ return require('packer').startup(function()
 			'hrsh7th/cmp-calc',
 		},
 		config = function() require('configs/cmp') end
+	}
+
+	use {
+		'nvim-treesitter/nvim-treesitter',
+		branch = '0.5-compat',
+		run = ':TSUpdate',
+		config = function() require('configs/treesitter') end 
+	}
+
+	use {
+		'iamcco/markdown-preview.nvim',
+		run = 'cd app && yarn install',
+		config = function() require('configs/markdown-preview') end,
+	}
+
+
+	use {
+		'windwp/nvim-autopairs',
+		config = function() require('nvim-autopairs').setup() end
 	}
 
 	use {
