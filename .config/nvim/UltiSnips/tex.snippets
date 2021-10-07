@@ -161,7 +161,7 @@ snippet apr "approximately equal" wA
 endsnippet
 
 context "math()"
-snippet eq "equivalent" wA
+snippet eqv "equivalent" wA
 \\equiv $0
 endsnippet
 
@@ -363,7 +363,7 @@ snippet ch "chemformula"
 \\ch{$1}
 endsnippet
 
-snippet lb "label"
+snippet lb "label" i
 \\label{$1}
 endsnippet
 
@@ -407,6 +407,11 @@ snippet setup "setup"
 \\usepackage{adjustbox}
 \\usepackage{xurl}
 \\usepackage{listings}
+
+\\sisetup{
+	per-mode=fraction,
+	fraction-function=\\tfrac
+}
 %}}}
 
 % Matrix Overrides for bmatrix
