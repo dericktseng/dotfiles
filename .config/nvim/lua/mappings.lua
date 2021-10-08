@@ -30,7 +30,7 @@ fn.keymap('n', '<LocalLeader>j', ':lnext<CR>')
 fn.keymap('n', '<LocalLeader>k', ':lprev<CR>')
 fn.keymap('n', '<LocalLeader>q', [[:call v:lua.togglelist('l')<CR>]])
 fn.keymap('n', '<Leader>p', ':PackerSync<CR>')
-fn.keymap('n', '<Leader>R', ':luafile %<CR>')
+fn.keymap('n', '<Leader>R', ':luafile %<CR>:echo \'reloaded file\'<CR>', {silent=false})
 fn.keymap('n', 'Y', 'y$')
 fn.keymap('n', 'n', 'nzzzv')
 fn.keymap('n', 'N', 'Nzzzv')
@@ -56,8 +56,8 @@ fn.keymap('v', 'K', [[:m '<-2<CR>gv=gv]])
 fn.keymap('v', 'J', [[:m '>+1<CR>gv=gv]])
 fn.keymap('v', 'L', [[>gv]])
 
-fn.keymap('n', '<C-G>', [[:execute '!gimp ' . expand('<cfile>')<CR>]])
-fn.keymap('n', '<C-H>', [[:execute '!inkscape ' . expand('<cfile>')<CR>]])
+fn.keymap('n', '<C-G>', [[:silent exec '!gimp ' . expand('<cfile>') . ' &'<CR>]])
+fn.keymap('n', '<C-H>', [[:silent exec '!inkscape ' . expand('<cfile>') . ' &'<CR>]])
 
 -- add surrounding brackets, quotes, etc
 fn.keymap('v', '"', [[<esc>`>a"<esc>`<i"<esc>]])
@@ -101,6 +101,7 @@ fn.keymap('n', '<Leader>0', ':tablast<CR>')
 
 -- FZF
 fn.keymap('i', '<C-F>', [[fzf#vim#complete#path('fd --hidden')]], {expr=true})
+fn.keymap('s', '<C-F>', [[fzf#vim#complete#path('fd --hidden')]], {expr=true})
 fn.keymap('n', '<Leader>ff', ':Files<CR>')
 fn.keymap('n', '<Leader>fg', ':GFiles<CR>')
 fn.keymap('n', '<Leader>vrc', ":Files $HOME/.config/nvim/<CR>")

@@ -58,7 +58,6 @@ snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)\/' "Fraction" wrA
 endsnippet
 
 context "math()"
-priority 1000
 snippet '^.*\)/' "() Fraction" wrA
 `!p
 stripped = match.string[:-1]
@@ -117,6 +116,52 @@ endsnippet
 context "math()"
 snippet e "Euler's constant" w
 e^{$1}
+endsnippet
+
+# symbols
+context "math()"
+snippet ooo "infinity" wA
+\\infty
+endsnippet
+
+context "math()"
+snippet >> ">>" iA
+\gg
+endsnippet
+
+context "math()"
+snippet << "<<" iA
+\ll
+endsnippet
+
+context "math()"
+snippet => "implies" iA
+\\implies $0
+endsnippet
+
+context "math()"
+snippet -> "to" iA
+\\to $0
+endsnippet
+
+context "math()"
+snippet !> "mapsto" iA
+\\mapsto $0
+endsnippet
+
+context "math()"
+snippet pii "pi" wA
+\\pi $0
+endsnippet
+
+context "math()"
+snippet del "Delta" wA
+\\Delta $0
+endsnippet
+
+context "math()"
+snippet rea "real" wA
+\\mathbb{R} $0
 endsnippet
 
 # Other math snippets
@@ -181,13 +226,19 @@ snippet vec "vector" iA
 endsnippet
 
 context "math()"
-snippet '([A-Za-z])vec' "vector" riA
-\\vec{`!p snip.rv = match.group(1)`}$0
+snippet bar "bar" iA
+\\overline{$1}
 endsnippet
 
 context "math()"
-snippet bar "bar" iA
-\\overline{$1}
+snippet hat "hat" iA
+\\hat{$1}
+endsnippet
+
+priority 10000
+context "math()"
+snippet '([A-Za-z])vec' "vector" riA
+\\vec{`!p snip.rv = match.group(1)`}$0
 endsnippet
 
 context "math()"
@@ -196,34 +247,10 @@ snippet '([A-Za-z])bar' "bar2" riA
 endsnippet
 
 context "math()"
-snippet hat "hat" iA
-\\hat{$1}
-endsnippet
-
-context "math()"
 snippet '([A-Za-z])hat' "hat2" riA
 \\hat{`!p snip.rv=match.group(1)`}
 endsnippet
 
-context "math()"
-snippet >> ">>" iA
-\gg
-endsnippet
-
-context "math()"
-snippet << "<<" iA
-\ll
-endsnippet
-
-context "math()"
-snippet => "implies" iA
-\\implies $0
-endsnippet
-
-context "math()"
-snippet -> "to" iA
-\\to $0
-endsnippet
 
 context "math()"
 snippet int "integral"
@@ -254,25 +281,26 @@ snippet enumi "enumerate (i)" bA
 endsnippet
 
 snippet box "boxed environment"
-\\boxed{${1}}
+\\boxed{$1}
 endsnippet
 
 snippet qt "Latex Quotations" wA
-\`\`$1''
+\`\`${1}''
 endsnippet
 
-snippet br "bracket"
+snippet br "bracket" wA
 \\left[$1\\right] $0
 endsnippet
 
-snippet pa "parentheses"
+context "math()"
+snippet pa "parentheses" wA
 \\left($1\\right) $0
 endsnippet
 
-snippet bc "braces"
+context "math()"
+snippet bc "braces" wA
 \\left\\{$1\\right\\} $0
 endsnippet
-
 
 snippet beg "begin/end" b
 \\begin{$1}
@@ -301,7 +329,7 @@ $0
 endsnippet
 
 snippet si "siunitx shortcut" w
-\\SI{${1:number}}{${2:units}}
+\\SI{${1}}{${2}}
 endsnippet
 
 context "math()"
@@ -367,13 +395,34 @@ snippet lb "label" i
 \\label{$1}
 endsnippet
 
+context "math()"
+snippet sympy "sympy block " w
+sympy $1 sympy$0
+endsnippet
+
+context "math()"
+priority 10000
+snippet 'sympy(.*)sympy' "evaluate sympy" wr
+`!p
+from sympy import *
+x, y, z, t = symbols('x y z t')
+k, m, n = symbols('k m n', integer=True)
+f, g, h = symbols('f g h', cls=Function)
+init_printing()
+snip.rv = eval('latex(' + match.group(1).replace('\\', '') \
+    .replace('^', '**') \
+    .replace('{', '(') \
+    .replace('}', ')') + ')')
+`
+endsnippet
+
 post_jump "create_matrix_placeholders(snip)"
-snippet 'arr(\d+),(\d+)' "LaTeX array" br
+snippet  'arr(\d+),(\d+)' "LaTeX array" br
 \\begin{array}{`!p
 orient = ""
 for _ in range(0, int(match.group(1))): orient += "l"
 snip.rv = orient`}
-`!p snip.rv = create_matrix(match.group(1), match.group(2), "&", "\t", "\\\\\\\\\n")`$0
+`!p snip.rv = create_matrix(match.group(1), match.group(2), "&", "\t", "\\\\\\\\\n")`$ 0
 \\end{array}
 endsnippet
 

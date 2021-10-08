@@ -62,6 +62,9 @@ profile-sync-daemon
 powertop
 python-pip
 python-pynvim
+python-sympy
+python-numpy
+python-matplotlib
 ripgrep
 rofi
 rlwrap
