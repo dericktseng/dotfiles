@@ -1,21 +1,21 @@
 -- preload calls
 vim.g.loaded_python_provider = 0
-vim.g.loaded_ruby_provider   = 0
-vim.g.loaded_node_provider   = 0
-vim.g.loaded_perl_provider   = 0
-vim.g.python3_host_prog      = '/usr/bin/python3'
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.python3_host_prog = '/usr/bin/python3'
 
 -- colorscheme and true color settings
 vim.api.nvim_command('filetype plugin indent on')
 
 -- allow GUI and term with termguicolors to use the light theme
 if (vim.fn.has("termguicolors") and vim.env.TERM ~= "linux") then
-    vim.o.cursorline = true
-    vim.o.termguicolors = true
-    vim.o.background = 'light'
-    require('colorscheme')
+	vim.o.cursorline = true
+	vim.o.termguicolors = true
+	vim.o.background = 'light'
+	require('colorscheme')
 else
-    vim.o.background = 'dark'
+	vim.o.background = 'dark'
 end
 
 -- load plugins before anything else

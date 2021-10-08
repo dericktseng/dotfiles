@@ -11,22 +11,22 @@ require("nvim-autopairs.completion.cmp").setup({
 })
 
 
--- you can use some built-in condition
-local cond = require('nvim-autopairs.conds')
-
-npairs.add_rules({
-  Rule("$", "$",{"tex", "latex"})
-    -- don't add a pair if the next character is %
-    :with_pair(cond.not_after_regex_check("%%"))
-    -- don't add a pair if  the previous character is xxx
-    :with_pair(cond.not_before_regex_check("xxx", 3))
-    -- don't move right when repeat character
-    :with_move(cond.none())
-    -- don't delete if the next character is xx
-    :with_del(cond.not_after_regex_check("xx"))
-    -- disable add newline when press <cr>
-    :with_cr(cond.none())
-  },
-  --it is not working on .vim but it working on another filetype
-  Rule("a","a","-vim")
-)
+---- you can use some built-in condition
+--local cond = require('nvim-autopairs.conds')
+--
+--npairs.add_rules({
+--  Rule("$", "$",{"tex", "latex"})
+--    -- don't add a pair if the next character is %
+--    :with_pair(cond.not_after_regex_check("%%"))
+--    -- don't add a pair if  the previous character is xxx
+--    :with_pair(cond.not_before_regex_check("xxx", 3))
+--    -- don't move right when repeat character
+--    :with_move(cond.none())
+--    -- don't delete if the next character is xx
+--    :with_del(cond.not_after_regex_check("xx"))
+--    -- disable add newline when press <cr>
+--    :with_cr(cond.none())
+--  },
+--  --it is not working on .vim but it working on another filetype
+--  Rule("a","a","-vim")
+--)

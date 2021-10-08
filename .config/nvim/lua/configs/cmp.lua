@@ -11,7 +11,7 @@ cmp.setup {
 		['<CR>'] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.Insert,
 			select = true,
-		})
+		}),
 	},
 	sources = {
 		{name = 'buffer'},
@@ -30,6 +30,7 @@ cmp.setup {
 	},
 }
 
--- source nvim-autopairs configuration
+-- source nvim-autopairs configuration 
+-- here to ensure these get called after cmp is initialized
 require('configs/pairs')
 require('configs/lspservers')
