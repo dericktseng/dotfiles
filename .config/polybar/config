@@ -22,6 +22,7 @@ font-3 = DejaVu Sans:style=Regular:pixelsize=13;4
 
 [bar/main]
 wm-restack = bspwm
+enable-ipc = true
 override-redirect = false
 width = 100%
 height = 30
@@ -113,6 +114,16 @@ ws-icon-6 = 7;7
 ws-icon-7 = 8;8
 ws-icon-8 = 9;9
 ws-icon-9 = 10;0
+ws-icon-10 = 1+;1+
+ws-icon-11 = 2+;2+
+ws-icon-12 = 3+;3+
+ws-icon-13 = 4+;4+
+ws-icon-14 = 5+;5+
+ws-icon-15 = 6+;6+
+ws-icon-16 = 7+;7+
+ws-icon-17 = 8+;8+
+ws-icon-18 = 9+;9+
+ws-icon-19 = 10+;0+
 
 label-mode-padding = 2
 label-mode-foreground = ${colors.black}
