@@ -107,6 +107,14 @@ highlightfunc('PmenuSel', white, purpleblue, bold, nil)
 highlightfunc('PmenuSbar', nil, lightgrey, nil, nil)
 highlightfunc('PmenuThumb', nil, purpleblue, nil, nil)
 
+-- cmp custom highlights
+highlightfunc('CmpItemAbbr', black, nil, nil, nil)
+highlightfunc('CmpItemAbbrDeprecated', lightgrey, nil, nil, nil)
+highlightfunc('CmpItemAbbrMatch', purpleblue, nil, bold, nil)
+highlightfunc('CmpItemAbbrMatchFuzzy', purpleblue, nil, underline, nil)
+highlightfunc('CmpItemKind', darkblue, nil, nil, nil)
+highlightfunc('CmpItemMenu', black, nil, nil, nil)
+
 highlightfunc('Question', purpleblue, nil, nil, nil)
 highlightfunc('Search', black, highlightyellow, nil, nil)
 highlightfunc('SpecialKey', green, nil, nil, nil)
