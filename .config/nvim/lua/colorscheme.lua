@@ -19,33 +19,41 @@ vim.g.terminal_color_15 = '#4a545b'
 -- local variables colors to insert into the highlighting function
 local white = '#eeeeee'
 local offwhite = '#dedede'
+
 local darkred = '#af0000'
+local red = '#ff0000'
+local pink = '#f400f4'
+local magenta = '#b4217f'
+
+local brown = '#883f16'
+local orange = '#f2802d'
+local yelloworange = '#daa500'
+
+local tan = '#a78443'
+local lighttan = '#f3e9d4'
+
+local yellow = '#ffc900'
+local highlightyellow='#fff641'
+
 local turquoise = '#00a979'
 local green = '#008700'
 local darkgreen = '#75a57c'
-local lightgreen = '#00c715'
 local teal = '#4badb9'
-local darkgrey = '#878787'
-local black = '#222222'
-local grey = '#bcbcbc'
-local lightgrey = '#d3d3d3'
-local red = '#ff0000'
-local purple = '#a300f4'
-local lightpurple = '#e7e1ff'
-local orange = '#f2802d'
-local tan = '#a78443'
-local yelloworange = '#daa500'
-local yellow = '#ffc900'
-local highlightyellow='#fff641'
+
 local lightblue = '#4194b0'
 local darkblue = '#004987'
 local blue = '#0787a9'
 local purpleblue = '#4078f2'
 local skyblue = '#adf1f1'
+
 local indigo = '#2e00c9'
-local pink = '#f400f4'
-local magenta = '#b4217f'
-local brown = '#883f16'
+local purple = '#a300f4'
+
+local lightgrey = '#d3d3d3'
+local darkgrey = '#878787'
+local black = '#222222'
+local grey = '#bcbcbc'
+
 
 -- formatting styles
 local bold='bold'
@@ -98,20 +106,20 @@ highlightfunc('ModeMsg', green, nil, nil, nil)
 highlightfunc('MoreMsg', green, nil, nil, nil)
 highlightfunc('NonText', grey, nil, none, nil)
 highlightfunc('Normal', black, nil , nil, nil)
-highlightfunc('NormalFloat', nil, lightpurple, nil, nil)
+highlightfunc('NormalFloat', nil, lighttan, nil, nil)
 highlightfunc('NormalNC', nil, none, nil, nil)
 
 -- PMenu
-highlightfunc('Pmenu', nil, lightpurple, nil, nil)
-highlightfunc('PmenuSel', white, purpleblue, bold, nil)
+highlightfunc('Pmenu', nil, lighttan, nil, nil)
+highlightfunc('PmenuSel', white, blue, bold, nil)
 highlightfunc('PmenuSbar', nil, lightgrey, nil, nil)
-highlightfunc('PmenuThumb', nil, purpleblue, nil, nil)
+highlightfunc('PmenuThumb', nil, darkblue, nil, nil)
 
 -- cmp custom highlights
 highlightfunc('CmpItemAbbr', black, nil, nil, nil)
 highlightfunc('CmpItemAbbrDeprecated', lightgrey, nil, nil, nil)
-highlightfunc('CmpItemAbbrMatch', purpleblue, nil, bold, nil)
-highlightfunc('CmpItemAbbrMatchFuzzy', purpleblue, nil, underline, nil)
+highlightfunc('CmpItemAbbrMatch', blue, nil, bold, nil)
+highlightfunc('CmpItemAbbrMatchFuzzy', blue, nil, underline, nil)
 highlightfunc('CmpItemKind', darkblue, nil, nil, nil)
 highlightfunc('CmpItemMenu', black, nil, nil, nil)
 
