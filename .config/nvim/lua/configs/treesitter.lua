@@ -3,6 +3,7 @@ require'nvim-treesitter.configs'.setup {
 	highlight = {
 		enable = true,
 		disable = {'latex'},
+		additional_vim_regex_highlighting = false,
 	},
 
 	incremental_selection = {
@@ -10,8 +11,8 @@ require'nvim-treesitter.configs'.setup {
 		keymaps = {
 			init_selection = "gnn",
 			node_incremental = "grn",
-			node_decremental = "grm",
-			scope_incremental = "grc",
+			node_decremental = "grp",
+			scope_incremental = "grs",
 		}
 	}, 
 }

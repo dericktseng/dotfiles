@@ -111,7 +111,7 @@ highlightfunc('NormalNC', nil, none, nil, nil)
 
 -- PMenu
 highlightfunc('Pmenu', nil, lighttan, nil, nil)
-highlightfunc('PmenuSel', white, blue, bold, nil)
+highlightfunc('PmenuSel', white, blue, none, nil)
 highlightfunc('PmenuSbar', nil, lightgrey, nil, nil)
 highlightfunc('PmenuThumb', nil, darkblue, nil, nil)
 

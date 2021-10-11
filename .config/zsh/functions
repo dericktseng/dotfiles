@@ -9,73 +9,73 @@ function zsh_directory_name() {
   emulate -L zsh
   [[ $1 == d ]] || return
   while [[ $2 != / ]]; do
-    if [[ -e $2/.git ]]; then
-      typeset -ga reply=(${2:t} $#2)
-      return
-    fi
-    2=${2:h}
+	if [[ -e $2/.git ]]; then
+	  typeset -ga reply=(${2:t} $#2)
+	  return
+	fi
+	2=${2:h}
   done
   return 1
 }
 
 fix-cursor() {
-    printf '\e[5 q' # blinking I-beam
+	printf '\e[5 q' # blinking I-beam
 }
 
 rainbowband() {
-    awk 'BEGIN{
-    s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
-    for (colnum = 0; colnum<77; colnum++) {
-        r = 255-(colnum*255/76);
-        g = (colnum*510/76);
-        b = (colnum*255/76);
-        if (g>255) g = 510-g;
-        printf "\033[48;2;%d;%d;%dm", r,g,b;
-        printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
-        printf "%s\033[0m", substr(s,colnum+1,1);
-    }
-    printf "\n";
-    }'
+	awk 'BEGIN{
+	s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
+	for (colnum = 0; colnum<77; colnum++) {
+		r = 255-(colnum*255/76);
+		g = (colnum*510/76);
+		b = (colnum*255/76);
+		if (g>255) g = 510-g;
+		printf "\033[48;2;%d;%d;%dm", r,g,b;
+		printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
+		printf "%s\033[0m", substr(s,colnum+1,1);
+	}
+	printf "\n";
+	}'
 }
 
 mkcd() {
-    /usr/bin/mkdir -p $1 && cd $1
+	/usr/bin/mkdir -p $1 && cd $1
 }
 
 cpcd() {
-    /usr/bin/mkdir -p $2 && cp $1 $2 && cd $2
+	/usr/bin/mkdir -p $2 && cp $1 $2 && cd $2
 }
 
 mvcd() {
-    /usr/bin/mv $1 $2 && cd $2
+	/usr/bin/mv $1 $2 && cd $2
 }
 
 cdls() {
-    builtin cd "$@" > /dev/null 2>&1 || /usr/bin/echo "no such directory '$@'"
-    lscwd
+	builtin cd "$@" > /dev/null 2>&1 || /usr/bin/echo "no such directory '$@'"
+	lscwd
 }
 
 # TODO: make this function more performant and use less disk reads.
 lscwd() {
-    tot=$(ls -1 -f | wc -l)
-    num=$(ls -1 -U | wc -l)
-    if [[ $tot -eq 2 ]]; then
-        /usr/bin/echo "This directory is empty"
-    elif [[ $num -eq 0 ]]; then
-        ls -a
-    else
-        ls
-    fi
+	tot=$(/usr/bin/ls -1 -f | wc -l)
+	num=$(/usr/bin/ls -1 -U --color=never --classify=never | wc -l)
+	if [[ $tot -eq 2 ]]; then
+		/usr/bin/echo "This directory is empty"
+	elif [[ $num -eq 0 ]]; then
+		ls -A
+	else
+		ls
+	fi
 }
 
 pcs() {
-    for i in {0..7}; do
-        echo -en "\e[${1}$((30+$i))m \u2588\u2588 \e[0m";
-    done;
+	for i in {0..7}; do
+		echo -en "\e[${1}$((30+$i))m \u2588\u2588 \e[0m";
+	done;
 }
 
 blox() {
-    printf "\n%s\n%s\n\n" "$(pcs)" "$(pcs '1;')"
+	printf "\n%s\n%s\n\n" "$(pcs)" "$(pcs '1;')"
 }
 
 # ex - archive extractor
@@ -83,23 +83,23 @@ blox() {
 ex ()
 {
   if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.tar.xz)    tar xf $1    ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1   ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
+	case $1 in
+	  *.tar.bz2)   tar xjf $1	;;
+	  *.tar.gz)    tar xzf $1	;;
+	  *.tar.xz)    tar xf $1	;;
+	  *.bz2)	   bunzip2 $1	;;
+	  *.rar)	   unrar x $1	;;
+	  *.gz)		   gunzip $1	;;
+	  *.tar)	   tar xf $1	;;
+	  *.tbz2)	   tar xjf $1	;;
+	  *.tgz)	   tar xzf $1	;;
+	  *.zip)	   unzip $1		;;
+	  *.Z)		   uncompress $1;;
+	  *.7z)		   7z x $1		;;
+	  *)		   echo "'$1' cannot be extracted via ex()" ;;
+	esac
   else
-    /usr/bin/echo "'$1' is not a valid file"
+	/usr/bin/echo "'$1' is not a valid file"
   fi
 }
 
