@@ -1,0 +1,68 @@
+snippet plots "matplotlib setup"
+from matplotlib import pyplot as plt
+import numpy as np
+
+# constants
+$1
+def ${2:func}(${3:x}):
+	${4:body}
+
+# x and y value arrays
+xvals = np.linspace(${5:-1, 1, 10})
+yvals = $2(xvals)
+
+# plotting
+plt.${6:plot}(xvals, yvals)
+plt.xlabel("$7")
+plt.ylabel("$8")
+plt.title("$9")
+plt.show()
+endsnippet
+
+snippet lattice "matplotlib lattice"
+from matplotlib import pyplot as plt
+import numpy as np
+
+# default basis vectors
+origin = np.zeros(2)
+a = np.array([$1, $2])
+b = np.array([$3, $4])
+t1 = ${5:a}
+t2 = ${6:b}
+
+basis = np.column_stack((t1, t2))
+origins = [origin for _ in basis]
+
+def r(v1, v2, u, v):
+	return v1*u + v2*v
+
+def proj(v1, v2):
+	"""Projection of a onto b"""
+	return np.dot(v1, v2) / np.linalg.norm(v1) / np.linalg.norm(v2) * v2
+
+def unit(v):
+	"""Unit vector of v"""
+	return v / np.linalg.norm(v)
+
+def lattice(v1, v2, xmin, xmax, ymin, ymax, offx, offy):
+	mx = np.arange(xmin, xmax + 1, 1)
+	my = np.arange(ymin, ymax + 1, 1)
+	return np.array([r(v1, v2, u, v) + [offx, offy] for u in mx for v in my])
+
+def reciprocalvectors(v1, v2):
+	"""returns as (astar, bstar)"""
+	mat = np.column_stack((v1, v2)) / (2 * np.pi)
+	return np.linalg.inv(mat)
+
+pts = lattice(t1, t2, -${7:10}, $7, -$7, $7, 0, 0)
+plt.axis('equal')
+plt.xlim(-${8:10}, $8)
+plt.ylim(-$8, $8)
+plt.xlabel('$e_1$')
+plt.ylabel('$e_2$')
+plt.title('$9')
+
+plt.scatter(pts[:,0], pts[:,1])
+plt.quiver(*origins, basis[0], basis[1], scale=1, scale_units='xy', angles='xy', color='gray')
+plt.show()
+endsnippet
