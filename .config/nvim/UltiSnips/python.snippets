@@ -47,22 +47,33 @@ def unit(v):
 def lattice(v1, v2, xmin, xmax, ymin, ymax, offx, offy):
 	mx = np.arange(xmin, xmax + 1, 1)
 	my = np.arange(ymin, ymax + 1, 1)
-	return np.array([r(v1, v2, u, v) + [offx, offy] for u in mx for v in my])
+	offset = offx * v1 + offy * v2
+	return np.array([r(v1, v2, u, v) + offset for u in mx for v in my])
+
+
+def latticeoffsetgroups(offsetx, offsety, c):
+	for i in range(len(offsetx)):
+		x = offsetx[i]
+		y = offsety[i]
+		pts = lattice(t1, t2, -$7, $7, -$7, $7, x, y)
+		plt.scatter(pts[:,0], pts[:,1], color=c)
 
 def reciprocalvectors(v1, v2):
 	"""returns as (astar, bstar)"""
 	mat = np.column_stack((v1, v2)) / (2 * np.pi)
 	return np.linalg.inv(mat)
 
-pts = lattice(t1, t2, -${7:10}, $7, -$7, $7, 0, 0)
-plt.axis('equal')
-plt.xlim(-${8:10}, $8)
-plt.ylim(-$8, $8)
+
+pts = lattice(t1, t2, -${7:2}, $7, -$7, $7, 0, 0)
+
+# plt.axis('equal')
+# plt.xlim(-${8:20}, $8)
+# plt.ylim(-$8, $8)
 plt.xlabel('$e_1$')
 plt.ylabel('$e_2$')
 plt.title('$9')
 
 plt.scatter(pts[:,0], pts[:,1])
-plt.quiver(*origins, basis[0], basis[1], scale=1, scale_units='xy', angles='xy', color='gray')
+# plt.quiver(*origins, basis[0], basis[1], scale=1, scale_units='xy', angles='xy', color='gray')
 plt.show()
 endsnippet
