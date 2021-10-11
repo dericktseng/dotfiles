@@ -10,12 +10,12 @@ fn.keymap('n', "<SPACE>", "<NOP>")
 vim.g.mapleader = " "
 vim.g.maplocalleader = ";"
 
--- gx shortcut fix
-fn.keymap('n', 'gx', [[:execute 'silent! !xdg-open ' . shellescape(expand('<cWORD>'), 1)<CR>]])
-
 -- quick spelling fixes
 fn.keymap('i', '<C-E>', [[<c-g>u<Esc>[s1z=`]a<c-g>u]])
 fn.keymap('n', '<C-E>', [[mz[s1z=`z]])
+
+-- gx quickfix
+fn.keymap('n', 'gx', [[yiW:!xdg-open <cWORD><CR> <C-r>" & <CR><CR>]])
 
 -- keymaps
 fn.keymap('t', '<ESC>', [[<C-\><C-N>]])

@@ -37,7 +37,7 @@ self=$USER
 sudo usermod -aG video "$self"
 
 # Laptop-mode-tools optional.
-echo "please start laptop-mode-tools manually!"
+echo "please install and start laptop-mode-tools manually!"
 
 # xf86 video drivers
 echo "Make sure to install xf86-video-intel or xf86-video-amdgpu"
@@ -48,6 +48,4 @@ echo "https://wiki.archlinux.org/title/Firefox#Hardware_video_acceleration"
 echo "https://wiki.archlinux.org/title/Hardware_video_acceleration"
 echo "browser.cache.disk.enable = false"
 echo "browser.compactmode.show = true"
-echo "media.mediasource.webm.enabled = false"
-echo "media.mediasource.webm.audio.enabled = false"
-echo "and cookie related changes on privacytools.io"
+echo "and cookie related changes on https://www.privacytools.io"
