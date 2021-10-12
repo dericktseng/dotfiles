@@ -111,7 +111,7 @@ highlightfunc('NormalNC', nil, none, nil, nil)
 
 -- PMenu
 highlightfunc('Pmenu', nil, lighttan, nil, nil)
-highlightfunc('PmenuSel', white, blue, none, nil)
+highlightfunc('PmenuSel', lighttan, darkgrey, nil, nil)
 highlightfunc('PmenuSbar', nil, lightgrey, nil, nil)
 highlightfunc('PmenuThumb', nil, darkblue, nil, nil)
 
@@ -228,7 +228,6 @@ highlightfunc('LspDiagnosticsUnderlineError', nil, nil, undercurl, red)
 highlightfunc('LspDiagnosticsUnderlineWarning', nil, nil, undercurl, orange)
 highlightfunc('LspDiagnosticsUnderlineInformation', nil, nil, undercurl, darkblue)
 highlightfunc('LspDiagnosticsUnderlineHint', nil, nil, undercurl, purpleblue)
-
 
 -- other links
 linkfunc('shQuote', 'String')
