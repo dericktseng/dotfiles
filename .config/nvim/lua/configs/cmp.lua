@@ -14,11 +14,11 @@ cmp.setup {
 		}),
 	},
 	sources = {
-		{name = 'buffer'},
 		{name = 'nvim_lsp'},
-		{name = 'path'},
 		{name = 'ultisnips'},
+		{name = 'path'},
 		{name = 'calc'},
+		{name = 'buffer'},
 	},
 	snippet = {
 		expand = function(args)
