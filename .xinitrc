@@ -48,6 +48,9 @@ systemctl --user import-environment DISPLAY
 # monitor refresh rate, set to 75 if possible
 xrandr -r 75 > /dev/null 2>&1 || true
 
+# polkit authentication agent
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
 # start WM
 lock.sh
 exec bspwm

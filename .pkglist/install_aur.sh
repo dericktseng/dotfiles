@@ -6,12 +6,15 @@ fi
 
 # should already have git by this point
 while read packagename; do
-    url="https://aur.archlinux.org/$packagename.git"
-    git clone $url
-    cd "$packagename"
-    yes | makepkg -sri
-    cd ..
-    rm -rf "$packagename"
+	pacman -Q "$packagename" >> /dev/null 2>&1
+	if [ $? -ne 0 ]; then
+		url="https://aur.archlinux.org/$packagename.git"
+		git clone $url
+		cd "$packagename"
+		yes | makepkg -sri
+		cd ..
+		rm -rf "$packagename"
+	fi
 done < pkglist_aur.txt
 
 /bin/bash ./get_st.sh

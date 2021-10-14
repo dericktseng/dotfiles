@@ -20,4 +20,4 @@ npairs.add_rules({
     :with_pair(cond.not_after_regex_check("%%"))
     -- disable add newline when press <cr>
     :with_cr(cond.none())
-  })
+})

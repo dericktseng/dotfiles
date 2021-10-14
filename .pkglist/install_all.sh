@@ -6,7 +6,7 @@ if [ "$EUID" -eq 0 ]; then
     exit 1
 fi
 
-./install.sh
-./install_aur.sh
-./get_st.sh
-./finalize.sh
+/bin/bash ./install.sh
+/bin/bash ./install_aur.sh
+/bin/bash ./get_st.sh
+/bin/bash ./finalize.sh

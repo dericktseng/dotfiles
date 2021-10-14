@@ -89,7 +89,7 @@ snippet '([^\s])cb' "cubed" wrA
 endsnippet
 
 context "math()"
-snippet '([A-Za-z])(\d)' "auto subscript" wrA
+snippet '([A-Za-df-z])(\d)' "auto subscript" wrA
 `!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
 endsnippet
 
@@ -111,11 +111,6 @@ endsnippet
 context "math()"
 snippet '([0-9])exp' "exponent" wrA
 `!p snip.rv = match.group(1)` \\times 10^{$1}
-endsnippet
-
-context "math()"
-snippet e "Euler's constant" w
-e^{$1}
 endsnippet
 
 # symbols
@@ -150,7 +145,7 @@ snippet !> "mapsto" iA
 endsnippet
 
 context "math()"
-snippet pii "pi" wA
+snippet pi "pi" wA
 \\pi $0
 endsnippet
 
@@ -177,17 +172,8 @@ snippet sqr "square root" wA
 endsnippet
 
 context "math()"
-snippet pmat "pmatrix" wA
-\\begin{pmatrix}
-	$1
-\\end{pmatrix}
-endsnippet
-
-context "math()"
-snippet bmat "bmatrix" wA
-\\begin{bmatrix}
-	$1
-\\end{bmatrix}
+snippet abs "absolute value" wA
+\left|$1\right|
 endsnippet
 
 context "math()"
@@ -197,7 +183,12 @@ endsnippet
 
 context "math()"
 snippet == "and equals" wA
-&= $0
+&=`!p
+if t[2] and t[2][0] not in [' ']:
+	snip.rv = ' '
+else:
+	snip.rv = ''
+`$2
 endsnippet
 
 context "math()"
@@ -231,6 +222,11 @@ snippet bar "bar" iA
 endsnippet
 
 context "math()"
+snippet dot "dot" wA
+\\dot{$1}
+endsnippet
+
+context "math()"
 snippet hat "hat" iA
 \\hat{$1}
 endsnippet
@@ -247,10 +243,14 @@ snippet '([A-Za-z])bar' "bar2" riA
 endsnippet
 
 context "math()"
+snippet '([A-Zabd-z])dot' "dot2" wrA
+\\dot{`!p snip.rv=match.group(1)`}
+endsnippet
+
+context "math()"
 snippet '([A-Za-z])hat' "hat2" riA
 \\hat{`!p snip.rv=match.group(1)`}
 endsnippet
-
 
 context "math()"
 snippet int "integral"
@@ -319,13 +319,18 @@ endsnippet
 
 snippet dm "Math" wA
 \\[
-$1
+	$1
 .\\] $0
 endsnippet
 
 snippet \\ "newline" iA
-\\\\
-$0
+\\\\`!p
+if t[2] and t[2][0] not in ['\n']:
+	snip.rv = snip.mkline(line="\n", indent=None)
+	snip.rv += snip.mkline(line="", indent=None)
+else:
+	snip.rv = ''
+`$2
 endsnippet
 
 snippet si "siunitx shortcut" w
@@ -412,27 +417,34 @@ snip.rv = eval('latex(' + match.group(1).replace('\\', '') \
 endsnippet
 
 post_jump "create_matrix_placeholders(snip)"
-snippet  'arr(\d+),(\d+)' "LaTeX array" br
-\\begin{array}{`!p
-orient = ""
-for _ in range(0, int(match.group(1))): orient += "l"
-snip.rv = orient`}
-`!p snip.rv = create_matrix(match.group(1), match.group(2), "&", "\t", "\\\\\\\\\n")`$ 0
-\\end{array}
-endsnippet
-
-post_jump "create_matrix_placeholders(snip)"
-snippet 'tab(\d+),(\d+)' "LaTeX tabular" br
+snippet '(\d+),(\d+)tab' "LaTeX tabular" br
 \\begin{tabular}{`!p
 orient = ""
 for _ in range(0, int(match.group(2))): orient += "|c"
 snip.rv = orient + "|"`}
 	\\hline
 `!p
-snip.rv = create_matrix(match.group(2), match.group(1), "&", "\t", "\\\\\\\\\n")
-`$0
+snip.rv = create_matrix(match.group(2), match.group(1), "&", "\t", "\\\\\\\\\n")`
 	\\hline
 \\end{tabular}
+endsnippet
+
+context "math()"
+post_jump "create_matrix_placeholders(snip)"
+snippet '(\d+),(\d+)bmat' "bracket matrix" brA
+\\begin{bmatrix}
+`!p
+snip.rv = create_matrix(match.group(2), match.group(1), "&", "\t", "\\\\\\\\\n")`
+\\end{bmatrix}
+endsnippet
+
+context "math()"
+post_jump "create_matrix_placeholders(snip)"
+snippet '(\d+),(\d+)pmat' "parenthesis matrix" brA
+\\begin{pmatrix}
+`!p
+snip.rv = create_matrix(match.group(2), match.group(1), "&", "\t", "\\\\\\\\\n")`
+\\end{pmatrix}
 endsnippet
 
 

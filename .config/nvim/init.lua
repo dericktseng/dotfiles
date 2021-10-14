@@ -25,8 +25,16 @@ require('plugins')
 require('mappings')
 
 -- per filetype settings
-vim.api.nvim_command('autocmd FileType tex setlocal spell spelllang=en_us')
-vim.api.nvim_command('autocmd TermOpen * startinsert')
+vim.cmd([[
+augroup vimrc
+	autocmd!
+	au FileType tex setlocal spell spelllang=en_us
+	au TermOpen * startinsert
+	au CmdwinEnter * call UltiSnips#LeavingBuffer()
+	au CmdwinLeave * call UltiSnips#LeavingBuffer()
+	au BufLeave * call UltiSnips#LeavingBuffer()
+augroup END
+]])
 
 -- REST OF VIM SETTINGS
 -- tab settings

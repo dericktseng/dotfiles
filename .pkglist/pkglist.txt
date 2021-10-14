@@ -59,6 +59,7 @@ picom
 pipewire-pulse
 pkgconf
 profile-sync-daemon
+polkit-gnome
 powertop
 python-pip
 python-pynvim
