@@ -145,7 +145,7 @@ snippet !> "mapsto" iA
 endsnippet
 
 context "math()"
-snippet pi "pi" wA
+snippet pii "pi" wA
 \\pi $0
 endsnippet
 
@@ -202,13 +202,38 @@ snippet eqv "equivalent" wA
 endsnippet
 
 context "math()"
-snippet wt "wide tilde" iA
-\\widetilde{$1}
+snippet int "integral" w
+\\int_{$1}^{$2} {$3} \\: d{$4}
 endsnippet
 
 context "math()"
-snippet '([A-Za-z])wt' "wide tilde 2" riA
-\\widetilde{`!p snip.rv=match.group(1)`}
+snippet dif "differentiate" w
+\\frac{d$1}{d${2:t}}
+endsnippet
+
+context "math()"
+snippet pdif "partial differentiate" w
+\\frac{\\partial $1}{\\partial ${2:t}}
+endsnippet
+
+context "math()"
+snippet br "bracket" wA
+\\left[$1\\right] $0
+endsnippet
+
+context "math()"
+snippet pa "parentheses" wA
+\\left($1\\right) $0
+endsnippet
+
+context "math()"
+snippet bc "braces" wA
+\\left\\{$1\\right\\} $0
+endsnippet
+
+context "math()"
+snippet wt "wide tilde" iA
+\\widetilde{$1}
 endsnippet
 
 context "math()"
@@ -231,7 +256,18 @@ snippet hat "hat" iA
 \\hat{$1}
 endsnippet
 
+context "math()"
+snippet sympy "sympy block " wA
+sympy $1 sympy$0
+endsnippet
+
+
 priority 10000
+context "math()"
+snippet '([A-Za-z])wt' "wide tilde 2" riA
+\\widetilde{`!p snip.rv=match.group(1)`}
+endsnippet
+
 context "math()"
 snippet '([A-Za-z])vec' "vector" riA
 \\vec{`!p snip.rv = match.group(1)`}$0
@@ -253,12 +289,24 @@ snippet '([A-Za-z])hat' "hat2" riA
 endsnippet
 
 context "math()"
-snippet int "integral"
-\\int_{$1}^{$2} {$3} \\: d{$4}
+snippet 'sympy(.*)sympy' "evaluate sympy" wrA
+`!p
+from sympy import *
+x, y, z, t = symbols('x y z t')
+k, m, n = symbols('k m n', integer=True)
+f, g, h = symbols('f g h', cls=Function)
+init_printing()
+snip.rv = eval('latex(' + match.group(1) \
+	.replace('\\', '') \
+    .replace('^', '**') \
+    .replace('{', '(') \
+    .replace('}', ')') + ')')
+`
 endsnippet
 
 
 # others
+priority 0
 snippet hline "horizontal line" wA
 \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 $0
@@ -286,20 +334,6 @@ endsnippet
 
 snippet qt "Latex Quotations" wA
 \`\`${1}''
-endsnippet
-
-snippet br "bracket" wA
-\\left[$1\\right] $0
-endsnippet
-
-context "math()"
-snippet pa "parentheses" wA
-\\left($1\\right) $0
-endsnippet
-
-context "math()"
-snippet bc "braces" wA
-\\left\\{$1\\right\\} $0
 endsnippet
 
 snippet beg "begin/end" b
@@ -395,27 +429,6 @@ snippet lb "label" i
 \\label{$1}
 endsnippet
 
-context "math()"
-snippet sympy "sympy block " w
-sympy $1 sympy$0
-endsnippet
-
-context "math()"
-priority 10000
-snippet 'sympy(.*)sympy' "evaluate sympy" wr
-`!p
-from sympy import *
-x, y, z, t = symbols('x y z t')
-k, m, n = symbols('k m n', integer=True)
-f, g, h = symbols('f g h', cls=Function)
-init_printing()
-snip.rv = eval('latex(' + match.group(1).replace('\\', '') \
-    .replace('^', '**') \
-    .replace('{', '(') \
-    .replace('}', ')') + ')')
-`
-endsnippet
-
 post_jump "create_matrix_placeholders(snip)"
 snippet '(\d+),(\d+)tab' "LaTeX tabular" br
 \\begin{tabular}{`!p
@@ -463,6 +476,7 @@ snippet setup "setup"
 \\usepackage{adjustbox}
 \\usepackage{xurl}
 \\usepackage{listings}
+\\usepackage{multicol}
 
 \\sisetup{
 	per-mode=fraction,
@@ -470,7 +484,7 @@ snippet setup "setup"
 }
 %}}}
 
-% Matrix Overrides for bmatrix
+% Augmented Matrix Override
 \\makeatletter
 \\renewcommand*\\env@matrix[1][*\\c@MaxMatrixCols c]{%
 	\\hskip -\\arraycolsep
