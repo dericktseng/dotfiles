@@ -1,6 +1,7 @@
 # starts tmux
 if command -v tmux &> /dev/null && [ -z "$TMUX" ] && [ "$TERM" != "linux" ]; then
 	tmux -u new
+	$HOME/.tmux/scripts/tmux-opendirs.sh
 	exit
 fi
 

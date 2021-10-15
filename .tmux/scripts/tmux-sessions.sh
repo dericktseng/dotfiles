@@ -5,9 +5,9 @@ output=""
 while read -r line; do
 	name=$(echo $line | cut -d ':' -f 1)
 	if [[ $line == *"(attached)" ]]; then
-		name="[*$name]"
+		name=" $name*"
 	else
-		name="[$name]"
+		name=" $name "
 	fi
 
 	output="$output$name"
