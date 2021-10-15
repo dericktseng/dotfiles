@@ -14,19 +14,19 @@ super + x
 
 # launch KanaConvert
 ctrl + shift + k
-    /opt/KanaConvert/KanaConvert
+	/opt/KanaConvert/KanaConvert
 
 # Play Music
 ctrl + shift + m
-    st -e $HOME/Music/yt-playlist
+	st -e $HOME/Music/yt-playlist
 
 # launch browser
 super + @space
-    firefox
+	firefox
 
 # open powermenu
 super + Delete
-    $HOME/.config/rofi/powermenu.sh
+	$HOME/.config/rofi/powermenu.sh
 
 # searches for local pdfs
 super + z
@@ -67,7 +67,7 @@ super + slash
 
 # Rotate node configuration
 super + {y, shift + y}
-    bspc node -f @parent && bspc node -R {90,-90} && bspc node -f last.local
+	bspc node -f @parent && bspc node -R {90,-90} && bspc node -f last.local
 
 # quit/restart bspwm
 super + alt + {q,r}
@@ -77,13 +77,9 @@ super + alt + {q,r}
 super + {e,shift + e}
 	bspc node -{c,k}
 
-# go to next unhidden window
-alt + Tab
-    bspc node -f next.local.!hidden.window
-
 # alternate between the tiled and monocle layout
 super + a
-    bspc desktop -l next && $HOME/.config/bspwm/desktoprename.sh
+	bspc desktop -l next && $HOME/.config/bspwm/desktoprename.sh
 
 # send the newest marked node to the newest preselected node
 super + y
@@ -95,31 +91,31 @@ super + g
 
 # audio controls
 {XF86AudioLowerVolume, XF86AudioRaiseVolume, XF86AudioMute}
-    amixer -q -D pulse sset Master {3%- unmute,3%+ unmute,toggle} && volumenotify.sh
+	amixer -q -D pulse sset Master {3%- unmute,3%+ unmute,toggle} && volumenotify.sh
 
 # audio controls
 {Scroll_Lock,Pause,super + m}
-    amixer -q -D pulse sset Master {3%- unmute,3%+ unmute,toggle} && volumenotify.sh
+	amixer -q -D pulse sset Master {3%- unmute,3%+ unmute,toggle} && volumenotify.sh
 
 # laptop brightness increase
 XF86MonBrightnessUp
-    xbacklight -inc 5 && brightnessnotify.sh
+	xbacklight -inc 5 && brightnessnotify.sh
 
 # laptop brightness increase
 XF86MonBrightnessDown
-    xbacklight -dec 5 && brightnessnotify.sh
+	xbacklight -dec 5 && brightnessnotify.sh
 
 # fullscreen same screenshot
 @Print
-    mkdir -p ~/Pictures/Screenshots && maim --hidecursor ~/Pictures/Screenshots/$(date +%s).png
+	mkdir -p ~/Pictures/Screenshots && maim --hidecursor ~/Pictures/Screenshots/$(date +%s).png
 
 # screenshot copies to clipboard
 super + @Print
-    maim -s --hidecursor | xclip -selection clipboard -t image/png
+	maim -s --hidecursor | xclip -selection clipboard -t image/png
 
 # saves frame screenshot
 super + shift + @Print
-    mkdir -p ~/Pictures/Screenshots && maim -s --hidecursor ~/Pictures/Screenshots/$(date +%s).png
+	mkdir -p ~/Pictures/Screenshots && maim -s --hidecursor ~/Pictures/Screenshots/$(date +%s).png
 
 
 #
@@ -147,7 +143,7 @@ super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
-super + {_,shift + }c
+alt + {_,shift + }Tab
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
