@@ -1,6 +1,6 @@
 vim.cmd([[
 function! OpenBrowserNewWindow(url)
-    execute "silent !firefox --new-window " . a:url
+  execute "silent !firefox --new-window " . a:url
 endfunction
 ]])
 

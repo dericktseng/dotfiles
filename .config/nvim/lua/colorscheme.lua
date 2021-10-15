@@ -64,15 +64,15 @@ local none='NONE'
 
 -- highlighting function. AT LEAST ONE OF fg, bg, attr, attrsp MUST NOT BE NIL
 local highlightfunc = function(group, fg, bg, attr, attrsp)
-    local foreground = fg and ' guifg=' .. fg or ''
-    local background = bg and ' guibg=' .. bg or ''
-    local style = attr and ' gui=' .. attr or ''
-    local stylesp = attrsp and ' guisp=' .. attrsp or ''
-    vim.api.nvim_command('highlight ' .. group .. foreground .. background .. style .. stylesp)
+  local foreground = fg and ' guifg=' .. fg or ''
+  local background = bg and ' guibg=' .. bg or ''
+  local style = attr and ' gui=' .. attr or ''
+  local stylesp = attrsp and ' guisp=' .. attrsp or ''
+  vim.api.nvim_command('highlight ' .. group .. foreground .. background .. style .. stylesp)
 end
 
 local linkfunc = function(group1, group2)
-    vim.api.nvim_command('highlight link ' .. group1 .. ' ' .. group2)
+  vim.api.nvim_command('highlight link ' .. group1 .. ' ' .. group2)
 end
 
 -- builtin highlight groups according to help: highlight-groups

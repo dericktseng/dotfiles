@@ -10,12 +10,12 @@ vim.api.nvim_command('filetype plugin indent on')
 
 -- allow GUI and term with termguicolors to use the light theme
 if (vim.fn.has("termguicolors") and vim.env.TERM ~= "linux") then
-	vim.o.cursorline = true
-	vim.o.termguicolors = true
-	vim.o.background = 'light'
-	require('colorscheme')
+  vim.o.cursorline = true
+  vim.o.termguicolors = true
+  vim.o.background = 'light'
+  require('colorscheme')
 else
-	vim.o.background = 'dark'
+  vim.o.background = 'dark'
 end
 
 -- load plugins before anything else
@@ -27,12 +27,11 @@ require('mappings')
 -- per filetype settings
 vim.cmd([[
 augroup vimrc
-	autocmd!
-	au FileType tex setlocal spell spelllang=en_us
-	au TermOpen * startinsert
-	au CmdwinEnter * call UltiSnips#LeavingBuffer()
-	au CmdwinLeave * call UltiSnips#LeavingBuffer()
-	au BufLeave * call UltiSnips#LeavingBuffer()
+  autocmd!
+  au TermOpen * startinsert
+  au CmdwinEnter * call UltiSnips#LeavingBuffer()
+  au CmdwinLeave * call UltiSnips#LeavingBuffer()
+  au BufLeave * call UltiSnips#LeavingBuffer()
 augroup END
 ]])
 
@@ -40,7 +39,7 @@ augroup END
 -- tab settings
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
-vim.o.expandtab = false
+vim.o.expandtab = true
 vim.o.smarttab = true
 vim.o.autoindent = true
 vim.o.smartindent = true

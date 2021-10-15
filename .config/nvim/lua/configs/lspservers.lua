@@ -3,17 +3,17 @@ local nvim_lsp = require('lspconfig')
 local cmp_capability = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local servers = {
-	'pyright',
-	'rust_analyzer',
-	'clangd'
+  'pyright',
+  'rust_analyzer',
+  'clangd'
 }
 
 for _, lsp in ipairs(servers) do
-	nvim_lsp[lsp].setup {
-		on_attach = on_attach,
-		flags = {
-			debounce_text_changes = 150,
-		},
-		capabilities = cmp_capability
-	}
+  nvim_lsp[lsp].setup {
+    on_attach = on_attach,
+    flags = {
+      debounce_text_changes = 150,
+    },
+    capabilities = cmp_capability
+  }
 end
