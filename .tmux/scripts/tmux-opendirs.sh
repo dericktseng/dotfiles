@@ -1,16 +1,32 @@
 #!/usr/bin/env bash
-
-# creates new tmux session on startup for each folder if it does not exist.
 directories=(
-	"$HOME/Desktop/Berkeley/3/2021Fall/e40/"
-	"$HOME/Desktop/Berkeley/3/2021Fall/ee105/"
-	"$HOME/Desktop/Berkeley/3/2021Fall/mse102/"
-	"$HOME/Desktop/Berkeley/3/2021Fall/mse113/"
+	"$HOME/Desktop/current/"
+	"$HOME/Desktop/Derick/program/"
 )
 
-for directory in "${directories[@]}"; do
-	sessionname=$(basename "$directory")
-	if ! tmux has-session -t "$sessionname" 2> /dev/null; then
-		tmux new-session -d -s "$sessionname" -c "$directory"
-	fi
-done
+if [[ $# -eq 1 ]]; then
+	selected=$1
+else
+	selected=$(fd -t d -L --exact-depth 1 . "${directories[@]}" | fzf --delimiter / --with-nth -2..-1 )
+fi
+
+if [[ -z $selected ]]; then
+	exit 0
+fi
+
+selected_name=$(basename "$selected" | tr . _)
+tmux_running=$(pgrep tmux)
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+	tmux new-session -s $selected_name -c $selected
+	exit 0
+fi
+
+if ! tmux has-session -t $selected_name 2> /dev/null; then
+	tmux new-session -ds $selected_name -c $selected
+fi
+
+if [[ -z $TMUX ]]; then
+	tmux attach-session -t $selected_name
+else
+	tmux switch-client -t $selected_name
+fi

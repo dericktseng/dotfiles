@@ -18,11 +18,7 @@ function zsh_directory_name() {
   return 1
 }
 
-fix-cursor() {
-	printf '\e[5 q' # blinking I-beam
-}
-
-rainbowband() {
+function rainbowband() {
 	awk 'BEGIN{
 	s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
 	for (colnum = 0; colnum<77; colnum++) {
@@ -38,49 +34,48 @@ rainbowband() {
 	}'
 }
 
-mkcd() {
+function mkcd() {
 	/usr/bin/mkdir -p $1 && cd $1
 }
 
-cpcd() {
+function cpcd() {
 	/usr/bin/mkdir -p $2 && cp $1 $2 && cd $2
 }
 
-mvcd() {
+function mvcd() {
 	/usr/bin/mv $1 $2 && cd $2
 }
 
-cdls() {
+function cdls() {
 	builtin cd "$@" > /dev/null 2>&1 || /usr/bin/echo "no such directory '$@'"
 	lscwd
 }
 
-# TODO: make this function more performant and use less disk reads.
-lscwd() {
-	tot=$(/usr/bin/ls -1 -f | wc -l)
-	num=$(/usr/bin/ls -1 -U --color=never --classify=never | wc -l)
+function lscwd() {
+	tot=$(/bin/ls -1 -f | wc -l)
+	visible=$(/bin/ls -1 -U --color=never --classify=never | wc -l)
 	if [[ $tot -eq 2 ]]; then
-		/usr/bin/echo "This directory is empty"
-	elif [[ $num -eq 0 ]]; then
+		/bin/echo "This directory is empty"
+	elif [[ $visible -eq 0 ]]; then
 		ls -A
 	else
 		ls
 	fi
 }
 
-pcs() {
+function pcs() {
 	for i in {0..7}; do
 		echo -en "\e[${1}$((30+$i))m \u2588\u2588 \e[0m";
 	done;
 }
 
-blox() {
+function blox() {
 	printf "\n%s\n%s\n\n" "$(pcs)" "$(pcs '1;')"
 }
 
 # ex - archive extractor
 # usage: ex <file>
-ex ()
+function ex ()
 {
   if [ -f $1 ] ; then
 	case $1 in
@@ -102,4 +97,3 @@ ex ()
 	/usr/bin/echo "'$1' is not a valid file"
   fi
 }
-

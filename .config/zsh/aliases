@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 alias l="/bin/ls --group-directories-first --color=auto"
 alias ls="/bin/ls --group-directories-first --color=auto"

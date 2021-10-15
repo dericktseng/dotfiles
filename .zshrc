@@ -1,7 +1,6 @@
 # starts tmux
 if command -v tmux &> /dev/null && [ -z "$TMUX" ] && [ "$TERM" != "linux" ]; then
 	tmux -u new
-	$HOME/.tmux/scripts/tmux-opendirs.sh
 	exit
 fi
 
@@ -44,11 +43,13 @@ do
 done
 
 # custom keybinds
-bindkey "^@" autosuggest-accept
 bindkey "^A" vi-beginning-of-line
 bindkey "^E" vi-end-of-line
 bindkey "^F" forward-word
 bindkey "^B" backward-word
+
+# custom keybinds
+bindkey "^@" tmux-opendir-widget
 
 # enable globbing
 setopt ksh_glob
