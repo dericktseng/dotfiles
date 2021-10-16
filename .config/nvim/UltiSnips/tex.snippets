@@ -145,6 +145,11 @@ snippet !> "mapsto" iA
 endsnippet
 
 context "math()"
+snippet != "not equals" iA
+\\neq $0
+endsnippet
+
+context "math()"
 snippet pii "pi" wA
 \\pi $0
 endsnippet
@@ -160,6 +165,16 @@ snippet rea "real" wA
 endsnippet
 
 # Other math snippets
+context "math()"
+snippet vout "voltage out" wA
+v_{out}
+endsnippet
+
+context "math()"
+snippet vin "voltage in" wA
+v_{in}
+endsnippet
+
 context "math()"
 snippet hli "hline" wA
 \\hline
@@ -354,7 +369,7 @@ endsnippet
 snippet dm "Math" wA
 \\[
 	$1
-.\\] $0
+.\\]
 endsnippet
 
 snippet \\ "newline" iA

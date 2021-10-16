@@ -24,10 +24,14 @@ cmp.setup {
     expand = function(args)
       vim.fn["UltiSnips#Anon"](args.body)
     end,
-    },
+  },
   documentation = {
     border = 'rounded'
   },
+  experimental = {
+    native_menu = true,
+    ghost_text = true
+  }
 }
 
 -- source nvim-autopairs configuration 
