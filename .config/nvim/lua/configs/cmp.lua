@@ -28,10 +28,6 @@ cmp.setup {
   documentation = {
     border = 'rounded'
   },
-  experimental = {
-    native_menu = true,
-    ghost_text = true
-  }
 }
 
 -- source nvim-autopairs configuration 

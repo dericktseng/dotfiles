@@ -21,11 +21,12 @@ fn.keymap('n', 'gx', [[yiW:!xdg-open <cWORD><CR> <C-r>" & <CR><CR>]])
 fn.keymap('t', '<ESC>', [[<C-\><C-N>]])
 
 fn.keymap('n', '<C-L>', [[:nohl<CR><C-L>]])
-fn.keymap('n', 'k', [[(v:count > 5 ? "m'" . v:count : "") . v:lua.smart_nav('k')]], {expr=true})
-fn.keymap('n', 'j', [[(v:count > 5 ? "m'" . v:count : "") . v:lua.smart_nav('j')]], {expr=true})
+fn.keymap('n', 'k', [[v:lua.smart_nav('k')]], {expr=true})
+fn.keymap('n', 'j', [[v:lua.smart_nav('j')]], {expr=true})
 fn.keymap('n', '<C-J>', ':cnext<CR>')
 fn.keymap('n', '<C-K>', ':cprev<CR>')
 fn.keymap('n', '<C-Q>', [[:call v:lua.togglelist('c')<CR>]])
+fn.keymap('n', '<C-T>', [[:tabnew<CR>]])
 fn.keymap('n', '<LocalLeader>j', ':lnext<CR>')
 fn.keymap('n', '<LocalLeader>k', ':lprev<CR>')
 fn.keymap('n', '<LocalLeader>q', [[:call v:lua.togglelist('l')<CR>]])
@@ -60,12 +61,12 @@ fn.keymap('n', '<C-G>', [[:silent exec '!gimp ' . expand('<cfile>') . ' &'<CR>]]
 fn.keymap('n', '<C-H>', [[:silent exec '!inkscape ' . expand('<cfile>') . ' &'<CR>]])
 
 -- add surrounding brackets, quotes, etc
-fn.keymap('v', '"', [[<esc>`>a"<esc>`<i"<esc>]])
-fn.keymap('v', "'", [[<esc>`>a'<esc>`<i'<esc>]])
-fn.keymap('v', '(', [[<esc>`>a)<esc>`<i(<esc>]])
-fn.keymap('v', '[', [[<esc>`>a]<esc>`<i[<esc>]])
-fn.keymap('v', '{', [[<esc>`>a}<esc>`<i{<esc>]])
-fn.keymap('v', '|', [[<esc>`>a|<esc>`<i|<esc>]])
+fn.keymap('v', '"', [[<esc>`<i"<esc>`>la"<esc>]])
+fn.keymap('v', "'", [[<esc>`<i'<esc>`>la'<esc>]])
+fn.keymap('v', '(', [[<esc>`<i(<esc>`>la)<esc>]])
+fn.keymap('v', '[', [[<esc>`<i[<esc>`>la]<esc>]])
+fn.keymap('v', '{', [[<esc>`<i{<esc>`>la}<esc>]])
+fn.keymap('v', '|', [[<esc>`<i|<esc>`>la|<esc>]])
 
 -- vim easy align
 vim.cmd([[

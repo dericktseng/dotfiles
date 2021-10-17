@@ -14,9 +14,9 @@ end
 -- run through checking ultisnips viability. Returns fallthrough if fails
 local trigger_ultisnips_fwd = function(fallthrough)
   if vim.fn["UltiSnips#CanExpandSnippet"]() == 1 then
-    return fn.t([[<C-R>=UltiSnips#ExpandSnippet()<CR>]])
+    return fn.press([[<C-R>=UltiSnips#ExpandSnippet()<CR>]])
   elseif vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
-    return fn.t([[<C-R>=UltiSnips#JumpForwards()<CR>]])
+    return fn.press([[<C-R>=UltiSnips#JumpForwards()<CR>]])
   else
     return fallthrough
   end
@@ -25,7 +25,7 @@ end
 -- run through s-tab options too
 local trigger_ultisnips_bak = function(fallthrough)
   if vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
-    return fn.t([[<C-R>=UltiSnips#JumpBackwards()<CR>]])
+    return fn.press([[<C-R>=UltiSnips#JumpBackwards()<CR>]])
   else
     return fallthrough
   end
@@ -34,7 +34,7 @@ end
 
 -- EXPORTED FUNCTIONS
 -- escape termcodes properly
-fn.t = function(str)
+fn.press = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
 
@@ -75,12 +75,17 @@ end
 
 -- smart nav for mapping k -> gk or j -> gj
 fn.smart_nav = function(key)
-  return vim.v.count == 0 and 'g' .. key or key
+  count = vim.v.count
+  gnav = count == 0 and 'g' .. key or key
+  if count >= 5 then
+    gnav = [[m']] .. count .. gnav
+  end
+  return fn.press(gnav)
 end
 
 -- check for pumvisible completions
 fn.pumvisible_complete = function(dirkey, key)
-  return vim.fn.pumvisible() ~= 0 and fn.t(dirkey) or fn.t(key)
+  return vim.fn.pumvisible() ~= 0 and fn.press(dirkey) or fn.press(key)
 end
 
 -- display syntax group names
