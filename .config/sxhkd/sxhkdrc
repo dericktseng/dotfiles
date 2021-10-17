@@ -79,7 +79,7 @@ super + {e,shift + e}
 
 # alternate between the tiled and monocle layout
 super + a
-	bspc desktop -l next && $HOME/.config/bspwm/desktoprename.sh
+	bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
 super + y

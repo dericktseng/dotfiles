@@ -1,0 +1,10 @@
+st-256color        = terminal
+firefox            = browser
+Zathura            = pdf
+discord            = discord
+zoom               = zoom
+libreoffice        = office
+libreoffice 7.1    = office
+libreoffice 7.2    = office
+minecraft-launcher = game
+mpv                = video

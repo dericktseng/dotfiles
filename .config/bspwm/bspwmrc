@@ -71,6 +71,10 @@ done
 pkill -f checkfullscreen.sh
 checkfullscreen.sh &
 
+# run script for desktop renaming
+pkill -f desktoprename.sh
+~/.config/bspwm/desktoprename.sh &
+
 # background programs
 pkill -f clipmenud
 pkill -f udiskie
