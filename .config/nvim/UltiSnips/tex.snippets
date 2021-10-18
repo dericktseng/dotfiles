@@ -276,8 +276,18 @@ snippet sympy "sympy block " wA
 sympy $1 sympy$0
 endsnippet
 
+context "math()"
+snippet box "boxed environment" wA
+\\boxed{$1}
+endsnippet
+
 
 priority 10000
+context "math()"
+snippet '([^\s].+)box' "boxed environment math" wrA
+\\boxed{`!p snip.rv=match.group(1)`}
+endsnippet
+
 context "math()"
 snippet '([A-Za-z])wt' "wide tilde 2" riA
 \\widetilde{`!p snip.rv=match.group(1)`}
@@ -337,10 +347,6 @@ snippet enumi "enumerate (i)" bA
 \\begin{enumerate}[(i)]
 	\\item $0
 \\end{enumerate}
-endsnippet
-
-snippet box "boxed environment"
-\\boxed{$1}
 endsnippet
 
 snippet qt "Latex Quotations" wA
