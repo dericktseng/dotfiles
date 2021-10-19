@@ -10,9 +10,16 @@ function rename_remove() {
     nodecount=$(bspc query --nodes -d | wc -l)
     # rename back to number if nodecount is zero
     if [ "$nodecount" -eq  "0" ]; then
-        firstdesktop=$(bspc query --desktops | head -n 1)
-        index=$(($desktopID - $firstdesktop + 1))
-        bspc desktop "$desktopID" --rename "$index"
+        # forced to search through array because bspwm
+        # sometimes makes its desktop ID skip a number,
+        # so just getting the difference between IDs will
+        # not always work.
+        desktopList=($(bspc query -D))
+        for i in "${!desktopList[@]}";do
+            if [[ "${desktopList[i]}" = "${desktopID}" ]];then
+                bspc desktop "$desktopID" --rename "$(($i + 1))"
+            fi
+        done
     fi
 }
 
@@ -48,21 +55,22 @@ bspc subscribe \
     node_remove \
     node_transfer | \
     while read -r line; do
+        lineArray=($line)
         case "$line" in
             node_focus* )
-                desktopID=$(echo "$line" | cut -d ' ' -f 3)
-                nodeID=$(echo "$line" | cut -d ' ' -f 4)
+                desktopID="${lineArray[2]}"
+                nodeID="${lineArray[3]}"
                 rename "$desktopID" "$nodeID"
                 ;;
             node_transfer* )
-                desktopIDdst=$(echo "$line" | cut -d ' ' -f 6)
-                nodeID=$(echo "$line" | cut -d ' ' -f 4)
-                desktopIDsrc=$(echo "$line" | cut -d ' ' -f 3)
+                desktopIDdst="${lineArray[5]}"
+                nodeID="${lineArray[3]}"
+                desktopIDsrc="${lineArray[2]}"
                 rename "$desktopIDdst" "$nodeID"
                 rename_remove "$desktopIDsrc"
                 ;;
             node_remove* )
-                desktopID=$(echo "$line" | cut -d ' ' -f 3)
+                desktopID="${lineArray[2]}"
                 rename_remove "$desktopID"
                 ;;
         esac
