@@ -122,9 +122,11 @@ ws-icon-13 = discord;%{T3}ﭮ%{T-}
 ws-icon-14 = folder;%{T3}%{T-}
 ws-icon-15 = video;%{T3}嗢%{T-}
 ws-icon-16 = zoom;%{T3}%{T-}
-ws-icon-17 = game;%{T3}%{T-}
+ws-icon-17 = game;%{T3}%{T-}
 ws-icon-18 = office;%{T3}%{T-}
 ws-icon-19 = paint;%{T3}%{T-}
+ws-icon-20 = minecraft;%{T3}%{T-}
+ws-icon-21 = star;%{T3}%{T-}
 
 label-mode-padding = 2
 label-mode-foreground = ${colors.black}
