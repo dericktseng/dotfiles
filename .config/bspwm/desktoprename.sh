@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
+
+# desktoprename.sh:
+# Script to rename bspwm windows to its corresponding mapping
+# defined in names.txt (or whatever is $namefile variable).
+# Mainly used for polybar icons.
+# Runs as a background process (daemon).
+
+# Dependencies: bspc, ripgrep, xprop, bash
+
 namefile="$HOME/.config/bspwm/names.txt"
 
 cutcmd="cut -d = -f 2"
@@ -26,23 +35,18 @@ function rename_remove() {
 function rename() {
     desktopID="$1"
     nodeID="$2"
-    classname="$(bspc query -T -n "$nodeID" | \
-        jq -r '.client.className' | \
-        sed -e 's/[\&.^]/\\&/g')"
-    instancename="$(bspc query -T -n "$nodeID" | \
-        jq -r '.client.instanceName' | \
-        sed -e 's/[\&.^]/\\&/g')"
     currname="$(bspc query -d "$desktopID" --names -D)"
+    classinfo=$(xprop -id "$nodeID" | $rgcmd 'WM_CLASS')
+    classname=$(echo "$classinfo" | cut -d '"' -f 2)
+    class=$(echo "$classinfo" | cut -d '"' -f 4)
 
-    # use instancename, then classname as fallback
+    # use class, then classname as fallback
     # make sure not to include equal sign in the classname or instancename
-    newname=$($rgcmd "^${instancename}\s*=" $namefile | $cutcmd | $trcmd)
+    # the regex may need to be properly escaped.
+    newname=$($rgcmd "^${class}\s*=" $namefile | $cutcmd | $trcmd)
     if [ -z "$newname" ];then
         newname=$($rgcmd "^${classname}\s*=" $namefile | $cutcmd | $trcmd)
     fi
-
-    # outputs unknown to /tmp/unknown.txt
-    # [ "$newname" = "null" ] && bspc query -T -n "$nodeID" >> /tmp/unknown.txt
 
     # renames desktop if newname differs from the desktop's current name
     if [ ! -z "$newname" ] && [ "$newname" != "$currname" ]; then
