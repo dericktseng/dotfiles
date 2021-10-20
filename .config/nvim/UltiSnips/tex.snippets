@@ -166,13 +166,18 @@ endsnippet
 
 # Other math snippets
 context "math()"
-snippet vout "voltage out" wA
-v_{out}
+snippet Vin "voltage in" wA
+V_{in}
 endsnippet
 
 context "math()"
-snippet vin "voltage in" wA
-v_{in}
+snippet Vout "voltage out" wA
+V_{out}
+endsnippet
+
+context "math()"
+snippet VDD "vdd" wA
+V_{DD}
 endsnippet
 
 context "math()"
@@ -289,6 +294,11 @@ snippet '([^\s].+)box' "boxed environment math" wrA
 endsnippet
 
 context "math()"
+snippet '=([^=]+)bex' "boxed environment math to equals" wrA
+= \\boxed{`!p snip.rv=match.group(1).strip()`}
+endsnippet
+
+context "math()"
 snippet '([A-Za-z])wt' "wide tilde 2" riA
 \\widetilde{`!p snip.rv=match.group(1)`}
 endsnippet
@@ -333,6 +343,11 @@ endsnippet
 # others
 priority 0
 
+snippet \\ "newline" i
+\\\\
+$0
+endsnippet
+
 snippet ... "ldots" iA
 \ldots
 endsnippet
@@ -372,16 +387,6 @@ snippet dm "Math" wA
 \\[
 	$1
 .\\]
-endsnippet
-
-snippet \\ "newline" iA
-\\\\`!p
-if t[2] and t[2][0] not in ['\n']:
-	snip.rv = snip.mkline(line="\n", indent=None)
-	snip.rv += snip.mkline(line="", indent=None)
-else:
-	snip.rv = ''
-`$2
 endsnippet
 
 snippet si "siunitx shortcut" w
