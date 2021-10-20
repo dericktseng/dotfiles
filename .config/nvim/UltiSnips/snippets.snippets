@@ -1,0 +1,12 @@
+snippet snip "create new snippet" bA
+snippet $1 "${2:description}" ${3:w}
+$4
+${5:endsnippet}
+endsnippet
+
+snippet con "context snippet" bA
+context "${1:math()}"
+snippet $2 "${3:description}" ${4:w}
+$5
+${6:endsnippet}
+endsnippet
