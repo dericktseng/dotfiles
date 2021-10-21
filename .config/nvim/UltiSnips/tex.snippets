@@ -289,12 +289,17 @@ endsnippet
 
 priority 10000
 context "math()"
-snippet '([^\s].+)box' "boxed environment math" wrA
+snippet '([^\s].+)box' "boxed environment aftermatch" wrA
 \\boxed{`!p snip.rv=match.group(1)`}
 endsnippet
 
 context "math()"
-snippet '=([^=]+)bex' "boxed environment math to equals" wrA
+snippet '([+-]?)(\d*\.\d+|\d+)si' "SI unit aftermatch" irA
+\\SI{`!p snip.rv=match.group(1)+match.group(2)`}{$1}
+endsnippet
+
+context "math()"
+snippet '=([^=]+)bex' "boxed environment equals aftermatch" wrA
 = \\boxed{`!p snip.rv=match.group(1).strip()`}
 endsnippet
 
