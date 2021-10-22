@@ -16,7 +16,7 @@ rgcmd="rg -N -m 1 -j 1"
 
 function rename_remove() {
     desktopID="$1"
-    nodecount=$(bspc query --nodes -d | wc -l)
+    nodecount=$(bspc query --nodes -d "$desktopID" | wc -l)
     # rename back to number if nodecount is zero
     if [ "$nodecount" -eq  "0" ]; then
         # forced to search through array because bspwm

@@ -16,7 +16,7 @@ glass = #FFFFFF
 
 [fonts]
 font-0 = Inconsolata SemiBold:style=Regular:pixelsize=13;3
-font-1 = FiraCode Nerd Font Mono:style=Bold:pixelsize=11;3
+font-1 = FiraCode Nerd Font Mono:style=bold:pixelsize=12;4
 font-2 = FiraCode Nerd Font Mono:style=Regular:pixelsize=16;4
 font-3 = DejaVu Sans:style=Regular:pixelsize=13;4
 
