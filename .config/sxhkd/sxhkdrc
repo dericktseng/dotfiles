@@ -2,8 +2,8 @@
 # wm independent hotkeys
 #
 
-# personal shortcuts
 
+### personal shortcuts
 # terminal emulator
 super + Return
 	st
@@ -59,6 +59,15 @@ super + Escape
 # display help menu
 super + slash
 	sxhkd-help.sh
+
+# dunstctl hotkeys
+# dunstctl {close, close-all}
+ctrl + {_, shift} + space
+    dunstctl {close, close-all}
+
+# dunstctl {history-pop, context}
+ctrl + {period, grave}
+    dunstctl {history-pop, context}
 
 
 #
