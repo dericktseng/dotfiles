@@ -11,8 +11,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ";"
 
 -- quick spelling fixes
-fn.keymap('i', '<C-E>', [[<c-g>u<Esc>[s1z=`]a<c-g>u]])
-fn.keymap('n', '<C-E>', [[mz[s1z=`z]])
+fn.keymap('i', '<C-B>', [[<c-g>u<Esc>[s1z=`]a<c-g>u]])
+fn.keymap('n', '<C-B>', [[mz[s1z=`z]])
 
 -- gx quickfix
 fn.keymap('n', 'gx', [[yiW:!xdg-open <cWORD><CR> <C-r>" & <CR><CR>]])
