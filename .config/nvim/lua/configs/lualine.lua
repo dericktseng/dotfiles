@@ -1,6 +1,6 @@
 require('lualine').setup{
   options = {
-    theme = 'onelight',
+    theme = 'dracula',
     section_separators = {'', ''},
   },
   extensions = {'quickfix', 'fzf'}
