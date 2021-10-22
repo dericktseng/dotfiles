@@ -15,6 +15,7 @@ return require('packer').startup(function()
     requires = {
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-nvim-lua',
       'hrsh7th/cmp-path',
       'quangnguyen30192/cmp-nvim-ultisnips',
       'hrsh7th/cmp-calc',
@@ -35,12 +36,6 @@ return require('packer').startup(function()
     config = function() require('configs/markdown-preview') end,
   }
 
-
-  use {
-    'windwp/nvim-autopairs',
-    config = function() require('nvim-autopairs').setup() end
-  }
-
   use {
     'nvim-lualine/lualine.nvim',
     config = function() require('configs/lualine') end,
@@ -52,6 +47,8 @@ return require('packer').startup(function()
     config = function() require('configs/vimtex') end
   }
 
+  use 'onsails/lspkind-nvim'
+  use 'windwp/nvim-autopairs'
   use 'tpope/vim-surround'
   use 'wbthomason/packer.nvim'
   use 'tpope/vim-fugitive'

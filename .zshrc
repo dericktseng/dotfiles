@@ -49,7 +49,7 @@ bindkey "^F" forward-word
 bindkey "^B" backward-word
 
 # custom keybinds
-bindkey "^@" tmux-opendir-widget
+bindkey "^[^@" tmux-opendir-widget
 
 # enable globbing
 setopt ksh_glob

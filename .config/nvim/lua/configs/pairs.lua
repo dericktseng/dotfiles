@@ -1,4 +1,6 @@
 -- sourced in cmp.lua to make sure this comes after
+require('nvim-autopairs').setup{}
+
 local Rule = require('nvim-autopairs.rule')
 local npairs = require('nvim-autopairs')
 
