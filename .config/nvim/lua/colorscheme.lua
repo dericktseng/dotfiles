@@ -140,13 +140,13 @@ highlightfunc('StatusLineNC', black, offwhite, nil, nil)
 -- Tabline
 highlightfunc('TabLine', darkgrey, none, none, nil)
 highlightfunc('TabLineFill', none, none, none, nil)
-highlightfunc('TabLineSel', white, blue, none, nil)
+highlightfunc('TabLineSel', darkblue, lighttan, none, nil)
 
 -- custom tabline highlight groups for myself
-highlightfunc('TabLineNrSel', white, blue, bold, nil)
-highlightfunc('TabLineDelimSel', black, blue, bold, nil)
-highlightfunc('TabLineNr', darkgrey, none, none, nil)
-highlightfunc('TabLineDelim', grey, none, bold, nil)
+linkfunc('TablineNrSel', 'TabLineSel')
+linkfunc('TabLineDelimSel', 'TabLineSel')
+linkfunc('TabLineNr', 'Tabline')
+linkfunc('TabLineDelim', 'Tabline')
 
 highlightfunc('Title', purpleblue, nil, nil, nil)
 highlightfunc('Visual', black, skyblue, nil, nil)

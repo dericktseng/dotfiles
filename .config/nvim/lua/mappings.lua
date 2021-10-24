@@ -1,4 +1,4 @@
-local fn = require("functions")
+fn = require "functions"
 
 -- UltiSnips Settings
 vim.g.UltiSnipsExpandTrigger = "<TAB>"
@@ -25,13 +25,13 @@ fn.keymap('n', 'k', [[v:lua.smart_nav('k')]], {expr=true})
 fn.keymap('n', 'j', [[v:lua.smart_nav('j')]], {expr=true})
 fn.keymap('n', '<C-J>', ':cnext<CR>')
 fn.keymap('n', '<C-K>', ':cprev<CR>')
-fn.keymap('n', '<C-Q>', [[:call v:lua.togglelist('c')<CR>]])
+fn.keymap('n', '<C-Q>', [[:lua fn.togglelist('c')<CR>]])
 fn.keymap('n', '<C-T>', [[:tabnew<CR>]])
 fn.keymap('n', '<LocalLeader>j', ':lnext<CR>')
 fn.keymap('n', '<LocalLeader>k', ':lprev<CR>')
-fn.keymap('n', '<LocalLeader>q', [[:call v:lua.togglelist('l')<CR>]])
+fn.keymap('n', '<LocalLeader>q', [[:lua fn.togglelist('l')<CR>]])
 fn.keymap('n', '<Leader>p', ':PackerSync<CR>')
-fn.keymap('n', '<Leader>R', ':luafile %<CR>:echo \'reloaded file\'<CR>', {silent=false})
+fn.keymap('n', '<Leader>R', [[:luafile %<CR>:echo 'reloaded file'<CR>]], {silent=false})
 fn.keymap('n', 'Y', 'y$')
 fn.keymap('n', 'n', 'nzzzv')
 fn.keymap('n', 'N', 'Nzzzv')
@@ -100,14 +100,14 @@ fn.keymap('n', '<Leader>8', '8gt')
 fn.keymap('n', '<Leader>9', '9gt')
 fn.keymap('n', '<Leader>0', ':tablast<CR>')
 
--- FZF
-fn.keymap('i', '<C-F>', [[fzf#vim#complete#path('fd --hidden')]], {expr=true})
-fn.keymap('s', '<C-F>', [[fzf#vim#complete#path('fd --hidden')]], {expr=true})
-fn.keymap('n', '<Leader>ff', ':Files<CR>')
-fn.keymap('n', '<Leader>fg', ':GFiles<CR>')
-fn.keymap('n', '<Leader>vrc', ":Files $HOME/.config/nvim/<CR>")
-fn.keymap('n', '<Leader>r', [[:Rg<CR>]])
-fn.keymap('n', '<LocalLeader>lt', [[:call vimtex#fzf#run()<CR>]])
+-- Telescope
+fn.keymap('n', '<Leader>ff', ':Telescope find_files<CR>')
+fn.keymap('n', '<Leader>fb', ':Telescope buffers<CR>')
+fn.keymap('n', '<Leader>fh', ':Telescope help_tags<CR>')
+fn.keymap('n', '<Leader>fg', ':lua fn.project_files()<CR>')
+fn.keymap('n', '<Leader>fb', ':lua fn.project_files()<CR>')
+fn.keymap('n', '<Leader>vrc', ':lua fn.vimrc()<CR>')
+fn.keymap('n', '<Leader>r', ':Telescope live_grep<CR>')
 
 -- LSP Configurations
 fn.keymap('n', ']d', ':lua vim.lsp.diagnostic.goto_next()<CR>')
@@ -124,7 +124,7 @@ fn.keymap('n', '<Leader>el', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR
 fn.keymap("n", "<Leader>ef", ":lua vim.lsp.buf.formatting()<CR>")
 fn.keymap('n', '<Leader>eg', ':lua vim.lsp.buf.signature_help()<CR>')
 fn.keymap('n', '<Leader>ee', ':lua vim.lsp.buf.rename()<CR>', {silent=false})
-vim.api.nvim_command('autocmd BufWrite,BufEnter,InsertLeave * :call v:lua.lsplocationlist()')
+vim.api.nvim_command('autocmd BufWrite,BufEnter,InsertLeave * :lua fn.lsplocationlist()')
 
 -- Fugitive Configurations
 fn.keymap('n', '<Leader>gs', ':Git<CR>')

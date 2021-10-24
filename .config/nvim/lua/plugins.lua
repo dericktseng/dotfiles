@@ -24,6 +24,15 @@ return require('packer').startup(function()
   }
 
   use {
+    'nvim-telescope/telescope.nvim',
+    config = function() require('configs/telescope') end,
+    requires = { 
+      {'nvim-lua/plenary.nvim'},
+      {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
+    },
+  }
+
+  use {
     'nvim-treesitter/nvim-treesitter',
     branch = '0.5-compat',
     run = ':TSUpdate',
@@ -42,6 +51,11 @@ return require('packer').startup(function()
     requires = {'kyazdani42/nvim-web-devicons', opt=true}
   }
 
+  use {
+    'blackCauldron7/surround.nvim',
+    config = function() require"surround".setup {mappings_style = "surround"} end
+  }
+
   use { 
     'lervag/vimtex',
     config = function() require('configs/vimtex') end
@@ -49,13 +63,10 @@ return require('packer').startup(function()
 
   use 'onsails/lspkind-nvim'
   use 'windwp/nvim-autopairs'
-  use 'tpope/vim-surround'
   use 'wbthomason/packer.nvim'
   use 'tpope/vim-fugitive'
   use 'SirVer/ultisnips'
   use 'honza/vim-snippets'
-  use 'junegunn/fzf'
-  use 'junegunn/fzf.vim'
   use 'junegunn/vim-easy-align'
   use 'neovim/nvim-lspconfig'
 end)

@@ -11,60 +11,12 @@ local check_back_space = function()
   end
 end
 
--- run through checking ultisnips viability. Returns fallthrough if fails
-local trigger_ultisnips_fwd = function(fallthrough)
-  if vim.fn["UltiSnips#CanExpandSnippet"]() == 1 then
-    return fn.press([[<C-R>=UltiSnips#ExpandSnippet()<CR>]])
-  elseif vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
-    return fn.press([[<C-R>=UltiSnips#JumpForwards()<CR>]])
-  else
-    return fallthrough
-  end
-end
-
--- run through s-tab options too
-local trigger_ultisnips_bak = function(fallthrough)
-  if vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
-    return fn.press([[<C-R>=UltiSnips#JumpBackwards()<CR>]])
-  else
-    return fallthrough
-  end
-end
-
-
 -- EXPORTED FUNCTIONS
 -- escape termcodes properly
 fn.press = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
 
-
--- tab completion for compe
-fn.complete_or_next = function(trigger, fallthrough)
-  -- if popup visible and has a value selected, go down
-  if vim.fn.pumvisible() ~= 0 and vim.fn.complete_info()["selected"] ~= -1 then
-    return fallthrough
-  -- if popup is visible, but no value selected, attempt snippet expand
-  elseif vim.fn.pumvisible() ~= 0 then
-    return trigger_ultisnips_fwd(fallthrough)
-  elseif check_back_space() then
-    return trigger
-  else
-    return trigger_ultisnips_fwd(trigger)
-  end
-end
-
--- s-tab completion for compe
-fn.complete_or_back = function(trigger, fallthrough)
-  if vim.fn.pumvisible() ~= 0 and vim.fn.complete_info()["selected"] ~= -1 then
-    return fallthrough
-  -- if popup is visible, but no value selected, attempt snippet previous jump
-  elseif vim.fn.pumvisible() ~= 0 then
-    return trigger_ultisnips_bak(fallthrough)
-  else
-    return trigger_ultisnips_bak(trigger)
-  end
-end
 
 -- quick keymap with default noremap
 fn.keymap = function(mode, lhs, rhs, opts)
@@ -83,19 +35,6 @@ fn.smart_nav = function(key)
   return fn.press(gnav)
 end
 
--- check for pumvisible completions
-fn.pumvisible_complete = function(dirkey, key)
-  return vim.fn.pumvisible() ~= 0 and fn.press(dirkey) or fn.press(key)
-end
-
--- display syntax group names
-fn.syntax_group = function()
-  local curr = vim.fn.synID(vim.fn.line('.'), vim.fn.col('.'), 1)
-  local orig = vim.fn.synIDattr(curr, 'name')
-  local after = vim.fn.synIDattr(vim.fn.synIDtrans(curr), 'name')
-  print(orig .. ' -> ' .. after)
-end
-
 -- populates location list with lsp diagnostics
 fn.lsplocationlist = function()
   vim.lsp.diagnostic.set_loclist({open_loclist = false})
@@ -112,6 +51,7 @@ fn.togglelist = function(listtypeletter)
   end
 end
 
+-- tabline configurations
 fn.tablinestr = function()
   local line = ''
   local tabcount = vim.fn.tabpagenr('$')
@@ -166,15 +106,22 @@ fn.tablinestr = function()
   return line
 end
 
+-- Telescope functions
+fn.project_files = function()
+  local opts = {} -- define here if you want to define something
+  local ok = pcall(require'telescope.builtin'.git_files, opts)
+  if not ok then require'telescope.builtin'.find_files(opts) end
+end
 
--- exporting global functions
-_G.completion_confirm = fn.completion_confirm
-_G.smart_nav = fn.smart_nav
-_G.p_complete = fn.pumvisible_complete
-_G.syntax_group = fn.syntax_group
-_G.lsplocationlist = fn.lsplocationlist
-_G.togglelist = fn.togglelist
+fn.vimrc = function()
+  require'telescope.builtin'.find_files({
+    prompt_title = "vimrc",
+    cwd = "$HOME/.config/nvim/"
+  })
+end
+
+-- global vim variables
 _G.tablinestr = fn.tablinestr
-
+_G.smart_nav = fn.smart_nav
 
 return fn
