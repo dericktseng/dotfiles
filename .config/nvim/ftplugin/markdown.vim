@@ -1,3 +1,4 @@
-nnoremap <buffer> <LocalLeader>l :MarkdownPreview<CR>
+nnoremap <buffer> <LocalLeader>l :MarkdownPreviewToggle<CR>
 
-autocmd BufLeave <buffer> :MarkdownPreviewStop
+set conceallevel=2
+set concealcursor=nc
