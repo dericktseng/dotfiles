@@ -15,7 +15,7 @@ fn.keymap('i', '<C-B>', [[<c-g>u<Esc>[s1z=`]a<c-g>u]])
 fn.keymap('n', '<C-B>', [[mz[s1z=`z]])
 
 -- gx quickfix
-fn.keymap('n', 'gx', [[yiW:!xdg-open <cWORD><CR> <C-r>" & <CR><CR>]])
+fn.keymap('n', 'gx', [[:execute 'silent! !xdg-open ' . shellescape(expand('<cWORD>'), 1)<CR>]])
 
 -- keymaps
 fn.keymap('t', '<ESC>', [[<C-\><C-N>]])
@@ -26,7 +26,7 @@ fn.keymap('n', 'j', [[v:lua.smart_nav('j')]], {expr=true})
 fn.keymap('n', '<C-J>', ':cnext<CR>')
 fn.keymap('n', '<C-K>', ':cprev<CR>')
 fn.keymap('n', '<C-Q>', [[:lua fn.togglelist('c')<CR>]])
-fn.keymap('n', '<C-T>', [[:tabnew<CR>]])
+fn.keymap('n', '<C-T>', [[:tabnew<CR>:Ex<CR>]])
 fn.keymap('n', '<LocalLeader>j', ':lnext<CR>')
 fn.keymap('n', '<LocalLeader>k', ':lprev<CR>')
 fn.keymap('n', '<LocalLeader>q', [[:lua fn.togglelist('l')<CR>]])
