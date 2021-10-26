@@ -58,11 +58,6 @@ vim.o.showmode = false
 -- sets the cursor to have a buffer. High number to always be centered.
 vim.o.so = 9
 
--- latex settings
-vim.o.conceallevel = 2
-vim.g.tex_no_error = 1
-vim.g.tex_flavor = 'latex'
-
 -- proper linebreaks
 vim.o.wrap = true
 vim.o.linebreak = true
