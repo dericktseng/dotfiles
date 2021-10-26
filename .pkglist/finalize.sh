@@ -20,10 +20,6 @@ sudo ufw enable
 # change shell to zsh.
 chsh -s /bin/zsh
 
-# setup tmux plugin manager
-git clone "https://github.com/tmux-plugins/tpm" "$HOME/.tmux/plugins/tpm"
-echo "tpm: Remember to install with (prefix+I)"
-
 # drop in file for autologin
 sudo mkdir -p "$systemdlogin"
 sed "s/\[USER\]/$self/g" override.template.conf > override.conf
