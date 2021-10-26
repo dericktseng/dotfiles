@@ -16,5 +16,3 @@ while read packagename; do
 		rm -rf "$packagename"
 	fi
 done < pkglist_aur.txt
-
-/bin/bash ./get_st.sh

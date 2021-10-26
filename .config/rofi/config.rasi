@@ -1,6 +1,6 @@
 configuration {
 	modi: "window,run,ssh,drun";
-	terminal: "st";
+	terminal: "termite";
 	font: "Noto Sans 12";
 	theme: "base" ;
 	scroll-method: 1;

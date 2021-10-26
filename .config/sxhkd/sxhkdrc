@@ -2,63 +2,65 @@
 # wm independent hotkeys
 #
 
-
-### personal shortcuts
 # terminal emulator
 super + Return
-	st
+    $TERMAPP
 
-# program launcher
-super + x
-	$HOME/.config/rofi/launcher.sh
-
-# launch KanaConvert
-ctrl + shift + k
-	/opt/KanaConvert/KanaConvert
+# nnn launcher
+super + n
+    $TERMAPP  --class "filemanager" -e nnnfm.sh
 
 # Play Music
 ctrl + shift + m
-	st -e $HOME/Music/yt-playlist
+    $TERMAPP -e $HOME/Music/yt-playlist
+
+# program launcher
+super + x
+    $HOME/.config/rofi/launcher.sh
+
+# launch KanaConvert
+ctrl + shift + k
+    /opt/KanaConvert/KanaConvert
 
 # launch browser
 super + @space
-	firefox
+    firefox
 
 # open powermenu
 super + Delete
-	$HOME/.config/rofi/powermenu.sh
+    $HOME/.config/rofi/powermenu.sh
 
 # searches for local pdfs
 super + z
-	searchpdf.sh --one-file-system
+    searchpdf.sh --one-file-system
 
 # searches for global pdfs
 super + shift + z
-	searchpdf.sh
+    searchpdf.sh
 
 # window list
 super + d
-	rofi -show window
+    rofi -show window
 
 # clipboard manager
 super + v
-	clipmenu
+    clipmenu
 
 # delete clipboard items
 super + ctrl + v
-	clipdelrofi.sh
+    clipdelrofi.sh
 
 # delete all clipboard items
 super + ctrl + alt + v
-	clipdelrofi.sh '.*' && notify-send -t 1500 'cleared all clipboard'
+    clipdelrofi.sh '.*' && notify-send -t 1500 'cleared all clipboard'
 
 # sxhkd reload configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd && notify-send -t 1500 'sxhkd reloaded'
+    pkill -USR1 -x sxhkd && notify-send -t 1500 'sxhkd reloaded'
 
 # display help menu
 super + slash
-	sxhkd-help.sh
+    sxhkd-help.sh
 
 # dunstctl hotkeys
 # dunstctl {close, close-all}
@@ -76,55 +78,55 @@ ctrl + {period, grave}
 
 # Rotate node configuration
 super + {y, shift + y}
-	bspc node -f @parent && bspc node -R {90,-90} && bspc node -f last.local
+    bspc node -f @parent && bspc node -R {90,-90} && bspc node -f last.local
 
 # quit/restart bspwm
 super + alt + {q,r}
-	bspc {quit,wm -r}
+    bspc {quit,wm -r}
 
 # close and kill
 super + {e,shift + e}
-	bspc node -{c,k}
+    bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
 super + a
-	bspc desktop -l next
+    bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
 super + y
-	bspc node newest.marked.local -n newest.!automatic.local
+    bspc node newest.marked.local -n newest.!automatic.local
 
 # swap the current node and the biggest window locally
 super + g
-	bspc node -s biggest.local
+    bspc node -s biggest.local
 
 # audio controls
 {XF86AudioLowerVolume, XF86AudioRaiseVolume, XF86AudioMute}
-	amixer -q -D pulse sset Master {3%- unmute,3%+ unmute,toggle} && volumenotify.sh
+    amixer -q -D pulse sset Master {3%- unmute,3%+ unmute,toggle} && volumenotify.sh
 
 # audio controls
 {Scroll_Lock,Pause,super + m}
-	amixer -q -D pulse sset Master {3%- unmute,3%+ unmute,toggle} && volumenotify.sh
+    amixer -q -D pulse sset Master {3%- unmute,3%+ unmute,toggle} && volumenotify.sh
 
 # laptop brightness increase
 XF86MonBrightnessUp
-	xbacklight -inc 5 && brightnessnotify.sh
+    xbacklight -inc 5 && brightnessnotify.sh
 
 # laptop brightness increase
 XF86MonBrightnessDown
-	xbacklight -dec 5 && brightnessnotify.sh
+    xbacklight -dec 5 && brightnessnotify.sh
 
 # fullscreen same screenshot
 @Print
-	mkdir -p ~/Pictures/Screenshots && maim --hidecursor ~/Pictures/Screenshots/$(date +%s).png
+    mkdir -p ~/Pictures/Screenshots && maim --hidecursor ~/Pictures/Screenshots/$(date +%s).png
 
 # screenshot copies to clipboard
 super + @Print
-	maim -s --hidecursor | xclip -selection clipboard -t image/png
+    maim -s --hidecursor | xclip -selection clipboard -t image/png
 
 # saves frame screenshot
 super + shift + @Print
-	mkdir -p ~/Pictures/Screenshots && maim -s --hidecursor ~/Pictures/Screenshots/$(date +%s).png
+    mkdir -p ~/Pictures/Screenshots && maim -s --hidecursor ~/Pictures/Screenshots/$(date +%s).png
 
 
 #
@@ -132,12 +134,12 @@ super + shift + @Print
 #
 # set the window state {tiled, pseudo_tiled, floating, fullscreen}
 super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+    bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 
 # set the node flags
 super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
+    bspc node -g {marked,locked,sticky,private}
 
 #
 # focus/swap
@@ -145,33 +147,33 @@ super + ctrl + {m,x,y,z}
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+    bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
+    bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
 alt + {_,shift + }Tab
-	bspc node -f {next,prev}.local.!hidden.window
+    bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
-	bspc desktop -f {prev,next}.local
+    bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
 super + {grave,Tab}
-	bspc {node,desktop} -f last
+    bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
 super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+    bspc wm -h off; \
+    bspc node {older,newer} -f; \
+    bspc wm -h on
 
 # focus the given desktop
 F{1-9,10}
-	bspc desktop -f '^{1-9,10}'
+    bspc desktop -f '^{1-9,10}'
 
 # send to given desktop
 shift + F{1-9,10}
@@ -179,11 +181,11 @@ shift + F{1-9,10}
 
 # hide windows
 super + w
-	bspc node -g hidden
+    bspc node -g hidden
 
 # unhide windows
 super + shift + w
-	bspc node {,$(bspc query -N -n .hidden | tail -n1)} -g hidden=off
+    bspc node {,$(bspc query -N -n .hidden | tail -n1)} -g hidden=off
 
 #
 # preselect
@@ -191,19 +193,19 @@ super + shift + w
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
+    bspc node -p {west,south,north,east}
 
 # preselect the ratio
 super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
+    bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
 super + ctrl + space
-	bspc node -p cancel
+    bspc node -p cancel
 
 # cancel the preselection for the focused desktop
 super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+    bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
 # move/resize
@@ -211,12 +213,12 @@ super + ctrl + shift + space
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
 super + alt + shift + {h,j,k,l}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
 super + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
+    bspc node -v {-20 0,0 20,0 -20,20 0}
