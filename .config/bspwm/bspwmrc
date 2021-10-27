@@ -42,7 +42,7 @@ floatapps=(
     'Kanaconvert'
     'Pavucontrol'
     'Inkscape'
-    'matplotlib'
+    'Matplotlib'
 )
 
 for appname in "${floatapps[@]}";do

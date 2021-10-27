@@ -79,6 +79,11 @@ snippet '([^\s])pw' "power" irA
 endsnippet
 
 context "math()"
+snippet _ "underscore" iA
+_{$1}
+endsnippet
+
+context "math()"
 snippet '([^\s])sr' "squared" wrA
 `!p snip.rv = match.group(1)`^2
 endsnippet
@@ -421,7 +426,7 @@ snippet pict "insert picture top align" bA
 endsnippet
 
 snippet code "insert code" bA
-\\lstinputlisting[language=${1:Python},basicstyle=\\scriptsize]{$2}$0
+\\lstinputlisting[language=${1:Python},basicstyle=\\footnotesize]{$2}$0
 endsnippet
 
 snippet table "Table environment" b

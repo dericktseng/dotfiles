@@ -17,6 +17,10 @@ fn.keymap('n', '<C-B>', [[mz[s1z=`z]])
 -- gx quickfix
 fn.keymap('n', 'gx', [[:execute 'silent! !xdg-open ' . shellescape(expand('<cWORD>'), 1)<CR>]])
 
+-- updating
+fn.keymap('n', '<Leader>p', ':PackerSync<CR>')
+fn.keymap('n', '<Leader>R', [[:luafile %<CR>:echo 'reloaded file'<CR>]], {silent=false})
+
 -- keymaps
 fn.keymap('t', '<ESC>', [[<C-\><C-N>]])
 
@@ -30,8 +34,6 @@ fn.keymap('n', '<C-T>', [[:tabnew<CR>:Ex<CR>]])
 fn.keymap('n', '<LocalLeader>j', ':lnext<CR>')
 fn.keymap('n', '<LocalLeader>k', ':lprev<CR>')
 fn.keymap('n', '<LocalLeader>q', [[:lua fn.togglelist('l')<CR>]])
-fn.keymap('n', '<Leader>p', ':PackerSync<CR>')
-fn.keymap('n', '<Leader>R', [[:luafile %<CR>:echo 'reloaded file'<CR>]], {silent=false})
 fn.keymap('n', 'Y', 'y$')
 fn.keymap('n', 'n', 'nzzzv')
 fn.keymap('n', 'N', 'Nzzzv')
@@ -99,6 +101,7 @@ fn.keymap('n', '<Leader>7', '7gt')
 fn.keymap('n', '<Leader>8', '8gt')
 fn.keymap('n', '<Leader>9', '9gt')
 fn.keymap('n', '<Leader>0', ':tablast<CR>')
+fn.keymap('n', '<Leader>t', ':tabnew<CR>:term<CR>')
 
 -- Telescope
 fn.keymap('n', '<Leader>ff', ':Telescope find_files<CR>')
