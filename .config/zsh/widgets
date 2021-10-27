@@ -1,4 +1,4 @@
 #!/bin/zsh
 
-tmux-opendir-widget() ~/.tmux/scripts/tmux-opendirs.sh
+tmux-opendir-widget() ~/.config/tmux/tmux-opendirs.sh
 zle -N tmux-opendir-widget
