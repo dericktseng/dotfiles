@@ -73,6 +73,6 @@ vim.o.confirm = true
 vim.opt.shortmess:append('cI')
 
 -- completeopt
-vim.opt.completeopt = 'menu,menuone,noselect'
+vim.o.completeopt = 'menu,menuone,noselect'
 
 vim.o.tabline = '%!v:lua.tablinestr()'

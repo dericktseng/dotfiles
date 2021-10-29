@@ -44,6 +44,7 @@ return require('packer').startup(function()
     'iamcco/markdown-preview.nvim',
     run = 'cd app && yarn install',
     config = function() require('configs/markdown-preview') end,
+    ft = {'markdown'}
   }
 
   use {
@@ -57,17 +58,18 @@ return require('packer').startup(function()
     config = function() require"surround".setup {mappings_style = "surround"} end
   }
 
-  use { 
+  use {
     'lervag/vimtex',
-    config = function() require('configs/vimtex') end
+    ft = {'tex', 'latex'},
+    config = function() require('configs/vimtex') end,
   }
 
-  use 'onsails/lspkind-nvim'
   use 'windwp/nvim-autopairs'
   use 'wbthomason/packer.nvim'
   use 'tpope/vim-fugitive'
   use 'SirVer/ultisnips'
   use 'honza/vim-snippets'
   use 'junegunn/vim-easy-align'
+  use 'onsails/lspkind-nvim'
   use 'neovim/nvim-lspconfig'
 end)

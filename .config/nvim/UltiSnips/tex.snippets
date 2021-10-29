@@ -80,7 +80,17 @@ endsnippet
 
 context "math()"
 snippet _ "underscore" iA
-_{$1}
+_`!p
+if len(t[1]) > 1 and t[1][0] not in ["{", "}", " "]:
+	snip.rv = "{"
+else:
+	snip.rv = ""
+`${1}`!p
+if len(t[1]) > 1 and t[1][0] not in ["{", "}", " "]:
+	snip.rv = "}"
+else:
+	snip.rv = ""
+` $0
 endsnippet
 
 context "math()"
@@ -239,6 +249,11 @@ endsnippet
 context "math()"
 snippet pdif "partial differentiate" w
 \\frac{\\partial $1}{\\partial ${2:t}}
+endsnippet
+
+context "math()"
+snippet cdif "partial differentiate, with constant" w
+\\left(\\frac{\\partial ${1:s}}{\\partial ${2:p}}\\right)_${3:T} $0
 endsnippet
 
 context "math()"
