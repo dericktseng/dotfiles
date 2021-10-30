@@ -21,11 +21,14 @@ vim.g.vimtex_compiler_latexmk = {
 
 vim.g.vimtex_syntax_conceal = {
   ['accents'] = 1,
+  ['cites'] = 1,
   ['fancy'] = 0,
+  ['greek'] = 1,
   ['math_bounds'] = 1,
   ['math_delimiters'] = 1,
   ['math_fracs'] = 0,
   ['math_super_sub'] = 1,
   ['math_symbols'] = 1,
+  ['sections'] = 1,
   ['styles'] = 1
 }

@@ -79,21 +79,6 @@ snippet '([^\s])pw' "power" irA
 endsnippet
 
 context "math()"
-snippet _ "underscore" iA
-_`!p
-if len(t[1]) > 1 and t[1][0] not in ["{", "}", " "]:
-	snip.rv = "{"
-else:
-	snip.rv = ""
-`${1}`!p
-if len(t[1]) > 1 and t[1][0] not in ["{", "}", " "]:
-	snip.rv = "}"
-else:
-	snip.rv = ""
-` $0
-endsnippet
-
-context "math()"
 snippet '([^\s])sr' "squared" wrA
 `!p snip.rv = match.group(1)`^2
 endsnippet
@@ -114,7 +99,7 @@ snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
 endsnippet
 
 context "math()"
-snippet '([A-Za-z0-9])iv' "inverse" wrA
+snippet '([A-Za-z0-9])inv' "inverse" wrA
 `!p snip.rv = match.group(1)`^{-1}
 endsnippet
 
@@ -367,6 +352,10 @@ endsnippet
 
 # others
 priority 0
+
+snippet eref "equation reference" w
+\\eqref{eq:$1}
+endsnippet
 
 snippet \\ "newline" i
 \\\\
