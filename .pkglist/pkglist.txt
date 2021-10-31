@@ -74,6 +74,7 @@ socat
 strace
 sudo
 sxhkd
+texlab
 texlive-core
 tk
 tmux

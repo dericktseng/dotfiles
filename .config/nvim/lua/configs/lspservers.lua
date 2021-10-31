@@ -5,14 +5,15 @@ local cmp_capability = require('cmp_nvim_lsp').update_capabilities(vim.lsp.proto
 local servers = {
   'pyright',
   'rust_analyzer',
-  'clangd'
+  'clangd',
+  'texlab'
 }
 
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
     flags = {
-      debounce_text_changes = 150,
+      debounce_text_changes = 100,
     },
     capabilities = cmp_capability
   }
