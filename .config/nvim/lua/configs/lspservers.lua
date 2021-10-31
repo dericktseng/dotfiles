@@ -18,3 +18,5 @@ for _, lsp in ipairs(servers) do
     capabilities = cmp_capability
   }
 end
+
+-- Other more specific configurations
