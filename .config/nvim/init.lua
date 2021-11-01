@@ -61,11 +61,6 @@ vim.o.showmode = false
 -- sets the cursor to have a buffer. High number to always be centered.
 vim.o.so = 9
 
--- proper linebreaks
-vim.o.wrap = true
-vim.o.linebreak = true
-vim.o.showbreak = "|"
-
 -- tabline
 vim.o.showtabline = 2
 
