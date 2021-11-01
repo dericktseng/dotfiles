@@ -58,12 +58,6 @@ return require('packer').startup(function()
     config = function() require"surround".setup {mappings_style = "surround"} end
   }
 
-  use {
-    'lervag/vimtex',
-    ft = {'tex', 'latex'},
-    config = function() require('configs/vimtex') end,
-  }
-
   use 'windwp/nvim-autopairs'
   use 'wbthomason/packer.nvim'
   use 'tpope/vim-fugitive'

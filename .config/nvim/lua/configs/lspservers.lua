@@ -20,3 +20,4 @@ for _, lsp in ipairs(servers) do
 end
 
 -- Other more specific configurations
+require 'configs/lsp/texlab'
