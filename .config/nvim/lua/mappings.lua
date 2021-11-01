@@ -1,4 +1,4 @@
-fn = require "functions"
+local fn = require "functions"
 local vimg = vim.g
 local keymap = fn.keymap
 
@@ -39,6 +39,8 @@ keymap('n', '<LocalLeader>j', ':lnext<CR>')
 keymap('n', '<LocalLeader>k', ':lprev<CR>')
 keymap('n', '<LocalLeader>q', [[:Telescope loclist<CR>]])
 keymap('n', 'Y', 'y$')
+keymap('n', 'E', '$')
+keymap('n', 'B', '^')
 keymap('n', 'n', 'nzzzv')
 keymap('n', 'N', 'Nzzzv')
 keymap('n', 'J', 'mzJ`z')
@@ -112,9 +114,9 @@ keymap('n', '<Leader>ff', ':Telescope find_files<CR>')
 keymap('n', '<Leader>fb', ':Telescope buffers<CR>')
 keymap('n', '<Leader>fh', ':Telescope help_tags<CR>')
 keymap('n', '<Leader>fl', ':Telescope heading<CR>')
-keymap('n', '<Leader>fg', ':lua fn.project_files()<CR>')
-keymap('n', '<Leader>v', ':lua fn.vimrc()<CR>')
 keymap('n', '<Leader>r', ':Telescope live_grep<CR>')
+keymap('n', '<Leader>fg', 'v:lua.project_files()', {expr=true})
+keymap('n', '<Leader>v', 'v:lua.vimrc()', {expr=true})
 
 -- LSP Configurations
 keymap('n', ']d', ':lua vim.lsp.diagnostic.goto_next()<CR>')
@@ -134,7 +136,7 @@ keymap('n', '<Leader>ea', ':lua vim.lsp.buf.code_action()<CR>')
 keymap("n", "<Leader>ef", ":lua vim.lsp.buf.formatting()<CR>")
 keymap('n', '<Leader>eg', ':lua vim.lsp.buf.signature_help()<CR>')
 keymap('n', '<Leader>ee', ':lua vim.lsp.buf.rename()<CR>', {silent=false})
-vim.api.nvim_command('autocmd BufWrite,BufEnter,InsertLeave * :lua fn.lsplocationlist()')
+vim.api.nvim_command('autocmd BufWrite,BufEnter,InsertLeave * call v:lua.lsplocationlist()')
 
 -- Fugitive Configurations
 keymap('n', '<Leader>gs', ':Git<CR>')

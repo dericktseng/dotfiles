@@ -1,16 +1,6 @@
 -- module to export
 local fn = {}
 
--- check back spaces
-local check_back_space = function()
-  local col = vim.fn.col('.') - 1
-  if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-    return true
-  else
-    return false
-  end
-end
-
 -- EXPORTED FUNCTIONS
 -- escape termcodes properly
 fn.press = function(str)
@@ -20,15 +10,15 @@ end
 
 -- quick keymap with default noremap
 fn.keymap = function(mode, lhs, rhs, opts)
-  options = { noremap = true, silent = true }
+  local options = { noremap = true, silent = true }
   if opts then options = vim.tbl_extend('force', options, opts) end
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 -- smart nav for mapping k -> gk or j -> gj
 fn.smart_nav = function(key)
-  count = vim.v.count
-  gnav = count == 0 and 'g' .. key or key
+  local count = vim.v.count
+  local gnav = count == 0 and 'g' .. key or key
   if count >= 5 then
     gnav = [[m']] .. count .. gnav
   end
@@ -71,7 +61,6 @@ fn.tablinestr = function()
       line = line .. '%#TabLine#'
     end
 
-
     -- filename
     if bufname == '' then
       line = line .. emptybuffer
@@ -112,5 +101,8 @@ end
 -- global vim variables
 _G.tablinestr = fn.tablinestr
 _G.smart_nav = fn.smart_nav
+_G.project_files = fn.project_files
+_G.vimrc = fn.vimrc
+_G.lsplocationlist = fn.lsplocationlist
 
 return fn

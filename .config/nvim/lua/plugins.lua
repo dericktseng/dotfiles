@@ -9,7 +9,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- plugins
-return require('packer').startup(function()
+return require('packer').startup(function(use)
   use {
     'hrsh7th/nvim-cmp',
     requires = {
@@ -37,7 +37,7 @@ return require('packer').startup(function()
     'nvim-treesitter/nvim-treesitter',
     branch = '0.5-compat',
     run = ':TSUpdate',
-    config = function() require('configs/treesitter') end 
+    config = function() require('configs/treesitter') end,
   }
 
   use {
@@ -59,11 +59,13 @@ return require('packer').startup(function()
   }
 
   use 'windwp/nvim-autopairs'
+  use 'onsails/lspkind-nvim'
   use 'wbthomason/packer.nvim'
+  use 'neovim/nvim-lspconfig'
+
+  -- non lua plugins
   use 'tpope/vim-fugitive'
   use 'SirVer/ultisnips'
   use 'honza/vim-snippets'
   use 'junegunn/vim-easy-align'
-  use 'onsails/lspkind-nvim'
-  use 'neovim/nvim-lspconfig'
 end)
