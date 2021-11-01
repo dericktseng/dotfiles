@@ -35,6 +35,9 @@ augroup vimrc
 augroup END
 ]])
 
+-- fix for latex file detection
+vim.g.tex_flavor = "latex"
+
 -- REST OF VIM SETTINGS
 -- tab settings
 vim.o.tabstop = 4
