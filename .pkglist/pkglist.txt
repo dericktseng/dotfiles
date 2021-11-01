@@ -32,6 +32,7 @@ libimagequant
 linux
 linux-firmware
 llvm
+lua-language-server
 maim
 make
 materia-gtk-theme

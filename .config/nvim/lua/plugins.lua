@@ -17,8 +17,8 @@ return require('packer').startup(function()
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-nvim-lua',
       'hrsh7th/cmp-path',
-      'quangnguyen30192/cmp-nvim-ultisnips',
       'hrsh7th/cmp-calc',
+      'quangnguyen30192/cmp-nvim-ultisnips',
     },
     config = function() require('configs/cmp') end
   }

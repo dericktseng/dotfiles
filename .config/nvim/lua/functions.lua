@@ -40,17 +40,6 @@ fn.lsplocationlist = function()
   vim.lsp.diagnostic.set_loclist({open_loclist = false})
 end
 
--- toggle quickfixlist or locationlist
-fn.togglelist = function(listtypeletter)
-  -- for some reason, v:val.loclist is always 0, so list will always be empty.
-  if vim.fn.empty(vim.fn.filter(vim.fn.getwininfo(), 'v:val.quickfix')) == 1 then
-   vim.api.nvim_command(listtypeletter .. 'open')
-  else
-    vim.api.nvim_command('lclose')
-    vim.api.nvim_command('cclose')
-  end
-end
-
 -- tabline configurations
 fn.tablinestr = function()
   local line = ''

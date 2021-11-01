@@ -6,12 +6,11 @@ local servers = {
   'pyright',
   'rust_analyzer',
   'clangd',
-  'texlab'
+  'texlab',
 }
 
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
-    on_attach = on_attach,
     flags = {
       debounce_text_changes = 100,
     },
@@ -21,3 +20,4 @@ end
 
 -- Other more specific configurations
 require 'configs/lsp/texlab'
+require 'configs/lsp/sumneko_lua'
