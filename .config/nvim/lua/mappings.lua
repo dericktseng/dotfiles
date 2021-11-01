@@ -110,13 +110,13 @@ keymap('n', '<Leader>0', ':tablast<CR>')
 keymap('n', '<Leader>t', ':tabnew<CR>:term<CR>')
 
 -- Telescope
-keymap('n', '<Leader>ff', ':Telescope find_files<CR>')
+keymap('n', '<Leader>ff', ':lua require("telescope.builtin").find_files({no_ignore=true})<CR>')
 keymap('n', '<Leader>fb', ':Telescope buffers<CR>')
 keymap('n', '<Leader>fh', ':Telescope help_tags<CR>')
 keymap('n', '<Leader>fl', ':Telescope heading<CR>')
 keymap('n', '<Leader>r', ':Telescope live_grep<CR>')
-keymap('n', '<Leader>fg', 'v:lua.project_files()', {expr=true})
-keymap('n', '<Leader>v', 'v:lua.vimrc()', {expr=true})
+keymap('n', '<Leader>fg', ':call v:lua.project_files()<CR>')
+keymap('n', '<Leader>v', ':call v:lua.vimrc()<CR>')
 
 -- LSP Configurations
 keymap('n', ']d', ':lua vim.lsp.diagnostic.goto_next()<CR>')
