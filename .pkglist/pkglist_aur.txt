@@ -1,6 +1,5 @@
 discord_arch_electron
 i3lock-color
-libxft-bgra
 nerd-fonts-fira-code
 polybar-git
 python-pillow-simd
