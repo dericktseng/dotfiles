@@ -1,4 +1,10 @@
 #!/bin/sh
+lockscreenimage=$HOME/Pictures/Wallpaper/lockscreen.png
+defaultbackgroundcolor="5fc5eb"
 
-# locks the current session with i3-lock with the given settings
-i3lock
+i3lock \
+    -p default \
+    -i "$lockscreenimage" \
+    --ignore-empty-password \
+    --show-failed-attempts \
+    -c "$defaultbackgroundcolor"

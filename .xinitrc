@@ -51,4 +51,4 @@ xset s 600 600
 xset r rate 200 30
 
 # use lock script to lock the screen
-xss-lock -n "$HOME/.local/bin/lock.sh > /dev/null 2>&1"
+xss-lock -- $HOME/.local/bin/lock.sh &

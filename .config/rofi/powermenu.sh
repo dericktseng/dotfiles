@@ -24,7 +24,6 @@ case $chosen in
         loginctl lock-session
         ;;
     $isuspend)
-        mpc -q pause
         amixer set Master mute
         systemctl suspend
         ;;
