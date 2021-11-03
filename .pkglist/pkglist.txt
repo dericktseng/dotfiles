@@ -13,6 +13,7 @@ clipmenu
 cronie
 dkms
 dunst
+easyeffects
 fakeroot
 fd
 feh
@@ -60,6 +61,7 @@ patch
 pavucontrol
 picom
 pipewire-pulse
+pipewire-alsa
 pkgconf
 polkit-gnome
 powertop

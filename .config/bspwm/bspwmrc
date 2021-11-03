@@ -39,7 +39,6 @@ bspc rule -a 'discord' desktop='^4' follow=off
 floatapps=(
     'Gimp'
     'Kanaconvert'
-    'Pavucontrol'
     'Inkscape'
     'Matplotlib'
 )
@@ -56,6 +55,7 @@ floatappsMove=(
     'retroarch'
     'Anki'
     'x2goclient'
+    'easyeffects'
 )
 
 for appname in "${floatappsMove[@]}";do
@@ -79,8 +79,8 @@ $HOME/.config/polybar/launch.sh > /dev/null 2>&1 &
 
 
 # background programs
-programs=('clipmenud' 'udiskie' 'nm-applet' 'blueman-applet' 'dunst')
-argument=(''          '-t'      ''          ''               '')
+programs=('clipmenud' 'udiskie' 'nm-applet' 'blueman-applet' 'dunst' 'easyeffects')
+argument=(''          '-t'      ''          ''               ''      '--gapplication-service')
 
 # (re)start background programs
 for i in "${!programs[@]}"; do

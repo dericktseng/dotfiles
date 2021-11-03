@@ -13,3 +13,4 @@ Gimp-2.10          = paint
 Inkscape           = paint
 Anki               = star
 filemanager        = folder
+easyeffects        = music

@@ -127,6 +127,7 @@ ws-icon-18 = office;%{T3}%{T-}
 ws-icon-19 = paint;%{T3}%{T-}
 ws-icon-20 = minecraft;%{T3}%{T-}
 ws-icon-21 = star;%{T3}%{T-}
+ws-icon-22 = music;%{T3}%{T-}
 
 label-mode-padding = 2
 label-mode-foreground = ${colors.black}

@@ -172,11 +172,11 @@ super + {o,i}
     bspc wm -h on
 
 # focus the given desktop
-F{1-9,10}
+ctrl + F{1-9,10}
     bspc desktop -f '^{1-9,10}'
 
 # send to given desktop
-shift + F{1-9,10}
+ctrl + shift + F{1-9,10}
     bspc node -d '^{1-9,10}' --follow
 
 # hide windows
