@@ -1,5 +1,5 @@
 #!/bin/bash
-xorgconf="/etc/X11/xorg.conf.d"
+xorgconfd="/etc/X11/xorg.conf.d"
 systemdlogin="/etc/systemd/system/getty@tty1.service.d"
 self="$USER"
 
@@ -15,19 +15,17 @@ systemctl --user --now enable psd
 sudo systemctl --now enable ufw
 sudo systemctl --now enable NetworkManager
 sudo systemctl --now enable cronie
+sudo systemctl enable sddm
 sudo ufw enable
 
 # change shell to zsh.
 chsh -s /bin/zsh
 
-# drop in file for autologin
-sudo mkdir -p "$systemdlogin"
-sed "s/\[USER\]/$self/g" override.template.conf > override.conf
-sudo cp -i override.conf "$systemdlogin"
-
-# X11 touchpad settings
-sudo mkdir -p "$xorgconf"
-sudo cp -i 30-touchpad.conf "$xorgconf"
+# X11 settings
+sudo mkdir -p "$xorgconfd"
+for f in ./xorgconf/*; do
+    sudo cp -i "$f" "$xorgconfd"
+done
 
 # backlight settings: adds user to group video
 sudo usermod -aG video "$self"

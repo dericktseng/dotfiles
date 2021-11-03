@@ -32,18 +32,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# screen locker
-xset s on
-xset s 600
-
 # cursor fix
 xsetroot -cursor_name left_ptr
 
 # compositor
 picom --config $HOME/.config/picom/picom.conf -b --experimental-backends
-
-# import display
-systemctl --user import-environment DISPLAY
 
 # monitor refresh rate, set to 75 if possible
 xrandr -r 75 > /dev/null 2>&1 || true
@@ -51,6 +44,11 @@ xrandr -r 75 > /dev/null 2>&1 || true
 # polkit authentication agent
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
-# start WM
-lock.sh
-exec bspwm
+# screensaver default 10 mins timeout
+xset s 600 600
+
+# sets keyboard autorepeat
+xset r rate 200 30
+
+# use lock script to lock the screen
+xss-lock -n "$HOME/.local/bin/lock.sh > /dev/null 2>&1"

@@ -1,5 +1,4 @@
-#! /bin/sh
-
+#! /bin/bash
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
@@ -65,46 +64,33 @@ done
 
 # run script to disable locking if application in full screen
 pkill -f checkfullscreen.sh
-checkfullscreen.sh &
+$HOME/.local/bin/checkfullscreen.sh > /dev/null 2>&1 &
 
 # set window 5 to only floating windows
 pkill -f floating.sh
-$HOME/.config/bspwm/floating.sh &
+$HOME/.config/bspwm/floating.sh > /dev/null 2>&1 &
 
 # run script for desktop renaming
 pkill -f desktoprename.sh
-$HOME/.config/bspwm/desktoprename.sh &
+$HOME/.config/bspwm/desktoprename.sh > /dev/null 2>&1 &
+
+# polybar - suppress output
+$HOME/.config/polybar/launch.sh > /dev/null 2>&1 &
+
 
 # background programs
-pkill -f clipmenud
-pkill -f udiskie
-pkill -f nm-applet
-pkill -f blueman-applet
-pkill dunst &
+programs=('clipmenud' 'udiskie' 'nm-applet' 'blueman-applet' 'dunst')
+argument=(''          '-t'      ''          ''               '')
 
-# restarts background programs
-udiskie -t &
-blueman-applet &
-nm-applet &
-clipmenud &
-
-# polybar
-$HOME/.config/polybar/launch.sh &
-
-# swaps escape and caps lock
-setxkbmap -option caps:swapescape
+# (re)start background programs
+for i in "${!programs[@]}"; do
+    program="${programs[$i]}"
+    arg="${argument[$i]}"
+    if command -v "$program" &> /dev/null; then
+        pkill -f "$program"
+        $program $arg &
+    fi
+done
 
 # set background
 $HOME/.fehbg > /dev/null 2>&1 || hsetroot -add "$background1" -add "$background2" -gradient 30 &
-
-# screensaver default 10 mins timeout
-xset s 600 600 
-
-# keyboard and mouse settings
-xset r rate 200 25
-xinput --set-prop 'pointer:Razer Razer Viper' 'libinput Accel Speed' -0.75
-
-# use i3lock to lock the screen 
-xss-lock -v --transfer-sleep-lock lock.sh
-
-# DO NOT PUT ANYTHING ELSE BELOW THIS LINE! It will not get executed

@@ -71,6 +71,7 @@ python-sympy
 ripgrep
 rlwrap
 rofi
+sddm
 socat
 strace
 sudo
@@ -92,6 +93,7 @@ xclip
 xdg-user-dirs
 xdg-utils
 xdotool
+xf86-input-evdev
 xorg-font-util
 xorg-server
 xorg-xinit

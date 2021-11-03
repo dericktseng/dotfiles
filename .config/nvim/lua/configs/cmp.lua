@@ -21,7 +21,7 @@ cmp.setup {
     {name = 'ultisnips'},
     {name = 'path'},
     {name = 'calc', keyword_length = 2},
-    {name = 'buffer', keyword_length = 2},
+    {name = 'buffer', keyword_length = 3},
   },
 
   formatting = {
@@ -54,7 +54,7 @@ cmp.setup {
   }
 }
 
--- source nvim-autopairs configuration 
+-- source nvim-autopairs configuration
 -- here to ensure these get called after cmp is initialized
 require('configs/pairs')
 require('configs/lspservers')
