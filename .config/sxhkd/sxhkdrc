@@ -176,7 +176,7 @@ ctrl + F{1-9,10}
     bspc desktop -f '^{1-9,10}'
 
 # send to given desktop
-ctrl + shift + F{1-9,10}
+shift + F{1-9,10}
     bspc node -d '^{1-9,10}' --follow
 
 # hide windows

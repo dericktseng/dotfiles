@@ -114,6 +114,11 @@ endsnippet
 
 # Other math snippets
 context "math()"
+snippet . "cdot" w
+\\cdot
+endsnippet
+
+context "math()"
 snippet Vin "voltage in" wA
 V_{in}
 endsnippet
@@ -296,4 +301,3 @@ snip.rv = eval('latex(' + match.group(1) \
     .replace('}', ')') + ')')
 `
 endsnippet
-
