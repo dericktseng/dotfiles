@@ -33,6 +33,9 @@ set index-active-fg "#000000"
 set statusbar-fg "#000000"
 set statusbar-bg "#e8e8e8"
 
+set synctex true
+set synctex-editor-command "nvr --remote-silent +%{line} %{input}"
+
 map p print
 map b focus_inputbar ":blist "
 map B focus_inputbar ":bmark "

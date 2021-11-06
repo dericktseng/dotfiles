@@ -8,5 +8,4 @@ fi
 
 /bin/bash ./install.sh
 /bin/bash ./install_aur.sh
-/bin/bash ./get_st.sh
 /bin/bash ./finalize.sh
