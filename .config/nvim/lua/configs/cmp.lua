@@ -18,8 +18,8 @@ cmp.setup {
   sources = {
     {name = 'nvim_lua'},
     {name = 'nvim_lsp'},
-    {name = 'ultisnips'},
     {name = 'path'},
+    {name = 'ultisnips'},
     {name = 'calc', keyword_length = 2},
     {name = 'buffer', keyword_length = 3},
   },

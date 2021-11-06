@@ -14,7 +14,7 @@ cutcmd="cut -d = -f 2"
 trcmd="tr -d '[:blank:]'"
 rgcmd="rg -N -m 1 -j 1"
 
-function rename_to_desktop_number() {
+function desktop_number() {
     desktopID="$1"
 
     # forced to search through array because bspwm
@@ -24,10 +24,16 @@ function rename_to_desktop_number() {
     desktopList=($(bspc query -D))
     for i in "${!desktopList[@]}";do
         if [[ "${desktopList[i]}" = "${desktopID}" ]];then
-            bspc desktop "$desktopID" --rename "$(($i + 1))"
+            echo "$(($i + 1))"
             return
         fi
     done
+}
+
+function rename_to_desktop_number() {
+    desktopID="$1"
+    desktopNum=$(desktop_number "$desktopID")
+    bspc desktop "$desktopID" --rename "$desktopNum"
 }
 
 function get_class_or_name() {
@@ -44,6 +50,7 @@ function get_class_or_name() {
     if [ -z "$newname" ];then
         newname=$($rgcmd "^${classname}\s*=" $namefile | $cutcmd | $trcmd)
     fi
+
     echo "$newname"
 }
 
@@ -65,8 +72,13 @@ function rename() {
     currname="$(bspc query -d "$desktopID" --names -D)"
     newname=$(get_class_or_name "$nodeID")
 
+    # if no matching classname found, then just use desktop number
+    if [[ -z "$newname" ]]; then
+        newname=$(desktop_number "$desktopID")
+    fi
+
     # renames desktop if newname differs from the desktop's current name
-    if [ -n "$newname" ] && [ "$newname" != "$currname" ]; then
+    if [[ "$newname" != "$currname" ]]; then
         bspc desktop "$desktopID" --rename "$newname"
     fi
 }

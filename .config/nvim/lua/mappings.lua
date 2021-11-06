@@ -114,6 +114,7 @@ keymap('n', '<Leader>ff', ':lua require("telescope.builtin").find_files({no_igno
 keymap('n', '<Leader>fb', ':Telescope buffers<CR>')
 keymap('n', '<Leader>fh', ':Telescope help_tags<CR>')
 keymap('n', '<Leader>fl', ':Telescope heading<CR>')
+keymap('n', '<Leader>fd', ':Telescope file_browser<CR>')
 keymap('n', '<Leader>r', ':Telescope live_grep<CR>')
 keymap('n', '<Leader>fg', ':call v:lua.project_files()<CR>')
 keymap('n', '<Leader>v', ':call v:lua.vimrc()<CR>')
