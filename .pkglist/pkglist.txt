@@ -39,7 +39,6 @@ lua-language-server
 maim
 make
 materia-gtk-theme
-moc
 mpv
 mtools
 ncftp

@@ -71,6 +71,11 @@ snippet '([0-9])exp' "exponent" wrA
 `!p snip.rv = match.group(1)` \\times 10^{$1}
 endsnippet
 
+context "math()"
+snippet 10 "10 power" w
+10^{$1}
+endsnippet
+
 # symbols
 context "math()"
 snippet ooo "infinity" wA

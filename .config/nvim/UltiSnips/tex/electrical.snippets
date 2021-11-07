@@ -4,18 +4,18 @@ def math():
 endglobal
 
 context "math()"
-snippet Vin "voltage in" wA
-V_{in}
+snippet '([a-zA-Z])in' "input" wrA
+`!p snip.rv = match.group(1)`_{in}
 endsnippet
 
 context "math()"
-snippet Vout "voltage out" wA
-V_{out}
+snippet '([a-zA-Z])out' "output" wrA
+`!p snip.rv = match.group(1)`_{out}
 endsnippet
 
 context "math()"
-snippet VDD "vdd" wA
-V_{DD}
+snippet '([A-Za-z])([A-Za-z])\2' "repeated letters" wrA
+`!p snip.rv = match.group(1)`_{`!p snip.rv = f'{match.group(2)}{match.group(2)}'`}
 endsnippet
 
 context "math()"
@@ -26,4 +26,14 @@ endsnippet
 context "math()"
 snippet ids "drain to source current" wA
 I_{DS}
+endsnippet
+
+context "math()"
+snippet vgs "V gate to source" wA
+V_{GS}
+endsnippet
+
+context "math()"
+snippet vth "threshold voltage" wA
+V_{Th}
 endsnippet
