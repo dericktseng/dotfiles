@@ -18,6 +18,9 @@ sudo systemctl --now enable cronie
 sudo systemctl enable sddm
 sudo ufw enable
 
+# synchronize clock with systemd timesync ntp
+sudo timedatectl set-ntp true
+
 # change shell to zsh.
 chsh -s /bin/zsh
 
@@ -57,7 +60,7 @@ while [ -z "$drivername" ] && [ ! -z "$drivernum" ]; do
 		drivername="${drivers[$drivernum]}"
 	fi
 done
-if [ ! -z "$drivername" ]; then
+if [ -n "$drivername" ]; then
 	sudo pacman -S "$drivername"
 else
 	echo "skipping graphics drivers"
@@ -71,4 +74,5 @@ echo "browser.cache.disk.enable = false"
 echo "browser.compactmode.show = true"
 echo "gfx.webrender.all = true"
 echo "accessibility.force_disabled = 1"
+echo "enable fission"
 echo "and cookie related changes on https://www.privacytools.io"
