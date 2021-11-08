@@ -38,6 +38,9 @@ return require('packer').startup(function(use)
     branch = '0.5-compat',
     run = ':TSUpdate',
     config = function() require('configs/treesitter') end,
+    requires = {
+      {'p00f/nvim-ts-rainbow'}
+    }
   }
 
   use {
@@ -56,6 +59,12 @@ return require('packer').startup(function(use)
   use {
     'blackCauldron7/surround.nvim',
     config = function() require"surround".setup {mappings_style = "surround"} end
+  }
+
+  use {
+    'norcalli/nvim-colorizer.lua',
+    config = function() require"colorizer".setup() end,
+    ft = {'css', 'javascript', 'lua', 'json', 'vim'}
   }
 
   use 'windwp/nvim-autopairs'

@@ -36,7 +36,7 @@
     dir                     # current directory
     vcs                     # git status
     # =========================[ Line #2 ]=========================
-    newline                 # \n
+    # newline               # \n
     prompt_char             # prompt symbol
   )
 

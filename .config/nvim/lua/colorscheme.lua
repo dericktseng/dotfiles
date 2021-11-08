@@ -22,7 +22,6 @@ local green = '#008700'
 local darkgreen = '#75a57c'
 local teal = '#4badb9'
 
-local lightblue = '#4194b0'
 local darkblue = '#004987'
 local blue = '#0787a9'
 local purpleblue = '#4078f2'
