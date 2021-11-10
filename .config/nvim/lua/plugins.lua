@@ -67,6 +67,7 @@ return require('packer').startup(function(use)
     ft = {'css', 'javascript', 'lua', 'json', 'vim'}
   }
 
+  use 'MetriC-DT/balance-theme.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'windwp/nvim-autopairs'
   use 'onsails/lspkind-nvim'
