@@ -123,12 +123,6 @@ highlightfunc('TabLine', darkgrey, none, none, nil)
 highlightfunc('TabLineFill', none, none, none, nil)
 highlightfunc('TabLineSel', darkblue, lighttan, none, nil)
 
--- custom tabline highlight groups for myself
-linkfunc('TablineNrSel', 'TabLineSel')
-linkfunc('TabLineDelimSel', 'TabLineSel')
-linkfunc('TabLineNr', 'Tabline')
-linkfunc('TabLineDelim', 'Tabline')
-
 highlightfunc('Title', purpleblue, nil, nil, nil)
 highlightfunc('Visual', black, skyblue, nil, nil)
 highlightfunc('VisualNOS', darkred, nil, nil, nil)

@@ -1,22 +1,21 @@
 local fn = require "functions"
-local vimg = vim.g
 local keymap = fn.keymap
 
 -- UltiSnips Settings
-vimg.UltiSnipsExpandTrigger = "<TAB>"
-vimg.UltiSnipsJumpForwardTrigger = "<TAB>"
-vimg.UltiSnipsJumpBackwardTrigger = "<S-TAB>"
+vim.g.UltiSnipsExpandTrigger = "<TAB>"
+vim.g.UltiSnipsJumpForwardTrigger = "<TAB>"
+vim.g.UltiSnipsJumpBackwardTrigger = "<S-TAB>"
 
 -- Leader keys
 keymap('n', "<SPACE>", "<NOP>")
-vimg.mapleader = " "
-vimg.maplocalleader = ";"
+vim.g.mapleader = " "
+vim.g.maplocalleader = ";"
 
 -- quick spelling fixes
 keymap('i', '<C-B>', [[<c-g>u<Esc>[s1z=`]a<c-g>u]])
 keymap('n', '<C-B>', [[mz[s1z=`z]])
 
--- gx quickfix
+-- gx fix
 keymap('n', 'gx', [[:execute 'silent! !xdg-open ' . shellescape(expand('<cWORD>'), 1)<CR>]])
 
 -- updating
@@ -33,10 +32,12 @@ keymap('v', 'k', [[v:lua.smart_nav('k')]], {expr=true})
 keymap('v', 'j', [[v:lua.smart_nav('j')]], {expr=true})
 keymap('n', '<C-J>', ':cnext<CR>')
 keymap('n', '<C-K>', ':cprev<CR>')
+-- keymap('n', '<C-Q>', [[:execute v:lua.togglelist('quickfix')<CR>]])
 keymap('n', '<C-Q>', [[:Telescope quickfix<CR>]])
 keymap('n', '<C-T>', [[:tabnew<CR>:Ex<CR>]])
 keymap('n', '<LocalLeader>j', ':lnext<CR>')
 keymap('n', '<LocalLeader>k', ':lprev<CR>')
+-- keymap('n', '<LocalLeader>q', [[:execute v:lua.togglelist('loclist')<CR>]])
 keymap('n', '<LocalLeader>q', [[:Telescope loclist<CR>]])
 keymap('n', 'Y', 'y$')
 keymap('n', 'E', '$')
@@ -137,7 +138,6 @@ keymap('n', '<Leader>ea', ':lua vim.lsp.buf.code_action()<CR>')
 keymap("n", "<Leader>ef", ":lua vim.lsp.buf.formatting()<CR>")
 keymap('n', '<Leader>eg', ':lua vim.lsp.buf.signature_help()<CR>')
 keymap('n', '<Leader>ee', ':lua vim.lsp.buf.rename()<CR>', {silent=false})
-vim.api.nvim_command('autocmd BufWrite,BufEnter,InsertLeave * call v:lua.lsplocationlist()')
 
 -- Fugitive Configurations
 keymap('n', '<Leader>gs', ':Git<CR>')

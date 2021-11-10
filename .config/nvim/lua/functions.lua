@@ -1,3 +1,5 @@
+local devicons = require('nvim-web-devicons')
+
 -- module to export
 local fn = {}
 
@@ -6,7 +8,6 @@ local fn = {}
 fn.press = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
-
 
 -- quick keymap with default noremap
 fn.keymap = function(mode, lhs, rhs, opts)
@@ -25,9 +26,77 @@ fn.smart_nav = function(key)
   return fn.press(gnav)
 end
 
--- populates location list with lsp diagnostics
-fn.lsplocationlist = function()
-  vim.lsp.diagnostic.set_loclist({open_loclist = false})
+-- quickfix or loclist
+fn.togglelist = function(list_type)
+  local vfn = vim.fn
+  local cmdopen
+  local cmdclose
+  local tabnr = vfn.tabpagenr()
+  local haslist
+
+  if list_type == 'quickfix' then
+    cmdopen = 'copen'
+    cmdclose = 'cclose'
+  else
+    cmdopen = 'lopen'
+    cmdclose = 'lclose'
+  end
+
+  for _, v in ipairs(vfn.getwininfo()) do
+    haslist = (v[list_type] == 1)
+    if tabnr == v['tabnr'] and haslist then
+      return cmdclose
+    end
+  end
+
+  return cmdopen
+end
+
+-- converts diagnostics to list
+fn.diagnostics_to_list = function(buffernum, diagnostic)
+  local uri = vim.uri_from_bufnr(buffernum)
+  local severitymap = {'E', 'W', 'I', 'H'}
+
+  local listitems = {}
+  for _, v in ipairs(diagnostic) do
+    local item = {
+      bufnr = buffernum,
+      filename = vim.uri_to_fname(uri),
+      text = v.message,
+      lnum = v.range.start.line + 1,
+      col = v.range.start.character + 1,
+      type = severitymap[v.severity]
+    }
+
+    table.insert(listitems, item)
+  end
+
+  return listitems
+end
+
+-- sends diagnostics to quickfix
+fn.diag_to_quickfix = function()
+  if vim.lsp.buf.server_ready() then
+    local fulldiagnostics = vim.lsp.diagnostic.get_all(nil)
+
+    local full_list = {}
+    for bufnr, diagnostic in ipairs(fulldiagnostics) do
+      local bufferlist = fn.diagnostics_to_list(bufnr, diagnostic)
+      table.merge(full_list, bufferlist)
+    end
+
+    vim.lsp.util.set_qflist(full_list)
+  end
+end
+
+-- sends diagnostics to loclist
+fn.diag_to_loclist = function()
+  if vim.lsp.buf.server_ready() then
+    local bufnr = vim.fn.bufnr()
+    local diagnostic = vim.lsp.diagnostic.get(bufnr)
+    local list = fn.diagnostics_to_list(bufnr, diagnostic)
+    vim.lsp.util.set_loclist(list)
+  end
 end
 
 -- tabline configurations
@@ -38,7 +107,7 @@ fn.tablinestr = function()
   local emptybuffer = '[No Name]'
   local numberdelimiter = ' '
   local padding = ' '
-  local tabdelimiter = '▎ '
+  local tabdelimiter = '▎'
   local closeicon = '%999X'
 
   for i = 1, tabcount do
@@ -48,28 +117,32 @@ fn.tablinestr = function()
     local bufname = vim.fn.bufname(bufnr)
     local bufmodified = vim.fn.getbufvar(bufnr, '&mod')
 
+    local filename = vim.fn.fnamemodify(bufname, ':t')
+    local fileExt = vim.fn.fnamemodify(bufname, ':e')
+    local icon = devicons.get_icon(filename, fileExt)
+
     line = line .. '%' .. i .. 'T'
 
     -- index and tab delimiter
     if i == vim.fn.tabpagenr() then
-      line = line .. '%#TabLineDelimSel#' .. tabdelimiter
-      line = line .. '%#TabLineNrSel#' ..  i .. numberdelimiter
-      line = line .. '%#TabLineSel#'
+      line = line .. '%#TabLineSel#' .. tabdelimiter .. i .. numberdelimiter
     else
-      line = line .. '%#TabLineDelim#' .. tabdelimiter
-      line = line .. '%#TabLineNr#' ..  i .. numberdelimiter
-      line = line .. '%#TabLine#'
+      line = line .. '%#Tabline#' .. tabdelimiter .. i .. numberdelimiter
+    end
+
+    if icon then
+      line = line .. icon .. padding
     end
 
     -- filename
     if bufname == '' then
       line = line .. emptybuffer
     else
-      line = line .. vim.fn.fnamemodify(bufname, ':t')
+      line = line .. filename
     end
 
     -- modify indicator and close icon
-    if bufmodified == 1 then
+    if bufmodified == 1 and bufname ~= '' then
       line = line .. ' ' .. modifyindicator .. ' ' .. closeicon
     else
       line = line .. '  ' .. closeicon
@@ -79,7 +152,7 @@ fn.tablinestr = function()
     line = line .. padding
   end
 
-  line = line .. '%#TabLineDelim#' .. tabdelimiter
+  line = line .. '%#TabLine#' .. tabdelimiter
   line = line .. '%#TabLineFill#%T'
   return line
 end
@@ -103,6 +176,8 @@ _G.tablinestr = fn.tablinestr
 _G.smart_nav = fn.smart_nav
 _G.project_files = fn.project_files
 _G.vimrc = fn.vimrc
-_G.lsplocationlist = fn.lsplocationlist
+_G.togglelist = fn.togglelist
+_G.diag_to_loclist = fn.diag_to_loclist
+_G.diag_to_quickfix = fn.diag_to_quickfix
 
 return fn
