@@ -48,6 +48,8 @@ bindkey "^E" vi-end-of-line
 bindkey "^F" forward-word
 bindkey "^B" backward-word
 
+bindkey -r '^['
+
 # custom keybinds
 bindkey "^[^@" tmux-opendir-widget
 

@@ -76,27 +76,31 @@ snippet pict "insert picture top align" bA
 endsnippet
 
 snippet code "insert code" bA
-\\lstinputlisting[language=${1:Python},basicstyle=\\footnotesize]{$2}$0
+\\lstinputlisting[language=${1:Python},basicstyle=\\footnotesize]{$2}
+endsnippet
+
+snippet pdf "insert pdf" bA
+\\includepdf[pages=-,pagecommand={},width=\\textwidth]{$1.pdf}
 endsnippet
 
 snippet table "Table environment" b
-\begin{table}[${1:htpb}]
-	\centering
-	\caption{${2:caption}}
-	\label{tab:${3:label}}
-	\begin{tabular}{${5:c}}
+\\begin{table}[${1:htpb}]
+	\\centering
+	\\caption{${2:caption}}
+	\\label{tab:${3:label}}
+	\\begin{tabular}{${5:c}}
 	$0${5/((?<=.)c|l|r)|./(?1: & )/g}
-	\end{tabular}
-\end{table}
+	\\end{tabular}
+\\end{table}
 endsnippet
 
 snippet fig "Figure environment" b
-\begin{figure}[${1:htpb}]
-	\centering
-	${2:\includegraphics[width=0.8\textwidth]{$3}}
-	\caption{${4:$3}}
-	\label{fig:${5:${3/\W+/-/g}}}
-\end{figure}
+\\begin{figure}[${1:htpb}]
+	\\centering
+	${2:\\includegraphics[width=0.8\\textwidth]{$3}}
+	\\caption{${4:$3}}
+	\\label{fig:${5:${3/\W+/-/g}}}
+\\end{figure}
 endsnippet
 
 snippet conc "concentration"
@@ -127,6 +131,7 @@ snippet setup "setup"
 \\usepackage{xurl}
 \\usepackage{listings}
 \\usepackage{multicol}
+\\usepackage{pdfpages}
 
 \\sisetup{
 	per-mode=fraction,

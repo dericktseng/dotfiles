@@ -113,7 +113,7 @@ handle_audio() {
     if type mocp >/dev/null 2>&1 && type mocq >/dev/null 2>&1; then
         mocq "${FPATH}" "opener" >/dev/null 2>&1
     elif type mpv >/dev/null 2>&1; then
-        mpv "${FPATH}" >/dev/null 2>&1 &
+        mpv --player-operation-mode=pseudo-gui "${FPATH}" >/dev/null 2>&1 &
     elif type media_client >/dev/null 2>&1; then
         media_client play "${FPATH}" >/dev/null 2>&1 &
     elif type mediainfo >/dev/null 2>&1; then

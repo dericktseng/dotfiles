@@ -25,6 +25,7 @@ gcc
 ghostscript
 git
 gnome-epub-thumbnailer
+gnome-keyring
 gsfonts
 hsetroot
 htop
