@@ -56,5 +56,4 @@ cmp.setup {
 
 -- source nvim-autopairs configuration
 -- here to ensure these get called after cmp is initialized
--- require('configs/pairs')
-require('configs/lspservers')
+require('configs.lspservers')

@@ -57,16 +57,26 @@ return require('packer').startup(function(use)
     ft = {'css', 'javascript', 'lua', 'json', 'vim'}
   }
 
+  use {
+    'windwp/nvim-autopairs',
+    config = function() require"configs.pairs" end,
+    after = 'nvim-cmp',
+    event = 'InsertEnter'
+  }
+
   use 'MetriC-DT/balance-theme.nvim'
   use 'kyazdani42/nvim-web-devicons'
-  use 'windwp/nvim-autopairs'
   use 'onsails/lspkind-nvim'
   use 'wbthomason/packer.nvim'
   use 'neovim/nvim-lspconfig'
 
   -- non lua plugins
+  use {
+    'SirVer/ultisnips',
+    config = function() require"configs.ultisnips" end,
+    requires = { 'honza/vim-snippets' },
+  }
+
   use 'tpope/vim-fugitive'
-  use 'SirVer/ultisnips'
-  use 'honza/vim-snippets'
   use 'junegunn/vim-easy-align'
 end)

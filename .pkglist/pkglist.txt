@@ -13,7 +13,6 @@ clipmenu
 cronie
 dkms
 dunst
-easyeffects
 fakeroot
 fd
 feh

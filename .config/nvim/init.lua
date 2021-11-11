@@ -53,15 +53,12 @@ require('plugins')
 require('mappings')
 
 -- per filetype settings
--- vim.cmd([[
--- augroup vimrc
---   autocmd!
---   au TermOpen * startinsert
---   au CmdwinEnter * call UltiSnips#LeavingBuffer()
---   au CmdwinLeave * call UltiSnips#LeavingBuffer()
---   au BufLeave * call UltiSnips#LeavingBuffer()
--- augroup END
--- ]])
+vim.cmd([[
+augroup vimrc
+  autocmd!
+  au TermOpen * startinsert
+augroup END
+]])
 
 -- fix for latex file detection
 g.tex_flavor = 'latex'

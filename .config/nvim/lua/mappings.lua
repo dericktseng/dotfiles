@@ -1,11 +1,6 @@
 local fn = require "functions"
 local keymap = fn.keymap
 
--- UltiSnips Settings
-vim.g.UltiSnipsExpandTrigger = "<TAB>"
-vim.g.UltiSnipsJumpForwardTrigger = "<TAB>"
-vim.g.UltiSnipsJumpBackwardTrigger = "<S-TAB>"
-
 -- Leader keys
 keymap('n', "<SPACE>", "<NOP>")
 vim.g.mapleader = " "

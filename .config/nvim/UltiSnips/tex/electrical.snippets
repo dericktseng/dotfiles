@@ -14,7 +14,7 @@ snippet '([a-zA-Z])out' "output" wrA
 endsnippet
 
 context "math()"
-snippet '([A-Za-z])([A-Za-z])\2' "repeated letters" wrA
+snippet '([A-Z])([A-Za-z])\2' "repeated letters" wrA
 `!p snip.rv = match.group(1)`_{`!p snip.rv = f'{match.group(2)}{match.group(2)}'`}
 endsnippet
 
