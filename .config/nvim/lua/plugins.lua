@@ -2,6 +2,7 @@
 return require('packer').startup(function(use)
   use {
     'hrsh7th/nvim-cmp',
+    config = function() require('configs.cmp') end,
     requires = {
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-nvim-lsp',
@@ -10,7 +11,12 @@ return require('packer').startup(function(use)
       'hrsh7th/cmp-calc',
       'quangnguyen30192/cmp-nvim-ultisnips',
     },
-    config = function() require('configs.cmp') end
+  }
+
+  use {
+    'neovim/nvim-lspconfig',
+    config = function() require('configs.lspservers') end,
+    after = 'nvim-cmp'
   }
 
   use {
@@ -68,7 +74,6 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
   use 'onsails/lspkind-nvim'
   use 'wbthomason/packer.nvim'
-  use 'neovim/nvim-lspconfig'
 
   -- non lua plugins
   use {

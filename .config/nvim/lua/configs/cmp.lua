@@ -53,7 +53,3 @@ cmp.setup {
     ghost_text = false,
   }
 }
-
--- source nvim-autopairs configuration
--- here to ensure these get called after cmp is initialized
-require('configs.lspservers')
