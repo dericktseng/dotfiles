@@ -1,13 +1,3 @@
--- bootstrapping packer.nvim
-local execute = vim.api.nvim_command
-local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-
-if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
-  execute 'packadd packer.nvim'
-end
-
 -- plugins
 return require('packer').startup(function(use)
   use {
@@ -20,12 +10,12 @@ return require('packer').startup(function(use)
       'hrsh7th/cmp-calc',
       'quangnguyen30192/cmp-nvim-ultisnips',
     },
-    config = function() require('configs/cmp') end
+    config = function() require('configs.cmp') end
   }
 
   use {
     'nvim-telescope/telescope.nvim',
-    config = function() require('configs/telescope') end,
+    config = function() require('configs.telescope') end,
     requires = {
       {'nvim-lua/plenary.nvim'},
       {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'},
@@ -37,7 +27,7 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     branch = '0.5-compat',
     run = ':TSUpdate',
-    config = function() require('configs/treesitter') end,
+    config = function() require('configs.treesitter') end,
     requires = {
       {'p00f/nvim-ts-rainbow'}
     }
@@ -46,14 +36,14 @@ return require('packer').startup(function(use)
   use {
     'iamcco/markdown-preview.nvim',
     run = 'cd app && yarn install',
-    config = function() require('configs/markdown-preview') end,
+    config = function() require('configs.markdown-preview') end,
     ft = {'markdown'}
   }
 
   use {
     'nvim-lualine/lualine.nvim',
-    config = function() require('configs/lualine') end,
-    requires = {'kyazdani42/nvim-web-devicons', opt=true}
+    config = function() require('configs.lualine') end,
+    requires = {'kyazdani42/nvim-web-devicons'}
   }
 
   use {
