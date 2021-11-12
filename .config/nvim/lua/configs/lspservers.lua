@@ -6,7 +6,7 @@ local servers = {
   'pyright',
   'rust_analyzer',
   'clangd',
-  'texlab',
+  -- 'texlab',
 }
 
 for _, lsp in ipairs(servers) do
@@ -21,5 +21,5 @@ end
 vim.api.nvim_command('autocmd BufWrite,BufEnter,InsertLeave * call v:lua.diag_to_loclist()')
 
 -- Other more specific configurations
-require 'configs/lsp/texlab'
+-- require 'configs/lsp/texlab'
 require 'configs/lsp/sumneko_lua'

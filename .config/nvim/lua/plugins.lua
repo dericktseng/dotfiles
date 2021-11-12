@@ -82,6 +82,11 @@ return require('packer').startup(function(use)
     requires = { 'honza/vim-snippets' },
   }
 
+  use {
+    'lervag/vimtex',
+    config = function() require"configs.vimtex" end,
+  }
+
   use 'tpope/vim-fugitive'
   use 'junegunn/vim-easy-align'
 end)

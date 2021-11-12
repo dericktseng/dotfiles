@@ -10,29 +10,6 @@ g.loaded_node_provider = 0
 g.loaded_perl_provider = 0
 g.python3_host_prog = '/usr/bin/python3'
 
--- disabling builtin plugins
-local disabled_built_ins = {
-  'gzip',
-  'zip',
-  'zipPlugin',
-  'tar',
-  'tarPlugin',
-  'getscript',
-  'getscriptPlugin',
-  'vimball',
-  'vimballPlugin',
-  '2html_plugin',
-  'logipat',
-  'rrhelper',
-  'spellfile_plugin',
-  'matchit',
-}
-
-
-for _, plugin in pairs(disabled_built_ins) do
-  g['loaded' ..  '_' .. plugin] = 1
-end
-
 -- colorscheme and true color settings
 vim.api.nvim_command('filetype plugin indent on')
 

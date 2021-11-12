@@ -1,7 +1,7 @@
 # math snippets
 global !p
 def math():
-	return vim.eval('Syntax_in_mathzone()') == '1'
+    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
 endglobal
 
 # fancy fractions
