@@ -4,12 +4,12 @@ def math():
 endglobal
 
 context "math()"
-snippet '([a-zA-Z])in' "input" wrA
+snippet '([A-Z])in' "input" wrA
 `!p snip.rv = match.group(1)`_{in}
 endsnippet
 
 context "math()"
-snippet '([a-zA-Z])out' "output" wrA
+snippet '([A-Z])out' "output" wrA
 `!p snip.rv = match.group(1)`_{out}
 endsnippet
 
