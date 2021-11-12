@@ -4,7 +4,7 @@ local Rule = require('nvim-autopairs.rule')
 -- sourced in cmp.lua to make sure this comes after
 npairs.setup{
   check_ts = true,
-  enable_check_bracket_line = true,
+  enable_check_bracket_line = false,
   fast_wrap = {},
 }
 

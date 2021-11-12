@@ -81,3 +81,6 @@ opt.lazyredraw = true
 
 -- disable folding
 o.foldenable = false
+
+-- sets the conceallevel
+vim.opt.conceallevel = 2

@@ -1,6 +1,3 @@
--- sets the conceallevel
-vim.opt.conceallevel = 2
-
 -- settings for vimtex
 vim.g.vimtex_view_general_viewer = 'xdg-open'
 vim.g.vimtex_view_method = 'zathura'
