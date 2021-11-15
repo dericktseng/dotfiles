@@ -65,12 +65,13 @@ keymap('n', '<C-G>', [[:silent exec '!gimp ' . expand('<cfile>') . ' &'<CR>]])
 keymap('n', '<C-H>', [[:silent exec '!inkscape ' . expand('<cfile>') . ' &'<CR>]])
 
 -- add surrounding brackets, quotes, etc
-keymap('v', '"', [[<esc>`<i"<esc>`>la"<esc>]])
-keymap('v', "'", [[<esc>`<i'<esc>`>la'<esc>]])
-keymap('v', '(', [[<esc>`<i(<esc>`>la)<esc>]])
-keymap('v', '[', [[<esc>`<i[<esc>`>la]<esc>]])
-keymap('v', '{', [[<esc>`<i{<esc>`>la}<esc>]])
-keymap('v', '|', [[<esc>`<i|<esc>`>la|<esc>]])
+keymap('v', '"', [[<esc>`>a"<esc>`<i"<esc>%]])
+keymap('v', "'", [[<esc>`>a'<esc>`<i'<esc>%]])
+keymap('v', '(', [[<esc>`>a)<esc>`<i(<esc>%]])
+keymap('v', '[', [[<esc>`>a]<esc>`<i[<esc>%]])
+keymap('v', '{', [[<esc>`>a}<esc>`<i{<esc>%]])
+keymap('v', '|', [[<esc>`>a|<esc>`<i|<esc>%]])
+--tester
 
 -- vim easy align
 vim.cmd([[

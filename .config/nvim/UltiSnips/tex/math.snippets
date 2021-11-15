@@ -247,8 +247,8 @@ snippet '([^\s].+)box' "boxed environment aftermatch" wrA
 endsnippet
 
 context "math()"
-snippet '([+-]?)(\d*\.\d+|\d+)si' "SI unit aftermatch" irA
-\\SI{`!p snip.rv=match.group(1)+match.group(2)`}{$1}
+snippet '([+-]?)(\d*\.\d+|\d+)([e]?[-]?\d*)si' "SI unit aftermatch" irA
+\\SI{`!p snip.rv=match.group(1)+match.group(2)+match.group(3)`}{$1}
 endsnippet
 
 context "math()"

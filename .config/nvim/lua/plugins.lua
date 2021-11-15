@@ -20,6 +20,13 @@ return require('packer').startup(function(use)
   }
 
   use {
+    'windwp/nvim-autopairs',
+    config = function() require'configs.pairs' end,
+    after = 'nvim-cmp',
+    event = 'InsertEnter'
+  }
+
+  use {
     'nvim-telescope/telescope.nvim',
     config = function() require('configs.telescope') end,
     requires = {
@@ -54,20 +61,13 @@ return require('packer').startup(function(use)
 
   use {
     'blackCauldron7/surround.nvim',
-    config = function() require"surround".setup {mappings_style = "surround"} end
+    config = function() require'surround'.setup {mappings_style = 'surround'} end
   }
 
   use {
     'norcalli/nvim-colorizer.lua',
-    config = function() require"colorizer".setup() end,
+    config = function() require'colorizer'.setup() end,
     ft = {'css', 'javascript', 'lua', 'json', 'vim'}
-  }
-
-  use {
-    'windwp/nvim-autopairs',
-    config = function() require"configs.pairs" end,
-    after = 'nvim-cmp',
-    event = 'InsertEnter'
   }
 
   use 'MetriC-DT/balance-theme.nvim'
@@ -78,13 +78,13 @@ return require('packer').startup(function(use)
   -- non lua plugins
   use {
     'SirVer/ultisnips',
-    config = function() require"configs.ultisnips" end,
+    config = function() require'configs.ultisnips' end,
     requires = { 'honza/vim-snippets' },
   }
 
   use {
     'lervag/vimtex',
-    config = function() require"configs.vimtex" end,
+    config = function() require'configs.vimtex' end,
   }
 
   use 'tpope/vim-fugitive'
