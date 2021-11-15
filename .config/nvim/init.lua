@@ -82,5 +82,9 @@ opt.lazyredraw = true
 -- disable folding
 o.foldenable = false
 
+-- enable smart case
+o.smartcase = true
+o.ignorecase = true
+
 -- sets the conceallevel
 vim.opt.conceallevel = 2
