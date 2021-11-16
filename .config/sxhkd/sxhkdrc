@@ -175,6 +175,10 @@ super + {o,i}
 ctrl + {1-9,0}
     bspc desktop -f '^{1-9,10}'
 
+# alternative focus the given desktop
+super + {1-9,0}
+    bspc desktop -f '^{1-9,10}'
+
 # send to given desktop
 ctrl + alt + {1-9,0}
     bspc node -d '^{1-9,10}' --follow

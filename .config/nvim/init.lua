@@ -87,4 +87,4 @@ o.smartcase = true
 o.ignorecase = true
 
 -- sets the conceallevel
-vim.opt.conceallevel = 2
+opt.conceallevel = 2

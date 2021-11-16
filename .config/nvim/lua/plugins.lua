@@ -1,4 +1,4 @@
--- plugins
+-- lua plugins
 return require('packer').startup(function(use)
   use {
     'hrsh7th/nvim-cmp',

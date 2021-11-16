@@ -41,6 +41,7 @@ floatapps=(
     'Kanaconvert'
     'Inkscape'
     'Matplotlib'
+    'mpv'
 )
 
 for appname in "${floatapps[@]}";do
