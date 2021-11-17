@@ -30,6 +30,7 @@ hsetroot
 htop
 i3lock
 jq
+julia
 libimagequant
 libxft
 linux
@@ -60,8 +61,8 @@ papirus-icon-theme
 patch
 pavucontrol
 picom
-pipewire-pulse
 pipewire-alsa
+pipewire-pulse
 pkgconf
 polkit-gnome
 powertop
@@ -75,6 +76,8 @@ python-sympy
 ripgrep
 rlwrap
 rofi
+sagemath
+sagetex
 sddm
 socat
 strace
