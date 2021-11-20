@@ -2,6 +2,7 @@ acpi
 acpi_call
 acpilight
 alsa-utils
+aria2
 autoconf
 automake
 base

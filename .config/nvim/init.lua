@@ -61,7 +61,7 @@ o.clipboard = 'unnamedplus'
 o.showmode = false
 
 -- sets the cursor to have a buffer. High number to always be centered.
-o.so = 9
+o.scrolloff = 9
 
 -- tabline
 o.showtabline = 2
