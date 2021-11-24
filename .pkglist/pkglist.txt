@@ -86,6 +86,7 @@ sudo
 sxhkd
 texlab
 texlive-core
+texlive-most
 tk
 tmux
 ttf-dejavu
