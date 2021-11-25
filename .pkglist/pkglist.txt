@@ -111,6 +111,7 @@ xorg-xrandr
 xorg-xset
 xorg-xsetroot
 xss-lock
+xterm
 yarn
 youtube-dl
 zathura
