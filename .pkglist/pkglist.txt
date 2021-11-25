@@ -43,7 +43,6 @@ make
 materia-gtk-theme
 mpv
 mtools
-ncftp
 neovim
 network-manager-applet
 networkmanager
