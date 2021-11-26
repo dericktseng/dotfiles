@@ -11,7 +11,7 @@
 - [ ] Zathura search integration with ripgrep-all
 
 ## Installation
-1. Execute `curl 'https://git.io/JCfgy' | bash`
+1. Execute `curl -L 'https://git.io/JCfgy' | bash`
 1. Navigate to `$HOME/.pkglist`
 1. Run the `run_all.sh` script (without sudo privileges)
     - `run_all.sh` installs all packages in `pkglist.txt` and `pkglist_aur.txt`
