@@ -65,7 +65,6 @@ pipewire-pulse
 pkgconf
 polkit-gnome
 powertop
-pulseaudio-alsa
 profile-sync-daemon
 python-matplotlib
 python-numpy

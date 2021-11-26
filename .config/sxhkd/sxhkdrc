@@ -100,21 +100,27 @@ super + y
 super + g
     bspc node -s biggest.local
 
-# audio controls
-{XF86AudioLowerVolume, XF86AudioRaiseVolume, XF86AudioMute}
-    amixer -q -D pulse sset Master {3%- unmute,3%+ unmute,toggle} && volumenotify.sh
+# Audio Controls
+# Mute Audio
+{XF86AudioMute, super + m}
+    pactl set-sink-mute @DEFAULT_SINK@ toggle && \
+    volumenotify.sh
 
-# audio controls
-{Scroll_Lock,Pause,super + m}
-    amixer -q -D pulse sset Master {3%- unmute,3%+ unmute, toggle} && volumenotify.sh
+# increase volume
+{XF86AudioLowerVolume, Scroll_Lock}
+    pactl set-sink-mute @DEFAULT_SINK@ false && \
+    pactl set-sink-volume @DEFAULT_SINK@ -3% && \
+    volumenotify.sh
 
-# laptop brightness increase
-XF86MonBrightnessUp
-    xbacklight -inc 5 && brightnessnotify.sh
+# decrease volume
+{XF86AudioRaiseVolume, Pause}
+    pactl set-sink-mute @DEFAULT_SINK@ false && \
+    pactl set-sink-volume @DEFAULT_SINK@ +3% && \
+    volumenotify.sh
 
-# laptop brightness increase
-XF86MonBrightnessDown
-    xbacklight -dec 5 && brightnessnotify.sh
+# laptop brightness increase or decrease
+{XF86MonBrightnessUp, XF86MonBrightnessDown}
+    xbacklight {-inc, -dec} 5 && brightnessnotify.sh
 
 # fullscreen same screenshot
 @Print
