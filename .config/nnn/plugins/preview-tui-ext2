@@ -177,7 +177,7 @@ preview_file() {
 		elif exists exa; then
 			fifo_pager exa -G --colour=always 2>/dev/null
 		else
-			fifo_pager /usr/bin/ls -1 --color=always --group-directories-first
+			fifo_pager /usr/bin/ls -1 --color=never -G
 		fi
 	elif [ "${encoding#*)}" = "binary" ]; then
 		if [ "${mimetype%%/*}" = "image" ]; then

@@ -12,7 +12,16 @@ timeout=2000
 media=$(mpvtitle.sh)
 
 if [[ "$isMuted" == 'Mute: no' ]]; then
-	dunstify -r $dunstID -t $timeout -i $iconSound -h int:value:$volPercent "$title" "$media"
+	dunstify \
+        -r $dunstID \
+        -t $timeout \
+        -i $iconSound \
+        -h int:value:$volPercent \
+        "$title" "$media"
 else
-	dunstify -r $dunstID -t $timeout -i $iconMuted "$title" "Muted"
+	dunstify \
+        -r $dunstID \
+        -t $timeout \
+        -i $iconMuted \
+        "$title" "Muted"
 fi
