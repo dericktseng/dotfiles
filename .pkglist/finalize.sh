@@ -66,6 +66,10 @@ else
 	echo "skipping graphics drivers"
 fi
 
+# install nvim packer
+git clone --depth 1 'https://github.com/wbthomason/packer.nvim'\
+    "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
+
 # firefox changes
 echo "Firefox Manual about:config changes"
 echo "https://wiki.archlinux.org/title/Firefox#Hardware_video_acceleration"
