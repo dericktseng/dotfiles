@@ -37,6 +37,10 @@ export CM_HISTLENGTH=15
 export CM_SELECTIONS="clipboard"
 export CM_OUTPUT_CLIP=1
 
+# fix for java windows
+export _JAVA_AWT_WM_NONREPARENTING=1
+export AWT_TOOLKIT=MToolkit
+
 # NNN colors
 BLOCK_DEVICE="c1"
 CHAR_DEVICE="d6"
