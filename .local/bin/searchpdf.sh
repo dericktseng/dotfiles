@@ -1,6 +1,6 @@
 #!/bin/bash
 
-bookdir="$HOME/Documents/books"
+bookdir="$HOME/Documents/"
 roficmd="rofi -keep-right -dmenu -matching fuzzy -sorting-method fzf -sort -i -p FILES -multi-select"
 mkdir -p $bookdir
 cd $bookdir
