@@ -33,6 +33,7 @@ htop
 i3lock
 jq
 julia
+jupyter
 libimagequant
 libxft
 linux
@@ -72,17 +73,17 @@ python-numpy
 python-pip
 python-pynvim
 python-scipy
+python-symengine
 python-sympy
 ripgrep
 rlwrap
 rofi
-sagemath
-sagetex
 sddm
 socat
 strace
 sudo
 sxhkd
+symengine
 texlab
 texlive-core
 texlive-most
