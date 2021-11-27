@@ -12,6 +12,7 @@ bspwm
 clang
 clipmenu
 cronie
+dex
 dkms
 dunst
 easyeffects

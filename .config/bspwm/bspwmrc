@@ -79,18 +79,24 @@ $HOME/.config/bspwm/desktoprename.sh > /dev/null 2>&1 &
 # polybar - suppress output
 $HOME/.config/polybar/launch.sh > /dev/null 2>&1 &
 
-
 # background programs
-programs=('clipmenud' 'udiskie' 'nm-applet' 'blueman-applet' 'dunst' 'easyeffects')
-argument=(''          '-t'      ''          ''               ''      '--gapplication-service')
+programs=(
+    'clipmenud'
+    'udiskie -t'
+    'nm-applet'
+    'blueman-applet'
+    'dunst'
+)
 
 # (re)start background programs
 for i in "${!programs[@]}"; do
-    program="${programs[$i]}"
-    arg="${argument[$i]}"
+    cmd="${programs[$i]}"
+    program=${cmd%% *}
+    args=$(echo "$cmd" | sed "s/^$program//")
+
     if command -v "$program" &> /dev/null; then
         pkill -f "$program"
-        $program $arg &
+        $program $args &
     fi
 done
 

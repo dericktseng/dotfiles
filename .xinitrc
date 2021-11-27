@@ -47,6 +47,9 @@ xrandr -r 75 > /dev/null 2>&1 || true
 # gnome keyring
 /usr/bin/gnome-keyring-daemon -s &
 
+# dex for xdg-autostart programs
+/usr/bin/dex -a &
+
 # screensaver default 10 mins timeout
 xset s 600 600
 
