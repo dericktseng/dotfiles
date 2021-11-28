@@ -2,9 +2,9 @@ configuration {
 	modi: "window,run,ssh,drun";
 	terminal: "termite";
 	font: "Noto Sans 12";
-	theme: "base" ;
 	scroll-method: 1;
 	eh: 1;
+/*	theme: "base" ;*/
 /*	icon-theme: "Papirus Light";*/
 /*	sort: true;*/
 /*	hide-scrollbar: false;*/
@@ -150,3 +150,7 @@ configuration {
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 /*	show-icons: true;*/
 }
+
+@theme "base"
+
+/* vim:ft=css
