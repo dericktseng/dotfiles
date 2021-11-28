@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sinkname="@DEFAULT_SINK@"
-volPercent="$(pactl get-sink-volume ${sinkname} | cut -d ' ' -f 6 | tr -cd '[:digit:]')"
+volPercent="$(pactl get-sink-volume ${sinkname} | head -n -1 | cut -d '/' -f 2 | tr -cd '[:digit:]')"
 isMuted="$(pactl get-sink-mute ${sinkname})"
 
 title="Volume"
