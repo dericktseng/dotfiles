@@ -58,6 +58,7 @@ floatappsMove=(
     'x2goclient'
     'easyeffects'
     'Picard'
+    'Steam'
 )
 
 for appname in "${floatappsMove[@]}";do
