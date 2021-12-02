@@ -75,6 +75,9 @@ opt.shortmess:append('cI')
 -- completeopt
 o.completeopt = 'menu,menuone,noselect'
 
+-- automatic preview rename with :%s
+opt.inccommand = 'nosplit'
+
 o.tabline = '%!v:lua.tablinestr()'
 
 opt.lazyredraw = true
