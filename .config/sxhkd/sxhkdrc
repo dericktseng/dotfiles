@@ -189,6 +189,10 @@ super + {1-9,0}
 ctrl + alt + {1-9,0}
     bspc node -d '^{1-9,10}' --follow
 
+# alternative send to given desktop
+super + alt + {1-9,0}
+    bspc node -d '^{1-9,10}' --follow
+
 # hide windows
 super + w
     bspc node -g hidden
