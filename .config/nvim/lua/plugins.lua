@@ -39,7 +39,7 @@ return require('packer').startup(function(use)
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
-    config = function() require('configs.treesitter') end,
+    config = function() require'configs.treesitter' end,
     requires = {
       {'p00f/nvim-ts-rainbow'}
     }
@@ -48,13 +48,13 @@ return require('packer').startup(function(use)
   use {
     'iamcco/markdown-preview.nvim',
     run = 'cd app && yarn install',
-    config = function() require('configs.markdown-preview') end,
+    config = function() require'configs.markdown-preview' end,
     ft = {'markdown'}
   }
 
   use {
     'nvim-lualine/lualine.nvim',
-    config = function() require('configs.lualine') end,
+    config = function() require'configs.lualine' end,
     requires = {'kyazdani42/nvim-web-devicons'}
   }
 
@@ -69,7 +69,11 @@ return require('packer').startup(function(use)
     ft = {'css', 'javascript', 'lua', 'json', 'vim'}
   }
 
-  use 'MetriC-DT/balance-theme.nvim'
+  use {
+    'MetriC-DT/balance-theme.nvim',
+    config = function() require'configs.colorscheme' end,
+  }
+
   use 'kyazdani42/nvim-web-devicons'
   use 'onsails/lspkind-nvim'
   use 'wbthomason/packer.nvim'
