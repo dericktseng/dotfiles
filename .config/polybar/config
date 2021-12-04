@@ -188,7 +188,7 @@ label-volume = %percentage%%
 
 label-muted = %{T3}婢%{T-} muted
 label-muted-background = ${colors.purple}
-label-muted-foreground = ${colors.grey}
+label-muted-foreground = ${colors.black}
 label-muted-padding = 1
 
 

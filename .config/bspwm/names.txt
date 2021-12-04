@@ -1,4 +1,5 @@
 Termite            = terminal
+XTerm              = terminal
 st-256color        = terminal
 firefox            = browser
 Zathura            = pdf

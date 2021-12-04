@@ -9,8 +9,8 @@ Xft.hintstyle: hintfull
 Xft.lcdfilter: lcdfilter
 ! fonts
 XTerm*renderFont: true
-XTerm.vt100.faceName: xft:FiraCode Nerd Font Mono:style=Retina:antialias=true:hinting=true
-XTerm*faceSize: 13
+XTerm.vt100.faceName: xft:FiraCode Nerd Font Mono:antialias=true:hinting=true
+XTerm*faceSize: 12
 XTerm*utf8: 2
 XTerm*locale: true
 
@@ -25,7 +25,7 @@ XTerm.vt100.metaSendsEscape: true
 ! Every shell is a login shell by default (for inclusion of all necessary environment variables)
 XTerm*loginshell: true
 XTerm*savelines: 10000
-XTerm*internalBorder: 20
+XTerm*internalBorder: 2
 ! URL selection
 XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
@@ -64,41 +64,25 @@ URxvt*letterSpace: 0
 URxvt*scrollTtyKeypress: true
 
 !! COLORS
-*.foreground: #10577b
-*.background: #fdfdfe
-*.cursorColor: #88B8D1
+*.foreground: #2b4f76
+*.background: #f8fafa
+*.cursorColor: #77818c
 
 ! COLORS
 ! ====================
-! black
-*.color0:       #dff4ff
-*.color8:       #a7a7a7
-
-! red
-*.color1:       #ff8671
-*.color9:       #ff8671
-
-! green
-*.color2:       #88B8D1
-*.color10:      #88B8D1
-
-! yellow
-*.color3:       #499ec8
-*.color11:      #499ec8
-
-! blue
-*.color4:       #59b6ea
-*.color12:      #59b6ea
-
-! magenta
-*.color5:       #5eb8a5
-*.color13:      #5eb8a5
-
-! cyan
-*.color6:       #008e70
-*.color14:      #008e70
-
-! white
-*.color7:       #10577b
-*.color15:      #10577b
-
+*.color0: #202124
+*.color1: #ea4335
+*.color2: #34a853
+*.color3: #f79c06
+*.color4: #4285f4
+*.color5: #a142f4
+*.color6: #24c1e0
+*.color7: #e8eaed
+*.color8 : #a1a6ad
+*.color9 : #ea4335
+*.color10: #34a853
+*.color11: #f79c06
+*.color12: #4285f4
+*.color13: #a142f4
+*.color14: #24c1e0
+*.color15: #e8eaed
