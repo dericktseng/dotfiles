@@ -192,6 +192,9 @@ label-muted-background = ${colors.purple}
 label-muted-foreground = ${colors.black}
 label-muted-padding = 1
 
+interval = 3
+use-ui-max = false
+
 
 [module/backlight]
 type = internal/backlight

@@ -103,20 +103,15 @@ super + g
 # Audio Controls
 # Mute Audio
 {XF86AudioMute, super + m}
-    pactl set-sink-mute @DEFAULT_SINK@ toggle && \
-    volumenotify.sh
+    volumectl.sh toggle
 
 # increase volume
 {XF86AudioLowerVolume, Scroll_Lock}
-    pactl set-sink-mute @DEFAULT_SINK@ false && \
-    pactl set-sink-volume @DEFAULT_SINK@ -3% && \
-    volumenotify.sh
+    volumectl.sh -3
 
 # decrease volume
 {XF86AudioRaiseVolume, Pause}
-    pactl set-sink-mute @DEFAULT_SINK@ false && \
-    pactl set-sink-volume @DEFAULT_SINK@ +3% && \
-    volumenotify.sh
+    volumectl.sh +3
 
 # laptop brightness increase or decrease
 {XF86MonBrightnessUp, XF86MonBrightnessDown}
