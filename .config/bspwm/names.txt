@@ -1,4 +1,5 @@
 Termite            = terminal
+kitty              = terminal
 XTerm              = terminal
 st-256color        = terminal
 firefox            = browser
@@ -18,3 +19,4 @@ filemanager        = folder
 easyeffects        = music
 Wxmaxima           = math
 Xmaxima            = math
+feh                = image

@@ -130,6 +130,7 @@ ws-icon-21 = notebook;%{T3}ﴬ%{T-}
 ws-icon-22 = music;%{T3}%{T-}
 ws-icon-23 = math;%{T3}%{T-}
 ws-icon-24 = steam;%{T3}%{T-}
+ws-icon-25 = image;%{T3}%{T-}
 
 label-mode-padding = 2
 label-mode-foreground = ${colors.black}
