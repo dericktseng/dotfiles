@@ -50,10 +50,6 @@ bindkey "^B" backward-word
 
 bindkey -r '^['
 
-# custom keybinds
-bindkey "^[^@" tmux-opendir-widget
-bindkey "^[x" tmux-kill-session-widget
-
 # enable globbing
 setopt ksh_glob
 setopt extended_glob

@@ -1,4 +1,4 @@
-session=$(tmux ls | fzf)
+session=$(tmux ls | fzf-tmux)
 
 if [ -n "$session" ]; then
     name=$(echo "$session" | cut -d ':' -f 1)

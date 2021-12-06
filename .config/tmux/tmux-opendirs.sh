@@ -7,7 +7,7 @@ directories=(
 if [[ $# -eq 1 ]]; then
 	selected=$1
 else
-	selected=$(fd -t d -L --exact-depth 1 . "${directories[@]}" | fzf --delimiter / --with-nth -2..-1 )
+	selected=$(fd -t d -L --exact-depth 1 . "${directories[@]}" | fzf-tmux --delimiter / --with-nth -2..-1 )
 fi
 
 if [[ -z $selected ]]; then
@@ -30,3 +30,5 @@ if [[ -z $TMUX ]]; then
 else
 	tmux switch-client -t $selected_name
 fi
+
+tmux refresh-client -S
