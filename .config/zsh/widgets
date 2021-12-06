@@ -2,3 +2,6 @@
 
 tmux-opendir-widget() ~/.config/tmux/tmux-opendirs.sh
 zle -N tmux-opendir-widget
+
+tmux-kill-session-widget() ~/.config/tmux/tmux-kill-sessions.sh
+zle -N tmux-kill-session-widget
