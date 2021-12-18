@@ -35,7 +35,6 @@ i3lock
 jq
 julia
 jupyter
-kitty
 libimagequant
 libxft
 linux
