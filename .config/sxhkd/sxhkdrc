@@ -4,15 +4,15 @@
 
 # terminal emulator
 super + Return
-    $TERMAPP
+    $TERMINAL
 
 # nnn launcher
 super + n
-    $TERMAPP  --class "filemanager" -e nnnfm.sh
+    $TERMINAL  --class "filemanager" -e nnnfm.sh
 
 # Play Music
 ctrl + shift + m
-    $TERMAPP -e $HOME/Music/yt-playlist
+    $TERMINAL -e $HOME/Music/yt-playlist
 
 # program launcher
 super + x
