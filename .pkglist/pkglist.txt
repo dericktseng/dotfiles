@@ -13,6 +13,7 @@ clang
 clipmenu
 cronie
 dex
+djvulibre
 dkms
 dunst
 easyeffects

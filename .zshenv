@@ -62,7 +62,7 @@ root="/:/"
 docs="z:$HOME/Documents/books"
 
 # NNN Plugins
-previewtuiext="p:-preview-tui-ext2"
+previewtui="p:-preview-tui"
 suedit="s:suedit"
 fzopen="f:-fzopen2"
 fzcd="d:-fzcd2"
@@ -72,7 +72,7 @@ imagecopy='i:!convert $nnn png:- | xclip -sel clipboard -t image/png*'
 
 # NNN configurations
 export NNN_FCOLORS="$BLOCK_DEVICE$CHAR_DEVICE$DIRECTORY$EXECUTABLE$REGULAR$HARD_LINK$SYMBOLIC_LINK$MISSING$ORPHANED$FIFO$SOCKET$UNKNOWN"
-export NNN_PLUG="$previewtuiext;$suedit;$fzopen;$fzcd;$getplugs;$rsynccp;$imagecopy"
+export NNN_PLUG="$previewtui;$suedit;$fzopen;$fzcd;$getplugs;$rsynccp;$imagecopy"
 export NNN_BMS="$dtmp;$home;$root;$docs"
 export NNN_OPENER="$HOME/.config/nnn/plugins/nuke2"
 export NNN_OPTS="ac"
