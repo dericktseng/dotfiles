@@ -97,6 +97,8 @@ ttf-roboto
 udiskie
 ueberzug
 ufw
+unrar
+unzip
 usbutils
 wget
 wmctrl
