@@ -33,6 +33,7 @@ gsfonts
 hsetroot
 htop
 i3lock
+inetutils
 jq
 julia
 jupyter
