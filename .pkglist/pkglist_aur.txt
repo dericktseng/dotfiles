@@ -1,4 +1,3 @@
-discord_arch_electron
 nerd-fonts-fira-code
 neovim-remote
 polybar-git
