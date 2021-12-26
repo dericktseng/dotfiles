@@ -6,7 +6,7 @@ GenericName=X compositor
 Comment=A X compositor
 Categories=Utility;
 Keywords=compositor;composite manager;window effects;transparency;opacity;
-TryExec=picom
+TryExec=picom --config $HOME/.config/picom/picom.conf -b --experimental-backends
 Exec=picom
 Icon=picom
 # Thanks to quequotion for providing this file!
