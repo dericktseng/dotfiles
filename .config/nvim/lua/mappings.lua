@@ -108,10 +108,10 @@ keymap('n', '<Leader>t', ':sp<CR><c-w>J:resize12<CR>:term<CR>')
 
 -- Telescope
 keymap('n', '<Leader>ff', ':lua require("telescope.builtin").find_files({no_ignore=true})<CR>')
+keymap('n', '<Leader>fd', ':lua require("telescope").extensions.file_browser.file_browser()<CR>')
 keymap('n', '<Leader>fb', ':Telescope buffers<CR>')
 keymap('n', '<Leader>fh', ':Telescope help_tags<CR>')
 keymap('n', '<Leader>fl', ':Telescope heading<CR>')
-keymap('n', '<Leader>fd', ':Telescope file_browser<CR>')
 keymap('n', '<Leader>fr', ':Telescope live_grep<CR>')
 keymap('n', '<Leader>fz', ':Telescope current_buffer_fuzzy_find<CR>')
 keymap('n', '<Leader>ft', ':Telescope treesitter<CR>')
