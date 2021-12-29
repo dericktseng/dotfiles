@@ -82,11 +82,12 @@ $HOME/.config/polybar/launch.sh > /dev/null 2>&1 &
 
 # background programs
 programs=(
-    'clipmenud'
-    'udiskie -t'
-    'nm-applet'
-    'blueman-applet'
-    'dunst'
+    "clipmenud"
+    "udiskie -t"
+    "nm-applet"
+    "blueman-applet"
+    "dunst"
+    "picom --config $HOME/.config/picom/picom.conf -b --experimental-backends"
 )
 
 # (re)start background programs

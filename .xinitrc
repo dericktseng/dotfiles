@@ -35,9 +35,6 @@ fi
 # cursor fix
 xsetroot -cursor_name left_ptr
 
-# compositor
-picom --config $HOME/.config/picom/picom.conf -b --experimental-backends
-
 # monitor refresh rate, set to 75 if possible
 xrandr -r 75 > /dev/null 2>&1 || true
 
