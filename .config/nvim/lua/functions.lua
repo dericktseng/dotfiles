@@ -98,6 +98,12 @@ fn.vimrc = function()
   })
 end
 
+fn.local_diagnostics = function()
+  require'telescope.builtin'.diagnostics({
+    bufnr = 0,
+  })
+end
+
 -- global vim variables
 _G.tablinestr = fn.tablinestr
 _G.smart_nav = fn.smart_nav
@@ -106,5 +112,6 @@ _G.vimrc = fn.vimrc
 _G.togglelist = fn.togglelist
 _G.diag_to_loclist = fn.diag_to_loclist
 _G.diag_to_quickfix = fn.diag_to_quickfix
+_G.local_diagnostics = fn.local_diagnostics
 
 return fn
