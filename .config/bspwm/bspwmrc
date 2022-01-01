@@ -59,6 +59,7 @@ floatappsMove=(
     'easyeffects'
     'Picard'
     'Steam'
+    'SimpleScreenRecorder'
 )
 
 for appname in "${floatappsMove[@]}";do
@@ -87,7 +88,7 @@ programs=(
     "nm-applet"
     "blueman-applet"
     "dunst"
-    "picom --config $HOME/.config/picom/picom.conf -b --experimental-backends"
+    "picom --config $HOME/.config/picom/picom.conf -b"
 )
 
 # (re)start background programs
