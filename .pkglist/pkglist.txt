@@ -75,6 +75,7 @@ python-matplotlib
 python-numpy
 python-pip
 python-pynvim
+python-pyqt5
 python-scipy
 python-symengine
 python-sympy
