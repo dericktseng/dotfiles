@@ -6,6 +6,7 @@ aria2
 autoconf
 automake
 base
+base-devel
 bc
 bdf-unifont
 bspwm
