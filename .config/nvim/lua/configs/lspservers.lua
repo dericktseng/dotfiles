@@ -20,4 +20,4 @@ end
 
 -- Other more specific configurations
 -- require 'configs/lsp/texlab'
-require 'configs/lsp/sumneko_lua'
+-- require 'configs/lsp/sumneko_lua'
