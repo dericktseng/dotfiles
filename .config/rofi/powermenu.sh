@@ -6,13 +6,14 @@ rofi_command="rofi -theme powermenu.rasi"
 ishutdown=" shutdown"
 ireboot=" reboot"
 ilock=" lock"
+ihibernate="⏾ hibernate"
 isuspend="鈴 suspend"
 ilogout=" logout"
 
 # Variable passed to rofi
-options="$ishutdown\n$ireboot\n$ilock\n$isuspend\n$ilogout"
+options="$ishutdown\n$ireboot\n$ilock\n$ihibernate\n$isuspend\n$ilogout"
 
-chosen="$(echo -e "$options" | $rofi_command -p "POWER MENU" -dmenu -selected-row 2)"
+chosen="$(echo -e "$options" | $rofi_command -p "POWER MENU" -dmenu -selected-row 3)"
 case $chosen in
     $ishutdown)
         systemctl poweroff
@@ -26,6 +27,9 @@ case $chosen in
     $isuspend)
         amixer set Master mute
         systemctl suspend
+        ;;
+    $ihibernate)
+        systemctl hibernate
         ;;
     $ilogout)
         loginctl terminate-user "$(whoami)"

@@ -16,7 +16,7 @@ inputbar {
 
 listview {
 	fixed-height: true;
-	lines: 5;
+	lines: 6;
 }
 
 element-icon {

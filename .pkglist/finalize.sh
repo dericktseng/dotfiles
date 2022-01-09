@@ -1,6 +1,6 @@
 #!/bin/bash
 xorgconfd="/etc/X11/xorg.conf.d"
-systemdlogin="/etc/systemd/system/getty@tty1.service.d"
+logindconfd="/etc/systemd/logind.conf.d/"
 self="$USER"
 
 if [ $(id -u) -eq 0 ]; then
