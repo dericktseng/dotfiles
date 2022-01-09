@@ -13,7 +13,7 @@ ilogout=" logout"
 # Variable passed to rofi
 options="$ishutdown\n$ireboot\n$ilock\n$ihibernate\n$isuspend\n$ilogout"
 
-chosen="$(echo -e "$options" | $rofi_command -p "POWER MENU" -dmenu -selected-row 3)"
+chosen="$(echo -e "$options" | $rofi_command -p "POWER MENU" -dmenu -selected-row 0)"
 case $chosen in
     $ishutdown)
         systemctl poweroff
