@@ -15,4 +15,4 @@ while read packagename; do
 		cd ..
 		rm -rf "$packagename"
 	fi
-done < pkglist_aur.txt
+done < ./pkglist/pkglist_aur.txt
