@@ -44,6 +44,7 @@ floatapps=(
     'mpv'
     'aft-linux-qt'
     'Iwgtk'
+    'Blueman-manager'
 )
 
 for appname in "${floatapps[@]}";do
