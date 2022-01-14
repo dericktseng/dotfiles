@@ -47,6 +47,11 @@ case "$response" in
             -e "s/{DOMAIN}/$domain/g" \
             iwdconf/eduroam.8021x > eduroam.8021x
         sudo mv -i eduroam.8021x /var/lib/iwd/
+        ;;
+    *)
+        echo "skipping eduroam configuration"
+        ;;
+esac
 
 # Laptop-mode-tools optional.
 packagename='laptop-mode-tools'

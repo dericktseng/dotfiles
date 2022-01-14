@@ -1,0 +1,9 @@
+iwgtk
+neovim-remote
+nerd-fonts-fira-code
+polybar-git
+python-pillow-simd
+termite
+ttf-ms-fonts
+yay-bin
+zoom
