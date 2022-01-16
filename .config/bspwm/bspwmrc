@@ -81,6 +81,9 @@ $HOME/.config/bspwm/floating.sh > /dev/null 2>&1 &
 pkill -f desktoprename.sh
 $HOME/.config/bspwm/desktoprename.sh > /dev/null 2>&1 &
 
+# kills picom
+pkill -f picom
+
 # polybar - suppress output
 $HOME/.config/polybar/launch.sh > /dev/null 2>&1 &
 
