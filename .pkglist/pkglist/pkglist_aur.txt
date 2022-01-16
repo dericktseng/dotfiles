@@ -3,7 +3,7 @@ neovim-remote
 nerd-fonts-fira-code
 polybar-git
 python-pillow-simd
+paru-bin
 termite
 ttf-ms-fonts
-yay-bin
 zoom
