@@ -37,7 +37,6 @@ i3lock
 inetutils
 iwd
 jq
-julia
 jupyter
 libevdev
 libimagequant
