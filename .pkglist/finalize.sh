@@ -28,6 +28,12 @@ chsh -s /bin/zsh
 # backlight settings: adds user to group video
 sudo usermod -aG video "$self"
 
+# sddm settings
+sudo mkdir -p "$sddmconfd"
+for f in ./conf/sddm/*; do
+    sudo cp -i "$f" "$sddmconfd"
+done
+
 # X11 settings
 sudo mkdir -p "$xorgconfd"
 for f in ./conf/xorg/*; do
