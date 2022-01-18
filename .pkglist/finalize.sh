@@ -1,6 +1,7 @@
 #!/bin/bash
 xorgconfd="/etc/X11/xorg.conf.d"
 iwdconfd="/etc/iwd/"
+sddmconfd="/etc/sddm.conf.d/"
 logindconfd="/etc/systemd/logind.conf.d/"
 self="$USER"
 
@@ -29,13 +30,13 @@ sudo usermod -aG video "$self"
 
 # X11 settings
 sudo mkdir -p "$xorgconfd"
-for f in ./xorgconf/*; do
+for f in ./conf/xorg/*; do
     sudo cp -i "$f" "$xorgconfd"
 done
 
 # iwd settings
 sudo mkdir -p "$iwdconfd"
-sudo cp -i "./iwdconf/main.conf" "$iwdconfd"
+sudo cp -i "./conf/iwd/main.conf" "$iwdconfd"
 read -r -p "Install eduroam configuration (y/N): " response
 case "$response" in
     [yY])
@@ -45,7 +46,7 @@ case "$response" in
         sed -e "s/{USERNAME}/$username/g" \
             -e "s/{PASSWORD}/$password/g" \
             -e "s/{DOMAIN}/$domain/g" \
-            iwdconf/eduroam.8021x > eduroam.8021x
+            conf/iwd/eduroam.8021x > eduroam.8021x
         sudo mv -i eduroam.8021x /var/lib/iwd/
         ;;
     *)

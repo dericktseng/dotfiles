@@ -1,9 +1,10 @@
 iwgtk
 neovim-remote
 nerd-fonts-fira-code
+paru-bin
 polybar-git
 python-pillow-simd
-paru-bin
+sddm-theme-sugar-candy-git
 termite
 ttf-ms-fonts
 zoom

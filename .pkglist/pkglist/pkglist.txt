@@ -101,7 +101,6 @@ unrar
 unzip
 usbutils
 wget
-wireplumber
 wmctrl
 xclip
 xdg-user-dirs
