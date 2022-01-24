@@ -11,7 +11,7 @@ export LC_ADDRESS="C"
 export TERMINAL='/usr/bin/termite'
 
 # PATH additions
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$HOME/.local/bin:$PATH
 
 # hardware video acceleration firefox
 export MOZ_X11_EGL=1

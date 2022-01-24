@@ -6,7 +6,7 @@ require('telescope').setup({
   defaults = {
     preview = {
       check_mime_type = true,
-      timeout = 50,
+      timeout = 100,
       msg_bg_fillchar = ' ',
       hide_on_startup = false
     }
