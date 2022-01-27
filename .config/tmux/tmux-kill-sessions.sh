@@ -1,4 +1,4 @@
-sessions=$(tmux ls | fzf-tmux -m)
+sessions=$(tmux ls | fzf-tmux -m --reverse)
 
 while read session; do
     if [ -n "$session" ]; then

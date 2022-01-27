@@ -94,15 +94,6 @@ snippet table "Table environment" b
 \\end{table}
 endsnippet
 
-snippet fig "Figure environment" b
-\\begin{figure}[${1:htpb}]
-	\\centering
-	${2:\\includegraphics[width=0.8\\textwidth]{$3}}
-	\\caption{${4:$3}}
-	\\label{fig:${5:${3/\W+/-/g}}}
-\\end{figure}
-endsnippet
-
 snippet conc "concentration"
 \\ch{[$1]}
 endsnippet
@@ -113,6 +104,20 @@ endsnippet
 
 snippet lb "label" i
 \\label{$1}
+endsnippet
+
+priority 10
+snippet fig "Figure environment" b
+\\begin{figure}[${1:htpb}]
+	\\centering
+	${2:\\includegraphics[width=0.9\\textwidth]{$3}}
+	\\caption{${4:$3}}
+	\\label{fig:${5:${3/\W+/-/g}}}
+\\end{figure}
+endsnippet
+
+snippet bf "bolface" w
+\\textbf{$1}
 endsnippet
 
 snippet setup "setup"
@@ -130,6 +135,7 @@ snippet setup "setup"
 \\usepackage{adjustbox}
 \\usepackage{xurl}
 \\usepackage{multicol}
+% \\usepackage{chemformula}
 % \\usepackage{pdfpages}
 % \\usepackage{listings}
 
@@ -146,6 +152,9 @@ snippet setup "setup"
 	\\let\\@ifnextchar\\new@ifnextchar
 	\\array{#1}}
 \\makeatother
+
+% \\setlength{\\parindent}{4em}
+% \\setlength{\\parskip}{1em}
 
 \\title{${1:Title}}
 \\author{${2:Derick Tseng}}
