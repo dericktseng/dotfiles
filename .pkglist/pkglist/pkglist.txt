@@ -7,7 +7,6 @@ autoconf
 automake
 base
 base-devel
-bat
 bc
 bdf-unifont
 bspwm

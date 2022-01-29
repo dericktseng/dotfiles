@@ -56,6 +56,8 @@ keymap('v', 'H', [[<gv]])
 keymap('v', 'K', [[:m '<-2<CR>gv=gv]])
 keymap('v', 'J', [[:m '>+1<CR>gv=gv]])
 keymap('v', 'L', [[>gv]])
+keymap('v', 'E', '$')
+keymap('v', 'B', '^')
 
 keymap('n', '<C-G>', [[:silent exec '!gimp ' . expand('<cfile>') . ' &'<CR>]])
 keymap('n', '<C-H>', [[:silent exec '!inkscape ' . expand('<cfile>') . ' &'<CR>]])
