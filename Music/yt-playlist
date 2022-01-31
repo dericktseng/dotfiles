@@ -5,13 +5,15 @@ url='https://www.youtube.com/playlist?list=PLUcR4qhATg8sMIikByQq25NEQvWsQ52Yg'
 volume=75
 ipcsock="/tmp/mpvsocket"
 
+mpvcmd="mpv --volume=$volume --no-video --shuffle --input-ipc-server=$ipcsock"
+
 function start_session() {
     if [[ $# -ne 0 ]]; then
-		tmux new-session -d -s $session_name "mpv '$1' --volume=$volume --no-video --shuffle --input-ipc-server=$ipcsock" > /dev/null
+		tmux new-session -d -s $session_name "$mpvcmd '$@'" > /dev/null
 	elif [ -d $musicdir ]; then
-		tmux new-session -d -s $session_name "mpv $musicdir --volume=$volume --no-video --shuffle --input-ipc-server=$ipcsock" > /dev/null
+		tmux new-session -d -s $session_name "$mpvcmd '$musicdir'" > /dev/null
 	else
-		tmux new-session -d -s $session_name "mpv '$url' --volume=$volume --no-video --shuffle --input-ipc-server=$ipcsock" > /dev/null
+		tmux new-session -d -s $session_name "$mpvcmd '$url'" > /dev/null
     fi
 }
 
