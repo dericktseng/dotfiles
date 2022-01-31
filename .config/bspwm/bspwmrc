@@ -42,6 +42,7 @@ floatapps=(
     'Inkscape'
     'Matplotlib'
     'mpv'
+    'feh'
     'aft-linux-qt'
     'Iwgtk'
     'Blueman-manager'
