@@ -1,0 +1,10 @@
+[Security]
+EAP-Method=PEAP
+EAP-Identity=anonymous@{DOMAIN}
+EAP-PEAP-Phase2-Method=MSCHAPV2
+EAP-PEAP-Phase2-Identity={USERNAME}@{DOMAIN}
+EAP-PEAP-Phase2-Password={PASSWORD}
+EAP-PEAP-ServerDomainMask=*.{DOMAIN}
+
+[Settings]
+AutoConnect=true

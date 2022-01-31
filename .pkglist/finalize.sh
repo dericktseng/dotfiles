@@ -1,6 +1,8 @@
 #!/bin/bash
 xorgconfd="/etc/X11/xorg.conf.d"
-systemdlogin="/etc/systemd/system/getty@tty1.service.d"
+iwdconfd="/etc/iwd/"
+sddmconfd="/etc/sddm.conf.d/"
+logindconfd="/etc/systemd/logind.conf.d/"
 self="$USER"
 
 if [ $(id -u) -eq 0 ]; then
@@ -13,10 +15,9 @@ systemctl --user --now enable psd
 
 # system services
 sudo systemctl --now enable ufw
-sudo systemctl --now enable NetworkManager
-sudo systemctl --now enable cronie
+sudo systemctl --now enable iwd
+sudo systemctl --now enable systemd-resolved
 sudo systemctl enable sddm
-sudo ufw enable
 
 # synchronize clock with systemd timesync ntp
 sudo timedatectl set-ntp true
@@ -24,22 +25,48 @@ sudo timedatectl set-ntp true
 # change shell to zsh.
 chsh -s /bin/zsh
 
+# backlight settings: adds user to group video
+sudo usermod -aG video "$self"
+
+# sddm settings
+sudo mkdir -p "$sddmconfd"
+for f in ./conf/sddm/*; do
+    sudo cp -i "$f" "$sddmconfd"
+done
+
 # X11 settings
 sudo mkdir -p "$xorgconfd"
-for f in ./xorgconf/*; do
+for f in ./conf/xorg/*; do
     sudo cp -i "$f" "$xorgconfd"
 done
 
-# backlight settings: adds user to group video
-sudo usermod -aG video "$self"
+# iwd settings
+sudo mkdir -p "$iwdconfd"
+sudo cp -i "./conf/iwd/main.conf" "$iwdconfd"
+read -r -p "Install eduroam configuration (y/N): " response
+case "$response" in
+    [yY])
+        read -r -p "Username: " username
+        read -r -p "Password: " password
+        read -r -p "Domain: " domain
+        sed -e "s/{USERNAME}/$username/g" \
+            -e "s/{PASSWORD}/$password/g" \
+            -e "s/{DOMAIN}/$domain/g" \
+            conf/iwd/eduroam.8021x > eduroam.8021x
+        sudo mv -i eduroam.8021x /var/lib/iwd/
+        ;;
+    *)
+        echo "skipping eduroam configuration"
+        ;;
+esac
 
 # Laptop-mode-tools optional.
 packagename='laptop-mode-tools'
 cloneURL="https://aur.archlinux.org/$packagename.git"
 
-read -r -p "Do you want to install laptop-mode-tools (y/N)" response
+read -r -p "Do you want to install laptop-mode-tools (y/N): " response
 case "$response" in
-	[yY][eE][sS]|[yY])
+	[yY])
 		git clone "$cloneURL"
 		makepkg -sri "$packagename" ;;
 	*)

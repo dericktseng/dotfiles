@@ -1,8 +1,0 @@
-discord_arch_electron
-nerd-fonts-fira-code
-neovim-remote
-polybar-git
-python-pillow-simd
-ttf-ms-fonts
-yay-bin
-zoom

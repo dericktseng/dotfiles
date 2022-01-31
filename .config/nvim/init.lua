@@ -14,7 +14,7 @@ g.python3_host_prog = '/usr/bin/python3'
 vim.api.nvim_command('filetype plugin indent on')
 
 -- enable termguicolors if it exists
-o.termguicolors = fn.has('termguicolors') == 1 and true or false
+o.termguicolors = fn.has('termguicolors') == 1
 
 -- allow GUI and non tty to use the light theme
 if (vim.env.TERM ~= 'linux') then

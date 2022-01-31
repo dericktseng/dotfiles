@@ -8,25 +8,25 @@ export VISUAL=$EDITOR
 export GNUMAKEFLAGS=-j$(($(nproc) + 1))
 export OMP_NUM_THREADS=$(nproc)
 export LC_ADDRESS="C"
-export TERMAPP='/usr/bin/kitty'
+export TERMINAL='/usr/bin/termite'
 
 # PATH additions
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$HOME/.local/bin:$PATH
 
 # hardware video acceleration firefox
 export MOZ_X11_EGL=1
 export MOZ_WEBRENDER=1
 
 # fzf settings
-export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git --color=always'
+export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND='fd --type directory --hidden --exclude .git --color=always'
-export FZF_DEFAULT_OPTS='
+export FZF_ALT_C_COMMAND="fd --type directory --hidden --exclude .git --color=always"
+export FZF_DEFAULT_OPTS="
     --ansi
     --color=fg:#4d4d4c,bg:#eeeeee,hl:#d7005f
     --color=fg+:#4d4d4c,bg+:#e8e8e8,hl+:#d7005f
     --color=info:#4271ae,prompt:#8959a8,pointer:#d7005f
-    --color=marker:#4271ae,spinner:#4271ae,header:#4271ae'
+    --color=marker:#4271ae,spinner:#4271ae,header:#4271ae"
 
 # temporary fix to libreoffice black borders
 export SAL_USE_VCLPLUGIN=gen
@@ -62,7 +62,7 @@ root="/:/"
 docs="z:$HOME/Documents/books"
 
 # NNN Plugins
-previewtuiext="p:-preview-tui-ext2"
+previewtui="p:-preview-tui"
 suedit="s:suedit"
 fzopen="f:-fzopen2"
 fzcd="d:-fzcd2"
@@ -72,7 +72,7 @@ imagecopy='i:!convert $nnn png:- | xclip -sel clipboard -t image/png*'
 
 # NNN configurations
 export NNN_FCOLORS="$BLOCK_DEVICE$CHAR_DEVICE$DIRECTORY$EXECUTABLE$REGULAR$HARD_LINK$SYMBOLIC_LINK$MISSING$ORPHANED$FIFO$SOCKET$UNKNOWN"
-export NNN_PLUG="$previewtuiext;$suedit;$fzopen;$fzcd;$getplugs;$rsynccp;$imagecopy"
+export NNN_PLUG="$previewtui;$suedit;$fzopen;$fzcd;$getplugs;$rsynccp;$imagecopy"
 export NNN_BMS="$dtmp;$home;$root;$docs"
 export NNN_OPENER="$HOME/.config/nnn/plugins/nuke2"
 export NNN_OPTS="ac"

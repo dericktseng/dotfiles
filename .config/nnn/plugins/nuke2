@@ -315,6 +315,21 @@ handle_multimedia() {
         #           - "${IMAGE_CACHE_PATH}" < "${FPATH}" \
         #           && exit 6 || exit 1;;
 
+        ## DjVu
+        image/vnd.djvu)
+            if type zathura >/dev/null 2>&1; then
+                nohup zathura "${FPATH}" > /dev/null 2>&1 &
+                exit 0
+            elif type djvutxt >/dev/null 2>&1; then
+                ## Preview as text conversion (requires djvulibre)
+                djvutxt "${FPATH}" | eval "$PAGER"
+                exit 0
+            elif type exiftool >/dev/null 2>&1; then
+                exiftool "${FPATH}" | eval "$PAGER"
+                exit 0
+            fi
+            exit 1;;
+
         ## Image
         image/*)
             if [ "$GUI" -ne 0 ]; then
@@ -482,16 +497,16 @@ handle_mime() {
             # exit 2;;
 
         ## DjVu
-        image/vnd.djvu)
-            if type djvutxt >/dev/null 2>&1; then
-                ## Preview as text conversion (requires djvulibre)
-                djvutxt "${FPATH}" | eval "$PAGER"
-                exit 0
-            elif type exiftool >/dev/null 2>&1; then
-                exiftool "${FPATH}" | eval "$PAGER"
-                exit 0
-            fi
-            exit 1;;
+        ## image/vnd.djvu)
+        ##     if type djvutxt >/dev/null 2>&1; then
+        ##         ## Preview as text conversion (requires djvulibre)
+        ##         djvutxt "${FPATH}" | eval "$PAGER"
+        ##         exit 0
+        ##     elif type exiftool >/dev/null 2>&1; then
+        ##         exiftool "${FPATH}" | eval "$PAGER"
+        ##         exit 0
+        ##     fi
+        ##     exit 1;;
     esac
 }
 
