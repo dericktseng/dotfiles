@@ -115,6 +115,8 @@ keymap('n', '<Leader>fz', ':Telescope current_buffer_fuzzy_find<CR>')
 keymap('n', '<Leader>ft', ':Telescope treesitter<CR>')
 keymap('n', '<Leader>fm', ':Telescope marks<CR>')
 keymap('n', '<Leader>fc', ':Telescope commands<CR>')
+keymap('n', '<Leader>fq', ':Telescope quickfix<CR>')
+keymap('n', '<LocalLeader>fq', ':Telescope loclist<CR>')
 keymap('n', '<Leader>fg', ':call v:lua.project_files()<CR>')
 keymap('n', '<Leader>v', ':call v:lua.vimrc()<CR>')
 
