@@ -33,7 +33,6 @@ bspc config focus_follows_pointer true
 
 # window rules
 bspc rule -a 'Zathura' state=tiled
-bspc rule -a 'discord' desktop='^4' follow=off
 
 # standard floated applications
 floatapps=(
@@ -64,6 +63,7 @@ floatappsMove=(
     'Picard'
     'Steam'
     'SimpleScreenRecorder'
+    'discord'
 )
 
 for appname in "${floatappsMove[@]}";do
