@@ -87,6 +87,7 @@ while [ -z "$drivername" ] && [ ! -z "$drivernum" ]; do
 		drivername="${drivers[$drivernum]}"
 	fi
 done
+
 if [ -n "$drivername" ]; then
 	sudo pacman -S "$drivername"
 else
@@ -97,6 +98,9 @@ fi
 git clone --depth 1 'https://github.com/wbthomason/packer.nvim'\
     "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
 
+# nag to switch to using python pillow simd
+echo "MANUALLY SWITCH TO PYTHON PILLOW SIMD"
+
 # firefox changes
 echo "Firefox Manual about:config changes"
 echo "https://wiki.archlinux.org/title/Firefox#Hardware_video_acceleration"
@@ -106,4 +110,3 @@ echo "browser.compactmode.show = true"
 echo "gfx.webrender.all = true"
 echo "accessibility.force_disabled = 1"
 echo "enable fission"
-echo "and cookie related changes on https://www.privacytools.io"
