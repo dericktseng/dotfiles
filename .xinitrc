@@ -35,6 +35,9 @@ fi
 # cursor fix
 xsetroot -cursor_name left_ptr
 
+# PATH additions
+export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
+
 # monitor refresh rate, set to 75 if possible
 xrandr -r 75 > /dev/null 2>&1 || true
 

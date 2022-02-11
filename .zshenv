@@ -10,9 +10,6 @@ export OMP_NUM_THREADS=$(nproc)
 export LC_ADDRESS="C"
 export TERMINAL='/usr/bin/termite'
 
-# PATH additions
-export PATH=$HOME/.local/bin:$PATH
-
 # hardware video acceleration firefox
 export MOZ_X11_EGL=1
 export MOZ_WEBRENDER=1
