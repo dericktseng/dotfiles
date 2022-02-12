@@ -47,7 +47,7 @@ floatapps=(
 )
 
 for appname in "${floatapps[@]}";do
-    bspc rule -a "$appname" state=floating
+    bspc rule -a "$appname" state=floating center=true
 done
 
 # float applications to put on desktop 5
@@ -63,6 +63,7 @@ floatappsMove=(
     'Steam'
     'SimpleScreenRecorder'
     'discord'
+    'Virt-manager'
 )
 
 for appname in "${floatappsMove[@]}";do
