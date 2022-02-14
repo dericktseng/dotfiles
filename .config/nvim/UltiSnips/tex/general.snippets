@@ -1,4 +1,8 @@
 # general tex snippets
+snippet fref "figure reference" w
+\\ref{fig:$1}
+endsnippet
+
 snippet eref "equation reference" w
 \\eqref{eq:$1}
 endsnippet
@@ -163,5 +167,68 @@ snippet setup "setup"
 \\begin{document}
 	\\maketitle
 	$4
+\\end{document}
+endsnippet
+
+snippet labsetup "setup for labs" b
+\\documentclass[12pt]{article}
+
+%{{{ Packages 
+\\usepackage[utf8]{inputenc}
+\\usepackage[margin=1truein,letterpaper]{geometry}
+\\usepackage[shortlabels]{enumitem}
+\\usepackage{amsmath}
+\\usepackage{amsfonts}
+\\usepackage{amssymb}
+\\usepackage{siunitx}
+\\usepackage{graphicx}
+\\usepackage{adjustbox}
+\\usepackage{xurl}
+\\usepackage{multicol}
+\\usepackage{chemformula}
+% \\usepackage{pdfpages}
+% \\usepackage{listings}
+
+\\sisetup{
+	per-mode=fraction,
+	fraction-function=\\tfrac
+}
+%}}}
+
+% \\setlength{\\parindent}{4em}
+\\setlength{\\parskip}{0.3em}
+
+\\newcommand{\\maketitlepage}{
+	\\begin{center}
+		\\LARGE{${1:Title}}
+	\\end{center}
+
+	\\vspace{\\fill}
+
+	{
+		\\raggedleft
+
+		\\normalsize{Primary Investigator: Derick Tseng}
+
+		\\normalsize{Co-Investigators: ${2:Names}}
+
+		Lab Section No. {$3}
+
+		Date of Experiment: {$4}
+
+		Date Submitted: \\today
+
+	}
+	\\newpage
+}
+
+\\begin{document}
+	\\maketitlepage
+
+	\\section{Abstract}
+	\\section{Introduction}
+	\\section{Experimental Procedure}
+	\\section{Results and Discussion}
+	\\section{Conclusion}
 \\end{document}
 endsnippet
