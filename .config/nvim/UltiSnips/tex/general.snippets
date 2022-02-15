@@ -1,6 +1,6 @@
 # general tex snippets
 snippet fref "figure reference" w
-\\ref{fig:$1}
+Figure \\ref{fig:$1}
 endsnippet
 
 snippet eref "equation reference" w
@@ -200,10 +200,11 @@ snippet labsetup "setup for labs" b
 
 \\newcommand{\\maketitlepage}{
 	\\begin{center}
+		\\vspace*{3cm}
 		\\LARGE{${1:Title}}
 	\\end{center}
 
-	\\vspace{\\fill}
+	\\vfill
 
 	{
 		\\raggedleft
@@ -226,9 +227,21 @@ snippet labsetup "setup for labs" b
 	\\maketitlepage
 
 	\\section{Abstract}
+
+	\\newpage
 	\\section{Introduction}
+
+	\\newpage
 	\\section{Experimental Procedure}
+
+	\\newpage
 	\\section{Results and Discussion}
+
+	\\newpage
 	\\section{Conclusion}
+
+	\\newpage
+	\\bibliographystyle{ieeetr}
+	\\bibliography{refs}
 \\end{document}
 endsnippet
