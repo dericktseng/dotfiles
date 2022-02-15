@@ -60,11 +60,6 @@ return require('packer').startup(function(use)
   }
 
   use {
-    'blackCauldron7/surround.nvim',
-    config = function() require'surround'.setup {mappings_style = 'surround'} end
-  }
-
-  use {
     'norcalli/nvim-colorizer.lua',
     config = function() require'colorizer'.setup() end,
     ft = {'css', 'javascript', 'lua', 'json', 'vim', 'conf'}
@@ -92,5 +87,6 @@ return require('packer').startup(function(use)
   }
 
   use 'tpope/vim-fugitive'
+  use 'tpope/vim-surround'
   use 'junegunn/vim-easy-align'
 end)
