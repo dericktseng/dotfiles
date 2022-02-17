@@ -3,8 +3,12 @@ snippet fref "figure reference" w
 Figure \\ref{fig:$1}
 endsnippet
 
+snippet tref "table reference" w
+Table \\ref{tab:$1}
+endsnippet
+
 snippet eref "equation reference" w
-\\eqref{eq:$1}
+Eq. \\eqref{eq:$1}
 endsnippet
 
 snippet \\ "newline" i
@@ -30,12 +34,6 @@ endsnippet
 
 snippet qt "Latex Quotations" wA
 \`\`${1}''
-endsnippet
-
-snippet beg "begin/end" b
-\\begin{$1}
-	$2
-\\end{$1}$0
 endsnippet
 
 snippet mk "Math" wA
