@@ -53,7 +53,7 @@ SOCKET="ab"
 UNKNOWN="c4"
 
 # NNN bookmarks
-dtmp="b:$HOME/Desktop/Derick/tmp/"
+dtmp="b:$HOME/Desktop/tmp/"
 home="h:$HOME"
 root="/:/"
 docs="z:$HOME/Documents/books"

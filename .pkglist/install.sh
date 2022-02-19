@@ -16,8 +16,10 @@ sudo dnf --allowerasing install $(cat ./pkglist/pkglist.txt)
 cat ./pkglist/groups.txt | xargs sudo dnf groupinstall
 
 # install copr
-cat ./pkglist/copr.txt | xargs sudo dnf copr enable
-cat ./pkglist/copr.txt | cut -d '/' -f 2 | xargs sudo dnf -y install
+while read -r line; do
+    yes | sudo dnf copr enable $line
+done < ./pkglist/copr.txt
+cat ./pkglist/copr.txt | cut -d '/' -f 2 | xargs sudo dnf -y install --skip-broken
 
 # install nvim packer
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\

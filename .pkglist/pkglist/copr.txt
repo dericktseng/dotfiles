@@ -1,3 +1,4 @@
 skidnik/clipmenu
 skidnik/termite
 skidnik/hsetroot
+dmoerner/python-neovim-remote
