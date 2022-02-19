@@ -9,7 +9,6 @@ cargo
 clang
 dejavu-fonts-all
 dex-autostart
-discord
 djvulibre
 dkms
 dunst
@@ -83,6 +82,7 @@ powertop
 profile-sync-daemon
 profile-sync-daemon
 pulseaudio-libs
+pulseaudio-utils
 python-matplotlib
 python-neovim
 python-numpy
