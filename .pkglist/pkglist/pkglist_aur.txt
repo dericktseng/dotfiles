@@ -1,5 +1,0 @@
-iwgtk
-neovim-remote
-termite
-ttf-ms-fonts
-zoom
