@@ -145,6 +145,7 @@ snippet setup "setup"
 	per-mode=fraction,
 	fraction-function=\\tfrac
 }
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,showstringspaces=false,}
 %}}}
 
 % Augmented Matrix Override
@@ -172,26 +173,27 @@ snippet labsetup "setup for labs" b
 \\documentclass[12pt]{article}
 
 %{{{ Packages 
-\\usepackage[utf8]{inputenc}
-\\usepackage[margin=1truein,letterpaper]{geometry}
-\\usepackage[shortlabels]{enumitem}
-\\usepackage{amsmath}
-\\usepackage{amsfonts}
-\\usepackage{amssymb}
-\\usepackage{siunitx}
-\\usepackage{graphicx}
-\\usepackage{adjustbox}
-\\usepackage{xurl}
-\\usepackage{multicol}
-\\usepackage{chemformula}
-% \\usepackage{pdfpages}
-% \\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1truein,letterpaper]{geometry}
+\usepackage[shortlabels]{enumitem}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{xurl}
+\usepackage{multicol}
+\usepackage{chemformula}
+\usepackage{caption}
+\usepackage{subcaption}
 
-\\sisetup{
-	per-mode=fraction,
-	fraction-function=\\tfrac
-}
-%}}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\normalsize{${1:Title}}}
+\rhead{\normalsize{Ji, Li, Marchand, Park, Suits, Tseng}}
+\cfoot{\thepage}
 
 % \\setlength{\\parindent}{4em}
 \\setlength{\\parskip}{0.3em}
@@ -199,7 +201,7 @@ snippet labsetup "setup for labs" b
 \\newcommand{\\maketitlepage}{
 	\\begin{center}
 		\\vspace*{3cm}
-		\\LARGE{${1:Title}}
+		\\LARGE{$1}
 	\\end{center}
 
 	\\vfill
@@ -207,9 +209,9 @@ snippet labsetup "setup for labs" b
 	{
 		\\raggedleft
 
-		\\normalsize{Primary Investigator: Derick Tseng}
+		\\small{Primary Investigator: Derick Tseng}
 
-		\\normalsize{Co-Investigators: ${2:Names}}
+		\\small{Co-Investigators: ${2:Names}}
 
 		Lab Section No. {$3}
 
