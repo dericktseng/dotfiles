@@ -7,5 +7,5 @@ if [ "$EUID" -eq 0 ]; then
 fi
 
 /bin/bash ./install.sh
-/bin/bash ./install_aur.sh
 /bin/bash ./finalize.sh
+/bin/bash ./fonts.sh

@@ -53,7 +53,7 @@ function cdls() {
 
 function lscwd() {
     tot=$(/bin/ls -1 -f | wc -l)
-    visible=$(/bin/ls -1 -U --color=never --classify=never | wc -l)
+    visible=$(/bin/ls -1 -U --color=never | wc -l)
     if [[ $tot -eq 2 ]]; then
         /bin/echo "This directory is empty"
     elif [[ $visible -eq 0 ]]; then

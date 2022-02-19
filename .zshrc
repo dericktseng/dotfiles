@@ -61,21 +61,22 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
     fd --type d --hidden --follow --exclude ".git" -j$(nproc) . "$1"
 }
-source /usr/share/fzf/completion.zsh
-source /usr/share/fzf/key-bindings.zsh
+# source /usr/share/fzf/shell/completion.zsh
+source /usr/share/fzf/shell/key-bindings.zsh
 
 # zsh-autosuggestions
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#AAAAAA'
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # zsh syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # powerlevel10k theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source ~/.powerlevel10k/powerlevel10k.zsh-theme
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

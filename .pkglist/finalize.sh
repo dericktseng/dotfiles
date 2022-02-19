@@ -10,6 +10,12 @@ if [ $(id -u) -eq 0 ]; then
 	exit 1
 fi
 
+# custom /etc/dnf/dnf.conf
+echo "custom dnf.conf not implemented yet"
+
+# script to enable rpmfusion free + nonfree
+echo "rpmfusion not set up"
+
 # user systemctl services
 systemctl --user --now enable psd
 
@@ -60,43 +66,13 @@ case "$response" in
         ;;
 esac
 
-# Laptop-mode-tools optional.
-packagename='laptop-mode-tools'
-cloneURL="https://aur.archlinux.org/$packagename.git"
-
-read -r -p "Do you want to install laptop-mode-tools (y/N): " response
-case "$response" in
-	[yY])
-		git clone "$cloneURL"
-		makepkg -sri "$packagename" ;;
-	*)
-		echo "skipping $packagename" ;;
-esac
-
-# xf86 video drivers
-drivers=('xf86-video-intel' 'xf86-video-amdgpu')
-for i in "${!drivers[@]}"; do 
-	printf "%s - %s\n" "$i" "${drivers[$i]}"
-done
-
-drivername=''
-drivernum=0
-while [ -z "$drivername" ] && [ ! -z "$drivernum" ]; do
-	read -r -p "Which graphics drivers (Number, empty to skip): " drivernum
-	if [[ "$drivernum" =~ ^[0-9]+ ]]; then
-		drivername="${drivers[$drivernum]}"
-	fi
-done
-
-if [ -n "$drivername" ]; then
-	sudo pacman -S "$drivername"
-else
-	echo "skipping graphics drivers"
-fi
-
 # install nvim packer
-git clone --depth 1 'https://github.com/wbthomason/packer.nvim'\
-    "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+    $HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+# install powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
+    $HOME/.powerlevel10k
 
 # nag to switch to using python pillow simd
 echo "MANUALLY SWITCH TO PYTHON PILLOW SIMD"

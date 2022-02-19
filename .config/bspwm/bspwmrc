@@ -15,8 +15,7 @@ bspc config pointer_modifier     mod1
 # color definitions
 normal="#d8d8d8"
 focused="#33cdfa"
-background1="#c0e8f7"
-background2="#c0e8f7"
+background="#c0e8f7"
 
 # split style
 bspc config automatic_scheme alternate
@@ -114,4 +113,4 @@ for i in "${!programs[@]}"; do
 done
 
 # set background
-$HOME/.fehbg > /dev/null 2>&1 || hsetroot -add "$background1" -add "$background2" -gradient 30 &
+$HOME/.fehbg > /dev/null 2>&1 || xsetroot -solid "$background" &
