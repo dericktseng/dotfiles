@@ -9,6 +9,7 @@ cargo
 clang
 dejavu-fonts-all
 dex-autostart
+discord
 djvulibre
 dkms
 dunst
@@ -27,7 +28,7 @@ gnome-epub-thumbnailer
 gnome-keyring
 google-noto-cjk-fonts
 google-noto-emoji-fonts
-google-noto-fonts-common
+google-noto-sans-fonts
 google-roboto-fonts
 gstreamer1-libav
 gstreamer1-plugins-bad-free
