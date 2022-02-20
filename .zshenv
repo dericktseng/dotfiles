@@ -59,7 +59,7 @@ root="/:/"
 docs="z:$HOME/Documents/books"
 
 # NNN Plugins
-previewtui="p:-preview-tui"
+previewtui="p:-preview-tui2"
 suedit="s:suedit"
 fzopen="f:-fzopen2"
 fzcd="d:-fzcd2"

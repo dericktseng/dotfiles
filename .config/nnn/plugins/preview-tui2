@@ -72,13 +72,14 @@
 # Shell: POSIX compliant
 # Authors: Todd Yamakawa, Léo Villeveygoux, @Recidiviste, Mario Ortiz Manero, Luuk van Baal
 
-#SPLIT="$SPLIT"  # you can set a permanent split here
-#TERMINAL="$TERMINAL"  # same goes for the terminal
+SPLIT="$SPLIT"	# you can set a permanent split here
+TERMINAL="$TERMINAL"  # same goes for the terminal
 USE_SCOPE="${USE_SCOPE:-0}"
 USE_PISTOL="${USE_PISTOL:-0}"
 ICONLOOKUP="${ICONLOOKUP:-0}"
 PAGER="${PAGER:-less -P?n -R}"
-TMPDIR="${TMPDIR:-/tmp}"
+ARCHIVES="$(echo "$NNN_ARCHIVE" | sed 's/.*(\(.*\)).*/\1/;s/|/ /g')"
+TMPDIR="${TMPDIR:-/var/tmp}"
 BAT_STYLE="${BAT_STYLE:-numbers}"
 BAT_THEME="${BAT_THEME:-ansi}"
 # Consider setting NNN_PREVIEWDIR to $XDG_CACHE_HOME/nnn/previews if you want to keep previews on disk between reboots
@@ -227,6 +228,8 @@ handle_mime() {
     case "$2" in
         image/jpeg) image_preview "$cols" "$lines" "$1" ;;
         image/gif) generate_preview "$cols" "$lines" "$1" "gif" ;;
+        image/png) generate_preview "$cols" "$lines" "$1" "png" ;;
+        image/vnd.djvu) generate_preview "$cols" "$lines" "$1" "djvu" ;;
         image/*) generate_preview "$cols" "$lines" "$1" "image" ;;
         video/*) generate_preview "$cols" "$lines" "$1" "video" ;;
         audio/*) generate_preview "$cols" "$lines" "$1" "audio" ;;
@@ -315,10 +318,6 @@ preview_file() {
             [ "$SPLIT" = v ] && BSTR="\n"
             # shellcheck disable=SC2012
             ls -F --group-directories-first | head -n "$((lines - 3))" | "$(dirname "$0")"/.iconlookup -l "$cols" -B "$BSTR" -b " "
-        elif exists tree; then
-            fifo_pager tree --filelimit "$(find . -maxdepth 1 | wc -l)" -L 3 -C -F --dirsfirst --noreport
-        elif exists exa; then
-            exa -G --group-directories-first --colour=always
         else
             fifo_pager ls -F --group-directories-first --color=always
         fi
@@ -338,24 +337,9 @@ generate_preview() {
             audio) ffmpeg -i "$3" -filter_complex "scale=iw*min(1\,min($NNN_PREVIEWWIDTH/iw\,ih)):-1" "$NNN_PREVIEWDIR/$3.jpg" -y ;;
             epub) gnome-epub-thumbnailer "$3" "$NNN_PREVIEWDIR/$3.jpg" ;;
             font) fontpreview -i "$3" -o "$NNN_PREVIEWDIR/$3.jpg" ;;
-            gif) if [ -p "$FIFO_UEBERZUG" ] && exists convert; then
-                    if [ ! -d "$NNN_PREVIEWDIR/$3" ]; then
-                        mkdir -p "$NNN_PREVIEWDIR/$3"
-                        convert -coalesce -resize "$NNN_PREVIEWWIDTH"x"$NNN_PREVIEWHEIGHT"\> "$3" "$NNN_PREVIEWDIR/$3/${3##*/}.jpg"
-                    fi
-                        while true; do
-                            for frame in $(find "$NNN_PREVIEWDIR/$3"/*.jpg | sort -V); do
-                                image_preview "$1" "$2" "$frame"
-                                sleep 0.1
-                            done
-                        done &
-                        printf "%s" "$!" > "$PREVIEWPID"
-                        return
-                 else
-                    exec >/dev/tty
-                    image_preview "$1" "$2" "$3"
-                    return
-                 fi ;;
+			png) convert "$3" -background white -alpha remove -alpha off -sample "$NNN_PREVIEWWIDTH"x"$NNN_PREVIEWHEIGHT" "$NNN_PREVIEWDIR/$3.jpg" ;;
+			gif) convert "$3[0]" -sample "$NNN_PREVIEWWIDTH"x"$NNN_PREVIEW_HEIGHT" "$NNN_PREVIEWDIR/$3.jpg" ;;
+			djvu) ddjvu -format=tiff -quality=80 -page=1 "$3" "$NNN_PREVIEWDIR/$3.jpg" ;;
             image) if exists convert; then
                        convert "$3" -flatten -resize "$NNN_PREVIEWWIDTH"x"$NNN_PREVIEWHEIGHT"\> "$NNN_PREVIEWDIR/$3.jpg"
                    else
