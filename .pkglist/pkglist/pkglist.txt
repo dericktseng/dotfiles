@@ -19,9 +19,11 @@ feh
 ffmpeg
 ffmpegthumbnailer
 firefox
+fontconfig
 fzf
 gcc
 ghostscript
+gimp
 git
 gnome-epub-thumbnailer
 gnome-keyring
