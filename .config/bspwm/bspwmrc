@@ -63,6 +63,7 @@ floatappsMove=(
     'SimpleScreenRecorder'
     'discord'
     'Virt-manager'
+    'Remote-viewer'
 )
 
 for appname in "${floatappsMove[@]}";do

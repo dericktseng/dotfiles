@@ -32,6 +32,7 @@ google-noto-emoji-fonts
 google-noto-sans-fonts
 google-roboto-fonts
 gstreamer1-libav
+gstreamer1-plugin-openh264
 gstreamer1-plugins-bad-free
 gstreamer1-plugins-bad-free-extras
 gstreamer1-plugins-bad-free-fluidsynth
@@ -61,6 +62,7 @@ maim
 make
 materia-gtk-theme
 mathjax
+mozilla-openh264
 mpv
 mtools
 neovim

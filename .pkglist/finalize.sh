@@ -68,10 +68,10 @@ esac
 
 # firefox changes
 echo "Firefox Manual about:config changes"
-echo "https://wiki.archlinux.org/title/Firefox#Hardware_video_acceleration"
-echo "https://wiki.archlinux.org/title/Hardware_video_acceleration"
 echo "browser.cache.disk.enable = false"
 echo "browser.compactmode.show = true"
 echo "gfx.webrender.all = true"
 echo "accessibility.force_disabled = 1"
-echo "enable fission"
+echo "media.ffmpeg.vaapi.enabled = true"
+echo "---------------------------------"
+echo "Plugins enable Openh264 Video Codec"
