@@ -39,9 +39,9 @@ endsnippet
 snippet mk "Math" wA
 $${1}$`!p
 if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ':']:
-    snip.rv = ' '
+	snip.rv = ' '
 else:
-    snip.rv = ''
+	snip.rv = ''
 `$2
 endsnippet
 
@@ -122,6 +122,10 @@ snippet bf "bolface" w
 \\textbf{$1}
 endsnippet
 
+snippet cite "citation" w
+\\cite{$1}
+endsnippet
+
 snippet setup "setup"
 \\documentclass[12pt]{article}
 
@@ -170,7 +174,7 @@ snippet setup "setup"
 endsnippet
 
 snippet labsetup "setup for labs" b
-\\documentclass[12pt]{article}
+\documentclass[12pt]{article}
 
 %{{{ Packages 
 \usepackage[utf8]{inputenc}
@@ -188,6 +192,8 @@ snippet labsetup "setup for labs" b
 \usepackage{chemformula}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage[style=phys]{biblatex} 
+\addbibresource{refs.bib}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -195,53 +201,53 @@ snippet labsetup "setup for labs" b
 \rhead{\normalsize{Ji, Li, Marchand, Park, Suits, Tseng}}
 \cfoot{\thepage}
 
-% \\setlength{\\parindent}{4em}
-\\setlength{\\parskip}{0.3em}
+% \setlength{\parindent}{4em}
+\setlength{\parskip}{0.3em}
 
-\\newcommand{\\maketitlepage}{
-	\\begin{center}
-		\\vspace*{3cm}
-		\\LARGE{$1}
-	\\end{center}
+\newcommand{\maketitlepage}{
+	\begin{center}
+		\vspace*{3cm}
+		\LARGE{$1}
+	\end{center}
 
-	\\vfill
+	\vfill
 
 	{
-		\\raggedleft
+		\raggedleft
 
-		\\small{Primary Investigator: Derick Tseng}
+		\normalsize{Primary Investigator: Derick Tseng}
 
-		\\small{Co-Investigators: ${2:Names}}
+		\normalsize{Co-Investigators: Names}
 
 		Lab Section No. {$3}
 
 		Date of Experiment: {$4}
 
-		Date Submitted: \\today
+		Date Submitted: \today
 
 	}
-	\\newpage
+	\newpage
 }
 
-\\begin{document}
-	\\maketitlepage
+\begin{document}
+	\maketitlepage
 
-	\\section{Abstract}
+	\section{Abstract}
 
-	\\newpage
-	\\section{Introduction}
+	\newpage
+	\section{Introduction}
 
-	\\newpage
-	\\section{Experimental Procedure}
+	\newpage
+	\section{Experimental Procedure}
 
-	\\newpage
-	\\section{Results and Discussion}
+	\newpage
+	\section{Results and Discussion}
 
-	\\newpage
-	\\section{Conclusion}
+	\newpage
+	\section{Conclusion}
 
-	\\newpage
-	\\bibliographystyle{ieeetr}
-	\\bibliography{refs}
-\\end{document}
+	\newpage
+
+	\printbibliography
+\end{document}
 endsnippet

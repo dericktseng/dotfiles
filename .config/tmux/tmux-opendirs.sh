@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 directories=(
 	"$HOME/Desktop/current/"
-	"$HOME/Desktop/Derick/program/"
+	"$HOME/Desktop/program/"
 )
 
 if [[ $# -eq 1 ]]; then

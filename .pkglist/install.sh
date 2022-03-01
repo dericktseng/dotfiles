@@ -33,3 +33,4 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
 CC="cc -mavx2" pip3 install -U pillow-simd
 pip3 install -U ueberzug
 pip3 install -U neovim-remote
+pip3 install -U pyright
