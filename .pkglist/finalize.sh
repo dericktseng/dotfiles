@@ -1,8 +1,7 @@
 #!/bin/bash
 xorgconfd="/etc/X11/xorg.conf.d"
 iwdconfd="/etc/iwd/"
-sddmconfd="/etc/sddm.conf.d/"
-logindconfd="/etc/systemd/logind.conf.d/"
+systemdconfd="/etc/systemd/"
 self="$USER"
 
 if [ $(id -u) -eq 0 ]; then
@@ -16,6 +15,7 @@ systemctl --user --now enable psd
 # system services
 sudo systemctl --now enable ufw
 sudo systemctl --now enable iwd
+sudo systemctl --now enable systemd-networkd
 sudo systemctl --now enable systemd-resolved
 sudo systemctl enable sddm
 
@@ -28,12 +28,6 @@ chsh -s /bin/zsh
 # backlight settings: adds user to group video
 sudo usermod -aG video "$self"
 
-# sddm settings
-# sudo mkdir -p "$sddmconfd"
-# for f in ./conf/sddm/*; do
-#     sudo cp -i "$f" "$sddmconfd"
-# done
-
 # dnf settings
 sudo mkdir -p "/etc/dnf/"
 for f in ./conf/dnf/*; do
@@ -45,6 +39,10 @@ sudo mkdir -p "$xorgconfd"
 for f in ./conf/xorg/*; do
     sudo cp -i "$f" "$xorgconfd"
 done
+
+# systemd settings
+sudo mkdir -p "$systemdconfd"
+cp -ir ./conf/systemd/* "$systemdconfd"
 
 # iwd settings
 sudo mkdir -p "$iwdconfd"
