@@ -31,7 +31,7 @@ sudo usermod -aG video "$self"
 # dnf settings
 sudo mkdir -p "/etc/dnf/"
 for f in ./conf/dnf/*; do
-    cp "$f" /etc/dnf/
+    sudo cp "$f" /etc/dnf/
 done
 
 # X11 settings
@@ -42,7 +42,7 @@ done
 
 # systemd settings
 sudo mkdir -p "$systemdconfd"
-cp -ir ./conf/systemd/* "$systemdconfd"
+sudo cp -ir ./conf/systemd/* "$systemdconfd"
 
 # iwd settings
 sudo mkdir -p "$iwdconfd"
