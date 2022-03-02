@@ -61,8 +61,10 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
     fd --type d --hidden --follow --exclude ".git" -j$(nproc) . "$1"
 }
+
 # source /usr/share/fzf/shell/completion.zsh
 source /usr/share/fzf/shell/key-bindings.zsh
+source /usr/share/zsh/site-functions/fzf
 
 # zsh-autosuggestions
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#AAAAAA'
