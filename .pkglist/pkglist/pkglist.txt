@@ -49,6 +49,7 @@ htop
 i3lock
 iwd
 jq
+lame
 levien-inconsolata-fonts
 libX11-devel
 libXext-devel
