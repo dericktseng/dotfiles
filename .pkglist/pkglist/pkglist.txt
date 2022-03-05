@@ -7,6 +7,7 @@ bc
 bspwm
 cargo
 clang
+clang-devel
 clang-tools-extra
 dejavu-fonts-all
 dex-autostart
@@ -79,8 +80,8 @@ papirus-icon-theme
 patch
 picom
 pipewire-alsa
-pipewire-media-session
 pipewire-gstreamer
+pipewire-media-session
 pipewire-pulseaudio
 pkgconf
 polkit-gnome
@@ -102,6 +103,7 @@ ripgrep
 rlwrap
 rofi
 rust
+rust-src
 sddm
 socat
 sqlite
