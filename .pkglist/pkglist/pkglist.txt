@@ -79,6 +79,7 @@ papirus-icon-theme
 patch
 picom
 pipewire-alsa
+pipewire-media-session
 pipewire-gstreamer
 pipewire-pulseaudio
 pkgconf
@@ -118,7 +119,6 @@ unzip
 usbutils
 util-linux-user
 wget
-wireplumber
 wmctrl
 xclip
 xdg-desktop-portal
