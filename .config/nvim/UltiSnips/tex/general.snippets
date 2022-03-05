@@ -85,17 +85,6 @@ snippet pdf "insert pdf" bA
 \\includepdf[pages=-,pagecommand={},width=\\textwidth]{$1.pdf}
 endsnippet
 
-snippet table "Table environment" b
-\\begin{table}[${1:htpb}]
-	\\centering
-	\\caption{${2:caption}}
-	\\label{tab:${3:label}}
-	\\begin{tabular}{${5:c}}
-	$0${5/((?<=.)c|l|r)|./(?1: & )/g}
-	\\end{tabular}
-\\end{table}
-endsnippet
-
 snippet conc "concentration"
 \\ch{[$1]}
 endsnippet
@@ -116,6 +105,17 @@ snippet fig "Figure environment" b
 	\\caption{${4:$3}}
 	\\label{fig:${5:${3/\W+/-/g}}}
 \\end{figure}
+endsnippet
+
+snippet table "Table environment" b
+\\begin{table}[${1:htpb}]
+	\\centering
+	\\begin{tabular}{${5:c}}
+	$0${5/((?<=.)c|l|r)|./(?1: & )/g}
+	\\end{tabular}
+	\\caption{${2:caption}}
+	\\label{tab:${3:label}}
+\\end{table}
 endsnippet
 
 snippet bf "bolface" w
@@ -160,8 +160,8 @@ snippet setup "setup"
 	\\array{#1}}
 \\makeatother
 
-% \\setlength{\\parindent}{4em}
-% \\setlength{\\parskip}{1em}
+% \\setlength{\\parindent}{0em}
+% \\setlength{\\parskip}{0.5em}
 
 \\title{${1:Title}}
 \\author{${2:Derick Tseng}}

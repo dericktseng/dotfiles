@@ -121,6 +121,8 @@ wget
 wireplumber
 wmctrl
 xclip
+xdg-desktop-portal
+xdg-desktop-portal-gtk
 xdg-user-dirs
 xdg-utils
 xdotool
