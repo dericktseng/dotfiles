@@ -10,7 +10,7 @@ sudo dnf install \
 	https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # install all packages
-sudo dnf --allowerasing install $(cat ./pkglist/pkglist.txt)
+cat ./pkglist/pkglist.txt | xargs sudo dnf --allowerasing install
 
 # install groups
 cat ./pkglist/groups.txt | xargs sudo dnf groupinstall
@@ -20,6 +20,11 @@ while read -r line; do
     yes | sudo dnf copr enable $line
 done < ./pkglist/copr.txt
 cat ./pkglist/copr.txt | cut -d '/' -f 2 | xargs sudo dnf -y install --skip-broken
+
+# install flatpak
+while read -r line; do
+    sudo flatpak install $line
+done < ./pkglist/flatpak.txt
 
 # install nvim packer
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
