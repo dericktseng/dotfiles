@@ -22,6 +22,7 @@ done < ./pkglist/copr.txt
 cat ./pkglist/copr.txt | cut -d '/' -f 2 | xargs sudo dnf -y install --skip-broken
 
 # install flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 while read -r line; do
     sudo flatpak install $line
 done < ./pkglist/flatpak.txt
