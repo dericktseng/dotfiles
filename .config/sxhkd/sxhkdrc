@@ -24,7 +24,7 @@ ctrl + shift + k
 
 # launch browser
 super + @space
-    flatpak run org.mozilla.firefox
+    firefox
 
 # open powermenu
 super + Delete
