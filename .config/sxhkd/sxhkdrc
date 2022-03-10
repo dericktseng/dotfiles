@@ -115,7 +115,7 @@ super + g
 
 # laptop brightness increase or decrease
 {XF86MonBrightnessUp, XF86MonBrightnessDown}
-    xbacklight {-inc, -dec} 5 && brightnessnotify.sh
+    brightnessctl set {+5%, 5%-} && brightnessnotify.sh
 
 # fullscreen same screenshot
 @Print
