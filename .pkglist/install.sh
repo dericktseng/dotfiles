@@ -4,6 +4,12 @@ if [ $(id -u) -eq 0 ]; then
     exit 1
 fi
 
+# dnf settings
+sudo mkdir -p "/etc/dnf/"
+for f in ./conf/dnf/*; do
+    sudo cp "$f" /etc/dnf/
+done
+
 # unlock rpmfusion
 sudo dnf install \
 	https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \

@@ -27,12 +27,6 @@ chsh -s /bin/zsh
 # backlight settings: adds user to group video
 sudo usermod -aG video "$self"
 
-# dnf settings
-sudo mkdir -p "/etc/dnf/"
-for f in ./conf/dnf/*; do
-    sudo cp "$f" /etc/dnf/
-done
-
 # X11 settings
 sudo mkdir -p "$xorgconfd"
 for f in ./conf/xorg/*; do
