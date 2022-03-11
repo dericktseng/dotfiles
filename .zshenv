@@ -13,6 +13,7 @@ export TERMINAL='/usr/bin/termite'
 # hardware video acceleration firefox
 export MOZ_X11_EGL=1
 export MOZ_WEBRENDER=1
+export MOZ_DISABLE_RDD_SANDBOX=1
 
 # fzf settings
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always"

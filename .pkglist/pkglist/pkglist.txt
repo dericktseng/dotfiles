@@ -1,10 +1,10 @@
-brightnessctl
 acpi
 alsa-utils
 aria2
 autoconf
 automake
 bc
+brightnessctl
 bspwm
 cargo
 clang
@@ -92,7 +92,6 @@ profile-sync-daemon
 profile-sync-daemon
 pulseaudio-libs
 pulseaudio-utils
-python3-pip
 python-matplotlib
 python-neovim
 python-numpy
@@ -101,6 +100,7 @@ python-scipy
 python-sympy
 python3-neovim
 python3-notebook
+python3-pip
 ripgrep
 rlwrap
 rofi
