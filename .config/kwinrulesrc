@@ -2,10 +2,11 @@
 update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
 
 [1]
-Description=Application settings for konsole
+Description=Application settings for discord
 clientmachine=localhost
 desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
-wmclass=konsole
+desktopsrule=3
+wmclass=discord
 wmclassmatch=1
 
 [19572da2-77a6-4e97-81e4-4092ed8dec4f]
@@ -24,9 +25,17 @@ desktopsrule=3
 wmclass=discord
 wmclassmatch=1
 
+[8b4be464-bf3d-4baf-8c95-6b27acc6cca6]
+Description=Application settings for termite
+clientmachine=localhost
+minsize=1200,700
+minsizerule=2
+wmclass=termite
+wmclassmatch=1
+
 [General]
 count=2
-rules=1,2
+rules=8b4be464-bf3d-4baf-8c95-6b27acc6cca6,1
 
 [adb38742-80ef-4119-9a2d-cdd6cdcb1a09]
 Description=Application settings for konsole
