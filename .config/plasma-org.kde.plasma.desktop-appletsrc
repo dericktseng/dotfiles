@@ -75,6 +75,13 @@ global=Alt+F1
 immutability=1
 plugin=org.kde.plasma.pager
 
+[Containments][2][Applets][4][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][2][Applets][4][Configuration][General]
+showWindowIcons=true
+
 [Containments][2][Applets][5]
 immutability=1
 plugin=org.kde.plasma.icontasks
@@ -91,7 +98,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][7][Configuration]
-PreloadWeight=95
+PreloadWeight=100
 SystrayContainmentId=8
 
 [Containments][2][ConfigDialog]
@@ -123,7 +130,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][12][Configuration]
-PreloadWeight=60
+PreloadWeight=70
 
 [Containments][8][Applets][13]
 immutability=1
@@ -149,7 +156,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][8][Applets][17][Configuration]
-PreloadWeight=55
+PreloadWeight=60
 
 [Containments][8][Applets][18]
 immutability=1
