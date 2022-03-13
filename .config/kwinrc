@@ -18,6 +18,9 @@ Name_5=5
 Number=5
 Rows=1
 
+[Effect-PresentWindows]
+BorderActivateAll=9
+
 [Effect-Slide]
 Duration=1
 
