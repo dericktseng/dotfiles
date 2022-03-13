@@ -15,6 +15,9 @@ ShowTerminalSizeHint=false
 [Interaction Options]
 TextEditorCmd=1
 
+[Scrolling]
+ScrollBarPosition=2
+
 [Terminal Features]
 BlinkingCursorEnabled=true
 PeekPrimaryKeySequence=Del
