@@ -45,7 +45,6 @@ gstreamer1-plugins-good
 gstreamer1-plugins-good-extras
 gstreamer1-plugins-good-gtk
 gstreamer1-plugins-good-qt
-gvfs-mtp
 htop
 i3lock
 iwd
@@ -108,7 +107,6 @@ strace
 sudo
 sxhkd
 texlive-scheme-full
-thunar
 tk
 tmux
 tumbler

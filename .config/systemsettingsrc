@@ -13,12 +13,13 @@ HDMI-A-0 Width 1920x1080=1467
 HDMI-A-0 XPosition 1920x1080=62
 HDMI-A-0 YPosition 1920x1080=87
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAABc4AAAMcAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAAAABbsAAAOLAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 
 [Open-with settings]
 CompletionMode=1
-History=/home/derickwtseng/Music/yt-playlist,ter,thunar,firefox,konsol
+History=dolp,/home/derickwtseng/Music/yt-playlist,ter,thunar,firefox,konsol
 
 [UiSettings]
 ColorScheme=Default

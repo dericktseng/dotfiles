@@ -218,7 +218,7 @@ stopmedia=Media Stop,Media Stop,Stop media playback
 
 [org.kde.dolphin.desktop]
 _k_friendly_name=Dolphin
-_launch=none,Meta+E,Dolphin
+_launch=Meta+N,Meta+E,Dolphin
 
 [org.kde.krunner.desktop]
 RunClipboard=Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents
@@ -294,10 +294,3 @@ screenlocker=none,none,Screen Locking
 [termite.desktop]
 _k_friendly_name=Termite
 _launch=Meta+Return,none,Termite
-
-[thunar.desktop]
-_k_friendly_name=Thunar File Manager
-_launch=Meta+N,none,Thunar File Manager
-open-computer=none,none,Computer
-open-home=none,none,Home
-open-trash=none,none,Trash

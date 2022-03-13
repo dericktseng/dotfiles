@@ -1,27 +1,27 @@
 [Added Associations]
+application/xml=nvim.desktop;
 image/jpeg=feh.desktop;
-inode/directory=thunar.desktop;
+inode/directory=org.kde.dolphin.desktop;thunar.desktop;
+text/markdown=nvim.desktop;
 text/plain=nvim.desktop;
 text/x-python=nvim.desktop;
+video/mp4=mpv.desktop;
 x-scheme-handler/geo=google-maps-geo-handler.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/mailto=org.kde.kmail2.desktop;
-x-scheme-handler/tel=us.zoom.Zoom.desktop;
-application/xml=nvim.desktop;
-text/markdown=nvim.desktop;
-video/mp4=mpv.desktop;
+x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;us.zoom.Zoom.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
 image/jpeg=feh.desktop
 image/png=feh.desktop
-inode/directory=thunar.desktop;
+inode/directory=org.kde.dolphin.desktop;
+text/markdown=nvim.desktop
 text/plain=nvim.desktop
+video/mp4=mpv.desktop
 x-scheme-handler/geo=google-maps-geo-handler.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/mailto=org.kde.kmail2.desktop;
-x-scheme-handler/tel=us.zoom.Zoom.desktop;
-text/markdown=nvim.desktop
-video/mp4=mpv.desktop
+x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
