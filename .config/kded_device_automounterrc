@@ -1,0 +1,31 @@
+[Devices][/org/freedesktop/UDisks2/block_devices/nvme0n1p1]
+EverMounted=true
+Icon=drive-harddisk
+LastNameSeen=EFI System Partition
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/nvme0n1p3]
+EverMounted=true
+Icon=drive-harddisk-root
+LastNameSeen=325.3 GiB Internal Drive (nvme0n1p3)
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/nvme0n1p4]
+Icon=drive-harddisk
+LastNameSeen=Basic data partition
+
+[Devices][/org/freedesktop/UDisks2/block_devices/nvme0n1p5]
+Icon=drive-harddisk
+LastNameSeen=533.0 MiB Internal Drive (nvme0n1p5)
+
+[Devices][/org/freedesktop/UDisks2/block_devices/sda1]
+EverMounted=true
+Icon=drive-removable-media-usb
+LastNameSeen=Backup
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/sda2]
+EverMounted=true
+Icon=drive-removable-media-usb
+LastNameSeen=839.0 GiB Removable Media
+LastSeenMounted=true

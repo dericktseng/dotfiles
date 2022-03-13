@@ -1,0 +1,23 @@
+[Editor]
+HDMI-A-0 XPosition 1920x1080=0
+HDMI-A-0 YPosition 1920x1080=0
+State=AAAA/wAAAAD9AAAAAAAAAoAAAAGUAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+
+[GPG Settings]
+gpg_config_path[$e]=$HOME/.gnupg/gpg.conf
+
+[General Options]
+First run=false
+
+[MainWindow]
+HDMI-A-0 XPosition 1920x1080=532
+HDMI-A-0 YPosition 1920x1080=398
+State=AAAA/wAAAAD9AAAAAAAAA1gAAACpAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+
+[TipOfDay]
+RunOnStart=false
+
+[User Interface]
+AutoStart=true

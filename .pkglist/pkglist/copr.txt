@@ -1,4 +1,1 @@
-skidnik/clipmenu
-skidnik/termite
-skidnik/hsetroot
 robot/rust-analyzer

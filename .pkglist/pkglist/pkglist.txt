@@ -5,13 +5,11 @@ autoconf
 automake
 bc
 brightnessctl
-bspwm
 cargo
 clang
 clang-devel
 clang-tools-extra
 dejavu-fonts-all
-dex-autostart
 djvulibre
 dkms
 dunst
@@ -47,6 +45,7 @@ gstreamer1-plugins-good
 gstreamer1-plugins-good-extras
 gstreamer1-plugins-good-gtk
 gstreamer1-plugins-good-qt
+gvfs-mtp
 htop
 i3lock
 iwd
@@ -64,7 +63,6 @@ llvm
 lm_sensors
 maim
 make
-materia-gtk-theme
 mathjax
 mozilla-openh264
 mpv
@@ -77,18 +75,14 @@ npm
 ntfs-3g
 openssh
 os-prober
-papirus-icon-theme
 patch
-picom
 pipewire-alsa
 pipewire-gstreamer
 pipewire-media-session
 pipewire-pulseaudio
 pkgconf
 polkit-gnome
-polybar
 powertop
-profile-sync-daemon
 profile-sync-daemon
 pulseaudio-libs
 pulseaudio-utils
@@ -114,8 +108,10 @@ strace
 sudo
 sxhkd
 texlive-scheme-full
+thunar
 tk
 tmux
+tumbler
 udiskie
 ufw
 unrar
@@ -135,7 +131,6 @@ xrandr
 xset
 xsetroot
 xss-lock
-xterm
 youtube-dl
 zathura
 zathura-djvu

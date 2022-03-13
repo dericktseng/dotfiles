@@ -41,8 +41,12 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
     config = function() require'configs.treesitter' end,
+  }
+
+  use {
+    'p00f/nvim-ts-rainbow',
     requires = {
-      {'p00f/nvim-ts-rainbow'}
+      'nvim-treesitter/nvim-treesitter',
     }
   }
 

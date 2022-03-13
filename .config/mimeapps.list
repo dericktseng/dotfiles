@@ -6,4 +6,4 @@ text/plain=nvim.desktop;
 application/pdf=org.pwmt.zathura.desktop
 text/plain=nvim.desktop
 image/png=feh.desktop
-inode/directory=nnn.desktop
+inode/directory=Thunar.desktop

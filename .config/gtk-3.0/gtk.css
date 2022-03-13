@@ -12,3 +12,4 @@ VteTerminal, vte-terminal {
 .titlebar {
   border-radius: 0;
 }
+@import 'colors.css';
