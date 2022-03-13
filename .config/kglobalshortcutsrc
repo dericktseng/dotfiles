@@ -26,6 +26,7 @@ display=Display\tMeta+P,Display\tMeta+P,Switch Display
 
 [khotkeys]
 _k_friendly_name=Custom Shortcuts Service
+{2ed916a0-c81f-46ba-ac62-c6269bafa9f3}=Ctrl+Shift+M,none,Music
 {34b2b78a-f38c-423e-b238-e3dd62177716}=Ctrl+Alt+T,none,Launch Konsole
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
 
@@ -231,12 +232,12 @@ _launch=Meta+.,Meta+.,Emoji Selector
 [org.kde.spectacle.desktop]
 ActiveWindowScreenShot=Meta+Print,Meta+Print,Capture Active Window
 CurrentMonitorScreenShot=none,none,Capture Current Monitor
-FullScreenScreenShot=none,Shift+Print,Capture Entire Desktop
-OpenWithoutScreenshot=Print,none,Launch Spectacle without capturing
+FullScreenScreenShot=Print,Shift+Print,Capture Entire Desktop
+OpenWithoutScreenshot=none,none,Launch Spectacle without capturing
 RectangularRegionScreenShot=Meta+Shift+Print,Meta+Shift+Print,Capture Rectangular Region
 WindowUnderCursorScreenShot=Meta+Ctrl+Print,Meta+Ctrl+Print,Capture Window Under Cursor
 _k_friendly_name=Spectacle
-_launch=Shift+Print,Print,Launch Spectacle
+_launch=none,Print,Launch Spectacle
 
 [org_kde_powerdevil]
 Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness

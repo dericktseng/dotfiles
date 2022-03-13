@@ -38,6 +38,9 @@ wallpaperplugin=org.kde.image
 immutability=1
 plugin=org.kde.plasma.digitalclock
 
+[Containments][2][Applets][19][Configuration]
+PreloadWeight=65
+
 [Containments][2][Applets][20]
 immutability=1
 plugin=org.kde.plasma.showdesktop
@@ -163,7 +166,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][8][Applets][17][Configuration]
-PreloadWeight=65
+PreloadWeight=75
 
 [Containments][8][Applets][18]
 immutability=1
@@ -185,14 +188,14 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][8][Applets][24][Configuration]
-PreloadWeight=55
+PreloadWeight=65
 
 [Containments][8][Applets][28]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][8][Applets][28][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][8][Applets][28][Configuration][ConfigDialog]
 DialogHeight=540
