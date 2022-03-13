@@ -140,7 +140,7 @@ ColorSchemeHash=0d48a65f7ec21fd6758445108cd2bcfb1ce4deb8
 toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 
 [KDE]
-AnimationDurationFactor=0.35355339059327373
+AnimationDurationFactor=0.5
 SingleClick=false
 
 [WM]

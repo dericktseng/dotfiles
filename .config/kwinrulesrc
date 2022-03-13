@@ -1,6 +1,13 @@
 [$Version]
 update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
 
+[1]
+Description=Application settings for konsole
+clientmachine=localhost
+desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
+wmclass=konsole
+wmclassmatch=1
+
 [19572da2-77a6-4e97-81e4-4092ed8dec4f]
 Description=Application settings for discord
 clientmachine=localhost
@@ -9,6 +16,22 @@ desktopsrule=3
 wmclass=discord
 wmclassmatch=1
 
+[2]
+Description=Application settings for discord
+clientmachine=localhost
+desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
+desktopsrule=3
+wmclass=discord
+wmclassmatch=1
+
 [General]
-count=1
-rules=19572da2-77a6-4e97-81e4-4092ed8dec4f
+count=2
+rules=1,2
+
+[adb38742-80ef-4119-9a2d-cdd6cdcb1a09]
+Description=Application settings for konsole
+clientmachine=localhost
+noborder=true
+noborderrule=3
+wmclass=konsole
+wmclassmatch=1
