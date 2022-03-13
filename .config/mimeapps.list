@@ -10,6 +10,7 @@ x-scheme-handler/mailto=org.kde.kmail2.desktop;
 x-scheme-handler/tel=us.zoom.Zoom.desktop;
 application/xml=nvim.desktop;
 text/markdown=nvim.desktop;
+video/mp4=mpv.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
@@ -23,3 +24,4 @@ x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/mailto=org.kde.kmail2.desktop;
 x-scheme-handler/tel=us.zoom.Zoom.desktop;
 text/markdown=nvim.desktop
+video/mp4=mpv.desktop

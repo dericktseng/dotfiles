@@ -53,7 +53,7 @@ mute=Volume Mute\tMeta+M,Volume Mute,Mute
 [ksmserver]
 Halt Without Confirmation=none,,Halt Without Confirmation
 Lock Session=Screensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session
-Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Log Out
+Log Out=Ctrl+Alt+Del\tMeta+Del,Ctrl+Alt+Del,Log Out
 Log Out Without Confirmation=none,,Log Out Without Confirmation
 Reboot Without Confirmation=none,,Reboot Without Confirmation
 _k_friendly_name=Session Management
