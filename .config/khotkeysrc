@@ -1041,6 +1041,7 @@ WindowsCount=0
 Theme[$d]
 
 [KDE]
+AnimationDurationFactor[$d]
 ColorScheme[$d]
 SingleClick[$d]
 widgetStyle[$d]
