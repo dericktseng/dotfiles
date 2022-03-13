@@ -39,7 +39,11 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][2][Applets][19][Configuration]
-PreloadWeight=70
+PreloadWeight=75
+
+[Containments][2][Applets][19][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
 
 [Containments][2][Applets][20]
 immutability=1
@@ -191,7 +195,7 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][8][Applets][24][Configuration]
-PreloadWeight=90
+PreloadWeight=100
 
 [Containments][8][Applets][28]
 immutability=1
@@ -209,7 +213,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][8][Applets][9][Configuration]
-PreloadWeight=60
+PreloadWeight=70
 
 [Containments][8][ConfigDialog]
 DialogHeight=540

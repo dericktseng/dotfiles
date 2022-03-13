@@ -59,8 +59,8 @@ wmclass=termite
 wmclassmatch=1
 
 [General]
-count=3
-rules=1,2,3
+count=4
+rules=dce570d3-573d-4240-bb17-ac09371be8de,1,2,3
 
 [adb38742-80ef-4119-9a2d-cdd6cdcb1a09]
 Description=Application settings for konsole
@@ -68,4 +68,14 @@ clientmachine=localhost
 noborder=true
 noborderrule=3
 wmclass=konsole
+wmclassmatch=1
+
+[dce570d3-573d-4240-bb17-ac09371be8de]
+Description=Application settings for mpv
+blockcompositingrule=2
+clientmachine=localhost
+fullscreen=true
+fullscreenrule=3
+wmclass=gl mpv
+wmclasscomplete=true
 wmclassmatch=1

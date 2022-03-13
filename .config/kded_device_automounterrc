@@ -29,3 +29,7 @@ EverMounted=true
 Icon=drive-removable-media-usb
 LastNameSeen=839.0 GiB Removable Media
 LastSeenMounted=true
+
+[Devices][/org/kde/fstab/fuse.sshfs/run/user/1000/a7e11f154431cbb0]
+EverMounted=true
+LastSeenMounted=true

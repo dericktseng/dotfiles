@@ -10,8 +10,8 @@ HDMI-A-0 Width 1920x1080=449
 [MainWindow]
 HDMI-A-0 Height 1920x1080=800
 HDMI-A-0 Width 1920x1080=1327
-HDMI-A-0 XPosition 1920x1080=351
-HDMI-A-0 YPosition 1920x1080=172
+HDMI-A-0 XPosition 1920x1080=173
+HDMI-A-0 YPosition 1920x1080=196
 MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAAAABS8AAAMgAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
@@ -21,4 +21,4 @@ CompletionMode=1
 History=dol,thunar,dolp,/home/derickwtseng/Music/yt-playlist,ter,firefox,konsol
 
 [UiSettings]
-ColorScheme=Default
+ColorScheme=
