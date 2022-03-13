@@ -39,7 +39,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][2][Applets][19][Configuration]
-PreloadWeight=65
+PreloadWeight=70
 
 [Containments][2][Applets][20]
 immutability=1
@@ -143,7 +143,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][12][Configuration]
-PreloadWeight=80
+PreloadWeight=90
 
 [Containments][8][Applets][13]
 immutability=1
@@ -169,7 +169,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][8][Applets][17][Configuration]
-PreloadWeight=80
+PreloadWeight=90
 
 [Containments][8][Applets][18]
 immutability=1

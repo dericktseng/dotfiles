@@ -4,11 +4,12 @@ Recent URLs[$e]=file:$HOME/Music/,file:$HOME/Downloads/,file:$HOME/,file:$HOME/.
 detailViewIconSize=16
 
 [MainWindow]
-HDMI-A-0 Height 1920x1080=916
-HDMI-A-0 Width 1920x1080=1524
-HDMI-A-0 XPosition 1920x1080=246
-HDMI-A-0 YPosition 1920x1080=54
+HDMI-A-0 Height 1920x1080=898
+HDMI-A-0 Width 1920x1080=1385
+HDMI-A-0 XPosition 1920x1080=225
+HDMI-A-0 YPosition 1920x1080=84
 MenuBar=Disabled
+RestorePositionForNextInstance=false
 State=AAAA/wAAAAD9AAAAAAAABfQAAAOUAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 
@@ -17,4 +18,4 @@ CompletionMode=1
 History=/home/derickwtseng/Music/yt-playlist,ter,thunar,firefox,konsol
 
 [UiSettings]
-ColorScheme=
+ColorScheme=Default

@@ -1,3 +1,6 @@
+[Common]
+ShadowSize=ShadowSmall
+
 [Windeco Exception 0]
 BorderSize=0
 Enabled=true

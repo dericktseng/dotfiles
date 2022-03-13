@@ -35,7 +35,7 @@ autoload=false
 autoload=true
 
 [Module-kded_touchpad]
-autoload=false
+autoload=true
 
 [Module-keyboard]
 autoload=true
