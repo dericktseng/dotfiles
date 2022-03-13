@@ -1,0 +1,15 @@
+[Plugins]
+DictionaryEnabled=false
+PIM Contacts Search RunnerEnabled=false
+baloosearchEnabled=false
+bookmarksEnabled=false
+browserhistoryEnabled=false
+browsertabsEnabled=false
+krunner_spellcheckEnabled=false
+locationsEnabled=false
+marbleEnabled=false
+org.kde.activities2Enabled=true
+recentdocumentsEnabled=false
+servicesEnabled=true
+webshortcutsEnabled=false
+windowsEnabled=false
