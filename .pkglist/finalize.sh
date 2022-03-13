@@ -16,7 +16,6 @@ systemctl --user --now enable psd
 sudo systemctl --now enable ufw
 sudo systemctl --now enable iwd
 sudo systemctl --now enable systemd-resolved
-sudo systemctl enable sddm
 
 # synchronize clock with systemd timesync ntp
 sudo timedatectl set-ntp true

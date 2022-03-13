@@ -6,9 +6,7 @@ fi
 
 # dnf settings
 sudo mkdir -p "/etc/dnf/"
-for f in ./conf/dnf/*; do
-    sudo cp "$f" /etc/dnf/
-done
+cat ./conf/dnf/dnf.conf | sed "s/NUM_CORES/$(nproc)/" | sudo tee /etc/dnf/dnf.conf > /dev/null
 
 # unlock rpmfusion
 sudo dnf install \
