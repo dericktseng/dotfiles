@@ -1,2 +1,5 @@
+[Module-browserintegrationreminder]
+autoload=false
+
 [PlasmaBrowserIntegration]
-shownCount=1
+shownCount=2

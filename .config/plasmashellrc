@@ -1,8 +1,18 @@
+[Notification Messages]
+klipperClearHistoryAskAgain=false
+
+[PlasmaTransientsConfig]
+PreloadWeight=34
+
+[PlasmaViews][Panel 2]
+alignment=1
+panelVisibility=0
+
 [PlasmaViews][Panel 2][Defaults]
-thickness=44
+thickness=40
 
 [PlasmaViews][Panel 2][Horizontal1920]
-thickness=44
+thickness=40
 
 [ScreenConnectors]
 0=HDMI-A-0

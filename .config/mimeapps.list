@@ -1,9 +1,11 @@
 [Added Associations]
 text/x-python=nvim.desktop;
 text/plain=nvim.desktop;
+image/jpeg=feh.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
 text/plain=nvim.desktop
 image/png=feh.desktop
 inode/directory=Thunar.desktop
+image/jpeg=feh.desktop

@@ -16,6 +16,10 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
+[Containments][1][General]
+ToolBoxButtonState=topcenter
+ToolBoxButtonX=559
+
 [Containments][1][Wallpaper][org.kde.image][General]
 Image=file:///usr/share/backgrounds/f35/default/f35-01-day.png
 
@@ -36,13 +40,19 @@ plugin=org.kde.plasma.digitalclock
 immutability=1
 plugin=org.kde.plasma.showdesktop
 
-[Containments][2][Applets][23]
+[Containments][2][Applets][26]
 immutability=1
-plugin=org.kde.plasma.icon
+plugin=org.kde.plasma.panelspacer
 
-[Containments][2][Applets][23][Configuration]
-localPath=/home/derickwtseng/.local/share/plasma_icons/thunar.desktop
-url=file:///usr/share/applications/thunar.desktop
+[Containments][2][Applets][26][Configuration][General]
+length=1124
+
+[Containments][2][Applets][27]
+immutability=1
+plugin=org.kde.plasma.panelspacer
+
+[Containments][2][Applets][27][Configuration][General]
+length=766
 
 [Containments][2][Applets][3]
 immutability=1
@@ -70,7 +80,7 @@ immutability=1
 plugin=org.kde.plasma.icontasks
 
 [Containments][2][Applets][5][Configuration][General]
-launchers=preferred://browser
+launchers=
 
 [Containments][2][Applets][6]
 immutability=1
@@ -81,7 +91,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][7][Configuration]
-PreloadWeight=80
+PreloadWeight=95
 SystrayContainmentId=8
 
 [Containments][2][ConfigDialog]
@@ -89,7 +99,7 @@ DialogHeight=84
 DialogWidth=1920
 
 [Containments][2][General]
-AppletOrder=3;23;4;5;6;7;19;20
+AppletOrder=3;4;26;5;6;27;7;19;20
 
 [Containments][8]
 activityId=
@@ -138,6 +148,9 @@ plugin=org.kde.plasma.keyboardlayout
 immutability=1
 plugin=org.kde.plasma.clipboard
 
+[Containments][8][Applets][17][Configuration]
+PreloadWeight=55
+
 [Containments][8][Applets][18]
 immutability=1
 plugin=org.kde.plasma.nightcolorcontrol
@@ -157,9 +170,22 @@ PreloadWeight=55
 immutability=1
 plugin=org.kde.kdeconnect
 
+[Containments][8][Applets][24][Configuration]
+PreloadWeight=55
+
+[Containments][8][Applets][28]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][8][Applets][28][Configuration]
+PreloadWeight=18
+
 [Containments][8][Applets][9]
 immutability=1
 plugin=org.kde.plasma.notifications
+
+[Containments][8][Applets][9][Configuration]
+PreloadWeight=55
 
 [Containments][8][General]
 extraItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.printmanager,org.kde.plasma.bluetooth,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.battery,org.kde.plasma.manage-inputmethod,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.clipboard,org.kde.plasma.nightcolorcontrol,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.kdeconnect
@@ -167,4 +193,4 @@ knownItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.prin
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/tmp,0,desktop:/program,0,desktop:/Berkeley,0,desktop:/games,0,desktop:/current,0
+screenMapping=desktop:/games,0,desktop:/Berkeley,0,desktop:/tmp,0,desktop:/program,0,desktop:/current,0

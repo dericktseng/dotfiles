@@ -12,7 +12,6 @@ clang-tools-extra
 dejavu-fonts-all
 djvulibre
 dkms
-dunst
 easyeffects
 fakeroot
 fd-find

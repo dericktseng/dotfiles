@@ -1,2 +1,14 @@
 [$Version]
 update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
+
+[19572da2-77a6-4e97-81e4-4092ed8dec4f]
+Description=Application settings for discord
+clientmachine=localhost
+desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
+desktopsrule=3
+wmclass=discord
+wmclassmatch=1
+
+[General]
+count=1
+rules=19572da2-77a6-4e97-81e4-4092ed8dec4f
