@@ -135,6 +135,10 @@ ForegroundNormal=35,38,41
 ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
+[DirSelect Dialog]
+DirSelectDialog Size=844,598
+History Items[$e]=file:$HOME/Desktop/current,file:$HOME/Desktop/Berkeley
+
 [General]
 BrowserApplication=firefox.desktop
 ColorSchemeHash=0d48a65f7ec21fd6758445108cd2bcfb1ce4deb8

@@ -12,6 +12,7 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/empty-trash" "")
 ; (gtk_accel_path "<Actions>/ThunarLauncher/open" "<Primary>o")
 ; (gtk_accel_path "<Actions>/ThunarWindow/reload" "<Primary>r")
+; (gtk_accel_path "<Actions>/ThunarBookmarks/798d7766d5e5efb29231df5f29cf080b" "")
 ; (gtk_accel_path "<Actions>/ThunarBookmarks/4742e4784e3dce4d5c6a91c30799ec69" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-side-pane-menu" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-ascending" "")
