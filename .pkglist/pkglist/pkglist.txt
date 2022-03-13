@@ -62,6 +62,7 @@ llvm
 lm_sensors
 maim
 make
+materia-gtk-theme
 mathjax
 mozilla-openh264
 mpv
