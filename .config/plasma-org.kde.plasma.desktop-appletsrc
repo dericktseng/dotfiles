@@ -19,6 +19,8 @@ wallpaperplugin=org.kde.image
 [Containments][1][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=559
+positions=1,17,desktop:/Berkeley,0,0,desktop:/program,0,1,desktop:/current,0,2,desktop:/tmp,0,3
+sortMode=-1
 
 [Containments][1][Wallpaper][org.kde.image][General]
 Image=file:///usr/share/backgrounds/f35/default/f35-01-day.png
@@ -150,7 +152,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][8][Applets][15][Configuration]
-PreloadWeight=60
+PreloadWeight=65
 
 [Containments][8][Applets][16]
 immutability=1
@@ -161,7 +163,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][8][Applets][17][Configuration]
-PreloadWeight=60
+PreloadWeight=65
 
 [Containments][8][Applets][18]
 immutability=1
@@ -176,7 +178,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][8][Applets][22][Configuration]
-PreloadWeight=55
+PreloadWeight=60
 
 [Containments][8][Applets][24]
 immutability=1
@@ -190,14 +192,22 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][8][Applets][28][Configuration]
-PreloadWeight=0
+PreloadWeight=10
+
+[Containments][8][Applets][28][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
 
 [Containments][8][Applets][9]
 immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][8][Applets][9][Configuration]
-PreloadWeight=55
+PreloadWeight=60
+
+[Containments][8][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
 
 [Containments][8][General]
 extraItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.printmanager,org.kde.plasma.bluetooth,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.battery,org.kde.plasma.manage-inputmethod,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.clipboard,org.kde.plasma.nightcolorcontrol,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.kdeconnect

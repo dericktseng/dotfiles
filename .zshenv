@@ -28,7 +28,7 @@ export FZF_DEFAULT_OPTS="
     --color=marker:#4271ae,spinner:#4271ae,header:#4271ae"
 
 # temporary fix to libreoffice black borders
-export SAL_USE_VCLPLUGIN=gen
+# export SAL_USE_VCLPLUGIN=gen
 
 # rofi launcher for clipmenu
 export CM_LAUNCHER=rofi
