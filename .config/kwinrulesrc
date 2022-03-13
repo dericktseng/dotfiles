@@ -2,12 +2,16 @@
 update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
 
 [1]
-Description=Application settings for termite
+Description=Application settings for zathura
 clientmachine=localhost
 desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
+maximizehoriz=true
+maximizehorizrule=3
+maximizevert=true
+maximizevertrule=3
 minsize=1200,700
-minsizerule=2
-wmclass=termite
+wmclass=org.pwmt.zathura zathura
+wmclasscomplete=true
 wmclassmatch=1
 
 [19572da2-77a6-4e97-81e4-4092ed8dec4f]
@@ -19,6 +23,15 @@ wmclass=discord
 wmclassmatch=1
 
 [2]
+Description=Application settings for termite
+clientmachine=localhost
+desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
+minsize=1200,700
+minsizerule=2
+wmclass=termite
+wmclassmatch=1
+
+[3]
 Description=Application settings for discord
 clientmachine=localhost
 desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
@@ -47,7 +60,7 @@ wmclassmatch=1
 
 [General]
 count=3
-rules=4fc0947f-39d0-40b4-8a21-b7472875e903,1,2
+rules=1,2,3
 
 [adb38742-80ef-4119-9a2d-cdd6cdcb1a09]
 Description=Application settings for konsole

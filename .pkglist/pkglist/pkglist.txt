@@ -19,6 +19,7 @@ fd-find
 feh
 ffmpeg
 ffmpegthumbnailer
+ffmpegthumbs
 firefox
 fontconfig
 fzf
@@ -49,6 +50,7 @@ htop
 i3lock
 iwd
 jq
+kio_mtp
 lame
 levien-inconsolata-fonts
 libX11-devel
@@ -109,7 +111,6 @@ sxhkd
 texlive-scheme-full
 tk
 tmux
-tumbler
 udiskie
 ufw
 unrar

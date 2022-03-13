@@ -1077,6 +1077,7 @@ Theme[$d]
 AnimationDurationFactor[$d]
 ColorScheme[$d]
 ScrollbarLeftClickNavigatesByPage[$d]
+ShowDeleteCommand[$d]
 SingleClick[$d]
 widgetStyle[$d]
 
@@ -1103,10 +1104,16 @@ Sort reversed[$d]
 Speedbar Width[$d]
 View Style[$d]
 
+[KShortcutsDialog Settings]
+Dialog Size[$d]
+
 [Main]
 AlreadyImported=defaults,kde32b1,konqueror_gestures_kde321,konsole
 Disabled=false
 Version=2
+
+[PreviewSettings]
+MaximumRemoteSize[$d]
 
 [Voice]
 Shortcut=

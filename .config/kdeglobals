@@ -178,7 +178,7 @@ View Style=DetailTree
 Dialog Size=768,676
 
 [PreviewSettings]
-MaximumRemoteSize=0
+MaximumRemoteSize=5242880000
 
 [WM]
 activeBackground=227,229,231
