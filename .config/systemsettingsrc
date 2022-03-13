@@ -1,6 +1,6 @@
 [KFileDialog Settings]
-Recent Files[$e]=yt-playlist,file:$HOME/Music/yt-playlist
-Recent URLs[$e]=file:$HOME/Music/,file:$HOME/Downloads/,file:$HOME/
+Recent Files[$e]=yt-playlist,file:$HOME/.local/bin/yt-playlist.sh
+Recent URLs[$e]=file:$HOME/Music/,file:$HOME/Downloads/,file:$HOME/,file:$HOME/.local/bin/
 detailViewIconSize=16
 
 [MainWindow]
