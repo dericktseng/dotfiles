@@ -146,6 +146,9 @@ TerminalApplication=termite
 TerminalService=termite.desktop
 toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 
+[Icons]
+Theme=breeze
+
 [KDE]
 AnimationDurationFactor=0.5
 ScrollbarLeftClickNavigatesByPage=false

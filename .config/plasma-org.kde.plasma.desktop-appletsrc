@@ -131,6 +131,9 @@ wallpaperplugin=org.kde.image
 immutability=1
 plugin=org.kde.plasma.vault
 
+[Containments][8][Applets][10][Configuration]
+PreloadWeight=55
+
 [Containments][8][Applets][11]
 immutability=1
 plugin=org.kde.plasma.printmanager
@@ -140,7 +143,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][12][Configuration]
-PreloadWeight=70
+PreloadWeight=80
 
 [Containments][8][Applets][13]
 immutability=1
@@ -155,7 +158,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][8][Applets][15][Configuration]
-PreloadWeight=65
+PreloadWeight=75
 
 [Containments][8][Applets][16]
 immutability=1
@@ -166,7 +169,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][8][Applets][17][Configuration]
-PreloadWeight=75
+PreloadWeight=80
 
 [Containments][8][Applets][18]
 immutability=1
@@ -195,7 +198,7 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][8][Applets][28][Configuration]
-PreloadWeight=0
+PreloadWeight=2
 
 [Containments][8][Applets][28][Configuration][ConfigDialog]
 DialogHeight=540

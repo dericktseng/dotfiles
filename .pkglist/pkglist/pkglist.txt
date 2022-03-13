@@ -1,10 +1,10 @@
-breeze-gtk
 acpi
 alsa-utils
 aria2
 autoconf
 automake
 bc
+breeze-gtk
 brightnessctl
 cargo
 clang
