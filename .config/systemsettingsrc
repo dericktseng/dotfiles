@@ -3,14 +3,17 @@ Recent Files[$e]=yt-playlist,file:$HOME/.local/bin/yt-playlist.sh
 Recent URLs[$e]=file:$HOME/Music/,file:$HOME/Downloads/,file:$HOME/,file:$HOME/.local/bin/
 detailViewIconSize=16
 
+[KPropertiesDialog]
+HDMI-A-0 Height 1920x1080=458
+HDMI-A-0 Width 1920x1080=449
+
 [MainWindow]
-HDMI-A-0 Height 1920x1080=898
-HDMI-A-0 Width 1920x1080=1385
-HDMI-A-0 XPosition 1920x1080=225
-HDMI-A-0 YPosition 1920x1080=84
+HDMI-A-0 Height 1920x1080=907
+HDMI-A-0 Width 1920x1080=1467
+HDMI-A-0 XPosition 1920x1080=62
+HDMI-A-0 YPosition 1920x1080=87
 MenuBar=Disabled
-RestorePositionForNextInstance=false
-State=AAAA/wAAAAD9AAAAAAAABfQAAAOUAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAABc4AAAMcAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 
 [Open-with settings]

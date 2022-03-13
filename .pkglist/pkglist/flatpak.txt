@@ -1,1 +1,2 @@
-Discord
+com.discordapp.Discord
+us.zoom.Zoom

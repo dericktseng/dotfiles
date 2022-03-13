@@ -28,7 +28,7 @@ cat ./pkglist/copr.txt | cut -d '/' -f 2 | xargs sudo dnf -y install --skip-brok
 # install flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 while read -r line; do
-    sudo flatpak install $line
+    yes | sudo flatpak install $line
 done < ./pkglist/flatpak.txt
 
 # install nvim packer
