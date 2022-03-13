@@ -1,1 +1,2 @@
 robot/rust-analyzer
+skidnik/termite
