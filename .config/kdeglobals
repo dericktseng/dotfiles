@@ -136,8 +136,8 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [DirSelect Dialog]
-DirSelectDialog Size=862,615
-History Items[$e]=file:$HOME/Music/local/tbd,file:$HOME/Music,file:$HOME/Desktop/current,file:$HOME/Desktop/Berkeley
+DirSelectDialog Size=811,598
+History Items[$e]=file:///run/media/derickwtseng/3396c424-9e36-40ad-8aca-c4c2146c7102/retro,file:$HOME/Music/local/tbd,file:$HOME/Music,file:$HOME/Desktop/current,file:$HOME/Desktop/Berkeley
 
 [General]
 BrowserApplication=firefox.desktop

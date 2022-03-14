@@ -18,10 +18,10 @@ IconSize=64
 PreviewSize=96
 
 [MainWindow]
-HDMI-A-0 Height 1920x1080=887
-HDMI-A-0 Width 1920x1080=1422
-HDMI-A-0 XPosition 1920x1080=238
-HDMI-A-0 YPosition 1920x1080=104
+HDMI-A-0 Height 1920x1080=904
+HDMI-A-0 Width 1920x1080=1360
+HDMI-A-0 XPosition 1920x1080=255
+HDMI-A-0 YPosition 1920x1080=114
 MenuBar=Disabled
 ToolBarsMovable=Disabled
 
