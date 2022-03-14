@@ -1,3 +1,23 @@
+[Face-94215601833280][Appearance]
+chartFace=org.kde.ksysguard.piechart
+title=GPU
+
+[Face-94215601833280][SensorColors]
+gpu/all/usage=0,170,255
+gpu/gpu0/temperature=61,128,233
+gpu/gpu0/usage=191,233,61
+
+[Face-94215601833280][SensorLabels]
+gpu/all/usage=Total Usage
+
+[Face-94215601833280][Sensors]
+highPrioritySensorIds=["gpu/all/usage"]
+lowPrioritySensorIds=[]
+totalSensors=["gpu/all/usage","gpu/gpu0/temperature"]
+
+[Face-94215601833280][org.kde.ksysguard.piechart][General]
+showLegend=false
+
 [Face-94410222150464][SensorColors]
 memory/physical/used=61,174,233
 
@@ -30,6 +50,10 @@ showLegend=true
 [Face-94410266684256][SensorColors]
 cpu/all/usage=61,174,233
 
+[Face-94410266684256][Sensors]
+lowPrioritySensorIds=[]
+totalSensors=["cpu/all/usage","cpu/cpu\\\\d+/temperature"]
+
 [Face-94410278989264][SensorColors]
 os/plasma/kfVersion=233,223,61
 os/plasma/plasmaVersion=233,61,105
@@ -43,3 +67,13 @@ network/enp5s0/upload=233,120,61
 
 [page]
 actionsFace=
+
+[page][row-0][column-3]
+name=column-3
+noMargins=
+showBackground=true
+
+[page][row-0][column-3][section-0]
+face=Face-94215601833280
+isSeparator=false
+name=section-0

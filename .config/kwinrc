@@ -28,6 +28,9 @@ Duration=1
 CommandAll2=Nothing
 CommandAllKey=Alt
 
+[TabBox]
+LayoutName=thumbnails
+
 [Windows]
 AutoRaise=true
 AutoRaiseInterval=0
