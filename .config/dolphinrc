@@ -18,12 +18,15 @@ IconSize=64
 PreviewSize=96
 
 [MainWindow]
-HDMI-A-0 Height 1920x1080=851
-HDMI-A-0 Width 1920x1080=1375
-HDMI-A-0 XPosition 1920x1080=327
-HDMI-A-0 YPosition 1920x1080=289
+HDMI-A-0 Height 1920x1080=791
+HDMI-A-0 Width 1920x1080=1412
+HDMI-A-0 XPosition 1920x1080=262
+HDMI-A-0 YPosition 1920x1080=221
 MenuBar=Disabled
 ToolBarsMovable=Disabled
+
+[Notification Messages]
+ConfirmDelete=true
 
 [PreviewSettings]
 Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs

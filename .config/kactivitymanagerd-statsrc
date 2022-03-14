@@ -1,8 +1,8 @@
 [Favorites-org.kde.plasma.kickoff.favorites.instance-3-644e5605-d59e-4231-8d98-6dfb12fc7b5c]
-ordering=preferred://browser,applications:systemsettings.desktop,applications:org.kde.konsole.desktop,applications:org.kde.discover.desktop,applications:org.libretro.RetroArch.desktop,applications:libreoffice-calc.desktop,applications:libreoffice-writer.desktop,applications:org.kde.dolphin.desktop
+ordering=preferred://browser,applications:systemsettings.desktop,applications:org.kde.konsole.desktop,applications:org.kde.discover.desktop,applications:libreoffice-calc.desktop,applications:libreoffice-writer.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.plasma-systemmonitor.desktop
 
 [Favorites-org.kde.plasma.kickoff.favorites.instance-3-eb727265-861d-445e-8306-1d1e50c80e4d]
 ordering=preferred://browser,org.kde.kontact.desktop,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,org.kde.ktpcontactlist.desktop,ktpcontactlist.desktop,org.kde.kate.desktop,kate.desktop,org.kde.konsole.desktop,org.kde.apper.desktop,apper.desktop,org.kde.discover.desktop
 
 [Favorites-org.kde.plasma.kickoff.favorites.instance-3-global]
-ordering=preferred://browser,applications:systemsettings.desktop,applications:org.kde.konsole.desktop,applications:org.kde.discover.desktop,applications:org.libretro.RetroArch.desktop,applications:libreoffice-calc.desktop,applications:libreoffice-writer.desktop,applications:org.kde.dolphin.desktop
+ordering=preferred://browser,applications:systemsettings.desktop,applications:org.kde.konsole.desktop,applications:org.kde.discover.desktop,applications:libreoffice-calc.desktop,applications:libreoffice-writer.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.plasma-systemmonitor.desktop

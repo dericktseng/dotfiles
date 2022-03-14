@@ -1,6 +1,9 @@
 [Notification Messages]
 klipperClearHistoryAskAgain=false
 
+[PlasmaTransientsConfig]
+PreloadWeight=34
+
 [PlasmaViews][Panel 2]
 alignment=1
 panelVisibility=0
