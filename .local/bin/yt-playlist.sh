@@ -2,7 +2,7 @@
 session_name="music"
 musicdir="$HOME/Music/local"
 url='https://www.youtube.com/playlist?list=PLUcR4qhATg8sMIikByQq25NEQvWsQ52Yg'
-volume=75
+volume=100
 ipcsock="/tmp/mpvsocket"
 
 mpvcmd="mpv --volume=$volume --no-video --shuffle --input-ipc-server=$ipcsock"
