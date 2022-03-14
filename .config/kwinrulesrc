@@ -2,24 +2,6 @@
 update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
 
 [1]
-Description=Application settings for feh
-clientmachine=localhost
-desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
-maximizehoriz=true
-maximizevert=true
-minsize=1200,700
-wmclass=feh
-wmclassmatch=1
-
-[19572da2-77a6-4e97-81e4-4092ed8dec4f]
-Description=Application settings for discord
-clientmachine=localhost
-desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
-desktopsrule=3
-wmclass=discord
-wmclassmatch=1
-
-[2]
 Description=Application settings for mpv
 blockcompositingrule=2
 clientmachine=localhost
@@ -33,10 +15,19 @@ wmclass=gl mpv
 wmclasscomplete=true
 wmclassmatch=1
 
-[3]
+[19572da2-77a6-4e97-81e4-4092ed8dec4f]
+Description=Application settings for discord
+clientmachine=localhost
+desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
+desktopsrule=3
+wmclass=discord
+wmclassmatch=1
+
+[2]
 Description=Application settings for zathura
 clientmachine=localhost
 desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
+fullscreen=true
 maximizehoriz=true
 maximizehorizrule=3
 maximizevert=true
@@ -44,6 +35,18 @@ maximizevertrule=3
 minsize=1200,700
 wmclass=org.pwmt.zathura zathura
 wmclasscomplete=true
+wmclassmatch=1
+
+[3]
+Description=Application settings for termite
+clientmachine=localhost
+desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
+maximizehoriz=true
+maximizehorizrule=3
+maximizevert=true
+maximizevertrule=3
+minsize=1200,700
+wmclass=termite
 wmclassmatch=1
 
 [3761faa3-cb59-4c39-9bd6-2c7a60cb1604]
@@ -55,14 +58,13 @@ wmclass=feh
 wmclassmatch=1
 
 [4]
-Description=Application settings for termite
+Description=Application settings for discord
 clientmachine=localhost
 desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
+desktopsrule=3
 maximizehoriz=true
-maximizehorizrule=3
 maximizevert=true
-maximizevertrule=3
-wmclass=termite
+wmclass=discord
 wmclassmatch=1
 
 [4fc0947f-39d0-40b4-8a21-b7472875e903]
@@ -93,8 +95,8 @@ wmclass=termite
 wmclassmatch=1
 
 [General]
-count=5
-rules=1,2,3,4,5
+count=4
+rules=1,2,3,4
 
 [adb38742-80ef-4119-9a2d-cdd6cdcb1a09]
 Description=Application settings for konsole
