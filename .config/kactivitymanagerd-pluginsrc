@@ -1,0 +1,3 @@
+[Plugin-org.kde.ActivityManager.Resources.Scoring]
+allowed-applications=dolphin,feh,gwenview,mpv,nvim,nvim-qt,okular,org.kde.ark,org.kde.dolphin,org.kde.elisa,org.kde.gwenview,org.kde.krunner,org.kde.kwrite,org.kde.libtaskmanager,org.kde.plasma.browserintegrationreminder,org.kde.plasma.kicker,org.kde.showfoto,org.kde.spectacle,org.kde.systemsettings,org.pwmt.zathura,thunar
+what-to-remember=1

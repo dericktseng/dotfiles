@@ -13,7 +13,9 @@ Parent=FALLBACK/
 ShowTerminalSizeHint=false
 
 [Interaction Options]
+AllowEscapedLinks=true
 TextEditorCmd=1
+UnderlineFilesEnabled=true
 
 [Scrolling]
 ScrollBarPosition=2

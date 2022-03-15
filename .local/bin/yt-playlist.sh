@@ -5,7 +5,7 @@ url='https://www.youtube.com/playlist?list=PLUcR4qhATg8sMIikByQq25NEQvWsQ52Yg'
 volume=100
 ipcsock="/tmp/mpvsocket"
 
-mpvcmd="mpv --volume=$volume --no-video --shuffle --input-ipc-server=$ipcsock"
+mpvcmd="mpv --volume=$volume --no-video --shuffle --no-resume-playback --input-ipc-server=$ipcsock"
 
 function start_session() {
     if [[ $# -ne 0 ]]; then
