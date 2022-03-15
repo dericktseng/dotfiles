@@ -13,7 +13,8 @@ Parent=FALLBACK/
 ShowTerminalSizeHint=false
 
 [Interaction Options]
-AllowEscapedLinks=true
+AllowEscapedLinks=false
+OpenLinksByDirectClickEnabled=true
 TextEditorCmd=1
 UnderlineFilesEnabled=true
 
@@ -24,4 +25,4 @@ ScrollBarPosition=2
 BlinkingCursorEnabled=true
 PeekPrimaryKeySequence=Del
 ReverseUrlHints=true
-UrlHintsModifiers=100663296
+UrlHintsModifiers=201326592
