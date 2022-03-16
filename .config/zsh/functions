@@ -5,6 +5,11 @@ function cht() {
     curl -s "cheat.sh/$1?style=$defaultcolor"
 }
 
+function fixpk() {
+    sudo pkcon -v -p repair
+    sudo pkcon refresh force -c -1 -v -p
+}
+
 function zsh_directory_name() {
     emulate -L zsh
     [[ $1 == d ]] || return
