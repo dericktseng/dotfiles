@@ -13,7 +13,6 @@ fi
 systemctl --user --now enable psd
 
 # system services
-sudo systemctl --now enable ufw
 sudo systemctl --now enable iwd
 sudo systemctl --now enable systemd-resolved
 

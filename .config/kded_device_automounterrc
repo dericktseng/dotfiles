@@ -22,13 +22,21 @@ LastNameSeen=533.0 MiB Internal Drive (nvme0n1p5)
 EverMounted=true
 Icon=drive-removable-media-usb
 LastNameSeen=Backup
-LastSeenMounted=true
 
 [Devices][/org/freedesktop/UDisks2/block_devices/sda2]
 EverMounted=true
 Icon=drive-removable-media-usb
 LastNameSeen=839.0 GiB Removable Media
-LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/sdb1]
+EverMounted=true
+Icon=drive-removable-media-usb
+LastNameSeen=Ventoy
+
+[Devices][/org/freedesktop/UDisks2/block_devices/sdb2]
+EverMounted=true
+Icon=drive-removable-media-usb
+LastNameSeen=VTOYEFI
 
 [Devices][/org/kde/fstab/fuse.sshfs/run/user/1000/a7e11f154431cbb0]
 EverMounted=true

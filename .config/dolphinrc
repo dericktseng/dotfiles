@@ -17,11 +17,15 @@ FontWeight=50
 IconSize=64
 PreviewSize=96
 
+[KPropertiesDialog]
+HDMI-A-0 Height 1920x1080=601
+HDMI-A-0 Width 1920x1080=466
+
 [MainWindow]
 HDMI-A-0 Height 1920x1080=904
 HDMI-A-0 Width 1920x1080=1360
-HDMI-A-0 XPosition 1920x1080=164
-HDMI-A-0 YPosition 1920x1080=82
+HDMI-A-0 XPosition 1920x1080=210
+HDMI-A-0 YPosition 1920x1080=85
 MenuBar=Disabled
 ToolBarsMovable=Disabled
 

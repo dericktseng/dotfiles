@@ -80,7 +80,6 @@ os-prober
 patch
 pipewire-alsa
 pipewire-gstreamer
-pipewire-media-session
 pipewire-pulseaudio
 pkgconf
 polkit-gnome
@@ -113,7 +112,6 @@ texlive-scheme-full
 tk
 tmux
 udiskie
-ufw
 unrar
 unzip
 usbutils

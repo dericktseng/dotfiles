@@ -8,6 +8,9 @@ fi
 sudo mkdir -p "/etc/dnf/"
 cat ./conf/dnf/dnf.conf | sed "s/NUM_CORES/$(nproc)/" | sudo tee /etc/dnf/dnf.conf > /dev/null
 
+# first run update
+sudo dnf upgrade -y
+
 # unlock rpmfusion
 sudo dnf install \
 	https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
