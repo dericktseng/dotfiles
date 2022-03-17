@@ -27,6 +27,7 @@ wmclassmatch=1
 Description=Application settings for zathura
 clientmachine=localhost
 desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
+fsplevelrule=2
 fullscreen=true
 maximizehoriz=true
 maximizehorizrule=3

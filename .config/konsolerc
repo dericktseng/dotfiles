@@ -15,8 +15,8 @@ scrollbackUseSystemLocation=true
 FocusFollowsMouse=true
 
 [MainWindow]
-HDMI-A-0 Height 1920x1080=1040
-HDMI-A-0 Width 1920x1080=960
+HDMI-A-0 Height 1920x1080=693
+HDMI-A-0 Width 1920x1080=1280
 HDMI-A-0 Window-Maximized 1920x1080=true
 HDMI-A-0 XPosition 1920x1080=0
 HDMI-A-0 YPosition 1920x1080=0
