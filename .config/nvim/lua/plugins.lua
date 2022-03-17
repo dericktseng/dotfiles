@@ -59,7 +59,7 @@ return require('packer').startup(function(use)
 
   use {
     'nvim-lualine/lualine.nvim',
-    config = function() require'configs.lualine' end,
+    config = function() require'configs.theme' end,
     requires = {'kyazdani42/nvim-web-devicons'}
   }
 
@@ -71,7 +71,7 @@ return require('packer').startup(function(use)
 
   use {
     'MetriC-DT/balance-theme.nvim',
-    config = function() require'configs.colorscheme' end,
+    config = function() require'configs.theme' end,
   }
 
   use 'kyazdani42/nvim-web-devicons'
