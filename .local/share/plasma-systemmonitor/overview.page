@@ -25,6 +25,9 @@ memory/physical/used=61,174,233
 network/enp5s0/ipv4address=61,174,233
 network/enp5s0/ipv6address=233,120,61
 
+[Face-94410254040128][org.kde.ksysguard.applicationstable][General]
+sortColumn=usage
+
 [Face-94410261307168][Appearance]
 chartFace=org.kde.ksysguard.piechart
 

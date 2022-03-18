@@ -101,7 +101,14 @@ snippet lb "label" i
 \\label{$1}
 endsnippet
 
-priority 10
+priority 100
+snippet eq "equation" w
+\\begin{equation}
+	\\label{eq:$1}
+	$2
+\\end{equation}
+endsnippet
+
 snippet fig "Figure environment" b
 \\begin{figure}[${1:htpb}]
 	\\centering
