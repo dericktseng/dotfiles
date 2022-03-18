@@ -29,7 +29,7 @@ CommandAll2=Nothing
 CommandAllKey=Alt
 
 [TabBox]
-LayoutName=thumbnails
+LayoutName=org.kde.breeze.desktop
 
 [Windows]
 AutoRaise=true

@@ -1,5 +1,3 @@
-MenuBar=Disabled
-
 [CompactMode]
 FontWeight=50
 
@@ -20,14 +18,19 @@ PreviewSize=96
 [KPropertiesDialog]
 HDMI-A-0 Height 1920x1080=601
 HDMI-A-0 Width 1920x1080=466
+eDP Height 1920x1080=616
+eDP Width 1920x1080=438
 
 [MainWindow]
 HDMI-A-0 Height 1920x1080=911
 HDMI-A-0 Width 1920x1080=1335
 HDMI-A-0 XPosition 1920x1080=312
 HDMI-A-0 YPosition 1920x1080=114
-MenuBar=Disabled
 ToolBarsMovable=Disabled
+eDP Height 1920x1080=817
+eDP Width 1920x1080=1278
+eDP XPosition 1920x1080=321
+eDP YPosition 1920x1080=111
 
 [Notification Messages]
 ConfirmDelete=true

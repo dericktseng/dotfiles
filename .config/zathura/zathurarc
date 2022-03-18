@@ -34,6 +34,8 @@ set statusbar-bg "#e8e8e8"
 
 set synctex true
 
+set smooth-scroll true
+
 map p print
 map b focus_inputbar ":blist "
 map B focus_inputbar ":bmark "
