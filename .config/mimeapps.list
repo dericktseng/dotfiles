@@ -1,6 +1,7 @@
 [Added Associations]
 application/xml=nvim.desktop;
 audio/mp4=mpv.desktop;
+audio/ogg=mpv.desktop;
 audio/x-opus+ogg=mpv.desktop;
 image/jpeg=feh.desktop;
 inode/directory=org.kde.dolphin.desktop;thunar.desktop;
@@ -17,6 +18,7 @@ x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;us.zoom.Zoom.desktop;
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
 audio/mp4=mpv.desktop;
+audio/ogg=mpv.desktop;
 audio/x-opus+ogg=mpv.desktop;
 image/jpeg=feh.desktop
 image/png=feh.desktop
