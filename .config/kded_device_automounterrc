@@ -6,17 +6,19 @@ LastSeenMounted=true
 
 [Devices][/org/freedesktop/UDisks2/block_devices/nvme0n1p3]
 EverMounted=true
-Icon=drive-harddisk-root
-LastNameSeen=325.3 GiB Internal Drive (nvme0n1p3)
+Icon=drive-harddisk
+LastNameSeen=Basic data partition
 LastSeenMounted=true
 
 [Devices][/org/freedesktop/UDisks2/block_devices/nvme0n1p4]
 Icon=drive-harddisk
-LastNameSeen=Basic data partition
+LastNameSeen=539.0 MiB Internal Drive (nvme0n1p4)
 
 [Devices][/org/freedesktop/UDisks2/block_devices/nvme0n1p5]
-Icon=drive-harddisk
-LastNameSeen=533.0 MiB Internal Drive (nvme0n1p5)
+EverMounted=true
+Icon=drive-harddisk-root
+LastNameSeen=110.0 GiB Internal Drive (nvme0n1p5)
+LastSeenMounted=true
 
 [Devices][/org/freedesktop/UDisks2/block_devices/sda1]
 EverMounted=true

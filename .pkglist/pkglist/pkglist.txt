@@ -50,6 +50,7 @@ htop
 i3lock
 iwd
 jq
+kernel-tools
 kio_mtp
 lame
 levien-inconsolata-fonts

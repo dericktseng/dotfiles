@@ -27,10 +27,10 @@ HDMI-A-0 Width 1920x1080=1313
 HDMI-A-0 XPosition 1920x1080=274
 HDMI-A-0 YPosition 1920x1080=10
 ToolBarsMovable=Disabled
-eDP Height 1920x1080=817
-eDP Width 1920x1080=1278
-eDP XPosition 1920x1080=321
-eDP YPosition 1920x1080=111
+eDP Height 1920x1080=875
+eDP Width 1920x1080=1495
+eDP XPosition 1920x1080=207
+eDP YPosition 1920x1080=110
 
 [Notification Messages]
 ConfirmDelete=true

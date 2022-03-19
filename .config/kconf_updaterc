@@ -1,169 +1,169 @@
 updateInfoAdded=true
 
 [breezehighcontrasttobreezedark.upd]
-ctime=1647547339
+ctime=1647557399
 mtime=1646737887
 
 [breezetobreezeclassic.upd]
-ctime=1647547339
+ctime=1647557399
 mtime=1646737887
 
 [breezetobreezelight.upd]
-ctime=1647547339
+ctime=1647557399
 mtime=1646737887
 
 [delete_cursor_old_default_size.upd]
-ctime=1647547340
+ctime=1647557401
 done=DeleteCursorOldDefaultSize
 mtime=1646739209
 
 [disable_kmix.upd]
-ctime=1647547339
+ctime=1647557398
 done=PlasmaVolume_DisableKMixAutostart
 mtime=1646739030
 
 [filepicker.upd]
-ctime=1647133764
+ctime=1647425003
 done=filepicker-remove-old-previews-entry
 mtime=1644659901
 
 [fonts_akregator.upd]
-ctime=1647547342
+ctime=1647557404
 done=Plasma_Fonts_Akregator
 mtime=1646738925
 
 [fonts_global.upd]
-ctime=1647547342
+ctime=1647557404
 done=Fonts_Global
 mtime=1646738925
 
 [fonts_global_toolbar.upd]
-ctime=1647547342
+ctime=1647557404
 done=Fonts_Global_Toolbar
 mtime=1646738925
 
 [fonts_kate.upd]
-ctime=1647547342
+ctime=1647557404
 done=Plasma_Fonts_Kate
 mtime=1646738925
 
 [gtkconfig.upd]
-ctime=1647547344
+ctime=1647557406
 done=dont_use_gtk_css_for_window_decorations
 mtime=1646738133
 
 [gwenview.upd]
-ctime=1647133836
+ctime=1647425016
 done=SideBar_StatusBar_Rename,ImageView_AlphaBackgroundMode_Update,DeleteThumbnailSetting_Rename
 mtime=1643479839
 
 [icons_remove_effects.upd]
-ctime=1647547340
+ctime=1647557401
 done=IconsRemoveEffects
 mtime=1646739209
 
 [kcalcrc.upd]
-ctime=1647133879
+ctime=1647425073
 mtime=1643410025
 
 [kcm_rename_plasma_desktop.upd]
-ctime=1647547342
+ctime=1647557404
 done=5.24PlasmaDesktopKCMRename
 mtime=1646738790
 
 [kcminputrc_fix_botched_5_21_0.upd]
-ctime=1647547342
+ctime=1647557404
 done=kcminputrc_fix_botched_5_21_0_pre,kcminputrc_fix_botched_5_21_0
 mtime=1646738790
 
 [kcminputrc_repeat.upd]
-ctime=1647547342
+ctime=1647557404
 done=kcminputrc_migrate_key_repeat
 mtime=1646738790
 
 [kgthemeprovider-migration.upd]
-ctime=1647133807
+ctime=1647425007
 mtime=1640906490
 
 [konversation.upd]
-ctime=1647133876
+ctime=1647425070
 mtime=1643413032
 
 [korganizer.upd]
-ctime=1647133867
+ctime=1647425035
 done=korganizer-15.08-kickoff
 mtime=1643424502
 
 [krunnerglobalshortcuts2.upd]
-ctime=1647547340
+ctime=1647557399
 mtime=1646739209
 
 [krunnerhistory.upd]
-ctime=1647547340
+ctime=1647557399
 mtime=1646739209
 
 [kscreenlocker.upd]
-ctime=1647547338
+ctime=1647557397
 done=0.1-autolock
 mtime=1646738395
 
 [ksmserver_update_loginMode_value.upd]
-ctime=1647547342
+ctime=1647557404
 done=ksmserver_update_loginMode_value_default_enum
 mtime=1646738790
 
 [kwin.upd]
-ctime=1647547338
+ctime=1647557397
 done=replace-scalein-with-scale,port-minimizeanimation-effect-to-js,port-scale-effect-to-js,port-dimscreen-effect-to-js,auto-bordersize,animation-speed,desktop-grid-click-behavior,no-swap-encourage,make-translucency-effect-disabled-by-default,remove-flip-switch-effect,remove-cover-switch-effect,remove-cubeslide-effect,remove-xrender-backend,enable-scale-effect-by-default
 mtime=1646738537
 
 [kwinrules.upd]
-ctime=1647547338
+ctime=1647557397
 done=replace-placement-string-to-enum,use-virtual-desktop-ids
 mtime=1646738537
 
 [kxkb.upd]
-ctime=1647547342
+ctime=1647557404
 done=remove-empty-lists,add-back-resetoptions
 mtime=1646738790
 
 [kxkb_variants.upd]
-ctime=1647547342
+ctime=1647557404
 done=split-variants
 mtime=1646738790
 
 [languagetool_kmail.upd]
-ctime=1647133866
+ctime=1647425034
 mtime=1642491511
 
 [okular.upd]
-ctime=1647133874
+ctime=1647425065
 done=annotation-toolbar,builtin-annotations
 mtime=1643416935
 
 [spectacle_clipboard.upd]
-ctime=1647133875
+ctime=1647425067
 mtime=1643409832
 
 [spectacle_newConfig.upd]
-ctime=1647133875
+ctime=1647425067
 mtime=1643409832
 
 [spectacle_rememberregion.upd]
-ctime=1647133875
+ctime=1647425067
 mtime=1643409832
 
 [spectacle_shortcuts.upd]
-ctime=1647133875
+ctime=1647425067
 done=spectacle-migrate-shortcuts
 mtime=1643409832
 
 [style_widgetstyle_default_breeze.upd]
-ctime=1647547340
+ctime=1647557401
 done=StyleWidgetStyleDefaultBreeze
 mtime=1646739209
 
 [webengineurlinterceptoradblock.upd]
-ctime=1647133866
+ctime=1647425034
 done=webengineurlinterceptoradblock_move_settings
 mtime=1642491511
