@@ -13,6 +13,10 @@ new-private-window=none,none,New Private Window
 new-window=none,none,New Window
 profile-manager-window=none,none,Open the Profile Manager
 
+[kaccess]
+Toggle Screen Reader On and Off=Meta+Alt+S,Meta+Alt+S,Toggle Screen Reader On and Off
+_k_friendly_name=Accessibility
+
 [kcm_touchpad]
 Disable Touchpad=Touchpad Off,Touchpad Off,Disable Touchpad
 Enable Touchpad=Touchpad On,Touchpad On,Enable Touchpad
