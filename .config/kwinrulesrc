@@ -42,11 +42,11 @@ wmclassmatch=1
 Description=Application settings for termite
 clientmachine=localhost
 desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
-maximizehoriz=true
-maximizehorizrule=3
-maximizevert=true
-maximizevertrule=3
 minsize=1200,700
+position=0,0
+positionrule=4
+size=1920,1040
+sizerule=4
 wmclass=termite
 wmclassmatch=1
 

@@ -19,7 +19,7 @@ wallpaperplugin=org.kde.image
 [Containments][1][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=559
-positions=1,17,desktop:/Berkeley,0,0,desktop:/current,0,2
+positions=1,17,desktop:/current,0,2,desktop:/Berkeley,0,0
 sortMode=-1
 
 [Containments][1][Wallpaper][org.kde.image][General]
@@ -107,10 +107,6 @@ DialogWidth=720
 [Containments][2][Applets][5][Configuration][General]
 launchers=
 
-[Containments][2][Applets][6]
-immutability=1
-plugin=org.kde.plasma.marginsseparator
-
 [Containments][2][Applets][7]
 immutability=1
 plugin=org.kde.plasma.systemtray
@@ -124,7 +120,7 @@ DialogHeight=84
 DialogWidth=1920
 
 [Containments][2][General]
-AppletOrder=3;4;26;5;6;27;7;19;20
+AppletOrder=3;4;26;5;27;7;19;20
 
 [Containments][8]
 activityId=
@@ -152,9 +148,6 @@ plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][12][Configuration]
 PreloadWeight=100
-
-[Containments][8][Applets][12][Configuration][General]
-currentTab=streams
 
 [Containments][8][Applets][13]
 immutability=1
@@ -190,12 +183,18 @@ plugin=org.kde.plasma.nightcolorcontrol
 immutability=1
 plugin=org.kde.plasma.battery
 
+[Containments][8][Applets][21][Configuration]
+PreloadWeight=80
+
+[Containments][8][Applets][21][Configuration][General]
+showPercentage=true
+
 [Containments][8][Applets][22]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][8][Applets][22][Configuration]
-PreloadWeight=60
+PreloadWeight=70
 
 [Containments][8][Applets][24]
 immutability=1
@@ -215,6 +214,13 @@ PreloadWeight=0
 DialogHeight=540
 DialogWidth=720
 
+[Containments][8][Applets][29]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][8][Applets][29][Configuration]
+PreloadWeight=0
+
 [Containments][8][Applets][9]
 immutability=1
 plugin=org.kde.plasma.notifications
@@ -232,4 +238,4 @@ knownItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.blue
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/games,0,desktop:/Berkeley,0,desktop:/tmp,0,desktop:/program,0,desktop:/current,0
+screenMapping=desktop:/games,0,desktop:/current,0,desktop:/tmp,0,desktop:/Berkeley,0,desktop:/program,0
