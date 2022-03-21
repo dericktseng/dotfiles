@@ -1,5 +1,4 @@
 #!/bin/bash
-xorgconfd="/etc/X11/xorg.conf.d"
 iwdconfd="/etc/iwd/"
 systemdconfd="/etc/systemd/"
 self="$USER"
@@ -24,12 +23,6 @@ chsh -s /bin/zsh
 
 # backlight settings: adds user to group video
 sudo usermod -aG video "$self"
-
-# X11 settings
-sudo mkdir -p "$xorgconfd"
-for f in ./conf/xorg/*; do
-    sudo cp -i "$f" "$xorgconfd"
-done
 
 # systemd settings
 sudo mkdir -p "$systemdconfd"
