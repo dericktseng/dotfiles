@@ -9,7 +9,7 @@ Id_1=c7a7d725-c38b-441f-9a78-e0983e55c507
 Id_2=efd77531-94f6-48f0-ae60-dcb174ff6b83
 Id_3=9c2d2f9b-c3f5-4b94-8a26-51ef565b3725
 Id_4=3b180336-1fbc-4985-9c7e-917a0acfe5b8
-Id_5=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
+Id_5=1eaa2278-289b-4974-bc7e-89c8e1166ce7
 Name_1=1
 Name_2=2
 Name_3=3
@@ -27,6 +27,30 @@ Duration=1
 [MouseBindings]
 CommandAll2=Nothing
 CommandAllKey=Alt
+
+[Plugins]
+bismuthEnabled=true
+slideEnabled=false
+
+[Script-bismuth]
+ignoreActivity=1 - Default, 3 - Games
+keepFloatAbove=false
+
+[SubSession: 80ff01d6-fee6-40f7-b491-2dc30b208c3d]
+active=-1
+count=0
+
+[SubSession: 8427be9d-00a1-4779-b7a4-0ae52744352b]
+active=-1
+count=0
+
+[SubSession: 881c27c6-3a0d-4dd6-8725-341ef8289913]
+active=-1
+count=0
+
+[SubSession: e6c8aac5-44ae-43fd-a71b-33effbaa6c21]
+active=-1
+count=0
 
 [TabBox]
 LayoutName=org.kde.breeze.desktop

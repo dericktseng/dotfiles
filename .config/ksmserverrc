@@ -3,3 +3,15 @@ update_info=ksmserver_update_loginMode_value.upd:ksmserver_update_loginMode_valu
 
 [General]
 loginMode=emptySession
+
+[SubSession: 80ff01d6-fee6-40f7-b491-2dc30b208c3d]
+count=0
+
+[SubSession: 8427be9d-00a1-4779-b7a4-0ae52744352b]
+count=0
+
+[SubSession: 881c27c6-3a0d-4dd6-8725-341ef8289913]
+count=0
+
+[SubSession: e6c8aac5-44ae-43fd-a71b-33effbaa6c21]
+count=0

@@ -24,6 +24,9 @@ chsh -s /bin/zsh
 # backlight settings: adds user to group video
 sudo usermod -aG video "$self"
 
+# blacklists from modprobe
+sudo cp -i ./conf/modprobe/* /etc/modprobe.d/
+
 # systemd settings
 sudo mkdir -p "$systemdconfd"
 sudo cp -ir ./conf/systemd/* "$systemdconfd"

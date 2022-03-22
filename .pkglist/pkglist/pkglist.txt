@@ -71,7 +71,6 @@ mpv
 mtools
 neovim
 neovim-qt
-nnn
 nodejs
 nodejs-yarn
 npm

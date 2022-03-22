@@ -42,8 +42,6 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
     $HOME/.powerlevel10k
 
-# pip install pillow and ueberzug
-CC="cc -mavx2" pip3 install -U pillow-simd
-pip3 install -U ueberzug
+# pip packages
 pip3 install -U neovim-remote
 pip3 install -U pyright

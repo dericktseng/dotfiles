@@ -1,8 +1,17 @@
 [Plugins]
 org.kde.ActivityManager.ResourceScoringEnabled=false
+org.kde.ActivityManager.VirtualDesktopSwitchEnabled=true
 
 [activities]
-644e5605-d59e-4231-8d98-6dfb12fc7b5c=Default
+4bc9cf04-def1-4f75-9233-cc936be4c7df=3 - Games
+644e5605-d59e-4231-8d98-6dfb12fc7b5c=1 - Default
+db03cb46-a8ca-4faa-b2da-c8c61565a1cd=2 - School
+
+[activities-icons]
+4bc9cf04-def1-4f75-9233-cc936be4c7df=preferences-desktop-gaming
+db03cb46-a8ca-4faa-b2da-c8c61565a1cd=sage-notebook
 
 [main]
 currentActivity=644e5605-d59e-4231-8d98-6dfb12fc7b5c
+runningActivities=644e5605-d59e-4231-8d98-6dfb12fc7b5c,db03cb46-a8ca-4faa-b2da-c8c61565a1cd
+stoppedActivities=
