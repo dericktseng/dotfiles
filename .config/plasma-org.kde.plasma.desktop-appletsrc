@@ -23,7 +23,7 @@ DialogWidth=720
 [Containments][1][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=559
-positions=1,17,desktop:/Berkeley,0,0,desktop:/current,0,1,desktop:/program,0,2
+positions=1,17,desktop:/program,0,2,desktop:/Berkeley,0,0,desktop:/current,0,1
 sortMode=-1
 
 [Containments][1][Wallpaper][org.kde.image][General]
@@ -63,28 +63,6 @@ plugin=org.kde.plasma.panelspacer
 [Containments][2][Applets][27][Configuration][General]
 length=766
 
-[Containments][2][Applets][3]
-immutability=1
-plugin=org.kde.plasma.kickoff
-
-[Containments][2][Applets][3][Configuration]
-PreloadWeight=100
-
-[Containments][2][Applets][3][Configuration][ConfigDialog]
-DialogHeight=613
-DialogWidth=891
-
-[Containments][2][Applets][3][Configuration][General]
-favoritesPortedToKAstats=true
-icon=start-here
-systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
-
-[Containments][2][Applets][3][Configuration][Shortcuts]
-global=Alt+F1
-
-[Containments][2][Applets][3][Shortcuts]
-global=Alt+F1
-
 [Containments][2][Applets][32]
 immutability=1
 plugin=org.kde.plasma.activitypager
@@ -97,6 +75,25 @@ DialogWidth=720
 currentDesktopSelected=ShowDesktop
 pagerLayout=Horizontal
 showWindowIcons=true
+
+[Containments][2][Applets][39]
+immutability=1
+plugin=org.kde.plasma.kickoff
+
+[Containments][2][Applets][39][Configuration]
+PreloadWeight=100
+
+[Containments][2][Applets][39][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][2][Applets][39][Configuration][General]
+favoritesPortedToKAstats=true
+icon=start-here
+systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
+
+[Containments][2][Applets][39][Shortcuts]
+global=Alt+F1
 
 [Containments][2][Applets][4]
 immutability=1
@@ -133,9 +130,11 @@ DialogHeight=84
 DialogWidth=1920
 
 [Containments][2][General]
-AppletOrder=3;19;4;26;5;27;32;7
+AppletOrder=39;19;4;26;5;27;32;7
 
 [Containments][36]
+ItemGeometries-1920x1080=
+ItemGeometriesHorizontal=
 activityId=db03cb46-a8ca-4faa-b2da-c8c61565a1cd
 formfactor=0
 immutability=1
@@ -145,7 +144,7 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][36][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/F35/contents/images/1920x1080.png
+Image=file:///usr/share/backgrounds/f35/default/f35-01-day.png
 
 [Containments][37]
 activityId=4bc9cf04-def1-4f75-9233-cc936be4c7df
@@ -157,7 +156,7 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][37][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/F35/contents/images/1920x1080.png
+Image=file:///usr/share/backgrounds/f35/default/f35-01-day.png
 
 [Containments][8]
 activityId=
@@ -275,4 +274,4 @@ knownItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.blue
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/games,0,desktop:/current,0,desktop:/tmp,0,desktop:/program,0,desktop:/Berkeley,0
+screenMapping=desktop:/Berkeley,0,desktop:/current,0,desktop:/program,0,desktop:/games,0,desktop:/tmp,0
