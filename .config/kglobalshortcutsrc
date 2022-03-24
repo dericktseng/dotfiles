@@ -28,15 +28,20 @@ _k_friendly_name=Touchpad
 [kded5]
 Show System Activity=Ctrl+Esc,Ctrl+Esc,Show System Activity
 _k_friendly_name=KDE Daemon
-display=Display,Display\tMeta+P,Switch Display
+display=Display\tMeta+Ctrl+D,Display\tMeta+P,Switch Display
 
 [khotkeys]
 _k_friendly_name=Custom Shortcuts Service
+{01929f31-b352-4793-9f06-f1b3fb696b89}=,none,New Action
+{173f69ba-1dc3-411f-8d19-9c461a0f0fbb}=,none,New Action
+{196fb050-e114-48d2-bb43-235684919279}=Print,none,FullscreenCopy
 {2ed916a0-c81f-46ba-ac62-c6269bafa9f3}=Ctrl+Shift+M,none,Music
 {34b2b78a-f38c-423e-b238-e3dd62177716}=Ctrl+Alt+T,none,Launch Konsole
-{6b6d2581-3652-4a2c-8547-6be0ba534db3}=Print,none,Screen
+{6b6d2581-3652-4a2c-8547-6be0ba534db3}=none,none,Screen
+{c5dd36bd-0190-476f-b3b6-cbaa7d9922b2}=Shift+Print,none,RectangleCopy
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
-{f0f84485-5f3c-49d4-97bf-a07070c005f6}=Shift+Print,none,Rectangle
+{dbd5e951-1c54-480a-973e-cbfe5eae10b9}=Ctrl+Print,none,WindowCopy
+{f0f84485-5f3c-49d4-97bf-a07070c005f6}=none,none,Rectangle
 
 [klipper]
 _k_friendly_name=Klipper
@@ -57,6 +62,11 @@ increase_microphone_volume=Microphone Volume Up,Microphone Volume Up,Increase Mi
 increase_volume=Volume Up\tPause,Volume Up,Increase Volume
 mic_mute=Microphone Mute\tMeta+Volume Mute,Microphone Mute\tMeta+Volume Mute,Mute Microphone
 mute=Volume Mute\tMeta+M,Volume Mute,Mute
+
+[konversation]
+_k_friendly_name=Konversation
+next_active_tab=none,none,Next Active Tab
+toggle_mainwindow_visibility=none,none,Show/Hide Konversation
 
 [ksmserver]
 Halt Without Confirmation=none,,Halt Without Confirmation

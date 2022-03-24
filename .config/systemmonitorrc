@@ -1,8 +1,8 @@
 [General]
-height=1040
+height=921
 lastVisitedPage=overview.page
 pageOrder=overview.page,applications.page,history.page,processes.page,thermals.page
-width=960
+width=1471
 
 [TaskDialog]
 filterState=0
