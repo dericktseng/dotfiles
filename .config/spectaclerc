@@ -1,0 +1,16 @@
+[$Version]
+update_info=spectacle_newConfig.upd:spectacle-new-config,spectacle_clipboard.upd:clipboard-settings-change,spectacle_rememberregion.upd:spectacle-migrate-rememberregion
+
+[General]
+autoSaveImage=true
+clipboardGroup=PostScreenshotCopyImage
+onLaunchAction=UseLastUsedCapturemode
+useReleaseToCapture=true
+
+[GuiConfig]
+window-position=447,368
+
+[Save]
+defaultSaveImageFormat=JPG
+lastSaveLocation=file:///dev/null
+saveFilenameFormat=%H-%m-%S_%Y_%M_%D

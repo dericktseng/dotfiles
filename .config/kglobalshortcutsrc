@@ -1,5 +1,5 @@
 [ActivityManager]
-_k_friendly_name=System Settings
+_k_friendly_name=Activity Manager
 switch-to-activity-4bc9cf04-def1-4f75-9233-cc936be4c7df=Meta+P,none,Switch to activity "3 - Games"
 switch-to-activity-644e5605-d59e-4231-8d98-6dfb12fc7b5c=Meta+I,none,Switch to activity "1 - Default"
 switch-to-activity-db03cb46-a8ca-4faa-b2da-c8c61565a1cd=Meta+O,none,Switch to activity "2 - School"
@@ -28,13 +28,15 @@ _k_friendly_name=Touchpad
 [kded5]
 Show System Activity=Ctrl+Esc,Ctrl+Esc,Show System Activity
 _k_friendly_name=KDE Daemon
-display=Display\t,Display\tMeta+P,Switch Display
+display=Display,Display\tMeta+P,Switch Display
 
 [khotkeys]
 _k_friendly_name=Custom Shortcuts Service
 {2ed916a0-c81f-46ba-ac62-c6269bafa9f3}=Ctrl+Shift+M,none,Music
 {34b2b78a-f38c-423e-b238-e3dd62177716}=Ctrl+Alt+T,none,Launch Konsole
+{6b6d2581-3652-4a2c-8547-6be0ba534db3}=Print,none,Screen
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
+{f0f84485-5f3c-49d4-97bf-a07070c005f6}=Shift+Print,none,Rectangle
 
 [klipper]
 _k_friendly_name=Klipper
@@ -271,9 +273,9 @@ _k_friendly_name=Emoji Selector
 _launch=Meta+.,Meta+.,Emoji Selector
 
 [org.kde.spectacle.desktop]
-ActiveWindowScreenShot=Meta+Print,Meta+Print,Capture Active Window
+ActiveWindowScreenShot=none,Meta+Print,Capture Active Window
 CurrentMonitorScreenShot=none,none,Capture Current Monitor
-FullScreenScreenShot=Print,Shift+Print,Capture Entire Desktop
+FullScreenScreenShot=Meta+Print,Shift+Print,Capture Entire Desktop
 OpenWithoutScreenshot=none,none,Launch Spectacle without capturing
 RectangularRegionScreenShot=Meta+Shift+Print,Meta+Shift+Print,Capture Rectangular Region
 WindowUnderCursorScreenShot=Meta+Ctrl+Print,Meta+Ctrl+Print,Capture Window Under Cursor
@@ -294,7 +296,7 @@ Turn Off Screen=none,none,Turn Off Screen
 _k_friendly_name=Power Management
 
 [plasmashell]
-_k_friendly_name=Activity switching
+_k_friendly_name=Plasma
 activate task manager entry 1=none,Meta+1,Activate Task Manager Entry 1
 activate task manager entry 10=Meta+0,Meta+0,Activate Task Manager Entry 10
 activate task manager entry 2=none,Meta+2,Activate Task Manager Entry 2

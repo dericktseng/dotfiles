@@ -1,0 +1,90 @@
+/* documentation here: https://github.com/davatorium/rofi/blob/next/doc/rofi-theme.5.markdown */
+
+* {
+	/* Color definitions */
+	black:	#000000;
+	white:	#ffffff;
+	glass:	#f3f3f3ee;
+	blue:	#007aff;
+	grey:	#aaaaaa;
+	shadow: #55555544;
+	divider: 0px 0px 1px 0px;
+	highlightregular: bold black;
+	highlightselect: bold white;
+	windowwidth: 50%;
+	windowheight: 0;
+	anchorcoord: north;
+	locationcoord: north;
+
+	/* Global properties */
+    background-color:      transparent;
+    text-color:            @black;
+    border-color:          @white;
+	transparency: "true";
+}
+
+window {
+	background-color: @glass;
+    anchor:     @anchorcoord;
+    location:   @locationcoord;
+    width:      @windowwidth;
+	height:		@windowheight;
+	transparency: "true";
+
+	/* border settings */
+	border-color: @shadow;
+	border: 1px;
+	border-radius: 0px;
+}
+
+mainbox {
+	spacing: 0em;
+}
+
+entry {
+	padding: 0.1em;
+	border: @divider;
+	border-color: @shadow;
+	placeholder-color: @grey;
+	placeholder: "Search";
+}
+
+case-indicator {
+	enabled: false;
+}
+
+prompt {
+	padding: 0.1em 0.5em;
+	text-color: @black;
+}
+
+listview {
+    layout: vertical;
+	cycle: false;
+	scrollbar: false;
+}
+
+element {
+	padding: 0em 1em 0em 1em;
+	margin: 0;
+}
+
+element-text {
+	highlight: @highlightregular;
+}
+
+element-icon {
+	size: 1em;
+	enabled: false;
+}
+
+element selected {
+	background-color: @blue;
+}
+
+element-text selected {
+	highlight: @highlightselect;
+	text-color: @white;
+}
+
+/* vim:ft=css

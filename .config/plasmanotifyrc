@@ -3,3 +3,7 @@ Seen=true
 
 [Applications][firefox]
 Seen=true
+
+[Applications][org.kde.spectacle]
+ShowBadges=false
+ShowInHistory=false

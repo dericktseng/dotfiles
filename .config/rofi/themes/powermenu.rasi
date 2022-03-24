@@ -1,0 +1,26 @@
+@theme "base"
+
+* {
+	/* change font to correct */
+	font: "FiraCode Nerd Font Mono 16";
+	windowwidth: 40%;
+}
+
+window {
+	height: 0;
+}
+
+inputbar {
+	enabled: false;
+}
+
+listview {
+	fixed-height: true;
+	lines: 6;
+}
+
+element-icon {
+	enabled: false;
+}
+
+/* vim:ft=css
