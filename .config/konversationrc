@@ -1,0 +1,77 @@
+[Aliases]
+AliasList=fortune /exec fortune,uptime /exec uptime,cmd /exec cmd,sayclip /exec sayclip,tinyurl /exec tinyurl,bug /exec bug,gauge /exec gauge,sysinfo /exec sysinfo,media /exec media,audio /exec media audio,video /exec media video
+
+[Channel 0]
+Name=#fedora
+Password=
+
+[Channel 1]
+Name=#fedora-kde
+Password=
+
+[Channel 2]
+Name=#kde
+Password=
+
+[Channel 3]
+Name=#konversation
+Password=
+
+[DCC Settings]
+ColumnWidths=49,90,103,173,70,87,157,87,96,165
+PanelSplitter=AAAA/wAAAAEAAAAC//////////8B/////wEAAAACAA==
+
+[Identity 0]
+AuthType=saslplain
+AutomaticAway=false
+AutomaticUnaway=false
+AwayInactivity=10
+AwayMessage=
+AwayNick=
+AwayReason=Gone away for now
+Bot=nickserv
+Codec=UTF-8
+Ident=derickwtseng
+InsertRememberLineOnAway=false
+KickReason=User terminated!
+Name=Default Identity
+Nicknames=derickwtseng,derickwtseng_,derickwtseng__
+NickservCommand=identify
+PartReason=Konversation terminated!
+Password=
+PemClientCertFile=
+PreShellCommand=
+QuitReason=Konversation terminated!
+Realname=Derick Tseng
+ReturnMessage=
+SaslAccount=
+ShowAwayMessage=false
+
+[MainWindow]
+State=AAAA/wAAAAD9AAAAAAAAAoAAAAGrAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+eDP XPosition 1920x1080=200
+eDP YPosition 1920x1080=309
+
+[Server 0]
+BypassProxy=false
+Password=
+Port=6697
+SSLEnabled=true
+Server=irc.libera.chat
+
+[ServerGroup 0]
+AutoConnect=false
+AutoJoinChannels=Channel 0,Channel 1,Channel 2,Channel 3
+ChannelHistory=
+ConnectCommands=
+EnableNotifications=true
+Expanded=false
+Identity=Default Identity
+Name=Freenode
+NotifyList=
+ServerList=Server 0
+
+[ServerListDialog]
+ServerListHeaderState=\x00\x00\x00\xff\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\xf4\x00\x00\x00\x03\x00\x01\x00\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc8\xff\xff\xff\xff\x00\x00\x00\x81\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\xc8\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\xc8\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03\xe8\x01\x00\x00\x00\xc8
+Size=533,274

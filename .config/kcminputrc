@@ -5,6 +5,16 @@ update_info=delete_cursor_old_default_size.upd:DeleteCursorOldDefaultSize,kcminp
 RepeatDelay=200
 RepeatRate=40
 
+[Libinput][2][14][ETPS/2 Elantech Touchpad]
+NaturalScroll=true
+PointerAcceleration=0.000
+PointerAccelerationProfile=2
+ScrollFactor=0.75
+TapToClick=true
+
+[Libinput][3823][49326][eGalax Inc. eGalaxTouch EXC3200-2505-09.00.00.00]
+OutputName=eDP-1
+
 [Mouse]
 XLbInptAccelProfileFlat=true
 XLbInptPointerAcceleration=0

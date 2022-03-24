@@ -60,6 +60,8 @@ libXft
 libevdev
 libimagequant
 libjpeg-devel
+libva
+libva-utils
 linux-firmware
 llvm
 lm_sensors

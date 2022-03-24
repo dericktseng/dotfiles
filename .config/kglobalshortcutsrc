@@ -5,7 +5,7 @@ switch-to-activity-644e5605-d59e-4231-8d98-6dfb12fc7b5c=Meta+I,none,Switch to ac
 switch-to-activity-db03cb46-a8ca-4faa-b2da-c8c61565a1cd=Meta+O,none,Switch to activity "2 - School"
 
 [KDE Keyboard Layout Switcher]
-Switch to Next Keyboard Layout=Ctrl+Alt+K,none,Switch to Next Keyboard Layout
+Switch to Next Keyboard Layout=Ctrl+Alt+K,Ctrl+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
 
 [firefox.desktop]
@@ -32,16 +32,12 @@ display=Display\tMeta+Ctrl+D,Display\tMeta+P,Switch Display
 
 [khotkeys]
 _k_friendly_name=Custom Shortcuts Service
-{01929f31-b352-4793-9f06-f1b3fb696b89}=,none,New Action
-{173f69ba-1dc3-411f-8d19-9c461a0f0fbb}=,none,New Action
 {196fb050-e114-48d2-bb43-235684919279}=Print,none,FullscreenCopy
 {2ed916a0-c81f-46ba-ac62-c6269bafa9f3}=Ctrl+Shift+M,none,Music
 {34b2b78a-f38c-423e-b238-e3dd62177716}=Ctrl+Alt+T,none,Launch Konsole
-{6b6d2581-3652-4a2c-8547-6be0ba534db3}=none,none,Screen
 {c5dd36bd-0190-476f-b3b6-cbaa7d9922b2}=Shift+Print,none,RectangleCopy
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
 {dbd5e951-1c54-480a-973e-cbfe5eae10b9}=Ctrl+Print,none,WindowCopy
-{f0f84485-5f3c-49d4-97bf-a07070c005f6}=none,none,Rectangle
 
 [klipper]
 _k_friendly_name=Klipper

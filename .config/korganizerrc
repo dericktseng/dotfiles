@@ -1,0 +1,74 @@
+[Calendar]
+Default Calendar=-1
+
+[CollectionTreeView]
+Expansion=c1
+HorizontalScroll=0
+VerticalScroll=0
+
+[General]
+CalendarFilters=
+Current Filter=
+Current View=Agenda
+Range Mode=5
+
+[GlobalCollectionSelection]
+Current=x-1
+Selection=c16,c15
+
+[GlobalCollectionView]
+Expansion=c1
+HorizontalScroll=0
+VerticalScroll=0
+
+[Internal Settings]
+DefaultResourceColorSeed=2
+
+[KOrganizer Geometry]
+Separator1=445,649
+Separator2=156,0,190,227
+
+[MainWindow]
+State=AAAA/wAAAAD9AAAAAAAABEcAAAI/AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAQAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAJABrAG8AcgBnAGEAbgBpAHoAZQByAF8AdABvAG8AbABiAGEAcgEAAAMX/////wAAAAAAAAAAAAAAIABzAGMAaABlAGQAdQBsAGUAXwB0AG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAAAAAAcAGYAaQBsAHQAZQByAF8AdABvAG8AbABiAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+eDP Height 1920x1080=674
+eDP Width 1920x1080=1095
+eDP XPosition 1920x1080=640
+eDP YPosition 1920x1080=280
+
+[Migratekde4]
+Version=1
+
+[Settings]
+DateNavigatorVisible=true
+EventViewerVisible=true
+ResourceViewVisible=true
+TodoViewVisible=false
+
+[Sidebar Todo View]
+ColumnOrder=0,1,2,3,4,5,6,7,8,9
+ColumnVisibility=true,false,false,false,true,true,false,false,false,false
+ColumnWidths=90,0,0,0,93,86,0,0,0,0
+SortAscending=1
+SortColumn=0
+
+[Timescale]
+Timescale Timezones=
+
+[TodoTreeViewState]
+Current=x-1
+Expansion=
+HorizontalScroll=0
+Selection=
+VerticalScroll=0
+
+[TodoTreeViewStateS]
+Current=x-1
+Expansion=
+HorizontalScroll=0
+Selection=
+VerticalScroll=0
+
+[Views]
+Separator AgendaView=91,459
+ShownDatesCount=7
