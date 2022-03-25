@@ -38,17 +38,6 @@ location=4
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
 
-[Containments][2][Applets][19]
-immutability=1
-plugin=org.kde.plasma.digitalclock
-
-[Containments][2][Applets][19][Configuration]
-PreloadWeight=90
-
-[Containments][2][Applets][19][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
 [Containments][2][Applets][26]
 immutability=1
 plugin=org.kde.plasma.panelspacer
@@ -106,6 +95,10 @@ DialogWidth=720
 [Containments][2][Applets][4][Configuration][General]
 showWindowIcons=true
 
+[Containments][2][Applets][40]
+immutability=1
+plugin=org.kde.plasma.digitalclock
+
 [Containments][2][Applets][5]
 immutability=1
 plugin=org.kde.plasma.icontasks
@@ -130,7 +123,7 @@ DialogHeight=84
 DialogWidth=1920
 
 [Containments][2][General]
-AppletOrder=39;19;4;26;5;27;32;7
+AppletOrder=39;40;4;26;5;27;32;7
 
 [Containments][36]
 ItemGeometries-1920x1080=
