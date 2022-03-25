@@ -99,6 +99,15 @@ wmclass=org.pwmt.zathura zathura
 wmclasscomplete=true
 wmclassmatch=1
 
+[7a9938a0-7274-432b-ae5b-85a53da09033]
+Description=Application settings for alacritty
+maximizehoriz=true
+maximizehorizrule=3
+maximizevert=true
+maximizevertrule=3
+wmclass=alacritty
+wmclassmatch=1
+
 [8b4be464-bf3d-4baf-8c95-6b27acc6cca6]
 Description=Application settings for termite
 clientmachine=localhost
@@ -108,8 +117,8 @@ wmclass=termite
 wmclassmatch=1
 
 [General]
-count=4
-rules=1,2,3,4
+count=5
+rules=7a9938a0-7274-432b-ae5b-85a53da09033,1,2,3,4
 
 [adb38742-80ef-4119-9a2d-cdd6cdcb1a09]
 Description=Application settings for konsole

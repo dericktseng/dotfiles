@@ -4,6 +4,11 @@ switch-to-activity-4bc9cf04-def1-4f75-9233-cc936be4c7df=Meta+P,none,Switch to ac
 switch-to-activity-644e5605-d59e-4231-8d98-6dfb12fc7b5c=Meta+I,none,Switch to activity "1 - Default"
 switch-to-activity-db03cb46-a8ca-4faa-b2da-c8c61565a1cd=Meta+O,none,Switch to activity "2 - School"
 
+[Alacritty.desktop]
+New=none,none,New Terminal
+_k_friendly_name=Alacritty
+_launch=Meta+Return,none,Alacritty
+
 [KDE Keyboard Layout Switcher]
 Switch to Next Keyboard Layout=Ctrl+Alt+K,Ctrl+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
@@ -351,7 +356,3 @@ kcm-lookandfeel=none,none,Global Theme
 kcm-users=none,none,Users
 powerdevilprofilesconfig=none,none,Energy Saving
 screenlocker=none,none,Screen Locking
-
-[termite.desktop]
-_k_friendly_name=Termite
-_launch=Meta+Return,none,Termite

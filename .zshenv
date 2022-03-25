@@ -8,7 +8,6 @@ export VISUAL=$EDITOR
 export GNUMAKEFLAGS=-j$(($(nproc) + 1))
 export OMP_NUM_THREADS=$(nproc)
 export LC_ADDRESS="C"
-export TERMINAL='/usr/bin/termite'
 
 # hardware video acceleration firefox
 export MOZ_X11_EGL=1

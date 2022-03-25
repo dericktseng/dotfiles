@@ -142,8 +142,8 @@ History Items[$e]=file:$HOME/Desktop/current,file:///run/media/derickwtseng/3396
 [General]
 BrowserApplication=firefox.desktop
 ColorSchemeHash=0d48a65f7ec21fd6758445108cd2bcfb1ce4deb8
-TerminalApplication=termite
-TerminalService=termite.desktop
+TerminalApplication=alacritty
+TerminalService=Alacritty.desktop
 toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 
 [KDE]

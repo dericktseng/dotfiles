@@ -1,3 +1,2 @@
 robot/rust-analyzer
-skidnik/termite
 capucho/bismuth
