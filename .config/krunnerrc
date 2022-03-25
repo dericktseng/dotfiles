@@ -1,6 +1,7 @@
 [Plugins]
 DictionaryEnabled=false
 PIM Contacts Search RunnerEnabled=false
+appstreamEnabled=false
 baloosearchEnabled=true
 bookmarksEnabled=false
 browserhistoryEnabled=false
