@@ -5,7 +5,6 @@ autoconf
 automake
 bc
 breeze-gtk
-brightnessctl
 cargo
 clang
 clang-devel
@@ -16,7 +15,6 @@ dkms
 easyeffects
 fakeroot
 fd-find
-feh
 ffmpeg
 ffmpegthumbnailer
 ffmpegthumbs
@@ -47,7 +45,7 @@ gstreamer1-plugins-good-extras
 gstreamer1-plugins-good-gtk
 gstreamer1-plugins-good-qt
 htop
-i3lock
+imv
 iwd
 jq
 kernel-tools
@@ -100,7 +98,6 @@ python3-notebook
 python3-pip
 ripgrep
 rlwrap
-rofi
 rust
 rust-src
 sddm

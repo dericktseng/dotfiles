@@ -334,14 +334,14 @@ toggle do not disturb=none,,Toggle do not disturb
 
 [plasmawindowed]
 _k_friendly_name=plasmawindowed
-clear-history=,,Clear Clipboard History
-clipboard_action=,Ctrl+Alt+X,Enable Clipboard Actions
-cycleNextAction=,,Next History Item
-cyclePrevAction=,,Previous History Item
-edit_clipboard=,,Edit Contents…
-repeat_action=,Ctrl+Alt+R,Manually Invoke Action on Current Clipboard
-show-barcode=,,Show Barcode…
-show-on-mouse-pos=,Meta+V,Open Klipper at Mouse Position
+clear-history=none,none,Clear Clipboard History
+clipboard_action=none,Ctrl+Alt+X,Enable Clipboard Actions
+cycleNextAction=none,none,Next History Item
+cyclePrevAction=none,none,Previous History Item
+edit_clipboard=none,none,Edit Contents…
+repeat_action=none,Ctrl+Alt+R,Manually Invoke Action on Current Clipboard
+show-barcode=none,none,Show Barcode…
+show-on-mouse-pos=none,Meta+V,Open Klipper at Mouse Position
 
 [systemsettings.desktop]
 _k_friendly_name=System Settings
