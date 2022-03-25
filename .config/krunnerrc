@@ -1,3 +1,6 @@
+[General]
+RetainPriorSearch=false
+
 [Plugins]
 DictionaryEnabled=false
 PIM Contacts Search RunnerEnabled=false

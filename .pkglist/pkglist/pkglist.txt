@@ -19,6 +19,7 @@ fd-find
 ffmpeg
 ffmpegthumbnailer
 ffmpegthumbs
+fira-code-fonts
 firefox
 fontconfig
 fzf
