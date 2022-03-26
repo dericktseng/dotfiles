@@ -1,4 +1,5 @@
 [Added Associations]
+application/pdf=org.kde.okular.desktop;okularApplication_pdf.desktop;org.pwmt.zathura.desktop;org.gnome.Evince.desktop;libreoffice-draw.desktop;gimp.desktop;org.pwmt.zathura-pdf-mupdf.desktop;org.inkscape.Inkscape.desktop;
 application/xml=nvim.desktop;
 audio/mp4=mpv.desktop;
 audio/ogg=mpv.desktop;
@@ -16,7 +17,7 @@ x-scheme-handler/mailto=org.kde.kmail2.desktop;
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;us.zoom.Zoom.desktop;
 
 [Default Applications]
-application/pdf=org.pwmt.zathura.desktop
+application/pdf=org.kde.okular.desktop;
 audio/mp4=mpv.desktop;
 audio/ogg=mpv.desktop;
 audio/x-opus+ogg=mpv.desktop;

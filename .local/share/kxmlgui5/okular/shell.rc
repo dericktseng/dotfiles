@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
+<gui name="okular_shell" version="9">
+ <MenuBar>
+  <Menu name="file">
+   <DefineGroup name="file_open" append="open_merge"/>
+   <DefineGroup name="file_save" append="save_merge"/>
+   <DefineGroup name="file_print" append="print_merge"/>
+   <Action name="undo-close-tab" append="open_merge"/>
+  </Menu>
+  <!--Menu name="view" >
+   <Action name="fullscreen" />
+  </Menu-->
+  <Menu name="settings">
+   <DefineGroup name="show_merge" append="show_merge"/>
+   <DefineGroup name="configure_merge" append="configure_merge"/>
+  </Menu>
+  <Merge/>
+  <Menu name="help">
+   <DefineGroup name="about_merge" append="about_merge"/>
+  </Menu>
+ </MenuBar>
+ <ToolBar name="mainToolBar" noMerge="1">
+  <text>Main Toolbar</text>
+  <!--Action name="file_open_recent" /-->
+  <!--Action name="file_print" /-->
+ </ToolBar>
+ <ActionProperties scheme="Default">
+  <Action shortcut="O" name="file_open"/>
+  <Action shortcut="P" name="file_print"/>
+  <Action shortcut="Q" name="file_quit"/>
+ </ActionProperties>
+</gui>

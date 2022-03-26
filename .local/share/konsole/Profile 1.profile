@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Google-Theme
-Font=FiraCode Nerd Font Mono,12,-1,5,50,0,0,0,0,0
+Font=Fira Code,12,-1,5,50,0,0,0,0,0
 
 [Cursor Options]
 CustomCursorColor=119,129,140

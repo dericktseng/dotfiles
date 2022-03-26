@@ -131,9 +131,6 @@ xset
 xsetroot
 xss-lock
 youtube-dl
-zathura
-zathura-djvu
-zathura-pdf-mupdf
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting

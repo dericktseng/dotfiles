@@ -1,5 +1,5 @@
 set adjust-open "best-fit"
-set font "FiraCode Nerd Font Mono 10"
+set font "Noto Sans 10"
 set selection-clipboard clipboard
 set statusbar-basename false
 set window-title-basename false

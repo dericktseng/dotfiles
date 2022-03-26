@@ -35,7 +35,7 @@ fn.tablinestr = function()
   local numberdelimiter = ' '
   local padding = ' '
   local tabdelimiter = '▎'
-  local closeicon = '%999X'
+  local closeicon = '%999X+'
 
   for i = 1, tabcount do
     local winnr = vim.fn.tabpagewinnr(i)
@@ -46,7 +46,7 @@ fn.tablinestr = function()
 
     local filename = vim.fn.fnamemodify(bufname, ':t')
     local fileExt = vim.fn.fnamemodify(bufname, ':e')
-    local icon = devicons.get_icon(filename, fileExt)
+    -- local icon = devicons.get_icon(filename, fileExt)
 
     line = line .. '%' .. i .. 'T'
 
