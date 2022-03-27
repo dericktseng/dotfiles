@@ -23,7 +23,7 @@ DialogWidth=720
 [Containments][1][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=559
-positions=1,17,desktop:/program,0,2,desktop:/Berkeley,0,0,desktop:/current,0,1
+positions=1,17,desktop:/Berkeley,0,0,desktop:/program,0,2,desktop:/current,0,1
 sortMode=-1
 
 [Containments][1][Wallpaper][org.kde.image][General]
@@ -253,7 +253,7 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][8][Applets][29][Configuration]
-PreloadWeight=64
+PreloadWeight=45
 
 [Containments][8][Applets][9]
 immutability=1
@@ -272,4 +272,4 @@ knownItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.blue
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/tmp,0,desktop:/games,0,desktop:/program,0,desktop:/current,0,desktop:/Berkeley,0
+screenMapping=desktop:/tmp,0,desktop:/Berkeley,0,desktop:/games,0,desktop:/current,0,desktop:/program,0
