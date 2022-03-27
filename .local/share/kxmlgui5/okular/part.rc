@@ -144,6 +144,8 @@
   <Action name="view_auto_fit" shortcut="W"/>
   <Action name="go_document_back" shortcut="Ctrl+O"/>
   <Action name="go_document_forward" shortcut="Ctrl+I"/>
+  <Action name="mouse_textselect" shortcut="Ctrl+2"/>
+  <Action name="mouse_zoom" shortcut="Ctrl+4"/>
  </ActionProperties>
  <ToolBar name="annotationToolBar" iconText="icononly" hidden="true" newline="true">
   <text>Annotation Toolbar</text>

@@ -60,7 +60,6 @@ return require('packer').startup(function(use)
   use {
     'nvim-lualine/lualine.nvim',
     config = function() require'configs.theme' end,
-    requires = {'kyazdani42/nvim-web-devicons'}
   }
 
   use {
@@ -74,8 +73,6 @@ return require('packer').startup(function(use)
     config = function() require'configs.theme' end,
   }
 
-  use 'kyazdani42/nvim-web-devicons'
-  use 'onsails/lspkind-nvim'
   use 'wbthomason/packer.nvim'
 
   -- non lua plugins
@@ -88,6 +85,7 @@ return require('packer').startup(function(use)
   use {
     'lervag/vimtex',
     config = function() require'configs.vimtex' end,
+    ft = {'tex'}
   }
 
   use 'tpope/vim-fugitive'

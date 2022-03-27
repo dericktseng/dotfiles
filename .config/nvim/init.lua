@@ -11,7 +11,7 @@ g.loaded_perl_provider = 0
 g.python3_host_prog = '/usr/bin/python3'
 
 -- colorscheme and true color settings
-vim.api.nvim_command('filetype plugin indent on')
+-- vim.api.nvim_command('filetype plugin indent on')
 
 -- enable termguicolors if it exists
 o.termguicolors = fn.has('termguicolors') == 1

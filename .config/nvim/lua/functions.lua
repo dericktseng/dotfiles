@@ -1,5 +1,3 @@
-local devicons = require('nvim-web-devicons')
-
 -- module to export
 local fn = {}
 
@@ -46,7 +44,6 @@ fn.tablinestr = function()
 
     local filename = vim.fn.fnamemodify(bufname, ':t')
     local fileExt = vim.fn.fnamemodify(bufname, ':e')
-    -- local icon = devicons.get_icon(filename, fileExt)
 
     line = line .. '%' .. i .. 'T'
 
