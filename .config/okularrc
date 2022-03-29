@@ -14,6 +14,9 @@ Recent URLs[$e]=file:$HOME/Documents/
 detailViewIconSize=16
 
 [MainWindow]
+HDMI-A-0 Window-Maximized 1920x1080=true
+HDMI-A-0 XPosition 1920x1080=384
+HDMI-A-0 YPosition 1920x1080=170
 MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAAAAB4AAAAQQAAAABAAAAAQAAAAIAAAACPwAAAADAAAAAQAAAAEAAAAsAHEAdQBpAGMAawBBAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHICAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAA==
 ToolBarsMovable=Disabled
@@ -25,6 +28,8 @@ eDP YPosition 1920x1080=218
 
 [Recent Files]
 File1[$e]=$HOME/Desktop/Berkeley/3/2022Spring/MSE111/hw07/hw07.pdf
-File2[$e]=$HOME/Documents/Kannan M. Krishnan - Principles of Materials Characterization and Metrology-Oxford University Press (2021).pdf
+File2[$e]=$HOME/Desktop/current/MSE104/hw03/hw03.pdf
+File3[$e]=$HOME/Desktop/current/MSE104/lab3/MSE104L_Lab3.pdf
 Name1[$e]=hw07.pdf
-Name2[$e]=Kannan M. Krishnan - Principles of Materials Characterization and Metrology-Oxford University Press (2021).pdf
+Name2[$e]=hw03.pdf
+Name3[$e]=MSE104L_Lab3.pdf
