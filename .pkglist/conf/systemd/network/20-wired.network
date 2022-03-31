@@ -1,5 +1,5 @@
 [Match]
-Type=ether
+Name=e*
 
 [Network]
 DHCP=yes

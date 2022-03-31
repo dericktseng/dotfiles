@@ -162,7 +162,7 @@ Window Maximize Horizontal=none,,Maximize Window Horizontally
 Window Maximize Vertical=none,,Maximize Window Vertically
 Window Minimize=Meta+PgDown,Meta+PgDown,Minimize Window
 Window Move=none,,Move Window
-Window Move Center=Meta+S,,Move Window to the Center
+Window Move Center=none,,Move Window to the Center
 Window No Border=none,,Hide Window Border
 Window On All Desktops=none,,Keep Window on All Desktops
 Window One Desktop Down=Meta+Ctrl+Shift+Down,Meta+Ctrl+Shift+Down,Window One Desktop Down
@@ -254,18 +254,18 @@ bismuth_toggle_spread_layout=none,none,Bismuth: Toggle Spread Layout
 bismuth_toggle_stair_layout=none,none,Bismuth: Toggle Stair Layout
 bismuth_toggle_three_column_layout=none,none,Bismuth: Toggle Three Column Layout
 bismuth_toggle_tile_layout=Meta+T,none,Bismuth: Toggle Tile Layout
-bismuth_toggle_window_floating=none,none,Bismuth: Toggle Active Window Floating
+bismuth_toggle_window_floating=Meta+S,none,Bismuth: Toggle Active Window Floating
 view_actual_size=none,Meta+0,Actual Size
 view_zoom_in=Meta+=,Meta+=,Zoom In
 view_zoom_out=Meta+-,Meta+-,Zoom Out
 
 [mediacontrol]
 _k_friendly_name=Media Controller
-mediavolumedown=none,,Media volume down
-mediavolumeup=none,,Media volume up
+mediavolumedown=none,none,Media volume down
+mediavolumeup=none,none,Media volume up
 nextmedia=Media Next,Media Next,Media playback next
 pausemedia=Media Pause,Media Pause,Pause media playback
-playmedia=none,,Play media playback
+playmedia=none,none,Play media playback
 playpausemedia=Media Play,Media Play,Play/Pause media playback
 previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
