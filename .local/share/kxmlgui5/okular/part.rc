@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
-<gui version="51" name="okular_part">
+<gui name="okular_part" version="51">
  <MenuBar>
   <Menu name="file">
    <text>&amp;File</text>
@@ -135,7 +135,7 @@
   <Action shortcut="R" name="view_orientation_rotate_cw"/>
   <Action shortcut="" name="view_scroll_down"/>
   <Action shortcut="" name="view_scroll_up"/>
-  <Action shortcut="=; Ctrl+=" name="view_zoom_in"/>
+  <Action shortcut="=; +" name="view_zoom_in"/>
   <Action shortcut="-" name="view_zoom_out"/>
   <Action shortcut="D" name="view_render_mode_facing"/>
   <Action shortcut="Shift+D" name="view_render_mode_single"/>
@@ -148,7 +148,7 @@
   <Action shortcut="Ctrl+4" name="mouse_zoom"/>
   <Action shortcut="Shift+G" name="last_page"/>
  </ActionProperties>
- <ToolBar iconText="icononly" name="annotationToolBar" hidden="true" newline="true">
+ <ToolBar hidden="true" name="annotationToolBar" newline="true" iconText="icononly">
   <text>Annotation Toolbar</text>
   <Action name="annotation_highlighter"/>
   <Action name="annotation_underline"/>
@@ -173,7 +173,7 @@
   <Spacer/>
   <Action name="hide_annotation_toolbar"/>
  </ToolBar>
- <ToolBar iconText="icononly" name="quickAnnotationToolBar" hidden="true" iconSize="32" position="right" newline="true">
+ <ToolBar hidden="true" name="quickAnnotationToolBar" newline="true" position="right" iconSize="32" iconText="icononly">
   <text>Quick Annotation Toolbar</text>
   <Action name="quick_annotation_action_bar"/>
  </ToolBar>

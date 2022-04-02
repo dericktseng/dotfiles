@@ -131,6 +131,7 @@ xset
 xsetroot
 xss-lock
 youtube-dl
+yt-dlp
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
