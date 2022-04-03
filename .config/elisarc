@@ -1,0 +1,22 @@
+[ElisaFileIndexer]
+RootPath[$e]=$HOME/Music
+
+[KFileDialog Settings]
+detailViewIconSize=16
+
+[PlayerSettings]
+ShowSystemTrayIcon=true
+
+[Shortcuts]
+NextTrack=>
+PreviousTrack=<
+Scrub=Left
+Seek=Right
+togglePartyMode=P
+toggle_playlist=F9
+
+[UiSettings]
+ColorScheme=
+
+[Views]
+ColorScheme=Default
