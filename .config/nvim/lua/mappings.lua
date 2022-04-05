@@ -15,7 +15,7 @@ keymap('n', 'gx', [[:execute 'silent! !xdg-open ' . shellescape(expand('<cWORD>'
 
 -- updating
 keymap('n', '<Leader>p', ':PackerSync<CR>')
-keymap('n', '<Leader>R', [[:luafile %<CR>:echo 'reloaded file'<CR>]], {silent=false})
+keymap('n', '<Leader>R', [[:so %<CR>:echo 'reloaded file'<CR>]], {silent=false})
 
 -- keymaps
 keymap('t', '<ESC>', [[<C-\><C-N>]])
