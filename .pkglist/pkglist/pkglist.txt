@@ -51,6 +51,8 @@ imv
 iwd
 jq
 kernel-tools
+kf5-kcontacts-devel
+kf5-kpeople-devel
 kio_mtp
 lame
 levien-inconsolata-fonts

@@ -12,6 +12,7 @@ NextTrack=>
 PreviousTrack=<
 Scrub=Left
 Seek=Right
+file_quit=Ctrl+Q;\s
 togglePartyMode=P
 toggle_playlist=F9
 

@@ -1,7 +1,7 @@
 [General]
 height=921
-lastVisitedPage=thermals.page
-pageOrder=overview.page,applications.page,history.page,processes.page,thermals.page
+lastVisitedPage=overview.page
+pageOrder=overview.page,applications.page,history.page,processes.page,thermals.page,widgets.page
 width=1471
 
 [TaskDialog]

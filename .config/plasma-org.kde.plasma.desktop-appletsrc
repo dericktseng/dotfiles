@@ -23,7 +23,7 @@ DialogWidth=720
 [Containments][1][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=559
-positions=1,17,desktop:/games,0,4,desktop:/program,0,2,desktop:/starcraft,0,16,desktop:/tmp,0,3,desktop:/Berkeley,0,0,desktop:/current,0,1
+positions=1,17,desktop:/program,0,2,desktop:/starcraft,0,16,desktop:/tmp,0,3,desktop:/Berkeley,0,0,desktop:/current,0,1,desktop:/games,0,4
 sortMode=-1
 
 [Containments][1][Wallpaper][org.kde.image][General]
@@ -65,25 +65,6 @@ currentDesktopSelected=ShowDesktop
 pagerLayout=Horizontal
 showWindowIcons=true
 
-[Containments][2][Applets][39]
-immutability=1
-plugin=org.kde.plasma.kickoff
-
-[Containments][2][Applets][39][Configuration]
-PreloadWeight=100
-
-[Containments][2][Applets][39][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][2][Applets][39][Configuration][General]
-favoritesPortedToKAstats=true
-icon=start-here
-systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
-
-[Containments][2][Applets][39][Shortcuts]
-global=Alt+F1
-
 [Containments][2][Applets][4]
 immutability=1
 plugin=org.kde.plasma.pager
@@ -101,6 +82,20 @@ plugin=org.kde.plasma.digitalclock
 
 [Containments][2][Applets][40][Configuration]
 PreloadWeight=60
+
+[Containments][2][Applets][44]
+immutability=1
+plugin=org.kde.plasma.kickoff
+
+[Containments][2][Applets][44][Configuration]
+PreloadWeight=100
+
+[Containments][2][Applets][44][Configuration][General]
+favoritesPortedToKAstats=true
+icon=start-here
+
+[Containments][2][Applets][44][Shortcuts]
+global=Alt+F1
 
 [Containments][2][Applets][5]
 immutability=1
@@ -126,7 +121,7 @@ DialogHeight=84
 DialogWidth=1920
 
 [Containments][2][General]
-AppletOrder=39;40;4;26;5;27;32;7
+AppletOrder=44;40;4;26;5;27;32;7
 
 [Containments][36]
 ItemGeometries-1920x1080=
@@ -138,6 +133,10 @@ lastScreen=0
 location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
+
+[Containments][36][General]
+positions=1,17,desktop:/games,0,2,desktop:/program,0,3,desktop:/starcraft,0,16,desktop:/Berkeley,0,0,desktop:/current,0,1,desktop:/tmp,0,4
+sortMode=-1
 
 [Containments][36][Wallpaper][org.kde.image][General]
 Image=file:///usr/share/backgrounds/f35/default/f35-01-day.png
@@ -154,7 +153,7 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][37][General]
-positions=1,17,desktop:/tmp,0,4,desktop:/games,0,2,desktop:/program,0,3,desktop:/starcraft,0,16,desktop:/Berkeley,0,0,desktop:/current,0,1
+positions=1,17,desktop:/games,0,2,desktop:/program,0,3,desktop:/starcraft,0,16,desktop:/Berkeley,0,0,desktop:/current,0,1,desktop:/tmp,0,4
 sortMode=-1
 
 [Containments][37][Wallpaper][org.kde.image][General]
@@ -276,4 +275,4 @@ knownItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.blue
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/current,0,file:///home/derickwtseng/Desktop/replays,0,desktop:/tmp,0,desktop:/games,0,desktop:/starcraft,0,desktop:/program,0,desktop:/Berkeley,0
+screenMapping=desktop:/starcraft,0,desktop:/current,0,file:///home/derickwtseng/Desktop/replays,0,desktop:/games,0,desktop:/program,0,desktop:/Berkeley,0,desktop:/tmp,0

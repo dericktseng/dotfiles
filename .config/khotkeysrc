@@ -1021,7 +1021,7 @@ Type=GESTURE
 
 [Data_4]
 Comment=Music Script
-Enabled=true
+Enabled=false
 Name=Music
 Type=SIMPLE_ACTION_DATA
 
