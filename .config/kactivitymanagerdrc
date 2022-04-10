@@ -1,5 +1,4 @@
 [Plugins]
-org.kde.ActivityManager.ResourceScoringEnabled=false
 org.kde.ActivityManager.VirtualDesktopSwitchEnabled=true
 
 [activities]

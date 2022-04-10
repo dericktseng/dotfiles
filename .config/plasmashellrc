@@ -12,7 +12,7 @@ Number of Actions=0
 klipperClearHistoryAskAgain=false
 
 [PlasmaTransientsConfig]
-PreloadWeight=52
+PreloadWeight=44
 
 [PlasmaViews][Panel 2]
 alignment=1

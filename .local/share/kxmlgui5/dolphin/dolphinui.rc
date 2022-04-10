@@ -54,7 +54,7 @@
    <Action name="stop"/>
    <Separator/>
    <Action name="panels"/>
-   <Menu name="location_bar" icon="edit-select-text">
+   <Menu icon="edit-select-text" name="location_bar">
     <text context="@title:menu">Location Bar</text>
     <Action name="editable_location"/>
     <Action name="replace_location"/>
@@ -112,7 +112,7 @@
    <Action name="invert_selection"/>
   </disable>
  </State>
- <ToolBar noMerge="1" name="mainToolBar">
+ <ToolBar name="mainToolBar" noMerge="1">
   <text context="@title:menu">Main Toolbar</text>
   <Action name="go_back"/>
   <Action name="go_forward"/>
@@ -144,5 +144,6 @@
   <Action name="toggle_search" priority="0"/>
   <Action name="toggle_filter" priority="0"/>
   <Action shortcut="!" name="open_terminal"/>
+  <Action name="renamefile" shortcut="R"/>
  </ActionProperties>
 </gui>

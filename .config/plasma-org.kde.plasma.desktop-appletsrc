@@ -23,7 +23,7 @@ DialogWidth=720
 [Containments][1][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=559
-positions=1,17,desktop:/games,0,4,desktop:/tmp,0,3,desktop:/program,0,2,desktop:/starcraft,0,16,desktop:/current,0,1,desktop:/Berkeley,0,0
+positions=1,17,desktop:/starcraft,0,16,desktop:/Berkeley,0,0,desktop:/current,0,1,desktop:/program,0,2,desktop:/tmp,0,3,desktop:/games,0,4
 sortMode=-1
 
 [Containments][1][Wallpaper][org.kde.image][General]
@@ -81,7 +81,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][2][Applets][40][Configuration]
-PreloadWeight=60
+PreloadWeight=65
 
 [Containments][2][Applets][44]
 immutability=1
@@ -135,7 +135,7 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][36][General]
-positions=1,17,desktop:/tmp,0,4,desktop:/program,0,3,desktop:/games,0,2,desktop:/starcraft,0,16,desktop:/current,0,1,desktop:/Berkeley,0,0
+positions=1,17,desktop:/starcraft,0,16,desktop:/Berkeley,0,0,desktop:/current,0,1,desktop:/games,0,2,desktop:/program,0,3,desktop:/tmp,0,4
 sortMode=-1
 
 [Containments][36][Wallpaper][org.kde.image][General]
@@ -153,7 +153,7 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][37][General]
-positions=1,17,desktop:/tmp,0,4,desktop:/program,0,3,desktop:/games,0,2,desktop:/starcraft,0,16,desktop:/current,0,1,desktop:/Berkeley,0,0
+positions=1,17,desktop:/starcraft,0,16,desktop:/Berkeley,0,0,desktop:/current,0,1,desktop:/games,0,2,desktop:/program,0,3,desktop:/tmp,0,4
 sortMode=-1
 
 [Containments][37][Wallpaper][org.kde.image][General]
@@ -221,7 +221,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][8][Applets][21][Configuration]
-PreloadWeight=80
+PreloadWeight=85
 
 [Containments][8][Applets][21][Configuration][General]
 showPercentage=true
@@ -275,4 +275,4 @@ knownItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.blue
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/games,0,desktop:/starcraft,0,file:///home/derickwtseng/Desktop/replays,0,desktop:/Berkeley,0,desktop:/program,0,desktop:/tmp,0,desktop:/current,0
+screenMapping=desktop:/program,0,desktop:/starcraft,0,file:///home/derickwtseng/Desktop/replays,0,desktop:/games,0,desktop:/current,0,desktop:/tmp,0,desktop:/Berkeley,0

@@ -10,9 +10,9 @@ export OMP_NUM_THREADS=$(nproc)
 export LC_ADDRESS="C"
 
 # hardware video acceleration firefox
-export MOZ_X11_EGL=1
+# export MOZ_X11_EGL=1
+# export MOZ_DISABLE_RDD_SANDBOX=1
 export MOZ_WEBRENDER=1
-export MOZ_DISABLE_RDD_SANDBOX=1
 export MOZ_USE_XINPUT2=1
 
 # fzf settings
