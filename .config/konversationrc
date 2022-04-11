@@ -1,6 +1,11 @@
 [Aliases]
 AliasList=fortune /exec fortune,uptime /exec uptime,cmd /exec cmd,sayclip /exec sayclip,tinyurl /exec tinyurl,bug /exec bug,gauge /exec gauge,sysinfo /exec sysinfo,media /exec media,audio /exec media audio,video /exec media video
 
+[Appearance]
+ChannelSplitterSizes=906,156
+TopicSplitterSizes=28,708
+TreeSplitterSizes=145,1062
+
 [Channel 0]
 Name=#fedora
 Password=
@@ -15,6 +20,20 @@ Password=
 
 [Channel 3]
 Name=#konversation
+Password=
+
+[Channel 4]
+Name=#kde-devel
+Password=
+
+[Channel 5]
+EnableNotifications=true
+Name=#kde
+Password=
+
+[Channel 6]
+EnableNotifications=true
+Name=#kde-devel
 Password=
 
 [DCC Settings]
@@ -35,20 +54,24 @@ Ident=derickwtseng
 InsertRememberLineOnAway=false
 KickReason=User terminated!
 Name=Default Identity
-Nicknames=derickwtseng,derickwtseng_,derickwtseng__
+Nicknames=metricdt
 NickservCommand=identify
 PartReason=Konversation terminated!
 Password=
 PemClientCertFile=
 PreShellCommand=
 QuitReason=Konversation terminated!
-Realname=Derick Tseng
+Realname=DT
 ReturnMessage=
 SaslAccount=
 ShowAwayMessage=false
 
 [MainWindow]
-State=AAAA/wAAAAD9AAAAAAAAAoAAAAGrAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+HDMI-A-0 Height 1920x1080=828
+HDMI-A-0 Width 1920x1080=1209
+HDMI-A-0 XPosition 1920x1080=298
+HDMI-A-0 YPosition 1920x1080=128
+State=AAAA/wAAAAD9AAAAAAAABLkAAAMHAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 eDP XPosition 1920x1080=200
 eDP YPosition 1920x1080=309
@@ -62,8 +85,8 @@ Server=irc.libera.chat
 
 [ServerGroup 0]
 AutoConnect=false
-AutoJoinChannels=Channel 0,Channel 1,Channel 2,Channel 3
-ChannelHistory=
+AutoJoinChannels=Channel 0,Channel 1,Channel 2,Channel 3,Channel 4
+ChannelHistory=Channel 5,Channel 6
 ConnectCommands=
 EnableNotifications=true
 Expanded=false
@@ -73,5 +96,5 @@ NotifyList=
 ServerList=Server 0
 
 [ServerListDialog]
-ServerListHeaderState=\x00\x00\x00\xff\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\xbb\x00\x00\x00\x03\x00\x01\x00\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc8\xff\xff\xff\xff\x00\x00\x00\x81\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\xc8\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x01\x8f\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03\xe8\x01\x00\x00\x00\xc8
-Size=813,509
+ServerListHeaderState=\x00\x00\x00\xff\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\xdf\x00\x00\x00\x03\x00\x01\x00\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc8\xff\xff\xff\xff\x00\x00\x00\x81\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\xc8\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x01\xb3\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03\xe8\x01\x00\x00\x00\xc8
+Size=849,579
