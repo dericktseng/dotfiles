@@ -9,11 +9,11 @@ export GNUMAKEFLAGS=-j$(($(nproc) + 1))
 export OMP_NUM_THREADS=$(nproc)
 export LC_ADDRESS="C"
 
-# hardware video acceleration firefox
+# firefox variables
 # export MOZ_X11_EGL=1
 # export MOZ_DISABLE_RDD_SANDBOX=1
-export MOZ_WEBRENDER=1
-export MOZ_USE_XINPUT2=1
+# export MOZ_WEBRENDER=1
+# export MOZ_USE_XINPUT2=1
 
 # fzf settings
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always"
@@ -27,5 +27,5 @@ export FZF_DEFAULT_OPTS="
     --color=marker:#4271ae,spinner:#4271ae,header:#4271ae"
 
 # fix for java windows
-export _JAVA_AWT_WM_NONREPARENTING=1
-export AWT_TOOLKIT=MToolkit
+# export _JAVA_AWT_WM_NONREPARENTING=1
+# export AWT_TOOLKIT=MToolkit
