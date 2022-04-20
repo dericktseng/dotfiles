@@ -8,7 +8,6 @@ onLaunchAction=UseLastUsedCapturemode
 
 [GuiConfig]
 captureMode=5
-cropRegion=944,414,661,378
 window-position=447,368
 
 [Save]
