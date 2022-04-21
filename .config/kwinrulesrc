@@ -1,20 +1,6 @@
 [$Version]
 update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
 
-[1]
-Description=Application settings for steam_app_0
-activity=4bc9cf04-def1-4f75-9233-cc936be4c7df
-blockcompositing=true
-blockcompositingrule=2
-clientmachine=localhost
-desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
-fullscreen=true
-maximizehoriz=true
-maximizevert=true
-minsize=1200,700
-wmclass=steam_app_0
-wmclassmatch=1
-
 [19572da2-77a6-4e97-81e4-4092ed8dec4f]
 Description=Application settings for discord
 clientmachine=localhost
@@ -145,8 +131,8 @@ wmclass=termite
 wmclassmatch=1
 
 [General]
-count=7
-rules=1,2,3,4,5,6,7
+count=6
+rules=2,3,4,5,6,7
 
 [adb38742-80ef-4119-9a2d-cdd6cdcb1a09]
 Description=Application settings for konsole
