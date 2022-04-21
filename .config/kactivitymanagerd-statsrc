@@ -24,3 +24,9 @@ ordering=preferred://browser,org.kde.kontact.desktop,kontact.desktop,systemsetti
 
 [Favorites-org.kde.plasma.kickoff.favorites.instance-3-global]
 ordering=preferred://browser,applications:systemsettings.desktop,applications:org.kde.konsole.desktop,applications:org.kde.discover.desktop,applications:libreoffice-calc.desktop,applications:libreoffice-writer.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.plasma-systemmonitor.desktop,applications:org.pwmt.zathura.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-46-644e5605-d59e-4231-8d98-6dfb12fc7b5c]
+ordering=applications:org.kde.konsole.desktop,applications:libreoffice-calc.desktop,applications:libreoffice-writer.desktop,applications:org.kde.discover.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.plasma-systemmonitor.desktop,applications:systemsettings.desktop,preferred://browser
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-46-global]
+ordering=applications:org.kde.konsole.desktop,applications:libreoffice-calc.desktop,applications:libreoffice-writer.desktop,applications:org.kde.discover.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.plasma-systemmonitor.desktop,applications:systemsettings.desktop,preferred://browser

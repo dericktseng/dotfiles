@@ -17,16 +17,15 @@ PreviewSize=96
 
 [KPropertiesDialog]
 HDMI-A-0 Height 1920x1080=458
-HDMI-A-0 Width 1920x1080=431
+HDMI-A-0 Width 1920x1080=405
 eDP Height 1920x1080=616
 eDP Width 1920x1080=438
 
 [MainWindow]
-HDMI-A-0 Height 1920x1080=865
-HDMI-A-0 Width 1920x1080=1421
-HDMI-A-0 Window-Maximized 1920x1080=true
-HDMI-A-0 XPosition 1920x1080=220
-HDMI-A-0 YPosition 1920x1080=131
+HDMI-A-0 Height 1920x1080=928
+HDMI-A-0 Width 1920x1080=1480
+HDMI-A-0 XPosition 1920x1080=167
+HDMI-A-0 YPosition 1920x1080=90
 ToolBarsMovable=Disabled
 eDP Height 1920x1080=693
 eDP Width 1920x1080=1280
