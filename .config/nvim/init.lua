@@ -78,8 +78,6 @@ opt.inccommand = 'nosplit'
 
 o.tabline = '%!v:lua.tablinestr()'
 
-opt.lazyredraw = true
-
 -- disable folding
 o.foldenable = false
 
