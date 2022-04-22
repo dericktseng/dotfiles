@@ -22,7 +22,7 @@ UnderlineFilesEnabled=true
 ScrollBarPosition=2
 
 [Terminal Features]
-BlinkingCursorEnabled=true
+BlinkingCursorEnabled=false
 PeekPrimaryKeySequence=Del
 ReverseUrlHints=true
 UrlHintsModifiers=201326592
