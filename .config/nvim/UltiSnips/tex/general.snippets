@@ -41,12 +41,7 @@ snippet qt "Latex Quotations" wA
 endsnippet
 
 snippet mk "Math" wA
-$${1}$`!p
-if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ':']:
-	snip.rv = ' '
-else:
-	snip.rv = ''
-`$2
+$$1$
 endsnippet
 
 snippet dm "Math" wA
@@ -205,7 +200,7 @@ snippet labsetup "setup for labs" b
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{\normalsize{${1:Title}}}
-\rhead{\normalsize{Ji, Li, Marchand, Park, Suits, Tseng}}
+\rhead{\normalsize{Names}}
 \cfoot{\thepage}
 
 % \setlength{\parindent}{4em}
