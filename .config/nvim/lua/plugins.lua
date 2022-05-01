@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-calc',
-      'quangnguyen30192/cmp-nvim-ultisnips',
+      'saadparwaiz1/cmp_luasnip'
     },
   }
 
@@ -34,14 +34,29 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
     config = function() require'configs.treesitter' end,
+    branch = '0.5-compat',
     requires = {
-      {'p00f/nvim-ts-rainbow'}
+  --     {'p00f/nvim-ts-rainbow'}
     }
   }
 
   use {
     'nvim-lualine/lualine.nvim',
     config = function() require'configs.theme' end,
+  }
+
+  use {
+    'L3MON4D3/LuaSnip',
+    config = function()
+      require'luasnip'.config.setup({
+        update_events = 'TextChanged,TextChangedI',
+        region_check_events = "InsertEnter",
+      })
+
+      -- files to include
+      require'snippets.tex.math'
+      require'snippets.tex.general'
+    end
   }
 
   use {
@@ -61,14 +76,9 @@ return require('packer').startup(function(use)
   }
 
   use 'wbthomason/packer.nvim'
+  use 'lewis6991/impatient.nvim'
 
   -- non lua plugins
-  use {
-    'SirVer/ultisnips',
-    config = function() require'configs.ultisnips' end,
-    requires = { 'honza/vim-snippets' },
-  }
-
   use {
     'iamcco/markdown-preview.nvim',
     run = 'cd app && yarn install',
