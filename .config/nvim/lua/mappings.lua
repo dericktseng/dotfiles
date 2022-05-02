@@ -1,6 +1,5 @@
 local fn = require "functions"
-local keymap2 = fn.keymap2
-local keymap = fn.keymap
+local keymap = vim.keymap.set
 local wrap = fn.fnwrap
 
 -- Leader keys
@@ -23,10 +22,10 @@ keymap('n', '<Leader>R', [[:so %<CR>:echo 'reloaded file'<CR>]], {silent=false})
 keymap('t', '<ESC>', [[<C-\><C-N>]])
 
 keymap('n', '<C-L>', [[:nohl<CR><C-L>]])
-keymap2('n', 'k', fn.nav_up, {expr=true})
-keymap2('n', 'j', fn.nav_down, {expr=true})
-keymap2('x', 'k', fn.nav_up, {expr=true})
-keymap2('x', 'j', fn.nav_down, {expr=true})
+keymap('n', 'k', fn.nav_up, {expr=true})
+keymap('n', 'j', fn.nav_down, {expr=true})
+keymap('x', 'k', fn.nav_up, {expr=true})
+keymap('x', 'j', fn.nav_down, {expr=true})
 keymap('n', '<C-J>', ':cnext<CR>')
 keymap('n', '<C-K>', ':cprev<CR>')
 keymap('n', '<C-T>', [[:tabnew<CR>:Ex<CR>]])
@@ -71,13 +70,10 @@ keymap('x', '(', [[<esc>`>a)<esc>`<i(<esc>%]])
 keymap('x', '[', [[<esc>`>a]<esc>`<i[<esc>%]])
 keymap('x', '{', [[<esc>`>a}<esc>`<i{<esc>%]])
 keymap('x', '|', [[<esc>`>a|<esc>`<i|<esc>%]])
---tester
 
 -- vim easy align
-vim.cmd([[
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
-]])
+keymap('x', 'ga', '<Plug>(EasyAlign)')
+keymap('n', 'ga', '<Plug>(EasyAlign)')
 
 -- Splitting
 keymap('n', '<Leader>-', '<C-W>s')
@@ -107,10 +103,10 @@ keymap('n', '<Leader>0', ':tablast<CR>')
 keymap('n', '<Leader>t', ':sp<CR><c-w>J:resize12<CR>:term<CR>')
 
 -- Telescope
-keymap2('n', '<Leader>fg', fn.project_files)
-keymap2('n', '<Leader>v', fn.vimrc)
-keymap2('n', '<Leader>ff', wrap(require("telescope.builtin").find_files, {no_ignore=true}))
-keymap2('n', '<Leader>fd', require("telescope").extensions.file_browser.file_browser)
+keymap('n', '<Leader>fg', fn.project_files)
+keymap('n', '<Leader>v', fn.vimrc)
+keymap('n', '<Leader>ff', wrap(require("telescope.builtin").find_files, {no_ignore=true}))
+keymap('n', '<Leader>fd', require("telescope").extensions.file_browser.file_browser)
 keymap('n', '<Leader>fb', ':Telescope buffers<CR>')
 keymap('n', '<Leader>fh', ':Telescope help_tags<CR>')
 keymap('n', '<Leader>fl', ':Telescope heading<CR>')
@@ -123,9 +119,9 @@ keymap('n', '<Leader>fq', ':Telescope quickfix<CR>')
 keymap('n', '<LocalLeader>fq', ':Telescope loclist<CR>')
 
 -- LSP Configurations
-keymap2('n', ']d', vim.diagnostic.goto_next)
-keymap2('n', '[d', vim.diagnostic.goto_prev)
-keymap2('n', '<Localleader>d', fn.local_diagnostics)
+keymap('n', ']d', vim.diagnostic.goto_next)
+keymap('n', '[d', vim.diagnostic.goto_prev)
+keymap('n', '<Localleader>d', fn.local_diagnostics)
 keymap('n', '<Leader>d', ':Telescope diagnostics<CR>')
 keymap('n', '<Leader>ed', ':Telescope lsp_definitions<CR>')
 keymap('n', '<Leader>et', ':Telescope lsp_type_definitions<CR>')
@@ -135,14 +131,14 @@ keymap('n', '<Leader>es', ':Telescope lsp_document_symbols<CR>')
 keymap('n', '<Leader>ews', ':Telescope lsp_workspace_symbols<CR>')
 keymap('n', '<Leader>er', ':Telescope lsp_references<CR>')
 
-keymap2('n', '<Leader>eh', vim.lsp.buf.hover)
-keymap2('n', '<Leader>eci', vim.lsp.buf.incoming_calls)
-keymap2('n', '<Leader>eco', vim.lsp.buf.outgoing_calls)
-keymap2('n', '<Leader>ewl', vim.lsp.buf.list_workspace_folders)
--- keymap2('n', '<Leader>ewr', vim.lsp.buf.remove_workspace_folders, {silent=false})
-keymap2('n', '<Leader>ef', vim.lsp.buf.formatting)
-keymap2('n', '<Leader>eg', vim.lsp.buf.signature_help)
-keymap2('n', '<Leader>ee', vim.lsp.buf.rename, {silent=false})
+keymap('n', '<Leader>eh', vim.lsp.buf.hover)
+keymap('n', '<Leader>eci', vim.lsp.buf.incoming_calls)
+keymap('n', '<Leader>eco', vim.lsp.buf.outgoing_calls)
+keymap('n', '<Leader>ewl', vim.lsp.buf.list_workspace_folders)
+-- keymap('n', '<Leader>ewr', vim.lsp.buf.remove_workspace_folders, {silent=false})
+keymap('n', '<Leader>ef', vim.lsp.buf.formatting)
+keymap('n', '<Leader>eg', vim.lsp.buf.signature_help)
+keymap('n', '<Leader>ee', vim.lsp.buf.rename, {silent=false})
 
 -- Fugitive Configurations
 keymap('n', '<Leader>gs', ':Git<CR>')

@@ -31,12 +31,12 @@ require('plugins')
 require('mappings')
 
 -- per filetype settings
-vim.cmd([[
-augroup vimrc
-  autocmd!
-  au TermOpen * startinsert
-augroup END
-]])
+groupnum = vim.api.nvim_create_augroup('vimrc', {clear=true})
+vim.api.nvim_create_autocmd('TermOpen', {
+  group = groupnum,
+  command = 'startinsert',
+  pattern = '*'
+})
 
 -- fix for latex file detection
 g.tex_flavor = 'latex'

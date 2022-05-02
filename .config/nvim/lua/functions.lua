@@ -13,20 +13,6 @@ fn.has_words_before = function()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
--- quick keymap with default noremap
-fn.keymap = function(mode, lhs, rhs, opts)
-  local options = { noremap = true, silent = true }
-  if opts then options = vim.tbl_extend('force', options, opts) end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
-
--- new keymap api requires nvim 0.7
-fn.keymap2 = function(mode, lhs, func, opts)
-  local options = { noremap = true, silent = true }
-  if opts then options = vim.tbl_extend('force', options, opts) end
-  vim.keymap.set(mode, lhs, func, options)
-end
-
 -- general wrapper function to wrap around function with arguments
 fn.fnwrap = function(fn, args)
   return function() return fn(args) end
