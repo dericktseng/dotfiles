@@ -20,6 +20,18 @@ fn.keymap = function(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+-- new keymap api requires nvim 0.7
+fn.keymap2 = function(mode, lhs, func, opts)
+  local options = { noremap = true, silent = true }
+  if opts then options = vim.tbl_extend('force', options, opts) end
+  vim.keymap.set(mode, lhs, func, options)
+end
+
+-- general wrapper function to wrap around function with arguments
+fn.fnwrap = function(fn, args)
+  return function() return fn(args) end
+end
+
 -- smart nav for mapping k -> gk or j -> gj
 fn.smart_nav = function(key)
   local count = vim.v.count
@@ -27,7 +39,17 @@ fn.smart_nav = function(key)
   if count >= 5 then
     gnav = [[m']] .. count .. gnav
   end
-  return fn.press(gnav)
+  return gnav
+end
+
+-- function wrapper for navigating up
+fn.nav_up = function()
+  return fn.smart_nav('k')
+end
+
+-- function wrapper for navigating down
+fn.nav_down = function()
+  return fn.smart_nav('j')
 end
 
 -- tabline configurations
@@ -109,12 +131,5 @@ end
 
 -- global vim variables
 _G.tablinestr = fn.tablinestr
-_G.smart_nav = fn.smart_nav
-_G.project_files = fn.project_files
-_G.vimrc = fn.vimrc
-_G.togglelist = fn.togglelist
-_G.diag_to_loclist = fn.diag_to_loclist
-_G.diag_to_quickfix = fn.diag_to_quickfix
-_G.local_diagnostics = fn.local_diagnostics
 
 return fn

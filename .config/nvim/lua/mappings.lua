@@ -1,5 +1,7 @@
 local fn = require "functions"
+local keymap2 = fn.keymap2
 local keymap = fn.keymap
+local wrap = fn.fnwrap
 
 -- Leader keys
 keymap('n', "<SPACE>", "<NOP>")
@@ -21,10 +23,10 @@ keymap('n', '<Leader>R', [[:so %<CR>:echo 'reloaded file'<CR>]], {silent=false})
 keymap('t', '<ESC>', [[<C-\><C-N>]])
 
 keymap('n', '<C-L>', [[:nohl<CR><C-L>]])
-keymap('n', 'k', [[v:lua.smart_nav('k')]], {expr=true})
-keymap('n', 'j', [[v:lua.smart_nav('j')]], {expr=true})
-keymap('x', 'k', [[v:lua.smart_nav('k')]], {expr=true})
-keymap('x', 'j', [[v:lua.smart_nav('j')]], {expr=true})
+keymap2('n', 'k', fn.nav_up, {expr=true})
+keymap2('n', 'j', fn.nav_down, {expr=true})
+keymap2('x', 'k', fn.nav_up, {expr=true})
+keymap2('x', 'j', fn.nav_down, {expr=true})
 keymap('n', '<C-J>', ':cnext<CR>')
 keymap('n', '<C-K>', ':cprev<CR>')
 keymap('n', '<C-T>', [[:tabnew<CR>:Ex<CR>]])
@@ -105,8 +107,10 @@ keymap('n', '<Leader>0', ':tablast<CR>')
 keymap('n', '<Leader>t', ':sp<CR><c-w>J:resize12<CR>:term<CR>')
 
 -- Telescope
-keymap('n', '<Leader>ff', ':lua require("telescope.builtin").find_files({no_ignore=true})<CR>')
-keymap('n', '<Leader>fd', ':lua require("telescope").extensions.file_browser.file_browser()<CR>')
+keymap2('n', '<Leader>fg', fn.project_files)
+keymap2('n', '<Leader>v', fn.vimrc)
+keymap2('n', '<Leader>ff', wrap(require("telescope.builtin").find_files, {no_ignore=true}))
+keymap2('n', '<Leader>fd', require("telescope").extensions.file_browser.file_browser)
 keymap('n', '<Leader>fb', ':Telescope buffers<CR>')
 keymap('n', '<Leader>fh', ':Telescope help_tags<CR>')
 keymap('n', '<Leader>fl', ':Telescope heading<CR>')
@@ -117,14 +121,12 @@ keymap('n', '<Leader>fm', ':Telescope marks<CR>')
 keymap('n', '<Leader>fc', ':Telescope commands<CR>')
 keymap('n', '<Leader>fq', ':Telescope quickfix<CR>')
 keymap('n', '<LocalLeader>fq', ':Telescope loclist<CR>')
-keymap('n', '<Leader>fg', ':call v:lua.project_files()<CR>')
-keymap('n', '<Leader>v', ':call v:lua.vimrc()<CR>')
 
 -- LSP Configurations
-keymap('n', ']d', ':lua vim.diagnostic.goto_next()<CR>')
-keymap('n', '[d', ':lua vim.diagnostic.goto_prev()<CR>')
+keymap2('n', ']d', vim.diagnostic.goto_next)
+keymap2('n', '[d', vim.diagnostic.goto_prev)
+keymap2('n', '<Localleader>d', fn.local_diagnostics)
 keymap('n', '<Leader>d', ':Telescope diagnostics<CR>')
-keymap('n', '<Localleader>d', ':call v:lua.local_diagnostics()<CR>')
 keymap('n', '<Leader>ed', ':Telescope lsp_definitions<CR>')
 keymap('n', '<Leader>et', ':Telescope lsp_type_definitions<CR>')
 keymap('n', '<Leader>ei', ':Telescope lsp_implementations<CR>')
@@ -133,14 +135,14 @@ keymap('n', '<Leader>es', ':Telescope lsp_document_symbols<CR>')
 keymap('n', '<Leader>ews', ':Telescope lsp_workspace_symbols<CR>')
 keymap('n', '<Leader>er', ':Telescope lsp_references<CR>')
 
-keymap('n', '<Leader>eh', ':lua vim.lsp.buf.hover()<CR>')
-keymap('n', '<Leader>eci', ':lua vim.lsp.buf.incoming_calls()<CR>')
-keymap('n', '<Leader>eco', ':lua vim.lsp.buf.outgoing_calls()<CR>')
-keymap('n', '<Leader>ewl', ':lua vim.lsp.buf.list_workspace_folders()<CR>')
-keymap('n', '<Leader>ewr', ':lua vim.lsp.buf.remove_workspace_folders()<CR>')
-keymap("n", "<Leader>ef", ':lua vim.lsp.buf.formatting()<CR>')
-keymap('n', '<Leader>eg', ':lua vim.lsp.buf.signature_help()<CR>')
-keymap('n', '<Leader>ee', ':lua vim.lsp.buf.rename()<CR>', {silent=false})
+keymap2('n', '<Leader>eh', vim.lsp.buf.hover)
+keymap2('n', '<Leader>eci', vim.lsp.buf.incoming_calls)
+keymap2('n', '<Leader>eco', vim.lsp.buf.outgoing_calls)
+keymap2('n', '<Leader>ewl', vim.lsp.buf.list_workspace_folders)
+-- keymap2('n', '<Leader>ewr', vim.lsp.buf.remove_workspace_folders, {silent=false})
+keymap2('n', '<Leader>ef', vim.lsp.buf.formatting)
+keymap2('n', '<Leader>eg', vim.lsp.buf.signature_help)
+keymap2('n', '<Leader>ee', vim.lsp.buf.rename, {silent=false})
 
 -- Fugitive Configurations
 keymap('n', '<Leader>gs', ':Git<CR>')
