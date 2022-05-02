@@ -1,6 +1,6 @@
 -- cmp mappings
 local cmp = require('cmp')
-local luasnip = require('luasnip')
+local ls = require('luasnip')
 local fn = require('functions')
 
 cmp.setup {
@@ -16,23 +16,40 @@ cmp.setup {
       select = true,
     }),
 
-    ["<Tab>"] = cmp.mapping(function(fallback)
-      if luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
+    -- luasnip integration
+    ['<C-H>'] = cmp.mapping(function(fallback)
+      if ls.choice_active() then
+        ls.change_choice(-1)
+      else
+        fallback()
+      end
+    end, {'i', 's'}),
+
+    ['<C-L>'] = cmp.mapping(function(fallback)
+      if ls.choice_active() then
+        ls.change_choice(1)
+      else
+        fallback()
+      end
+    end, {'i', 's'}),
+
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if ls.expand_or_jumpable() then
+        ls.expand_or_jump()
       elseif fn.has_words_before() then
         cmp.complete()
       else
         fallback()
       end
-    end, { "i", "s" }),
+    end, { 'i', 's' }),
 
-    ["<S-Tab>"] = cmp.mapping(function(fallback)
-      if luasnip.jumpable(-1) then
-        luasnip.jump(-1)
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
+      if ls.jumpable(-1) then
+        ls.jump(-1)
       else
         fallback()
       end
-    end, { "i", "s" }),
+    end, { 'i', 's' }),
   },
 
   sources = {
@@ -43,10 +60,9 @@ cmp.setup {
     {name = 'calc', keyword_length = 2},
     {name = 'buffer', keyword_length = 3},
   },
-
   snippet = {
     expand = function(args)
-      require'luasnip'.lsp_expand(args.body)
+      ls.lsp_expand(args.body)
     end,
   },
 

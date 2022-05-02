@@ -95,6 +95,7 @@ ls.add_snippets('tex', {
     )
   ),
 
+  -- TODO: Implement choice node for file selection for pict, source code, pdf, etc.
   s(
     {trig='pict', name='insert picture top align'},
     fmt([[

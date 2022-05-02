@@ -20,7 +20,6 @@ return require('packer').startup(function(use)
 
   use {
     'nvim-telescope/telescope.nvim',
-    tag = 'nvim-0.6',
     config = function() require'configs.telescope' end,
     requires = {
       {'nvim-lua/plenary.nvim'},
@@ -34,10 +33,6 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
     config = function() require'configs.treesitter' end,
-    branch = '0.5-compat',
-    requires = {
-  --     {'p00f/nvim-ts-rainbow'}
-    }
   }
 
   use {
@@ -51,11 +46,13 @@ return require('packer').startup(function(use)
       require'luasnip'.config.setup({
         update_events = 'TextChanged,TextChangedI',
         region_check_events = "InsertEnter",
+        enable_autosnippets = true
       })
 
       -- files to include
       require'snippets.tex.math'
       require'snippets.tex.general'
+      require'snippets.lua'
     end
   }
 
