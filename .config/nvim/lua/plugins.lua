@@ -86,7 +86,6 @@ return require('packer').startup(function(use)
   use {
     'lervag/vimtex',
     config = function() require'configs.vimtex' end,
-    ft = {'tex'}
   }
 
   use 'tpope/vim-fugitive'
