@@ -2,6 +2,7 @@
 RetainPriorSearch=false
 
 [Plugins]
+CharacterRunnerEnabled=false
 DictionaryEnabled=false
 PIM Contacts Search RunnerEnabled=false
 appstreamEnabled=false
@@ -9,6 +10,8 @@ baloosearchEnabled=true
 bookmarksEnabled=false
 browserhistoryEnabled=false
 browsertabsEnabled=false
+katesessionsEnabled=false
+konsoleprofilesEnabled=false
 krunner_spellcheckEnabled=false
 locationsEnabled=true
 marbleEnabled=false

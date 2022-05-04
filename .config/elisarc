@@ -17,7 +17,7 @@ togglePartyMode=P
 toggle_playlist=F9
 
 [UiSettings]
-ColorScheme=Default
+ColorScheme=
 
 [Views]
 ColorScheme=Default

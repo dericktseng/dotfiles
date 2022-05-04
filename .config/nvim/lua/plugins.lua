@@ -3,38 +3,36 @@ return require('packer').startup(function(use)
   use {
     'hrsh7th/nvim-cmp',
     config = function() require('configs.cmp') end,
-    event = 'InsertEnter',
-
     requires = {
-      {
-        'L3MON4D3/LuaSnip',
-        config = function()
-          require'luasnip'.config.setup({
-            update_events = 'TextChanged,TextChangedI',
-            region_check_events = "InsertEnter",
-            enable_autosnippets = true
-          })
-
-          -- files to include
-          require'snippets.tex.math'
-          require'snippets.tex.general'
-          require'snippets.lua'
-        end
-      }
+      {'hrsh7th/cmp-buffer'},
+      {'hrsh7th/cmp-nvim-lsp'},
+      {'hrsh7th/cmp-path'},
+      {'hrsh7th/cmp-calc'},
+      {'saadparwaiz1/cmp_luasnip'},
     }
   }
 
   -- nvim cmp plugins
-  use{'hrsh7th/cmp-buffer', after = 'nvim-cmp'}
-  use{'hrsh7th/cmp-nvim-lsp', after = 'nvim-cmp'}
-  use{'hrsh7th/cmp-path', after = 'nvim-cmp'}
-  use{'hrsh7th/cmp-calc', after = 'nvim-cmp'}
-  use{'saadparwaiz1/cmp_luasnip', after = 'nvim-cmp'}
 
   use {
     'neovim/nvim-lspconfig',
     config = function() require'configs.lspservers' end,
     after = 'nvim-cmp'
+  }
+
+  use {
+    'L3MON4D3/LuaSnip',
+    config = function()
+      require'luasnip'.config.setup({
+        update_events = 'TextChanged,TextChangedI',
+        region_check_events = "InsertEnter",
+        enable_autosnippets = true
+      })
+      -- files to include
+      require'snippets.tex.math'
+      require'snippets.tex.general'
+      require'snippets.lua'
+    end
   }
 
   use {
