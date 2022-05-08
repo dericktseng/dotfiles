@@ -8,10 +8,10 @@ onLaunchAction=UseLastUsedCapturemode
 
 [GuiConfig]
 captureMode=5
-cropRegion=570,203,963,616
+cropRegion=352,195,981,666
 window-position=447,368
 
 [Save]
 defaultSaveImageFormat=JPG
-lastSaveLocation=file:///home/derickwtseng/Pictures/21-30-11_2022_04_30.jpg
+lastSaveLocation=file:///home/derickwtseng/Pictures/16-14-00_2022_05_05.jpg
 saveFilenameFormat=%H-%m-%S_%Y_%M_%D

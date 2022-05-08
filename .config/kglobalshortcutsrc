@@ -253,7 +253,7 @@ bismuth_toggle_spread_layout=none,none,Bismuth: Toggle Spread Layout
 bismuth_toggle_stair_layout=none,none,Bismuth: Toggle Stair Layout
 bismuth_toggle_three_column_layout=none,none,Bismuth: Toggle Three Column Layout
 bismuth_toggle_tile_layout=Meta+T,none,Bismuth: Toggle Tile Layout
-bismuth_toggle_window_floating=none,none,Bismuth: Toggle Active Window Floating
+bismuth_toggle_window_floating=Meta+S,none,Bismuth: Toggle Active Window Floating
 view_actual_size=none,Meta+0,Actual Size
 view_zoom_in=Meta+=,Meta+=,Zoom In
 view_zoom_out=Meta+-,Meta+-,Zoom Out
@@ -318,7 +318,7 @@ activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 32=none,none,Activate Activity Pager Widget
-activate widget 47=,none,Activate Application Launcher Widget
+activate widget 47=none,none,Activate Application Launcher Widget
 clear-history=Meta+Ctrl+Alt+V,,Clear Clipboard History
 clipboard_action=none,Ctrl+Alt+X,Enable Clipboard Actions
 cycleNextAction=none,,Next History Item
