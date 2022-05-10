@@ -12,8 +12,6 @@ return require('packer').startup(function(use)
     }
   }
 
-  -- nvim cmp plugins
-
   use {
     'neovim/nvim-lspconfig',
     config = function() require'configs.lspservers' end,
@@ -74,7 +72,6 @@ return require('packer').startup(function(use)
   }
 
   use 'wbthomason/packer.nvim'
-  use 'lewis6991/impatient.nvim'
 
   -- non lua plugins
   use {
