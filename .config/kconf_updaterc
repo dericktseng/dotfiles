@@ -53,7 +53,7 @@ done=dont_use_gtk_css_for_window_decorations
 mtime=1648552601
 
 [gwenview.upd]
-ctime=1647133836
+ctime=1652295997
 done=SideBar_StatusBar_Rename,ImageView_AlphaBackgroundMode_Update,DeleteThumbnailSetting_Rename
 mtime=1643479839
 

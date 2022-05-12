@@ -1,6 +1,7 @@
 [Appearance]
 ColorScheme=Google-Theme
 Font=Fira Code,12,-1,5,50,0,0,0,0,0
+UseFontLineChararacters=true
 
 [Cursor Options]
 CustomCursorColor=119,129,140

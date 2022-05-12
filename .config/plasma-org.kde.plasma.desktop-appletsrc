@@ -167,7 +167,8 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][37][General]
-positions=1,17,desktop:/tmp,0,4,desktop:/games,0,2,desktop:/program,0,3,desktop:/Berkeley,0,0,desktop:/current,0,1,desktop:/starcraft,0,16
+locked=true
+positions=1,17,desktop:/tmp,0,4,desktop:/current,0,2,desktop:/games,0,3,desktop:/Berkeley,0,0,desktop:/starcraft,0,16,desktop:/program,0,1
 sortMode=-1
 
 [Containments][37][Wallpaper][org.kde.image][General]
@@ -271,7 +272,7 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][8][Applets][29][Configuration]
-PreloadWeight=84
+PreloadWeight=0
 
 [Containments][8][Applets][29][Configuration][ConfigDialog]
 DialogHeight=540
