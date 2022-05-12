@@ -23,7 +23,8 @@ DialogWidth=720
 [Containments][1][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=559
-positions=1,17,desktop:/games,0,4,desktop:/program,0,2,desktop:/tmp,0,3,desktop:/Berkeley,0,0,desktop:/current,0,1,desktop:/starcraft,0,16
+locked=true
+positions=1,17,desktop:/tmp,0,4,desktop:/current,0,2,desktop:/games,0,3,desktop:/Berkeley,0,0,desktop:/starcraft,0,16,desktop:/program,0,1
 sortMode=-1
 
 [Containments][1][Wallpaper][org.kde.image][General]
@@ -144,7 +145,8 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][36][General]
-positions=1,17,desktop:/tmp,0,4,desktop:/games,0,2,desktop:/program,0,3,desktop:/Berkeley,0,0,desktop:/current,0,1,desktop:/starcraft,0,16
+locked=true
+positions=1,17,desktop:/tmp,0,4,desktop:/current,0,2,desktop:/games,0,3,desktop:/Berkeley,0,0,desktop:/starcraft,0,16,desktop:/program,0,1
 sortMode=-1
 
 [Containments][36][Wallpaper][org.kde.image][General]
