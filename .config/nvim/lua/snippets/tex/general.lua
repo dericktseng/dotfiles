@@ -79,9 +79,9 @@ ls.add_snippets('tex', {
     {trig='al', name='align environment'},
     fmt([[
       \begin{{align*}}
-          {}
+      {}{}
       \end{{align*}}]],
-      {i(1)}
+      {t('\t'), i(1)}
     )
   ),
 
@@ -89,9 +89,9 @@ ls.add_snippets('tex', {
     {trig='ga', name='gather environment'},
     fmt([[
       \begin{{gather*}}
-          {}
+      {}{}
       \end{{gather*}}]],
-      {i(1)}
+      {t('\t'), i(1)}
     )
   ),
 
@@ -100,10 +100,10 @@ ls.add_snippets('tex', {
     {trig='pict', name='insert picture top align'},
     fmt([[
       \begin{{center}}
-          \adjustbox{{valign=t}}{{\includegraphics[width={1}\textwidth]{{{2}}}}}
+      {}\adjustbox{{valign=t}}{{\includegraphics[width={}\textwidth]{{{}}}}}
       \end{{center}}
       ]],
-      {i(1, '0.7'), i(2)}
+      {t('\t'), i(1,'0.9'), i(2)}
     )
   ),
 
@@ -162,48 +162,48 @@ ls.add_snippets('tex', {
     {trig='eq', name='equation'},
     fmt([[
       \begin{{equation}}
-          \label{{eq:{}}}
-          {}
+      {}\label{{eq:{}}}
+      {}{}
       \end{{equation}}
-    ]], {i(1), i(2)})
+    ]], {t('\t'), i(1), t('\t'), i(2)})
   ),
 
   s(
     {trig='fig', name='Figure environment'},
     fmt([[
       \begin{{figure}}[htpb]
-          \centering
-          \includegraphics[width=0.9\textwidth]{{{1}}}
-          \caption{{{2}}}
-          \label{{fig:{3}}}
+      {}\centering
+      {}\includegraphics[width=0.9\textwidth]{{{}}}
+      {}\caption{{{}}}
+      {}\label{{fig:{}}}
       \end{{figure}}
     ]],
-    {i(1), i(2), i(3)})
+    {t('\t'), t('\t'), i(1), t('\t'), i(2), t('\t'), i(3)})
   ),
 
   s(
-    {trig='tab', name='Table environment'},
+    {trig='tb', name='Table environment'},
     fmt([[
       \begin{{table}}[htpb]
-          \centering
-          \begin{{tabular}}{{}}
-              {1}
-          \end{{tabular}}{{}}
-          \caption{{{2}}}
-          \label{{tab:{3}}}
+      {}\centering
+      {}\begin{{tabular}}{{{}}}
+      {}{}{}
+      {}\end{{tabular}}
+      {}\caption{{{}}}
+      {}\label{{tab:{}}}
       \end{{table}}
     ]],
-    {i(1), i(2), i(3)})
+    {t('\t'), t('\t'), i(2), t('\t'), t('\t'), i(1), t('\t'), t('\t'), i(3), t('\t'), i(4)})
   ),
 
   s(
     {trig='beg', name='begin environment'},
     fmt([[
       \begin{{{1}}}{2}
-          {}
+      {}{}
       \end{{{}}}
     ]],
-    {i(1), i(2), i(3), rep(1)})
+    {i(1), i(2), t('\t'), i(3), rep(1)})
   ),
 
   s(
@@ -233,15 +233,15 @@ ls.add_snippets('tex', {
           % \setlength{{\parindent}}{{0em}}
           % \setlength{{\parskip}}{{0.5em}}
 
-          \title{{{1}}}
-          \author{{{2}}}
+          \title{{{}}}
+          \author{{{}}}
           \date{{\today}}
 
           \begin{{document}}
-              \maketitle
-              {3}
+          {}\maketitle
+          {}{}
           \end{{document}}
     ]],
-    {i(1, 'Title'), i(2, 'Derick Tseng'), i(3)})
+    {i(1, 'Title'), i(2, 'Derick Tseng'), t('\t'), t('\t'), i(3)})
   )
 })

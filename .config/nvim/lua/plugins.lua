@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
       require'snippets.tex.math'
       require'snippets.tex.general'
       require'snippets.lua'
+      require'snippets.shell'
     end
   }
 

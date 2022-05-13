@@ -24,11 +24,11 @@ DialogWidth=720
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=559
 locked=true
-positions=1,17,desktop:/tmp,0,4,desktop:/current,0,2,desktop:/games,0,3,desktop:/Berkeley,0,0,desktop:/starcraft,0,16,desktop:/program,0,1
+positions=1,17,desktop:/current,0,2,desktop:/program,0,1,desktop:/Berkeley,0,0
 sortMode=-1
 
 [Containments][1][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/Next/
+Image=file:///usr/share/wallpapers/Next/contents/images/1920x1080.jpg
 SlidePaths=/usr/share/wallpapers
 
 [Containments][2]
@@ -146,11 +146,11 @@ DialogWidth=720
 
 [Containments][36][General]
 locked=true
-positions=1,17,desktop:/tmp,0,4,desktop:/current,0,2,desktop:/games,0,3,desktop:/Berkeley,0,0,desktop:/starcraft,0,16,desktop:/program,0,1
+positions=1,17,desktop:/current,0,2,desktop:/program,0,1,desktop:/Berkeley,0,0
 sortMode=-1
 
 [Containments][36][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/Next/
+Image=file:///usr/share/wallpapers/Next/contents/images/1920x1080.jpg
 SlidePaths=/usr/share/wallpapers
 
 [Containments][37]
@@ -170,7 +170,7 @@ DialogWidth=720
 
 [Containments][37][General]
 locked=true
-positions=1,17,desktop:/tmp,0,4,desktop:/current,0,2,desktop:/games,0,3,desktop:/Berkeley,0,0,desktop:/starcraft,0,16,desktop:/program,0,1
+positions=1,17,desktop:/current,0,2,desktop:/program,0,1,desktop:/Berkeley,0,0
 sortMode=-1
 
 [Containments][37][Wallpaper][org.kde.image][General]
@@ -297,4 +297,4 @@ knownItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.blue
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/tmp,0,desktop:/program,0,desktop:/starcraft,0,desktop:/games,0,desktop:/Berkeley,0,file:///home/derickwtseng/Desktop/replays,0,desktop:/current,0
+screenMapping=desktop:/games,0,desktop:/starcraft,0,desktop:/program,0,file:///home/derickwtseng/Desktop/replays,0,desktop:/tmp,0,desktop:/current,0,desktop:/Berkeley,0
