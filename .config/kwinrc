@@ -53,10 +53,10 @@ active=-1
 count=0
 
 [TabBox]
+ApplicationsMode=1
 LayoutName=org.kde.breeze.desktop
 
 [Windows]
 AutoRaise=true
 AutoRaiseInterval=0
-BorderlessMaximizedWindows=true
 DelayFocusInterval=0

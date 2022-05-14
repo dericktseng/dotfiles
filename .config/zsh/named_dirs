@@ -1,4 +1,4 @@
 #!/bin/zsh
 hash -d derick="$HOME/Desktop/Derick"
 hash -d berk="$HOME/Desktop/Berkeley"
-hash -d curr="$HOME/Desktop/Berkeley/3/2022Spring"
+hash -d curr="$HOME/Desktop/Berkeley/4/2022Summer"
