@@ -29,6 +29,7 @@ HDMI-A-0 YPosition 1920x1080=74
 ToolBarsMovable=Disabled
 eDP Height 1920x1080=693
 eDP Width 1920x1080=1280
+eDP Window-Maximized 1920x1080=true
 eDP XPosition 1920x1080=247
 eDP YPosition 1920x1080=158
 eDP-1 Height 1920x1080=1040
@@ -39,7 +40,7 @@ ConfirmDelete=true
 
 [Open-with settings]
 CompletionMode=1
-History=gwe,firefo,mpv,okular,imv,neo,neovim
+History=kwri,gwe,firefo,mpv,okular,imv,neo,neovim
 
 [PreviewSettings]
 Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs

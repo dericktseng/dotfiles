@@ -10,6 +10,7 @@ cargo
 clang
 clang-devel
 clang-tools-extra
+cmus
 dejavu-fonts-all
 djvulibre
 dkms
@@ -48,7 +49,6 @@ gstreamer1-plugins-good-gtk
 gstreamer1-plugins-good-qt
 htop
 imv
-iwd
 jq
 kernel-tools
 kf5-kcontacts-devel
@@ -74,7 +74,6 @@ mozilla-openh264
 mpv
 mtools
 neovim
-neovim-qt
 nodejs
 nodejs-yarn
 npm

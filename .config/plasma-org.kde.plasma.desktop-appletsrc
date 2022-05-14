@@ -24,7 +24,7 @@ DialogWidth=720
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=559
 locked=true
-positions=1,17,desktop:/current,0,2,desktop:/program,0,1,desktop:/Berkeley,0,0
+positions=1,17,desktop:/current,0,2,desktop:/Berkeley,0,0,desktop:/program,0,1
 sortMode=-1
 
 [Containments][1][Wallpaper][org.kde.image][General]
@@ -146,7 +146,7 @@ DialogWidth=720
 
 [Containments][36][General]
 locked=true
-positions=1,17,desktop:/current,0,2,desktop:/program,0,1,desktop:/Berkeley,0,0
+positions=1,17,desktop:/current,0,2,desktop:/Berkeley,0,0,desktop:/program,0,1
 sortMode=-1
 
 [Containments][36][Wallpaper][org.kde.image][General]
@@ -170,7 +170,7 @@ DialogWidth=720
 
 [Containments][37][General]
 locked=true
-positions=1,17,desktop:/current,0,2,desktop:/program,0,1,desktop:/Berkeley,0,0
+positions=1,17,desktop:/current,0,2,desktop:/Berkeley,0,0,desktop:/program,0,1
 sortMode=-1
 
 [Containments][37][Wallpaper][org.kde.image][General]
@@ -203,6 +203,9 @@ plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][12][Configuration]
 PreloadWeight=100
+
+[Containments][8][Applets][12][Configuration][General]
+globalMute=true
 
 [Containments][8][Applets][13]
 immutability=1
@@ -263,7 +266,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][28][Configuration]
-PreloadWeight=0
+PreloadWeight=15
 
 [Containments][8][Applets][28][Configuration][ConfigDialog]
 DialogHeight=540
@@ -297,4 +300,4 @@ knownItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.blue
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/games,0,desktop:/starcraft,0,desktop:/program,0,file:///home/derickwtseng/Desktop/replays,0,desktop:/tmp,0,desktop:/current,0,desktop:/Berkeley,0
+screenMapping=desktop:/program,0,desktop:/current,0,desktop:/tmp,0,desktop:/games,0,file:///home/derickwtseng/Desktop/replays,0,desktop:/starcraft,0,desktop:/Berkeley,0

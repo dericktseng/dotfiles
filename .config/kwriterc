@@ -104,7 +104,11 @@ HDMI-A-0 XPosition 1920x1080=640
 HDMI-A-0 YPosition 1920x1080=280
 State=AAAA/wAAAAD9AAAAAAAAAoAAAAGUAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
+eDP XPosition 1920x1080=640
+eDP YPosition 1920x1080=280
 
 [Recent Files]
-File1[$e]=/run/media/derickwtseng/3396c424-9e36-40ad-8aca-c4c2146c7102/tmp/gelbooru.md
-Name1[$e]=gelbooru.md
+File1[$e]=$HOME/Desktop/Berkeley/3/2022Spring/MSE104/lab5/nacre_fast.txt
+File2[$e]=$HOME/Downloads/test.md
+Name1[$e]=nacre_fast.txt
+Name2[$e]=test.md
