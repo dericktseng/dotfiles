@@ -157,8 +157,8 @@ Image=file:///usr/share/wallpapers/Next/contents/images/1920x1080.jpg
 SlidePaths=/usr/share/wallpapers
 
 [Containments][37]
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
+ItemGeometries-1920x1080=Applet-48:1696,720,224,320,0;
+ItemGeometriesHorizontal=Applet-48:1696,720,224,320,0;
 activityId=4bc9cf04-def1-4f75-9233-cc936be4c7df
 formfactor=0
 immutability=1
@@ -166,6 +166,22 @@ lastScreen=0
 location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
+
+[Containments][37][Applets][48]
+immutability=1
+plugin=org.kde.plasma.systemmonitor
+
+[Containments][37][Applets][48][Configuration][Appearance]
+chartFace=org.kde.ksysguard.piechart
+title=Total CPU Use
+
+[Containments][37][Applets][48][Configuration][SensorColors]
+cpu/all/usage=61,174,233
+
+[Containments][37][Applets][48][Configuration][Sensors]
+highPrioritySensorIds=["cpu/all/usage"]
+lowPrioritySensorIds=["cpu/all/cpuCount","cpu/all/coreCount"]
+totalSensors=["cpu/all/usage"]
 
 [Containments][37][ConfigDialog]
 DialogHeight=540
