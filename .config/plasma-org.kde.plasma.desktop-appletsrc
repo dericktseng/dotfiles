@@ -24,7 +24,7 @@ DialogWidth=720
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=559
 locked=true
-positions={"1920x1080":["1"\\,"17"\\,"file:///home/derickwtseng/Desktop/program/micromayhem"\\,"0"\\,"0"]}
+positions={"1920x1080":[]}
 sortMode=-1
 url=file:///home/derickwtseng/Desktop/program
 
@@ -190,8 +190,9 @@ DialogWidth=720
 
 [Containments][37][General]
 locked=true
-positions={"1920x1080":["1"\\,"17"\\,"desktop:/program"\\,"0"\\,"2"\\,"desktop:/Berkeley"\\,"0"\\,"0"\\,"desktop:/current"\\,"0"\\,"1"]}
+positions={"1920x1080":[]}
 sortMode=-1
+url=activities:/current/
 
 [Containments][37][Wallpaper][org.kde.image][General]
 Image=file:///usr/share/wallpapers/Next/contents/images/1920x1080.jpg
@@ -223,9 +224,6 @@ plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][12][Configuration]
 PreloadWeight=100
-
-[Containments][8][Applets][12][Configuration][General]
-globalMute=true
 
 [Containments][8][Applets][13]
 immutability=1
@@ -319,5 +317,5 @@ extraItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.blue
 knownItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.bluetooth,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.battery,org.kde.plasma.manage-inputmethod,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.clipboard,org.kde.plasma.nightcolorcontrol,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.kdeconnect,org.kde.plasma.printmanager
 
 [ScreenMapping]
-itemsOnDisabledScreens=0,9,file:///home/derickwtseng/Desktop/replays,file:///home/derickwtseng/Desktop,file:///home/derickwtseng/Downloads,file:///home/derickwtseng/Public,file:///home/derickwtseng/Videos,file:///home/derickwtseng/Music,file:///home/derickwtseng/Documents,file:///home/derickwtseng/Templates,file:///home/derickwtseng/Pictures
-screenMapping=desktop:/program,0,desktop:/Berkeley,0,desktop:/current,0,desktop:/starcraft,0,desktop:/games,0,file:///home/derickwtseng/Desktop/program/micromayhem,0,file:///home/derickwtseng/Desktop/current/CS162,0,desktop:/tmp,0
+itemsOnDisabledScreens=0,14,file:///home/derickwtseng/Desktop/replays,file:///home/derickwtseng/Desktop,file:///home/derickwtseng/Downloads,file:///home/derickwtseng/Public,file:///home/derickwtseng/Videos,file:///home/derickwtseng/Music,file:///home/derickwtseng/Documents,file:///home/derickwtseng/Templates,file:///home/derickwtseng/Pictures,desktop:/program,desktop:/games,desktop:/starcraft,desktop:/tmp,desktop:/Berkeley
+screenMapping=file:///home/derickwtseng/Desktop/program/micromayhem,0,file:///home/derickwtseng/Desktop/current/CS162,0
