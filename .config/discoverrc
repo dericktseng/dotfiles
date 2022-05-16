@@ -1,6 +1,6 @@
 [FlatpakSources]
-Sources=flathub,fedora-testing
+Sources=fedora,flathub,fedora-testing
 
 [Window]
-geometry=340,129,1334,865
+geometry=257,78,1362,882
 visibility=2

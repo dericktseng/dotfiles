@@ -106,9 +106,11 @@ Word Completion Minimal Word Length=3
 Word Completion Remove Tail=true
 
 [MainWindow]
-HDMI-A-0 XPosition 1920x1080=640
-HDMI-A-0 YPosition 1920x1080=280
-State=AAAA/wAAAAD9AAAAAAAAA8AAAAPEAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+HDMI-A-0 Height 1920x1080=580
+HDMI-A-0 Width 1920x1080=766
+HDMI-A-0 XPosition 1920x1080=657
+HDMI-A-0 YPosition 1920x1080=309
+State=AAAA/wAAAAD9AAAAAAAAAv4AAAH4AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 eDP Height 1920x1080=1040
 eDP Width 1920x1080=960
@@ -118,5 +120,7 @@ eDP YPosition 1920x1080=0
 [Recent Files]
 File1[$e]=$HOME/Desktop/Berkeley/3/2022Spring/MSE104/lab5/nacre_fast.txt
 File2[$e]=$HOME/Desktop/Berkeley/4/2022Summer/CS162/README.md
+File3[$e]=$HOME/.local/share/Steam/steamapps/compatdata/3582858080/pfx/drive_c/Program Files/Guild Wars 2/runner.bat
 Name1[$e]=nacre_fast.txt
 Name2[$e]=README.md
+Name3[$e]=runner.bat
