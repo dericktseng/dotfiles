@@ -1,5 +1,5 @@
 <!DOCTYPE kpartgui SYSTEM 'kpartgui.dtd'>
-<gui name="kipiplugin_imgur" version="2">
+<gui version="2" name="kipiplugin_imgur">
  <MenuBar>
   <Menu name="Export">
    <text>&amp;Export</text>

@@ -14,7 +14,8 @@ ThumbnailBarIsVisible=true
 [ImageView]
 AnimationMethod=DocumentView::GLAnimation
 MouseWheelBehavior=MouseWheelBehavior::Zoom
-ThumbnailSplitterSizes=489,98
+NavigationEndNotification=NavigationEndNotification::NeverWarn
+ThumbnailSplitterSizes=567,113
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
@@ -25,12 +26,12 @@ HDMI-A-0 Height 1920x1080=458
 HDMI-A-0 Width 1920x1080=403
 
 [MainWindow]
-HDMI-A-0 Height 1920x1080=746
-HDMI-A-0 Width 1920x1080=1123
-HDMI-A-0 XPosition 1920x1080=450
-HDMI-A-0 YPosition 1920x1080=111
+HDMI-A-0 Height 1920x1080=773
+HDMI-A-0 Width 1920x1080=1109
+HDMI-A-0 XPosition 1920x1080=388
+HDMI-A-0 YPosition 1920x1080=198
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAABA0AAAJ6AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAABFUAAALXAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 eDP Height 1920x1080=680
 eDP Width 1920x1080=1037
@@ -44,3 +45,4 @@ SideBarSplitterSizes=227,732
 
 [ThumbnailView]
 AutoplayVideos=true
+LowResourceUsageMode=true

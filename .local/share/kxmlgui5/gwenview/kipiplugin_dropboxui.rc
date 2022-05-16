@@ -1,5 +1,5 @@
 <!DOCTYPE kpartgui SYSTEM 'kpartgui.dtd'>
-<gui name="kipiplugin_dropbox" version="2">
+<gui version="2" name="kipiplugin_dropbox">
  <MenuBar>
   <Menu name="Export">
    <text>&amp;Export</text>

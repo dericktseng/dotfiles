@@ -63,3 +63,5 @@ echo "gfx.webrender.compositor.force-enabled = true"
 echo "ui.key.menuAccessKeyFocuses = false"
 echo "---------------------------------"
 echo "Plugins enable Openh264 Video Codec"
+
+# matlab install process: delete the libfreetype.so file inside the matlab directory to run
