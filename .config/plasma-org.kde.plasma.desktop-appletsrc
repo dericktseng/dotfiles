@@ -24,9 +24,8 @@ DialogWidth=720
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=559
 locked=true
-positions={"1920x1080":[]}
+positions={"1920x1080":["1"\\,"17"\\,"desktop:/tmp"\\,"0"\\,"4"\\,"desktop:/Berkeley"\\,"0"\\,"0"\\,"desktop:/current"\\,"0"\\,"1"\\,"desktop:/gaming"\\,"0"\\,"2"\\,"desktop:/program"\\,"0"\\,"3"]}
 sortMode=-1
-url=file:///home/derickwtseng/Desktop/program
 
 [Containments][1][Wallpaper][org.kde.image][General]
 Image=file:///usr/share/wallpapers/Next/contents/images/1920x1080.jpg
@@ -149,7 +148,7 @@ DialogWidth=720
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=559
 locked=true
-positions={"1920x1080":["1"\\,"17"\\,"file:///home/derickwtseng/Desktop/current/CS162"\\,"0"\\,"0"]}
+positions={"1920x1080":[]}
 sortMode=-1
 url=file:///home/derickwtseng/Desktop/current
 
@@ -174,9 +173,9 @@ DialogWidth=720
 
 [Containments][37][General]
 locked=true
-positions={"1920x1080":[]}
+positions={"1920x1080":["1"\\,"17"\\,"file:///home/derickwtseng/Desktop/gaming/gw2"\\,"0"\\,"0"\\,"file:///home/derickwtseng/Desktop/gaming/retro"\\,"0"\\,"1"\\,"file:///home/derickwtseng/Desktop/gaming/starcraft"\\,"0"\\,"2"]}
 sortMode=-1
-url=activities:/current/
+url=file:///home/derickwtseng/Desktop/gaming
 
 [Containments][37][Wallpaper][org.kde.image][General]
 Image=file:///usr/share/wallpapers/Next/contents/images/1920x1080.jpg
@@ -301,5 +300,5 @@ extraItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.blue
 knownItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.bluetooth,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.battery,org.kde.plasma.manage-inputmethod,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.clipboard,org.kde.plasma.nightcolorcontrol,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.kdeconnect,org.kde.plasma.printmanager
 
 [ScreenMapping]
-itemsOnDisabledScreens=0,14,file:///home/derickwtseng/Desktop/replays,file:///home/derickwtseng/Desktop,file:///home/derickwtseng/Downloads,file:///home/derickwtseng/Public,file:///home/derickwtseng/Videos,file:///home/derickwtseng/Music,file:///home/derickwtseng/Documents,file:///home/derickwtseng/Templates,file:///home/derickwtseng/Pictures,desktop:/program,desktop:/games,desktop:/starcraft,desktop:/tmp,desktop:/Berkeley
-screenMapping=file:///home/derickwtseng/Desktop/program/micromayhem,0,file:///home/derickwtseng/Desktop/current/CS162,0
+itemsOnDisabledScreens=0,11,file:///home/derickwtseng/Downloads,file:///home/derickwtseng/Documents,file:///home/derickwtseng/Desktop/replays,file:///home/derickwtseng/Desktop/current/CS162,file:///home/derickwtseng/Templates,file:///home/derickwtseng/Videos,file:///home/derickwtseng/Pictures,file:///home/derickwtseng/Music,file:///home/derickwtseng/Public,file:///home/derickwtseng/Desktop,file:///home/derickwtseng/Desktop/program/micromayhem
+screenMapping=file:///home/derickwtseng/Desktop/gaming/gw2,0,desktop:/gaming,0,file:///home/derickwtseng/Desktop/gaming/starcraft,0,file:///home/derickwtseng/Desktop/gaming/retro,0,file:///home/derickwtseng/Desktop/gaming/games,0,desktop:/current,0,desktop:/tmp,0,desktop:/program,0,desktop:/Berkeley,0
