@@ -6,9 +6,6 @@ eDP-1 Width 1920x1080=1109
 [$Version]
 update_info=gwenview.upd:SideBar_StatusBar_Rename,gwenview.upd:ImageView_AlphaBackgroundMode_Update,gwenview.upd:DeleteThumbnailSetting_Rename
 
-[FullScreen]
-FullScreenModeActive=true
-
 [General]
 HistoryEnabled=false
 LastUsedVersion=210800
@@ -18,7 +15,7 @@ ThumbnailBarIsVisible=true
 AnimationMethod=DocumentView::GLAnimation
 MouseWheelBehavior=MouseWheelBehavior::Zoom
 NavigationEndNotification=NavigationEndNotification::NeverWarn
-ThumbnailSplitterSizes=567,113
+ThumbnailSplitterSizes=500,100
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
@@ -29,12 +26,12 @@ HDMI-A-0 Height 1920x1080=458
 HDMI-A-0 Width 1920x1080=403
 
 [MainWindow]
-HDMI-A-0 Height 1920x1080=1040
-HDMI-A-0 Width 1920x1080=960
-HDMI-A-0 XPosition 1920x1080=0
-HDMI-A-0 YPosition 1920x1080=0
+HDMI-A-0 Height 1920x1080=693
+HDMI-A-0 Width 1920x1080=1280
+HDMI-A-0 XPosition 1920x1080=128
+HDMI-A-0 YPosition 1920x1080=143
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAAA8AAAAPiAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAABQAAAAKHAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 eDP Height 1920x1080=680
 eDP Width 1920x1080=1037
@@ -44,7 +41,7 @@ eDP-1 Height 1920x1080=672
 eDP-1 Width 1920x1080=1109
 
 [SideBar]
-SideBarSplitterSizes=227,732
+SideBarSplitterSizes=227,886
 
 [ThumbnailView]
 AutoplayVideos=true
