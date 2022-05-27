@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
-<gui name="dolphin" version="35">
+<gui version="35" name="dolphin">
  <MenuBar>
   <Menu name="file">
    <Action name="new_menu"/>
@@ -54,7 +54,7 @@
    <Action name="stop"/>
    <Separator/>
    <Action name="panels"/>
-   <Menu icon="edit-select-text" name="location_bar">
+   <Menu name="location_bar" icon="edit-select-text">
     <text context="@title:menu">Location Bar</text>
     <Action name="editable_location"/>
     <Action name="replace_location"/>
@@ -138,12 +138,12 @@
   <Action name="view_zoom_in" priority="0"/>
   <Action name="view_zoom_reset" priority="0"/>
   <Action name="view_zoom_out" priority="0"/>
-  <Action shortcut="Ctrl+X" name="edit_cut" priority="0"/>
+  <Action name="edit_cut" priority="0" shortcut="Ctrl+X"/>
   <Action name="edit_copy" priority="0"/>
   <Action name="edit_paste" priority="0"/>
   <Action name="toggle_search" priority="0"/>
   <Action name="toggle_filter" priority="0"/>
-  <Action shortcut="!" name="open_terminal"/>
-  <Action name="renamefile" shortcut="R"/>
+  <Action name="open_terminal" shortcut="!"/>
+  <Action name="renamefile" shortcut="Ctrl+R"/>
  </ActionProperties>
 </gui>
