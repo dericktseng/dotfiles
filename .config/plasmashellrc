@@ -11,14 +11,21 @@ Number of Actions=0
 [Notification Messages]
 klipperClearHistoryAskAgain=false
 
+[PlasmaTransientsConfig]
+PreloadWeight=26
+
 [PlasmaViews][Panel 2]
-alignment=1
+alignment=132
+panelOpacity=0
 panelVisibility=0
 
 [PlasmaViews][Panel 2][Defaults]
-thickness=40
+thickness=44
 
 [PlasmaViews][Panel 2][Horizontal1920]
+thickness=44
+
+[PlasmaViews][Panel 2][Vertical1080]
 thickness=40
 
 [ScreenConnectors]
