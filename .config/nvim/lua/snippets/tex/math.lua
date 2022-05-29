@@ -7,25 +7,19 @@ local c = ls.choice_node
 local d = ls.dynamic_node
 local r = ls.restore_node
 local fmt = require("luasnip.extras.fmt").fmt
+local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
-
--- determines whether we are in a math environment (requires vimtex)
-local function mathenv(line_to_cursor, matched_trigger, captures)
-  return vim.call('vimtex#syntax#in_mathzone') == 1
-end
-
--- returns the captured text from regex node
-local function captured(args, snip, user_args)
-  return snip.captures[user_args or 1]
-end
+local utils = require'snippets.utils'
+local captured = utils.captured
+local mathenv = utils.mathenv
 
 -- autosnippets
 ls.add_snippets('tex', {
-  s('//', fmt([[\frac{{{}}}{{{}}}]], {i(1), i(2)}), {condition=mathenv}),
+  s('//', fmta([[\frac{<>}{<>}]], {i(1), i(2)}), {condition=mathenv}),
   -- TODO - missing some fancy fractions
 
-  s({trig='([^%s]+)/', name='fancyfrac 1', regTrig=true},
-    fmt([[\frac{{{}}}{{{}}}]], {f(captured,{}), i(1)}), {condition=mathenv}),
+  s({trig='([^$%s]+)/', name='fancyfrac 1', regTrig=true},
+    fmta([[\frac{<>}{<>}]], {f(captured,{}), i(1)}), {condition=mathenv}),
 
   s({trig='([^%s])sr', name='squared', regTrig=true, wordTrig=false},
     fmt([[{}^2]], {f(captured, {})}), {condition=mathenv}),
@@ -43,57 +37,65 @@ ls.add_snippets('tex', {
     fmt([[{}_{}]], {f(captured, {}, {user_args={1}}), f(captured, {}, {user_args={2}})}), {condition=mathenv}),
 
   s({trig='([%a])_(%d%d)', name='subscript2', regTrig=true, wordTrig=false},
-    fmt([[{}_{{{}}}]], {f(captured, {}, {user_args={1}}), f(captured, {}, {user_args={2}})}), {condition=mathenv}),
+    fmta([[<>_{<>}]], {f(captured, {}, {user_args={1}}), f(captured, {}, {user_args={2}})}), {condition=mathenv}),
 
   s({trig='([^%s])pw', name='power', regTrig=true, wordTrig=false},
-    fmt([[{}^{{{}}}]], {f(captured, {}), i(1)}), {condition=mathenv}),
+    fmta([[<>^{<>}]], {f(captured, {}), i(1)}), {condition=mathenv}),
 
-  s({trig='([+-]?)(%d+)(e?-?%d*)si', name='SI Unit After 1', regTrig=true, priority=1000},
-    fmt([[\SI{{{}{}{}}}{{{}}}]], {f(captured,{},{user_args={1}}), f(captured,{},{user_args={2}}), f(captured,{},{user_args={3}}), i(1)})),
+  s({trig='([+-]?)(%d+)(e?-?%d*)si', name='SI Unit After Integer', regTrig=true, priority=1000},
+    fmta([[\SI{<><><>}{<>}]], {
+      f(captured,{},{user_args={1}}),
+      f(captured,{},{user_args={2}}),
+      f(captured,{},{user_args={3}}),
+      i(1)})),
 
-  s({trig='([+-]?)(%d+[.]%d+)(e?-?%d*)si', name='SI Unit After 2', regTrig=true, priority=1001},
-    fmt([[\SI{{{}{}{}}}{{{}}}]], {f(captured,{},{user_args={1}}), f(captured,{},{user_args={2}}), f(captured,{},{user_args={3}}), i(1)})),
+  s({trig='([+-]?)(%d+[.]%d+)(e?-?%d*)si', name='SI Unit After Decimal', regTrig=true, priority=1001},
+    fmta([[\SI{<><><>}{<>}]], {
+      f(captured,{},{user_args={1}}),
+      f(captured,{},{user_args={2}}),
+      f(captured,{},{user_args={3}}),
+      i(1)})),
 
   s({trig='=[%s]*([^=]+)bex', name='boxed until equals after', regTrig=true},
-    fmt([[= \boxed{{{}}}]], {f(captured,{})})),
+    fmta([[= \boxed{<>}]], {f(captured,{})})),
 
   s({trig='([%a])wt', name='wide tilde after', regTrig=true},
-    fmt([[\widetilde{{{}}}]], {f(captured,{})}), {condition=mathenv}),
+    fmta([[\widetilde{<>}]], {f(captured,{})}), {condition=mathenv}),
 
   s({trig='([%a])vec', name='vec after', regTrig=true},
-    fmt([[\vec{{{}}}]], {f(captured,{})}), {condition=mathenv}),
+    fmta([[\vec{<>}]], {f(captured,{})}), {condition=mathenv}),
 
   s({trig='([%a])bar', name='bar after', regTrig=true},
-    fmt([[\overline{{{}}}]], {f(captured,{})}), {condition=mathenv}),
+    fmta([[\overline{<>}]], {f(captured,{})}), {condition=mathenv}),
 
   s({trig='([%a])dot', name='dot after', regTrig=true},
-    fmt([[\dot{{{}}}]], {f(captured,{})}), {condition=mathenv}),
+    fmta([[\dot{<>}]], {f(captured,{})}), {condition=mathenv}),
 
   s({trig='([%a])hat', name='hat after', regTrig=true},
-    fmt([[\hat{{{}}}]], {f(captured,{})}), {condition=mathenv}),
+    fmta([[\hat{<>}]], {f(captured,{})}), {condition=mathenv}),
 
 
   -- quick environments
   s({trig='sqr', name='square root'},
-    fmt([[\sqrt{{{}}}]], {i(1)}), {condition=mathenv}),
+    fmta([[\sqrt{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='bb', name='mathbb'},
-    fmt([[\mathbb{{{}}}]], {i(1)}), {condition=mathenv}),
+    fmta([[\mathbb{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='wt', name='wide tilde'},
-    fmt([[\widetilde{{{}}}]], {i(1)}), {condition=mathenv}),
+    fmta([[\widetilde{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='vec', name='vector'},
-    fmt([[\vec{{{}}}]], {i(1)}), {condition=mathenv}),
+    fmta([[\vec{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='bar', name='bar'},
-    fmt([[\overline{{{}}}]], {i(1)}), {condition=mathenv}),
+    fmta([[\overline{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='dot', name='dot'},
-    fmt([[\dot{{{}}}]], {i(1)}), {condition=mathenv}),
+    fmta([[\dot{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='hat', name='hat'},
-    fmt([[\hat{{{}}}]], {i(1)}), {condition=mathenv}),
+    fmta([[\hat{<>}]], {i(1)}), {condition=mathenv}),
 
   -- simple character replacements
   s({trig='ooo', name='infinity'}, t('\\infty'), {condition=mathenv}),
@@ -113,44 +115,44 @@ ls.add_snippets('tex', {
 -- non-auto-snippets
 ls.add_snippets('tex', {
   s({trig='(%d)e', name='times 10 power', regTrig=true, wordTrig=false},
-    fmt([[{} \times 10^{{{}}}]], {f(captured, {}), i(1)}), {condition=mathenv}),
+    fmta([[<> \times 10^{<>}]], {f(captured, {}), i(1)}), {condition=mathenv}),
 
   -- quick environments
   s({trig='int', name='integral'},
-    fmt([[\int_{{{}}}^{{{}}} {{{}}} \: d{{{}}}]], {i(1),i(2),i(3),i(4)}), {condition=mathenv}),
+    fmta([[\int_{<>}^{<>} {<>} \: d{<>}]], {i(1),i(2),i(3),i(4)}), {condition=mathenv}),
 
   s({trig='dif', name='differentiate'},
-    fmt([[\frac{{d{}}}{{d{}}}]], {i(1,'y'), i(2,'x')}), {condition=mathenv}),
+    fmta([[\frac{d<>}{d<>}]], {i(1,'y'), i(2,'x')}), {condition=mathenv}),
 
   s({trig='exp', name='natural exponent'},
-    fmt([[\exp{{{}}}]], {i(1)}), {condition=mathenv}),
+    fmta([[\exp{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='sin', name='sine'},
-    fmt([[\sin{{{}}}]], {i(1)}), {condition=mathenv}),
+    fmta([[\sin{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='cos', name='cosine'},
-    fmt([[\cos{{{}}}]], {i(1)}), {condition=mathenv}),
+    fmta([[\cos{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='tan', name='cosine'},
-    fmt([[\cos{{{}}}]], {i(1)}), {condition=mathenv}),
+    fmta([[\cos{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='asin', name='arcsin'},
-    fmt([[\arcsin{{{}}}]], {i(1)}), {condition=mathenv}),
+    fmta([[\arcsin{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='acos', name='arccos'},
-    fmt([[\arccos{{{}}}]], {i(1)}), {condition=mathenv}),
+    fmta([[\arccos{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='atan', name='arctan'},
-    fmt([[\arctan{{{}}}]], {i(1)}), {condition=mathenv}),
+    fmta([[\arctan{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='log', name='log'},
-    fmt([[\log{{{}}}]], {i(1)}), {condition=mathenv}),
+    fmta([[\log{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='ln', name='ln'},
-    fmt([[\ln{{{}}}]], {i(1)}), {condition=mathenv}),
+    fmta([[\ln{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='pdif', name='partial differentiate'},
-    fmt([[\frac{{\partial {}}}{{\partial {}}}]], {i(1,'y'), i(2,'x')}), {condition=mathenv}),
+    fmta([[\frac{\partial <>}{\partial <>}]], {i(1,'y'), i(2,'x')}), {condition=mathenv}),
 
   s({trig='box', name='box'},
     fmt([[\box{{{}}}]], {i(1)}), {condition=mathenv}),

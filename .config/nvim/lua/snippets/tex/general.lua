@@ -6,9 +6,10 @@ local f = ls.function_node
 local c = ls.choice_node
 local d = ls.dynamic_node
 local r = ls.restore_node
-local fmt = require("luasnip.extras.fmt").fmt
-local fmta = require("luasnip.extras.fmt").fmta
-local rep = require("luasnip.extras").rep
+local fmt = require('luasnip.extras.fmt').fmt
+local fmta = require('luasnip.extras.fmt').fmta
+local rep = require('luasnip.extras').rep
+local utils = require('snippets.utils')
 
 ls.add_snippets('tex', {
   s({trig='fref', name='figure reference'},
@@ -104,7 +105,11 @@ ls.add_snippets('tex', {
       <>\adjustbox{valign=t}{\includegraphics[width=<>\textwidth]{<>}}
       \end{center}
       ]],
-      {t('\t'), i(1,'0.9'), i(2)}
+      {
+        t('\t'),
+        i(1,'0.9'),
+        d(2, utils.filter_snippet, {}, {user_args = {{'png', 'jpg', 'jpeg'}}})
+      }
     )
   ),
 

@@ -7,30 +7,13 @@ local c = ls.choice_node
 local d = ls.dynamic_node
 local r = ls.restore_node
 local sn = ls.snippet_node
-local fmt = require("luasnip.extras.fmt").fmt
-local fmta = require("luasnip.extras.fmt").fmta
-local rep = require("luasnip.extras").rep
-
--- closes environment opened by character c:
--- "" '' {} <> []
-local function close_env(c)
-  local table = {
-    ["'"] = "'",
-    ['"'] = '"',
-    ['{'] = '}',
-    ['<'] = '>',
-    ['['] = ']',
-  }
-
-  return table[c]
-end
-
--- wrapper function to return the "closing character" for the inputted argument.
-local function close_func(args, snips, user_arg)
-  return close_env(args[1][1])
-end
+local fmt = require('luasnip.extras.fmt').fmt
+local fmta = require('luasnip.extras.fmt').fmta
+local rep = require('luasnip.extras').rep
+local utils = require'snippets.utils'
 
 ls.add_snippets('c', {
+  -- function definition
   s('fn', fmta([[
     <> <>(<>) {
     <><>
@@ -43,6 +26,7 @@ ls.add_snippets('c', {
     i(4)
   })),
 
+  -- if statements
   s('if', fmta([[
     if (<>) {
     <><>
@@ -50,11 +34,12 @@ ls.add_snippets('c', {
   ]], {i(1), t('\t'), i(2)})
   ),
 
+  -- #include
   s('inc', fmta([[
   #include <><><>
   ]], {
     c(1, {t("<"), t('"')}),
     i(2, 'stdio.h'),
-    f(fnode, {1}, {})
+    f(utils.close_func, {1}, {})
   })),
 })
