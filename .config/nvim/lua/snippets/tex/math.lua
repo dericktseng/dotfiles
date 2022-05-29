@@ -16,7 +16,6 @@ local mathenv = utils.mathenv
 -- autosnippets
 ls.add_snippets('tex', {
   s('//', fmta([[\frac{<>}{<>}]], {i(1), i(2)}), {condition=mathenv}),
-  -- TODO - missing some fancy fractions
 
   s({trig='([^$%s]+)/', name='fancyfrac 1', regTrig=true},
     fmta([[\frac{<>}{<>}]], {f(captured,{}), i(1)}), {condition=mathenv}),

@@ -97,7 +97,6 @@ ls.add_snippets('tex', {
     )
   ),
 
-  -- TODO: Implement choice node for file selection for pict, source code, pdf, etc.
   s(
     {trig='pict', name='insert picture top align'},
     fmta([[
@@ -124,8 +123,8 @@ ls.add_snippets('tex', {
   s(
     {trig='pdf', name='insert pdf'},
     fmta(
-      [[\includepdf[pages=-,pagecommand={}, width=\textwidth]{<>.pdf}]],
-      {i(1)}
+      [[\includepdf[pages=-,pagecommand={}, width=\textwidth]{<>}]],
+      {d(1, utils.filter_snippet, {}, {user_args = {{'pdf'}}})}
     )
   ),
 

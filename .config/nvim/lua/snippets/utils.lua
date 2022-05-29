@@ -62,7 +62,9 @@ utils.filter_dir = function(filetypes)
   return file_list
 end
 
--- returns filetypes as text nodes for luasnips, with final insert node
+-- returns snippetnode containing a choicenode to cycle between files in the
+-- current working directory of given filetypes
+-- filetypes: the table of filetype extensions (without the leading .)
 utils.filter_snippet = function(args, parent, old_state, filetypes)
   local file_list = utils.filter_dir(filetypes)
   local node_files = {}
