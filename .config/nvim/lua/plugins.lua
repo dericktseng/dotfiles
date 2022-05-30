@@ -27,7 +27,7 @@ return require('packer').startup(function(use)
         enable_autosnippets = true
       })
       
-      require('luasnip.loaders.from_lua').load({paths = "./snippets"})
+      require('luasnip.loaders.from_lua').lazy_load({paths = "./snippets"})
     end
   }
 
