@@ -1,17 +1,6 @@
-local ls = require'luasnip'
-local s = ls.snippet
-local t = ls.text_node
-local i = ls.insert_node
-local f = ls.function_node
-local c = ls.choice_node
-local d = ls.dynamic_node
-local r = ls.restore_node
-local fmt = require('luasnip.extras.fmt').fmt
-local fmta = require('luasnip.extras.fmt').fmta
-local rep = require('luasnip.extras').rep
-local utils = require('snippets.utils')
+local utils = require('sniputils')
 
-ls.add_snippets('tex', {
+return {
   s({trig='fref', name='figure reference'},
     fmta([[Figure \ref{fig:<>}]], i(1))
   ),
@@ -249,4 +238,4 @@ ls.add_snippets('tex', {
     ]],
     {i(1, 'Title'), i(2, 'Derick Tseng'), t('\t'), t('\t'), i(3)})
   )
-})
+}

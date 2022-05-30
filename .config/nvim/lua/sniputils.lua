@@ -42,7 +42,8 @@ utils.captured = function(args, snip, user_args)
 end
 
 -- filters specified directory for certain filetypes
--- returns table of textnodes of files
+-- returns file handle to iterate over the files that were filtered by their filetypes
+-- WARNING: MUST CLOSE THE FILE HANDLE AFTER READING FROM IT
 -- requires the 'fd' binary
 -- filetypes: the table of filetype extensions (without the leading .)
 utils.filter_dir = function(filetypes)
@@ -52,25 +53,22 @@ utils.filter_dir = function(filetypes)
     extension_str = extension_str .. ' -e ' .. ext
   end
 
-  local file_list = {}
   local handle = assert(io.popen('fd -t f' .. extension_str))
-  for line in handle:lines() do
-    table.insert(file_list, line)
-  end
-  handle:close()
-
-  return file_list
+  return handle
 end
 
 -- returns snippetnode containing a choicenode to cycle between files in the
 -- current working directory of given filetypes
 -- filetypes: the table of filetype extensions (without the leading .)
 utils.filter_snippet = function(args, parent, old_state, filetypes)
-  local file_list = utils.filter_dir(filetypes)
+  local handle = utils.filter_dir(filetypes)
   local node_files = {}
-  for _, file in pairs(file_list) do
+  for file in handle:lines() do
     table.insert(node_files, t(file))
   end
+
+  -- closes the handle
+  handle:close()
 
   -- insert final insert node for manual input
   table.insert(node_files, i(1, 'file'))

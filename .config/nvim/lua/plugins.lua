@@ -26,12 +26,8 @@ return require('packer').startup(function(use)
         region_check_events = "InsertEnter",
         enable_autosnippets = true
       })
-      -- files to include
-      require'snippets.tex.math'
-      require'snippets.tex.general'
-      require'snippets.lua'
-      require'snippets.shell'
-      require'snippets.c'
+      
+      require('luasnip.loaders.from_lua').load({paths = "./snippets"})
     end
   }
 
