@@ -28,6 +28,9 @@ return require('packer').startup(function(use)
       })
       
       require('luasnip.loaders.from_lua').lazy_load({paths = "./snippets"})
+
+      -- create LuaSnipEdit command
+      vim.cmd([[command! LuaSnipEdit :lua require("luasnip.loaders").edit_snippet_files()]])
     end
   }
 
@@ -69,6 +72,7 @@ return require('packer').startup(function(use)
     config = function() require'configs.theme' end,
   }
 
+  use 'kyazdani42/nvim-web-devicons'
   use 'wbthomason/packer.nvim'
 
   -- non lua plugins

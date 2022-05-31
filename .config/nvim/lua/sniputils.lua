@@ -42,10 +42,10 @@ utils.captured = function(args, snip, user_args)
 end
 
 -- filters specified directory for certain filetypes
--- returns file handle to iterate over the files that were filtered by their filetypes
 -- WARNING: MUST CLOSE THE FILE HANDLE AFTER READING FROM IT
 -- requires the 'fd' binary
 -- filetypes: the table of filetype extensions (without the leading .)
+-- returns file handle to iterate over the files that were filtered by their filetypes
 utils.filter_dir = function(filetypes)
   -- constructs the extension string for fd (-e ext1 -e ext2 ...)
   extension_str = ''
