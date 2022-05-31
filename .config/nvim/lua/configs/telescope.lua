@@ -7,12 +7,6 @@ require('telescope').setup({
       hide_on_startup = false
     }
   },
-
-  extensions = {
-    file_browser = {
-      hijack_netrw = true,
-    }
-  }
 })
 
 -- telescope load extensions
