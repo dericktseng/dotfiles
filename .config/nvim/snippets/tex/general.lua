@@ -172,9 +172,18 @@ return {
       <>\label{fig:<>}
       \end{figure}
     ]],
-    {t('\t'), t('\t'), i(1), t('\t'), i(2), t('\t'), i(3)})
+    {
+      t('\t'),
+      t('\t'),
+      d(1, utils.filter_snippet, {}, {user_args = {{'png', 'jpg', 'jpeg'}}}),
+      t('\t'),
+      i(2),
+      t('\t'),
+      i(3)
+    })
   ),
 
+  -- TODO - functionNode to match number of & delimiters
   s(
     {trig='tb', name='Table environment'},
     fmta([[
