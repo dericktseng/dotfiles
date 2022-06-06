@@ -2,5 +2,7 @@
 update_info=kxkb.upd:remove-empty-lists,kxkb.upd:add-back-resetoptions,kxkb_variants.upd:split-variants
 
 [Layout]
+LayoutList=us
 Options=caps:swapescape
 ResetOldOptions=true
+Use=true

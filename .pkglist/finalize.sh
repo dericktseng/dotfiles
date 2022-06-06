@@ -64,4 +64,6 @@ echo "ui.key.menuAccessKeyFocuses = false"
 echo "---------------------------------"
 echo "Plugins enable Openh264 Video Codec"
 
-# matlab install process: delete the libfreetype.so file inside the matlab directory to run
+# matlab install process:
+# delete the libfreetype.so file inside the matlab directory to run installer
+# delete the libstdc++.so file inside the sys/os/glnx64 directory to have opengl

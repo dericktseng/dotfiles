@@ -1,3 +1,4 @@
 "Development Tools"
 "C Development Tools and Libraries"
 "KDE (K Desktop Environment)"
+"X Software Development"

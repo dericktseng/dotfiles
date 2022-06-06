@@ -51,10 +51,12 @@ gthumb
 htop
 imv
 jq
+kalendar
 kernel-tools
 kf5-kcontacts-devel
 kf5-kpeople-devel
 kio_mtp
+korganizer
 lame
 levien-inconsolata-fonts
 libX11-devel
