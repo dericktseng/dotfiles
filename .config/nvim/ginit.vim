@@ -7,3 +7,4 @@ EOF
 
 " Neovim-QT specific settings
 GuiPopupmenu 0
+GuiTabline 0
