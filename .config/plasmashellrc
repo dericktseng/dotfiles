@@ -15,18 +15,19 @@ HDMI-A-0 Width 1920x1080=377
 [Notification Messages]
 klipperClearHistoryAskAgain=false
 
-[PlasmaTransientsConfig]
-PreloadWeight=76
-
 [PlasmaViews][Panel 2]
 alignment=132
 panelOpacity=0
 panelVisibility=0
 
 [PlasmaViews][Panel 2][Defaults]
+maxLength=1920
+minLength=1920
 thickness=40
 
 [PlasmaViews][Panel 2][Horizontal1920]
+maxLength=1920
+minLength=1920
 thickness=40
 
 [PlasmaViews][Panel 2][Vertical1080]

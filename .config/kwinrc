@@ -28,6 +28,9 @@ Duration=1
 CommandAll2=Nothing
 CommandAllKey=Alt
 
+[NightColor]
+NightTemperature=3100
+
 [Plugins]
 bismuthEnabled=true
 slideEnabled=false

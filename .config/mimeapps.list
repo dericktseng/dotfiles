@@ -20,7 +20,7 @@ video/x-msvideo=mpv.desktop;
 x-scheme-handler/geo=google-maps-geo-handler.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
-x-scheme-handler/mailto=org.kde.kmail2.desktop;
+x-scheme-handler/mailto=kde4-kmailservice.desktop;org.kde.kmail2.desktop;
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;us.zoom.Zoom.desktop;
 
 [Added KDE Service Associations]
@@ -46,5 +46,5 @@ video/x-msvideo=mpv.desktop;
 x-scheme-handler/geo=google-maps-geo-handler.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
-x-scheme-handler/mailto=org.kde.kmail2.desktop;
+x-scheme-handler/mailto=kde4-kmailservice.desktop;
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
