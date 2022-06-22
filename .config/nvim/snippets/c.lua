@@ -31,6 +31,12 @@ local regularsnips = {
     i(2, 'stdio.h'),
     f(utils.close_func, {1}, {})
   })),
+
+  s('while', fmta([[
+  while (<>) {
+  <><>
+  }
+  ]], {i(1), t('\t'), i(2)})),
 }
 
 return regularsnips

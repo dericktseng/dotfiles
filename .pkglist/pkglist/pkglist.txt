@@ -108,6 +108,7 @@ rlwrap
 rust
 rust-src
 sddm
+smb4k
 socat
 sqlite
 sscg

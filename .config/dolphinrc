@@ -28,6 +28,7 @@ eDP Width 1920x1080=438
 [MainWindow]
 HDMI-A-0 Height 1920x1080=1040
 HDMI-A-0 Width 1920x1080=1920
+HDMI-A-0 Window-Maximized 1920x1080=true
 HDMI-A-0 XPosition 1920x1080=0
 HDMI-A-0 YPosition 1920x1080=0
 ToolBarsMovable=Disabled
