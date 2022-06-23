@@ -6,7 +6,8 @@ RepeatDelay=250
 RepeatRate=40
 
 [Libinput][1241][41265][HOLTEK USB-HID Keyboard Mouse]
-PointerAcceleration=-0.200
+PointerAcceleration=0.000
+PointerAccelerationProfile=2
 
 [Libinput][2][14][ETPS/2 Elantech Touchpad]
 NaturalScroll=true

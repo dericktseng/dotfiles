@@ -16,6 +16,7 @@ djvulibre
 dkms
 easyeffects
 fakeroot
+fcitx5-mozc
 fd-find
 ffmpeg
 ffmpegthumbnailer
@@ -49,14 +50,12 @@ gstreamer1-plugins-good-gtk
 gstreamer1-plugins-good-qt
 gthumb
 htop
-imv
 jq
-kalendar
+kcm-fcitx5
 kernel-tools
 kf5-kcontacts-devel
 kf5-kpeople-devel
 kio_mtp
-korganizer
 lame
 levien-inconsolata-fonts
 libX11-devel
@@ -100,7 +99,6 @@ python-numpy
 python-pip
 python-scipy
 python-sympy
-python3-neovim
 python3-notebook
 python3-pip
 ripgrep
@@ -124,6 +122,7 @@ unzip
 usbutils
 util-linux-user
 wget
+wl-clipboard
 wmctrl
 xclip
 xdg-desktop-portal

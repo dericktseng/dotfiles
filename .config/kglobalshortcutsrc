@@ -11,6 +11,7 @@ _launch=none,none,Alacritty
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
+Switch keyboard layout to Japanese=none,none,Switch keyboard layout to Japanese
 Switch keyboard layout to Japanese (Sun Type 7, Sun-compatible)=none,none,Switch keyboard layout to Japanese (Sun Type 7\\, Sun-compatible)
 Switch to Next Keyboard Layout=Ctrl+Alt+K,Ctrl+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
