@@ -38,6 +38,7 @@ slideEnabled=false
 [Script-bismuth]
 ignoreActivity=1 - Default, 3 - Games
 keepFloatAbove=false
+tileLayoutGap=10
 
 [SubSession: 80ff01d6-fee6-40f7-b491-2dc30b208c3d]
 active=-1
