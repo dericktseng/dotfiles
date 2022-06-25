@@ -18,7 +18,7 @@ export LC_ADDRESS="C"
 # fzf settings
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git --color=always"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type directory --hidden --exclude .git --color=always"
+export FZF_ALT_C_COMMAND="fd --type directory --hidden -I --color=always"
 export FZF_DEFAULT_OPTS="
     --ansi
     --color=fg:#4d4d4c,bg:#eeeeee,hl:#d7005f

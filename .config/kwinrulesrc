@@ -2,11 +2,12 @@
 update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
 
 [1]
-Description=Application settings for steam
+Description=Application settings for mpv
 activity=4bc9cf04-def1-4f75-9233-cc936be4c7df
-activityrule=3
 clientmachine=localhost
-wmclass=steam
+fullscreen=true
+fullscreenrule=3
+wmclass=mpv
 wmclassmatch=1
 
 [19572da2-77a6-4e97-81e4-4092ed8dec4f]
@@ -18,6 +19,17 @@ wmclass=discord
 wmclassmatch=1
 
 [2]
+Description=Application settings for steam
+activity=4bc9cf04-def1-4f75-9233-cc936be4c7df
+activityrule=3
+clientmachine=localhost
+fullscreen=true
+maximizehoriz=true
+maximizevert=true
+wmclass=steam
+wmclassmatch=1
+
+[3]
 Description=Application settings for alacritty
 activity=4bc9cf04-def1-4f75-9233-cc936be4c7df
 clientmachine=localhost
@@ -29,18 +41,6 @@ maximizevertrule=3
 wmclass=alacritty
 wmclassmatch=1
 
-[3]
-Description=Application settings for zathura
-activity=4bc9cf04-def1-4f75-9233-cc936be4c7df
-clientmachine=localhost
-fsplevelrule=2
-fullscreen=true
-maximizehoriz=true
-maximizevert=true
-wmclass=org.pwmt.zathura zathura
-wmclasscomplete=true
-wmclassmatch=1
-
 [3761faa3-cb59-4c39-9bd6-2c7a60cb1604]
 Description=Application settings for feh
 clientmachine=localhost
@@ -50,15 +50,15 @@ wmclass=feh
 wmclassmatch=1
 
 [4]
-Description=Application settings for termite
+Description=Application settings for zathura
 activity=4bc9cf04-def1-4f75-9233-cc936be4c7df
 clientmachine=localhost
+fsplevelrule=2
 fullscreen=true
 maximizehoriz=true
-maximizehorizrule=3
 maximizevert=true
-maximizevertrule=3
-wmclass=termite
+wmclass=org.pwmt.zathura zathura
+wmclasscomplete=true
 wmclassmatch=1
 
 [4fc0947f-39d0-40b4-8a21-b7472875e903]
@@ -73,26 +73,32 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [5]
-Description=Application settings for discord
+Description=Application settings for termite
 activity=4bc9cf04-def1-4f75-9233-cc936be4c7df
-activityrule=3
 clientmachine=localhost
 desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
 fullscreen=true
 maximizehoriz=true
+maximizehorizrule=3
 maximizevert=true
-wmclass=discord
+maximizevertrule=3
+wmclass=termite
+wmclassmatch=1
+
+[5ddd0f5e-53f8-4ff5-adfa-0b128faa0518]
+Description=Application settings for mpv
+fullscreen=true
+fullscreenrule=3
+wmclass=mpv
 wmclassmatch=1
 
 [6]
-Description=Application settings for mpv
+Description=Application settings for discord
 activity=4bc9cf04-def1-4f75-9233-cc936be4c7df
-blockcompositingrule=2
+activityrule=3
 clientmachine=localhost
 fullscreen=true
-fullscreenrule=3
-wmclass=gl mpv
-wmclasscomplete=true
+wmclass=discord
 wmclassmatch=1
 
 [65d81249-f0ec-4d68-8017-7c66a020fe81]
@@ -141,8 +147,8 @@ wmclass=termite
 wmclassmatch=1
 
 [General]
-count=6
-rules=1,2,3,4,5,6
+count=7
+rules=1,2,3,4,5,6,7
 
 [adb38742-80ef-4119-9a2d-cdd6cdcb1a09]
 Description=Application settings for konsole
