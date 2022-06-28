@@ -24,7 +24,7 @@ eDP YPosition 1920x1080=153
 
 [Open-with settings]
 CompletionMode=1
-History=termi,disco,sync,alac,dol,thunar,dolp,/home/derickwtseng/Music/yt-playlist,ter,firefox,konsol
+History=roxterm,lxter,terminator,termi,disco,sync,alac,dol,thunar,dolp,/home/derickwtseng/Music/yt-playlist,ter,firefox,konsol
 
 [UiSettings]
 ColorScheme=Default
