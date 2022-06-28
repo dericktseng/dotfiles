@@ -112,7 +112,6 @@ sscg
 strace
 sudo
 sxhkd
-terminator
 texlive-scheme-full
 tk
 tmux
