@@ -354,3 +354,7 @@ kcm-lookandfeel=none,none,Global Theme
 kcm-users=none,none,Users
 powerdevilprofilesconfig=none,none,Energy Saving
 screenlocker=none,none,Screen Locking
+
+[terminator.desktop]
+_k_friendly_name=Terminator
+_launch=Meta+Return,none,Terminator

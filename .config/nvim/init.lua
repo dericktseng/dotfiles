@@ -27,13 +27,8 @@ require('plugins')
 -- Personal mappings
 require('mappings')
 
--- per filetype settings
-groupnum = vim.api.nvim_create_augroup('vimrc', {clear=true})
-vim.api.nvim_create_autocmd('TermOpen', {
-  group = groupnum,
-  command = 'startinsert',
-  pattern = '*'
-})
+-- Personal custom commands
+require('commands')
 
 -- fix for latex file detection
 g.tex_flavor = 'latex'

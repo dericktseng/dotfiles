@@ -8,3 +8,4 @@ EOF
 " Neovim-QT specific settings
 GuiPopupmenu 0
 GuiTabline 0
+Guifont FiraCode Nerd Font Mono:h12
