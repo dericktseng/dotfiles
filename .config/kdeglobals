@@ -142,8 +142,6 @@ History Items[$e]=file:$HOME/smb,file:$HOME/Desktop/smb,file:$HOME,file:$HOME/Do
 [General]
 BrowserApplication=firefox.desktop
 ColorSchemeHash=dd1942b5e93c3bbb5d5263740caa393b95b49d23
-TerminalApplication=alacritty
-TerminalService=Alacritty.desktop
 toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 
 [KDE]

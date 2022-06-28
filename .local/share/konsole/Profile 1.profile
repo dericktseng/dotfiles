@@ -12,6 +12,8 @@ UseCustomCursorColor=true
 Name=Profile 1
 Parent=FALLBACK/
 ShowTerminalSizeHint=false
+TerminalCenter=true
+TerminalMargin=0
 
 [Interaction Options]
 AllowEscapedLinks=false
