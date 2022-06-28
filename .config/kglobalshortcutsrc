@@ -37,6 +37,7 @@ display=Display\tMeta+Ctrl+D,Display\tMeta+P,Switch Display
 _k_friendly_name=Custom Shortcuts Service
 {196fb050-e114-48d2-bb43-235684919279}=Print,none,FullscreenCopy
 {34b2b78a-f38c-423e-b238-e3dd62177716}=none,none,Launch Konsole
+{92f6a60d-f33d-45c9-850c-abe42b1d0581}=Meta+Return,none,alacritty
 {c5dd36bd-0190-476f-b3b6-cbaa7d9922b2}=Shift+Print,none,RectangleCopy
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
 {dbd5e951-1c54-480a-973e-cbfe5eae10b9}=Ctrl+Print,none,WindowCopy
@@ -354,7 +355,3 @@ kcm-lookandfeel=none,none,Global Theme
 kcm-users=none,none,Users
 powerdevilprofilesconfig=none,none,Energy Saving
 screenlocker=none,none,Screen Locking
-
-[terminator.desktop]
-_k_friendly_name=Terminator
-_launch=Meta+Return,none,Terminator

@@ -34,10 +34,6 @@ Description=Application settings for alacritty
 activity=4bc9cf04-def1-4f75-9233-cc936be4c7df
 clientmachine=localhost
 fullscreen=true
-maximizehoriz=true
-maximizehorizrule=3
-maximizevert=true
-maximizevertrule=3
 wmclass=alacritty
 wmclassmatch=1
 
