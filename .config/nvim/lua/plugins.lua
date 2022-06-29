@@ -42,6 +42,7 @@ return require('packer').startup(function(use)
       {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'},
       {'crispgm/telescope-heading.nvim'},
       {'nvim-telescope/telescope-file-browser.nvim'},
+      {'nvim-telescope/telescope-ui-select.nvim' }
     },
   }
 
