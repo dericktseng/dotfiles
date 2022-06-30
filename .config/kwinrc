@@ -33,7 +33,11 @@ NightTemperature=3100
 
 [Plugins]
 bismuthEnabled=true
+kwin4_effect_fadeEnabled=true
+kwin4_effect_scaleEnabled=false
+overviewEnabled=true
 slideEnabled=false
+zoomEnabled=false
 
 [Script-bismuth]
 ignoreActivity=1 - Default, 3 - Games
