@@ -27,9 +27,9 @@ local regularsnips = {
   s('inc', fmta([[
   #include <><><>
   ]], {
-    c(1, {t("<"), t('"')}),
-    i(2, 'stdio.h'),
-    f(utils.close_func, {1}, {})
+    c(2, {t("<"), t('"')}),
+    i(1, 'stdio.h'),
+    f(utils.close_func, {2}, {})
   })),
 
   s('while', fmta([[
