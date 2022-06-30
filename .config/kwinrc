@@ -40,6 +40,7 @@ slideEnabled=false
 zoomEnabled=false
 
 [Script-bismuth]
+floatingTitle=System Settings
 ignoreActivity=1 - Default, 3 - Games
 keepFloatAbove=false
 noTileBorder=true
