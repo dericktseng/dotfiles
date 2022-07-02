@@ -12,7 +12,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # ZSH defaults
-# autoload -U +X bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
 

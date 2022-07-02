@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
-<gui version="35" name="dolphin">
+<gui version="36" name="dolphin">
  <MenuBar>
   <Menu name="file">
    <Action name="new_menu"/>
@@ -54,7 +54,7 @@
    <Action name="stop"/>
    <Separator/>
    <Action name="panels"/>
-   <Menu name="location_bar" icon="edit-select-text">
+   <Menu icon="edit-select-text" name="location_bar">
     <text context="@title:menu">Location Bar</text>
     <Action name="editable_location"/>
     <Action name="replace_location"/>
@@ -69,11 +69,26 @@
   <Menu name="tools">
    <Action name="open_preferred_search_tool"/>
    <Action name="open_terminal"/>
+   <Action name="open_terminal_here"/>
    <Action name="focus_terminal_panel"/>
    <Action name="compare_files"/>
    <Action name="change_remote_encoding"/>
   </Menu>
  </MenuBar>
+ <ToolBar noMerge="1" name="mainToolBar">
+  <text context="@title:menu">Main Toolbar</text>
+  <Action name="go_back"/>
+  <Action name="go_forward"/>
+  <Separator name="separator_1"/>
+  <Action name="icons"/>
+  <Action name="compact"/>
+  <Action name="details"/>
+  <Action name="url_navigators"/>
+  <Action name="split_view"/>
+  <Action name="split_stash"/>
+  <Action name="toggle_search"/>
+  <Action name="hamburger_menu"/>
+ </ToolBar>
  <State name="new_file">
   <disable>
    <Action name="edit_undo"/>
@@ -112,39 +127,25 @@
    <Action name="invert_selection"/>
   </disable>
  </State>
- <ToolBar name="mainToolBar" noMerge="1">
-  <text context="@title:menu">Main Toolbar</text>
-  <Action name="go_back"/>
-  <Action name="go_forward"/>
-  <Separator name="separator_1"/>
-  <Action name="icons"/>
-  <Action name="compact"/>
-  <Action name="details"/>
-  <Action name="url_navigators"/>
-  <Action name="split_view"/>
-  <Action name="split_stash"/>
-  <Action name="toggle_search"/>
-  <Action name="hamburger_menu"/>
- </ToolBar>
  <ActionProperties scheme="Default">
-  <Action name="go_back" priority="0"/>
-  <Action name="go_forward" priority="0"/>
-  <Action name="go_up" priority="0"/>
-  <Action name="go_home" priority="0"/>
-  <Action name="stop" priority="0"/>
-  <Action name="icons" priority="0"/>
   <Action name="compact" priority="0"/>
   <Action name="details" priority="0"/>
-  <Action name="view_zoom_in" priority="0"/>
-  <Action name="view_zoom_reset" priority="0"/>
-  <Action name="view_zoom_out" priority="0"/>
-  <Action name="edit_cut" shortcut="Ctrl+X" priority="0"/>
   <Action name="edit_copy" priority="0"/>
+  <Action name="edit_cut" priority="0" shortcut="Ctrl+X"/>
   <Action name="edit_paste" priority="0"/>
-  <Action name="toggle_search" priority="0"/>
-  <Action name="toggle_filter" priority="0"/>
+  <Action name="go_back" priority="0"/>
+  <Action name="go_forward" priority="0"/>
+  <Action name="go_home" priority="0"/>
+  <Action name="go_up" priority="0"/>
+  <Action name="icons" priority="0"/>
   <Action name="open_terminal" shortcut="Ctrl+Alt+T"/>
   <Action name="renamefile" shortcut="Ctrl+R"/>
   <Action name="show_terminal_panel" shortcut="!"/>
+  <Action name="stop" priority="0"/>
+  <Action name="toggle_filter" priority="0"/>
+  <Action name="toggle_search" priority="0"/>
+  <Action name="view_zoom_in" priority="0"/>
+  <Action name="view_zoom_out" priority="0"/>
+  <Action name="view_zoom_reset" priority="0"/>
  </ActionProperties>
 </gui>

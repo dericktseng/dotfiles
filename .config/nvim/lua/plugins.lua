@@ -69,8 +69,8 @@ return require('packer').startup(function(use)
   }
 
   use {
-    'MetriC-DT/balance-theme.nvim',
     -- '~/Desktop/program/balance-theme.nvim',
+    'MetriC-DT/balance-theme.nvim',
     config = function() require'configs.theme' end,
   }
 
