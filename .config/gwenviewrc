@@ -6,6 +6,9 @@ eDP-1 Width 1920x1080=1109
 [$Version]
 update_info=gwenview.upd:SideBar_StatusBar_Rename,gwenview.upd:ImageView_AlphaBackgroundMode_Update,gwenview.upd:DeleteThumbnailSetting_Rename
 
+[FullScreen]
+FullScreenModeActive=true
+
 [General]
 HistoryEnabled=false
 LastUsedVersion=210800
@@ -30,8 +33,9 @@ HDMI-A-0 Height 1920x1080=693
 HDMI-A-0 Width 1920x1080=1280
 HDMI-A-0 XPosition 1920x1080=128
 HDMI-A-0 YPosition 1920x1080=143
+HDMI-A-1 Window-Maximized 1920x1080=true
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAABQAAAAKHAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAPiAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 eDP Height 1920x1080=680
 eDP Width 1920x1080=1037

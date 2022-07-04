@@ -4,12 +4,12 @@ aria2
 autoconf
 automake
 bc
+bear
 breeze-gtk
 cargo
 clang
 clang-devel
 clang-tools-extra
-cmus
 dejavu-fonts-all
 djvulibre
 dkms
@@ -68,7 +68,6 @@ libva-utils
 linux-firmware
 llvm
 lm_sensors
-maim
 make
 mathjax
 mozilla-openh264
@@ -87,7 +86,7 @@ pipewire-alsa
 pipewire-gstreamer
 pipewire-pulseaudio
 pkgconf
-polkit-gnome
+polkit-kde
 powertop
 profile-sync-daemon
 pulseaudio-libs
@@ -105,7 +104,6 @@ rlwrap
 rust
 rust-src
 sddm
-smb4k
 socat
 sqlite
 sscg
@@ -133,7 +131,6 @@ xprop
 xrandr
 xset
 xsetroot
-xss-lock
 youtube-dl
 yt-dlp
 zsh

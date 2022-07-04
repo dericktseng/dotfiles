@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
-<gui name="gwenview" version="63">
+<gui version="65" name="gwenview">
  <MenuBar>
   <Menu name="file">
    <Action name="file_save"/>
@@ -8,6 +8,7 @@
    <Separator/>
    <Action name="reload"/>
    <Action name="file_print"/>
+   <Action name="file_print_preview"/>
    <Separator/>
    <ActionList name="file_action_list"/>
    <Separator/>
@@ -77,10 +78,7 @@
    <Separator/>
    <Action name="go_start_page"/>
   </Menu>
-  <Menu name="plugins">
-   <text>&amp;Plugins</text>
-  </Menu>
-  <Menu name="settings" noMerge="1">
+  <Menu noMerge="1" name="settings">
    <text>&amp;Settings</text>
    <!--
         Disable merging because we do not want the "fullscreen" action to appear
@@ -95,7 +93,7 @@
    <Action name="options_configure"/>
   </Menu>
  </MenuBar>
- <ToolBar name="mainToolBar" noMerge="1">
+ <ToolBar noMerge="1" name="mainToolBar">
   <text>Main Toolbar</text>
   <Action name="go_start_page"/>
   <Separator/>
@@ -112,10 +110,9 @@
   <Action name="hamburger_menu"/>
  </ToolBar>
  <ActionProperties scheme="Default">
-  <Action name="fullscreen" shortcut="F; F11" priority="0"/>
   <Action name="edit_cut" shortcut="Ctrl+X"/>
-  <Action name="view_zoom_to_fit" shortcut="W"/>
   <Action name="file_quit" shortcut="Q"/>
+  <Action name="fullscreen" priority="0" shortcut="F; F11"/>
   <Action name="go_next" shortcut="N"/>
   <Action name="go_previous" shortcut="P"/>
   <Action name="resize" shortcut=""/>
@@ -123,5 +120,6 @@
   <Action name="rotate_right" shortcut="R"/>
   <Action name="view_zoom_in" shortcut="=; Ctrl+="/>
   <Action name="view_zoom_out" shortcut="-"/>
+  <Action name="view_zoom_to_fit" shortcut="W"/>
  </ActionProperties>
 </gui>

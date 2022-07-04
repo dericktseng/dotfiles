@@ -76,6 +76,9 @@ o.tabline = '%!v:lua.tablinestr()'
 -- disable folding
 o.foldenable = false
 
+-- disable wrapping
+o.wrap = false
+
 -- enable smart case
 o.smartcase = true
 o.ignorecase = true
