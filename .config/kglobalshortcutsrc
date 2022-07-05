@@ -8,7 +8,7 @@ switch-to-activity-db03cb46-a8ca-4faa-b2da-c8c61565a1cd=Meta+O,none,Switch to ac
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
 Switch keyboard layout to Japanese=none,none,Switch keyboard layout to Japanese
 Switch keyboard layout to Japanese (Sun Type 7, Sun-compatible)=none,none,Switch keyboard layout to Japanese (Sun Type 7\\, Sun-compatible)
-Switch to Next Keyboard Layout=Ctrl+Alt+K,Ctrl+Alt+K,Switch to Next Keyboard Layout
+Switch to Next Keyboard Layout=Ctrl+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
 
 [firefox.desktop]
@@ -69,21 +69,21 @@ toggle_mainwindow_visibility=none,none,Show/Hide Konversation
 
 [ksmserver]
 Halt Without Confirmation=none,,Halt Without Confirmation
-Lock Session=Screensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session
+Lock Session=Screensaver,Meta+L\tScreensaver,Lock Session
 Log Out=Ctrl+Alt+Del\tMeta+Del,Ctrl+Alt+Del,Log Out
 Log Out Without Confirmation=none,,Log Out Without Confirmation
 Reboot Without Confirmation=none,,Reboot Without Confirmation
 _k_friendly_name=Session Management
 
 [kwin]
-Activate Window Demanding Attention=Ctrl+Alt+A,Ctrl+Alt+A,Activate Window Demanding Attention
+Activate Window Demanding Attention=Ctrl+Alt+A,Meta+Ctrl+A,Activate Window Demanding Attention
 Decrease Opacity=none,,Decrease Opacity of Active Window by 5 %
 Expose=Ctrl+F9,Ctrl+F9,Toggle Present Windows (Current desktop)
 ExposeAll=Ctrl+F10\tLaunch (C),Ctrl+F10\tLaunch (C),Toggle Present Windows (All desktops)
 ExposeClass=Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)
 Increase Opacity=none,,Increase Opacity of Active Window by 5 %
 Invert Screen Colors=none,,Invert Screen Colors
-Kill Window=Ctrl+Alt+Esc,Ctrl+Alt+Esc,Kill Window
+Kill Window=Ctrl+Alt+Esc,Meta+Ctrl+Esc,Kill Window
 MoveMouseToCenter=Meta+F6,Meta+F6,Move Mouse to Center
 MoveMouseToFocus=Meta+F5,Meta+F5,Move Mouse to Focus
 MoveZoomDown=none,none,Move Zoomed Area Downwards
@@ -93,7 +93,7 @@ MoveZoomUp=none,none,Move Zoomed Area Upwards
 Overview=Alt+Space,Meta+W,Toggle Overview
 Setup Window Shortcut=none,,Setup Window Shortcut
 Show Desktop=Meta+D,Meta+D,Show Desktop
-ShowDesktopGrid=Meta+W,Ctrl+F8,Show Desktop Grid
+ShowDesktopGrid=Meta+W,Meta+F8,Show Desktop Grid
 Suspend Compositing=Alt+Shift+F12,Alt+Shift+F12,Suspend Compositing
 Switch One Desktop Down=none,Meta+Ctrl+Down,Switch One Desktop Down
 Switch One Desktop Up=none,Meta+Ctrl+Up,Switch One Desktop Up
@@ -261,11 +261,11 @@ view_zoom_out=Meta+-,Meta+-,Zoom Out
 
 [mediacontrol]
 _k_friendly_name=Media Controller
-mediavolumedown=none,none,Media volume down
-mediavolumeup=none,none,Media volume up
+mediavolumedown=none,,Media volume down
+mediavolumeup=none,,Media volume up
 nextmedia=Media Next,Media Next,Media playback next
 pausemedia=Media Pause,Media Pause,Pause media playback
-playmedia=none,none,Play media playback
+playmedia=none,,Play media playback
 playpausemedia=Media Play,Media Play,Play/Pause media playback
 previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
@@ -322,14 +322,15 @@ activate widget 3=none,none,Activate Application Launcher Widget
 activate widget 32=none,none,Activate Icons-only Task Manager Widget
 activate widget 50=none,none,Activate Application Launcher Widget
 clear-history=Meta+Ctrl+Alt+V,,Clear Clipboard History
-clipboard_action=none,Ctrl+Alt+X,Enable Clipboard Actions
+clipboard_action=none,Meta+Ctrl+X,Automatic Action Popup Menu
+cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
 cycleNextAction=none,,Next History Item
 cyclePrevAction=none,,Previous History Item
 edit_clipboard=none,,Edit Contents…
 manage activities=none,Meta+Q,Show Activity Switcher
 next activity=Meta+Tab,Meta+Tab,Walk through activities
 previous activity=Meta+Shift+Tab,Meta+Shift+Tab,Walk through activities (Reverse)
-repeat_action=none,Ctrl+Alt+R,Manually Invoke Action on Current Clipboard
+repeat_action=none,Meta+Ctrl+R,Manually Invoke Action on Current Clipboard
 show dashboard=Ctrl+F12,Ctrl+F12,Show Desktop
 show-barcode=none,,Show Barcode…
 show-on-mouse-pos=Meta+Alt+V,Meta+V,Open Klipper at Mouse Position
