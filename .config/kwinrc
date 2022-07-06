@@ -19,6 +19,9 @@ BorderActivateAll=9
 [Effect-Slide]
 Duration=1
 
+[Effect-windowview]
+BorderActivateAll=9
+
 [MouseBindings]
 CommandAll2=Nothing
 CommandAllKey=Alt
