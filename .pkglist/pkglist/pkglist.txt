@@ -13,7 +13,6 @@ clang-tools-extra
 dejavu-fonts-all
 djvulibre
 dkms
-easyeffects
 fakeroot
 fcitx5-mozc
 fd-find
@@ -101,6 +100,7 @@ python3-notebook
 python3-pip
 ripgrep
 rlwrap
+rnnoise
 rust
 rust-src
 sddm

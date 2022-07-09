@@ -16,17 +16,16 @@ sudo dnf install \
 	https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
 	https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-# install all packages
-cat ./pkglist/pkglist.txt | xargs sudo dnf -y --allowerasing install
-
-# install groups
-cat ./pkglist/groups.txt | xargs sudo dnf -y groupinstall
-
-# install copr
+# install copr repositories
 while read -r line; do
     yes | sudo dnf copr enable $line
 done < ./pkglist/copr.txt
-cat ./pkglist/copr.txt | cut -d '/' -f 2 | xargs sudo dnf -y install --skip-broken
+
+# install all packages (including copr)
+cat ./pkglist/pkglist.txt ./pkglist/pkglist-copr.txt | xargs sudo dnf -y --allowerasing install
+
+# install groups
+cat ./pkglist/groups.txt | xargs sudo dnf -y groupinstall
 
 # install flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

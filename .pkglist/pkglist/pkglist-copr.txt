@@ -1,0 +1,3 @@
+bismuth
+ladspa-noise-suppression-for-voice
+rust-analyzer
