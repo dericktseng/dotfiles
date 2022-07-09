@@ -1,5 +1,4 @@
 #!/bin/bash
-iwdconfd="/etc/iwd/"
 systemdconfd="/etc/systemd/"
 self="$USER"
 
@@ -12,7 +11,6 @@ fi
 systemctl --user --now enable psd
 
 # system services
-sudo systemctl --now enable iwd
 sudo systemctl --now enable systemd-resolved
 
 # synchronize clock with systemd timesync ntp
@@ -30,26 +28,6 @@ sudo cp -i ./conf/modprobe/* /etc/modprobe.d/
 # systemd settings
 sudo mkdir -p "$systemdconfd"
 sudo cp -ir ./conf/systemd/* "$systemdconfd"
-
-# iwd settings
-sudo mkdir -p "$iwdconfd"
-sudo cp -i "./conf/iwd/main.conf" "$iwdconfd"
-read -r -p "Install eduroam configuration (y/N): " response
-case "$response" in
-    [yY])
-        read -r -p "Username: " username
-        read -r -p "Password: " password
-        read -r -p "Domain: " domain
-        sed -e "s/{USERNAME}/$username/g" \
-            -e "s/{PASSWORD}/$password/g" \
-            -e "s/{DOMAIN}/$domain/g" \
-            conf/iwd/eduroam.8021x > eduroam.8021x
-        sudo mv -i eduroam.8021x /var/lib/iwd/
-        ;;
-    *)
-        echo "skipping eduroam configuration"
-        ;;
-esac
 
 # firefox changes
 echo "Firefox Manual about:config changes"
