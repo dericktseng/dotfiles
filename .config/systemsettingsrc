@@ -6,6 +6,8 @@ detailViewIconSize=16
 [KPropertiesDialog]
 HDMI-A-0 Height 1920x1080=458
 HDMI-A-0 Width 1920x1080=782
+HDMI-A-1 Height 1920x1080=458
+HDMI-A-1 Width 1920x1080=410
 
 [MainWindow]
 HDMI-A-0 Height 1920x1080=1040
@@ -24,7 +26,7 @@ eDP YPosition 1920x1080=153
 
 [Open-with settings]
 CompletionMode=1
-History=termina,roxterm,lxter,terminator,termi,disco,sync,alac,dol,thunar,dolp,/home/derickwtseng/Music/yt-playlist,ter,firefox,konsol
+History=easy,termina,roxterm,lxter,terminator,termi,disco,sync,alac,dol,thunar,dolp,/home/derickwtseng/Music/yt-playlist,ter,firefox
 
 [UiSettings]
 ColorScheme=Default
