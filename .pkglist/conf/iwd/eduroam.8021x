@@ -1,8 +1,0 @@
-[Security]
-EAP-Method=PEAP
-EAP-PEAP-Phase2-Method=MSCHAPV2
-EAP-PEAP-Phase2-Identity={USERNAME}@{DOMAIN}
-EAP-PEAP-Phase2-Password={PASSWORD}
-
-[Settings]
-AutoConnect=true

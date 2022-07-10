@@ -8,9 +8,6 @@ fi
 sudo mkdir -p "/etc/dnf/"
 cat ./conf/dnf/dnf.conf | sed "s/NUM_CORES/$(nproc)/" | sudo tee /etc/dnf/dnf.conf > /dev/null
 
-# first run update
-sudo dnf upgrade -y
-
 # unlock rpmfusion
 sudo dnf install \
 	https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
@@ -20,6 +17,9 @@ sudo dnf install \
 while read -r line; do
     yes | sudo dnf copr enable $line
 done < ./pkglist/copr.txt
+
+# first run update to synchronize package database
+sudo dnf upgrade -y
 
 # install all packages (including copr)
 cat ./pkglist/pkglist.txt ./pkglist/pkglist-copr.txt | xargs sudo dnf -y --allowerasing install
