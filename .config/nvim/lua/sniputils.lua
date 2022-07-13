@@ -30,6 +30,24 @@ utils.close_func = function(args, snips, user_arg)
   return utils.close_env(args[1][1])
 end
 
+-- if the text in args[1][1] contains a string, return text contained in user_arg
+-- else return an empty string.
+utils.cond_user_text = function(args, snips, text)
+  return args[1][1] ~= "" and text or ""
+end
+
+-- returns number of insert nodes separated by commas determined by number of delimiters
+-- delim must be properly escaped when passing in (lua regex syntax)
+utils.generate_insert_nodes = function(args, parent, old_state, delim)
+  local _, count = string.gsub(args[1][1], delim, '')
+  local batch = {}
+  for j = 1,count do
+    table.insert(batch, t(', '))
+    table.insert(batch, i(j))
+  end
+  return sn(nil, batch);
+end
+
 -- determines whether we are in a math environment (requires vimtex)
 utils.mathenv = function(line_to_cursor, matched_trigger, captures)
   return vim.call('vimtex#syntax#in_mathzone') == 1
