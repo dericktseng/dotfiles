@@ -134,6 +134,7 @@ xset
 xsetroot
 youtube-dl
 yt-dlp
+zoxide
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting

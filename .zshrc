@@ -76,6 +76,9 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # zsh syntax highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# zoxide
+eval "$(zoxide init zsh)"
+
 # powerlevel10k theme
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
