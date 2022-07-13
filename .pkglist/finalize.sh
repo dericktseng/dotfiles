@@ -13,6 +13,9 @@ systemctl --user --now enable psd
 # system services
 sudo systemctl --now enable systemd-resolved
 
+# disable packagekit
+sudo systemctl --now mask packagekit packagekit-offline-update
+
 # synchronize clock with systemd timesync ntp
 sudo timedatectl set-ntp true
 
