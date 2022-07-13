@@ -4,12 +4,13 @@ local utils = require'sniputils'
 local regularsnips = {
   -- function definition
   s('fn', fmta([[
-    <> <>(<>) {
+    fn <>(<>) <><> {
     <><>
     }
   ]], {
-    i(1, 'type'),
-    i(2, 'name'),
+    i(1, 'name'),
+    i(2, 'args'),
+    f(function(args) return args[1][1] ~= "" and "-> " or "" end, {3}, {}),
     i(3),
     t('\t'),
     i(4)
@@ -17,34 +18,17 @@ local regularsnips = {
 
   -- if statements
   s('if', fmta([[
-    if (<>) {
+    if <> {
     <><>
     }
   ]], {i(1), t('\t'), i(2)})
   ),
 
-  -- #include
-  s('inc', fmta([[
-  #include <><><>
-  ]], {
-    c(2, {t("<"), t('"')}),
-    i(1, 'stdio.h'),
-    f(utils.close_func, {2}, {})
-  })),
-
-  -- while loop
   s('while', fmta([[
-  while (<>) {
+  while <> {
   <><>
   }
   ]], {i(1), t('\t'), i(2)})),
-
-  -- for loop
-  s('for', fmta([[
-  for (<>; <>; <>) {
-  <><>
-  }
-  ]], {i(1), i(2), i(3), t('\t'), i(4)})),
 }
 
 return regularsnips
