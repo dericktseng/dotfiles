@@ -13,8 +13,8 @@ Places Icons Auto-resize=false
 Places Icons Static Size=22
 
 [KPropertiesDialog]
-HDMI-A-0 Height 1920x1080=458
-HDMI-A-0 Width 1920x1080=379
+HDMI-A-0 Height 1920x1080=541
+HDMI-A-0 Width 1920x1080=511
 HDMI-A-1 Height 1920x1080=458
 HDMI-A-1 Width 1920x1080=416
 eDP Height 1920x1080=616
@@ -40,7 +40,7 @@ ConfirmDelete=true
 
 [Open-with settings]
 CompletionMode=1
-History=neov,qt,neovim,kwrite,gthu,gth,qvi,matlab,kwri,gwe,firefo,mpv,okular,imv,neo
+History=kdenl,neov,qt,neovim,kwrite,gthu,gth,qvi,matlab,kwri,gwe,firefo,mpv,okular,imv
 
 [PreviewSettings]
 Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs

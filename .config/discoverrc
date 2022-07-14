@@ -1,6 +1,9 @@
 [FlatpakSources]
-Sources=fedora-testing,flathub,fedora
+Sources=fedora,fedora-testing,flathub
+
+[ResourcesModel]
+currentApplicationBackend=flatpak-backend
 
 [Window]
-geometry=93,42,1587,916
+geometry=146,44,1392,890
 visibility=2

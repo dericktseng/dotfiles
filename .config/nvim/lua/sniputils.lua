@@ -62,7 +62,7 @@ end
 -- filters specified directory for certain filetypes
 -- WARNING: MUST CLOSE THE FILE HANDLE AFTER READING FROM IT
 -- requires the 'fd' binary
--- filetypes: the table of filetype extensions (without the leading .)
+-- filetypes: the table of filetype extensions (e.g. {'txt', 'pdf', 'png'}).
 -- returns file handle to iterate over the files that were filtered by their filetypes
 utils.filter_dir = function(filetypes)
   -- constructs the extension string for fd (-e ext1 -e ext2 ...)

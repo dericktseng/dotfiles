@@ -1,4 +1,5 @@
 acpi
+aha
 alsa-utils
 aria2
 autoconf

@@ -6,3 +6,6 @@ setlocal concealcursor=nc
 setlocal wrap
 setlocal linebreak
 setlocal showbreak=|
+
+" allow spellchecking
+setlocal spell spelllang=en_us
