@@ -13,7 +13,6 @@ fi
 
 # ZSH defaults
 autoload -U +X compinit && compinit
-autoload -U +X bashcompinit && bashcompinit
 zstyle ':completion:*' menu select
 
 # export PATH
