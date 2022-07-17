@@ -7,6 +7,16 @@ require('telescope').setup({
       hide_on_startup = false
     }
   },
+
+  extensions = {
+    file_browser = {
+      mappings = {
+        ["i"] = {
+          ["<C-t>"] = require "telescope.actions".select_tab
+        }
+      }
+    }
+  },
 })
 
 -- telescope load extensions

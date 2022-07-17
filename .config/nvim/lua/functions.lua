@@ -38,6 +38,15 @@ fn.nav_down = function()
   return fn.smart_nav('j')
 end
 
+-- ignore copy to clipboard for empty lines
+fn.smart_dd = function()
+  if vim.api.nvim_get_current_line():match("^%s*$") then
+    return "\"_dd"
+  else
+    return "dd"
+  end
+end
+
 -- tabline configurations
 fn.tablinestr = function()
   local line = ''
