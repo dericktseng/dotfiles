@@ -9,7 +9,7 @@ CustomCursorTextColor=254,254,254
 UseCustomCursorColor=true
 
 [General]
-Name=Profile 1
+Name=Minimal
 Parent=FALLBACK/
 ShowTerminalSizeHint=false
 TerminalCenter=true
@@ -22,6 +22,7 @@ TextEditorCmd=1
 UnderlineFilesEnabled=true
 
 [Scrolling]
+HistoryMode=0
 ScrollBarPosition=2
 
 [Terminal Features]
