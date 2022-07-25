@@ -10,6 +10,21 @@ g.loaded_node_provider = 0
 g.loaded_perl_provider = 0
 g.python3_host_prog = '/usr/bin/python3'
 
+-- disables builtins
+g.do_filetype_lua = 1
+g.did_load_filetypes = 0
+g.loaded_zip = 1
+g.loaded_gzip = 1
+g.loaded_man = 1
+g.loaded_matchit = 1
+g.loaded_netrwPlugin = 1
+g.loaded_remote_plugins = 1
+g.loaded_shada_plugin = 1
+g.loaded_spellfile_plugin = 1
+g.loaded_tarPlugin = 1
+g.loaded_2html_plugin = 1
+g.loaded_tutor_mode_plugin = 1
+
 -- enable termguicolors if it exists
 o.termguicolors = fn.has('termguicolors') == 1
 
