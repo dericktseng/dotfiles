@@ -15,6 +15,11 @@ local regularsnips = {
     i(4)
   })),
 
+  -- comment
+  s('///', fmta([[
+  /* <> */
+  ]], {i(1)})),
+
   -- if statements
   s('if', fmta([[
     if (<>) {

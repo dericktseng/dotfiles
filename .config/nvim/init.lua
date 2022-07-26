@@ -15,7 +15,6 @@ g.do_filetype_lua = 1
 g.did_load_filetypes = 0
 g.loaded_zip = 1
 g.loaded_gzip = 1
-g.loaded_man = 1
 g.loaded_matchit = 1
 g.loaded_netrwPlugin = 1
 g.loaded_remote_plugins = 1
