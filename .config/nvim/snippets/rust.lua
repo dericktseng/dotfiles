@@ -10,7 +10,7 @@ local regularsnips = {
   ]], {
     i(1, 'name'),
     i(2),
-    f(utils.cond_user_text, {3}, {user_args={' -> '}}),
+    f(utils.text_not_empty, {3}, {user_args={' -> '}}),
     i(3),
     t('\t'),
     i(4)

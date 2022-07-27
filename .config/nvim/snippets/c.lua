@@ -8,11 +8,11 @@ local regularsnips = {
     <><>
     }
   ]], {
-    i(1, 'type'),
-    i(2, 'name'),
+    i(1, 'void'),
+    i(2, 'fn_name'),
     i(3),
     t('\t'),
-    i(4)
+    i(4, 'return;')
   })),
 
   -- comment
@@ -22,11 +22,13 @@ local regularsnips = {
 
   -- if statements
   s('if', fmta([[
-    if (<>) {
+    if (<>)<>
     <><>
-    }
-  ]], {i(1), t('\t'), i(2)})
-  ),
+    <>
+  ]], {
+    i(1), f(utils.text_has_newline, {2}, {user_args={" {"}}),
+    t('\t'), i(2), f(utils.text_has_newline, {2}, {user_args={"}"}})
+  })),
 
   -- #include
   s('inc', fmta([[

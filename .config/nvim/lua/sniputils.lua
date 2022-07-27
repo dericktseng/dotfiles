@@ -30,10 +30,21 @@ utils.close_func = function(args, snips, user_arg)
   return utils.close_env(args[1][1])
 end
 
--- if the text in args[1][1] contains a string, return text contained in user_arg
+-- if the condition is true, return text, otherwise, return empty string.
+utils.cond_user_text = function(args, snips, text, cond)
+  return cond and text or ""
+end
+
+-- if the text in args[1][1] contains a string, return text
 -- else return an empty string.
-utils.cond_user_text = function(args, snips, text)
-  return args[1][1] ~= "" and text or ""
+utils.text_not_empty = function(args, snips, text)
+  return utils.cond_user_text(args, snips, text, args[1][1] ~= "")
+end
+
+-- if the text in args[1][1] contains a newline, return text.
+utils.text_has_newline = function(args, snips, text)
+  local cond = table.getn(args[1]) > 1
+  return utils.cond_user_text(args, snips, text, cond)
 end
 
 -- returns number of insert nodes separated by commas determined by number of delimiters
