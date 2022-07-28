@@ -1,8 +1,6 @@
 -- lua plugins
 return require('packer').startup(function(use)
-  use {
-    'hrsh7th/nvim-cmp',
-    config = function() require('configs.cmp') end,
+  use { 'hrsh7th/nvim-cmp',
     requires = {
       {'hrsh7th/cmp-buffer'},
       {'hrsh7th/cmp-nvim-lsp'},
@@ -13,30 +11,7 @@ return require('packer').startup(function(use)
   }
 
   use {
-    'neovim/nvim-lspconfig',
-    config = function() require'configs.lspservers' end,
-    after = 'nvim-cmp'
-  }
-
-  use {
-    'L3MON4D3/LuaSnip',
-    config = function()
-      require'luasnip'.config.setup({
-        update_events = 'TextChanged,TextChangedI',
-        region_check_events = "InsertEnter",
-        enable_autosnippets = true
-      })
-      
-      require('luasnip.loaders.from_lua').lazy_load({paths = "./snippets"})
-
-      -- create LuaSnipEdit command
-      vim.cmd([[command! LuaSnipEdit :lua require("luasnip.loaders").edit_snippet_files()]])
-    end
-  }
-
-  use {
     'nvim-telescope/telescope.nvim',
-    config = function() require'configs.telescope' end,
     requires = {
       {'nvim-lua/plenary.nvim'},
       {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'},
@@ -49,31 +24,15 @@ return require('packer').startup(function(use)
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
-    config = function() require'configs.treesitter' end,
   }
 
-  use {
-    'nvim-lualine/lualine.nvim',
-    config = function() require'configs.theme' end,
-  }
-
-  use {
-    'norcalli/nvim-colorizer.lua',
-    config = function() require'colorizer'.setup() end,
-    ft = {'css', 'javascript', 'lua', 'json', 'vim', 'conf'}
-  }
-
-  use {
-    'echasnovski/mini.nvim',
-    config = function() require'configs.mini' end,
-  }
-
-  use {
-    -- '~/Desktop/program/balance-theme.nvim',
-    'MetriC-DT/balance-theme.nvim',
-    config = function() require'configs.theme' end,
-  }
-
+  -- use '~/Desktop/program/balance-theme.nvim'
+  use 'MetriC-DT/balance-theme.nvim'
+  use 'neovim/nvim-lspconfig'
+  use 'L3MON4D3/LuaSnip'
+  use 'nvim-lualine/lualine.nvim'
+  use 'echasnovski/mini.nvim'
+  use 'mfussenegger/nvim-dap'
   use 'kyazdani42/nvim-web-devicons'
   use 'wbthomason/packer.nvim'
 
@@ -81,15 +40,10 @@ return require('packer').startup(function(use)
   use {
     'iamcco/markdown-preview.nvim',
     run = 'cd app && yarn install',
-    config = function() require'configs.markdown-preview' end,
     ft = {'markdown'}
   }
 
-  use {
-    'lervag/vimtex',
-    config = function() require'configs.vimtex' end,
-  }
-
+  use 'lervag/vimtex'
   use 'tpope/vim-fugitive'
   use 'junegunn/vim-easy-align'
 end)

@@ -38,12 +38,6 @@ end
 -- load plugins before anything else
 require('plugins')
 
--- Personal mappings
-require('mappings')
-
--- Personal custom commands
-require('commands')
-
 -- fix for latex file detection
 g.tex_flavor = 'latex'
 
