@@ -17,7 +17,7 @@ return require('packer').startup(function(use)
       {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'},
       {'crispgm/telescope-heading.nvim'},
       {'nvim-telescope/telescope-file-browser.nvim'},
-      {'nvim-telescope/telescope-ui-select.nvim' }
+      {'nvim-telescope/telescope-ui-select.nvim' },
     },
   }
 
@@ -32,7 +32,6 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'nvim-lualine/lualine.nvim'
   use 'echasnovski/mini.nvim'
-  use 'mfussenegger/nvim-dap'
   use 'kyazdani42/nvim-web-devicons'
   use 'wbthomason/packer.nvim'
 

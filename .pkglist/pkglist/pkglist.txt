@@ -66,6 +66,7 @@ libjpeg-devel
 libva
 libva-utils
 linux-firmware
+lldb
 llvm
 lm_sensors
 make
