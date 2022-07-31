@@ -47,63 +47,6 @@ fn.smart_dd = function()
   end
 end
 
--- tabline configurations
-fn.tablinestr = function()
-  local line = ''
-  local tabcount = vim.fn.tabpagenr('$')
-  local modifyindicator = '●'
-  local emptybuffer = '[No Name]'
-  local numberdelimiter = ' '
-  local padding = ' '
-  local tabdelimiter = '▎'
-  local closeicon = '%999X+'
-
-  for i = 1, tabcount do
-    local winnr = vim.fn.tabpagewinnr(i)
-    local buflist = vim.fn.tabpagebuflist(i)
-    local bufnr = buflist[winnr]
-    local bufname = vim.fn.bufname(bufnr)
-    local bufmodified = vim.fn.getbufvar(bufnr, '&mod')
-
-    local filename = vim.fn.fnamemodify(bufname, ':t')
-    local fileExt = vim.fn.fnamemodify(bufname, ':e')
-
-    line = line .. '%' .. i .. 'T'
-
-    -- index and tab delimiter
-    if i == vim.fn.tabpagenr() then
-      line = line .. '%#TabLineSel#' .. tabdelimiter .. i .. numberdelimiter
-    else
-      line = line .. '%#Tabline#' .. tabdelimiter .. i .. numberdelimiter
-    end
-
-    if icon then
-      line = line .. icon .. padding
-    end
-
-    -- filename
-    if bufname == '' then
-      line = line .. emptybuffer
-    else
-      line = line .. filename
-    end
-
-    -- modify indicator and close icon
-    if bufmodified == 1 and bufname ~= '' then
-      line = line .. ' ' .. modifyindicator .. ' ' .. closeicon
-    else
-      line = line .. '  ' .. closeicon
-    end
-
-    -- padding
-    line = line .. padding
-  end
-
-  line = line .. '%#TabLine#' .. tabdelimiter
-  line = line .. '%#TabLineFill#%T'
-  return line
-end
-
 -- Telescope functions
 fn.project_files = function()
   local opts = {} -- define here if you want to define something
@@ -123,8 +66,5 @@ fn.local_diagnostics = function()
     bufnr = 0,
   })
 end
-
--- global vim variables
-_G.tablinestr = fn.tablinestr
 
 return fn

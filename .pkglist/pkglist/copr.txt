@@ -1,3 +1,2 @@
-robot/rust-analyzer
 capucho/bismuth
 ycollet/audinux

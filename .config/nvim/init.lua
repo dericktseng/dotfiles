@@ -79,8 +79,6 @@ o.completeopt = 'menu,menuone,noselect'
 -- automatic preview rename with :%s
 opt.inccommand = 'nosplit'
 
-o.tabline = '%!v:lua.tablinestr()'
-
 -- disable folding
 o.foldenable = false
 

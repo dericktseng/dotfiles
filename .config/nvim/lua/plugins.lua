@@ -26,6 +26,11 @@ return require('packer').startup(function(use)
     run = ':TSUpdate',
   }
 
+  use {
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
+    requires = { 'williamboman/mason.nvim' }
+  }
+
   -- use '~/Desktop/program/balance-theme.nvim'
   use 'MetriC-DT/balance-theme.nvim'
   use 'neovim/nvim-lspconfig'

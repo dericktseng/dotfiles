@@ -1,15 +1,14 @@
 return {
   -- function
   s('fn', fmta([[
-    <>function <>(<>)
+    function <>(<>)
     <><>
     end
   ]], {
-    c(1, {t('local '), t('')}),
-    i(2, 'functionName'),
-    i(3),
+    i(1, 'functionName'),
+    i(2),
     t('\t'),
-    i(4)
+    i(3)
   })),
 
   -- function without name
