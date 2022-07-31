@@ -41,7 +41,7 @@ zoomEnabled=false
 floatingTitle=System Settings
 ignoreActivity=1 - Default, 3 - Games
 keepFloatAbove=false
-noTileBorder=true
+preventProtrusion=false
 
 [SubSession: 80ff01d6-fee6-40f7-b491-2dc30b208c3d]
 active=-1
