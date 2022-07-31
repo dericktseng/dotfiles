@@ -11,14 +11,18 @@ DefaultProfile=Minimal.profile
 scrollbackUseCacheLocation=false
 scrollbackUseSystemLocation=true
 
+[General]
+ConfigVersion=1
+
 [KonsoleWindow]
 FocusFollowsMouse=true
 
 [MainWindow]
-HDMI-A-0 Height 1920x1080=759
-HDMI-A-0 Width 1920x1080=1227
-HDMI-A-0 XPosition 1920x1080=441
-HDMI-A-0 YPosition 1920x1080=281
+HDMI-A-0 Height 1920x1080=913
+HDMI-A-0 Width 1920x1080=1510
+HDMI-A-0 Window-Maximized 1920x1080=true
+HDMI-A-0 XPosition 1920x1080=107
+HDMI-A-0 YPosition 1920x1080=38
 HDMI-A-1 Height 1920x1080=750
 HDMI-A-1 Width 1920x1080=1128
 MenuBar=Disabled
@@ -37,4 +41,3 @@ EnableThumbnails=false
 
 [UiSettings]
 ColorScheme=
-WindowColorScheme=Default

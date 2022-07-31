@@ -13,7 +13,7 @@ local utils = {}
 
 -- closes environment opened by character c:
 -- "" '' {} <> []
-utils.close_env = function(c)
+utils.close_env = function(character)
   local table = {
     ["'"] = "'",
     ['"'] = '"',
@@ -22,7 +22,7 @@ utils.close_env = function(c)
     ['['] = ']',
   }
 
-  return table[c]
+  return table[character]
 end
 
 -- wrapper function to return the "closing character" for the inputted argument.
@@ -43,7 +43,7 @@ end
 
 -- if the text in args[1][1] contains a newline, return text.
 utils.text_has_newline = function(args, snips, text)
-  local cond = table.getn(args[1]) > 1
+  local cond = #args[1] > 1
   return utils.cond_user_text(args, snips, text, cond)
 end
 
@@ -77,7 +77,7 @@ end
 -- returns file handle to iterate over the files that were filtered by their filetypes
 utils.filter_dir = function(filetypes)
   -- constructs the extension string for fd (-e ext1 -e ext2 ...)
-  extension_str = ''
+  local extension_str = ''
   for _, ext in pairs(filetypes) do
     extension_str = extension_str .. ' -e ' .. ext
   end

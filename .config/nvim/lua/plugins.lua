@@ -27,13 +27,15 @@ return require('packer').startup(function(use)
   }
 
   use {
-    'WhoIsSethDaniel/mason-tool-installer.nvim',
-    requires = { 'williamboman/mason.nvim' }
+    'neovim/nvim-lspconfig',
+    requires = {
+      {'williamboman/mason.nvim'},
+      {'williamboman/mason-lspconfig.nvim'},
+    }
   }
 
   -- use '~/Desktop/program/balance-theme.nvim'
   use 'MetriC-DT/balance-theme.nvim'
-  use 'neovim/nvim-lspconfig'
   use 'L3MON4D3/LuaSnip'
   use 'nvim-lualine/lualine.nvim'
   use 'echasnovski/mini.nvim'

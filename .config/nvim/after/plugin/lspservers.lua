@@ -2,25 +2,20 @@
 local nvim_lsp = require('lspconfig')
 local cmp_capability = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-
--- setup mason
-require'mason'.setup()
-require'mason-tool-installer'.setup {
-  auto_update = false,
-  run_on_start = false,
-  ensure_installed = {
-    'pyright',
-    'rust-analyzer',
-  },
-}
-
 -- make sure these lsp servers are installed
 local servers = {
   'pyright',
   'rust_analyzer',
   'clangd',
+  'sumneko_lua'
   -- 'texlab',
 }
+
+-- setup mason
+require'mason'.setup()
+require("mason-lspconfig").setup({
+  automatic_installation = true
+})
 
 -- attaches cmp capabilities to every lsp
 for _, lsp in ipairs(servers) do
