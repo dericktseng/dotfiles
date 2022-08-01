@@ -166,6 +166,7 @@ Show Speedbar=true
 Show hidden files=true
 Sort by=Name
 Sort directories first=true
+Sort hidden files last=false
 Sort reversed=false
 Speedbar Width=245
 View Style=DetailTree

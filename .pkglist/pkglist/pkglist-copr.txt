@@ -1,2 +1,1 @@
 bismuth
-ladspa-noise-suppression-for-voice
