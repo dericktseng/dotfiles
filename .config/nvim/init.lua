@@ -1,3 +1,5 @@
+require('impatient')
+
 local opt = vim.opt
 local o = vim.o
 local g = vim.g
@@ -35,7 +37,7 @@ else
   o.background = 'dark'
 end
 
--- load plugins before anything else
+-- load plugins (after colorscheme)
 require('plugins')
 
 -- fix for latex file detection

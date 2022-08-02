@@ -41,6 +41,7 @@ return require('packer').startup(function(use)
   use 'echasnovski/mini.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'wbthomason/packer.nvim'
+  use 'lewis6991/impatient.nvim'
 
   -- non lua plugins
   use {
