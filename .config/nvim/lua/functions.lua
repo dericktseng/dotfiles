@@ -14,8 +14,8 @@ fn.has_words_before = function()
 end
 
 -- general wrapper function to wrap around function with arguments
-fn.fnwrap = function(fn, args)
-  return function() return fn(args) end
+fn.fnwrap = function(f, args)
+  return function() return f(args) end
 end
 
 -- smart nav for mapping k -> gk or j -> gj
@@ -45,6 +45,30 @@ fn.smart_dd = function()
   else
     return "dd"
   end
+end
+
+-- creates an autocmd that outputs stdout/stderr into a buffer.
+fn.register_autorun_cmd = function(cmd, pattern, bufnr)
+  vim.api.nvim_create_autocmd('BufWritePost', {
+    group = vim.api.nvim_create_augroup('autorun', {clear = true}),
+    pattern = pattern,
+    callback = function()
+      -- interior function.
+      local append_data = function(_, data)
+        if data then
+          vim.api.nvim_buf_set_lines(bufnr, -1, -1, false, data)
+        end
+      end
+
+      vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, {'=== OUTPUT ==='})
+      vim.fn.jobstart(vim.split(cmd, ' '), {
+        stdout_buffered = true,
+        stderr_buffered = true,
+        on_stdout = append_data,
+        on_stderr = append_data,
+      })
+    end
+   })
 end
 
 -- Telescope functions
