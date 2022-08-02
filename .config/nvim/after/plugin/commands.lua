@@ -1,5 +1,5 @@
 -- Opens a terminal already in insert mode.
-groupnum = vim.api.nvim_create_augroup('vimrc', {clear=true})
+local groupnum = vim.api.nvim_create_augroup('vimrc', {clear=true})
 vim.api.nvim_create_autocmd('TermOpen', {
   group = groupnum,
   command = 'startinsert',

@@ -71,6 +71,19 @@ fn.register_autorun_cmd = function(cmd, pattern, bufnr)
    })
 end
 
+-- wrapper around the previous autocmd
+fn.autorun_cmd = function(cmd)
+  local ext = vim.fn.expand('%:e')
+  local pattern = '*.' .. ext
+
+  -- creates new buffer to house the output
+  vim.cmd('vsplit')
+  local bufnr = vim.api.nvim_create_buf(true, true)
+  local win = vim.api.nvim_get_current_win()
+  vim.api.nvim_win_set_buf(win, bufnr)
+  fn.register_autorun_cmd(cmd, pattern, bufnr)
+end
+
 -- Telescope functions
 fn.project_files = function()
   local opts = {} -- define here if you want to define something
