@@ -35,7 +35,7 @@ NightTemperature=3100
 [Plugins]
 bismuthEnabled=true
 blurEnabled=false
-contrastEnabled=false
+contrastEnabled=true
 desktopgridEnabled=false
 kwin4_effect_fadeEnabled=true
 kwin4_effect_scaleEnabled=false
