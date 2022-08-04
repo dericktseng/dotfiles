@@ -19,6 +19,9 @@ BorderActivateAll=9
 [Effect-Slide]
 Duration=1
 
+[Effect-overview]
+LayoutMode=0
+
 [Effect-windowview]
 BorderActivateAll=9
 
@@ -31,10 +34,14 @@ NightTemperature=3100
 
 [Plugins]
 bismuthEnabled=true
+blurEnabled=false
+contrastEnabled=false
+desktopgridEnabled=false
 kwin4_effect_fadeEnabled=true
 kwin4_effect_scaleEnabled=false
 overviewEnabled=true
 slideEnabled=false
+windowviewEnabled=false
 zoomEnabled=false
 
 [Script-bismuth]

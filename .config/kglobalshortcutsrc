@@ -79,7 +79,7 @@ _k_friendly_name=Session Management
 Activate Window Demanding Attention=Ctrl+Alt+A,Meta+Ctrl+A,Activate Window Demanding Attention
 Decrease Opacity=none,,Decrease Opacity of Active Window by 5 %
 Expose=Ctrl+F9,Ctrl+F9,Toggle Present Windows (Current desktop)
-ExposeAll=Ctrl+F10\tLaunch (C),Ctrl+F10\tLaunch (C),Toggle Present Windows (All desktops)
+ExposeAll=Ctrl+F10\tLaunch (C),Ctrl+F10,Toggle Present Windows (All desktops)
 ExposeClass=Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)
 Increase Opacity=none,,Increase Opacity of Active Window by 5 %
 Invert Screen Colors=none,,Invert Screen Colors
@@ -93,7 +93,7 @@ MoveZoomUp=none,none,Move Zoomed Area Upwards
 Overview=Alt+Space,Meta+W,Toggle Overview
 Setup Window Shortcut=none,,Setup Window Shortcut
 Show Desktop=Meta+D,Meta+D,Show Desktop
-ShowDesktopGrid=Meta+W,Meta+F8,Show Desktop Grid
+ShowDesktopGrid=Meta+W,Ctrl+F8,Show Desktop Grid
 Suspend Compositing=Alt+Shift+F12,Alt+Shift+F12,Suspend Compositing
 Switch One Desktop Down=none,Meta+Ctrl+Down,Switch One Desktop Down
 Switch One Desktop Up=none,Meta+Ctrl+Up,Switch One Desktop Up
@@ -307,7 +307,7 @@ Turn Off Screen=none,none,Turn Off Screen
 _k_friendly_name=Power Management
 
 [plasmashell]
-_k_friendly_name=Plasma
+_k_friendly_name=Activity switching
 activate task manager entry 1=Meta+1,Meta+1,Activate Task Manager Entry 1
 activate task manager entry 10=Meta+0,Meta+0,Activate Task Manager Entry 10
 activate task manager entry 2=Meta+2,Meta+2,Activate Task Manager Entry 2
