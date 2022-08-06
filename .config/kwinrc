@@ -26,7 +26,7 @@ LayoutMode=0
 BorderActivateAll=9
 
 [ModifierOnlyShortcuts]
-Meta=
+Meta=org.kde.plasmashell,/PlasmaShell,org.kde.PlasmaShell,activateLauncherMenu
 
 [MouseBindings]
 CommandAll2=Nothing
