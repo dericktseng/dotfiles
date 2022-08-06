@@ -44,7 +44,7 @@ ordering=applications:org.kde.konsole.desktop,applications:libreoffice-calc.desk
 ordering=applications:org.kde.konsole.desktop,applications:libreoffice-calc.desktop,applications:libreoffice-writer.desktop,applications:org.kde.discover.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.plasma-systemmonitor.desktop,applications:systemsettings.desktop,preferred://browser
 
 [Favorites-org.kde.plasma.kickoff.favorites.instance-50-4bc9cf04-def1-4f75-9233-cc936be4c7df]
-ordering=applications:libreoffice-calc.desktop,applications:libreoffice-writer.desktop,applications:org.kde.discover.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.konsole.desktop,applications:org.kde.plasma-systemmonitor.desktop,applications:systemsettings.desktop,preferred://browser,applications:org.kde.kontact.desktop
+ordering=applications:libreoffice-calc.desktop,applications:libreoffice-writer.desktop,applications:org.kde.discover.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.konsole.desktop,applications:org.kde.plasma-systemmonitor.desktop,applications:systemsettings.desktop,preferred://browser
 
 [Favorites-org.kde.plasma.kickoff.favorites.instance-50-644e5605-d59e-4231-8d98-6dfb12fc7b5c]
 ordering=applications:libreoffice-calc.desktop,applications:libreoffice-writer.desktop,applications:org.kde.discover.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.konsole.desktop,applications:org.kde.plasma-systemmonitor.desktop,applications:systemsettings.desktop,preferred://browser

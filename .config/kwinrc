@@ -25,6 +25,9 @@ LayoutMode=0
 [Effect-windowview]
 BorderActivateAll=9
 
+[ModifierOnlyShortcuts]
+Meta=
+
 [MouseBindings]
 CommandAll2=Nothing
 CommandAllKey=Alt
