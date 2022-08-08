@@ -22,13 +22,10 @@ local regularsnips = {
 
   -- if statements
   s('if', fmta([[
-    if (<>)<>
+    if (<>) {
     <><>
-    <>
-  ]], {
-    i(1), f(utils.text_has_newline, {2}, {user_args={" {"}}),
-    t('\t'), i(2), f(utils.text_has_newline, {2}, {user_args={"}"}})
-  })),
+    }
+  ]], { i(1), t('\t'), i(2)})),
 
   -- #include
   s('inc', fmta([[

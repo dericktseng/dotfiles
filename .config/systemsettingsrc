@@ -12,8 +12,8 @@ HDMI-A-1 Width 1920x1080=410
 [MainWindow]
 HDMI-A-0 Height 1920x1080=930
 HDMI-A-0 Width 1920x1080=1608
-HDMI-A-0 XPosition 1920x1080=128
-HDMI-A-0 YPosition 1920x1080=78
+HDMI-A-0 XPosition 1920x1080=156
+HDMI-A-0 YPosition 1920x1080=55
 HDMI-A-1 Height 1920x1080=919
 HDMI-A-1 Width 1920x1080=1392
 MenuBar=Disabled
@@ -26,7 +26,7 @@ eDP YPosition 1920x1080=153
 
 [Open-with settings]
 CompletionMode=1
-History=noiseto,easy,disco,easye,termina,roxterm,lxter,terminator,termi,sync,alac,dol,thunar,dolp,/home/derickwtseng/Music/yt-playlist
+History=konsole,noiseto,easy,disco,easye,termina,roxterm,lxter,terminator,termi,sync,alac,dol,thunar,dolp
 
 [UiSettings]
 ColorScheme=Default

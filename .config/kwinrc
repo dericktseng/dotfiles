@@ -26,7 +26,7 @@ LayoutMode=0
 BorderActivateAll=9
 
 [ModifierOnlyShortcuts]
-Meta=org.kde.plasmashell,/PlasmaShell,org.kde.PlasmaShell,activateLauncherMenu
+Meta=
 
 [MouseBindings]
 CommandAll2=Nothing
@@ -37,7 +37,7 @@ NightTemperature=3100
 
 [Plugins]
 bismuthEnabled=true
-blurEnabled=false
+blurEnabled=true
 contrastEnabled=true
 desktopgridEnabled=false
 kwin4_effect_fadeEnabled=true

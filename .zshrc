@@ -50,6 +50,7 @@ bindkey "^A" vi-beginning-of-line
 bindkey "^E" vi-end-of-line
 bindkey "^F" forward-word
 bindkey "^B" backward-word
+bindkey "^[[3~" delete-char
 
 bindkey -r '^['
 

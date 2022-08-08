@@ -27,6 +27,6 @@ ScrollBarPosition=2
 
 [Terminal Features]
 BlinkingCursorEnabled=false
-PeekPrimaryKeySequence=Del
+PeekPrimaryKeySequence=Shift+Ins
 ReverseUrlHints=true
 UrlHintsModifiers=201326592

@@ -37,7 +37,7 @@ display=Display\tMeta+Ctrl+D,Display\tMeta+P,Switch Display
 _k_friendly_name=Custom Shortcuts Service
 {196fb050-e114-48d2-bb43-235684919279}=Print,none,FullscreenCopy
 {34b2b78a-f38c-423e-b238-e3dd62177716}=none,none,Launch Konsole
-{92f6a60d-f33d-45c9-850c-abe42b1d0581}=Meta+Return,none,alacritty
+{92f6a60d-f33d-45c9-850c-abe42b1d0581}=none,none,alacritty
 {c5dd36bd-0190-476f-b3b6-cbaa7d9922b2}=Shift+Print,none,RectangleCopy
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
 {dbd5e951-1c54-480a-973e-cbfe5eae10b9}=Ctrl+Print,none,WindowCopy
@@ -274,6 +274,12 @@ stopmedia=Media Stop,Media Stop,Stop media playback
 _k_friendly_name=Dolphin
 _launch=Meta+N,Meta+E,Dolphin
 
+[org.kde.konsole.desktop]
+NewTab=none,none,Open a New Tab
+NewWindow=none,none,Open a New Window
+_k_friendly_name=Konsole
+_launch=Meta+Return,Ctrl+Alt+T,Konsole
+
 [org.kde.krunner.desktop]
 RunClipboard=Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents
 _k_friendly_name=KRunner
@@ -320,7 +326,7 @@ activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 3=none,none,Activate Application Launcher Widget
 activate widget 32=none,none,Activate Icons-only Task Manager Widget
-activate widget 50=Alt+F1,none,Activate Application Launcher Widget
+activate widget 50=none,none,Activate Application Launcher Widget
 clear-history=Meta+Ctrl+Alt+V,,Clear Clipboard History
 clipboard_action=none,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
