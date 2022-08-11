@@ -6,6 +6,7 @@ autoconf
 automake
 bc
 bear
+bismuth
 breeze-gtk
 cargo
 clang
