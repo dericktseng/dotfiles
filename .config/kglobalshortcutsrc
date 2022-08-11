@@ -1,3 +1,6 @@
+[$Version]
+update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd:Fonts_Global,fonts_global_toolbar.upd:Fonts_Global_Toolbar,icons_remove_effects.upd:IconsRemoveEffects,kwin.upd:animation-speed,style_widgetstyle_default_breeze.upd:StyleWidgetStyleDefaultBreeze,bismuth_shortcuts_from_kwin.upd:bismuth-shortcuts-from-kwin
+
 [ActivityManager]
 _k_friendly_name=Activity Manager
 switch-to-activity-4bc9cf04-def1-4f75-9233-cc936be4c7df=Meta+P,none,Switch to activity "3 - Games"
@@ -10,6 +13,44 @@ Switch keyboard layout to Japanese=none,none,Switch keyboard layout to Japanese
 Switch keyboard layout to Japanese (Sun Type 7, Sun-compatible)=none,none,Switch keyboard layout to Japanese (Sun Type 7\\, Sun-compatible)
 Switch to Next Keyboard Layout=Ctrl+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
+
+[bismuth]
+_k_friendly_name=Window Tiling
+decrease_master_size=none,,Decrease Master Area Size
+decrease_master_win_count=Meta+[,Meta+[,Decrease Master Area Window Count
+decrease_window_height=Meta+Ctrl+K,Meta+Ctrl+K,Decrease Window Height
+decrease_window_width=Meta+Ctrl+H,Meta+Ctrl+H,Decrease Window Width
+focus_bottom_window=Meta+J,Meta+J,Focus Bottom Window
+focus_left_window=Meta+H,Meta+H,Focus Left Window
+focus_next_window=none,,Focus Next Window
+focus_prev_window=none,,Focus Previous Window
+focus_right_window=Meta+L,Meta+L,Focus Right Window
+focus_upper_window=Meta+K,Meta+K,Focus Upper Window
+increase_master_size=none,,Increase Master Area Size
+increase_master_win_count=Meta+],Meta+],Increase Master Area Window Count
+increase_window_height=Meta+Ctrl+J,Meta+Ctrl+J,Increase Window Height
+increase_window_width=Meta+Ctrl+L,Meta+Ctrl+L,Increase Window Width
+move_window_to_bottom_pos=Meta+Shift+J,Meta+Shift+J,Move Window Down
+move_window_to_left_pos=Meta+Shift+H,Meta+Shift+H,Move Window Left
+move_window_to_next_pos=none,,Move Window to the Next Position
+move_window_to_prev_pos=none,,Move Window to the Previous Position
+move_window_to_right_pos=Meta+Shift+L,Meta+Shift+L,Move Window Right
+move_window_to_upper_pos=Meta+Shift+K,Meta+Shift+K,Move Window Up
+next_layout=Meta+\\\\,Meta+\\\\,Switch to the Next Layout
+prev_layout=Meta+|,Meta+|,Switch to the Previous Layout
+push_window_to_master=none,Meta+Return,Push Active Window to Master Area
+rotate=Meta+R,Meta+R,Rotate
+rotate_part=Meta+Shift+R,Meta+Shift+R,Rotate Part
+rotate_reverse=none,,Rotate (Reverse)
+toggle_float_layout=Meta+Shift+F,Meta+Shift+F,Toggle Floating Layout
+toggle_monocle_layout=none,Meta+M,Toggle Monocle Layout
+toggle_quarter_layout=none,,Toggle Quarter Layout
+toggle_spiral_layout=none,,Toggle Spiral Layout
+toggle_spread_layout=none,,Toggle Spread Layout
+toggle_stair_layout=none,,Toggle Stair Layout
+toggle_three_column_layout=none,,Toggle Three Column Layout
+toggle_tile_layout=Meta+T,Meta+T,Toggle Tile Layout
+toggle_window_floating=Meta+S,Meta+F,Toggle Active Window Floating
 
 [firefox.desktop]
 _k_friendly_name=Firefox
@@ -37,7 +78,6 @@ display=Display\tMeta+Ctrl+D,Display\tMeta+P,Switch Display
 _k_friendly_name=Custom Shortcuts Service
 {196fb050-e114-48d2-bb43-235684919279}=Print,none,FullscreenCopy
 {34b2b78a-f38c-423e-b238-e3dd62177716}=none,none,Launch Konsole
-{92f6a60d-f33d-45c9-850c-abe42b1d0581}=none,none,alacritty
 {c5dd36bd-0190-476f-b3b6-cbaa7d9922b2}=Shift+Print,none,RectangleCopy
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Search
 {dbd5e951-1c54-480a-973e-cbfe5eae10b9}=Ctrl+Print,none,WindowCopy
@@ -220,52 +260,17 @@ Window to Screen 5=none,,Window to Screen 5
 Window to Screen 6=none,,Window to Screen 6
 Window to Screen 7=none,,Window to Screen 7
 _k_friendly_name=KWin
-bismuth_decrease_master_size=none,none,Bismuth: Decrease Master Area Size
-bismuth_decrease_master_win_count=Meta+[,none,Bismuth: Decrease Master Area Window Count
-bismuth_decrease_window_height=Meta+Ctrl+K,none,Bismuth: Decrease Window Height
-bismuth_decrease_window_width=Meta+Ctrl+H,none,Bismuth: Decrease Window Width
-bismuth_focus_bottom_window=Meta+J,none,Bismuth: Focus Bottom Window
-bismuth_focus_left_window=Meta+H,none,Bismuth: Focus Left Window
-bismuth_focus_next_window=none,none,Bismuth: Focus Next Window
-bismuth_focus_prev_window=none,none,Bismuth: Focus Previous Window
-bismuth_focus_right_window=Meta+L,none,Bismuth: Focus Right Window
-bismuth_focus_upper_window=Meta+K,none,Bismuth: Focus Upper Window
-bismuth_increase_master_size=none,none,Bismuth: Increase Master Area Size
-bismuth_increase_master_win_count=Meta+],none,Bismuth: Increase Master Area Window Count
-bismuth_increase_window_height=Meta+Ctrl+J,none,Bismuth: Increase Window Height
-bismuth_increase_window_width=Meta+Ctrl+L,none,Bismuth: Increase Window Width
-bismuth_move_window_to_bottom_pos=Meta+Shift+J,none,Bismuth: Move Window Down
-bismuth_move_window_to_left_pos=Meta+Shift+H,none,Bismuth: Move Window Left
-bismuth_move_window_to_next_pos=none,none,Bismuth: Move Window to the Next Position
-bismuth_move_window_to_prev_pos=none,none,Bismuth: Move Window to the Previous Position
-bismuth_move_window_to_right_pos=Meta+Shift+L,none,Bismuth: Move Window Right
-bismuth_move_window_to_upper_pos=Meta+Shift+K,none,Bismuth: Move Window Up
-bismuth_next_layout=Meta+\\\\,none,Bismuth: Switch to the Next Layout
-bismuth_prev_layout=Meta+|,none,Bismuth: Switch to the Previous Layout
-bismuth_push_window_to_master=none,none,Bismuth: Push Active Window to Master Area
-bismuth_rotate=Meta+R,none,Bismuth: Rotate
-bismuth_rotate_part=Meta+Shift+R,none,Bismuth: Rotate Part
-bismuth_rotate_reverse=none,none,Bismuth: Rotate (Reverse)
-bismuth_toggle_float_layout=Meta+Shift+F,none,Bismuth: Toggle Floating Layout
-bismuth_toggle_monocle_layout=none,none,Bismuth: Toggle Monocle Layout
-bismuth_toggle_quarter_layout=none,none,Bismuth: Toggle Quarter Layout
-bismuth_toggle_spiral_layout=none,none,Bismuth: Toggle Spiral Layout
-bismuth_toggle_spread_layout=none,none,Bismuth: Toggle Spread Layout
-bismuth_toggle_stair_layout=none,none,Bismuth: Toggle Stair Layout
-bismuth_toggle_three_column_layout=none,none,Bismuth: Toggle Three Column Layout
-bismuth_toggle_tile_layout=Meta+T,none,Bismuth: Toggle Tile Layout
-bismuth_toggle_window_floating=Meta+S,none,Bismuth: Toggle Active Window Floating
 view_actual_size=none,Meta+0,Actual Size
 view_zoom_in=Meta+=,Meta+=,Zoom In
 view_zoom_out=Meta+-,Meta+-,Zoom Out
 
 [mediacontrol]
 _k_friendly_name=Media Controller
-mediavolumedown=none,,Media volume down
-mediavolumeup=none,,Media volume up
+mediavolumedown=none,none,Media volume down
+mediavolumeup=none,none,Media volume up
 nextmedia=Media Next,Media Next,Media playback next
 pausemedia=Media Pause,Media Pause,Pause media playback
-playmedia=none,,Play media playback
+playmedia=none,none,Play media playback
 playpausemedia=Media Play,Media Play,Play/Pause media playback
 previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback

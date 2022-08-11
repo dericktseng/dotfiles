@@ -34,6 +34,9 @@ local regularsnips = {
   s('pr', fmta([[
     println!("<>"<>);
   ]], {i(1), d(2, utils.generate_insert_nodes, {1}, {user_args={'{.-}'}})})),
+
+  -- comment
+  s('///', fmta([[/* <> */]], i(1))),
 }
 
 return regularsnips
