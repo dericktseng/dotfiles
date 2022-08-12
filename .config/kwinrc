@@ -76,3 +76,7 @@ LayoutName=thumbnail_grid
 AutoRaise=true
 AutoRaiseInterval=0
 DelayFocusInterval=0
+
+[org.kde.kdecoration2]
+library=org.kde.breeze
+theme=Breeze

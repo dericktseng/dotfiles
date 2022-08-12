@@ -46,6 +46,14 @@ fullscreenrule=3
 wmclass=feh
 wmclassmatch=1
 
+[4]
+Description=Application settings for discord
+activity=4bc9cf04-def1-4f75-9233-cc936be4c7df
+activityrule=3
+clientmachine=localhost
+wmclass=discord
+wmclassmatch=1
+
 [4fc0947f-39d0-40b4-8a21-b7472875e903]
 Description=Application settings for zathura
 clientmachine=localhost
@@ -164,5 +172,16 @@ clientmachine=localhost
 fullscreen=true
 fullscreenrule=3
 wmclass=gl mpv
+wmclasscomplete=true
+wmclassmatch=1
+
+[fffaeae9-f30d-401d-bfdc-2acead2d6421]
+Description=Application settings for firefox
+clientmachine=localhost
+maximizehoriz=true
+maximizehorizrule=3
+maximizevert=true
+maximizevertrule=3
+wmclass=navigator firefox
 wmclasscomplete=true
 wmclassmatch=1
