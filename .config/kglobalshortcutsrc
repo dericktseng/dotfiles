@@ -3,9 +3,9 @@ update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd
 
 [ActivityManager]
 _k_friendly_name=Activity Manager
-switch-to-activity-4bc9cf04-def1-4f75-9233-cc936be4c7df=Meta+P,none,Switch to activity "3 - Games"
-switch-to-activity-644e5605-d59e-4231-8d98-6dfb12fc7b5c=Meta+I,none,Switch to activity "1 - Default"
-switch-to-activity-db03cb46-a8ca-4faa-b2da-c8c61565a1cd=Meta+O,none,Switch to activity "2 - School"
+switch-to-activity-4bc9cf04-def1-4f75-9233-cc936be4c7df=Meta+P,none,Switch to activity "C"
+switch-to-activity-644e5605-d59e-4231-8d98-6dfb12fc7b5c=Meta+I,none,Switch to activity "A"
+switch-to-activity-db03cb46-a8ca-4faa-b2da-c8c61565a1cd=Meta+O,none,Switch to activity "B"
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
@@ -66,7 +66,7 @@ _k_friendly_name=Accessibility
 [kcm_touchpad]
 Disable Touchpad=Touchpad Off,Touchpad Off,Disable Touchpad
 Enable Touchpad=Touchpad On,Touchpad On,Enable Touchpad
-Toggle Touchpad=Touchpad Toggle,Touchpad Toggle,Toggle Touchpad
+Toggle Touchpad=Touchpad Toggle,Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku,Toggle Touchpad
 _k_friendly_name=Touchpad
 
 [kded5]
@@ -331,6 +331,7 @@ activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 3=none,none,Activate Application Launcher Widget
 activate widget 32=none,none,Activate Icons-only Task Manager Widget
+activate widget 37=none,none,Activate Activity Pager Widget
 activate widget 50=none,none,Activate Application Launcher Widget
 clear-history=Meta+Ctrl+Alt+V,,Clear Clipboard History
 clipboard_action=none,Meta+Ctrl+X,Automatic Action Popup Menu

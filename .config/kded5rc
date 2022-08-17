@@ -17,7 +17,7 @@ autoload=true
 autoload=true
 
 [Module-device_automounter]
-autoload=true
+autoload=false
 
 [Module-dnssdwatcher]
 autoload=true
