@@ -28,13 +28,13 @@ local regularsnips = {
   ]], { i(1), t('\t'), i(2)})),
 
   -- #include
-  s('inc', fmta([[
-  #include <><><>
-  ]], {
-    c(2, {t("<"), t('"')}),
-    i(1, 'stdio.h'),
-    f(utils.close_func, {2}, {})
-  })),
+  s('inc', fmt([[
+  #include <{}>
+  ]], { i(1, 'stdio.h') })),
+
+  s('incc', fmt([[
+  #include "{}"
+  ]], { i(1) })),
 
   -- while loop
   s('while', fmta([[
