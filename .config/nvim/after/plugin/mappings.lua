@@ -101,7 +101,6 @@ keymap('n', '<Leader>7', '7gt')
 keymap('n', '<Leader>8', '8gt')
 keymap('n', '<Leader>9', '9gt')
 keymap('n', '<Leader>0', ':tablast<CR>')
-keymap('n', '<Leader>t', ':sp<CR><c-w>J:resize12<CR>:term<CR>')
 
 -- Telescope
 keymap('n', '<Leader>fg', fn.project_files)
