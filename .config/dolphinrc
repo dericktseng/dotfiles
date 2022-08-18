@@ -11,6 +11,9 @@ PreviewSize=96
 [KFileDialog Settings]
 Places Icons Auto-resize=false
 Places Icons Static Size=22
+Recent Files[$e]=libreoffice-impress.desktop,file:$HOME/Templates/template.ods,file:$HOME/Templates/template.odt,file:///usr/share/applications/libreoffice-impress.desktop
+Recent URLs[$e]=file:///usr/share/applications/,file:$HOME/Templates/,file:$HOME/,file:$HOME/Documents/
+detailViewIconSize=16
 
 [KPropertiesDialog]
 HDMI-A-0 Height 1920x1080=458

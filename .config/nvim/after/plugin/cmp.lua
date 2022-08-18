@@ -17,17 +17,9 @@ cmp.setup {
     }),
 
     -- luasnip integration
-    ['<C-H>'] = cmp.mapping(function(fallback)
-      if ls.choice_active() then
-        ls.change_choice(-1)
-      else
-        fallback()
-      end
-    end, {'i', 's'}),
-
     ['<C-L>'] = cmp.mapping(function(fallback)
       if ls.choice_active() then
-        ls.change_choice(1)
+        require('luasnip.extras.select_choice')()
       else
         fallback()
       end

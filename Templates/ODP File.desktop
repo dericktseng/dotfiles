@@ -1,0 +1,5 @@
+[Desktop Entry]
+Icon=application-vnd.oasis.opendocument.presentation
+Name=ODP File
+Type=Link
+URL[$e]=file:$HOME/Templates/template.odp

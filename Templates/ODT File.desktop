@@ -1,0 +1,5 @@
+[Desktop Entry]
+Icon=application-vnd.oasis.opendocument.text
+Name=ODT File
+Type=Link
+URL[$e]=file:$HOME/Templates/template.odt

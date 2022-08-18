@@ -1,4 +1,6 @@
 local utils = require('sniputils')
+local ls = require("luasnip")
+local isn = ls.indent_snippet_node
 
 return {
   s({trig='fref', name='figure reference'},
@@ -25,6 +27,12 @@ return {
     t('\\ldots')
   ),
 
+  s({trig='item', name='itemize'}, {
+    t({'\\begin{itemize}', '\t'}),
+    t('\\item '), i(1),
+    t({'', '\\end{itemize}'})
+  }),
+
   s({trig='enuma', name='enumerate (a)'}, {
     t({'\\begin{enumerate}[(a)]', '\t'}),
     t('\\item '), i(1),
@@ -42,6 +50,8 @@ return {
     t('\\item '), i(1),
     t({'', '\\end{enumerate}'})
   }),
+
+  s({trig='    itm', name='item'}, {t({'\\item '})}),
 
   s({trig='qt', name='Quotation'},
     fmta([[``<>'']], i(1))
