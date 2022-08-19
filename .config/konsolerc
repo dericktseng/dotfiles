@@ -30,7 +30,10 @@ State=AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAcAFMAUwBIAE0AYQBuAGEAZwBlAH
 ToolBarsMovable=Disabled
 eDP Window-Maximized 1920x1080=true
 eDP-1 Height 1920x1080=1040
-eDP-1 Width 1920x1080=1920
+eDP-1 Width 1920x1080=960
+
+[Notification Messages]
+CloseAllTabs=true
 
 [SearchSettings]
 SearchRegExpression=true

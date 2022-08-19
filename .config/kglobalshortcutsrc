@@ -3,9 +3,7 @@ update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd
 
 [ActivityManager]
 _k_friendly_name=Activity Manager
-switch-to-activity-4bc9cf04-def1-4f75-9233-cc936be4c7df=Meta+P,none,Switch to activity "C"
-switch-to-activity-644e5605-d59e-4231-8d98-6dfb12fc7b5c=Meta+I,none,Switch to activity "A"
-switch-to-activity-db03cb46-a8ca-4faa-b2da-c8c61565a1cd=Meta+O,none,Switch to activity "B"
+switch-to-activity-db03cb46-a8ca-4faa-b2da-c8c61565a1cd=Meta+O,none,Switch to activity "General"
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
@@ -266,11 +264,11 @@ view_zoom_out=Meta+-,Meta+-,Zoom Out
 
 [mediacontrol]
 _k_friendly_name=Media Controller
-mediavolumedown=none,,Media volume down
-mediavolumeup=none,,Media volume up
+mediavolumedown=none,none,Media volume down
+mediavolumeup=none,none,Media volume up
 nextmedia=Media Next,Media Next,Media playback next
 pausemedia=Media Pause,Media Pause,Pause media playback
-playmedia=none,,Play media playback
+playmedia=none,none,Play media playback
 playpausemedia=Media Play,Media Play,Play/Pause media playback
 previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback

@@ -1,16 +1,10 @@
-[Plugins]
-org.kde.ActivityManager.VirtualDesktopSwitchEnabled=true
-
 [activities]
-4bc9cf04-def1-4f75-9233-cc936be4c7df=C
-644e5605-d59e-4231-8d98-6dfb12fc7b5c=A
-db03cb46-a8ca-4faa-b2da-c8c61565a1cd=B
+db03cb46-a8ca-4faa-b2da-c8c61565a1cd=General
 
 [activities-icons]
-4bc9cf04-def1-4f75-9233-cc936be4c7df=preferences-desktop-gaming
-db03cb46-a8ca-4faa-b2da-c8c61565a1cd=sage-notebook
+db03cb46-a8ca-4faa-b2da-c8c61565a1cd=empty
 
 [main]
-currentActivity=4bc9cf04-def1-4f75-9233-cc936be4c7df
-runningActivities=644e5605-d59e-4231-8d98-6dfb12fc7b5c,db03cb46-a8ca-4faa-b2da-c8c61565a1cd
+currentActivity=db03cb46-a8ca-4faa-b2da-c8c61565a1cd
+runningActivities=db03cb46-a8ca-4faa-b2da-c8c61565a1cd
 stoppedActivities=

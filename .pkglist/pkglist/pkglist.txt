@@ -61,6 +61,7 @@ levien-inconsolata-fonts
 libX11-devel
 libXext-devel
 libXft
+libcurl-devel
 libevdev
 libimagequant
 libjpeg-devel
@@ -72,6 +73,7 @@ llvm
 lm_sensors
 make
 mathjax
+meson
 mozilla-openh264
 mpv
 mtools
@@ -102,6 +104,7 @@ python-sympy
 python3-notebook
 python3-pip
 qpwgraph
+rapidjson-devel
 ripgrep
 rlwrap
 rnnoise
