@@ -71,13 +71,13 @@ Color=24,108,96
 Color=36,193,224
 
 [Color7]
-Color=232,234,237
+Color=161,166,173
 
 [Color7Faint]
 Color=99,104,109
 
 [Color7Intense]
-Color=232,234,237
+Color=161,166,173
 
 [Foreground]
 Color=43,79,118
@@ -89,8 +89,11 @@ Color=239,240,241
 Color=43,79,118
 
 [General]
+Anchor=0.5,0.5
 Blur=false
 ColorRandomization=false
 Description=Google-Theme
+FillStyle=Tile
 Opacity=1
 Wallpaper=
+WallpaperOpacity=1

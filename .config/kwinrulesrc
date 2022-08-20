@@ -21,9 +21,9 @@ wmclassmatch=1
 
 [2]
 Description=Application settings for steam
-activity=4bc9cf04-def1-4f75-9233-cc936be4c7df
-activityrule=3
 clientmachine=localhost
+desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
+desktopsrule=3
 fullscreen=true
 maximizehoriz=true
 maximizevert=true
@@ -32,9 +32,9 @@ wmclassmatch=1
 
 [3]
 Description=Application settings for discord
-activity=4bc9cf04-def1-4f75-9233-cc936be4c7df
-activityrule=3
 clientmachine=localhost
+desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
+desktopsrule=3
 wmclass=discord
 wmclassmatch=1
 

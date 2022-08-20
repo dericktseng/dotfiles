@@ -61,5 +61,10 @@ cmp.setup {
   experimental = {
     native_menu = false,
     ghost_text = false,
-  }
+  },
+
+  window = {
+    completion = { border = 'rounded', },
+    documentation = { border = 'rounded', }
+  },
 }
