@@ -1,5 +1,12 @@
 #!/bin/bash
 
+function flame() {
+    perf record -F 99 -a -g -- $@
+    perf script | stackcollapse-perf.pl > out.perf-folded
+    flamegraph.pl out.perf-folded > perf.svg
+    firefox perf.svg
+}
+
 function cht() {
     defaultcolor=${2:-xcode}
     curl -s "cheat.sh/$1?style=$defaultcolor"

@@ -32,8 +32,10 @@ wmclassmatch=1
 
 [3]
 Description=Application settings for discord
+activity=947fba56-16b5-485f-a224-8a350ea9517d
+activityrule=3
 clientmachine=localhost
-desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
+desktops=c7a7d725-c38b-441f-9a78-e0983e55c507
 desktopsrule=3
 wmclass=discord
 wmclassmatch=1

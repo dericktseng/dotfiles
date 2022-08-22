@@ -92,6 +92,7 @@ pipewire-alsa
 pipewire-gstreamer
 pipewire-pulseaudio
 pkgconf
+plasma-desktop
 polkit-kde
 powertop
 profile-sync-daemon
