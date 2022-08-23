@@ -28,7 +28,7 @@ eDP-1 Width 1920x1080=1392
 
 [Open-with settings]
 CompletionMode=1
-History=konsole,noiseto,easy,disco,easye,termina,roxterm,lxter,terminator,termi,sync,alac,dol,thunar,dolp
+History=alacri,konsole,noiseto,easy,disco,easye,termina,roxterm,lxter,terminator,termi,sync,alac,dol,thunar
 
 [UiSettings]
 ColorScheme=Default
