@@ -18,6 +18,7 @@ ConfigVersion=1
 FocusFollowsMouse=true
 
 [MainWindow]
+HDMI-1 Window-Maximized 1920x1080=true
 HDMI-A-0 Height 1920x1080=1040
 HDMI-A-0 Width 1920x1080=1920
 HDMI-A-0 Window-Maximized 1920x1080=true

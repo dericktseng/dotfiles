@@ -4,6 +4,9 @@ Sources=fedora,fedora-testing,flathub
 [ResourcesModel]
 currentApplicationBackend=flatpak-backend
 
+[Software]
+UseOfflineUpdates=false
+
 [Window]
-geometry=124,70,1552,847
+geometry=215,106,1375,888
 visibility=2
