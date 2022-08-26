@@ -41,6 +41,8 @@ Description=Application settings for steam
 activity=947fba56-16b5-485f-a224-8a350ea9517d
 activityrule=3
 clientmachine=localhost
+desktops=efd77531-94f6-48f0-ae60-dcb174ff6b83
+desktopsrule=3
 wmclass=steam
 wmclassmatch=1
 
