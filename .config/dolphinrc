@@ -47,6 +47,3 @@ History=kdenl,neov,qt,neovim,kwrite,gthu,gth,qvi,matlab,kwri,gwe,firefo,mpv,okul
 
 [PreviewSettings]
 Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
-
-[Search]
-Location=Everywhere

@@ -17,6 +17,7 @@ klipperClearHistoryAskAgain=false
 
 [PlasmaViews][Panel 2]
 alignment=132
+floating=0
 panelOpacity=0
 panelVisibility=0
 

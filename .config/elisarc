@@ -5,6 +5,7 @@ RootPath[$e]=$HOME/Music
 detailViewIconSize=16
 
 [PlayerSettings]
+ScanAtStartup=false
 ShowSystemTrayIcon=true
 
 [Shortcuts]

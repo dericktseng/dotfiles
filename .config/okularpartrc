@@ -21,6 +21,7 @@ SplitterSizes=392,1527
 
 [PageView]
 BackgroundColor=222,222,222
+MouseMode=TextSelect
 UseCustomBackgroundColor=true
 ViewMode=Facing
 
