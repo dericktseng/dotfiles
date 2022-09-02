@@ -2,18 +2,17 @@
 update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
 
 [1]
-Description=Window settings for alacritty
-activity=4bc9cf04-def1-4f75-9233-cc936be4c7df
+Description=Application settings for elisa
+activity=00000000-0000-0000-0000-000000000000
+activityrule=3
 clientmachine=localhost
+desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
+desktopsrule=3
 fullscreen=true
 ignoregeometry=true
-ignoregeometryrule=3
 maximizehoriz=true
-maximizehorizrule=3
 maximizevert=true
-maximizevertrule=3
-types=1
-wmclass=alacritty
+wmclass=elisa
 wmclassmatch=1
 
 [19572da2-77a6-4e97-81e4-4092ed8dec4f]
@@ -25,25 +24,29 @@ wmclass=discord
 wmclassmatch=1
 
 [2]
-Description=Application settings for mpv
-blockcompositingrule=2
+Description=Window settings for alacritty
 clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
 fullscreen=true
-fullscreenrule=3
+ignoregeometry=true
+ignoregeometryrule=3
 maximizehoriz=true
+maximizehorizrule=3
 maximizevert=true
-wmclass=mpv
+maximizevertrule=3
+types=1
+wmclass=alacritty
 wmclassmatch=1
 
 [3]
-Description=Application settings for steam
+Description=Application settings for mpv
 activity=947fba56-16b5-485f-a224-8a350ea9517d
-activityrule=3
+blockcompositingrule=2
 clientmachine=localhost
 desktops=efd77531-94f6-48f0-ae60-dcb174ff6b83
-desktopsrule=3
-wmclass=steam
+fullscreen=true
+fullscreenrule=3
+wmclass=mpv
 wmclassmatch=1
 
 [3761faa3-cb59-4c39-9bd6-2c7a60cb1604]
@@ -55,13 +58,13 @@ wmclass=feh
 wmclassmatch=1
 
 [4]
-Description=Application settings for discord
+Description=Application settings for steam
 activity=947fba56-16b5-485f-a224-8a350ea9517d
 activityrule=3
 clientmachine=localhost
-desktops=c7a7d725-c38b-441f-9a78-e0983e55c507
+desktops=efd77531-94f6-48f0-ae60-dcb174ff6b83
 desktopsrule=3
-wmclass=discord
+wmclass=steam
 wmclassmatch=1
 
 [4fc0947f-39d0-40b4-8a21-b7472875e903]
@@ -77,10 +80,11 @@ wmclassmatch=1
 
 [5]
 Description=Application settings for discord
-activity=4bc9cf04-def1-4f75-9233-cc936be4c7df
+activity=947fba56-16b5-485f-a224-8a350ea9517d
 activityrule=3
 clientmachine=localhost
-desktops=fc17daa3-ffe4-4f8f-bf08-7f24707cff07
+desktops=c7a7d725-c38b-441f-9a78-e0983e55c507
+desktopsrule=3
 fullscreen=true
 maximizehoriz=true
 maximizevert=true
@@ -140,8 +144,8 @@ wmclass=termite
 wmclassmatch=1
 
 [General]
-count=4
-rules=1,2,3,4
+count=5
+rules=1,2,3,4,5
 
 [adb38742-80ef-4119-9a2d-cdd6cdcb1a09]
 Description=Application settings for konsole
@@ -149,6 +153,16 @@ clientmachine=localhost
 noborder=true
 noborderrule=3
 wmclass=konsole
+wmclassmatch=1
+
+[c478d45f-9e75-4425-a904-835c5f3a8e65]
+Description=Application settings for elisa
+activity=00000000-0000-0000-0000-000000000000
+activityrule=3
+clientmachine=localhost
+desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
+desktopsrule=3
+wmclass=elisa
 wmclassmatch=1
 
 [c63d481b-630e-4604-a509-0ed83836e1b4]
