@@ -1196,6 +1196,9 @@ Sort reversed[$d]
 Speedbar Width[$d]
 View Style[$d]
 
+[KScreen]
+ScreenScaleFactors[$d]
+
 [KShortcutsDialog Settings]
 Dialog Size[$d]
 
