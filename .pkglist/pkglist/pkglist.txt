@@ -16,6 +16,7 @@ clang-tools-extra
 dejavu-fonts-all
 djvulibre
 dkms
+elisa-player
 fakeroot
 fcitx5-mozc
 fd-find

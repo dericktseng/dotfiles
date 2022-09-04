@@ -10,6 +10,8 @@ HDMI-A-1 Height 1920x1080=458
 HDMI-A-1 Width 1920x1080=410
 
 [MainWindow]
+HDMI-1 XPosition 1920x1080=450
+HDMI-1 YPosition 1920x1080=170
 HDMI-A-0 Height 1920x1080=907
 HDMI-A-0 Width 1920x1080=1473
 HDMI-A-0 XPosition 1920x1080=185
@@ -28,7 +30,7 @@ eDP-1 Width 1920x1080=1392
 
 [Open-with settings]
 CompletionMode=1
-History=alacri,konsole,noiseto,easy,disco,easye,termina,roxterm,lxter,terminator,termi,sync,alac,dol,thunar
+History=discord,alacri,konsole,noiseto,easy,disco,easye,termina,roxterm,lxter,terminator,termi,sync,alac,dol
 
 [UiSettings]
 ColorScheme=Default

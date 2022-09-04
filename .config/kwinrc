@@ -59,6 +59,7 @@ enableSpreadLayout=false
 enableStairLayout=false
 floatingTitle=System Settings
 ignoreActivity=A,C
+ignoreClass=yakuake,spectacle,Conky,zoom,discover
 keepFloatAbove=false
 preventProtrusion=false
 

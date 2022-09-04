@@ -5,4 +5,5 @@ update_info=kxkb.upd:remove-empty-lists,kxkb.upd:add-back-resetoptions,kxkb_vari
 LayoutList=us
 Options=caps:swapescape
 ResetOldOptions=true
+SwitchMode=WinClass
 Use=true

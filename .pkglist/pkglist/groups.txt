@@ -2,3 +2,4 @@ development-tools
 c-development
 kde-desktop-environment
 kde-desktop
+fonts
