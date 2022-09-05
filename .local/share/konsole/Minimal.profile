@@ -19,6 +19,8 @@ TerminalMargin=0
 AllowEscapedLinks=false
 OpenLinksByDirectClickEnabled=true
 TextEditorCmd=1
+TrimLeadingSpacesInSelectedText=false
+TrimTrailingSpacesInSelectedText=false
 UnderlineFilesEnabled=true
 
 [Scrolling]
@@ -26,7 +28,9 @@ HistoryMode=0
 ScrollBarPosition=2
 
 [Terminal Features]
+BidiRenderingEnabled=false
 BlinkingCursorEnabled=false
+FlowControlEnabled=false
 PeekPrimaryKeySequence=Shift+Ins
 ReverseUrlHints=true
 UrlHintsModifiers=201326592

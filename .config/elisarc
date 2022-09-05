@@ -1,5 +1,5 @@
 [ElisaFileIndexer]
-RootPath[$e]=$HOME/Music
+RootPath[$e]=/run/media/derickwtseng/3396c424-9e36-40ad-8aca-c4c2146c7102/Music
 
 [KFileDialog Settings]
 detailViewIconSize=16
