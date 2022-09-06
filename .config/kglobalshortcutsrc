@@ -7,11 +7,6 @@ switch-to-activity-884b7bf3-ccba-4560-867b-dc0726837c67=Meta+I,none,Switch to ac
 switch-to-activity-947fba56-16b5-485f-a224-8a350ea9517d=Meta+P,none,Switch to activity "C"
 switch-to-activity-db03cb46-a8ca-4faa-b2da-c8c61565a1cd=Meta+O,none,Switch to activity "B"
 
-[Alacritty.desktop]
-New=none,none,New Terminal
-_k_friendly_name=Alacritty
-_launch=Meta+Return,none,Alacritty
-
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
 Switch keyboard layout to Japanese=none,none,Switch keyboard layout to Japanese
@@ -288,7 +283,7 @@ _launch=Meta+N,Meta+E,Dolphin
 NewTab=none,none,Open a New Tab
 NewWindow=none,none,Open a New Window
 _k_friendly_name=Konsole
-_launch=none,Ctrl+Alt+T,Konsole
+_launch=Meta+Return,Ctrl+Alt+T,Konsole
 
 [org.kde.krunner.desktop]
 RunClipboard=Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents
