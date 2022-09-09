@@ -114,7 +114,7 @@ return {
   s(
     {trig='code', name='insert code'},
     fmta(
-      [[\lstinputlisting[language=<>,basicstyle=\footnotesize]<>]],
+      [[\lstinputlisting[language=<>,basicstyle=\footnotesize]{<>}]],
       {i(1, 'Python'), i(2)}
     )
   ),

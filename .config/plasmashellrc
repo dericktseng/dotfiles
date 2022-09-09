@@ -8,6 +8,9 @@ HDMI-A-0 Width 1920x1080=748
 [General]
 Number of Actions=0
 
+[KFileDialog Settings]
+detailViewIconSize=16
+
 [KPropertiesDialog]
 HDMI-A-0 Height 1920x1080=478
 HDMI-A-0 Width 1920x1080=377

@@ -57,6 +57,7 @@ enableFloatingLayout=true
 enableSpiralLayout=false
 enableSpreadLayout=false
 enableStairLayout=false
+floatingClass=x2goclient,gimp
 floatingTitle=System Settings
 ignoreActivity=A,C
 ignoreClass=yakuake,spectacle,Conky,zoom,discover

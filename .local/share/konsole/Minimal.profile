@@ -1,4 +1,6 @@
 [Appearance]
+AntiAliasFonts=true
+BoldIntense=true
 ColorScheme=Google-Theme
 Font=Fira Code,12,-1,5,50,0,0,0,0,0
 TabColor=255,255,255,0
@@ -29,9 +31,10 @@ HistoryMode=0
 ScrollBarPosition=2
 
 [Terminal Features]
-BidiRenderingEnabled=false
+BellMode=3
+BidiRenderingEnabled=true
 BlinkingCursorEnabled=false
-FlowControlEnabled=false
+FlowControlEnabled=true
 PeekPrimaryKeySequence=Shift+Ins
 ReverseUrlHints=true
 UrlHintsModifiers=201326592
