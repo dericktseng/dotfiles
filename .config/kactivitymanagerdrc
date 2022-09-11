@@ -1,17 +1,10 @@
-[Plugins]
-org.kde.ActivityManager.VirtualDesktopSwitchEnabled=true
-
 [activities]
 884b7bf3-ccba-4560-867b-dc0726837c67=A
-947fba56-16b5-485f-a224-8a350ea9517d=C
-db03cb46-a8ca-4faa-b2da-c8c61565a1cd=B
 
 [activities-icons]
 884b7bf3-ccba-4560-867b-dc0726837c67=activities
-947fba56-16b5-485f-a224-8a350ea9517d=preferences-desktop-gaming
-db03cb46-a8ca-4faa-b2da-c8c61565a1cd=accessories-calculator
 
 [main]
-currentActivity=db03cb46-a8ca-4faa-b2da-c8c61565a1cd
-runningActivities=db03cb46-a8ca-4faa-b2da-c8c61565a1cd
+currentActivity=884b7bf3-ccba-4560-867b-dc0726837c67
+runningActivities=884b7bf3-ccba-4560-867b-dc0726837c67
 stoppedActivities=

@@ -4,8 +4,11 @@ update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd
 [ActivityManager]
 _k_friendly_name=Activity Manager
 switch-to-activity-884b7bf3-ccba-4560-867b-dc0726837c67=Meta+I,none,Switch to activity "A"
-switch-to-activity-947fba56-16b5-485f-a224-8a350ea9517d=Meta+P,none,Switch to activity "C"
-switch-to-activity-db03cb46-a8ca-4faa-b2da-c8c61565a1cd=Meta+O,none,Switch to activity "B"
+
+[Alacritty.desktop]
+New=none,none,New Terminal
+_k_friendly_name=Alacritty
+_launch=Meta+Return,none,Alacritty
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
@@ -66,7 +69,7 @@ _k_friendly_name=Accessibility
 [kcm_touchpad]
 Disable Touchpad=Touchpad Off,Touchpad Off,Disable Touchpad
 Enable Touchpad=Touchpad On,Touchpad On,Enable Touchpad
-Toggle Touchpad=Touchpad Toggle,Touchpad Toggle,Toggle Touchpad
+Toggle Touchpad=Touchpad Toggle,Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku,Toggle Touchpad
 _k_friendly_name=Touchpad
 
 [kded5]
@@ -283,7 +286,7 @@ _launch=Meta+N,Meta+E,Dolphin
 NewTab=none,none,Open a New Tab
 NewWindow=none,none,Open a New Window
 _k_friendly_name=Konsole
-_launch=Meta+Return,Ctrl+Alt+T,Konsole
+_launch=none,Ctrl+Alt+T,Konsole
 
 [org.kde.krunner.desktop]
 RunClipboard=Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents
@@ -318,7 +321,7 @@ Turn Off Screen=none,none,Turn Off Screen
 _k_friendly_name=Power Management
 
 [plasmashell]
-_k_friendly_name=Plasma
+_k_friendly_name=Activity switching
 activate task manager entry 1=Meta+1,Meta+1,Activate Task Manager Entry 1
 activate task manager entry 10=Meta+0,Meta+0,Activate Task Manager Entry 10
 activate task manager entry 2=Meta+2,Meta+2,Activate Task Manager Entry 2

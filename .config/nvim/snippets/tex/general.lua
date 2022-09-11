@@ -64,7 +64,7 @@ return {
   s({trig='dm', name='Math Env'}, {
     t({'\\[', '\t'}),
     i(1),
-    t({'', '.\\]'}),
+    t({'', '\\]'}),
   }),
 
   s({trig='si', name='siunitx'},

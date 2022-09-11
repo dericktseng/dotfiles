@@ -57,10 +57,9 @@ enableFloatingLayout=true
 enableSpiralLayout=false
 enableSpreadLayout=false
 enableStairLayout=false
-floatingClass=x2goclient,gimp
+floatingClass=x2goclient,gimp,discord,steam,zoom,discover,steam_app_0
 floatingTitle=System Settings
-ignoreActivity=A,C
-ignoreClass=yakuake,spectacle,Conky,zoom,discover
+ignoreClass=yakuake,spectacle,Conky
 keepFloatAbove=false
 preventProtrusion=false
 
@@ -81,6 +80,14 @@ active=-1
 count=0
 
 [SubSession: 881c27c6-3a0d-4dd6-8725-341ef8289913]
+active=-1
+count=0
+
+[SubSession: 947fba56-16b5-485f-a224-8a350ea9517d]
+active=-1
+count=0
+
+[SubSession: db03cb46-a8ca-4faa-b2da-c8c61565a1cd]
 active=-1
 count=0
 

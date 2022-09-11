@@ -1,5 +1,6 @@
 local utils = require'sniputils'
 local captured = utils.captured
+local captured_multi = utils.captured_multi
 local mathenv = utils.mathenv
 
 -- autosnippets
@@ -46,6 +47,12 @@ local autosnips = {
 
   s({trig='=[%s]*([^=]+)bex', name='boxed until equals after', regTrig=true},
     fmta([[= \boxed{<>}]], {f(captured,{})})),
+
+  s({trig='^(%s*)(.+)box', name='boxed line', regTrig=true},
+    fmta([[<>\boxed{<>}]], {
+      f(captured, {}, {user_args={1}}),
+      f(captured, {}, {user_args={2}}),
+    })),
 
   s({trig='([%a])wt', name='wide tilde after', regTrig=true},
     fmta([[\widetilde{<>}]], {f(captured,{})}), {condition=mathenv}),
