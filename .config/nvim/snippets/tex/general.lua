@@ -114,7 +114,7 @@ return {
   s(
     {trig='code', name='insert code'},
     fmta(
-      [[\lstinputlisting[language=<>,basicstyle=\footnotesize]{<>}]],
+      [[\lstinputlisting[language=<>]{<>}]],
       {i(1, 'Python'), i(2)}
     )
   ),
@@ -199,14 +199,16 @@ return {
     fmta([[
       \begin{table}[htpb]
       <>\centering
-      <>\begin{tabular}{<>}
+      <>\begin{tabular}{|<>|}
+      <><>\hline
       <><><>
+      <><>\hline
       <>\end{tabular}
       <>\caption{<>}
       <>\label{tab:<>}
       \end{table}
     ]],
-    {t('\t'), t('\t'), i(2), t('\t'), t('\t'), i(1), t('\t'), t('\t'), i(3), t('\t'), i(4)})
+    {t('\t'), t('\t'), i(2), t('\t'), t('\t'), t('\t'), t('\t'), i(1), t('\t'), t('\t') ,t('\t'), t('\t'), i(3), t('\t'), i(4)})
   ),
 
   s(
@@ -240,7 +242,7 @@ return {
           \usepackage{chemformula}
           % \usepackage{pdfpages}
 
-          \lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,showstringspaces=false}
+          \lstset{basicstyle=\footnotesize,breaklines=true,showstringspaces=false,frame=single}
           %}}}
 
           % \setlength{\parindent}{0em}
