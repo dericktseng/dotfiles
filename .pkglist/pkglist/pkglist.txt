@@ -1,6 +1,5 @@
 acpi
 aha
-alacritty
 alsa-utils
 aria2
 autoconf
@@ -76,6 +75,7 @@ linux-firmware
 lldb
 llvm
 lm_sensors
+lxterminal
 make
 mathjax
 meson

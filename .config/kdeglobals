@@ -142,8 +142,8 @@ History Items[$e]=file:$HOME/Desktop/gaming,file:///run/media/derickwtseng/3396c
 [General]
 BrowserApplication=firefox.desktop
 ColorSchemeHash=0d37ac7d257c7643ff5540889d5368b99875ad6b
-TerminalApplication=alacritty
-TerminalService=Alacritty.desktop
+TerminalApplication=lxterminal
+TerminalService=lxterminal.desktop
 toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 
 [KDE]
