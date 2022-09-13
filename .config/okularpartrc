@@ -19,10 +19,11 @@ ttsVoice=English (America)+grandma
 
 [Main View]
 ShowLeftPanel=false
-SplitterSizes=392,1527
+SplitterSizes=324,635
 
 [PageView]
 BackgroundColor=207,207,207
+MouseMode=TextSelect
 UseCustomBackgroundColor=true
 
 [Reviews]

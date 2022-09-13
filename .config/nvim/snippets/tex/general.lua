@@ -72,9 +72,13 @@ return {
   ),
 
   s(
-    {trig='sec', name='section'},
-    fmta([[\section{<>}]], i(1))
-  ),
+    {trig='(s*)sec', name='section', regTrig=true},
+    fmta([[\<>section{<>}]], {
+      f(function(args, snip)
+        return snip.captures[1]:gsub('s', 'sub');
+      end),
+      i(1)
+  })),
 
   s(
     {trig='al', name='align environment'},
