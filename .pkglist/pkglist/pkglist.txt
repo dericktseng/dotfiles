@@ -1,3 +1,4 @@
+xfce4-terminal
 acpi
 aha
 alsa-utils
@@ -75,7 +76,6 @@ linux-firmware
 lldb
 llvm
 lm_sensors
-lxterminal
 make
 mathjax
 meson
