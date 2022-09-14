@@ -71,6 +71,14 @@ return {
     fmta([[\SI{<>}{<>}]], {i(1), i(2)})
   ),
 
+  s({trig='np', name='newpage'}, t([[\newpage]])),
+
+  s({trig='bib', name='bibliography'}, {
+    t({[[\newpage]], ''}),
+    t({[[\bibliographystyle{plain}]], ''}),
+    t({[[\bibliography{refs.bib}]]})
+  }),
+
   s(
     {trig='(s*)sec', name='section', regTrig=true},
     fmta([[\<>section{<>}]], {
