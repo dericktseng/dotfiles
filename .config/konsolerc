@@ -19,11 +19,10 @@ FocusFollowsMouse=true
 
 [MainWindow]
 HDMI-1 Window-Maximized 1920x1080=true
-HDMI-A-0 Height 1920x1080=1040
-HDMI-A-0 Width 1920x1080=1920
-HDMI-A-0 Window-Maximized 1920x1080=true
-HDMI-A-0 XPosition 1920x1080=0
-HDMI-A-0 YPosition 1920x1080=0
+HDMI-A-0 Height 1920x1080=695
+HDMI-A-0 Width 1920x1080=1315
+HDMI-A-0 XPosition 1920x1080=227
+HDMI-A-0 YPosition 1920x1080=58
 HDMI-A-1 Height 1920x1080=847
 HDMI-A-1 Width 1920x1080=1755
 MenuBar=Disabled

@@ -2,7 +2,7 @@
 GlobalViewProps=false
 RememberOpenedTabs=false
 Version=201
-ViewPropsTimestamp=2022,3,12,17,14,47.835
+ViewPropsTimestamp=2022,9,14,2,29,18.016
 
 [IconsMode]
 IconSize=64
@@ -50,3 +50,7 @@ Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvut
 
 [Search]
 Location=Everywhere
+
+[ViewPropertiesDialog]
+HDMI-A-0 Height 1920x1080=464
+HDMI-A-0 Width 1920x1080=375
