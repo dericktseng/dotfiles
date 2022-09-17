@@ -107,7 +107,6 @@ python-scipy
 python-sympy
 python3-notebook
 python3-pip
-qpwgraph
 rapidjson-devel
 ripgrep
 rlwrap

@@ -7,11 +7,10 @@ clipboardGroup=PostScreenshotCopyImage
 onLaunchAction=UseLastUsedCapturemode
 
 [GuiConfig]
-captureMode=5
-cropRegion=844,608,240,202
-window-position=447,368
+captureMode=3
+window-position=477,428
 
 [Save]
 defaultSaveImageFormat=JPG
-lastSaveLocation=file:///home/derickwtseng/Pictures/00-05-50_2022_09_13.jpg
+lastSaveLocation=file:///home/derickwtseng/Pictures/18-42-47_2022_09_16.jpg
 saveFilenameFormat=%H-%m-%S_%Y_%M_%D

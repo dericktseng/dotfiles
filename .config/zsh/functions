@@ -17,6 +17,12 @@ function fixpk() {
     sudo pkcon refresh force -c -1 -v -p
 }
 
+function r() {
+    for f in "$@"; do
+        mv -f "$f" /tmp
+    done
+}
+
 function zsh_directory_name() {
     emulate -L zsh
     [[ $1 == d ]] || return
