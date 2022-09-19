@@ -252,6 +252,8 @@ return {
           \usepackage{multicol}
           \usepackage{listings}
           \usepackage{chemformula}
+          % \usepackage{caption}
+          % \usepackage{subcaption}
           % \usepackage{pdfpages}
 
           \lstset{basicstyle=\footnotesize,breaklines=true,showstringspaces=false,frame=single}

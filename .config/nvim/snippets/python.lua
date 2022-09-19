@@ -1,7 +1,3 @@
-local utils = require'sniputils'
-
-isn = require'luasnip'.indent_snippet_node
-
 -- python comment styles for function using a restorenode
 local inline_comment = sn(nil, {t('\t"""'), r(1, 'doc'), t('"""')})
 local block_comment = sn(nil, fmta([[
@@ -12,6 +8,7 @@ local block_comment = sn(nil, fmta([[
 
 -- regular (non-auto) snippets
 local regularsnips = {
+
   -- function definition
   s('def', fmta([[
     def <>(<>):
