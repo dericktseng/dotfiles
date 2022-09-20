@@ -123,14 +123,14 @@
   <Action name="hamburger_menu"/>
  </ToolBar>
  <ActionProperties scheme="Default">
-  <Action shortcut="Tab" priority="0" name="show_leftpanel"/>
+  <Action shortcut="Tab" name="show_leftpanel" priority="0"/>
   <Action shortcut="G" name="first_page"/>
   <Action shortcut="" name="fit_window_to_page"/>
   <Action shortcut="PgDown" name="go_next"/>
   <Action shortcut="PgUp" name="go_previous"/>
   <Action shortcut="0" name="view_actual_size"/>
   <Action shortcut="A" name="view_fit_to_page"/>
-  <Action shortcut="S" name="view_fit_to_width"/>
+  <Action shortcut="W" name="view_fit_to_width"/>
   <Action shortcut="Shift+R" name="view_orientation_rotate_ccw"/>
   <Action shortcut="R" name="view_orientation_rotate_cw"/>
   <Action shortcut="" name="view_scroll_down"/>
@@ -138,10 +138,10 @@
   <Action shortcut="=; +" name="view_zoom_in"/>
   <Action shortcut="-" name="view_zoom_out"/>
   <Action shortcut="D" name="view_render_mode_facing"/>
-  <Action shortcut="Shift+D" name="view_render_mode_single"/>
+  <Action shortcut="S" name="view_render_mode_single"/>
   <Action shortcut="Shift+B" name="bookmark_add"/>
   <Action shortcut="Ctrl+N" name="show_bottombar"/>
-  <Action shortcut="W" name="view_auto_fit"/>
+  <Action shortcut="" name="view_auto_fit"/>
   <Action shortcut="Ctrl+O" name="go_document_back"/>
   <Action shortcut="Ctrl+I" name="go_document_forward"/>
   <Action shortcut="Ctrl+2" name="mouse_textselect"/>
@@ -149,7 +149,7 @@
   <Action shortcut="Shift+G" name="last_page"/>
   <Action shortcut="Alt+8; Ctrl+4" name="annotation_freehand_line"/>
  </ActionProperties>
- <ToolBar newline="true" name="annotationToolBar" hidden="true" iconText="icononly">
+ <ToolBar newline="true" iconText="icononly" hidden="true" name="annotationToolBar">
   <text>Annotation Toolbar</text>
   <Action name="annotation_highlighter"/>
   <Action name="annotation_underline"/>
@@ -174,7 +174,7 @@
   <Spacer/>
   <Action name="hide_annotation_toolbar"/>
  </ToolBar>
- <ToolBar newline="true" name="quickAnnotationToolBar" hidden="true" iconText="icononly" iconSize="32" position="right">
+ <ToolBar iconSize="32" newline="true" iconText="icononly" hidden="true" name="quickAnnotationToolBar" position="right">
   <text>Quick Annotation Toolbar</text>
   <Action name="quick_annotation_action_bar"/>
  </ToolBar>
