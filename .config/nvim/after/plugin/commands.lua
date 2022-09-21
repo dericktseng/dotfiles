@@ -6,6 +6,15 @@ vim.api.nvim_create_autocmd('TermOpen', {
   pattern = '*'
 })
 
+vim.api.nvim_create_autocmd('TextYankPost', {
+  group = groupnum,
+  desc = 'Hightlight selection on yank',
+  pattern = '*',
+  callback = function()
+    vim.highlight.on_yank { higroup = 'IncSearch', timeout = 200 }
+  end,
+})
+
 -- Cwd to change working directory to the parent of the current buffer
 vim.api.nvim_create_user_command('Cwd', 'cd %:h', {})
 
