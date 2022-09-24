@@ -10,3 +10,7 @@ Seen=true
 [Applications][org.kde.spectacle]
 ShowBadges=false
 ShowInHistory=false
+
+[Notifications]
+PopupPosition=BottomRight
+PopupTimeout=2000
