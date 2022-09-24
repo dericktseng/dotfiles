@@ -7,7 +7,7 @@ local mathenv = utils.mathenv
 local autosnips = {
   s('//', fmta([[\frac{<>}{<>}]], {i(1), i(2)}), {condition=mathenv}),
 
-  s({trig='([^$%s]+)/', name='fancyfrac 1', regTrig=true},
+  s({trig='([^$={}%s])/', name='fancyfrac 1', regTrig=true},
     fmta([[\frac{<>}{<>}]], {f(captured,{}), i(1)}), {condition=mathenv}),
 
   s({trig='([^%s])sr', name='squared', regTrig=true, wordTrig=false},
