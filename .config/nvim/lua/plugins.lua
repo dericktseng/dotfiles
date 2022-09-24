@@ -38,10 +38,11 @@ return require('packer').startup(function(use)
   use 'MetriC-DT/balance-theme.nvim'
   use 'L3MON4D3/LuaSnip'
   use 'nvim-lualine/lualine.nvim'
-  use 'echasnovski/mini.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'wbthomason/packer.nvim'
   use 'lewis6991/impatient.nvim'
+  use 'windwp/nvim-autopairs'
+  use 'kylechui/nvim-surround'
 
   -- non lua plugins
   use {

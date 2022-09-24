@@ -65,14 +65,6 @@ keymap('x', 'P', 'p')
 keymap('n', '<C-G>', [[:silent exec '!gimp ' . expand('<cfile>') . ' &'<CR>]])
 keymap('n', '<C-H>', [[:silent exec '!inkscape ' . expand('<cfile>') . ' &'<CR>]])
 
--- add surrounding brackets, quotes, etc
-keymap('x', '"', [[<esc>`>a"<esc>`<i"<esc>%]])
-keymap('x', "'", [[<esc>`>a'<esc>`<i'<esc>%]])
-keymap('x', '(', [[<esc>`>a)<esc>`<i(<esc>%]])
-keymap('x', '[', [[<esc>`>a]<esc>`<i[<esc>%]])
-keymap('x', '{', [[<esc>`>a}<esc>`<i{<esc>%]])
-keymap('x', '|', [[<esc>`>a|<esc>`<i|<esc>%]])
-
 -- vim easy align
 keymap('x', 'ga', '<Plug>(EasyAlign)')
 keymap('n', 'ga', '<Plug>(EasyAlign)')
