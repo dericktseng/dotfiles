@@ -1,13 +1,12 @@
 local utils = require'sniputils'
 local captured = utils.captured
-local captured_multi = utils.captured_multi
 local mathenv = utils.mathenv
 
 -- autosnippets
 local autosnips = {
-  s('//', fmta([[\frac{<>}{<>}]], {i(1), i(2)}), {condition=mathenv}),
+  s({ trig='//', name='fraction', priority=1001 }, fmta([[\frac{<>}{<>}]], {i(1), i(2)}), {condition=mathenv}),
 
-  s({trig='([^$={}%s])/', name='fancyfrac 1', regTrig=true},
+  s({ trig='([^$={}%s\\])/', name='fancyfrac 1', regTrig=true, priority=1000 },
     fmta([[\frac{<>}{<>}]], {f(captured,{}), i(1)}), {condition=mathenv}),
 
   s({trig='([^%s])sr', name='squared', regTrig=true, wordTrig=false},

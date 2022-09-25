@@ -1,5 +1,7 @@
 [General]
-Version=5.24.2
+KeepClipboardContents=false
+SelectionTextOnly=false
+Version=5.25.5
 
 [Notification Messages]
 klipperClearHistoryAskAgain=false
