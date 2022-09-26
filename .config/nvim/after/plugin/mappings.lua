@@ -21,6 +21,14 @@ keymap('n', '<Leader>R', [[:so %<CR>:echo 'reloaded file'<CR>]], {silent=false})
 -- keymaps
 keymap('t', '<ESC>', [[<C-\><C-N>]])
 
+-- surrounding delimiters
+keymap('x', '{', [=[<ESC>`<i{<ESC>`>a}<ESC>]=])
+keymap('x', '(', [=[<ESC>`<i(<ESC>`>a)<ESC>]=])
+keymap('x', '"', [=[<ESC>`<i"<ESC>`>a"<ESC>]=])
+keymap('x', "'", [=[<ESC>`<i'<ESC>`>a'<ESC>]=])
+keymap('x', '|', [=[<ESC>`<i|<ESC>`>a|<ESC>]=])
+keymap('x', '[', [=[<ESC>`<i[<ESC>`>a]<ESC>]=])
+
 keymap('n', '<C-L>', [[:nohl<CR><C-L>]])
 keymap('n', 'k', fn.nav_up, {expr=true})
 keymap('n', 'j', fn.nav_down, {expr=true})
