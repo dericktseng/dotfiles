@@ -70,12 +70,14 @@ libimagequant
 libjpeg-devel
 libva
 libva-utils
+libva-vdpau-driver
 linux-firmware
 lldb
 llvm
 lm_sensors
 make
 mathjax
+mesa-vdpau-drivers
 meson
 mozilla-openh264
 mpv
@@ -128,6 +130,7 @@ unrar
 unzip
 usbutils
 util-linux-user
+vdpauinfo
 wget
 wl-clipboard
 wmctrl
