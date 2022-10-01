@@ -11,6 +11,8 @@ Seen=true
 ShowBadges=false
 ShowInHistory=false
 
+[Applications][org.qbittorrent.qBittorrent]
+Seen=true
+
 [Notifications]
 PopupPosition=BottomRight
-PopupTimeout=2000

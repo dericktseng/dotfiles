@@ -126,8 +126,6 @@
   <Action shortcut="Tab" name="show_leftpanel" priority="0"/>
   <Action shortcut="G" name="first_page"/>
   <Action shortcut="" name="fit_window_to_page"/>
-  <Action shortcut="PgDown" name="go_next"/>
-  <Action shortcut="PgUp" name="go_previous"/>
   <Action shortcut="0" name="view_actual_size"/>
   <Action shortcut="A" name="view_fit_to_page"/>
   <Action shortcut="W" name="view_fit_to_width"/>
@@ -141,15 +139,18 @@
   <Action shortcut="S" name="view_render_mode_single"/>
   <Action shortcut="Shift+B" name="bookmark_add"/>
   <Action shortcut="Ctrl+N" name="show_bottombar"/>
-  <Action shortcut="" name="view_auto_fit"/>
   <Action shortcut="Ctrl+O" name="go_document_back"/>
   <Action shortcut="Ctrl+I" name="go_document_forward"/>
   <Action shortcut="Ctrl+2" name="mouse_textselect"/>
   <Action shortcut="" name="mouse_zoom"/>
   <Action shortcut="Shift+G" name="last_page"/>
   <Action shortcut="Alt+8; Ctrl+4" name="annotation_freehand_line"/>
+  <Action shortcut="PgDown" name="view_scroll_page_down"/>
+  <Action shortcut="PgUp" name="view_scroll_page_up"/>
+  <Action shortcut="Space" name="go_next"/>
+  <Action shortcut="Shift+Space" name="go_previous"/>
  </ActionProperties>
- <ToolBar newline="true" iconText="icononly" hidden="true" name="annotationToolBar">
+ <ToolBar hidden="true" newline="true" name="annotationToolBar" iconText="icononly">
   <text>Annotation Toolbar</text>
   <Action name="annotation_highlighter"/>
   <Action name="annotation_underline"/>
@@ -174,7 +175,7 @@
   <Spacer/>
   <Action name="hide_annotation_toolbar"/>
  </ToolBar>
- <ToolBar iconSize="32" newline="true" iconText="icononly" hidden="true" name="quickAnnotationToolBar" position="right">
+ <ToolBar iconSize="32" hidden="true" newline="true" position="right" name="quickAnnotationToolBar" iconText="icononly">
   <text>Quick Annotation Toolbar</text>
   <Action name="quick_annotation_action_bar"/>
  </ToolBar>
