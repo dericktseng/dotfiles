@@ -17,10 +17,16 @@ Description=Application settings for lutris
 clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
 desktopsrule=3
-ignoregeometry=true
-placement=10
 title=Alacritty
 wmclass=lutris
+wmclassmatch=1
+
+[10]
+Description=Application settings for discord
+clientmachine=localhost
+desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
+desktopsrule=3
+wmclass=discord
 wmclassmatch=1
 
 [19572da2-77a6-4e97-81e4-4092ed8dec4f]
@@ -62,6 +68,7 @@ fullscreen=true
 ignoregeometry=true
 maximizehoriz=true
 maximizevert=true
+placement=10
 strictgeometryrule=2
 title=Alacritty
 wmclass=lxterminal
@@ -81,7 +88,6 @@ clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
 desktopsrule=3
 fullscreen=true
-strictgeometry=true
 title=Alacritty
 wmclass=discord-screenaudio
 wmclassmatch=1
@@ -156,6 +162,7 @@ clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
 fullscreen=true
 fullscreenrule=3
+strictgeometry=true
 title=Alacritty
 wmclass=mpv
 wmclassmatch=1
@@ -190,6 +197,8 @@ Description=Application settings for steam
 clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
 desktopsrule=3
+fullscreen=true
+title=Alacritty
 wmclass=steam
 wmclassmatch=1
 
@@ -288,6 +297,14 @@ activity=4bc9cf04-def1-4f75-9233-cc936be4c7df
 activityrule=3
 clientmachine=localhost
 wmclass=discord
+wmclassmatch=1
+
+[ce35945b-fc4c-4ca1-a384-2160465ec835]
+Description=Application settings for ffxii_tza.exe
+blockcompositing=true
+blockcompositingrule=2
+clientmachine=localhost
+wmclass=ffxii_tza.exe
 wmclassmatch=1
 
 [dc39e914-5ad2-445c-b82e-6d1e90dcdac8]
