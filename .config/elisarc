@@ -2,6 +2,8 @@
 RootPath[$e]=$HOME/Music
 
 [KFileDialog Settings]
+Recent Files[$e]=file:$HOME/Music/Others,file:$HOME/Music/Others
+Recent URLs[$e]=file:$HOME/Music/
 detailViewIconSize=16
 
 [PlayerSettings]
