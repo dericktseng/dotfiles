@@ -14,8 +14,8 @@ g.loaded_perl_provider = 0
 g.python3_host_prog = '/usr/bin/python3'
 
 -- disables builtins
-g.do_filetype_lua = 1
-g.did_load_filetypes = 0
+-- g.do_filetype_lua = 1
+-- g.did_load_filetypes = 0
 g.loaded_zip = 1
 g.loaded_gzip = 1
 g.loaded_matchit = 1
