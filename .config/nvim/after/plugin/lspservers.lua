@@ -1,6 +1,6 @@
 -- LSP language-specific settings
 local nvim_lsp = require('lspconfig')
-local cmp_capability = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local cmp_capability = require('cmp_nvim_lsp').default_capabilities()
 
 -- make sure these lsp servers are installed
 local servers = {
