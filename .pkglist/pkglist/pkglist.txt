@@ -1,5 +1,6 @@
 acpi
 aha
+alacritty
 alsa-utils
 aria2
 autoconf
@@ -139,7 +140,6 @@ xdg-desktop-portal-gtk
 xdg-user-dirs
 xdg-utils
 xdotool
-xfce4-terminal
 xprop
 xrandr
 xset
