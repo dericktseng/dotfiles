@@ -67,6 +67,7 @@ end
 -- returns the captured text from regex node at the specified
 -- user_args position (1st by default)
 utils.captured = function(_, snip, user_args)
+  print(vim.inspect(snip.captures))
   return snip.captures[user_args or 1]
 end
 

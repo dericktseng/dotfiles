@@ -156,15 +156,12 @@ wmclass=termite
 wmclassmatch=1
 
 [7]
-Description=Application settings for mpv
-blockcompositingrule=2
+Description=Application settings for steam
 clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
-fullscreen=true
-fullscreenrule=3
-strictgeometry=true
+desktopsrule=3
 title=Alacritty
-wmclass=mpv
+wmclass=steam
 wmclassmatch=1
 
 [79b3b06e-faa5-423b-997f-938648f0211b]
@@ -193,13 +190,13 @@ wmclass=discord-screenaudio
 wmclassmatch=1
 
 [8]
-Description=Application settings for steam
+Description=Application settings for discord
 clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
 desktopsrule=3
 fullscreen=true
 title=Alacritty
-wmclass=steam
+wmclass=discord
 wmclassmatch=1
 
 [8234c5b8-d877-4f53-b8b0-035bf069f1bb]
@@ -234,8 +231,8 @@ wmclass=discord
 wmclassmatch=1
 
 [General]
-count=9
-rules=1,2,3,4,5,6,7,8,9
+count=8
+rules=1,2,3,4,5,6,7,8
 
 [a0f7118c-ae24-4fce-80a3-95d213be1f2c]
 Description=Application settings for xfce4-terminal

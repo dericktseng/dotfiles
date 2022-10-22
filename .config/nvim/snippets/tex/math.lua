@@ -4,7 +4,10 @@ local mathenv = utils.mathenv
 
 -- autosnippets
 local autosnips = {
-  s({ trig='//', name='fraction', priority=1001 }, fmta([[\frac{<>}{<>}]], {i(1), i(2)}), {condition=mathenv}),
+  s({ trig='//', name='fraction', priority=1002 }, fmta([[\frac{<>}{<>}]], {i(1), i(2)}), {condition=mathenv}),
+
+  s({ trig='[(]([^()]*)[)]/', name='frac parenthesis', regTrig=true, priority=1001 },
+    fmta([[\frac{<>}{<>}]], {f(captured,{}), i(1)}), {condition=mathenv}),
 
   s({ trig='([^$={}%s\\]+)/', name='fancyfrac 1', regTrig=true, priority=1000 },
     fmta([[\frac{<>}{<>}]], {f(captured,{}), i(1)}), {condition=mathenv}),
@@ -72,6 +75,8 @@ local autosnips = {
   -- quick environments
   s({trig='sqr', name='square root'},
     fmta([[\sqrt{<>}]], {i(1)}), {condition=mathenv}),
+
+  s({trig='...', name='ldots'}, t([[\ldots]]), {condition=mathenv}),
 
   s({trig='bb', name='mathbb'},
     fmta([[\mathbb{<>}]], {i(1)}), {condition=mathenv}),

@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
-<gui version="65" name="gwenview">
+<gui name="gwenview" version="66">
  <MenuBar>
   <Menu name="file">
    <Action name="file_save"/>
@@ -67,6 +67,7 @@
    <Action name="resize"/>
    <Action name="crop"/>
    <Action name="red_eye_reduction"/>
+   <Action name="annotate"/>
   </Menu>
   <Menu name="go">
    <Action name="go_first"/>
@@ -110,16 +111,16 @@
   <Action name="hamburger_menu"/>
  </ToolBar>
  <ActionProperties scheme="Default">
-  <Action name="edit_cut" shortcut="Ctrl+X"/>
-  <Action name="file_quit" shortcut="Q"/>
-  <Action name="fullscreen" priority="0" shortcut="F; F11"/>
-  <Action name="go_next" shortcut="N"/>
-  <Action name="go_previous" shortcut="P"/>
-  <Action name="resize" shortcut=""/>
-  <Action name="rotate_left" shortcut="Shift+R"/>
-  <Action name="rotate_right" shortcut="R"/>
-  <Action name="view_zoom_in" shortcut="=; Ctrl+="/>
-  <Action name="view_zoom_out" shortcut="-"/>
-  <Action name="view_zoom_to_fit" shortcut="W"/>
+  <Action shortcut="Ctrl+X" name="edit_cut"/>
+  <Action shortcut="Q" name="file_quit"/>
+  <Action shortcut="F; F11" priority="0" name="fullscreen"/>
+  <Action shortcut="N" name="go_next"/>
+  <Action shortcut="P" name="go_previous"/>
+  <Action shortcut="" name="resize"/>
+  <Action shortcut="Shift+R" name="rotate_left"/>
+  <Action shortcut="R" name="rotate_right"/>
+  <Action shortcut="=; Ctrl+=" name="view_zoom_in"/>
+  <Action shortcut="-" name="view_zoom_out"/>
+  <Action shortcut="W" name="view_zoom_to_fit"/>
  </ActionProperties>
 </gui>

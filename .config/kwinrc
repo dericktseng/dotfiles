@@ -104,6 +104,5 @@ AutoRaiseInterval=0
 DelayFocusInterval=0
 RollOverDesktops=false
 
-[org.kde.kdecoration2]
-library=org.kde.breeze
-theme=Breeze
+[Xwayland]
+Scale=1
