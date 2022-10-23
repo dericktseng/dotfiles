@@ -205,6 +205,31 @@ return {
     })
   ),
 
+  s(
+    {trig='sfig', name='subfigures'},
+    fmta([[
+      \begin{figure}[htpb]
+      <>\centering
+      <>\begin{subfigure}[b]{0.49\textwidth}
+      <><>\includegraphics[width=0.9\textwidth]{<>}
+      <><>\caption{<>}
+      <><>\label{fig:<>}
+      <>\end{subfigure}
+      <>\caption{<>}
+      <>\label{fig:<>}
+      \end{figure}
+    ]], {
+      t('\t'),
+      t('\t'),
+      t('\t'), t('\t'), d(1, utils.filter_snippet, {}, {user_args={{'png', 'jpg', 'jpeg'}}}),
+      t('\t'), t('\t'), i(2),
+      t('\t'), t('\t'), i(3),
+      t('\t'),
+      t('\t'), i(4),
+      t('\t'), i(5)
+    })
+  ),
+
   -- TODO - functionNode to match number of & delimiters
   s(
     {trig='tb', name='Table environment'},
