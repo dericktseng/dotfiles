@@ -211,7 +211,7 @@ return {
       \begin{figure}[htpb]
       <>\centering
       <>\begin{subfigure}[b]{0.49\textwidth}
-      <><>\includegraphics[width=0.9\textwidth]{<>}
+      <><>\includegraphics[width=\textwidth]{<>}
       <><>\caption{<>}
       <><>\label{fig:<>}
       <>\end{subfigure}

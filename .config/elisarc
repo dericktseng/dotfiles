@@ -24,3 +24,4 @@ ColorScheme=
 
 [Views]
 ColorScheme=Default
+SortOrderPreferences=Artist::Album::==AscendingOrder,Track::==AscendingOrder
