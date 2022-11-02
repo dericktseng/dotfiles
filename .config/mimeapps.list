@@ -1,6 +1,7 @@
 [Added Associations]
 application/pdf=org.kde.okular.desktop;okularApplication_pdf.desktop;org.pwmt.zathura.desktop;org.gnome.Evince.desktop;libreoffice-draw.desktop;gimp.desktop;org.pwmt.zathura-pdf-mupdf.desktop;org.inkscape.Inkscape.desktop;
 application/xml=nvim.desktop;
+audio/flac=mpv.desktop;
 audio/mp4=mpv.desktop;
 audio/mpeg=mpv.desktop;org.kde.elisa.desktop;org.musicbrainz.Picard.desktop;
 audio/ogg=mpv.desktop;
@@ -29,6 +30,7 @@ text/markdown=okularMd.desktop;katepart.desktop;okularTxt.desktop;
 
 [Default Applications]
 application/pdf=org.kde.okular.desktop;
+audio/flac=mpv.desktop;
 audio/mp4=mpv.desktop;
 audio/mpeg=mpv.desktop;
 audio/ogg=mpv.desktop;

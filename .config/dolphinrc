@@ -1,6 +1,10 @@
 [$Version]
 update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
 
+[FileDialogSize]
+HDMI-A-0 Height 1920x1080 HDMI-A-0=598
+HDMI-A-0 Width 1920x1080 HDMI-A-0=1010
+
 [General]
 GlobalViewProps=false
 RememberOpenedTabs=false
@@ -48,7 +52,7 @@ ConfirmDelete=true
 
 [Open-with settings]
 CompletionMode=1
-History=q,kdenl,neov,qt,neovim,kwrite,gthu,gth,qvi,matlab,kwri,gwe,firefo,mpv,okular
+History=mpv,q,kdenl,neov,qt,neovim,kwrite,gthu,gth,qvi,matlab,kwri,gwe,firefo,okular
 
 [PreviewSettings]
 Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
