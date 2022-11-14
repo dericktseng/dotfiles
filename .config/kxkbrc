@@ -2,8 +2,10 @@
 update_info=kxkb.upd:remove-empty-lists,kxkb.upd:add-back-resetoptions,kxkb_variants.upd:split-variants
 
 [Layout]
-LayoutList=us
+DisplayNames=
 Options=caps:swapescape
 ResetOldOptions=true
-SwitchMode=WinClass
+VariantList=
+LayoutList=us
 Use=true
+

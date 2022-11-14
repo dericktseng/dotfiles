@@ -29,5 +29,3 @@ export FZF_DEFAULT_OPTS="
 # fix for java windows
 # export _JAVA_AWT_WM_NONREPARENTING=1
 # export AWT_TOOLKIT=MToolkit
-
-export GTK_USE_PORTAL=1

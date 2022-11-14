@@ -17,7 +17,6 @@ djvulibre
 dkms
 elisa-player
 fakeroot
-fcitx5-mozc
 fd-find
 ffmpeg
 ffmpegthumbnailer
@@ -54,7 +53,6 @@ gtest-devel
 gthumb
 htop
 jq
-kcm-fcitx5
 kernel-tools
 kf5-kcontacts-devel
 kf5-kpeople-devel
