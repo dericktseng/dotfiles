@@ -1,9 +1,9 @@
 [ElisaFileIndexer]
-RootPath[$e]=$HOME/Music,/run/media/derickwtseng/3396c424-9e36-40ad-8aca-c4c2146c7102/MusicV2
+RootPath[$e]=$HOME/Music,/mnt/sda2/Music
 
 [KFileDialog Settings]
 Recent Files[$e]=RigelTheatre.m3u8,file:$HOME/Music/MusicPlaylist/RigelTheatre.m3u8,file:$HOME/Music/MusicPlaylist/Others.m3u8,file:$HOME/Music/MusicPlaylist/Eurobeat.m3u8
-Recent URLs[$e]=file:$HOME/Music/,file:$HOME/Documents/,file:$HOME/,file:$HOME/Music/local/,file:$HOME/Music/MusicPlaylist/
+Recent URLs[$e]=file:$HOME/Music/,file:$HOME/Documents/,file:$HOME/,file:$HOME/Music/MusicPlaylist/
 detailViewIconSize=16
 
 [PlayerSettings]
