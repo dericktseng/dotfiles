@@ -19,7 +19,6 @@ ShowOSD=false
 ttsVoice=English (America)+female1
 
 [Main View]
-ShowLeftPanel=false
 SplitterSizes=254,1665
 
 [PageView]

@@ -3,9 +3,4 @@ update_info=kxkb.upd:remove-empty-lists,kxkb.upd:add-back-resetoptions,kxkb_vari
 
 [Layout]
 DisplayNames=
-Options=caps:swapescape
-ResetOldOptions=true
 VariantList=
-LayoutList=us
-Use=true
-
