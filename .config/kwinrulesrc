@@ -12,23 +12,12 @@ types=1
 wmclass=alacritty
 wmclassmatch=1
 
-[1]
-Description=Application settings for mpv
-blockcompositingrule=2
-clientmachine=localhost
-desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
-fullscreen=true
-fullscreenrule=3
-title=Alacritty
-wmclass=gl mpv
-wmclasscomplete=true
-wmclassmatch=1
-
 [10]
 Description=Application settings for discord
 clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
 desktopsrule=3
+title=Alacritty
 wmclass=discord
 wmclassmatch=1
 
@@ -41,16 +30,18 @@ wmclass=discord
 wmclassmatch=1
 
 [2]
-Description=Application settings for lutris
+Description=Application settings for mpv
 activity=947fba56-16b5-485f-a224-8a350ea9517d
+blockcompositingrule=2
 clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
-desktopsrule=3
 fullscreen=true
+fullscreenrule=3
 ignoregeometry=true
 placement=10
 title=Alacritty
-wmclass=lutris
+wmclass=gl mpv
+wmclasscomplete=true
 wmclassmatch=1
 
 [27bc7754-2f39-445d-a9c1-db24d5d26467]
@@ -62,19 +53,17 @@ wmclass=lutris
 wmclassmatch=1
 
 [3]
-Description=Application settings for xfce4-terminal
+Description=Application settings for lutris
 clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
+desktopsrule=3
 fullscreen=true
 ignoregeometry=true
-ignoregeometryrule=2
 maximizehoriz=true
 maximizevert=true
 placement=10
-placementrule=2
-strictgeometryrule=2
 title=Alacritty
-wmclass=xfce4-terminal
+wmclass=lutris
 wmclassmatch=1
 
 [3761faa3-cb59-4c39-9bd6-2c7a60cb1604]
@@ -94,13 +83,12 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [4]
-Description=Application settings for lxterminal
+Description=Application settings for steam_app_0
 clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
-fullscreen=true
-strictgeometryrule=2
+desktopsrule=3
 title=Alacritty
-wmclass=lxterminal
+wmclass=steam_app_0
 wmclassmatch=1
 
 [48e27516-4c21-463e-a9f0-6fe0f08601fd]
@@ -122,17 +110,12 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [5]
-Description=Application settings for discord-screenaudio
-activity=947fba56-16b5-485f-a224-8a350ea9517d
+Description=Application settings for steam
 clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
 desktopsrule=3
-fullscreen=true
-maximizehoriz=true
-maximizevert=true
-strictgeometry=true
 title=Alacritty
-wmclass=discord-screenaudio
+wmclass=steam
 wmclassmatch=1
 
 [59d980a9-7a4b-4275-a300-46e51be1ac14]
@@ -151,15 +134,12 @@ wmclass=mpv
 wmclassmatch=1
 
 [6]
-Description=Application settings for steam_app_0
-activity=947fba56-16b5-485f-a224-8a350ea9517d
+Description=Application settings for discord
 clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
 desktopsrule=3
-fullscreen=true
-strictgeometry=true
 title=Alacritty
-wmclass=steam_app_0
+wmclass=discord
 wmclassmatch=1
 
 [65d81249-f0ec-4d68-8017-7c66a020fe81]
@@ -173,15 +153,13 @@ wmclass=termite
 wmclassmatch=1
 
 [7]
-Description=Window settings for alacritty
+Description=Application settings for steam_app_0
 clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
+desktopsrule=3
 strictgeometry=true
-strictgeometryrule=2
 title=Alacritty
-titlematch=1
-types=1
-wmclass=alacritty
+wmclass=steam_app_0
 wmclassmatch=1
 
 [79b3b06e-faa5-423b-997f-938648f0211b]
@@ -209,16 +187,6 @@ desktopsrule=3
 wmclass=discord-screenaudio
 wmclassmatch=1
 
-[8]
-Description=Application settings for steam
-clientmachine=localhost
-desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
-desktopsrule=3
-fullscreen=true
-title=Alacritty
-wmclass=steam
-wmclassmatch=1
-
 [8234c5b8-d877-4f53-b8b0-035bf069f1bb]
 Description=Window settings for alacritty
 clientmachine=localhost
@@ -243,17 +211,17 @@ wmclass=termite
 wmclassmatch=1
 
 [9]
-Description=Application settings for discord
+Description=Application settings for steam
 clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
 desktopsrule=3
 title=Alacritty
-wmclass=discord
+wmclass=steam
 wmclassmatch=1
 
 [General]
-count=9
-rules=1,2,3,4,5,6,7,8,9
+count=5
+rules=2,3,4,5,6
 
 [a0f7118c-ae24-4fce-80a3-95d213be1f2c]
 Description=Application settings for xfce4-terminal
@@ -366,6 +334,15 @@ types=1
 wmclass=alacritty
 wmclassmatch=1
 
+[e775fa22-338e-42c6-a040-aac07c4b4cab]
+Description=Application settings for alacritty
+maximizehoriz=true
+maximizehorizrule=3
+maximizevert=true
+maximizevertrule=3
+wmclass=alacritty
+wmclassmatch=1
+
 [eab54ade-9cf9-49c4-bbff-b1752667df3d]
 Description=Window settings for alacritty
 clientmachine=localhost
@@ -387,6 +364,13 @@ clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
 desktopsrule=3
 wmclass=steam_app_0
+wmclassmatch=1
+
+[fea8a32e-b514-431d-a738-84063dec3b4f]
+Description=Application settings for alacritty
+maximizehorizrule=3
+maximizevertrule=3
+wmclass=alacritty
 wmclassmatch=1
 
 [fffaeae9-f30d-401d-bfdc-2acead2d6421]

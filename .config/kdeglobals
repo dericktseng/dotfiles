@@ -142,8 +142,6 @@ History Items[$e]=file:///mnt/sda2/Books,file:///mnt/sda2/Music,file:///run/medi
 [General]
 BrowserApplication=firefox.desktop
 ColorSchemeHash=d2f9f23c62b2c7529878a3b4c96c2902e98086db
-TerminalApplication=xfce4-terminal
-TerminalService=xfce4-terminal.desktop
 toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 
 [KDE]

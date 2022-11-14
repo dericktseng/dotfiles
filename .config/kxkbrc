@@ -3,4 +3,5 @@ update_info=kxkb.upd:remove-empty-lists,kxkb.upd:add-back-resetoptions,kxkb_vari
 
 [Layout]
 DisplayNames=
+ResetOldOptions=true
 VariantList=

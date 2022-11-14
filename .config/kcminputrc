@@ -20,7 +20,7 @@ TapToClick=true
 OutputName=eDP-1
 
 [Libinput][5426][120][Razer Razer Viper]
-PointerAcceleration=0.000
+PointerAcceleration=-0.200
 PointerAccelerationProfile=1
 
 [Mouse]

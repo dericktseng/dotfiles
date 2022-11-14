@@ -20,6 +20,8 @@ TerminalMargin=0
 
 [Interaction Options]
 AllowEscapedLinks=false
+AllowMouseTracking=true
+DropUrlsAsText=true
 OpenLinksByDirectClickEnabled=true
 TextEditorCmd=1
 TrimLeadingSpacesInSelectedText=false
