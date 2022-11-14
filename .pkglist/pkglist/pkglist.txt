@@ -77,7 +77,8 @@ llvm
 lm_sensors
 make
 mathjax
-mesa-vdpau-drivers
+mesa-vdpau-drivers-freeworld
+mesa-va-drivers-freeworld
 meson
 mozilla-openh264
 mpv

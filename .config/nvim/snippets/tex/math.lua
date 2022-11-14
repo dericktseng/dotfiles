@@ -78,6 +78,8 @@ local autosnips = {
 
   s({trig='...', name='ldots'}, t([[\ldots]]), {condition=mathenv}),
 
+  s({trig='---', name='cdots'}, t([[\cdots]]), {condition=mathenv}),
+
   s({trig='bb', name='mathbb'},
     fmta([[\mathbb{<>}]], {i(1)}), {condition=mathenv}),
 
