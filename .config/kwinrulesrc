@@ -12,6 +12,19 @@ types=1
 wmclass=alacritty
 wmclassmatch=1
 
+[1]
+Description=Application settings for org.kde.konsole
+clientmachine=localhost
+fullscreen=true
+maximizehoriz=true
+maximizehorizrule=3
+maximizevert=true
+maximizevertrule=3
+title=Alacritty
+wmclass=konsole org.kde.konsole
+wmclasscomplete=true
+wmclassmatch=1
+
 [10]
 Description=Application settings for discord
 clientmachine=localhost
@@ -162,6 +175,16 @@ title=Alacritty
 wmclass=steam_app_0
 wmclassmatch=1
 
+[72cde76c-3b3d-4a4e-874d-7340b948f4de]
+Description=Application settings for org.kde.konsole
+maximizehoriz=true
+maximizehorizrule=3
+maximizevert=true
+maximizevertrule=3
+wmclass=konsole org.kde.konsole
+wmclasscomplete=true
+wmclassmatch=1
+
 [79b3b06e-faa5-423b-997f-938648f0211b]
 Description=Application settings for zathura
 clientmachine=localhost
@@ -220,8 +243,8 @@ wmclass=steam
 wmclassmatch=1
 
 [General]
-count=5
-rules=2,3,4,5,6
+count=6
+rules=1,2,3,4,5,6
 
 [a0f7118c-ae24-4fce-80a3-95d213be1f2c]
 Description=Application settings for xfce4-terminal
