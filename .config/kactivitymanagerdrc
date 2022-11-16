@@ -1,3 +1,6 @@
+[Plugins]
+org.kde.ActivityManager.ResourceScoringEnabled=false
+
 [activities]
 884b7bf3-ccba-4560-867b-dc0726837c67=A
 

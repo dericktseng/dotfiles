@@ -1,6 +1,7 @@
 [Plugin-org.kde.ActivityManager.Resources.Scoring]
 allowed-applications=dolphin,feh,firefox,gwenview,imv,mpv,nvim,nvim-qt,okular,org.kde.ark,org.kde.dolphin,org.kde.elisa,org.kde.gwenview,org.kde.kfind,org.kde.krunner,org.kde.kwrite,org.kde.libtaskmanager,org.kde.okular,org.kde.plasma.browserintegrationreminder,org.kde.plasma.kicker,org.kde.showfoto,org.kde.spectacle,org.kde.systemsettings,org.pwmt.zathura,thunar
 off-the-record-activities=881c27c6-3a0d-4dd6-8725-341ef8289913
+what-to-remember=1
 
 [Plugin-org.kde.ActivityManager.VirtualDesktopSwitch]
 desktop-for-4bc9cf04-def1-4f75-9233-cc936be4c7df=1

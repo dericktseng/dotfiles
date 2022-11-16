@@ -108,6 +108,7 @@ python-sympy
 python3-notebook
 python3-pip
 rapidjson-devel
+rclone
 ripgrep
 rlwrap
 rnnoise
