@@ -1,3 +1,10 @@
+# Have less program display colours
+# from: https://wiki.archlinux.org/index.php/Color_output_in_console#man
+export LESS='-R --use-color -Dd+r$Du+b'
+export MANPAGER="less -R --use-color -Dd+r -Du+b"
+export EDITOR='/usr/bin/nvim'
+export VISUAL="$EDITOR"
+
 # firefox variables
 # export MOZ_X11_EGL=1
 # export MOZ_DISABLE_RDD_SANDBOX=1
@@ -18,3 +25,7 @@ export FZF_DEFAULT_OPTS="
 # fix for java windows
 # export _JAVA_AWT_WM_NONREPARENTING=1
 # export AWT_TOOLKIT=MToolkit
+
+GNUMAKEFLAGS="-j$(($(nproc) + 1))"
+OMP_NUM_THREADS="$(nproc)"
+LC_ADDRESS="C"
