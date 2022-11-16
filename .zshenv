@@ -1,14 +1,3 @@
-# Have less program display colours
-# from: https://wiki.archlinux.org/index.php/Color_output_in_console#man
-export LESS='-R --use-color -Dd+b$Du+g'
-
-export MANPAGER='less -s -M +Gg'
-export EDITOR=/usr/bin/nvim
-export VISUAL=$EDITOR
-export GNUMAKEFLAGS=-j$(($(nproc) + 1))
-export OMP_NUM_THREADS=$(nproc)
-export LC_ADDRESS="C"
-
 # firefox variables
 # export MOZ_X11_EGL=1
 # export MOZ_DISABLE_RDD_SANDBOX=1
