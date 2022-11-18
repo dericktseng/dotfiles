@@ -61,6 +61,7 @@ levien-inconsolata-fonts
 libX11-devel
 libXext-devel
 libXft
+libavcodec-freeworld
 libcurl-devel
 libevdev
 libimagequant
@@ -107,6 +108,7 @@ python-scipy
 python-sympy
 python3-notebook
 python3-pip
+qt5-qtwebengine-freeworld
 rapidjson-devel
 rclone
 ripgrep
