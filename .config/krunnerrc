@@ -1,4 +1,6 @@
 [General]
+ActivityAware=false
+HistoryEnabled=false
 RetainPriorSearch=false
 
 [Plugins]
@@ -7,7 +9,7 @@ DictionaryEnabled=false
 PIM Contacts Search RunnerEnabled=false
 appstreamEnabled=false
 baloosearchEnabled=true
-bookmarksEnabled=false
+bookmarksEnabled=true
 browserhistoryEnabled=false
 browsertabsEnabled=false
 katesessionsEnabled=false
@@ -16,6 +18,7 @@ krunner_spellcheckEnabled=false
 locationsEnabled=true
 marbleEnabled=false
 org.kde.activities2Enabled=true
+org.kde.windowedwidgetsEnabled=true
 plasma-runner-browserhistoryEnabled=false
 plasma-runner-browsertabsEnabled=false
 recentdocumentsEnabled=false

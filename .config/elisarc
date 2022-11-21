@@ -2,12 +2,13 @@
 RootPath[$e]=$HOME/Music,/mnt/sda2/Music
 
 [KFileDialog Settings]
-Recent Files[$e]=RigelTheatre.m3u8,file:$HOME/Music/MusicPlaylist/RigelTheatre.m3u8,file:$HOME/Music/MusicPlaylist/Eurobeat.m3u8,file:$HOME/Music/MusicPlaylist/Others.m3u8
+Recent Files[$e]=RigelTheatre.m3u8,file:$HOME/Music/MusicPlaylist/FunStuff.m3u8,file:$HOME/Music/MusicPlaylist/RigelTheatre.m3u8,file:$HOME/Music/MusicPlaylist/Eurobeat.m3u8,file:$HOME/Music/MusicPlaylist/Others.m3u8
 Recent URLs[$e]=file:$HOME/Music/,file:$HOME/Documents/,file:$HOME/,file:$HOME/Music/MusicPlaylist/
 detailViewIconSize=16
 iconViewIconSize=64
 
 [PlayerSettings]
+PlayAtStartup=true
 ScanAtStartup=false
 ShowSystemTrayIcon=true
 
