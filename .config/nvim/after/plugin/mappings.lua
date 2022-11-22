@@ -20,6 +20,7 @@ keymap('n', '<Leader>R', [[:so %<CR>:echo 'reloaded file'<CR>]], {silent=false})
 
 -- keymaps
 keymap('t', '<ESC>', [[<C-\><C-N>]])
+keymap('i', '<C-C>', [[<ESC>]])
 
 -- surrounding delimiters
 keymap('x', '{', [=[<ESC>`<i{<ESC>`>la}<ESC>]=])
