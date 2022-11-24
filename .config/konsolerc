@@ -37,6 +37,7 @@ eDP Window-Maximized 1920x1080=true
 eDP-1 Height 1920x1080=1040
 eDP-1 Width 1920x1080=960
 eDP-1 Window-Maximized 1920x1080=true
+eDP-1 Window-Maximized 1920x1080 eDP-1=true
 
 [Notification Messages]
 CloseAllTabs=true

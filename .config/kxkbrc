@@ -5,3 +5,6 @@ update_info=kxkb.upd:remove-empty-lists,kxkb.upd:add-back-resetoptions,kxkb_vari
 DisplayNames=
 ResetOldOptions=true
 VariantList=
+LayoutList=us
+Use=true
+

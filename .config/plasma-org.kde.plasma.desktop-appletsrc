@@ -131,7 +131,7 @@ DialogWidth=1168
 [Containments][2][Applets][58][Configuration][General]
 command=loginctl lock-session
 predefinedTimers=300,1500
-savedAt=2022,11,16,12,53,58.044
+savedAt=2022,11,24,11,36,7.468
 
 [Containments][2][Applets][7]
 immutability=1
@@ -290,7 +290,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][28][Configuration]
-PreloadWeight=15
+PreloadWeight=39
 
 [Containments][8][Applets][28][Configuration][ConfigDialog]
 DialogHeight=540
@@ -301,7 +301,7 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][8][Applets][29][Configuration]
-PreloadWeight=0
+PreloadWeight=10
 
 [Containments][8][Applets][29][Configuration][ConfigDialog]
 DialogHeight=540
@@ -327,4 +327,4 @@ knownItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.blue
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=file:///home/derickwtseng/Templates,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Videos,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Pictures,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Desktop,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Music,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Public,0,884b7bf3-ccba-4560-867b-dc0726837c67
+screenMapping=file:///home/derickwtseng/Downloads,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Pictures,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Desktop,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Music,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Public,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Videos,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Templates,0,884b7bf3-ccba-4560-867b-dc0726837c67

@@ -40,9 +40,8 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory
 
-for f in ~/.config/zsh/*;
-do
-    source "$f";
+for f in ~/.config/zsh/*; do
+    source "$f"
 done
 
 # custom keybinds
