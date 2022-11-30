@@ -26,7 +26,7 @@ detailViewIconSize=16
 HDMI-A-0 Height 1920x1080=458
 HDMI-A-0 Height 1920x1080 HDMI-A-0=458
 HDMI-A-0 Width 1920x1080=434
-HDMI-A-0 Width 1920x1080 HDMI-A-0=414
+HDMI-A-0 Width 1920x1080 HDMI-A-0=418
 HDMI-A-1 Height 1920x1080=458
 HDMI-A-1 Height 1920x1080 HDMI-A-1=458
 HDMI-A-1 Width 1920x1080=403
@@ -56,7 +56,7 @@ ConfirmDelete=true
 
 [Open-with settings]
 CompletionMode=1
-History=mpv,q,kdenl,neov,qt,neovim,kwrite,gthu,gth,qvi,matlab,kwri,gwe,firefo,okular
+History=neo,mpv,q,kdenl,neov,qt,neovim,kwrite,gthu,gth,qvi,matlab,kwri,gwe,firefo
 
 [PreviewSettings]
 Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
