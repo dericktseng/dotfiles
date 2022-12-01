@@ -12,12 +12,12 @@ Switch keyboard layout to Japanese (Sun Type 7, Sun-compatible)=none,none,Switch
 Switch to Next Keyboard Layout=Ctrl+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
 
-[firefox.desktop]
-_k_friendly_name=Firefox
-_launch=Meta+Space,none,Firefox
-new-private-window=none,none,New Private Window
-new-window=none,none,New Window
-profile-manager-window=none,none,Open the Profile Manager
+[io.gitlab.librewolf-community.desktop]
+_k_friendly_name=LibreWolf
+_launch=Meta+Space,none,LibreWolf
+new-private-window=none,none,Open a New Private Window
+new-window=none,none,Open a New Window
+profilemanager=none,none,Open the Profile Manager
 
 [kaccess]
 Toggle Screen Reader On and Off=Meta+Alt+S,Meta+Alt+S,Toggle Screen Reader On and Off

@@ -20,15 +20,14 @@ HDMI-A-0 Height 1920x1080 HDMI-A-0=933
 HDMI-A-0 Width 1920x1080=1496
 HDMI-A-0 Width 1920x1080 HDMI-A-0=1517
 HDMI-A-0 XPosition 1920x1080=182
-HDMI-A-0 XPosition 1920x1080 HDMI-A-0=148
+HDMI-A-0 XPosition 1920x1080 HDMI-A-0=179
 HDMI-A-0 YPosition 1920x1080=67
-HDMI-A-0 YPosition 1920x1080 HDMI-A-0=64
+HDMI-A-0 YPosition 1920x1080 HDMI-A-0=33
 HDMI-A-1 Height 1920x1080=930
 HDMI-A-1 Height 1920x1080 HDMI-A-1=878
 HDMI-A-1 Width 1920x1080=1537
 HDMI-A-1 Width 1920x1080 HDMI-A-1=1467
 MenuBar=Disabled
-RestorePositionForNextInstance=false
 State=AAAA/wAAAAD9AAAAAAAABe0AAAOlAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 eDP=eDP
@@ -45,7 +44,7 @@ eDP-1 Width 1920x1080 eDP-1=1339
 
 [Open-with settings]
 CompletionMode=1
-History=eas,alacr,firef,firefo,xfce,lxter,ter,discord,alacri,konsole,noiseto,easy,disco,easye,termina
+History=librewo,firefo,eas,alacr,firef,xfce,lxter,ter,discord,alacri,konsole,noiseto,easy,disco,easye
 
 [UiSettings]
 ColorScheme=Default
