@@ -8,8 +8,8 @@ Seen=true
 Seen=true
 
 [Applications][org.kde.spectacle]
-ShowBadges=false
-ShowInHistory=false
+ShowPopups=false
+ShowPopupsInDndMode=false
 
 [Applications][org.qbittorrent.qBittorrent]
 Seen=true

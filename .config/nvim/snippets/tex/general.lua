@@ -189,7 +189,7 @@ return {
     fmta([[
       \begin{figure}[htpb]
       <>\centering
-      <>\includegraphics[width=0.9\textwidth]{<>}
+      <>\includegraphics[width=\textwidth]{<>}
       <>\caption{<>}
       <>\label{fig:<>}
       \end{figure}
@@ -236,16 +236,27 @@ return {
     fmta([[
       \begin{table}[htpb]
       <>\centering
-      <>\begin{tabular}{|<>|}
-      <><>\hline
+      <>\begin{tabularx}{\textwidth}{|<>|}
+      <><>\toprule
       <><><>
-      <><>\hline
-      <>\end{tabular}
+      <><>\midrule
+      <><>\bottomrule
+      <>\end{tabularx}
       <>\caption{<>}
       <>\label{tab:<>}
       \end{table}
     ]],
-    {t('\t'), t('\t'), i(2), t('\t'), t('\t'), t('\t'), t('\t'), i(1), t('\t'), t('\t') ,t('\t'), t('\t'), i(3), t('\t'), i(4)})
+    {
+      t('\t'),
+      t('\t'), i(2),
+      t('\t'), t('\t'),
+      t('\t'), t('\t'), i(1),
+      t('\t'), t('\t'),
+      t('\t'), t('\t'),
+      t('\t'),
+      t('\t'), i(3),
+      t('\t'), i(4)
+    })
   ),
 
   s(
@@ -277,8 +288,10 @@ return {
           \usepackage{multicol}
           \usepackage{listings}
           \usepackage{chemformula}
-          % \usepackage{caption}
-          % \usepackage{subcaption}
+          \usepackage{caption}
+          \usepackage{subcaption}
+          \usepackage{tabularx}
+          \usepackage{booktabs}
           % \usepackage{pdfpages}
 
           \lstset{basicstyle=\footnotesize,breaklines=true,showstringspaces=false,frame=single}

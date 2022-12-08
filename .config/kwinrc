@@ -27,6 +27,9 @@ Duration=1
 [Effect-overview]
 LayoutMode=0
 
+[Effect-slide]
+SlideDocks=true
+
 [Effect-windowview]
 BorderActivateAll=9
 
@@ -46,6 +49,7 @@ blurEnabled=true
 contrastEnabled=true
 desktopgridEnabled=false
 kwin4_effect_fadeEnabled=true
+kwin4_effect_fadedesktopEnabled=true
 kwin4_effect_scaleEnabled=false
 overviewEnabled=true
 slideEnabled=false
@@ -62,6 +66,9 @@ floatingTitle=System Settings,KDE Connect
 ignoreClass=yakuake,spectacle,Conky
 keepFloatAbove=false
 preventProtrusion=false
+
+[Script-desktopchangeosd]
+TextOnly=true
 
 [SubSession: 4bc9cf04-def1-4f75-9233-cc936be4c7df]
 active=-1
