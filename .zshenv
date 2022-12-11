@@ -26,6 +26,10 @@ export FZF_DEFAULT_OPTS="
 # export _JAVA_AWT_WM_NONREPARENTING=1
 # export AWT_TOOLKIT=MToolkit
 
+# fix for python webbrowser module
+export BROWSER='flatpak run io.gitlab.librewolf-community'
+
+# compile settings
 GNUMAKEFLAGS="-j$(($(nproc) + 1))"
 OMP_NUM_THREADS="$(nproc)"
 LC_ADDRESS="C"

@@ -9,7 +9,7 @@ vim.opt_local.spelllang = "en_us"
 vim.api.nvim_buf_set_keymap(0, 'n', '<LocalLeader>l', '<Cmd>MarkdownPreviewToggle<CR>', {noremap=true})
 vim.cmd([[
 function! OpenBrowserNewWindow(url)
-  silent execute "!firefox -new-window " . a:url . "&"
+  silent execute "!flatpak run io.gitlab.librewolf-community -new-window " . a:url . "&"
 endfunction
 ]])
 
