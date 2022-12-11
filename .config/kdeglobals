@@ -173,7 +173,7 @@ Speedbar Width=314
 View Style=Simple
 
 [KScreen]
-ScreenScaleFactors=DisplayPort-0=1;DisplayPort-1=1;DisplayPort-2=1;HDMI-A-0=1;DVI-D-0=1;
+ScreenScaleFactors=Dell Inc. DELL SE2719H/86R3243=1;
 
 [KShortcutsDialog Settings]
 Dialog Size=768,676

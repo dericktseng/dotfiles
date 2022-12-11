@@ -153,6 +153,8 @@ AppletOrder=50;40;4;27;57;26;58;52;7
 
 [Containments][53]
 ItemGeometries-1920x1080=
+ItemGeometries-3840x2160=
+ItemGeometries-960x540=
 ItemGeometriesHorizontal=
 activityId=884b7bf3-ccba-4560-867b-dc0726837c67
 formfactor=0
@@ -173,7 +175,7 @@ PreloadWeight=42
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=559
 locked=true
-positions={"1920x1080":[]}
+positions={"1920x1080":[]\\,"960x540":[""]\\,"3840x2160":[""]}
 url=file:///home/derickwtseng
 
 [Containments][53][Wallpaper][org.kde.image][General]
@@ -301,7 +303,7 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][8][Applets][29][Configuration]
-PreloadWeight=28
+PreloadWeight=12
 
 [Containments][8][Applets][29][Configuration][ConfigDialog]
 DialogHeight=540
