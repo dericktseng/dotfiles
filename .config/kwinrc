@@ -49,8 +49,10 @@ blurEnabled=true
 contrastEnabled=true
 desktopgridEnabled=false
 kwin4_effect_fadeEnabled=true
+kwin4_effect_fadedesktopEnabled=true
 kwin4_effect_scaleEnabled=false
 overviewEnabled=true
+slideEnabled=false
 windowviewEnabled=false
 zoomEnabled=false
 
