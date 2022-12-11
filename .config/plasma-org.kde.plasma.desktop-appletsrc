@@ -54,8 +54,8 @@ plugin=org.kde.plasma.digitalclock
 
 [Containments][2][Applets][40][Configuration]
 PreloadWeight=100
-popupHeight=450
-popupWidth=396
+popupHeight=71
+popupWidth=350
 
 [Containments][2][Applets][40][Configuration][ConfigDialog]
 DialogHeight=540
@@ -189,8 +189,8 @@ immutability=1
 lastScreen=0
 location=4
 plugin=org.kde.plasma.private.systemtray
-popupHeight=432
-popupWidth=432
+popupHeight=0
+popupWidth=0
 wallpaperplugin=org.kde.image
 
 [Containments][8][Applets][10]
@@ -332,4 +332,4 @@ knownItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.blue
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=file:///home/derickwtseng/Downloads,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Desktop,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Public,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Videos,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Pictures,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Templates,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Music,0,884b7bf3-ccba-4560-867b-dc0726837c67
+screenMapping=file:///home/derickwtseng/Pictures,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Public,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Videos,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Templates,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Desktop,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Music,0,884b7bf3-ccba-4560-867b-dc0726837c67
