@@ -11,6 +11,9 @@ Seen=true
 ShowPopups=false
 ShowPopupsInDndMode=false
 
+[Applications][org.mozilla.firefox]
+Seen=true
+
 [Applications][org.qbittorrent.qBittorrent]
 Seen=true
 
