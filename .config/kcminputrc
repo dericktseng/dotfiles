@@ -23,6 +23,10 @@ OutputName=eDP-1
 PointerAcceleration=-0.200
 PointerAccelerationProfile=1
 
+[Libinput][7847][100][2.4G Mouse]
+PointerAcceleration=-0.200
+PointerAccelerationProfile=2
+
 [Mouse]
 X11LibInputXAccelProfileFlat=false
 XLbInptAccelProfileFlat=true
