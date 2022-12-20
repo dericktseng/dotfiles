@@ -12,6 +12,13 @@ Switch keyboard layout to Japanese (Sun Type 7, Sun-compatible)=none,none,Switch
 Switch to Next Keyboard Layout=Ctrl+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
 
+[firefox.desktop]
+_k_friendly_name=Firefox
+_launch=Meta+Space,none,Firefox
+new-private-window=none,none,New Private Window
+new-window=none,none,New Window
+profile-manager-window=none,none,Open the Profile Manager
+
 [kaccess]
 Toggle Screen Reader On and Off=Meta+Alt+S,Meta+Alt+S,Toggle Screen Reader On and Off
 _k_friendly_name=Accessibility
@@ -256,13 +263,6 @@ RectangularRegionScreenShot=Meta+Shift+Print,Meta+Shift+Print,Capture Rectangula
 WindowUnderCursorScreenShot=Meta+Ctrl+Print,Meta+Ctrl+Print,Capture Window Under Cursor
 _k_friendly_name=Spectacle
 _launch=none,Print,Launch Spectacle
-
-[org.mozilla.firefox.desktop]
-_k_friendly_name=Firefox Web Browser
-_launch=Meta+Space,none,Firefox Web Browser
-new-private-window=none,none,Open a New Private Window
-new-window=none,none,Open a New Window
-profile-manager-window=none,none,Open the Profile Manager
 
 [org_kde_powerdevil]
 Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness

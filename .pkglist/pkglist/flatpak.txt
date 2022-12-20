@@ -1,3 +1,2 @@
 com.discordapp.Discord
 us.zoom.Zoom
-org.mozilla.firefox
