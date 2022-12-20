@@ -8,5 +8,5 @@ currentApplicationBackend=flatpak-backend
 UseOfflineUpdates=false
 
 [Window]
-geometry=201,45,1465,940
+geometry=0,0,1465,940
 visibility=2

@@ -47,7 +47,7 @@ eDP-1 Width 1920x1080 eDP-1=1339
 
 [Open-with settings]
 CompletionMode=1
-History=firef,librewo,firefo,eas,alacr,xfce,lxter,ter,discord,alacri,konsole,noiseto,easy,disco,easye
+History=firefox,firef,librewo,firefo,eas,alacr,xfce,lxter,ter,discord,alacri,konsole,noiseto,easy,disco
 
 [UiSettings]
 ColorScheme=Default
