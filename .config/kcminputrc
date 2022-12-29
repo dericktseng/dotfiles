@@ -28,7 +28,7 @@ PointerAcceleration=-0.200
 PointerAccelerationProfile=2
 
 [Mouse]
-X11LibInputXAccelProfileFlat=false
+X11LibInputXAccelProfileFlat=true
 XLbInptAccelProfileFlat=true
 XLbInptPointerAcceleration=-0.2
 

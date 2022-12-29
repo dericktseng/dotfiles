@@ -9,7 +9,7 @@ onLaunchAction=UseLastUsedCapturemode
 [GuiConfig]
 captureMode=3
 cropRegion=457,171,984,783
-window-position=431,338
+window-position=0,0
 
 [Save]
 defaultSaveImageFormat=JPG

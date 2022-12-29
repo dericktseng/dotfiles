@@ -37,13 +37,14 @@ eDP=eDP
 eDP Height 1920x1080=790
 eDP Width 1920x1080=1370
 eDP XPosition 1920x1080=199
-eDP XPosition 1920x1080 eDP=353
+eDP XPosition 1920x1080 eDP=450
 eDP YPosition 1920x1080=131
 eDP YPosition 1920x1080 eDP=170
 eDP-1 Height 1920x1080=938
 eDP-1 Height 1920x1080 eDP-1=817
 eDP-1 Width 1920x1080=1392
 eDP-1 Width 1920x1080 eDP-1=1339
+eDP-1 Window-Maximized 1920x1080 eDP-1=true
 
 [Open-with settings]
 CompletionMode=1
