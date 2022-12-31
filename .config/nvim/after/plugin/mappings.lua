@@ -1,4 +1,4 @@
-local fn = require "functions"
+local fn = require'functions'
 local keymap = vim.keymap.set
 local wrap = fn.fnwrap
 

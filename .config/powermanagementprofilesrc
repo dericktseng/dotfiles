@@ -8,6 +8,9 @@ value=100
 idleTime=900
 lockBeforeTurnOff=0
 
+[AC][DimDisplay]
+idleTime=600000
+
 [AC][HandleButtonEvents]
 lidAction=1
 powerButtonAction=16
