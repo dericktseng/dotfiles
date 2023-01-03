@@ -41,7 +41,10 @@ CommandAll2=Nothing
 CommandAllKey=Alt
 
 [NightColor]
-NightTemperature=3100
+Active=true
+LatitudeAuto=34.0233
+LongitudeAuto=-117.8512
+NightTemperature=3400
 
 [Plugins]
 bismuthEnabled=true
