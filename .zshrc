@@ -14,6 +14,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# ZSH Options
+setopt MENU_COMPLETE        # Automatically highlight first element of completion menu
+setopt AUTO_LIST            # Automatically list choices on ambiguous completion.
+setopt COMPLETE_IN_WORD     # Complete from both ends of a word.
+
 # ZSH defaults
 autoload -U +X compinit && compinit
 zstyle ':completion:*' menu select
@@ -39,6 +44,9 @@ compdef _dirs mv
 
 # enable automatic change directory
 setopt autocd autopushd pushdignoredups
+
+# completion with hidden files
+#_comp_options+=(globdots)
 
 # zsh history
 HISTFILE=~/.zsh_history
