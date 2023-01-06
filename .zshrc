@@ -26,12 +26,9 @@ setopt COMPLETE_ALIASES     # completes aliases as well.
 autoload -U +X compinit && compinit
 
 # Field order is :completion:function:completer:command:argument:tag
-zstyle ':completion:*' complete true
-zle -C alias-expension complete-word _generic
-zstyle ':completion:alias-expension:*' completer _expand_alias
-
 # ZSH defaults
 zstyle ':completion:*' menu select
+zstyle ':completion:*' complete true
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
 zstyle ':completion:*:*:*:*:descriptions' format '%F{green}-- %d --%f'
