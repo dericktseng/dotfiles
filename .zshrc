@@ -7,6 +7,9 @@ fi
 # export PATH
 export PATH="$HOME/kde/src/kdesrc-build:$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
+# zsh fpath
+fpath=(~/.config/zsh/ $fpath)
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -18,29 +21,36 @@ fi
 setopt MENU_COMPLETE        # Automatically highlight first element of completion menu
 setopt AUTO_LIST            # Automatically list choices on ambiguous completion.
 setopt COMPLETE_IN_WORD     # Complete from both ends of a word.
+setopt COMPLETE_ALIASES     # completes aliases as well.
+
+autoload -U +X compinit && compinit
+
+# Field order is :completion:function:completer:command:argument:tag
+zstyle ':completion:*' complete true
+zle -C alias-expension complete-word _generic
+zstyle ':completion:alias-expension:*' completer _expand_alias
 
 # ZSH defaults
-autoload -U +X compinit && compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
 zstyle ':completion:*:*:*:*:descriptions' format '%F{green}-- %d --%f'
+zstyle ':completion:*:*:-command-:*:*' group-order aliases builtins functions commands
 zstyle ':completion:*' completer _extensions _complete _approximate
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' complete-options true
+zstyle ':completion:*' file-sort modification
 
-# same colors as dircolors, but no stat options
-# https://wiki.archlinux.org/title/Color_output_in_console#ls
-eval $(dircolors)
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# rm object files first.
+zstyle ':completion:*:*:rm:*:*' file-patterns '*.o:object-files' '%p:all-files'
 
 # This is for auto ls after cding. lscwd is a custom function.
 chpwd_functions=(${chpwd_functions[@]} "lscwd")
 
-# complete only directories when cd (cd is aliased to cdls), ls, or mv is involved
-compdef _dirs ls
-compdef _dirs cdls
-compdef _dirs mv
+# same colors as dircolors, but no stat options
+# https://wiki.archlinux.org/title/Color_output_in_console#ls
+# eval $(dircolors)
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # enable automatic change directory
 setopt autocd autopushd pushdignoredups
