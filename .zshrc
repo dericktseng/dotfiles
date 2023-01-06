@@ -4,6 +4,9 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ] && [ "$TERM" != "linux" ]; the
     exit
 fi
 
+# export PATH
+export PATH="$HOME/kde/src/kdesrc-build:$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -14,17 +17,17 @@ fi
 # ZSH defaults
 autoload -U +X compinit && compinit
 zstyle ':completion:*' menu select
-
-# export PATH
-export PATH="$HOME/kde/src/kdesrc-build:$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
+zstyle ':completion:*:*:*:*:descriptions' format '%F{green}-- %d --%f'
+zstyle ':completion:*' completer _extensions _complete _approximate
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' complete-options true
 
 # same colors as dircolors, but no stat options
 # https://wiki.archlinux.org/title/Color_output_in_console#ls
 eval $(dircolors)
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-
-# enable automatic change directory
-setopt autocd autopushd pushdignoredups
 
 # This is for auto ls after cding. lscwd is a custom function.
 chpwd_functions=(${chpwd_functions[@]} "lscwd")
@@ -33,6 +36,9 @@ chpwd_functions=(${chpwd_functions[@]} "lscwd")
 compdef _dirs ls
 compdef _dirs cdls
 compdef _dirs mv
+
+# enable automatic change directory
+setopt autocd autopushd pushdignoredups
 
 # zsh history
 HISTFILE=~/.zsh_history
