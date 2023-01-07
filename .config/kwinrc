@@ -44,7 +44,7 @@ CommandAllKey=Alt
 Active=true
 LatitudeAuto=34.0233
 LongitudeAuto=-117.8512
-NightTemperature=3400
+NightTemperature=4100
 
 [Plugins]
 bismuthEnabled=true

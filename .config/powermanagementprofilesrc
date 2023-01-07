@@ -17,6 +17,11 @@ powerButtonAction=16
 powerDownAction=16
 triggerLidActionWhenExternalMonitorPresent=false
 
+[AC][RunScript]
+idleTime=600000
+scriptCommand=sudo cpupower frequency-set --governor schedutil
+scriptPhase=0
+
 [Activities][644e5605-d59e-4231-8d98-6dfb12fc7b5c]
 mode=None
 
