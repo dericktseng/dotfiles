@@ -62,7 +62,7 @@ ConfirmDelete=true
 
 [Open-with settings]
 CompletionMode=1
-History=mpv,neo,q,kdenl,neov,qt,neovim,kwrite,gthu,gth,qvi,matlab,kwri,gwe,firefo
+History=qt,mpv,neo,q,kdenl,neov,neovim,kwrite,gthu,gth,qvi,matlab,kwri,gwe,firefo
 
 [PreviewSettings]
 Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
