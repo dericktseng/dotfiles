@@ -6,6 +6,7 @@ EmojiFont=Noto Color Emoji,13,-1,5,50,0,0,0,0,0
 Font=FiraCode Nerd Font Mono,12,-1,5,50,0,0,0,0,0
 TabColor=255,255,255,0
 UseFontLineChararacters=true
+WordModeBrahmic=true
 
 [Cursor Options]
 CustomCursorColor=119,129,140

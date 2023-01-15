@@ -2,7 +2,7 @@
 RootPath[$e]=$HOME/Music,/mnt/sda2/Music
 
 [KFileDialog Settings]
-Recent Files[$e]=RigelTheatre.m3u8,file:$HOME/Documents/Playlist
+Recent Files[$e]=RigelTheatre.m3u8,file:$HOME/Documents/Playlist.m3u8
 Recent URLs[$e]=file:$HOME/Music/,file:$HOME/Documents/,file:$HOME/,file:$HOME/Downloads/,file:$HOME/Desktop/
 detailViewIconSize=16
 iconViewIconSize=64

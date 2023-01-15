@@ -23,7 +23,7 @@ g.python3_host_prog = '/usr/bin/python3'
 -- g.loaded_spellfile_plugin = 1
 -- g.loaded_tarPlugin = 1
 -- g.loaded_2html_plugin = 1
-g.loaded_tutor_mode_plugin = 1
+-- g.loaded_tutor_mode_plugin = 1
 
 -- enable termguicolors if it exists
 o.termguicolors = fn.has('termguicolors') == 1

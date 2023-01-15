@@ -299,6 +299,7 @@ activate widget 32=none,none,Activate Icons-only Task Manager Widget
 activate widget 37=none,none,Activate Total CPU Use Widget
 activate widget 50=none,none,Activate Application Launcher Widget
 activate widget 57=none,none,Activate Icons-only Task Manager Widget
+activate widget 59=,none,Activate Contacts Widget
 activate widget 60=Alt+F1,none,Activate Application Launcher Widget
 activate widget 87=none,none,Activate Digital Clock Widget
 activate widget 88=none,none,Activate Application Launcher Widget
