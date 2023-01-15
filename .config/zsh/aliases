@@ -7,7 +7,7 @@ alias la="/bin/ls -A --group-directories-first --color=auto"
 alias lla="/bin/ls -lAh --group-directories-first --color=auto"
 alias cd="cdls"
 alias df='/usr/bin/df -h'
-alias free='free -m'
+alias free='free --human'
 alias np="$EDITOR PKGBUILD"
 alias kh='cut -d "," -f 1 ~/.ssh/known_hosts | cut -d " " -f 1 | uniq'
 alias zshrc="$EDITOR $HOME/.zshrc"
