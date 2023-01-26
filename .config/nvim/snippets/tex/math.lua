@@ -158,7 +158,6 @@ local regularsnips = {
   s({trig='box', name='box'},
     fmt([[\box{{{}}}]], {i(1)}), {condition=mathenv}),
 
-  s({trig='x', name='times'}, t('\\times '), {condition=mathenv}),
   s({trig='.', name='cdot'}, t('\\cdot '), {condition=mathenv}),
 }
 

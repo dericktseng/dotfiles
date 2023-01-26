@@ -5,13 +5,13 @@ update_info=spectacle_newConfig.upd:spectacle-new-config,spectacle_clipboard.upd
 autoSaveImage=true
 clipboardGroup=PostScreenshotCopyImage
 onLaunchAction=UseLastUsedCapturemode
+rememberLastRectangularRegion=Never
 
 [GuiConfig]
 captureMode=3
-cropRegion=477,237,967,577
 window-position=0,0
 
 [Save]
 defaultSaveImageFormat=JPG
-lastSaveLocation=file:///tmp/image.png
+lastSaveLocation=file:///home/derickwtseng/Pictures/14-16-48_2023_01_26.jpg
 saveFilenameFormat=%H-%m-%S_%Y_%M_%D

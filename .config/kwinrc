@@ -43,9 +43,10 @@ CommandAllKey=Alt
 
 [NightColor]
 Active=true
-LatitudeAuto=34.0233
-LongitudeAuto=-117.8512
-NightTemperature=4100
+LatitudeAuto=37.751
+LongitudeAuto=-97.822
+NightTemperature=4000
+TransitionTime=5
 
 [Plugins]
 bismuthEnabled=true
@@ -53,8 +54,10 @@ blurEnabled=true
 contrastEnabled=true
 desktopgridEnabled=false
 kwin4_effect_fadeEnabled=true
+kwin4_effect_fadedesktopEnabled=true
 kwin4_effect_scaleEnabled=false
 overviewEnabled=true
+slideEnabled=false
 windowviewEnabled=false
 zoomEnabled=false
 
