@@ -48,13 +48,13 @@ local autosnips = {
       i(1)})),
 
   s({trig='=[%s]*([^=]+)bex', name='boxed until equals after', regTrig=true},
-    fmta([[= \boxed{<>}]], {f(captured,{})})),
+    fmta([[= \boxed{<>}]], {f(captured,{})}), {condition=mathenv}),
 
   s({trig='^(%s*)(.+)box', name='boxed line', regTrig=true},
     fmta([[<>\boxed{<>}]], {
       f(captured, {}, {user_args={1}}),
       f(captured, {}, {user_args={2}}),
-    })),
+    }), {condition=mathenv}),
 
   s({trig='([%a])wt', name='wide tilde after', regTrig=true},
     fmta([[\widetilde{<>}]], {f(captured,{})}), {condition=mathenv}),
