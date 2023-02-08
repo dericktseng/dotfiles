@@ -210,7 +210,7 @@ return {
     fmta([[
       \begin{figure}[htpb]
       <>\centering
-      <>\begin{subfigure}[b]{0.49\textwidth}
+      <>\begin{subfigure}[t]{0.49\textwidth}
       <><>\includegraphics[width=\textwidth]{<>}
       <><>\caption{<>}
       <><>\label{fig:<>}

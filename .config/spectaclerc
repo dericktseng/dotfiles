@@ -9,7 +9,7 @@ rememberLastRectangularRegion=Never
 
 [GuiConfig]
 captureMode=3
-cropRegion=750,324,785,230
+cropRegion=609,161,294,427
 window-position=0,0
 
 [Save]
