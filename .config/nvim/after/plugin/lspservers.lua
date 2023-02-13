@@ -7,7 +7,6 @@ local servers = {
   'pyright',
   'rust_analyzer',
   'clangd',
-  'sumneko_lua'
   -- 'texlab',
 }
 
