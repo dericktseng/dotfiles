@@ -8,7 +8,6 @@ Seen=true
 Seen=true
 
 [Applications][org.kde.spectacle]
-ShowPopups=false
 ShowPopupsInDndMode=false
 
 [Applications][org.mozilla.firefox]
