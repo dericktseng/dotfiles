@@ -20,6 +20,7 @@ FocusFollowsMouse=true
 [MainWindow]
 \sHeight 0x0\s=8192
 \sWidth 0x0\s=4096
+\sWindow-Maximized 0x0\s=true
 HDMI-1 Window-Maximized 1920x1080=true
 HDMI-A-0=HDMI-A-0
 HDMI-A-0 Height 1920x1080=699

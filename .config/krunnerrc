@@ -1,6 +1,6 @@
 [General]
 ActivityAware=false
-HistoryEnabled=false
+FreeFloating=true
 RetainPriorSearch=false
 
 [Plugins]
