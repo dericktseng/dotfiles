@@ -145,7 +145,7 @@ ColorSchemeHash=d2f9f23c62b2c7529878a3b4c96c2902e98086db
 toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 
 [KDE]
-AnimationDurationFactor=0.35355339059327373
+AnimationDurationFactor=0.25
 LookAndFeelPackage=org.kde.breeze.desktop
 ScrollbarLeftClickNavigatesByPage=false
 ShowDeleteCommand=false

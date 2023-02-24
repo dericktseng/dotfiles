@@ -3,6 +3,9 @@ ActivityAware=false
 FreeFloating=true
 RetainPriorSearch=false
 
+[PlasmaRunnerManager]
+migrated=true
+
 [Plugins]
 CharacterRunnerEnabled=false
 DictionaryEnabled=false
