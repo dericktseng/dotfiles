@@ -117,7 +117,7 @@ return {
       ]],
       {
         t('\t'),
-        i(1,'0.9'),
+        i(1,''),
         d(2, utils.filter_snippet, {}, {user_args = {{'png', 'jpg', 'jpeg'}}})
       }
     )
