@@ -12,7 +12,7 @@ local autosnips = {
   s({ trig='(%b[])/', name='frac parenthesis', regTrig=true, priority=1001 },
     fmta([[\frac{<>}{<>}]], {f(captured,{}), i(1)}), {condition=mathenv}),
 
-  s({ trig='([^$={}%s\\%[%]]+)/', name='fancyfrac 1', regTrig=true, priority=1000 },
+  s({ trig='([^$={}%s%[%]]+)/', name='fancyfrac 1', regTrig=true, priority=1000 },
     fmta([[\frac{<>}{<>}]], {f(captured,{}), i(1)}), {condition=mathenv}),
 
   s({trig='([^%s])sr', name='squared', regTrig=true, wordTrig=false},
@@ -111,7 +111,7 @@ local autosnips = {
   s({trig='!>', name='maps to'}, t('\\mapsto '), {condition=mathenv}),
   s({trig='!=', name='not equals'}, t('\\neq '), {condition=mathenv}),
   s({trig='real', name='real'}, t('\\mathbb{R} '), {condition=mathenv}),
-  s({trig='==', name='ampersand-equals'}, t('&= '), {condition=mathenv}),
+  s({trig='==', name='ampersand-equals'}, t('&='), {condition=mathenv}),
   s({trig='apr', name='approximately'}, t('\\approx '), {condition=mathenv}),
   s({trig='eqv', name='equivalent'}, t('\\equivalent '), {condition=mathenv}),
 }
