@@ -144,7 +144,6 @@ xprop
 xrandr
 xset
 xsetroot
-youtube-dl
 yt-dlp
 zoxide
 zsh
