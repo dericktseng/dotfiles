@@ -5,7 +5,7 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ] && [ "$TERM" != "linux" ]; the
 fi
 
 # export PATH
-export PATH="$HOME/kde/src/kdesrc-build:$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bin:$PATH"
 
 # zsh fpath
 fpath=(~/.config/zsh/ $fpath)

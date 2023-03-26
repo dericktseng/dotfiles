@@ -120,6 +120,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
 [Tiling][351e5a58-9611-5be3-868a-68e303937600]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
 
+[Tiling][bd455426-91b5-5aa4-b78c-9e21c3c810ab]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
+
 [Windows]
 AutoRaise=true
 AutoRaiseInterval=0
