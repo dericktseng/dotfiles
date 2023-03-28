@@ -28,10 +28,5 @@ while read -r line; do
     yes | sudo flatpak install $line
 done < ./pkglist/flatpak.txt
 
-# install nvim packer
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-    $HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-# install powerlevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
-    $HOME/.powerlevel10k
+# install submodules (powerlevel10k and packer.nvim)
+git submodule init && git submodule update
