@@ -11,3 +11,7 @@ fi
 git clone --bare 'https://github.com/MetriC-DT/dotfiles' $HOME/.dotfiles
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout -f
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
+
+# install and update submodules
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME submodule init
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME submodule update
