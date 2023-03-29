@@ -50,7 +50,6 @@ NightTemperature=3700
 TransitionTime=5
 
 [Plugins]
-bismuthEnabled=true
 blurEnabled=true
 contrastEnabled=true
 desktopgridEnabled=false
@@ -61,17 +60,6 @@ overviewEnabled=true
 slideEnabled=false
 windowviewEnabled=false
 zoomEnabled=false
-
-[Script-bismuth]
-enableFloatingLayout=true
-enableSpiralLayout=false
-enableSpreadLayout=false
-enableStairLayout=false
-floatingClass=lutris,easyeffects,x2goclient,gimp,discord,steam,zoom,discover,steam_app_0,discord-screenaudio
-floatingTitle=System Settings,KDE Connect
-ignoreClass=yakuake,spectacle,Conky
-keepFloatAbove=false
-preventProtrusion=false
 
 [Script-desktopchangeosd]
 TextOnly=true
