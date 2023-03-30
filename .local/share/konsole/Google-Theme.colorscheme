@@ -1,11 +1,11 @@
 [Background]
-Color=248,250,250
+Color=255,255,255
 
 [BackgroundFaint]
-Color=248,250,250
+Color=255,255,255
 
 [BackgroundIntense]
-Color=248,250,250
+Color=255,255,255
 
 [Color0]
 Color=32,33,36
@@ -96,4 +96,5 @@ Description=Google-Theme
 FillStyle=Tile
 Opacity=1
 Wallpaper=
+WallpaperFlipType=NoFlip
 WallpaperOpacity=1
