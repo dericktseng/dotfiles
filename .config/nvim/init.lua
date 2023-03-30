@@ -92,3 +92,6 @@ o.ignorecase = true
 
 -- sets the conceallevel
 opt.conceallevel = 2
+
+-- set global statusline
+opt.laststatus = 3
