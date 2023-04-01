@@ -36,7 +36,6 @@ return require('packer').startup(function(use)
 
   -- use '~/Desktop/program/balance-theme.nvim'
   use 'MetriC-DT/balance-theme.nvim'
-  use 'nvim-treesitter/nvim-treesitter-context'
   use 'L3MON4D3/LuaSnip'
   use 'nvim-lualine/lualine.nvim'
   use 'kyazdani42/nvim-web-devicons'
