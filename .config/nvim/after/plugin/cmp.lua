@@ -64,7 +64,7 @@ cmp.setup {
   },
 
   window = {
-    completion = { border = 'rounded', },
-    documentation = { border = 'rounded', }
+    completion = { border = 'single', },
+    documentation = { border = 'single', }
   },
 }

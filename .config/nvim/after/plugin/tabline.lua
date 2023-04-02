@@ -7,7 +7,7 @@ function _G.tablinestr()
   local numberdelimiter = ' '
   local padding = ' '
   local tabdelimiter = '▎'
-  local closeicon = '%999X+'
+  local closeicon = '%999XX'
 
   for i = 1, tabcount do
     local winnr = vim.fn.tabpagewinnr(i)

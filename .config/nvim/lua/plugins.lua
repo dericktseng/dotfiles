@@ -29,8 +29,8 @@ return require('packer').startup(function(use)
   use {
     'neovim/nvim-lspconfig',
     requires = {
-      {'williamboman/mason.nvim'},
-      {'williamboman/mason-lspconfig.nvim'},
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim'
     }
   }
 
@@ -38,7 +38,6 @@ return require('packer').startup(function(use)
   use 'MetriC-DT/balance-theme.nvim'
   use 'L3MON4D3/LuaSnip'
   use 'nvim-lualine/lualine.nvim'
-  use 'kyazdani42/nvim-web-devicons'
   use 'wbthomason/packer.nvim'
   use 'lewis6991/impatient.nvim'
   use 'windwp/nvim-autopairs'
