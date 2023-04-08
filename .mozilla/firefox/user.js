@@ -120,3 +120,4 @@ user_pref("ui.key.menuAccessKeyFocuses", false);
 user_pref("browser.gesture.swipe.left", "cmd_scrollLeft");
 user_pref("browser.gesture.swipe.right", "cmd_scrollRight");
 user_pref("browser.tabs.inTitlebar", 0);
+user_pref("xpinstall.signatures.required", false);
