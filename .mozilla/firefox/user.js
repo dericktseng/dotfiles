@@ -5,6 +5,7 @@ user_pref("app.normandy.startupRolloutPrefs.extensions.webcompat.disabled_shims.
 user_pref("app.shield.optoutstudies.enabled", false);
 user_pref("browser.bookmarks.restore_default_bookmarks", false);
 user_pref("browser.bookmarks.showMobileBookmarks", false);
+user_pref("browser.toolbars.bookmarks.visibility", "newtab");
 user_pref("browser.cache.disk.enable", false);
 user_pref("browser.contentblocking.category", "strict");
 user_pref("browser.download.viewableInternally.typeWasRegistered.avif", true);

@@ -9,10 +9,9 @@ rememberLastRectangularRegion=Never
 
 [GuiConfig]
 captureMode=3
-cropRegion=413,222,1062,791
 window-position=0,0
 
 [Save]
 defaultSaveImageFormat=JPG
-lastSaveLocation=file:///home/derickwtseng/Pictures/20-47-25_2023_03_28.jpg
+lastSaveLocation=file:///tmp/image.png
 saveFilenameFormat=%H-%m-%S_%Y_%M_%D
