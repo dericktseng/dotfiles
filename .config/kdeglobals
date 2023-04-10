@@ -142,6 +142,12 @@ History Items[$e]=file:$HOME/Desktop/shared/misc,file:$HOME/Downloads,file:$HOME
 [General]
 BrowserApplication=io.gitlab.librewolf-community.desktop
 ColorSchemeHash=d2f9f23c62b2c7529878a3b4c96c2902e98086db
+XftHintStyle=hintslight
+XftSubPixel=rgb
+fixed=Noto Sans Mono,10,-1,5,50,0,0,0,0,0
+font=Noto Sans,10,-1,5,50,0,0,0,0,0
+menuFont=Noto Sans,10,-1,5,50,0,0,0,0,0
+smallestReadableFont=Noto Sans,9,-1,5,50,0,0,0,0,0
 toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 
 [KDE]
@@ -184,6 +190,7 @@ MaximumRemoteSize=5242880000
 [WM]
 activeBackground=227,229,231
 activeBlend=227,229,231
+activeFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 activeForeground=35,38,41
 inactiveBackground=239,240,241
 inactiveBlend=239,240,241
