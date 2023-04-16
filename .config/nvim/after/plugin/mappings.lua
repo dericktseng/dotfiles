@@ -140,7 +140,7 @@ keymap('n', '<Leader>eco', vim.lsp.buf.outgoing_calls)
 keymap('n', '<Leader>ewl', vim.lsp.buf.list_workspace_folders)
 keymap('n', '<Leader>ewa', vim.lsp.buf.add_workspace_folder)
 keymap('n', '<Leader>ewr', vim.lsp.buf.remove_workspace_folder)
-keymap('n', '<Leader>ef', vim.lsp.buf.formatting)
+-- keymap('n', '<Leader>ef', vim.lsp.buf.formatting)
 keymap('n', '<Leader>eg', vim.lsp.buf.signature_help)
 keymap('n', '<Leader>ee', vim.lsp.buf.rename, {silent=false})
 
