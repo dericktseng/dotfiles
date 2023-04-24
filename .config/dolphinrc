@@ -30,7 +30,7 @@ iconViewIconSize=64
 
 [KPropertiesDialog]
 1920x1080 screen: Height=458
-1920x1080 screen: Width=378
+1920x1080 screen: Width=380
 HDMI-A-0 Height 1920x1080=458
 HDMI-A-0 Height 1920x1080 HDMI-A-0=458
 HDMI-A-0 Width 1920x1080=434
@@ -67,7 +67,7 @@ CompletionMode=1
 History=neovim,qt,mpv,neo,q,kdenl,neov,kwrite,gthu,gth,qvi,matlab,kwri,gwe,firefo
 
 [PreviewSettings]
-Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
+Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
 
 [Search]
 Location=Everywhere

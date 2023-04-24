@@ -7,7 +7,7 @@ local servers = {
   'rust_analyzer',
   'clangd',
   'lua_ls',
-  -- 'texlab',
+  'texlab',
 }
 
 -- setup mason

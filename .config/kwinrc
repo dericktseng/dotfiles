@@ -100,7 +100,7 @@ count=0
 LayoutName=thumbnail_grid
 
 [Tiling]
-padding=4
+padding=0
 
 [Tiling][29297ac6-3b89-5e7b-b49b-1c80d7d12cfb]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}

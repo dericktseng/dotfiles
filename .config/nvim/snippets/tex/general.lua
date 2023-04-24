@@ -294,6 +294,7 @@ return {
           \usepackage{booktabs}
           % \usepackage{xcolor}
           % \usepackage{pdfpages}
+          % \usepackage{courier}
 
           % \definecolor{codegreen}{rgb}{0,0.6,0}
           % \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -319,7 +320,7 @@ return {
           %     tabsize=2
           % }
 
-          % \lstset{style=mystyle,basicstyle=\footnotesize,breaklines=true,showstringspaces=false,frame=single}
+          % \lstset{style=mystyle,basicstyle=\ttfamily\footnotesize,breaklines=true,showstringspaces=false,frame=single}
           %}}}
 
           % \setlength{\parindent}{0em}
