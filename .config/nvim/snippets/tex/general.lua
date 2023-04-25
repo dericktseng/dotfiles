@@ -3,6 +3,10 @@ local ls = require("luasnip")
 local isn = ls.indent_snippet_node
 
 return {
+  s({trig='verb', name='verbatim'},
+    fmta([[\verb|<>|]], i(1))
+  ),
+
   s({trig='fref', name='figure reference'},
     fmta([[Figure \ref{fig:<>}]], i(1))
   ),
