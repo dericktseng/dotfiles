@@ -114,6 +114,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][bd455426-91b5-5aa4-b78c-9e21c3c810ab]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
 
+[Wayland]
+InputMethod[$e]=/usr/share/applications/org.fcitx.Fcitx5.desktop
+
 [Windows]
 AutoRaise=true
 AutoRaiseInterval=0
