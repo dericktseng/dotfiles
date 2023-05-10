@@ -12,6 +12,7 @@ systemctl --user --now enable psd
 
 # system services
 sudo systemctl --now enable systemd-resolved
+sudo systemctl --now disable NetworkManager-wait-online
 
 # synchronize clock with systemd timesync ntp
 sudo timedatectl set-ntp true
@@ -30,17 +31,8 @@ sudo mkdir -p "$systemdconfd"
 sudo cp -ir ./conf/systemd/* "$systemdconfd"
 
 # firefox changes
-echo "Firefox Manual about:config changes"
-echo "browser.cache.disk.enable = false"
-echo "browser.compactmode.show = true"
-echo "gfx.webrender.all = true"
-echo "accessibility.force_disabled = 1"
-echo "media.ffmpeg.vaapi.enabled = true"
-echo "media.rdd-vpx.enabled = false"
-echo "gfx.webrender.compositor.force-enabled = true"
-echo "ui.key.menuAccessKeyFocuses = false"
 echo "---------------------------------"
-echo "Plugins enable Openh264 Video Codec"
+echo "Firefox Plugins enable Openh264 Video Codec"
 
 # matlab install process:
 # delete the libfreetype.so file inside the matlab directory to run installer

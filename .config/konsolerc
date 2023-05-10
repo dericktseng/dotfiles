@@ -23,6 +23,7 @@ FocusFollowsMouse=true
 \sWindow-Maximized 0x0\s=true
 0x0 screen: Height=1040
 0x0 screen: Width=4096
+0x0 screen: Window-Maximized=true
 1920x1080 screen: Height=1040
 1920x1080 screen: Width=960
 1920x1080 screen: Window-Maximized=true

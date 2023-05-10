@@ -4,18 +4,18 @@
  <MenuBar>
   <Menu name="file">
    <text>&amp;File</text>
-   <Action name="get_new_stuff" group="file_open"/>
-   <Action name="import_ps" group="file_open"/>
-   <Action name="file_save" group="file_save"/>
-   <Action name="file_save_as" group="file_save"/>
-   <Action name="file_reload" group="file_save"/>
-   <Action name="file_print" group="file_print"/>
-   <Action name="file_print_preview" group="file_print"/>
-   <Action name="open_containing_folder" group="file_print"/>
-   <Action name="properties" group="file_print"/>
-   <Action name="embedded_files" group="file_print"/>
-   <Action name="file_export_as" group="file_print"/>
-   <Action name="file_share" group="file_print"/>
+   <Action group="file_open" name="get_new_stuff"/>
+   <Action group="file_open" name="import_ps"/>
+   <Action group="file_save" name="file_save"/>
+   <Action group="file_save" name="file_save_as"/>
+   <Action group="file_save" name="file_reload"/>
+   <Action group="file_print" name="file_print"/>
+   <Action group="file_print" name="file_print_preview"/>
+   <Action group="file_print" name="open_containing_folder"/>
+   <Action group="file_print" name="properties"/>
+   <Action group="file_print" name="embedded_files"/>
+   <Action group="file_print" name="file_export_as"/>
+   <Action group="file_print" name="file_share"/>
   </Menu>
   <Menu name="edit">
    <text>&amp;Edit</text>
@@ -96,22 +96,22 @@
   </Menu>
   <Menu name="settings">
    <text>&amp;Settings</text>
-   <Action name="colorscheme_menu" group="show_merge"/>
-   <Action name="show_leftpanel" group="show_merge"/>
-   <Action name="show_bottombar" group="show_merge"/>
-   <Action name="options_configure_generators" group="configure_merge"/>
-   <Action name="options_configure" group="configure_merge"/>
+   <Action group="show_merge" name="colorscheme_menu"/>
+   <Action group="show_merge" name="show_leftpanel"/>
+   <Action group="show_merge" name="show_bottombar"/>
+   <Action group="configure_merge" name="options_configure_generators"/>
+   <Action group="configure_merge" name="options_configure"/>
   </Menu>
   <Menu name="help">
    <text>&amp;Help</text>
-   <Action name="help_about_backend" group="about_merge"/>
+   <Action group="about_merge" name="help_about_backend"/>
   </Menu>
  </MenuBar>
- <ToolBar hidden="true" iconSize="32" newline="true" iconText="icononly" position="right" name="quickAnnotationToolBar">
+ <ToolBar iconText="icononly" iconSize="32" position="right" hidden="true" newline="true" name="quickAnnotationToolBar">
   <text>Quick Annotation Toolbar</text>
   <Action name="quick_annotation_action_bar"/>
  </ToolBar>
- <ToolBar hidden="true" newline="true" iconText="icononly" name="annotationToolBar">
+ <ToolBar iconText="icononly" hidden="true" newline="true" name="annotationToolBar">
   <text>Annotation Toolbar</text>
   <Action name="annotation_highlighter"/>
   <Action name="annotation_underline"/>
@@ -165,7 +165,7 @@
   <Action shortcut="Ctrl+2" name="mouse_textselect"/>
   <Action shortcut="" name="mouse_zoom"/>
   <Action shortcut="Ctrl+N" name="show_bottombar"/>
-  <Action shortcut="Tab" priority="0" name="show_leftpanel"/>
+  <Action priority="0" shortcut="Tab" name="show_leftpanel"/>
   <Action shortcut="0" name="view_actual_size"/>
   <Action shortcut="A" name="view_fit_to_page"/>
   <Action shortcut="W" name="view_fit_to_width"/>
