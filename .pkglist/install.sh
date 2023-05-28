@@ -23,10 +23,7 @@ cat ./pkglist/pkglist.txt | xargs sudo dnf -y --allowerasing install
 cat ./pkglist/groups.txt | xargs sudo dnf -y groupinstall --allowerasing
 
 # install flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 while read -r line; do
-    yes | flatpak install --user $line
+    flatpak install -y $line
 done < ./pkglist/flatpak.txt
-
-# install submodules (powerlevel10k and packer.nvim)
-git submodule init && git submodule update
