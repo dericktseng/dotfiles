@@ -1,3 +1,7 @@
+[FileDialogSize]
+1920x1080 screen: Height=676
+1920x1080 screen: Width=1050
+
 [KFileDialog Settings]
 Recent Files[$e]=yt-playlist,file:$HOME/.cargo/bin/alacritty
 Recent URLs[$e]=file:$HOME/Music/,file:$HOME/Downloads/,file:$HOME/,file:$HOME/.local/bin/,file:$HOME/Documents/,file:$HOME/.cargo/bin/
@@ -13,10 +17,10 @@ HDMI-A-1 Height 1920x1080=458
 HDMI-A-1 Width 1920x1080=431
 
 [MainWindow]
-1920x1080 screen: Height=879
-1920x1080 screen: Width=1526
-1920x1080 screen: XPosition=165
-1920x1080 screen: YPosition=80
+1920x1080 screen: Height=872
+1920x1080 screen: Width=1433
+1920x1080 screen: XPosition=261
+1920x1080 screen: YPosition=117
 HDMI-1 XPosition 1920x1080=450
 HDMI-1 YPosition 1920x1080=170
 HDMI-A-0=HDMI-A-0
@@ -36,7 +40,7 @@ HDMI-A-1 Window-Maximized 1920x1080 HDMI-A-1=true
 HDMI-A-1 Window-Maximized 3840x2160 HDMI-A-1=true
 HDMI-A-1 Window-Maximized 960x540 HDMI-A-1=true
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAABfYAAANvAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAABZkAAANoAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 eDP=eDP
 eDP Height 1920x1080=790

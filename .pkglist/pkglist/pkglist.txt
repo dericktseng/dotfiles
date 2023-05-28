@@ -64,6 +64,7 @@ kf5-kcontacts-devel
 kf5-kpeople-devel
 kio_mtp
 lame
+langpacks-ja
 levien-inconsolata-fonts
 libX11-devel
 libXext-devel

@@ -30,6 +30,9 @@ sudo cp -i ./conf/modprobe/* /etc/modprobe.d/
 sudo mkdir -p "$systemdconfd"
 sudo cp -ir ./conf/systemd/* "$systemdconfd"
 
+# input method switching
+imsettings-switch fcitx5
+
 # firefox changes
 echo "---------------------------------"
 echo "Firefox Plugins enable Openh264 Video Codec"
