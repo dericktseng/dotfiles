@@ -1,32 +1,32 @@
 <?xml version='1.0'?>
 <!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
-<gui version="9" name="okular_shell">
+<gui name="okular_shell" version="11">
  <MenuBar>
   <Menu name="file">
-   <DefineGroup append="open_merge" name="file_open"/>
-   <DefineGroup append="save_merge" name="file_save"/>
-   <DefineGroup append="print_merge" name="file_print"/>
-   <Action append="open_merge" name="undo-close-tab"/>
+   <DefineGroup name="file_open" append="open_merge"/>
+   <DefineGroup name="file_save" append="save_merge"/>
+   <DefineGroup name="file_print" append="print_merge"/>
+   <Action name="undo-close-tab" append="open_merge"/>
   </Menu>
   <!--Menu name="view" >
    <Action name="fullscreen" />
   </Menu-->
   <Menu name="settings">
-   <DefineGroup append="show_merge" name="show_merge"/>
-   <DefineGroup append="configure_merge" name="configure_merge"/>
+   <DefineGroup name="show_merge" append="show_merge"/>
+   <DefineGroup name="configure_merge" append="configure_merge"/>
   </Menu>
   <Merge/>
   <Menu name="help">
-   <DefineGroup append="about_merge" name="about_merge"/>
+   <DefineGroup name="about_merge" append="about_merge"/>
   </Menu>
  </MenuBar>
- <ToolBar noMerge="1" name="mainToolBar">
+ <ToolBar name="mainToolBar" noMerge="1">
   <text>Main Toolbar</text>
   <!--Action name="file_open_recent" /-->
   <!--Action name="file_print" /-->
  </ToolBar>
  <ActionProperties scheme="Default">
-  <Action shortcut="O" name="file_open"/>
-  <Action shortcut="Q" name="file_quit"/>
+  <Action name="file_open" shortcut="O"/>
+  <Action name="file_quit" shortcut="Q"/>
  </ActionProperties>
 </gui>

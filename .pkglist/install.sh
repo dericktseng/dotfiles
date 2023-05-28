@@ -20,12 +20,12 @@ sudo dnf upgrade -y
 cat ./pkglist/pkglist.txt | xargs sudo dnf -y --allowerasing install
 
 # install groups
-cat ./pkglist/groups.txt | xargs sudo dnf -y groupinstall
+cat ./pkglist/groups.txt | xargs sudo dnf -y groupinstall --allowerasing
 
 # install flatpak
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 while read -r line; do
-    yes | sudo flatpak install $line
+    yes | flatpak install --user $line
 done < ./pkglist/flatpak.txt
 
 # install submodules (powerlevel10k and packer.nvim)

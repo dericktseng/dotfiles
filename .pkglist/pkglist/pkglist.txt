@@ -82,8 +82,6 @@ llvm
 lm_sensors
 make
 mathjax
-mesa-va-drivers-freeworld
-mesa-vdpau-drivers-freeworld
 meson
 mozilla-openh264
 mpv
@@ -147,10 +145,6 @@ xdg-desktop-portal-gtk
 xdg-user-dirs
 xdg-utils
 xdotool
-xprop
-xrandr
-xset
-xsetroot
 yt-dlp
 zoxide
 zsh

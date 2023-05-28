@@ -141,7 +141,7 @@ History Items[$e]=file:$HOME/Desktop/shared/misc,file:$HOME/Downloads,file:$HOME
 
 [General]
 BrowserApplication=io.gitlab.librewolf-community.desktop
-ColorSchemeHash=d2f9f23c62b2c7529878a3b4c96c2902e98086db
+ColorSchemeHash=2ef8a9f7238e072ca91b0eb590f49ded650c76bd
 XftHintStyle=hintslight
 XftSubPixel=rgb
 fixed=Noto Sans Mono,10,-1,5,50,0,0,0,0,0
