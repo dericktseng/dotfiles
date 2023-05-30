@@ -1,3 +1,6 @@
+[$Version]
+update_info=kded.upd:kde3.0
+
 [ColorEffects:Disabled]
 Color=56,56,56
 ColorAmount=0
@@ -47,20 +50,6 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [Colors:Header]
-BackgroundAlternate=239,240,241
-BackgroundNormal=222,224,226
-DecorationFocus=61,174,233
-DecorationHover=61,174,233
-ForegroundActive=61,174,233
-ForegroundInactive=112,125,138
-ForegroundLink=41,128,185
-ForegroundNegative=218,68,83
-ForegroundNeutral=246,116,0
-ForegroundNormal=35,38,41
-ForegroundPositive=39,174,96
-ForegroundVisited=155,89,182
-
-[Colors:Header][Inactive]
 BackgroundAlternate=227,229,231
 BackgroundNormal=239,240,241
 DecorationFocus=61,174,233
@@ -133,15 +122,9 @@ ForegroundVisited=155,89,182
 [General]
 ColorScheme=BreezeLight
 Name=Breeze Light
-font=Noto Sans,10,-1,5,50,0,0,0,0,0
-menuFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 shadeSortColumn=true
-smallestReadableFont=Noto Sans,8,-1,5,50,0,0,0,0,0
 toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 widgetStyle=Breeze
-
-[Icons]
-Theme=breeze
 
 [KDE]
 ShowIconsInMenuItems=true

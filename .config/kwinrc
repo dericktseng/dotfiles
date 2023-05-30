@@ -46,7 +46,7 @@ CommandAllKey=Alt
 Active=true
 LatitudeAuto=37.751
 LongitudeAuto=-97.822
-NightTemperature=3700
+NightTemperature=3600
 TransitionTime=5
 
 [Plugins]
