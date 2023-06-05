@@ -47,7 +47,6 @@ return require('packer').startup(function(use)
   use {
     'iamcco/markdown-preview.nvim',
     run = 'cd app && yarn install',
-    ft = {'markdown'}
   }
 
   use 'lervag/vimtex'
