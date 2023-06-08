@@ -1,0 +1,8 @@
+[Unit]
+Description=Pipewire filter chain
+
+[Service]
+ExecStart=pipewire -c filter-chain.conf
+
+[Install]
+WantedBy=default.target
