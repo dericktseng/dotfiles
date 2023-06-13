@@ -25,7 +25,7 @@ HorizontalScroll=0
 VerticalScroll=0
 
 [Internal Settings]
-DefaultResourceColorSeed=5
+DefaultResourceColorSeed=7
 
 [KFileDialog Settings]
 detailViewIconSize=16
@@ -79,15 +79,15 @@ SortAscending=1
 SortColumn=0
 
 [TodoTreeViewState]
-Current=i30
-Expansion=i30
+Current=x-1
+Expansion=
 HorizontalScroll=0
 Selection=
 VerticalScroll=0
 
 [TodoTreeViewStateS]
 Current=x-1
-Expansion=i30
+Expansion=
 HorizontalScroll=0
 Selection=
 VerticalScroll=0
