@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
-<gui name="okular_part" version="54">
+<gui version="54" name="okular_part">
  <MenuBar>
   <Menu name="file">
    <text>&amp;File</text>
@@ -123,7 +123,7 @@
   <Separator/>
   <Action name="hamburger_menu"/>
  </ToolBar>
- <ToolBar hidden="true" iconText="icononly" name="annotationToolBar" newline="true">
+ <ToolBar newline="true" iconText="icononly" hidden="true" name="annotationToolBar">
   <text>Annotation Toolbar</text>
   <Action name="annotation_highlighter"/>
   <Action name="annotation_underline"/>
@@ -148,7 +148,7 @@
   <Spacer/>
   <Action name="hide_annotation_toolbar"/>
  </ToolBar>
- <ToolBar iconSize="32" hidden="true" iconText="icononly" position="right" name="quickAnnotationToolBar" newline="true">
+ <ToolBar iconSize="32" newline="true" iconText="icononly" hidden="true" position="right" name="quickAnnotationToolBar">
   <text>Quick Annotation Toolbar</text>
   <Action name="quick_annotation_action_bar"/>
  </ToolBar>

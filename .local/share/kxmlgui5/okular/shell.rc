@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
-<gui name="okular_shell" version="11">
+<gui version="11" name="okular_shell">
  <MenuBar>
   <Menu name="file">
    <DefineGroup append="open_merge" name="file_open"/>
