@@ -31,8 +31,8 @@ detailViewIconSize=16
 iconViewIconSize=64
 
 [KPropertiesDialog]
-1920x1080 screen: Height=464
-1920x1080 screen: Width=391
+1920x1080 screen: Height=458
+1920x1080 screen: Width=405
 HDMI-A-0 Height 1920x1080=458
 HDMI-A-0 Height 1920x1080 HDMI-A-0=458
 HDMI-A-0 Width 1920x1080=434

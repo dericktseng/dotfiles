@@ -43,7 +43,6 @@ CommandAll2=Nothing
 CommandAllKey=Alt
 
 [NightColor]
-Active=true
 LatitudeAuto=37.751
 LongitudeAuto=-97.822
 NightTemperature=3600

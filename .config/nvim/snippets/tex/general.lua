@@ -1,5 +1,6 @@
 local utils = require('sniputils')
-local ls = require("luasnip")
+local ls = require('luasnip')
+local extras = require("luasnip.extras")
 local isn = ls.indent_snippet_node
 
 return {
@@ -85,11 +86,12 @@ return {
 
   s(
     {trig='(s*)sec', name='section', regTrig=true},
-    fmta([[\<>section{<>}]], {
+    fmta([[\<>section{<>} \label{sec:<>}]], {
       f(function(args, snip)
         return snip.captures[1]:gsub('s', 'sub');
       end),
-      i(1)
+      i(1),
+      extras.rep(1)
   })),
 
   s(

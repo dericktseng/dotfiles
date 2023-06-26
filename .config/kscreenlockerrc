@@ -8,5 +8,5 @@ Timeout=10
 showMediaControls=false
 
 [Greeter][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/Honeywave/
-PreviewImage=/usr/share/wallpapers/Honeywave/
+Image=/usr/share/wallpapers/Opal/
+PreviewImage=/usr/share/wallpapers/Opal/
