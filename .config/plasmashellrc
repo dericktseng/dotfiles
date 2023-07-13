@@ -10,6 +10,7 @@ Number of Actions=0
 
 [KFileDialog Settings]
 detailViewIconSize=16
+iconViewIconSize=64
 
 [KPropertiesDialog]
 HDMI-A-0 Height 1920x1080=478
@@ -19,7 +20,7 @@ HDMI-A-0 Width 1920x1080=377
 klipperClearHistoryAskAgain=false
 
 [PlasmaTransientsConfig]
-PreloadWeight=42
+PreloadWeight=34
 
 [PlasmaViews][Panel 2]
 alignment=132

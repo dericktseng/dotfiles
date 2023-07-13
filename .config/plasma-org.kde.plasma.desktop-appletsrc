@@ -118,22 +118,6 @@ launchers=
 maxStripes=1
 wheelSkipMinimized=false
 
-[Containments][2][Applets][58]
-immutability=1
-plugin=org.kde.plasma.timer
-
-[Containments][2][Applets][58][Configuration]
-PreloadWeight=85
-
-[Containments][2][Applets][58][Configuration][ConfigDialog]
-DialogHeight=691
-DialogWidth=1168
-
-[Containments][2][Applets][58][Configuration][General]
-command=loginctl lock-session
-predefinedTimers=300,1500
-savedAt=2022,11,24,18,16,35.419
-
 [Containments][2][Applets][7]
 immutability=1
 plugin=org.kde.plasma.systemtray
@@ -150,7 +134,7 @@ DialogWidth=1920
 PreloadWeight=42
 
 [Containments][2][General]
-AppletOrder=50;40;4;27;57;26;58;52;7
+AppletOrder=50;40;4;27;57;26;52;7
 
 [Containments][53]
 ItemGeometries-1920x1080=
@@ -287,7 +271,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][8][Applets][22][Configuration]
-PreloadWeight=100
+PreloadWeight=84
 
 [Containments][8][Applets][24]
 immutability=1
@@ -312,7 +296,7 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][8][Applets][29][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][8][Applets][29][Configuration][ConfigDialog]
 DialogHeight=540
@@ -356,4 +340,4 @@ knownItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.blue
 
 [ScreenMapping]
 itemsOnDisabledScreens=1,884b7bf3-ccba-4560-867b-dc0726837c67,25,file:///root,file:///bin,file:///lost+found,file:///srv,file:///opt,file:///var,file:///proc,file:///media,file:///mnt,file:///usr,file:///tmp,file:///dev,file:///boot,file:///afs,file:///home,file:///lib64,file:///run,file:///sbin,file:///lib,file:///sys,file:///etc,desktop:/current,desktop:/Berkeley,desktop:/Games,desktop:/program
-screenMapping=file:///home/derickwtseng/Documents/Derick Resume.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Public,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Videos,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads/Photos-In class experiment 2,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads/Derick Tseng.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Academic Summary CalCentral.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Zoom,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads/MSE PhD Acceptance Letter 2023--final.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/passtext.txt,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Calendar,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Music,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Pictures,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/GameSaves,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Desktop,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Templates,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Summer Research,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads/Photos-In class experiment 2.zip,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Resume.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Books,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Games,0,884b7bf3-ccba-4560-867b-dc0726837c67
+screenMapping=file:///home/derickwtseng/Documents/Books,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads/Photos-In class experiment 2.zip,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Calendar,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Summer Research,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Public,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads/Derick Tseng.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Games,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads/MSE PhD Acceptance Letter 2023--final.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Templates,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Academic Summary CalCentral.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Videos,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Desktop,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Resume.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Music,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads/Photos-In class experiment 2,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Derick Resume.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Pictures,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/passtext.txt,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Zoom,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/GameSaves,0,884b7bf3-ccba-4560-867b-dc0726837c67

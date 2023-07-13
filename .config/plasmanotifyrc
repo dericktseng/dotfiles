@@ -22,6 +22,9 @@ Seen=true
 [Applications][org.qbittorrent.qBittorrent]
 Seen=true
 
+[Applications][org.signal.Signal]
+Seen=true
+
 [DoNotDisturb]
 NotificationSoundsMuted=true
 
