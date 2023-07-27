@@ -20,3 +20,6 @@ vim.api.nvim_create_user_command('Cwd', 'cd %:h', {})
 
 -- luasnip custom command
 vim.api.nvim_create_user_command('LuaSnipEdit', require('luasnip.loaders').edit_snippet_files, {})
+
+-- use ctags
+vim.api.nvim_create_user_command('MakeTags', '!ctags -R .', {})

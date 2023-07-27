@@ -8,8 +8,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ";"
 
 -- quick spelling fixes
-keymap('i', '<C-X>', [[<c-g>u<Esc>[s1z=`]a<c-g>u]])
-keymap('n', '<C-X>', [[mz[s1z=`z]])
+keymap('i', '<C-S>', [[<c-g>u<Esc>[s1z=`]a<c-g>u]])
+keymap('n', '<C-S>', [[mz[s1z=`z]])
 
 -- gx fix
 keymap('n', 'gx', [[:execute 'silent! !xdg-open ' . shellescape(expand('<cWORD>'), 1)<CR>]])
@@ -40,7 +40,6 @@ keymap('n', '<C-D>', '<C-D>zz')
 keymap('n', '<C-U>', '<C-U>zz')
 keymap('n', '<C-J>', ':cnext<CR>')
 keymap('n', '<C-K>', ':cprev<CR>')
-keymap('n', '<C-T>', [[:tabnew<CR>:Ex<CR>]])
 keymap('n', '<LocalLeader>j', ':lnext<CR>')
 keymap('n', '<LocalLeader>k', ':lprev<CR>')
 keymap('n', 'Y', 'y$')
@@ -115,7 +114,7 @@ keymap('n', '<Leader>fh', ':Telescope help_tags<CR>')
 keymap('n', '<Leader>fl', ':Telescope heading<CR>')
 keymap('n', '<Leader>fr', ':Telescope live_grep<CR>')
 keymap('n', '<Leader>fz', ':Telescope current_buffer_fuzzy_find<CR>')
-keymap('n', '<Leader>ft', ':Telescope treesitter<CR>')
+keymap('n', '<Leader>ft', ':Telescope tags<CR>')
 keymap('n', '<Leader>fm', ':Telescope marks<CR>')
 keymap('n', '<Leader>fc', ':Telescope commands<CR>')
 keymap('n', '<Leader>fq', ':Telescope quickfix<CR>')
