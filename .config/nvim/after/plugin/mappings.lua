@@ -1,4 +1,4 @@
-local fn = require'functions'
+local fn = require 'functions'
 local keymap = vim.keymap.set
 local wrap = fn.fnwrap
 
@@ -12,11 +12,11 @@ keymap('i', '<C-S>', [[<c-g>u<Esc>[s1z=`]a<c-g>u]])
 keymap('n', '<C-S>', [[mz[s1z=`z]])
 
 -- gx fix
-keymap('n', 'gx', [[:execute 'silent! !xdg-open ' . shellescape(expand('<cWORD>'), 1)<CR>]])
+-- keymap('n', 'gx', [[:execute 'silent! !xdg-open ' . shellescape(expand('<cWORD>'), 1)<CR>]])
 
 -- updating
 keymap('n', '<Leader>p', ':PackerSync<CR>')
-keymap('n', '<Leader>R', [[:so %<CR>:echo 'reloaded file'<CR>]], {silent=false})
+keymap('n', '<Leader>R', [[:so %<CR>:echo 'reloaded file'<CR>]], { silent = false })
 
 -- keymaps
 keymap('t', '<ESC>', [[<C-\><C-N>]])
@@ -31,11 +31,11 @@ keymap('x', '|', [=[<ESC>`<i|<ESC>`>la|<ESC>]=])
 keymap('x', '[', [=[<ESC>`<i[<ESC>`>la]<ESC>]=])
 
 keymap('n', '<C-L>', [[:nohl<CR><C-L>]])
-keymap('n', 'k', fn.nav_up, {expr=true})
-keymap('n', 'j', fn.nav_down, {expr=true})
-keymap('x', 'k', fn.nav_up, {expr=true})
-keymap('x', 'j', fn.nav_down, {expr=true})
-keymap('n', 'dd', fn.smart_dd, {expr=true})
+keymap('n', 'k', fn.nav_up, { expr = true })
+keymap('n', 'j', fn.nav_down, { expr = true })
+keymap('x', 'k', fn.nav_up, { expr = true })
+keymap('x', 'j', fn.nav_down, { expr = true })
+keymap('n', 'dd', fn.smart_dd, { expr = true })
 keymap('n', '<C-D>', '<C-D>zz')
 keymap('n', '<C-U>', '<C-U>zz')
 keymap('n', '<C-J>', ':cnext<CR>')
@@ -106,8 +106,8 @@ keymap('n', '<Leader>0', ':tablast<CR>')
 -- Telescope
 keymap('n', '<Leader>fg', fn.project_files)
 keymap('n', '<Leader>v', fn.vimrc)
-keymap('n', '<Leader>ff', wrap(require("telescope.builtin").find_files, {no_ignore=true}))
-keymap('n', '<Leader>fp', wrap(require("telescope.builtin").man_pages, {sections={"ALL"}}))
+keymap('n', '<Leader>ff', wrap(require("telescope.builtin").find_files, { no_ignore = true }))
+keymap('n', '<Leader>fp', wrap(require("telescope.builtin").man_pages, { sections = { "ALL" } }))
 keymap('n', '<Leader>fd', require("telescope").extensions.file_browser.file_browser)
 keymap('n', '<Leader>fb', ':Telescope buffers<CR>')
 keymap('n', '<Leader>fh', ':Telescope help_tags<CR>')
@@ -139,9 +139,9 @@ keymap('n', '<Leader>eco', vim.lsp.buf.outgoing_calls)
 keymap('n', '<Leader>ewl', vim.lsp.buf.list_workspace_folders)
 keymap('n', '<Leader>ewa', vim.lsp.buf.add_workspace_folder)
 keymap('n', '<Leader>ewr', vim.lsp.buf.remove_workspace_folder)
--- keymap('n', '<Leader>ef', vim.lsp.buf.formatting)
+keymap('n', '<Leader>ef', vim.lsp.buf.format)
 keymap('n', '<Leader>eg', vim.lsp.buf.signature_help)
-keymap('n', '<Leader>ee', vim.lsp.buf.rename, {silent=false})
+keymap('n', '<Leader>ee', vim.lsp.buf.rename, { silent = false })
 
 -- Fugitive Configurations
 keymap('n', '<Leader>gs', ':Git<CR>')
