@@ -8,8 +8,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ";"
 
 -- quick spelling fixes
-keymap('i', '<C-S>', [[<c-g>u<Esc>[s1z=`]a<c-g>u]])
-keymap('n', '<C-S>', [[mz[s1z=`z]])
+keymap('i', '<C-Q>', [[<c-g>u<Esc>[s1z=`]a<c-g>u]])
+keymap('n', '<C-Q>', [[mz[s1z=`z]])
 
 -- gx fix
 -- keymap('n', 'gx', [[:execute 'silent! !xdg-open ' . shellescape(expand('<cWORD>'), 1)<CR>]])
