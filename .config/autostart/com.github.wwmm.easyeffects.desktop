@@ -1,0 +1,22 @@
+[Desktop Entry]
+Categories=GTK;AudioVideo;Audio;
+Comment[en_US]=Audio Effects for PipeWire Applications
+Comment=Audio Effects for PipeWire Applications
+DBusActivatable=true
+Exec=easyeffects --gapplication-service
+GenericName[en_US]=Equalizer, Compressor and Other Audio Effects
+GenericName=Equalizer, Compressor and Other Audio Effects
+Icon=com.github.wwmm.easyeffects
+Keywords=limiter;compressor;reverberation;equalizer;autovolume;
+MimeType=
+Name[en_US]=Easy Effects
+Name=Easy Effects
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-Desktop-File-Install-Version=0.26
+X-GNOME-UsesNotifications=true
+X-KDE-SubstituteUID=false
+X-KDE-Username=
