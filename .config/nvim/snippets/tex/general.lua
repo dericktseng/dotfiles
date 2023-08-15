@@ -1,7 +1,7 @@
 local utils = require('sniputils')
 local ls = require('luasnip')
 local extras = require("luasnip.extras")
-local isn = ls.indent_snippet_node
+-- local isn = ls.indent_snippet_node
 
 return {
   s({trig='verb', name='verbatim'},

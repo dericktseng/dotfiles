@@ -25,6 +25,9 @@ Seen=true
 [Applications][org.signal.Signal]
 Seen=true
 
+[Applications][xyz.armcord.ArmCord]
+Seen=true
+
 [DoNotDisturb]
 NotificationSoundsMuted=true
 
