@@ -9,6 +9,8 @@ HDMI-A-0 Width 1920x1080=784
 Number of Actions=0
 
 [KFileDialog Settings]
+Recent Files[$e]=windmill.jpg,file:$HOME/Pictures/Wallpapers/windmill2.jpg,file:$HOME/Pictures/Wallpapers/windmill.jpg
+Recent URLs[$e]=file:$HOME/Pictures/Wallpapers/,file:$HOME/Pictures/
 detailViewIconSize=16
 iconViewIconSize=64
 
