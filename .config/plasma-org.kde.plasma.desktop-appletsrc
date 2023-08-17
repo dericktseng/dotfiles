@@ -151,8 +151,8 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][53][ConfigDialog]
-DialogHeight=923
-DialogWidth=1399
+DialogHeight=976
+DialogWidth=1713
 
 [Containments][53][Configuration]
 PreloadWeight=42
