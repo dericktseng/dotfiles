@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 directories=(
-	"$HOME/Desktop/current/"
+	"$HOME/Desktop/Graduate/"
 	"$HOME/Desktop/program/"
 )
 

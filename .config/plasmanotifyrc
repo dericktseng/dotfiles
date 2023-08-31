@@ -28,8 +28,5 @@ Seen=true
 [Applications][xyz.armcord.ArmCord]
 Seen=true
 
-[DoNotDisturb]
-NotificationSoundsMuted=true
-
 [Notifications]
 PopupPosition=BottomRight
