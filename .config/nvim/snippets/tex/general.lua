@@ -86,6 +86,15 @@ return {
 
   s(
     {trig='(s*)sec', name='section', regTrig=true},
+    fmta([[\<>section{<>}]], {
+      f(function(args, snip)
+        return snip.captures[1]:gsub('s', 'sub');
+      end),
+      i(1),
+  })),
+
+  s(
+    {trig='(s*)secl', name='section', regTrig=true},
     fmta([[\<>section{<>} \label{sec:<>}]], {
       f(function(args, snip)
         return snip.captures[1]:gsub('s', 'sub');
