@@ -307,6 +307,7 @@ return {
           \usepackage{subcaption}
           \usepackage{tabularx}
           \usepackage{booktabs}
+          \usepackage{todonotes}
           % \usepackage{xcolor}
           % \usepackage{pdfpages}
           % \usepackage{courier}
