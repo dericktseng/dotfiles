@@ -40,7 +40,6 @@ Meta=
 
 [MouseBindings]
 CommandAll2=Nothing
-CommandAllKey=Alt
 
 [NightColor]
 Active=true
