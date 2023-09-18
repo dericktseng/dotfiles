@@ -307,10 +307,12 @@ return {
           \usepackage{subcaption}
           \usepackage{tabularx}
           \usepackage{booktabs}
-          \usepackage{todonotes}
+          % \usepackage{todonotes}
           % \usepackage{xcolor}
           % \usepackage{pdfpages}
           % \usepackage{courier}
+          \usepackage[style=numeric]{biblatex}
+          \bibliography{refs.bib}
 
           % \definecolor{codegreen}{rgb}{0,0.6,0}
           % \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -349,8 +351,9 @@ return {
           \begin{document}
           <>\maketitle
           <><>
+          <>\printbibliography
           \end{document}
     ]],
-    {i(1, 'Title'), i(2, 'Derick Tseng'), t('\t'), t('\t'), i(3)})
+    {i(1, 'Title'), i(2, 'Derick Tseng'), t('\t'), t('\t'), i(3), t('\t')})
   )
 }
