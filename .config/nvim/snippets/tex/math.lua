@@ -1,5 +1,6 @@
 local utils = require'sniputils'
 local captured = utils.captured
+local capturedtrim = utils.captured_trim
 local mathenv = utils.mathenv
 
 -- autosnippets (https://www.lua.org/pil/20.2.html)
@@ -7,13 +8,13 @@ local autosnips = {
   s({ trig='//', name='fraction', priority=1002 }, fmta([[\frac{<>}{<>}]], {i(1), i(2)}), {condition=mathenv}),
 
   s({ trig='(%b())/', name='frac parenthesis', regTrig=true, priority=1001 },
-    fmta([[\frac{<>}{<>}]], {f(captured,{}), i(1)}), {condition=mathenv}),
+    fmta([[\frac{<>}{<>}]], {f(capturedtrim,{}), i(1)}), {condition=mathenv}),
 
   s({ trig='(%b[])/', name='frac parenthesis', regTrig=true, priority=1001 },
-    fmta([[\frac{<>}{<>}]], {f(captured,{}), i(1)}), {condition=mathenv}),
+    fmta([[\frac{<>}{<>}]], {f(capturedtrim,{}), i(1)}), {condition=mathenv}),
 
   s({ trig='([^$={}()%s%[%]]+)/', name='fancyfrac 1', regTrig=true, priority=1000 },
-    fmta([[\frac{<>}{<>}]], {f(captured,{}), i(1)}), {condition=mathenv}),
+    fmta([[\frac{<>}{<>}]], {f(capturedtrim,{}), i(1)}), {condition=mathenv}),
 
   s({trig='([^%s])sr', name='squared', regTrig=true, wordTrig=false},
     fmt([[{}^2]], {f(captured, {})}), {condition=mathenv}),

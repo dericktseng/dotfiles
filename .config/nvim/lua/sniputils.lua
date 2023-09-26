@@ -70,6 +70,12 @@ utils.captured = function(_, snip, user_args)
   return snip.captures[user_args or 1]
 end
 
+utils.captured_trim = function(text, snip, user_args)
+  local cap = utils.captured(text, snip, user_args)
+  local len = string.len(cap)
+  return string.sub(cap, 2, len - 1)
+end
+
 -- filters specified directory for certain filetypes
 -- WARNING: MUST CLOSE THE FILE HANDLE AFTER READING FROM IT
 -- requires the 'fd' binary
