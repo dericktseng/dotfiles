@@ -351,7 +351,7 @@ return {
           \begin{document}
           <>\maketitle
           <><>
-          <>\printbibliography
+          <>% \printbibliography
           \end{document}
     ]],
     {i(1, 'Title'), i(2, 'Derick Tseng'), t('\t'), t('\t'), i(3), t('\t')})
