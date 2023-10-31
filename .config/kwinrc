@@ -100,13 +100,19 @@ count=0
 LayoutName=thumbnail_grid
 
 [Tiling]
-padding=0
+padding=4
 
 [Tiling][29297ac6-3b89-5e7b-b49b-1c80d7d12cfb]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.4947916666666667},{"width":0.5052083333333333}]}
 
 [Tiling][351e5a58-9611-5be3-868a-68e303937600]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
+
+[Tiling][6ffc9819-b5ee-5c93-9bb7-4e62e3c4d161]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][760e4efe-12ec-58e3-86c5-381b5d04c0e0]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][b53cea58-0b77-5671-beb7-185ae107acb3]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}

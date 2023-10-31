@@ -289,7 +289,7 @@ return {
     fmta([[
           \documentclass[12pt]{article}
 
-          %{{{ Packages 
+          %{{{ Packages
           \usepackage[utf8]{inputenc}
           \usepackage[margin=1truein,letterpaper]{geometry}
           \usepackage[shortlabels]{enumitem}
@@ -320,21 +320,21 @@ return {
           % \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
           % \lstdefinestyle{mystyle}{
-          %     backgroundcolor=\color{backcolour},   
+          %     backgroundcolor=\color{backcolour},
           %     commentstyle=\color{codegreen},
           %     keywordstyle=\color{magenta},
           %     numberstyle=\tiny\color{codegray},
           %     stringstyle=\color{codepurple},
           %     basicstyle=\ttfamily\footnotesize,
-          %     breakatwhitespace=false,         
-          %     breaklines=true,                 
-          %     captionpos=b,                    
-          %     keepspaces=true,                 
-          %     numbers=left,                    
-          %     numbersep=5pt,                  
-          %     showspaces=false,                
+          %     breakatwhitespace=false,
+          %     breaklines=true,
+          %     captionpos=b,
+          %     keepspaces=true,
+          %     numbers=left,
+          %     numbersep=5pt,
+          %     showspaces=false,
           %     showstringspaces=false,
-          %     showtabs=false,                  
+          %     showtabs=false,
           %     tabsize=2
           % }
 
