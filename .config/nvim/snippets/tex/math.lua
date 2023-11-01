@@ -138,8 +138,8 @@ local regularsnips = {
   s({trig='cos', name='cosine'},
     fmta([[\cos{<>}]], {i(1)}), {condition=mathenv}),
 
-  s({trig='tan', name='cosine'},
-    fmta([[\cos{<>}]], {i(1)}), {condition=mathenv}),
+  s({trig='tan', name='tangent'},
+    fmta([[\tan{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='asin', name='arcsin'},
     fmta([[\arcsin{<>}]], {i(1)}), {condition=mathenv}),
