@@ -12,6 +12,11 @@ Switch keyboard layout to Japanese (Sun Type 7, Sun-compatible)=none,none,Switch
 Switch to Next Keyboard Layout=Ctrl+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
 
+[discord-screenaudio]
+_k_friendly_name=discord-screenaudio
+toggleDeafen=none,none,Toggle Deafen
+toggleMute=none,none,Toggle Mute
+
 [firefox.desktop]
 _k_friendly_name=Firefox
 _launch=Meta+Space,none,Firefox
@@ -235,11 +240,11 @@ view_zoom_out=Meta+-,Meta+-,Zoom Out
 
 [mediacontrol]
 _k_friendly_name=Media Controller
-mediavolumedown=none,none,Media volume down
-mediavolumeup=none,none,Media volume up
+mediavolumedown=none,,Media volume down
+mediavolumeup=none,,Media volume up
 nextmedia=Media Next,Media Next,Media playback next
 pausemedia=Media Pause,Media Pause,Pause media playback
-playmedia=none,none,Play media playback
+playmedia=none,,Play media playback
 playpausemedia=Media Play,Media Play,Play/Pause media playback
 previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback

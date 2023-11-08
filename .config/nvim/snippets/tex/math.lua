@@ -54,7 +54,13 @@ local autosnips = {
   s({trig='=[%s]*([^=]+)bex', name='boxed until equals after', regTrig=true},
     fmta([[= \boxed{<>}]], {f(captured,{})}), {condition=mathenv}),
 
-  s({trig='^(%s*)(.+)box', name='boxed line', regTrig=true},
+  s({trig='$(%s*)([^$]+)box', name='boxed inline', regTrig=true, priority=1001},
+    fmta([[$<>\boxed{<>}]], {
+      f(captured, {}, {user_args={1}}),
+      f(captured, {}, {user_args={2}}),
+    }), {condition=mathenv}),
+
+  s({trig='^(%s*)(.+)box', name='boxed line', regTrig=true, priority=1000},
     fmta([[<>\boxed{<>}]], {
       f(captured, {}, {user_args={1}}),
       f(captured, {}, {user_args={2}}),
