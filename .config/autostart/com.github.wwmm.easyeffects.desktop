@@ -3,7 +3,7 @@ Categories=GTK;AudioVideo;Audio;
 Comment[en_US]=Audio Effects for PipeWire Applications
 Comment=Audio Effects for PipeWire Applications
 DBusActivatable=true
-Exec=easyeffects --gapplication-service
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=easyeffects com.github.wwmm.easyeffects --gapplication-service
 GenericName[en_US]=Equalizer, Compressor and Other Audio Effects
 GenericName=Equalizer, Compressor and Other Audio Effects
 Icon=com.github.wwmm.easyeffects
@@ -16,7 +16,7 @@ StartupNotify=true
 Terminal=false
 TerminalOptions=
 Type=Application
-X-Desktop-File-Install-Version=0.26
+X-Flatpak=com.github.wwmm.easyeffects
 X-GNOME-UsesNotifications=true
 X-KDE-SubstituteUID=false
 X-KDE-Username=
