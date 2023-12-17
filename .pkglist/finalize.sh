@@ -30,6 +30,9 @@ sudo cp -i ./conf/modprobe/* /etc/modprobe.d/
 sudo mkdir -p "$systemdconfd"
 sudo cp -ir ./conf/systemd/* "$systemdconfd"
 
+# NetworkManager settings
+sudo cp -i ./conf/networkmanager/* /etc/NetworkManager/conf.d/
+
 # input method switching
 imsettings-switch fcitx5
 
