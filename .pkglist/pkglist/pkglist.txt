@@ -58,6 +58,7 @@ gtest
 gtest-devel
 gthumb
 htop
+iwd
 jq
 kcm-fcitx5
 kernel-tools

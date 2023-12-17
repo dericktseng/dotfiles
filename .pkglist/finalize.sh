@@ -32,6 +32,9 @@ sudo cp -ir ./conf/systemd/* "$systemdconfd"
 
 # NetworkManager settings
 sudo cp -i ./conf/networkmanager/* /etc/NetworkManager/conf.d/
+sudo systemctl disable --now wpa_supplicant
+sudo systemctl enable --now iwd
+sudo systemctl restart NetworkManager
 
 # input method switching
 imsettings-switch fcitx5
