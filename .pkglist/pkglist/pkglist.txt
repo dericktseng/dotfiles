@@ -12,7 +12,6 @@ clang
 clang-devel
 clang-tools-extra
 dejavu-fonts-all
-dhcpcd
 djvulibre
 dkms
 easyeffects

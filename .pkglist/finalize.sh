@@ -19,7 +19,7 @@ done
 systemctl --user --now enable psd
 
 # system services
-sudo systemctl --now disable systemd-resolved
+sudo systemctl --now enable systemd-resolved
 sudo systemctl --now disable NetworkManager-wait-online
 
 # synchronize clock with systemd timesync ntp
