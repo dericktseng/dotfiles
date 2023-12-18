@@ -41,8 +41,6 @@ sudo systemctl enable --now wifi-powersave
 
 # NetworkManager settings
 sudo cp -i ./conf/networkmanager/* /etc/NetworkManager/conf.d/
-sudo systemctl disable --now wpa_supplicant
-sudo systemctl enable --now iwd
 sudo systemctl restart NetworkManager
 
 # input method switching
