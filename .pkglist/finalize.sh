@@ -37,6 +37,7 @@ sudo cp -i ./conf/modprobe/* /etc/modprobe.d/
 # systemd settings
 sudo mkdir -p "$systemdconfd"
 sudo cp -ir ./conf/systemd/* "$systemdconfd"
+sudo systemctl enable --now wifi-powersave
 
 # NetworkManager settings
 sudo cp -i ./conf/networkmanager/* /etc/NetworkManager/conf.d/
