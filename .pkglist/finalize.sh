@@ -7,6 +7,14 @@ if [ $(id -u) -eq 0 ]; then
 	exit 1
 fi
 
+echo "Did you update the wireless interface in ./conf/systemd/system/wifi-powersave.service?"
+select yn in "yes" "no"; do
+    case $yn in
+        yes) break ;;
+        no) exit ;;
+    esac
+done
+
 # user systemctl services
 systemctl --user --now enable psd
 
@@ -42,6 +50,7 @@ imsettings-switch fcitx5
 # firefox changes
 echo "---------------------------------"
 echo "Firefox Plugins enable Openh264 Video Codec"
+echo "reboot after completion"
 
 # matlab install process:
 # delete the libfreetype.so file inside the matlab directory to run installer
