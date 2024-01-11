@@ -1,0 +1,11 @@
+[Unit]
+Description=Set WiFi power save off
+After=sys-subsystem-net-devices-wlo1.device
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=iw dev wlo1 set power_save off
+
+[Install]
+WantedBy=sys-subsystem-net-devices-wlo1.device
