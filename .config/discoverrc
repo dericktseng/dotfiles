@@ -1,5 +1,5 @@
 [FlatpakSources]
-Sources=fedora-testing,flathub
+Sources=fedora-testing
 
 [ResourcesModel]
 currentApplicationBackend=flatpak-backend

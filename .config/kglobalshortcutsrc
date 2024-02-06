@@ -5,6 +5,11 @@ update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd
 _k_friendly_name=Activity Manager
 switch-to-activity-884b7bf3-ccba-4560-867b-dc0726837c67=Meta+I,none,Switch to activity "A"
 
+[Alacritty.desktop]
+New=none,none,New Terminal
+_k_friendly_name=Alacritty
+_launch=Meta+Return,none,Alacritty
+
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
 Switch keyboard layout to Japanese=none,none,Switch keyboard layout to Japanese
@@ -256,12 +261,6 @@ _launch=Meta+N,Meta+E,Dolphin
 [org.kde.kcalc.desktop]
 _k_friendly_name=KCalc
 _launch=Launch (1),Launch (1),KCalc
-
-[org.kde.konsole.desktop]
-NewTab=none,none,Open a New Tab
-NewWindow=none,none,Open a New Window
-_k_friendly_name=Konsole
-_launch=Meta+Return,Ctrl+Alt+T,Konsole
 
 [org.kde.krunner.desktop]
 RunClipboard=Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents
