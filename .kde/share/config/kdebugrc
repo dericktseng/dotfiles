@@ -1,2 +1,5 @@
+[KSharedDataCache]
+InfoOutput=4
+
 [kdecore (services)]
 InfoOutput=2
