@@ -1,0 +1,80 @@
+[colors.bright]
+black = "#a1a6ad"
+blue = "#4285f4"
+cyan = "#24c1e0"
+green = "#34a853"
+magenta = "#a142f4"
+red = "#ea4335"
+white = "#e8eaed"
+yellow = "#f79c06"
+
+[colors.cursor]
+cursor = "#77818c"
+text = "#fefefe"
+
+[colors.hints.start]
+background = "#000000"
+foreground = "#ffffff"
+
+[colors.normal]
+black = "#202124"
+blue = "#4285f4"
+cyan = "#24c1e0"
+green = "#34a853"
+magenta = "#a142f4"
+red = "#ea4335"
+white = "#e8eaed"
+yellow = "#f79c06"
+
+[colors.primary]
+background = "#f8fafa"
+foreground = "#2b4f76"
+
+[colors.selection]
+background = "#d5dfe2"
+text = "CellForeground"
+
+[colors.vi_mode_cursor]
+cursor = "#77818c"
+text = "#fefefe"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 12.0
+
+[font.offset]
+x = 1
+
+[font.normal]
+family = "Fira Code"
+
+[hints]
+alphabet = "1234567890"
+
+[[hints.enabled]]
+command = "xdg-open"
+post_processing = true
+regex = "(mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-<>\" {-}\\^⟨⟩`]+"
+
+[hints.enabled.binding]
+key = "X"
+mods = "Control|Shift"
+
+[hints.enabled.mouse]
+enabled = true
+mods = "None"
+
+[mouse]
+hide_when_typing = true
+
+[window]
+dynamic_padding = true
+dynamic_title = false
+startup_mode = "Maximized"
+title = "Alacritty"
+
+[window.padding]
+x = 2
+y = 0
