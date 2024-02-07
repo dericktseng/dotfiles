@@ -149,7 +149,7 @@ return {
   s(
     {trig='pdf', name='insert pdf'},
     fmta(
-      [[\includepdf[pages=-,pagecommand={}, width=\textwidth]{<>}]],
+      [[\includepdf[pages=-,pagecommand={}]{<>}]],
       {d(1, utils.filter_snippet, {}, {user_args = {{'pdf'}}})}
     )
   ),
