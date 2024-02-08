@@ -37,6 +37,9 @@ local autosnips = {
   s({trig='([^%s])pw', name='power', regTrig=true, wordTrig=false},
     fmta([[<>^{<>}]], {f(captured, {}), i(1)}), {condition=mathenv}),
 
+  s({trig='([^%s])sb', name='subscript', regTrig=true, wordTrig=false},
+    fmta([[<>_{<>}]], {f(captured, {}), i(1)}), {condition=mathenv}),
+
   s({trig='([+-]?)(%d+)(e?-?%d*)si', name='SI Unit After Integer', regTrig=true, priority=1000},
     fmta([[\SI{<><><>}{<>}]], {
       f(captured,{},{user_args={1}}),
