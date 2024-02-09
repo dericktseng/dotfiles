@@ -128,7 +128,7 @@ local autosnips = {
 
 -- non-auto-snippets
 local regularsnips = {
-  s({trig='x', name='times', wordTrig=false},
+  s({trig=' x', name='times', wordTrig=false},
     fmta([[\times ]], {}), {condition=mathenv}),
 
   s({trig='(%d)e', name='times 10 power', regTrig=true, wordTrig=false},
