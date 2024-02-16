@@ -78,6 +78,9 @@ local autosnips = {
   s({trig='([%a])bar', name='bar after', regTrig=true},
     fmta([[\overline{<>}]], {f(captured,{})}), {condition=mathenv}),
 
+  s({trig='([%d])bar', name='bar after', regTrig=true},
+    fmta([[\bar{<>}]], {f(captured,{})}), {condition=mathenv}),
+
   s({trig='([%a])dot', name='dot after', regTrig=true},
     fmta([[\dot{<>}]], {f(captured,{})}), {condition=mathenv}),
 
