@@ -287,66 +287,8 @@ return {
   s(
     {trig='setup', name='document setup'},
     fmta([[
-          \documentclass[12pt]{article}
-
-          %{{{ Packages
-          \usepackage[utf8]{inputenc}
-          \usepackage[margin=1truein,letterpaper]{geometry}
-          \usepackage[shortlabels]{enumitem}
-          \usepackage{amsmath}
-          \usepackage{amsfonts}
-          \usepackage{amssymb}
-          \usepackage{siunitx}
-          \usepackage{graphicx}
-          \usepackage{adjustbox}
-          \usepackage{xurl}
-          \usepackage{multicol}
-          \usepackage{listings}
-          \usepackage{chemformula}
-          \usepackage{caption}
-          \usepackage{subcaption}
-          \usepackage{tabularx}
-          \usepackage{booktabs}
-          % \usepackage{todonotes}
-          % \usepackage{xcolor}
-          % \usepackage{pdfpages}
-          % \usepackage{courier}
-          \usepackage[style=numeric]{biblatex}
-          \bibliography{refs.bib}
-
-          % \definecolor{codegreen}{rgb}{0,0.6,0}
-          % \definecolor{codegray}{rgb}{0.5,0.5,0.5}
-          % \definecolor{codepurple}{rgb}{0.58,0,0.82}
-          % \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
-          % \lstdefinestyle{mystyle}{
-          %     backgroundcolor=\color{backcolour},
-          %     commentstyle=\color{codegreen},
-          %     keywordstyle=\color{magenta},
-          %     numberstyle=\tiny\color{codegray},
-          %     stringstyle=\color{codepurple},
-          %     basicstyle=\ttfamily\footnotesize,
-          %     breakatwhitespace=false,
-          %     breaklines=true,
-          %     captionpos=b,
-          %     keepspaces=true,
-          %     numbers=left,
-          %     numbersep=5pt,
-          %     showspaces=false,
-          %     showstringspaces=false,
-          %     showtabs=false,
-          %     tabsize=2
-          % }
-
-          % \lstset{style=mystyle,basicstyle=\ttfamily\footnotesize,breaklines=true,showstringspaces=false,frame=single}
-          %}}}
-
-          % \setlength{\parindent}{0em}
-          % \setlength{\parskip}{0.5em}
-
+          \documentclass{myhomework}
           \title{<>}
-          \author{<>}
-          \date{\today}
 
           \begin{document}
           <>\maketitle
@@ -354,6 +296,6 @@ return {
           <>% \printbibliography
           \end{document}
     ]],
-    {i(1, 'Title'), i(2, 'Derick Tseng'), t('\t'), t('\t'), i(3), t('\t')})
+    {i(1, 'Title'), t('\t'), t('\t'), i(2), t('\t')})
   )
 }
