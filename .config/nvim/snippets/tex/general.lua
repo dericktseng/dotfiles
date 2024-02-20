@@ -288,6 +288,7 @@ return {
     {trig='setup', name='document setup'},
     fmta([[
           \documentclass{myhomework}
+          \bibliography{refs.bib}
           \title{<>}
 
           \begin{document}

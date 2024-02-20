@@ -23,8 +23,6 @@
 \RequirePackage{pdfpages}
 \RequirePackage[style=numeric]{biblatex}
 
-\bibliography{refs.bib}
-
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
