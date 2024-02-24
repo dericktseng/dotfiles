@@ -2,8 +2,8 @@
 update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detailsmodesettings.upd:move-content-display
 
 [ExtractDialog]
-1920x1080 screen: Height=682
-1920x1080 screen: Width=1428
+1920x1080 screen: Height=560
+1920x1080 screen: Width=1280
 DirHistory[$e]=/mnt/sda2/shared/misc/,$HOME/Downloads/
 HDMI-A-0 Height 1920x1080 HDMI-A-0=560
 HDMI-A-0 Width 1920x1080 HDMI-A-0=1280
@@ -25,8 +25,8 @@ PreviewSize=112
 [KFileDialog Settings]
 Places Icons Auto-resize=false
 Places Icons Static Size=22
-Recent Files[$e]=file:$HOME,file:///mnt/sda2/shared/misc,file:///usr/share/applications/libreoffice-impress.desktop
-Recent URLs[$e]=file:///usr/share/applications/,file:$HOME/Templates/,file:$HOME/,file:$HOME/Documents/,file:$HOME/Downloads/,file:///mnt/sda2/shared/misc/
+Recent Files[$e]=file:$HOME,file:$HOME/Documents/Applications/Appimages/osu.AppImage
+Recent URLs[$e]=file:///usr/share/applications/,file:$HOME/Templates/,file:$HOME/,file:$HOME/Documents/,file:$HOME/Downloads/,file:$HOME/Documents/Applications/Appimages/
 detailViewIconSize=16
 iconViewIconSize=64
 

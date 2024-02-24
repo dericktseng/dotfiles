@@ -96,9 +96,6 @@ count=0
 active=-1
 count=0
 
-[TabBox]
-LayoutName=thumbnail_grid
-
 [Tiling]
 padding=4
 
