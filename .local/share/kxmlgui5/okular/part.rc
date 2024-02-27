@@ -1,21 +1,21 @@
 <?xml version='1.0'?>
 <!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
-<gui version="54" name="okular_part">
+<gui name="okular_part" version="54">
  <MenuBar>
   <Menu name="file">
    <text>&amp;File</text>
-   <Action group="file_open" name="get_new_stuff"/>
-   <Action group="file_open" name="import_ps"/>
-   <Action group="file_save" name="file_save"/>
-   <Action group="file_save" name="file_save_as"/>
-   <Action group="file_save" name="file_reload"/>
-   <Action group="file_print" name="file_print"/>
-   <Action group="file_print" name="file_print_preview"/>
-   <Action group="file_print" name="open_containing_folder"/>
-   <Action group="file_print" name="properties"/>
-   <Action group="file_print" name="embedded_files"/>
-   <Action group="file_print" name="file_export_as"/>
-   <Action group="file_print" name="file_share"/>
+   <Action name="get_new_stuff" group="file_open"/>
+   <Action name="import_ps" group="file_open"/>
+   <Action name="file_save" group="file_save"/>
+   <Action name="file_save_as" group="file_save"/>
+   <Action name="file_reload" group="file_save"/>
+   <Action name="file_print" group="file_print"/>
+   <Action name="file_print_preview" group="file_print"/>
+   <Action name="open_containing_folder" group="file_print"/>
+   <Action name="properties" group="file_print"/>
+   <Action name="embedded_files" group="file_print"/>
+   <Action name="file_export_as" group="file_print"/>
+   <Action name="file_share" group="file_print"/>
   </Menu>
   <Menu name="edit">
    <text>&amp;Edit</text>
@@ -96,15 +96,15 @@
   </Menu>
   <Menu name="settings">
    <text>&amp;Settings</text>
-   <Action group="show_merge" name="colorscheme_menu"/>
-   <Action group="show_merge" name="show_leftpanel"/>
-   <Action group="show_merge" name="show_bottombar"/>
-   <Action group="configure_merge" name="options_configure_generators"/>
-   <Action group="configure_merge" name="options_configure"/>
+   <Action name="colorscheme_menu" group="show_merge"/>
+   <Action name="show_leftpanel" group="show_merge"/>
+   <Action name="show_bottombar" group="show_merge"/>
+   <Action name="options_configure_generators" group="configure_merge"/>
+   <Action name="options_configure" group="configure_merge"/>
   </Menu>
   <Menu name="help">
    <text>&amp;Help</text>
-   <Action group="about_merge" name="help_about_backend"/>
+   <Action name="help_about_backend" group="about_merge"/>
   </Menu>
  </MenuBar>
  <ToolBar name="mainToolBar">
@@ -123,7 +123,7 @@
   <Separator/>
   <Action name="hamburger_menu"/>
  </ToolBar>
- <ToolBar newline="true" iconText="icononly" hidden="true" name="annotationToolBar">
+ <ToolBar name="annotationToolBar" newline="true" iconText="icononly" hidden="true">
   <text>Annotation Toolbar</text>
   <Action name="annotation_highlighter"/>
   <Action name="annotation_underline"/>
@@ -148,38 +148,38 @@
   <Spacer/>
   <Action name="hide_annotation_toolbar"/>
  </ToolBar>
- <ToolBar iconSize="32" newline="true" iconText="icononly" hidden="true" position="right" name="quickAnnotationToolBar">
+ <ToolBar name="quickAnnotationToolBar" position="right" newline="true" iconText="icononly" iconSize="32" hidden="true">
   <text>Quick Annotation Toolbar</text>
   <Action name="quick_annotation_action_bar"/>
  </ToolBar>
  <ActionProperties scheme="Default">
-  <Action shortcut="Alt+8; Ctrl+4" name="annotation_freehand_line"/>
-  <Action shortcut="Shift+B" name="bookmark_add"/>
-  <Action shortcut="G" name="first_page"/>
-  <Action shortcut="" name="fit_window_to_page"/>
-  <Action shortcut="Ctrl+O" name="go_document_back"/>
-  <Action shortcut="Ctrl+I" name="go_document_forward"/>
-  <Action shortcut="Space" name="go_next"/>
-  <Action shortcut="Shift+Space" name="go_previous"/>
-  <Action shortcut="Shift+G" name="last_page"/>
-  <Action shortcut="Ctrl+2" name="mouse_textselect"/>
-  <Action shortcut="" name="mouse_zoom"/>
-  <Action shortcut="N" name="next_bookmark"/>
-  <Action shortcut="Shift+N" name="previous_bookmark"/>
-  <Action shortcut="Ctrl+N" name="show_bottombar"/>
-  <Action priority="0" shortcut="Tab" name="show_leftpanel"/>
-  <Action shortcut="0" name="view_actual_size"/>
-  <Action shortcut="A" name="view_fit_to_page"/>
-  <Action shortcut="W" name="view_fit_to_width"/>
-  <Action shortcut="Shift+R" name="view_orientation_rotate_ccw"/>
-  <Action shortcut="R" name="view_orientation_rotate_cw"/>
-  <Action shortcut="D" name="view_render_mode_facing"/>
-  <Action shortcut="S" name="view_render_mode_single"/>
-  <Action shortcut="" name="view_scroll_down"/>
-  <Action shortcut="PgDown" name="view_scroll_page_down"/>
-  <Action shortcut="PgUp" name="view_scroll_page_up"/>
-  <Action shortcut="" name="view_scroll_up"/>
-  <Action shortcut="=; +" name="view_zoom_in"/>
-  <Action shortcut="-" name="view_zoom_out"/>
+  <Action name="annotation_freehand_line" shortcut="Alt+8; Ctrl+4"/>
+  <Action name="bookmark_add" shortcut="Shift+B"/>
+  <Action name="first_page" shortcut="G"/>
+  <Action name="fit_window_to_page" shortcut=""/>
+  <Action name="go_document_back" shortcut="Ctrl+O"/>
+  <Action name="go_document_forward" shortcut="Ctrl+I"/>
+  <Action name="go_next" shortcut="Space"/>
+  <Action name="go_previous" shortcut="Shift+Space"/>
+  <Action name="last_page" shortcut="Shift+G"/>
+  <Action name="mouse_textselect" shortcut="Ctrl+2"/>
+  <Action name="mouse_zoom" shortcut=""/>
+  <Action name="next_bookmark" shortcut="N"/>
+  <Action name="previous_bookmark" shortcut="Shift+N"/>
+  <Action name="show_bottombar" shortcut="Ctrl+N"/>
+  <Action name="show_leftpanel" shortcut="Tab" priority="0"/>
+  <Action name="view_actual_size" shortcut="0"/>
+  <Action name="view_fit_to_page" shortcut="A"/>
+  <Action name="view_fit_to_width" shortcut="W"/>
+  <Action name="view_orientation_rotate_ccw" shortcut="Shift+R"/>
+  <Action name="view_orientation_rotate_cw" shortcut="R"/>
+  <Action name="view_render_mode_facing" shortcut="D"/>
+  <Action name="view_render_mode_single" shortcut="S"/>
+  <Action name="view_scroll_down" shortcut=""/>
+  <Action name="view_scroll_page_down" shortcut="PgDown"/>
+  <Action name="view_scroll_page_up" shortcut="PgUp"/>
+  <Action name="view_scroll_up" shortcut=""/>
+  <Action name="view_zoom_in" shortcut="=; +"/>
+  <Action name="view_zoom_out" shortcut="-"/>
  </ActionProperties>
 </gui>

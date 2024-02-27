@@ -44,10 +44,8 @@ powerButtonAction=8
 powerDownAction=16
 triggerLidActionWhenExternalMonitorPresent=false
 
-[Battery][RunScript]
-idleTime=600000
-scriptCommand=sudo cpupower frequency-set --governor powersave
-scriptPhase=0
+[Battery][PowerProfile]
+profile=power-saver
 
 [Battery][SuspendSession]
 idleTime=600000
@@ -72,11 +70,6 @@ lidAction=1
 powerButtonAction=16
 powerDownAction=16
 triggerLidActionWhenExternalMonitorPresent=false
-
-[LowBattery][RunScript]
-idleTime=600000
-scriptCommand=sudo cpupower frequency-set --governor powersave
-scriptPhase=0
 
 [LowBattery][SuspendSession]
 idleTime=300000

@@ -111,6 +111,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
 [Tiling][6ffc9819-b5ee-5c93-9bb7-4e62e3c4d161]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][74afe4a9-68c8-5367-b655-c8bcd71481a9]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][760e4efe-12ec-58e3-86c5-381b5d04c0e0]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -127,4 +130,4 @@ DelayFocusInterval=0
 RollOverDesktops=true
 
 [Xwayland]
-Scale=1
+Scale=1.5
