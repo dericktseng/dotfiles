@@ -25,8 +25,10 @@
                 "preamp": 0.0,
                 "reactivity": 10.0,
                 "source": "Middle",
+                "stereo-split-source": "Left/Right",
                 "type": "Feed-forward"
             },
+            "stereo-split": false,
             "threshold": -12.0,
             "wet": 0.0
         },
@@ -71,8 +73,10 @@
                 "mode": "RMS",
                 "preamp": -2.7755575615628914e-17,
                 "reactivity": 10.0,
-                "source": "Middle"
+                "source": "Middle",
+                "stereo-split-source": "Left/Right"
             },
+            "stereo-split": false,
             "wet": 0.0
         },
         "limiter#0": {

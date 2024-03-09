@@ -8,5 +8,5 @@ Timeout=10
 showMediaControls=false
 
 [Greeter][Wallpaper][org.kde.image][General]
-Image=/home/derickwtseng/Pictures/Wallpapers/windmill.jpg
-PreviewImage=/home/derickwtseng/Pictures/Wallpapers/windmill.jpg
+Image=/usr/share/wallpapers/Next/
+PreviewImage=/usr/share/wallpapers/Next/
