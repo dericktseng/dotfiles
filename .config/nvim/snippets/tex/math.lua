@@ -115,6 +115,7 @@ local autosnips = {
     fmta([[\hat{<>}]], {i(1)}), {condition=mathenv}),
 
   -- simple character replacements
+  s({trig='del', name='nabla'}, t('\\nabla'), {condition=mathenv}),
   s({trig='ooo', name='infinity'}, t('\\infty'), {condition=mathenv}),
   s({trig='hhh', name='hbar'}, t('\\hbar'), {condition=mathenv}),
   s({trig='>>', name='much greater'}, t('\\gg '), {condition=mathenv}),
