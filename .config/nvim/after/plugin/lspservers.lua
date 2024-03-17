@@ -25,7 +25,7 @@ require('mason-lspconfig').setup_handlers {
     })
   end,
 
-  -- override handlers
+  -- lua override handler
   ['lua_ls'] = function()
     require('lspconfig').lua_ls.setup({
       flags = { debounce_text_changes = 100 },

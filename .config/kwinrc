@@ -46,7 +46,7 @@ Active=true
 LatitudeAuto=37.751
 LongitudeAuto=-97.822
 Mode=Times
-NightTemperature=3600
+NightTemperature=3400
 TransitionTime=5
 
 [Plugins]
