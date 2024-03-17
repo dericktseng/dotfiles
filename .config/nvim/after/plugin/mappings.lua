@@ -15,7 +15,7 @@ keymap('n', '<C-Q>', [[mz[s1z=`z]])
 -- keymap('n', 'gx', [[:execute 'silent! !xdg-open ' . shellescape(expand('<cWORD>'), 1)<CR>]])
 
 -- updating
-keymap('n', '<Leader>p', ':PackerSync<CR>')
+keymap('n', '<Leader>p', ':Lazy sync<CR>')
 keymap('n', '<Leader>R', [[:so %<CR>:echo 'reloaded file'<CR>]], { silent = false })
 
 -- keymaps

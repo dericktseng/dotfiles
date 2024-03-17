@@ -12,8 +12,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- lua plugins
-return require('lazy').setup({
+local plugins = {
   {
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
@@ -65,4 +64,29 @@ return require('lazy').setup({
   'lervag/vimtex',
   'tpope/vim-fugitive',
   'junegunn/vim-easy-align',
-})
+}
+
+
+-- lazy.nvim optional configurations
+local opts = {
+  ui = {
+    icons = {
+      cmd = "⌘",
+      config = "🛠",
+      event = "📅",
+      ft = "📂",
+      init = "⚙",
+      keys = "🗝",
+      plugin = "🔌",
+      runtime = "💻",
+      require = "🌙",
+      source = "📄",
+      start = "🚀",
+      task = "📌",
+      lazy = "💤 ",
+    },
+  },
+}
+
+-- lua plugins
+return require('lazy').setup(plugins, opts)
