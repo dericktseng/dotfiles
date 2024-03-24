@@ -12,10 +12,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- actual list of plugins I use.
 local plugins = {
   {
     'hrsh7th/nvim-cmp',
-    event = 'InsertEnter',
     dependencies = {
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-nvim-lsp',
@@ -40,7 +40,7 @@ local plugins = {
     'neovim/nvim-lspconfig',
     dependencies = {
       'williamboman/mason.nvim',
-      'williamboman/mason-lspconfig.nvim'
+      'williamboman/mason-lspconfig.nvim',
     }
   },
 

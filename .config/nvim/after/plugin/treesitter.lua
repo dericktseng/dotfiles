@@ -9,12 +9,16 @@ require'nvim-treesitter.configs'.setup {
     'python',
     'rust',
     'bash',
-    -- 'latex'
+    'gdscript'
   },
 
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,
+  },
+
+  indent = {
+    enable = { 'gdscript' }
   },
 
   incremental_selection = {
