@@ -58,7 +58,6 @@ local plugins = {
   'MetriC-DT/balance-theme.nvim',
   'L3MON4D3/LuaSnip',
   'nvim-lualine/lualine.nvim',
-  'lewis6991/impatient.nvim',
   'windwp/nvim-autopairs',
   'kylechui/nvim-surround',
   'lervag/vimtex',

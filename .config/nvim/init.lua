@@ -1,5 +1,4 @@
--- require impatient only if it exists
-pcall(require, 'impatient')
+vim.loader.enable()
 
 local opt = vim.opt
 local o = vim.o
