@@ -88,8 +88,8 @@ editors/3d/navigation/show_viewport_rotation_gizmo = true
 editors/3d/navigation/show_viewport_navigation_gizmo = false
 text_editor/behavior/files/auto_reload_and_parse_scripts_on_save = true
 text_editor/behavior/files/open_dominant_script_on_scene_change = true
-text_editor/external/use_external_editor = true
-text_editor/external/exec_path = "nvim-qt"
+text_editor/external/use_external_editor = false
+text_editor/external/exec_path = ""
 text_editor/script_list/script_temperature_enabled = true
 text_editor/script_list/script_temperature_history_size = 15
 text_editor/script_list/group_help_pages = true
@@ -151,3 +151,9 @@ text_editor/theme/highlighting/comment_markers/notice_color = Color(0.56, 0.67, 
 text_editor/theme/highlighting/comment_markers/critical_list = "ALERT,ATTENTION,CAUTION,CRITICAL,DANGER,SECURITY"
 text_editor/theme/highlighting/comment_markers/warning_list = "BUG,DEPRECATED,FIXME,HACK,TASK,TBD,TODO,WARNING"
 text_editor/theme/highlighting/comment_markers/notice_list = "INFO,NOTE,NOTICE,TEST,TESTING"
+text_editor/help/sort_functions_alphabetically = true
+metadata/script_setup_templates_dictionary = {
+"CharacterBody2D": "0CharacterBody2DBasic Movement",
+"Human": "0CharacterBody2DBasic Movement"
+}
+metadata/script_setup_use_script_templates = false
