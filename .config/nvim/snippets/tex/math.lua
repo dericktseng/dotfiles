@@ -135,6 +135,9 @@ local regularsnips = {
   s({trig=' x', name='times', wordTrig=false},
     fmta([[\times ]], {}), {condition=mathenv}),
 
+  s({trig='sum', name='times', wordTrig=true},
+    fmta([[\sum_{<>}^{<>} ]], {i(1), i(2)}), {condition=mathenv}),
+
   s({trig='(%d)e', name='times 10 power', regTrig=true, wordTrig=false},
     fmta([[<> \times 10^{<>}]], {f(captured, {}), i(1)}), {condition=mathenv}),
 

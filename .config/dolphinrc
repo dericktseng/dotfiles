@@ -2,6 +2,8 @@
 update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detailsmodesettings.upd:move-content-display
 
 [ExtractDialog]
+1707x1067 screen: Height=560
+1707x1067 screen: Width=1138
 1920x1080 screen: Height=560
 1920x1080 screen: Width=1280
 DirHistory[$e]=/mnt/sda2/shared/misc/,$HOME/Downloads/
