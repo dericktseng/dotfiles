@@ -5,14 +5,17 @@ update_info=spectacle_newConfig.upd:spectacle-new-config,spectacle_clipboard.upd
 annotationToolType=2
 
 [General]
-autoSaveImage=true
 clipboardGroup=PostScreenshotCopyImage
 onLaunchAction=UseLastUsedCapturemode
 rememberLastRectangularRegion=Never
 
 [GuiConfig]
-captureMode=3
+captureMode=0
 window-position=0,0
+
+[ImageSave]
+lastImageSaveLocation=file:///home/derickwtseng/Pictures/Screenshots/Screenshot_20240420_190416.png
+translatedScreenshotsFolder=Screenshots
 
 [KFileDialog Settings]
 Recent Files[$e]=file:$HOME/Downloads/fig1.jpg,file:$HOME/Downloads/fig1.jpg
@@ -24,3 +27,6 @@ defaultSaveImageFormat=JPG
 lastSaveAsLocation=file:///home/derickwtseng/Downloads/fig1.jpg
 lastSaveLocation=file:///tmp/image.png
 saveFilenameFormat=%H-%m-%S_%Y_%M_%D
+
+[VideoSave]
+translatedScreencastsFolder=Screencasts

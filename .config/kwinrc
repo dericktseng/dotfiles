@@ -26,6 +26,7 @@ BorderActivateAll=9
 Duration=1
 
 [Effect-overview]
+BorderActivate=9
 LayoutMode=0
 
 [Effect-slide]
@@ -122,6 +123,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 
 [Tiling][bd455426-91b5-5aa4-b78c-9e21c3c810ab]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
+
+[Tiling][c8a4a66d-bbca-5e7f-8a37-ce3b4a705568]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][fa40b140-abb5-5f31-8f8f-0e3951b62883]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}

@@ -141,7 +141,7 @@ History Items[$e]=file:$HOME/Games,file:$HOME/Desktop/Graduate,file:///mnt/backu
 
 [General]
 BrowserApplication=firefox.desktop
-ColorSchemeHash=2ef8a9f7238e072ca91b0eb590f49ded650c76bd
+ColorSchemeHash=b3e34bc12d2f6584da133e558e5fb5ddfbae1540
 TerminalApplication=alacritty
 TerminalService=Alacritty.desktop
 XftHintStyle=hintnone
@@ -188,6 +188,9 @@ Dialog Size=768,676
 
 [PreviewSettings]
 MaximumRemoteSize=5242880000
+
+[Shortcuts]
+OpenMainMenu=
 
 [WM]
 activeBackground=227,229,231

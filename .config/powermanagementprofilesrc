@@ -80,3 +80,7 @@ suspendType=1
 btOption=1
 wifiOption=0
 wwanOption=0
+
+[Migration]
+MigratedActivitiesToPlasma6=powerdevilrc
+MigratedProfilesToPlasma6=powerdevilrc
