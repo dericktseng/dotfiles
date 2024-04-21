@@ -106,6 +106,9 @@ padding=4
 [Tiling][29297ac6-3b89-5e7b-b49b-1c80d7d12cfb]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.4947916666666667},{"width":0.5052083333333333}]}
 
+[Tiling][2b1225a8-b63c-5bef-9af2-49755ca403e7]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][351e5a58-9611-5be3-868a-68e303937600]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
 
@@ -137,4 +140,4 @@ DelayFocusInterval=0
 RollOverDesktops=true
 
 [Xwayland]
-Scale=1.5
+Scale=1
