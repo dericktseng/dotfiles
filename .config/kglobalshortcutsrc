@@ -300,14 +300,14 @@ repeat_action=none,Ctrl+Alt+R,Manually Invoke Action on Current Clipboard
 show-barcode=none,none,Show Barcode…
 show-on-mouse-pos=none,Meta+V,Open Klipper at Mouse Position
 
-[services][Alacritty.desktop]
-_launch=Meta+Return
-
 [services][firefox.desktop]
 _launch=Meta+Space
 
 [services][org.kde.dolphin.desktop]
 _launch=Meta+N
+
+[services][org.kde.konsole.desktop]
+_launch=Ctrl+Alt+T\tMeta+Return
 
 [services][org.kde.krunner.desktop]
 _launch=Alt+Space\tSearch

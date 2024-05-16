@@ -1,8 +1,8 @@
 # starts tmux
-if command -v tmux &> /dev/null && [ -z "$TMUX" ] && [ "$TERM" != "linux" ]; then
-    tmux -u new
-    exit
-fi
+# if command -v tmux &> /dev/null && [ -z "$TMUX" ] && [ "$TERM" != "linux" ]; then
+#     tmux -u new
+#     exit
+# fi
 
 # export PATH
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bin:$PATH"

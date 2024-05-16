@@ -9,6 +9,7 @@ UseFontLineChararacters=true
 WordModeBrahmic=true
 
 [Cursor Options]
+CursorShape=1
 CustomCursorColor=119,129,140
 CustomCursorTextColor=254,254,254
 UseCustomCursorColor=true
@@ -31,13 +32,13 @@ TrimTrailingSpacesInSelectedText=false
 UnderlineFilesEnabled=true
 
 [Scrolling]
-HistoryMode=0
+HistoryMode=1
 ScrollBarPosition=2
 
 [Terminal Features]
 BellMode=3
 BidiRenderingEnabled=true
-BlinkingCursorEnabled=false
+BlinkingCursorEnabled=true
 FlowControlEnabled=true
 PeekPrimaryKeySequence=Shift+Ins
 ReverseUrlHints=true
