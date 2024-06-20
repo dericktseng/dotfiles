@@ -141,7 +141,7 @@ History Items[$e]=file:$HOME/Games,file:$HOME/Desktop/Graduate,file:///mnt/backu
 
 [General]
 BrowserApplication=firefox.desktop
-ColorSchemeHash=b3e34bc12d2f6584da133e558e5fb5ddfbae1540
+ColorSchemeHash=38f350e0530aaa58cc20a2cf2011a8a2d0c7a4fc
 XftHintStyle=hintnone
 XftSubPixel=rgb
 fixed=Noto Sans Mono,10,-1,5,50,0,0,0,0,0
