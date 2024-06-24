@@ -58,6 +58,7 @@ kwin4_effect_fadeEnabled=true
 kwin4_effect_fadedesktopEnabled=true
 kwin4_effect_scaleEnabled=false
 overviewEnabled=true
+shakecursorEnabled=false
 slideEnabled=false
 windowviewEnabled=false
 zoomEnabled=false
