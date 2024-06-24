@@ -1,6 +1,16 @@
 [$Version]
 update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
 
+[0564303c-07ff-462b-ab04-50e73e2511a8]
+Description=Window settings for vesktop
+desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
+desktopsrule=3
+title=Vesktop
+types=1
+wmclass=\svesktop
+wmclasscomplete=true
+wmclassmatch=1
+
 [0a2f8329-3c14-475b-8eb7-dde9703e2ed8]
 Description=Window settings for alacritty
 ignoregeometryrule=3
@@ -271,8 +281,8 @@ wmclass=steam
 wmclassmatch=1
 
 [General]
-count=8
-rules=1,2,3,4,5,6,7,8
+count=9
+rules=0564303c-07ff-462b-ab04-50e73e2511a8,1,2,3,4,5,6,7,8
 
 [a0f7118c-ae24-4fce-80a3-95d213be1f2c]
 Description=Application settings for xfce4-terminal
