@@ -54,7 +54,7 @@ local plugins = {
     build = 'cd app && yarn install',
   },
 
-  -- '~/Desktop/program/balance-theme.nvim',
+  -- { dir = '~/Desktop/program/balance-theme.nvim' },
   'MetriC-DT/balance-theme.nvim',
   'L3MON4D3/LuaSnip',
   'nvim-lualine/lualine.nvim',
