@@ -5,8 +5,8 @@ Sources=flathub
 currentApplicationBackend=flatpak-backend
 
 [Software]
-UseOfflineUpdates=false
+UseOfflineUpdates=true
 
 [Window]
 geometry=0,0,1577,965
-visibility=0
+visibility=2
