@@ -126,3 +126,4 @@ user_pref("gfx.webrender.compositor.force-enabled", true);
 user_pref("gfx.webrender.all", true);
 user_pref("widget.use-xdg-desktop-portal.mime-handler", 1);
 user_pref("widget.use-xdg-desktop-portal.file-picker", 1);
+user_pref("dom.private-attribution.submission.enabled", 0);
