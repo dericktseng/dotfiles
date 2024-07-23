@@ -37,6 +37,10 @@ PointerAccelerationProfile=1
 PointerAcceleration=-0.200
 PointerAccelerationProfile=2
 
+[Libinput][8916][5379][Glorious Model I]
+PointerAcceleration=0.000
+PointerAccelerationProfile=2
+
 [Mouse]
 X11LibInputXAccelProfileFlat=true
 XLbInptAccelProfileFlat=false

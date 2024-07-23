@@ -5,7 +5,7 @@ Sources=flathub
 currentApplicationBackend=flatpak-backend
 
 [Software]
-UseOfflineUpdates=true
+UseOfflineUpdates=false
 
 [Window]
 geometry=0,0,1920,1040

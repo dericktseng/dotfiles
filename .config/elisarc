@@ -2,10 +2,7 @@
 RootPath[$e]=$HOME/Music
 
 [KFileDialog Settings]
-Recent Files[$e]=RigelTheatre.m3u8,file:$HOME/Music/playlist1.m3u8
-Recent URLs[$e]=file:$HOME/Music/,file:$HOME/Documents/,file:$HOME/,file:$HOME/Downloads/,file:$HOME/Desktop/
 detailViewIconSize=16
-iconViewIconSize=64
 
 [PlayerSettings]
 ScanAtStartup=false
@@ -25,5 +22,5 @@ ColorScheme=
 
 [Views]
 ColorScheme=Default
-SortOrderPreferences=Artist::Album::==AscendingOrder,Track::==DescendingOrder
-SortRolePreferences=Track::==FileModificationTime
+SortOrderPreferences=Artist::Album::==AscendingOrder,Track::==DescendingOrder,Track==DescendingOrder
+SortRolePreferences=Track::==FileModificationTime,Track==FileModificationTime
