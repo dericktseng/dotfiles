@@ -103,6 +103,9 @@ keymap('n', '<Leader>8', '8gt')
 keymap('n', '<Leader>9', '9gt')
 keymap('n', '<Leader>0', ':tablast<CR>')
 
+-- open terminal
+keymap('n', '<Leader>t', ':tabnew | term<CR>')
+
 -- Telescope
 keymap('n', '<Leader>fg', fn.project_files)
 keymap('n', '<Leader>v', fn.vimrc)

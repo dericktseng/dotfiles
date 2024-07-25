@@ -2,7 +2,8 @@
 update_info=spectacle_newConfig.upd:spectacle-new-config,spectacle_clipboard.upd:clipboard-settings-change,spectacle_rememberregion.upd:spectacle-migrate-rememberregion
 
 [Annotations]
-annotationToolType=2
+annotationToolType=6
+rectangleFillColor=0,0,0
 
 [General]
 clipboardGroup=PostScreenshotCopyImage
@@ -14,8 +15,8 @@ captureMode=0
 window-position=0,0
 
 [ImageSave]
-lastImageSaveAsLocation=file:///home/derickwtseng/Downloads/receipts/Berkeley Conference Travel Grant.png
-lastImageSaveLocation=file:///home/derickwtseng/Downloads/receipts/Berkeley Conference Travel Grant.png
+lastImageSaveAsLocation=file:///home/derickwtseng/Downloads/700-nobaseline-sapphire.png
+lastImageSaveLocation=file:///home/derickwtseng/Pictures/Screenshots/Screenshot_20240724_161551.png
 translatedScreenshotsFolder=Screenshots
 
 [Save]

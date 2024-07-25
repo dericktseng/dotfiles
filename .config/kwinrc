@@ -104,6 +104,9 @@ LayoutName=thumbnail_grid
 [Tiling]
 padding=4
 
+[Tiling][18a49c29-5f9e-5491-b449-d44fcc755f8f]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][29297ac6-3b89-5e7b-b49b-1c80d7d12cfb]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.4947916666666667},{"width":0.5052083333333333}]}
 
@@ -144,4 +147,4 @@ DelayFocusInterval=0
 RollOverDesktops=true
 
 [Xwayland]
-Scale=1
+Scale=1.5
