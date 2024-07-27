@@ -4,9 +4,9 @@ update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detai
 [ExtractDialog]
 1707x1067 screen: Height=560
 1707x1067 screen: Width=1138
-1920x1080 screen: Height=560
-1920x1080 screen: Width=1280
-DirHistory[$e]=/mnt/sda2/shared/misc/,$HOME/Downloads/
+1920x1080 screen: Height=540
+1920x1080 screen: Width=1260
+DirHistory[$e]=$HOME/Downloads/ChineseTraditional/,/mnt/sda2/shared/misc/,$HOME/Downloads/
 HDMI-A-0 Height 1920x1080 HDMI-A-0=560
 HDMI-A-0 Width 1920x1080 HDMI-A-0=1280
 
@@ -27,10 +27,7 @@ PreviewSize=112
 [KFileDialog Settings]
 Places Icons Auto-resize=false
 Places Icons Static Size=22
-Recent Files[$e]=file:$HOME,file:$HOME/Documents/Applications/Appimages/osu.AppImage
-Recent URLs[$e]=file:///usr/share/applications/,file:$HOME/Templates/,file:$HOME/,file:$HOME/Documents/,file:$HOME/Downloads/,file:$HOME/Documents/Applications/Appimages/
 detailViewIconSize=16
-iconViewIconSize=64
 
 [KPropertiesDialog]
 1920x1080 screen: Height=458
