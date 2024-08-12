@@ -3,10 +3,7 @@
 1920x1080 screen: Width=1050
 
 [KFileDialog Settings]
-Recent Files[$e]=yt-playlist,file:$HOME/.cargo/bin/alacritty
-Recent URLs[$e]=file:$HOME/Music/,file:$HOME/Downloads/,file:$HOME/,file:$HOME/.local/bin/,file:$HOME/Documents/,file:$HOME/.cargo/bin/
 detailViewIconSize=16
-iconViewIconSize=64
 
 [KPropertiesDialog]
 1920x1080 screen: Height=529
