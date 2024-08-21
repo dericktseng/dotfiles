@@ -1,5 +1,5 @@
 [FlatpakSources]
-Sources=flathub
+Sources=fedora-testing,flathub
 
 [ResourcesModel]
 currentApplicationBackend=flatpak-backend
@@ -8,5 +8,5 @@ currentApplicationBackend=flatpak-backend
 UseOfflineUpdates=false
 
 [Window]
-geometry=0,0,1920,1040
+geometry=0,0,1707,1027
 visibility=4

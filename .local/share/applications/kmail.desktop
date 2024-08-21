@@ -1,0 +1,11 @@
+[Desktop Entry]
+Categories=Network;InstantMessaging;Chat;
+Comment[en_US]=KDE Email Client
+Comment=KDE Email Client
+Exec=env QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor kmail
+Icon=kmail
+Name[en_US]=KMail
+Name=KMail
+StartupNotify=true
+Terminal=false
+Type=Application
