@@ -37,7 +37,7 @@
             "max-df-processing-threshold": 20.0,
             "max-erb-processing-threshold": 30.0,
             "min-processing-buffer": 0,
-            "min-processing-threshold": -1.0,
+            "min-processing-threshold": -10.0,
             "post-filter-beta": 0.02
         },
         "deesser#0": {
@@ -109,21 +109,10 @@
         },
         "plugins_order": [
             "deepfilternet#0",
-            "rnnoise#0",
             "gate#0",
             "compressor#0",
             "deesser#0",
             "limiter#0"
-        ],
-        "rnnoise#0": {
-            "bypass": true,
-            "enable-vad": false,
-            "input-gain": -20.3,
-            "model-name": "",
-            "output-gain": 20.1,
-            "release": 20.0,
-            "vad-thres": 50.0,
-            "wet": 0.0
-        }
+        ]
     }
 }
