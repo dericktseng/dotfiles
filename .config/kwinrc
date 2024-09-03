@@ -104,6 +104,9 @@ LayoutName=thumbnail_grid
 [Tiling]
 padding=4
 
+[Tiling][078423fe-da4a-5875-bc73-c4cda28c0e8a]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][18a49c29-5f9e-5491-b449-d44fcc755f8f]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 

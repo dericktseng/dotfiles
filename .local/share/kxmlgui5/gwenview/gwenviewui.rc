@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
-<gui name="gwenview" version="68">
+<gui name="gwenview" version="69">
  <MenuBar>
   <Menu name="file">
    <Action name="file_save"/>
@@ -19,6 +19,8 @@
   <Menu name="view">
    <Action name="browse"/>
    <Action name="view"/>
+   <Separator/>
+   <Action name="view_toggle_spotlightmode"/>
    <Separator/>
    <Action name="fullscreen"/>
    <Separator/>
@@ -100,7 +102,7 @@
  <ActionProperties scheme="Default">
   <Action name="edit_cut" shortcut="Ctrl+X"/>
   <Action name="file_quit" shortcut="Q"/>
-  <Action priority="0" name="fullscreen" shortcut="F; F11"/>
+  <Action name="fullscreen" priority="0" shortcut="F; F11"/>
   <Action name="go_next" shortcut="N"/>
   <Action name="go_previous" shortcut="P"/>
   <Action name="resize" shortcut=""/>
