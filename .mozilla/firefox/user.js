@@ -127,3 +127,5 @@ user_pref("gfx.webrender.all", true);
 user_pref("widget.use-xdg-desktop-portal.mime-handler", 1);
 user_pref("widget.use-xdg-desktop-portal.file-picker", 1);
 user_pref("dom.private-attribution.submission.enabled", 0);
+user_pref("network.trr.custom_uri", "https://doh.libredns.gr/dns-query")
+user_pref("network.trr.mode", 3)
