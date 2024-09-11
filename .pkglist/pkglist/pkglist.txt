@@ -29,6 +29,7 @@ ffmpeg
 ffmpegthumbnailer
 ffmpegthumbs
 fira-code-fonts
+fira-mono-nerd-fonts
 fira-code-nerd-fonts
 firefox
 fontconfig
