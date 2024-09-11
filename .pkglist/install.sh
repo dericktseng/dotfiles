@@ -13,6 +13,11 @@ sudo dnf install \
 	https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
 	https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
+# add copr
+while read -r line; do
+    sudo dnf copr enable aquacash5/nerd-fonts -y
+done < ./pkglist/copr.txt
+
 # first run update to synchronize package database
 sudo dnf upgrade -y
 
