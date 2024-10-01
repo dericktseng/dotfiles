@@ -132,7 +132,7 @@ local autosnips = {
 
 -- non-auto-snippets
 local regularsnips = {
-  s({trig=' x', name='times', wordTrig=false},
+  s({trig='x', name='times', wordTrig=true},
     fmta([[\times ]], {}), {condition=mathenv}),
 
   s({trig='sum', name='times', wordTrig=true},
