@@ -92,6 +92,9 @@ local autosnips = {
   s({trig='sqr', name='square root'},
     fmta([[\sqrt{<>}]], {i(1)}), {condition=mathenv}),
 
+  s({trig='txt', name='text environment'},
+    fmta([[\text{<>}]], {i(1)}), {condition=mathenv}),
+
   s({trig='...', name='ldots'}, t([[\ldots]]), {condition=mathenv}),
 
   s({trig='---', name='cdots'}, t([[\cdots]]), {condition=mathenv}),
