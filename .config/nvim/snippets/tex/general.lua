@@ -106,9 +106,12 @@ return {
   s(
     {trig='al', name='align environment'},
     fmta([[
+      \begingroup
+      \addtolength{\jot}{1em}
       \begin{align*}
       <><>
-      \end{align*}]],
+      \end{align*}
+      \endgroup]],
       {t('\t'), i(1)}
     )
   ),
@@ -120,6 +123,21 @@ return {
       <><>
       \end{gather*}]],
       {t('\t'), i(1)}
+    )
+  ),
+
+  s(
+    {trig='svg', name='insert svg top align'},
+    fmta([[
+      \begin{center}
+      <>\adjustbox{valign=t}{\includesvg[width=<>\textwidth]{<>}}
+      \end{center}
+      ]],
+      {
+        t('\t'),
+        i(1,''),
+        d(2, utils.filter_snippet, {}, {user_args = {{'svg'}}})
+      }
     )
   ),
 
