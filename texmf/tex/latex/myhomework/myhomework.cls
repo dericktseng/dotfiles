@@ -11,6 +11,7 @@
 \RequirePackage{amssymb}
 \RequirePackage{siunitx}
 \RequirePackage{graphicx}
+\RequirePackage{svg}
 \RequirePackage{adjustbox}
 \RequirePackage{xurl}
 \RequirePackage{multicol}
