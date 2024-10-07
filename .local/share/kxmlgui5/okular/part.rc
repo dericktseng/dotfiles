@@ -4,18 +4,18 @@
  <MenuBar>
   <Menu name="file">
    <text>&amp;File</text>
-   <Action name="get_new_stuff" group="file_open"/>
-   <Action name="import_ps" group="file_open"/>
-   <Action name="file_save" group="file_save"/>
-   <Action name="file_save_as" group="file_save"/>
-   <Action name="file_reload" group="file_save"/>
-   <Action name="file_print" group="file_print"/>
-   <Action name="file_print_preview" group="file_print"/>
-   <Action name="open_containing_folder" group="file_print"/>
-   <Action name="properties" group="file_print"/>
-   <Action name="embedded_files" group="file_print"/>
-   <Action name="file_export_as" group="file_print"/>
-   <Action name="file_share" group="file_print"/>
+   <Action group="file_open" name="get_new_stuff"/>
+   <Action group="file_open" name="import_ps"/>
+   <Action group="file_save" name="file_save"/>
+   <Action group="file_save" name="file_save_as"/>
+   <Action group="file_save" name="file_reload"/>
+   <Action group="file_print" name="file_print"/>
+   <Action group="file_print" name="file_print_preview"/>
+   <Action group="file_print" name="open_containing_folder"/>
+   <Action group="file_print" name="properties"/>
+   <Action group="file_print" name="embedded_files"/>
+   <Action group="file_print" name="file_export_as"/>
+   <Action group="file_print" name="file_share"/>
   </Menu>
   <Menu name="edit">
    <text>&amp;Edit</text>
@@ -96,15 +96,15 @@
   </Menu>
   <Menu name="settings">
    <text>&amp;Settings</text>
-   <Action name="colorscheme_menu" group="show_merge"/>
-   <Action name="show_leftpanel" group="show_merge"/>
-   <Action name="show_bottombar" group="show_merge"/>
-   <Action name="options_configure_generators" group="configure_merge"/>
-   <Action name="options_configure" group="configure_merge"/>
+   <Action group="show_merge" name="colorscheme_menu"/>
+   <Action group="show_merge" name="show_leftpanel"/>
+   <Action group="show_merge" name="show_bottombar"/>
+   <Action group="configure_merge" name="options_configure_generators"/>
+   <Action group="configure_merge" name="options_configure"/>
   </Menu>
   <Menu name="help">
    <text>&amp;Help</text>
-   <Action name="help_about_backend" group="about_merge"/>
+   <Action group="about_merge" name="help_about_backend"/>
   </Menu>
  </MenuBar>
  <ToolBar name="mainToolBar">
@@ -123,7 +123,7 @@
   <Separator/>
   <Action name="hamburger_menu"/>
  </ToolBar>
- <ToolBar name="annotationToolBar" newline="true" iconText="icononly" hidden="true">
+ <ToolBar hidden="true" iconText="icononly" name="annotationToolBar" newline="true">
   <text>Annotation Toolbar</text>
   <Action name="annotation_highlighter"/>
   <Action name="annotation_underline"/>
@@ -148,7 +148,7 @@
   <Spacer/>
   <Action name="hide_annotation_toolbar"/>
  </ToolBar>
- <ToolBar name="quickAnnotationToolBar" position="right" newline="true" iconText="icononly" iconSize="32" hidden="true">
+ <ToolBar hidden="true" iconSize="32" iconText="icononly" name="quickAnnotationToolBar" newline="true" position="right">
   <text>Quick Annotation Toolbar</text>
   <Action name="quick_annotation_action_bar"/>
  </ToolBar>
@@ -160,14 +160,14 @@
   <Action name="go_document_back" shortcut="Ctrl+O"/>
   <Action name="go_document_forward" shortcut="Ctrl+I"/>
   <Action name="go_next" shortcut="Space"/>
-  <Action name="go_previous" shortcut="Shift+Space"/>
+  <Action name="go_previous" shortcut="Shift+Space; Backspace"/>
   <Action name="last_page" shortcut="Shift+G"/>
   <Action name="mouse_textselect" shortcut="Ctrl+2"/>
   <Action name="mouse_zoom" shortcut=""/>
   <Action name="next_bookmark" shortcut="N"/>
   <Action name="previous_bookmark" shortcut="Shift+N"/>
   <Action name="show_bottombar" shortcut="Ctrl+N"/>
-  <Action name="show_leftpanel" shortcut="Tab" priority="0"/>
+  <Action name="show_leftpanel" priority="0" shortcut="Tab"/>
   <Action name="view_actual_size" shortcut="0"/>
   <Action name="view_fit_to_page" shortcut="A"/>
   <Action name="view_fit_to_width" shortcut="W"/>
