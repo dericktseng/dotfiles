@@ -155,7 +155,7 @@ local regularsnips = {
     fmta([[\exp{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='sin', name='sine'},
-    fmta([[\sin{<>}]], {i(1)}), {condition=mathenv}),
+    fmta([[\sin(<>)]], {i(1)}), {condition=mathenv}),
 
   s({trig='cos', name='cosine'},
     fmta([[\cos(<>)]], {i(1)}), {condition=mathenv}),

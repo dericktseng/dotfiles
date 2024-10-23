@@ -107,7 +107,7 @@ return {
     {trig='al', name='align environment'},
     fmta([[
       \begingroup
-      \addtolength{\jot}{1em}
+      \addtolength{\jot}{0.2em}
       \begin{align*}
       <><>
       \end{align*}
@@ -208,7 +208,7 @@ return {
   ),
 
   s(
-    {trig='eq', name='equation'},
+    {trig='eqn', name='equation', wordtrig=true},
     fmta([[
       \begin{equation}
       <>\label{eq:<>}
