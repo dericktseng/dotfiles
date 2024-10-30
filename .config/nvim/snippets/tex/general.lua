@@ -178,6 +178,11 @@ return {
   ),
 
   s(
+    {trig='ce', name='mhchem', wordtrig=false},
+    fmta([[\ce{<>}]], {i(1)})
+  ),
+
+  s(
     {trig='ch', name='chemformula', wordtrig=false},
     fmta([[\ch{<>}]], {i(1)})
   ),

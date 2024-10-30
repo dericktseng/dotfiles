@@ -152,31 +152,31 @@ local regularsnips = {
     fmta([[\frac{d<>}{d<>}]], {i(1,'y'), i(2,'x')}), {condition=mathenv}),
 
   s({trig='exp', name='natural exponent'},
-    fmta([[\exp{<>}]], {i(1)}), {condition=mathenv}),
+    fmta([[\exp <>]], {i(1)}), {condition=mathenv}),
 
   s({trig='sin', name='sine'},
-    fmta([[\sin(<>)]], {i(1)}), {condition=mathenv}),
+    fmta([[\sin <>]], {i(1)}), {condition=mathenv}),
 
   s({trig='cos', name='cosine'},
-    fmta([[\cos(<>)]], {i(1)}), {condition=mathenv}),
+    fmta([[\cos <>]], {i(1)}), {condition=mathenv}),
 
   s({trig='tan', name='tangent'},
-    fmta([[\tan(<>)]], {i(1)}), {condition=mathenv}),
+    fmta([[\tan <>]], {i(1)}), {condition=mathenv}),
 
   s({trig='asin', name='arcsin'},
-    fmta([[\arcsin(<>)]], {i(1)}), {condition=mathenv}),
+    fmta([[\arcsin <>]], {i(1)}), {condition=mathenv}),
 
   s({trig='acos', name='arccos'},
-    fmta([[\arccos(<>)]], {i(1)}), {condition=mathenv}),
+    fmta([[\arccos <>]], {i(1)}), {condition=mathenv}),
 
   s({trig='atan', name='arctan'},
-    fmta([[\arctan(<>)]], {i(1)}), {condition=mathenv}),
+    fmta([[\arctan <>]], {i(1)}), {condition=mathenv}),
 
   s({trig='log', name='log'},
-    fmta([[\log(<>)]], {i(1)}), {condition=mathenv}),
+    fmta([[\log <>]], {i(1)}), {condition=mathenv}),
 
   s({trig='ln', name='ln'},
-    fmta([[\ln(<>)]], {i(1)}), {condition=mathenv}),
+    fmta([[\ln <>]], {i(1)}), {condition=mathenv}),
 
   s({trig='pdif', name='partial differentiate'},
     fmta([[\frac{\partial <>}{\partial <>}]], {i(1,'y'), i(2,'x')}), {condition=mathenv}),
