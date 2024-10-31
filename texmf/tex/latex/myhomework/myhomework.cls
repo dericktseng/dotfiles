@@ -17,6 +17,7 @@
 \RequirePackage{multicol}
 \RequirePackage{listings}
 \RequirePackage{chemformula}
+\RequirePackage[version=4]{mhchem}
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 \RequirePackage{tabularx}
