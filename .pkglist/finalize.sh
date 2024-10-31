@@ -15,6 +15,9 @@ select yn in "yes" "no"; do
     esac
 done
 
+# install microsoft fonts
+sudo dnf install -y 'https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm'
+
 # user systemctl services
 systemctl --user --now enable psd
 
