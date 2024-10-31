@@ -40,14 +40,14 @@ local autosnips = {
   s({trig='([^%s])sb', name='subscript', regTrig=true, wordTrig=false},
     fmta([[<>_{<>}]], {f(captured, {}), i(1)}), {condition=mathenv}),
 
-  s({trig='([+-]?)(%d+)(e?-?%d*)si', name='SI Unit After Integer', regTrig=true, priority=1000},
+  s({trig='([+-]?)(%d+)(e?-?%d*)si', name='SI Unit After Integer', regTrig=true, priority=2000},
     fmta([[\SI{<><><>}{<>}]], {
       f(captured,{},{user_args={1}}),
       f(captured,{},{user_args={2}}),
       f(captured,{},{user_args={3}}),
       i(1)})),
 
-  s({trig='([+-]?)(%d+[.]%d+)(e?-?%d*)si', name='SI Unit After Decimal', regTrig=true, priority=1001},
+  s({trig='([+-]?)(%d+[.]%d+)(e?-?%d*)si', name='SI Unit After Decimal', regTrig=true, priority=2001},
     fmta([[\SI{<><><>}{<>}]], {
       f(captured,{},{user_args={1}}),
       f(captured,{},{user_args={2}}),
@@ -149,7 +149,7 @@ local regularsnips = {
     fmta([[\ce{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='si', name='math siunitx', priority=1001, {condition=mathenv}},
-    fmta([[\si{<>}{<>}]], {i(1), i(2)}), {condition=mathenv}),
+    fmta([[\SI{<>}{<>}]], {i(1), i(2)}), {condition=mathenv}),
 
   s({trig='int', name='integral'},
     fmta([[\int_{<>}^{<>} {<>} \: d{<>}]], {i(1),i(2),i(3),i(4)}), {condition=mathenv}),

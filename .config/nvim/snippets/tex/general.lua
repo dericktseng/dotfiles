@@ -106,12 +106,10 @@ return {
   s(
     {trig='al', name='align environment'},
     fmta([[
-      \begingroup
-      \addtolength{\jot}{0.2em}
       \begin{align*}
       <><>
       \end{align*}
-      \endgroup]],
+      ]],
       {t('\t'), i(1)}
     )
   ),
