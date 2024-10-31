@@ -145,8 +145,11 @@ local regularsnips = {
     fmta([[<> \times 10^{<>}]], {f(captured, {}), i(1)}), {condition=mathenv}),
 
   -- quick environments
-  s({trig='ce', name='mhchem', priority=1001, {condition=mathenv}},
+  s({trig='ce', name='math mhchem', priority=1001, {condition=mathenv}},
     fmta([[\ce{<>}]], {i(1)}), {condition=mathenv}),
+
+  s({trig='si', name='math siunitx', priority=1001, {condition=mathenv}},
+    fmta([[\si{<>}{<>}]], {i(1), i(2)}), {condition=mathenv}),
 
   s({trig='int', name='integral'},
     fmta([[\int_{<>}^{<>} {<>} \: d{<>}]], {i(1),i(2),i(3),i(4)}), {condition=mathenv}),

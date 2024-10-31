@@ -73,7 +73,7 @@ return {
   }),
 
   s({trig='si', name='siunitx'},
-    fmta([[\SI{<>}{<>}]], {i(1), i(2)})
+    fmta([[$\SI{<>}{<>}$]], {i(1), i(2)})
   ),
 
   s({trig='np', name='newpage'}, t([[\newpage]])),
