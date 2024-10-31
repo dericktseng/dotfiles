@@ -130,7 +130,7 @@ return {
     {trig='svg', name='insert svg top align'},
     fmta([[
       \begin{center}
-      <>\adjustbox{valign=t}{\includesvg[width=<>\textwidth]{<>}}
+      <>\includesvg[width=<>\textwidth]{<>}
       \end{center}
       ]],
       {
@@ -145,7 +145,7 @@ return {
     {trig='pict', name='insert picture top align'},
     fmta([[
       \begin{center}
-      <>\adjustbox{valign=t}{\includegraphics[width=<>\textwidth]{<>}}
+      <>\includegraphics[width=<>\textwidth]{<>}
       \end{center}
       ]],
       {
