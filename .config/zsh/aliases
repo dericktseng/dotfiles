@@ -19,7 +19,7 @@ alias vim=$EDITOR
 alias open="xdg-open"
 alias locate="locate -e"
 alias gdb="gdb -tui"
-alias y="sudo dnf upgrade --refresh && flatpak update"
+alias y="sudo dnf upgrade --refresh || flatpak update"
 alias ytdl="yt-dlp"
 alias dt="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias hd="hexdump -C"

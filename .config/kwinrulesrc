@@ -86,14 +86,10 @@ wmclassmatch=1
 [3]
 Description=Application settings for org.kde.konsole
 clientmachine=localhost
-desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
-fullscreen=true
-ignoregeometry=true
 maximizehoriz=true
 maximizehorizrule=3
 maximizevert=true
 maximizevertrule=3
-placement=10
 title=Alacritty
 wmclass=konsole org.kde.konsole
 wmclasscomplete=true

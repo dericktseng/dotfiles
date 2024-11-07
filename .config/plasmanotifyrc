@@ -31,5 +31,8 @@ Seen=true
 [Applications][xyz.armcord.ArmCord]
 Seen=true
 
+[DoNotDisturb]
+Until=2024,10,14,20,0,0.214
+
 [Notifications]
 PopupPosition=BottomRight

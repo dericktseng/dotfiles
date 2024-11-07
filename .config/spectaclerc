@@ -5,6 +5,10 @@ update_info=spectacle_newConfig.upd:spectacle-new-config,spectacle_clipboard.upd
 annotationToolType=6
 rectangleFillColor=0,0,0
 
+[FileDialogSize]
+2 screens: Height=540
+2 screens: Width=960
+
 [General]
 clipboardGroup=PostScreenshotCopyImage
 onLaunchAction=UseLastUsedCapturemode
@@ -15,8 +19,8 @@ captureMode=0
 window-position=0,0
 
 [ImageSave]
-lastImageSaveAsLocation=file:///home/derickwtseng/Downloads/EHS106-2024.png
-lastImageSaveLocation=file:///home/derickwtseng/Downloads/EHS106-2024.png
+lastImageSaveAsLocation=file:///home/derickwtseng/Desktop/MSE125Course/HW/hw04/images/2a.png
+lastImageSaveLocation=file:///home/derickwtseng/Desktop/MSE125Course/HW/hw04/images/2a.png
 translatedScreenshotsFolder=Screenshots
 
 [Save]

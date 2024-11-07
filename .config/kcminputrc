@@ -10,6 +10,7 @@ PointerAcceleration=0.000
 PointerAccelerationProfile=2
 
 [Libinput][1267][12945][DELL0C24:00 04F3:3291 Mouse]
+PointerAcceleration=0.000
 PointerAccelerationProfile=2
 ScrollFactor=3
 
@@ -18,6 +19,9 @@ NaturalScroll=true
 PointerAcceleration=0.000
 PointerAccelerationProfile=2
 TapToClick=true
+
+[Libinput][16700][17667][Dell Computer Corp Dell Universal Receiver Mouse]
+PointerAcceleration=-0.200
 
 [Libinput][2][14][ETPS/2 Elantech Touchpad]
 NaturalScroll=true
