@@ -303,16 +303,16 @@ return {
   s(
     {trig='setup', name='document setup'},
     fmta([[
-          \documentclass{myhomework}
-          \bibliography{refs.bib}
+          \documentclass{<>}
           \title{<>}
+          \date{\today}
+          \author{Derick Tseng}
 
           \begin{document}
           <>\maketitle
           <><>
-          <>% \printbibliography
           \end{document}
     ]],
-    {i(1, 'Title'), t('\t'), t('\t'), i(2), t('\t')})
+    {i(1, 'article'), i(2, 'Title'), t('\t'), t('\t'), i(3)})
   )
 }
