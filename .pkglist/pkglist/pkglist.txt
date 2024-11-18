@@ -59,7 +59,6 @@ gstreamer1-plugins-good-gtk
 gstreamer1-plugins-good-qt
 gtest
 gtest-devel
-gthumb
 htop
 iwd
 jq
