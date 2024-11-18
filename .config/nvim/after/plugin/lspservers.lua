@@ -4,6 +4,7 @@ local lspconfig = require('lspconfig')
 
 -- make sure these lsp servers are installed
 local servers = {
+  'ruff',
   'pyright',
   'rust_analyzer',
   'clangd',
