@@ -54,8 +54,19 @@ local plugins = {
     build = 'cd app && yarn install',
   },
 
-  -- { dir = '~/Desktop/program/balance-theme.nvim' },
-  'MetriC-DT/balance-theme.nvim',
+  {
+    -- dir = '~/Desktop/program/balance-theme.nvim',
+    'MetriC-DT/balance-theme.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- only enable theme when in light background mode
+      if vim.o.background == 'light' then
+        require'balance'.setup()
+      end
+    end
+  },
+
   'L3MON4D3/LuaSnip',
   'nvim-lualine/lualine.nvim',
   'windwp/nvim-autopairs',

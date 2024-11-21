@@ -35,7 +35,7 @@ else
   o.background = 'dark'
 end
 
--- load plugins (after colorscheme)
+-- load plugins (after setting background)
 require('plugins')
 
 -- fix for latex file detection
