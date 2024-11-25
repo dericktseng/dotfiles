@@ -10,6 +10,7 @@ local servers = {
   'clangd',
   'lua_ls',
   'texlab',
+  'ts_ls'
 }
 
 -- setup mason
