@@ -55,8 +55,8 @@ local plugins = {
   },
 
   {
-    dir = '~/Desktop/program/balance-theme.nvim',
-    -- 'MetriC-DT/balance-theme.nvim',
+    -- dir = '~/Desktop/program/balance-theme.nvim',
+    'MetriC-DT/balance-theme.nvim',
     lazy = false,
     priority = 1000,
     config = function()
