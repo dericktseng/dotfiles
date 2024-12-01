@@ -9,7 +9,8 @@ require'nvim-treesitter.configs'.setup {
     'python',
     'rust',
     'bash',
-    'gdscript'
+    'gdscript',
+    'typescript'
   },
 
   highlight = {
