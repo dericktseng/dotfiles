@@ -6,9 +6,6 @@ eDP-1 Width 1920x1080=1109
 [$Version]
 update_info=gwenview.upd:SideBar_StatusBar_Rename,gwenview.upd:ImageView_AlphaBackgroundMode_Update,gwenview.upd:DeleteThumbnailSetting_Rename
 
-[FullScreen]
-FullScreenModeActive=true
-
 [General]
 HistoryEnabled=false
 LastUsedVersion=210800
