@@ -1,6 +1,5 @@
 io.freetubeapp.FreeTube
 dev.vencord.Vesktop
-us.zoom.Zoom
 org.signal.Signal
 org.onlyoffice.desktopeditors
 com.usebottles.bottles
