@@ -11,11 +11,11 @@ function fixpk
 end
 
 function mkcd
-    /usr/bin/mkdir -p "$argv[0]" && cd "$argv[0]"
+    /usr/bin/mkdir -p "$argv[1]" && cd "$argv[1]"
 end
 
 function cpcd
-    /usr/bin/mkdir -p "$argv[1]" && cp "$argv[0]" "$argv[1]" && cd "$argv[1]"
+    /usr/bin/mkdir -p "$argv[2]" && cp "$argv[1]" "$argv[2]" && cd "$argv[2]"
 end
 
 function mvcd
