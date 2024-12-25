@@ -1,3 +1,6 @@
+set -gx EDITOR '/usr/bin/nvim'
+set -gx VISUAL "$EDITOR"
+
 alias l="/bin/ls --group-directories-first --color=auto"
 alias ls="/bin/ls --group-directories-first --color=auto"
 alias ll="/bin/ls -lh --group-directories-first --color=auto"
