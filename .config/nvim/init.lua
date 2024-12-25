@@ -89,6 +89,9 @@ o.wrap = false
 o.smartcase = true
 o.ignorecase = true
 
+-- set shell
+o.shell = '/usr/bin/fish'
+
 -- sets the conceallevel
 opt.conceallevel = 2
 
