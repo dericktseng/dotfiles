@@ -1,5 +1,7 @@
+# fish settings
+set -g fish_greeting
+
 # fzf settings
-set -gx FZF_COMPLETION_TRIGGER '~~'
 set -gx FZF_DEFAULT_COMMAND "fd --type file --hidden -I --exclude .git --color=always"
 set -gx FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 set -gx FZF_ALT_C_COMMAND "fd --type directory --hidden -I --exclude .git --color=always"
