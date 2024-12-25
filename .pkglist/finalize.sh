@@ -29,7 +29,7 @@ sudo systemctl --now disable NetworkManager-wait-online
 sudo timedatectl set-ntp true
 
 # change shell to zsh.
-chsh -s /bin/zsh
+# chsh -s /bin/zsh
 
 # backlight settings: adds user to group video
 sudo usermod -aG video "$self"

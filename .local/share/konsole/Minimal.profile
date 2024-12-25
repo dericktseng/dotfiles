@@ -15,6 +15,7 @@ CustomCursorTextColor=254,254,254
 UseCustomCursorColor=true
 
 [General]
+Command=/bin/fish
 Name=Minimal
 Parent=FALLBACK/
 ShowTerminalSizeHint=false
