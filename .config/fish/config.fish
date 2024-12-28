@@ -4,6 +4,8 @@ if status is-interactive
         source $file
     end
 
+    fish_add_path $HOME/.cargo/bin/
+
     /usr/bin/zoxide init fish | source
     /usr/bin/fzf --fish | source
 end
