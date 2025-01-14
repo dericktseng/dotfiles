@@ -67,7 +67,7 @@ user_pref("places.history.enabled", false);
 user_pref("privacy.annotate_channels.strict_list.enabled", true);
 user_pref("privacy.clearOnShutdown.cookies", false);
 user_pref("privacy.clearOnShutdown.sessions", false);
-user_pref("privacy.donottrackheader.enabled", true);
+// user_pref("privacy.donottrackheader.enabled", true);
 user_pref("network.cookie.cookieBehavior", 1);
 user_pref("privacy.history.custom", true);
 user_pref("privacy.partition.network_state.ocsp_cache", true);

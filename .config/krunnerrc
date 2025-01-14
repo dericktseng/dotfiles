@@ -2,6 +2,7 @@
 ActivityAware=false
 FreeFloating=true
 RetainPriorSearch=false
+historyBehavior=ImmediateCompletion
 
 [PlasmaRunnerManager]
 migrated=true
