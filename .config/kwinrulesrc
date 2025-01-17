@@ -148,6 +148,18 @@ title=Alacritty
 wmclass=lutris
 wmclassmatch=1
 
+[55c214d2-e3b2-40b5-9da2-9213ce88b270]
+Description=Application settings for org.mozilla.Thunderbird
+desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
+desktopsrule=3
+fpplevel=3
+fpplevelrule=2
+fsplevel=3
+fsplevelrule=2
+wmclass=\sorg.mozilla.Thunderbird
+wmclasscomplete=true
+wmclassmatch=1
+
 [59d980a9-7a4b-4275-a300-46e51be1ac14]
 Description=Application settings for mpv
 blockcompositingrule=2
@@ -277,8 +289,8 @@ wmclass=steam
 wmclassmatch=1
 
 [General]
-count=10
-rules=d8d21e5f-ebc7-40cf-b314-44e778af3c64,0564303c-07ff-462b-ab04-50e73e2511a8,1,2,3,4,5,6,7,8
+count=11
+rules=55c214d2-e3b2-40b5-9da2-9213ce88b270,d8d21e5f-ebc7-40cf-b314-44e778af3c64,0564303c-07ff-462b-ab04-50e73e2511a8,1,2,3,4,5,6,7,8
 
 [a0f7118c-ae24-4fce-80a3-95d213be1f2c]
 Description=Application settings for xfce4-terminal

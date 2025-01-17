@@ -3,3 +3,4 @@ dev.vencord.Vesktop
 org.signal.Signal
 org.onlyoffice.desktopeditors
 com.usebottles.bottles
+org.mozilla.Thunderbird
