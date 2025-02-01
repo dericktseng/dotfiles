@@ -10,13 +10,6 @@ export PATH="$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bin:$PAT
 # zsh fpath
 fpath=(~/.config/zsh/ $fpath)
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # ZSH Options
 setopt MENU_COMPLETE        # Automatically highlight first element of completion menu
 setopt AUTO_LIST            # Automatically list choices on ambiguous completion.
@@ -86,25 +79,11 @@ _fzf_compgen_dir() {
     fd --type d --hidden --follow --exclude ".git" -j$(nproc) . "$1"
 }
 
-# source /usr/share/fzf/shell/completion.zsh
-source /usr/share/fzf/shell/key-bindings.zsh
-source /usr/share/zsh/site-functions/fzf
-
 # zsh-autosuggestions
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#AAAAAA'
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# zsh syntax highlighting
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # zoxide
 eval "$(zoxide init zsh)"
-
-# powerlevel10k theme
-source ~/.powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
