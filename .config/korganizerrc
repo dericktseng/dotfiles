@@ -2,7 +2,7 @@
 Default Calendar=-1
 
 [CollectionTreeView]
-Expansion=c1
+Expansion=
 HorizontalScroll=0
 VerticalScroll=0
 
@@ -20,7 +20,7 @@ Current=x-1
 Selection=
 
 [GlobalCollectionView]
-Expansion=c1
+Expansion=
 HorizontalScroll=0
 VerticalScroll=0
 
@@ -32,8 +32,8 @@ detailViewIconSize=16
 iconViewIconSize=64
 
 [KOrganizer Geometry]
-Separator1=227,1294
-Separator2=0,0,0,853
+Separator1=95,544
+Separator2=0,0,0,404
 
 [MainWindow]
 1920x1080 screen: Height=929
@@ -67,7 +67,7 @@ TodoViewVisible=false
 [Sidebar Todo View]
 ColumnOrder=0,1,2,3,4,5,6,7,8,9
 ColumnVisibility=true,false,false,false,true,true,false,false,false,false
-ColumnWidths=564,0,0,0,93,86,0,0,0,0
+ColumnWidths=89,0,0,0,93,86,0,0,0,0
 SortAscending=0
 SortColumn=0
 

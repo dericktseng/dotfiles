@@ -14,6 +14,23 @@ location=4
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
 
+[Containments][2][Applets][102]
+immutability=1
+plugin=org.kde.plasma.kickoff
+
+[Containments][2][Applets][102][Configuration]
+PreloadWeight=100
+popupHeight=508
+popupWidth=647
+
+[Containments][2][Applets][102][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][2][Applets][102][Configuration][General]
+favoritesPortedToKAstats=true
+systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
+
 [Containments][2][Applets][26]
 immutability=1
 plugin=org.kde.plasma.panelspacer
@@ -104,26 +121,6 @@ maxStripes=1
 showOnlyCurrentScreen=true
 wheelSkipMinimized=false
 
-[Containments][2][Applets][62]
-immutability=1
-plugin=org.kde.plasma.kickerdash
-
-[Containments][2][Applets][62][Configuration]
-PreloadWeight=100
-popupHeight=514
-popupWidth=651
-
-[Containments][2][Applets][62][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][2][Applets][62][Configuration][General]
-favoritesPortedToKAstats=true
-systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
-
-[Containments][2][Applets][62][Shortcuts]
-global=
-
 [Containments][2][Applets][7]
 immutability=1
 plugin=org.kde.plasma.systemtray
@@ -140,17 +137,17 @@ DialogWidth=1920
 PreloadWeight=42
 
 [Containments][2][General]
-AppletOrder=62;40;4;27;57;26;52;7
+AppletOrder=102;40;4;27;57;26;52;7
 
 [Containments][53]
 ItemGeometries-0x0=Applet-61:1584,768,320,304,0;
 ItemGeometries-1067x800=
 ItemGeometries-1280x720=
-ItemGeometries-1707x1067=Applet-67:1296,608,400,416,0;
+ItemGeometries-1707x1067=Applet-67:1296,576,400,448,0;
 ItemGeometries-1920x1080=
 ItemGeometries-3840x2160=
 ItemGeometries-960x540=
-ItemGeometriesHorizontal=Applet-67:1296,608,400,416,0;
+ItemGeometriesHorizontal=Applet-67:1296,576,400,448,0;
 activityId=884b7bf3-ccba-4560-867b-dc0726837c67
 formfactor=0
 immutability=1
@@ -190,7 +187,7 @@ PreloadWeight=42
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=559
 locked=true
-positions={"1920x1080":[]\\,"960x540":[""]\\,"3840x2160":[""]\\,"1707x1067":[]\\,"2560x1600":[""]\\,"1280x800":[""]\\,"1280x720":[]\\,"1067x800":[]\\,"1680x1050":[""]}
+positions={"1067x800":[],"1280x720":[],"1280x800":[""],"1680x1050":[""],"1707x1067":[],"1920x1080":[],"2560x1600":[""],"3840x2160":[""],"960x540":[""]}
 url=file:///home/derickwtseng
 
 [Containments][53][Wallpaper][org.kde.image][General]
@@ -206,6 +203,8 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][66]
+ItemGeometries-1067x800=
+ItemGeometries-1280x720=
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
 activityId=884b7bf3-ccba-4560-867b-dc0726837c67
@@ -242,6 +241,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][70][Applets][73][Configuration][General]
+groupingStrategy=0
 launchers=
 showOnlyCurrentScreen=true
 
@@ -265,150 +265,12 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][70][Applets][99][Configuration]
-PreloadWeight=65
+PreloadWeight=70
 popupHeight=450
 popupWidth=560
 
 [Containments][70][General]
 AppletOrder=98;96;73;97;99
-
-[Containments][76]
-activityId=
-formfactor=2
-immutability=1
-lastScreen=-1
-location=4
-plugin=org.kde.plasma.private.systemtray
-wallpaperplugin=org.kde.image
-
-[Containments][76][Applets][77]
-immutability=1
-plugin=org.kde.kdeconnect
-
-[Containments][76][Applets][77][Configuration]
-PreloadWeight=42
-
-[Containments][76][Applets][78]
-immutability=1
-plugin=org.kde.kscreen
-
-[Containments][76][Applets][78][Configuration]
-PreloadWeight=42
-
-[Containments][76][Applets][79]
-immutability=1
-plugin=org.kde.plasma.clipboard
-
-[Containments][76][Applets][79][Configuration]
-PreloadWeight=42
-
-[Containments][76][Applets][80]
-immutability=1
-plugin=org.kde.plasma.devicenotifier
-
-[Containments][76][Applets][80][Configuration]
-PreloadWeight=42
-
-[Containments][76][Applets][81]
-immutability=1
-plugin=org.kde.plasma.keyboardindicator
-
-[Containments][76][Applets][81][Configuration]
-PreloadWeight=42
-
-[Containments][76][Applets][82]
-immutability=1
-plugin=org.kde.plasma.keyboardlayout
-
-[Containments][76][Applets][82][Configuration]
-PreloadWeight=42
-
-[Containments][76][Applets][83]
-immutability=1
-plugin=org.kde.plasma.manage-inputmethod
-
-[Containments][76][Applets][83][Configuration]
-PreloadWeight=42
-
-[Containments][76][Applets][84]
-immutability=1
-plugin=org.kde.plasma.notifications
-
-[Containments][76][Applets][84][Configuration]
-PreloadWeight=42
-
-[Containments][76][Applets][85]
-immutability=1
-plugin=org.kde.plasma.printmanager
-
-[Containments][76][Applets][85][Configuration]
-PreloadWeight=42
-
-[Containments][76][Applets][86]
-immutability=1
-plugin=org.kde.plasma.vault
-
-[Containments][76][Applets][86][Configuration]
-PreloadWeight=42
-
-[Containments][76][Applets][87]
-immutability=1
-plugin=org.kde.plasma.volume
-
-[Containments][76][Applets][87][Configuration]
-PreloadWeight=42
-
-[Containments][76][Applets][87][Configuration][General]
-migrated=true
-
-[Containments][76][Applets][88]
-immutability=1
-plugin=org.kde.plasma.cameraindicator
-
-[Containments][76][Applets][88][Configuration]
-PreloadWeight=42
-
-[Containments][76][Applets][91]
-immutability=1
-plugin=org.kde.plasma.bluetooth
-
-[Containments][76][Applets][91][Configuration]
-PreloadWeight=42
-
-[Containments][76][Applets][92]
-immutability=1
-plugin=org.kde.plasma.networkmanagement
-
-[Containments][76][Applets][92][Configuration]
-PreloadWeight=42
-
-[Containments][76][Applets][93]
-immutability=1
-plugin=org.kde.plasma.brightness
-
-[Containments][76][Applets][93][Configuration]
-PreloadWeight=42
-
-[Containments][76][Applets][94]
-immutability=1
-plugin=org.kde.plasma.battery
-
-[Containments][76][Applets][94][Configuration]
-PreloadWeight=42
-
-[Containments][76][Applets][95]
-immutability=1
-plugin=org.kde.plasma.mediacontroller
-
-[Containments][76][Applets][95][Configuration]
-PreloadWeight=42
-
-[Containments][76][Configuration]
-PreloadWeight=42
-
-[Containments][76][General]
-extraItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.cameraindicator
-knownItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.cameraindicator
 
 [Containments][8]
 activityId=
@@ -497,7 +359,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][8][Applets][21][Configuration]
-PreloadWeight=30
+PreloadWeight=0
 
 [Containments][8][Applets][21][Configuration][General]
 showPercentage=true
@@ -524,7 +386,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][28][Configuration]
-PreloadWeight=6
+PreloadWeight=0
 
 [Containments][8][Applets][28][Configuration][ConfigDialog]
 DialogHeight=540
@@ -589,5 +451,5 @@ extraItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.blue
 knownItems=org.kde.plasma.notifications,org.kde.plasma.vault,org.kde.plasma.bluetooth,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.battery,org.kde.plasma.manage-inputmethod,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.clipboard,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.printmanager,org.kde.plasma.brightness,org.kde.plasma.cameraindicator
 
 [ScreenMapping]
-itemsOnDisabledScreens=1,884b7bf3-ccba-4560-867b-dc0726837c67,26,desktop:/Graduate,desktop:/current,file:///lib,file:///run,file:///usr,file:///bin,file:///var,file:///tmp,file:///sys,file:///boot,file:///lib64,desktop:/Berkeley,file:///srv,file:///media,desktop:/program,file:///proc,file:///sbin,file:///mnt,file:///root,desktop:/Games,file:///etc,file:///home,file:///lost+found,file:///opt,file:///dev,file:///afs
-screenMapping=file:///home/derickwtseng/Videos,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Zotero,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Music,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Books,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Games,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Calendar,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Templates,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Zoom,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Pictures,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Resume.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads/Derick Tseng.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Derick Resume.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Desktop,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/GameSaves,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads/MSE PhD Acceptance Letter 2023--final.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads/Photos-In class experiment 2,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/passtext.txt,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads/Photos-In class experiment 2.zip,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Academic Summary CalCentral.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Public,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Summer Research,0,884b7bf3-ccba-4560-867b-dc0726837c67
+itemsOnDisabledScreens=0,884b7bf3-ccba-4560-867b-dc0726837c67,1,desktop:/ResearchProject,1,884b7bf3-ccba-4560-867b-dc0726837c67,26,file:///etc,desktop:/Games,file:///root,file:///mnt,file:///sbin,file:///proc,file:///afs,file:///dev,file:///opt,file:///lost+found,file:///home,file:///bin,file:///tmp,file:///var,file:///usr,file:///run,desktop:/current,file:///lib,desktop:/Graduate,desktop:/program,file:///media,desktop:/Berkeley,file:///srv,file:///lib64,file:///boot,file:///sys
+screenMapping=file:///home/derickwtseng/Downloads/Derick Tseng.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Derick Resume.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads/Photos-In class experiment 2,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Academic Summary CalCentral.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Summer Research,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Resume.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Templates,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Pictures,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Calendar,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Videos,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Games,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Books,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads/MSE PhD Acceptance Letter 2023--final.pdf,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/GameSaves,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/passtext.txt,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Desktop,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Public,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Music,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Downloads/Photos-In class experiment 2.zip,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Documents/Zoom,0,884b7bf3-ccba-4560-867b-dc0726837c67,file:///home/derickwtseng/Zotero,0,884b7bf3-ccba-4560-867b-dc0726837c67

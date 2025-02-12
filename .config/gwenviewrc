@@ -9,12 +9,14 @@ update_info=gwenview.upd:SideBar_StatusBar_Rename,gwenview.upd:ImageView_AlphaBa
 [General]
 HistoryEnabled=false
 LastUsedVersion=210800
+SideBarPage=operations
+ThumbnailBarIsVisible=true
 
 [ImageView]
 AnimationMethod=DocumentView::GLAnimation
 MouseWheelBehavior=MouseWheelBehavior::Zoom
 NavigationEndNotification=NavigationEndNotification::NeverWarn
-ThumbnailSplitterSizes=611,122
+ThumbnailSplitterSizes=699,139
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
@@ -35,7 +37,6 @@ HDMI-A-0 YPosition 1920x1080 HDMI-A-0=280
 HDMI-A-1 Height 1920x1080 HDMI-A-1=921
 HDMI-A-1 Width 1920x1080 HDMI-A-1=1602
 HDMI-A-1 Window-Maximized 1920x1080=true
-MenuBar=Disabled
 ToolBarsMovable=Disabled
 eDP Height 1920x1080=680
 eDP Width 1920x1080=1037
@@ -45,9 +46,11 @@ eDP-1 Height 1920x1080=672
 eDP-1 Width 1920x1080=1109
 
 [SideBar]
-InformationSplitterSizes=212,243
-SideBarSplitterSizes=227,886
+InformationSplitterSizes=221,254
+IsVisible ViewMode=true
+SideBarSplitterSizes=227,1253
 
 [ThumbnailView]
 AutoplayVideos=true
 LowResourceUsageMode=true
+ThumbnailSize=756

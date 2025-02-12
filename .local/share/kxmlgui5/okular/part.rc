@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
-<gui name="okular_part" version="54">
+<gui name="okular_part" version="55">
  <MenuBar>
   <Menu name="file">
    <text>&amp;File</text>
@@ -90,6 +90,7 @@
    <Action name="add_digital_signature"/>
    <Separator/>
    <Action name="speak_document"/>
+   <Action name="speak_from_current_page"/>
    <Action name="speak_current_page"/>
    <Action name="speak_stop_all"/>
    <Action name="speak_pause_resume"/>
@@ -107,21 +108,9 @@
    <Action group="about_merge" name="help_about_backend"/>
   </Menu>
  </MenuBar>
- <ToolBar name="mainToolBar">
-  <text>Main Toolbar</text>
-  <Action name="show_leftpanel"/>
-  <Separator/>
-  <Action name="mouse_drag"/>
-  <Action name="mouse_selecttools"/>
-  <Action name="annotation_favorites"/>
-  <Spacer/>
-  <Action name="page_number"/>
-  <Spacer/>
-  <Action name="view_zoom_out"/>
-  <Action name="zoom_to"/>
-  <Action name="view_zoom_in"/>
-  <Separator/>
-  <Action name="hamburger_menu"/>
+ <ToolBar hidden="true" iconSize="32" iconText="icononly" name="quickAnnotationToolBar" newline="true" position="right">
+  <text>Quick Annotation Toolbar</text>
+  <Action name="quick_annotation_action_bar"/>
  </ToolBar>
  <ToolBar hidden="true" iconText="icononly" name="annotationToolBar" newline="true">
   <text>Annotation Toolbar</text>
@@ -148,9 +137,21 @@
   <Spacer/>
   <Action name="hide_annotation_toolbar"/>
  </ToolBar>
- <ToolBar hidden="true" iconSize="32" iconText="icononly" name="quickAnnotationToolBar" newline="true" position="right">
-  <text>Quick Annotation Toolbar</text>
-  <Action name="quick_annotation_action_bar"/>
+ <ToolBar name="mainToolBar">
+  <text>Main Toolbar</text>
+  <Action name="show_leftpanel"/>
+  <Separator/>
+  <Action name="mouse_drag"/>
+  <Action name="mouse_selecttools"/>
+  <Action name="annotation_favorites"/>
+  <Spacer/>
+  <Action name="page_number"/>
+  <Spacer/>
+  <Action name="view_zoom_out"/>
+  <Action name="zoom_to"/>
+  <Action name="view_zoom_in"/>
+  <Separator/>
+  <Action name="hamburger_menu"/>
  </ToolBar>
  <ActionProperties scheme="Default">
   <Action name="annotation_freehand_line" shortcut="Alt+8; Ctrl+4"/>

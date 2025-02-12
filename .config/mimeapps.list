@@ -1,6 +1,7 @@
 [Added Associations]
 application/pdf=org.kde.okular.desktop;okularApplication_pdf.desktop;org.pwmt.zathura.desktop;org.gnome.Evince.desktop;libreoffice-draw.desktop;gimp.desktop;org.pwmt.zathura-pdf-mupdf.desktop;org.inkscape.Inkscape.desktop;
 application/vnd.comicbook+zip=org.kde.okular.desktop;
+application/vnd.oasis.opendocument.presentation=org.libreoffice.LibreOffice.impress.desktop;
 application/x-gdscript=nvim-qt.desktop;
 application/x-ipynb+json=org.kde.cantor.desktop;
 application/xml=nvim.desktop;
@@ -20,7 +21,7 @@ image/webp=org.gnome.gThumb.desktop;
 inode/directory=org.kde.dolphin.desktop;thunar.desktop;
 text/csv=org.libreoffice.LibreOffice.calc.desktop;org.onlyoffice.desktopeditors.desktop;
 text/markdown=nvim-qt.desktop;org.kde.kate.desktop;org.kde.kwrite.desktop;nvim.desktop;okularApplication_md.desktop;libreoffice-writer.desktop;okularApplication_txt.desktop;
-text/plain=nvim-qt.desktop;org.kde.kwrite.desktop;nvim.desktop;
+text/plain=nvim-qt.desktop;net.gwyddion.Gwyddion.desktop;org.kde.kwrite.desktop;nvim.desktop;
 text/x-csrc=nvim-qt.desktop;
 text/x-matlab=matlab.desktop;
 text/x-python=nvim-qt.desktop;nvim.desktop;
@@ -42,6 +43,7 @@ text/markdown=okularMd.desktop;katepart.desktop;okularTxt.desktop;
 [Default Applications]
 application/pdf=org.kde.okular.desktop;
 application/vnd.comicbook+zip=org.kde.okular.desktop;
+application/vnd.oasis.opendocument.presentation=org.libreoffice.LibreOffice.impress.desktop;
 application/x-extension-htm=org.mozilla.firefox.desktop
 application/x-extension-html=org.mozilla.firefox.desktop
 application/x-extension-shtml=org.mozilla.firefox.desktop
