@@ -24,7 +24,6 @@ SplitterSizes=271,1648
 
 [PageView]
 BackgroundColor=230,230,230
-MouseMode=TextSelect
 UseCustomBackgroundColor=true
 
 [Reviews]
