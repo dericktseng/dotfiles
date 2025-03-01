@@ -149,10 +149,10 @@ Walk Through Windows of Current Application Alternative (Reverse)=none,,Walk Thr
 Window Above Other Windows=none,,Keep Window Above Others
 Window Below Other Windows=none,,Keep Window Below Others
 Window Close=Alt+F4\tMeta+E,Alt+F4,Close Window
-Window Custom Quick Tile Bottom=,,Custom Quick Tile Window to the Bottom
-Window Custom Quick Tile Left=,,Custom Quick Tile Window to the Left
-Window Custom Quick Tile Right=,,Custom Quick Tile Window to the Right
-Window Custom Quick Tile Top=,,Custom Quick Tile Window to the Top
+Window Custom Quick Tile Bottom=none,,Custom Quick Tile Window to the Bottom
+Window Custom Quick Tile Left=none,,Custom Quick Tile Window to the Left
+Window Custom Quick Tile Right=none,,Custom Quick Tile Window to the Right
+Window Custom Quick Tile Top=none,,Custom Quick Tile Window to the Top
 Window Fullscreen=F11\tMeta+F,,Make Window Fullscreen
 Window Grow Horizontal=none,,Expand Window Horizontally
 Window Grow Vertical=none,,Expand Window Vertically
@@ -269,7 +269,7 @@ activate task manager entry 6=Meta+6,Meta+6,Activate Task Manager Entry 6
 activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
-activate widget 102=,none,Activate Application Launcher Widget
+activate widget 102=none,none,Activate Application Launcher Widget
 activate widget 29=Meta+;,none,Activate Media Player Widget
 activate widget 3=none,none,Activate Application Launcher Widget
 activate widget 32=none,none,Activate Icons-only Task Manager Widget
@@ -311,6 +311,9 @@ show-on-mouse-pos=none,Meta+V,Open Klipper at Mouse Position
 [services][firefox.desktop]
 _launch=Meta+Space
 
+[services][io.gitlab.librewolf-community.desktop]
+_launch=Meta+Space
+
 [services][org.kde.dolphin.desktop]
 _launch=Meta+N
 
@@ -329,9 +332,6 @@ FullScreenScreenShot=Print
 RectangularRegionScreenShot=Shift+Print
 WindowUnderCursorScreenShot=Ctrl+Print
 _launch=none
-
-[services][org.mozilla.firefox.desktop]
-new-window=Meta+Space
 
 [wacomtablet]
 Map to fullscreen=Meta+Ctrl+F,Meta+Ctrl+F,Map to fullscreen

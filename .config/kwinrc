@@ -2,7 +2,7 @@
 update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-effect-to-js,kwin.upd:port-scale-effect-to-js,kwin.upd:port-dimscreen-effect-to-js,kwin.upd:auto-bordersize,kwin.upd:animation-speed,kwin.upd:desktop-grid-click-behavior,kwin.upd:no-swap-encourage,kwin.upd:make-translucency-effect-disabled-by-default,kwin.upd:remove-flip-switch-effect,kwin.upd:remove-cover-switch-effect,kwin.upd:remove-cubeslide-effect,kwin.upd:remove-xrender-backend,kwin.upd:enable-scale-effect-by-default,kwin.upd:animation-speed-cleanup,bismuth_new_logger.upd:bismuth-new-logger,kwin.upd:replace-cascaded-zerocornered
 
 [Activities][LastVirtualDesktop]
-884b7bf3-ccba-4560-867b-dc0726837c67=efd77531-94f6-48f0-ae60-dcb174ff6b83
+884b7bf3-ccba-4560-867b-dc0726837c67=1eaa2278-289b-4974-bc7e-89c8e1166ce7
 
 [Compositing]
 LatencyPolicy=Medium
@@ -50,7 +50,7 @@ Active=true
 LatitudeAuto=37.751
 LongitudeAuto=-97.822
 Mode=Times
-NightTemperature=3400
+NightTemperature=3700
 TransitionTime=5
 
 [Plugins]
@@ -170,4 +170,4 @@ DelayFocusInterval=0
 RollOverDesktops=true
 
 [Xwayland]
-Scale=1.5
+Scale=1

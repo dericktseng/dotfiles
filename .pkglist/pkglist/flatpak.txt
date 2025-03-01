@@ -3,4 +3,5 @@ dev.vencord.Vesktop
 org.signal.Signal
 org.onlyoffice.desktopeditors
 com.usebottles.bottles
-org.mozilla.Thunderbird
+eu.betterbird.Betterbird
+io.gitlab.librewolf-community
