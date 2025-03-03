@@ -1,5 +1,6 @@
 // find settings in prefs.js
 
+user_pref("privacy.resistFingerprinting", false);
 user_pref("browser.compactmode.show", true);
 user_pref("app.normandy.startupRolloutPrefs.extensions.webcompat.disabled_shims.AdvertisingDotCom", true);
 user_pref("app.shield.optoutstudies.enabled", false);
@@ -77,10 +78,10 @@ user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);
 user_pref("privacy.userContext.enabled", true);
-user_pref("privacy.userContext.extension", "@testpilot-containers");
+// user_pref("privacy.userContext.extension", "@testpilot-containers");
 user_pref("privacy.userContext.ui.enabled", true);
-user_pref("services.sync.declinedEngines", "history,passwords,tabs,addresses,creditcards");
-user_pref("services.sync.engine.addresses.available", true);
+// user_pref("services.sync.declinedEngines", "history,passwords,tabs,addresses,creditcards");
+user_pref("services.sync.engine.addresses.available", false);
 user_pref("services.sync.engine.history", false);
 user_pref("services.sync.engine.passwords", false);
 user_pref("services.sync.engine.prefs.modified", false);
