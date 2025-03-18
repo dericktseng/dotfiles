@@ -20,7 +20,7 @@ _k_friendly_name=Accessibility
 [kcm_touchpad]
 Disable Touchpad=Touchpad Off,Touchpad Off,Disable Touchpad
 Enable Touchpad=Touchpad On,Touchpad On,Enable Touchpad
-Toggle Touchpad=Touchpad Toggle,Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku,Toggle Touchpad
+Toggle Touchpad=Touchpad Toggle,Touchpad Toggle\tTouchpad Toggle\tMeta+Ctrl+Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku,Toggle Touchpad
 _k_friendly_name=Touchpad
 
 [klipper]
@@ -315,7 +315,7 @@ _launch=Meta+Space
 _launch=Meta+N
 
 [services][org.kde.konsole.desktop]
-_launch=Ctrl+Alt+T\tMeta+Return
+_launch=Meta+Return
 
 [services][org.kde.krunner.desktop]
 _launch=Alt+Space\tSearch

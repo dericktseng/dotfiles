@@ -127,7 +127,7 @@
   <Action name="go_home" priority="0"/>
   <Action name="go_up" priority="0"/>
   <Action name="icons" priority="0"/>
-  <Action name="open_terminal" shortcut="Ctrl+Alt+T"/>
+  <Action name="open_terminal" shortcut="; "/>
   <Action name="renamefile" shortcut="Ctrl+R"/>
   <Action name="show_terminal_panel" shortcut="!"/>
   <Action name="stop" priority="0"/>
@@ -136,5 +136,6 @@
   <Action name="view_zoom_in" priority="0"/>
   <Action name="view_zoom_out" priority="0"/>
   <Action name="view_zoom_reset" priority="0"/>
+  <Action name="open_terminal_here" shortcut="Ctrl+Alt+T"/>
  </ActionProperties>
 </gui>
