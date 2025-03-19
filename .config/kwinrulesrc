@@ -1,16 +1,6 @@
 [$Version]
 update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
 
-[0564303c-07ff-462b-ab04-50e73e2511a8]
-Description=Window settings for vesktop
-desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
-desktopsrule=3
-title=Vesktop
-types=1
-wmclass=\svesktop
-wmclasscomplete=true
-wmclassmatch=1
-
 [0a2f8329-3c14-475b-8eb7-dde9703e2ed8]
 Description=Window settings for alacritty
 ignoregeometryrule=3
@@ -20,18 +10,6 @@ maximizevert=true
 maximizevertrule=3
 types=1
 wmclass=alacritty
-wmclassmatch=1
-
-[1]
-Description=Application settings for webcord
-clientmachine=localhost
-desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
-desktopsrule=3
-fullscreen=true
-maximizehoriz=true
-maximizevert=true
-title=Alacritty
-wmclass=webcord
 wmclassmatch=1
 
 [10]
@@ -61,38 +39,12 @@ minsizerule=6
 wmclass=armcord
 wmclassmatch=1
 
-[2]
-Description=Application settings for armcord
-activity=947fba56-16b5-485f-a224-8a350ea9517d
-clientmachine=localhost
-desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
-desktopsrule=3
-ignoregeometry=true
-maximizehoriz=true
-maximizevert=true
-placement=10
-title=Alacritty
-wmclass=armcord
-wmclassmatch=1
-
 [27bc7754-2f39-445d-a9c1-db24d5d26467]
 Description=Application settings for lutris
 clientmachine=localhost
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
 desktopsrule=3
 wmclass=lutris
-wmclassmatch=1
-
-[3]
-Description=Application settings for org.kde.konsole
-clientmachine=localhost
-maximizehoriz=true
-maximizehorizrule=3
-maximizevert=true
-maximizevertrule=3
-title=Alacritty
-wmclass=konsole org.kde.konsole
-wmclasscomplete=true
 wmclassmatch=1
 
 [3761faa3-cb59-4c39-9bd6-2c7a60cb1604]
@@ -107,16 +59,6 @@ wmclassmatch=1
 Description=Application settings for mpv
 blockcompositingrule=2
 clientmachine=localhost
-wmclass=gl mpv
-wmclasscomplete=true
-wmclassmatch=1
-
-[4]
-Description=Application settings for mpv
-blockcompositingrule=2
-clientmachine=localhost
-desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
-title=Alacritty
 wmclass=gl mpv
 wmclasscomplete=true
 wmclassmatch=1
@@ -136,23 +78,6 @@ maximizehorizrule=3
 maximizevert=true
 maximizevertrule=3
 wmclass=org.pwmt.zathura zathura
-wmclasscomplete=true
-wmclassmatch=1
-
-[5]
-Description=Application settings for lutris
-clientmachine=localhost
-desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
-desktopsrule=3
-title=Alacritty
-wmclass=lutris
-wmclassmatch=1
-
-[55c214d2-e3b2-40b5-9da2-9213ce88b270]
-Description=Application settings for org.mozilla.Thunderbird
-desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
-desktopsrule=3
-wmclass=\sorg.mozilla.Thunderbird
 wmclasscomplete=true
 wmclassmatch=1
 
@@ -216,15 +141,6 @@ desktopsrule=3
 wmclass=discord-screenaudio
 wmclassmatch=1
 
-[8]
-Description=Application settings for discord
-clientmachine=localhost
-desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
-desktopsrule=3
-title=Alacritty
-wmclass=discord
-wmclassmatch=1
-
 [8234c5b8-d877-4f53-b8b0-035bf069f1bb]
 Description=Window settings for alacritty
 clientmachine=localhost
@@ -266,8 +182,8 @@ wmclass=steam
 wmclassmatch=1
 
 [General]
-count=11
-rules=b2041e8a-6af3-425c-999b-1f19cef361db,c86e08f5-dbab-4dd5-a2ee-cac66d368c04,55c214d2-e3b2-40b5-9da2-9213ce88b270,d8d21e5f-ebc7-40cf-b314-44e778af3c64,0564303c-07ff-462b-ab04-50e73e2511a8,1,2,3,4,5,8
+count=1
+rules=bc6a7e4e-f8f3-42e3-8083-6930df1ad42b
 
 [a0f7118c-ae24-4fce-80a3-95d213be1f2c]
 Description=Application settings for xfce4-terminal
@@ -291,14 +207,6 @@ wmclassmatch=1
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
 desktopsrule=3
 
-[b2041e8a-6af3-425c-999b-1f19cef361db]
-Description=Application settings for eu.betterbird.Betterbird
-desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
-desktopsrule=3
-wmclass=\seu.betterbird.Betterbird
-wmclasscomplete=true
-wmclassmatch=1
-
 [ba51ca1e-e78d-40ec-a0ef-80a16ff9f3d4]
 Description=Application settings for alacritty
 ignoregeometry=true
@@ -308,6 +216,14 @@ maximizehorizrule=3
 maximizevert=true
 maximizevertrule=3
 wmclass=alacritty
+wmclassmatch=1
+
+[bc6a7e4e-f8f3-42e3-8083-6930df1ad42b]
+Description=Application settings for eu.betterbird.Betterbird
+desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
+desktopsrule=3
+wmclass=\seu.betterbird.Betterbird
+wmclasscomplete=true
 wmclassmatch=1
 
 [c478d45f-9e75-4425-a904-835c5f3a8e65]
@@ -335,15 +251,6 @@ strictgeometryrule=2
 wmclass=lxterminal
 wmclassmatch=1
 
-[c86e08f5-dbab-4dd5-a2ee-cac66d368c04]
-Description=Application settings for eu.betterbird.Betterbird
-clientmachine=localhost
-desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
-desktopsrule=3
-wmclass=Mail eu.betterbird.Betterbird
-wmclasscomplete=true
-wmclassmatch=1
-
 [c8fce17a-6731-4a6d-9fc9-34891862353e]
 Description=Application settings for discord
 activity=4bc9cf04-def1-4f75-9233-cc936be4c7df
@@ -358,14 +265,6 @@ blockcompositing=true
 blockcompositingrule=2
 clientmachine=localhost
 wmclass=ffxii_tza.exe
-wmclassmatch=1
-
-[d8d21e5f-ebc7-40cf-b314-44e778af3c64]
-Description=Application settings for vesktop
-clientmachine=localhost
-desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
-desktopsrule=3
-wmclass=vesktop
 wmclassmatch=1
 
 [dc39e914-5ad2-445c-b82e-6d1e90dcdac8]
