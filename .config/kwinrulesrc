@@ -222,9 +222,9 @@ wmclassmatch=1
 Description=Application settings for eu.betterbird.Betterbird
 desktops=1eaa2278-289b-4974-bc7e-89c8e1166ce7
 desktopsrule=3
-wmclass=\seu.betterbird.Betterbird
+wmclass=eu.betterbird.Betterbird
 wmclasscomplete=true
-wmclassmatch=1
+wmclassmatch=2
 
 [c478d45f-9e75-4425-a904-835c5f3a8e65]
 Description=Application settings for elisa
