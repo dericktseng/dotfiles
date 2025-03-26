@@ -1,7 +1,31 @@
 local utils = require('sniputils')
 local ls = require('luasnip')
 local extras = require("luasnip.extras")
+local s = ls.snippet
+local sn = ls.snippet_node
+local t = ls.text_node
+local i = ls.insert_node
+local f = ls.function_node
+local c = ls.choice_node
+local d = ls.dynamic_node
+local r = ls.restore_node
+local events = require("luasnip.util.events")
+local fmta = require("luasnip.extras.fmt").fmta
+local rep = extras.rep
 -- local isn = ls.indent_snippet_node
+
+-- needs to end with / (e.g. $HOME/Documents/LatexClasses/)
+local latex_class_dir = "$HOME/Documents/LatexClasses/"
+
+-- copies the latex file specified in active choice
+-- of choice node into current directory.
+local function copy_latex_class_callback(choice_node)
+  local active_choice = choice_node.active_choice
+  local filename = active_choice.static_text[1]
+  local file = latex_class_dir .. filename
+
+  os.execute('cp ' .. file .. ' ./')
+end
 
 return {
   s({trig='verb', name='verbatim'},
@@ -313,6 +337,11 @@ return {
           <><>
           \end{document}
     ]],
-    {i(1, 'article'), i(2, 'Title'), t('\t'), t('\t'), i(3)})
+    {
+      d(1, utils.filter_snippet, {}, {
+          user_args = {{'cls'}, latex_class_dir, copy_latex_class_callback},
+      }),
+      i(2, 'Title'), t('\t'), t('\t'), i(3)
+    })
   )
 }

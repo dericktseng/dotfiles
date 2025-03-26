@@ -7,6 +7,7 @@ local f = ls.function_node
 local c = ls.choice_node
 local d = ls.dynamic_node
 local r = ls.restore_node
+local events = require("luasnip.util.events")
 
 -- Common utility functions used to write luasnippets
 local utils = {}
@@ -81,22 +82,25 @@ end
 -- requires the 'fd' binary
 -- filetypes: the table of filetype extensions (e.g. {'txt', 'pdf', 'png'}).
 -- returns file handle to iterate over the files that were filtered by their filetypes
-utils.filter_dir = function(filetypes)
+utils.filter_dir = function(filetypes, cwd)
   -- constructs the extension string for fd (-e ext1 -e ext2 ...)
   local extension_str = ''
   for _, ext in pairs(filetypes) do
     extension_str = extension_str .. ' -e ' .. ext
   end
 
-  local handle = assert(io.popen('fd -t f' .. extension_str))
+  local rootdir = (cwd == nil) and '' or ' --base-directory "' .. cwd .. '"'
+  local cmd = 'fd -t f' .. extension_str .. rootdir
+  local handle = assert(io.popen(cmd))
   return handle
 end
 
 -- returns snippetnode containing a choicenode to cycle between files in the
 -- current working directory of given filetypes
--- filetypes: the table of filetype extensions (without the leading .)
-utils.filter_snippet = function(args, parent, old_state, filetypes)
-  local handle = utils.filter_dir(filetypes)
+-- callback is a function that is called, which takes in a node as an argument
+-- user_args: the table of filetype extensions (without the leading .)
+utils.filter_snippet = function(args, parent, old_state, filetypes, cwd, callback)
+  local handle = utils.filter_dir(filetypes, cwd)
   local node_files = {}
   for file in handle:lines() do
     table.insert(node_files, t(file))
@@ -106,8 +110,16 @@ utils.filter_snippet = function(args, parent, old_state, filetypes)
   handle:close()
 
   -- insert final insert node for manual input
-  table.insert(node_files, i(1, 'file'))
-  return sn(nil, c(1, node_files))
+  table.insert(node_files, i(1, 'other'))
+  return sn(nil, c(1, node_files, {
+    node_callbacks = {
+      [events.leave] = function(node, _evt_args)
+        if callback ~= nil then
+          callback(node)
+        end
+      end
+    }
+  }))
 end
 
 return utils

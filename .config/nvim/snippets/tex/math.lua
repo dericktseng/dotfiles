@@ -1,7 +1,21 @@
+local ls = require('luasnip')
 local utils = require'sniputils'
 local captured = utils.captured
 local capturedtrim = utils.captured_trim
 local mathenv = utils.mathenv
+local extras = require("luasnip.extras")
+local s = ls.snippet
+local sn = ls.snippet_node
+local t = ls.text_node
+local i = ls.insert_node
+local f = ls.function_node
+local c = ls.choice_node
+local d = ls.dynamic_node
+local r = ls.restore_node
+local fmta = require("luasnip.extras.fmt").fmta
+local fmt = require("luasnip.extras.fmt").fmt
+local rep = extras.rep
+-- local isn = ls.indent_snippet_node
 
 -- autosnippets (https://www.lua.org/pil/20.2.html)
 local autosnips = {
