@@ -32,20 +32,12 @@ return {
     fmta([[\verb|<>|]], i(1))
   ),
 
-  s({trig='fref', name='figure reference'},
-    fmta([[Figure \ref{fig:<>}]], i(1))
+  s({trig='ref', name='cleveref reference'},
+    fmta([[\cref{<>}]], i(1))
   ),
 
-  s({trig='sref', name='section reference'},
-    fmta([[Section \ref{sec:<>}]], i(1))
-  ),
-
-  s({trig='tref', name='table reference'},
-    fmta([[Table \ref{tab:<>}]], i(1))
-  ),
-
-  s({trig='eref', name='equation reference'},
-    fmta([[Eq \eqref{eq:<>}]], i(1))
+  s({trig='Ref', name='cleveref reference capital'},
+    fmta([[\Cref{<>}]], i(1))
   ),
 
   s({trig='\\\\', name='newline', wordtrig=false},
