@@ -22,7 +22,7 @@ local latex_class_dir = "$HOME/Documents/LatexClasses/"
 local function copy_latex_class_callback(choice_node)
   local active_choice = choice_node.active_choice
   local filename = active_choice.static_text[1]
-  local file = latex_class_dir .. filename
+  local file = latex_class_dir .. filename .. '.cls'
 
   os.execute('cp ' .. file .. ' ./')
 end
@@ -339,7 +339,7 @@ return {
     ]],
     {
       d(1, utils.filter_snippet, {}, {
-          user_args = {{'cls'}, latex_class_dir, copy_latex_class_callback},
+          user_args = {{'cls'}, latex_class_dir, utils.trim_file_ext, copy_latex_class_callback},
       }),
       i(2, 'Title'), t('\t'), t('\t'), i(3)
     })

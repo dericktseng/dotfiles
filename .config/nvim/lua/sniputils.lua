@@ -95,15 +95,22 @@ utils.filter_dir = function(filetypes, cwd)
   return handle
 end
 
+-- returns a string with the file extension removed.
+utils.trim_file_ext = function(path)
+  local filename = string.gsub(path, "%..*$", "")
+  return filename
+end
+
 -- returns snippetnode containing a choicenode to cycle between files in the
 -- current working directory of given filetypes
 -- callback is a function that is called, which takes in a node as an argument
 -- user_args: the table of filetype extensions (without the leading .)
-utils.filter_snippet = function(args, parent, old_state, filetypes, cwd, callback)
+utils.filter_snippet = function(args, parent, old_state, filetypes, cwd, filterfunc, callback)
   local handle = utils.filter_dir(filetypes, cwd)
   local node_files = {}
   for file in handle:lines() do
-    table.insert(node_files, t(file))
+    local text_insert = (filterfunc ~= nil) and filterfunc(file) or file
+    table.insert(node_files, t(text_insert))
   end
 
   -- closes the handle
