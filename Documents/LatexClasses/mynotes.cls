@@ -10,7 +10,7 @@
 \RequirePackage{amsfonts}
 \RequirePackage{amssymb}
 \RequirePackage{amsthm}
-\RequirePackage{siunitx}
+\RequirePackage[per-mode=fraction]{siunitx}
 \RequirePackage{graphicx}
 \RequirePackage{svg}
 \RequirePackage{adjustbox}
@@ -42,6 +42,9 @@
 
 % biblatex
 \addbibresource{references.bib}
+
+% fancyhdr
+\fancyhead[L]{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % commands
