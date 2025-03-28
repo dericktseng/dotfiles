@@ -165,6 +165,12 @@ local regularsnips = {
   s({trig='si', name='math siunitx', priority=1001, {condition=mathenv}},
     fmta([[\SI{<>}{<>}]], {i(1), i(2)}), {condition=mathenv}),
 
+  s({trig='ssi', name='math siunitx', priority=1001, {condition=mathenv}},
+    fmta([[\si{<>}]], {i(1)}), {condition=mathenv}),
+
+  s({trig='units', name='specify units', priority=1000, {condition=mathenv}},
+    fmta([=[\left[\si{<>}\right]]=], {i(1)}), {condition=mathenv}),
+
   s({trig='int', name='integral'},
     fmta([[\int_{<>}^{<>} {<>} \: d{<>}]], {i(1),i(2),i(3),i(4)}), {condition=mathenv}),
 

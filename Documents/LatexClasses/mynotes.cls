@@ -20,7 +20,7 @@
 \RequirePackage{tabularx}
 \RequirePackage{booktabs}
 \RequirePackage{pdfpages}
-\RequirePackage[style=numeric]{biblatex}
+\RequirePackage[style=numeric,refsection=chapter]{biblatex}
 \RequirePackage[headings]{fancyhdr}
 \RequirePackage{mdframed}
 \RequirePackage{hyperref}
@@ -31,14 +31,17 @@
 \author{Derick Tseng}
 \pagestyle{fancy}
 
+% hyperref
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
+    linkcolor=cyan!30!blue,
     filecolor=magenta,
     urlcolor=cyan,
 }
-
 \urlstyle{same}
+
+% biblatex
+\addbibresource{references.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % commands
