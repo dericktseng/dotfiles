@@ -13,18 +13,19 @@
 \RequirePackage[per-mode=fraction]{siunitx}
 \RequirePackage{graphicx}
 \RequirePackage{svg}
+\RequirePackage{pdfpages}
 \RequirePackage{adjustbox}
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 \RequirePackage{tabularx}
 \RequirePackage{booktabs}
-\RequirePackage{pdfpages}
 \RequirePackage[style=numeric,refsection=chapter]{biblatex}
-\RequirePackage[headings]{fancyhdr}
+\RequirePackage{fancyhdr}
 \RequirePackage{mdframed}
 \RequirePackage{hyperref}
 \RequirePackage{cleveref}
+\RequirePackage{derivative}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Configuration

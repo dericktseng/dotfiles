@@ -103,11 +103,17 @@ local autosnips = {
 
 
   -- quick environments
+  s({trig='times', name='times', wordTrig=true},
+    fmta([[\times ]], {}), {condition=mathenv}),
+
   s({trig='sqr', name='square root'},
     fmta([[\sqrt{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='txt', name='text environment'},
     fmta([[\text{<>}]], {i(1)}), {condition=mathenv}),
+
+  s({trig='prb', name='probability'},
+    fmta([[\Pr{\left[<>\right]}]], {i(1)}), {condition=mathenv}),
 
   s({trig='...', name='ldots'}, t([[\ldots]]), {condition=mathenv}),
 
@@ -115,6 +121,9 @@ local autosnips = {
 
   s({trig='bb', name='mathbb'},
     fmta([[\mathbb{<>}]], {i(1)}), {condition=mathenv}),
+
+  s({trig='cal', name='mathcal'},
+    fmta([[\mathcal{<>}]], {i(1)}), {condition=mathenv}),
 
   s({trig='wt', name='wide tilde'},
     fmta([[\widetilde{<>}]], {i(1)}), {condition=mathenv}),
@@ -149,10 +158,7 @@ local autosnips = {
 
 -- non-auto-snippets
 local regularsnips = {
-  s({trig='x', name='times', wordTrig=true},
-    fmta([[\times ]], {}), {condition=mathenv}),
-
-  s({trig='sum', name='times', wordTrig=true},
+  s({trig='sum', name='sum', wordTrig=true},
     fmta([[\sum_{<>}^{<>} ]], {i(1), i(2)}), {condition=mathenv}),
 
   s({trig='(%d)e', name='times 10 power', regTrig=true, wordTrig=false},
@@ -173,9 +179,6 @@ local regularsnips = {
 
   s({trig='int', name='integral'},
     fmta([[\int_{<>}^{<>} {<>} \: d{<>}]], {i(1),i(2),i(3),i(4)}), {condition=mathenv}),
-
-  s({trig='dif', name='differentiate'},
-    fmta([[\frac{d<>}{d<>}]], {i(1,'y'), i(2,'x')}), {condition=mathenv}),
 
   s({trig='exp', name='natural exponent'},
     fmta([[\exp <>]], {i(1)}), {condition=mathenv}),
@@ -204,8 +207,11 @@ local regularsnips = {
   s({trig='ln', name='ln'},
     fmta([[\ln <>]], {i(1)}), {condition=mathenv}),
 
-  s({trig='pdif', name='partial differentiate'},
-    fmta([[\frac{\partial <>}{\partial <>}]], {i(1,'y'), i(2,'x')}), {condition=mathenv}),
+  s({trig='dv', name='differentiate'},
+    fmta([[\odv{<>}{<>}]], {i(1,'y'), i(2,'t')}), {condition=mathenv}),
+
+  s({trig='pdv', name='partial differentiate'},
+    fmta([[\pdv{<>}{<>}]], {i(1,'y'), i(2,'t')}), {condition=mathenv}),
 
   s({trig='box', name='box'},
     fmt([[\box{{{}}}]], {i(1)}), {condition=mathenv}),

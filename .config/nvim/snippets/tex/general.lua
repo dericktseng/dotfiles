@@ -94,6 +94,8 @@ return {
 
   s({trig='np', name='newpage'}, t([[\newpage]])),
 
+  s({trig='cp', name='clearpage'}, t([[\clearpage]])),
+
   s({trig='bib', name='bibliography'}, {
     t({[[\newpage]], ''}),
     t({[[\bibliographystyle{plain}]], ''}),
