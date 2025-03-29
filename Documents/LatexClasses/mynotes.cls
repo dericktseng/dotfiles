@@ -1,6 +1,6 @@
 % Preamble
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{myhomework}[Custom Homework Template]
+\ProvidesClass{mynotes}[Custom Notes Template]
 
 \LoadClass[12pt]{memoir}
 
@@ -46,6 +46,9 @@
 
 % fancyhdr
 \fancyhead[L]{}
+
+% siunitx
+\DeclareSIUnit\angstrom{\text {Å}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % commands
