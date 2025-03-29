@@ -27,6 +27,9 @@ local autosnips = {
   s({ trig='(%b[])/', name='frac parenthesis', regTrig=true, priority=1001 },
     fmta([[\frac{<>}{<>}]], {f(capturedtrim,{}), i(1)}), {condition=mathenv}),
 
+  s({ trig='(\\%a+%b{})/', name='frac around command', regTrig=true, priority=1001 },
+    fmta([[\frac{<>}{<>}]], {f(captured,{}), i(1)}), {condition=mathenv}),
+
   s({ trig='([^$={}()%s%[%]]+)/', name='fancyfrac 1', regTrig=true, priority=1000 },
     fmta([[\frac{<>}{<>}]], {f(captured,{}), i(1)}), {condition=mathenv}),
 
