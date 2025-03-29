@@ -238,7 +238,7 @@ return {
     fmta([[
       \begin{figure}[htpb]
       <>\centering
-      <>\includegraphics[width=\textwidth]{<>}
+      <>\includegraphics[width=0.7\textwidth]{<>}
       <>\caption{<>}
       <>\label{fig:<>}
       \end{figure}

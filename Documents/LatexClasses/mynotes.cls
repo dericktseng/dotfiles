@@ -45,7 +45,8 @@
 \addbibresource{references.bib}
 
 % fancyhdr
-\fancyhead[L]{}
+\fancyhead[LO]{}
+\fancyhead[RE]{}
 
 % siunitx
 \DeclareSIUnit\angstrom{\text {Å}}
