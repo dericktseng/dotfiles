@@ -61,8 +61,9 @@
 
 % mdassumption
 \newmdenv[
-frametitlebackgroundcolor=orange!50,
-linecolor=orange!50,
+hidealllines=true,
+leftline=true,
+linecolor=orange!70,
 backgroundcolor=orange!10,
 linewidth=2pt,
 frametitle={Assumptions},
@@ -77,8 +78,28 @@ innerrightmargin=10pt,
 innertopmargin=0pt,
 linewidth=2pt,
 frametitle={Note:},
-backgroundcolor=gray!10
+backgroundcolor=gray!10,
 ]{note}
+
+% proof
+\renewmdenv[
+hidealllines=true,
+leftline=true,
+linecolor=blue!50,
+linewidth=2pt,
+backgroundcolor=blue!5,
+frametitle=Proof,
+]{proof}
+
+% theorem
+\theoremstyle{plain}
+\newmdtheoremenv[
+hidealllines=true,
+leftline=true,
+linecolor=cyan!50!blue,
+linewidth=2pt,
+backgroundcolor=cyan!10,
+]{theorem}{Theorem}[section]
 
 % definition
 \theoremstyle{definition}
@@ -90,7 +111,6 @@ linewidth=2pt,
 frametitlebackgroundcolor=green!50,
 hidealllines=true,
 leftline=true,
-% frametitle={Definition}
 ]
 {definition}{Definition}[section]
 
