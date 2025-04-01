@@ -96,6 +96,8 @@ return {
 
   s({trig='cp', name='clearpage'}, t([[\clearpage]])),
 
+  s({trig='chp', name='chapter'}, fmta([[\chapter{<>}]], i(1))),
+
   s({trig='bib', name='bibliography'}, {
     t({[[\newpage]], ''}),
     t({[[\bibliographystyle{plain}]], ''}),
@@ -143,18 +145,24 @@ return {
   ),
 
   s(
-    {trig='svg', name='insert svg top align'},
+    {trig='svg', name='Figure environment'},
     fmta([[
-      \begin{center}
-      <>\includesvg[width=<>\textwidth]{<>}
-      \end{center}
-      ]],
-      {
-        t('\t'),
-        i(1,''),
-        d(2, utils.filter_snippet, {}, {user_args = {{'svg'}}})
-      }
-    )
+      \begin{figure}[htpb]
+      <>\centering
+      <>\includesvg[inkscapelatex=false,width=0.7\textwidth]{<>}
+      <>\caption{<>}
+      <>\label{fig:<>}
+      \end{figure}
+    ]],
+    {
+      t('\t'),
+      t('\t'),
+      d(1, utils.filter_snippet, {}, {user_args = {{'svg'}}}),
+      t('\t'),
+      i(2),
+      t('\t'),
+      i(3)
+    })
   ),
 
   s(
@@ -179,12 +187,20 @@ return {
       {i(1, 'Python'), i(2)}
     )
   ),
-  
+
   s(
     {trig='pdf', name='insert pdf'},
     fmta(
       [[\includepdf[pages=-,pagecommand={}]{<>}]],
       {d(1, utils.filter_snippet, {}, {user_args = {{'pdf'}}})}
+    )
+  ),
+
+  s(
+    {trig='inc', name='include tex'},
+    fmta(
+      [[\include{<>}]],
+      {d(1, utils.filter_snippet, {}, {user_args = {{'tex'}}})}
     )
   ),
 

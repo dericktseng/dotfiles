@@ -35,9 +35,10 @@
 % hyperref
 \hypersetup{
     colorlinks=true,
-    linkcolor=cyan!30!blue,
+    linkcolor=purple,
     filecolor=magenta,
-    urlcolor=cyan,
+    urlcolor=magenta,
+    citecolor=purple
 }
 \urlstyle{same}
 
