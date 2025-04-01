@@ -148,6 +148,8 @@ local autosnips = {
   s({trig='ooo', name='infinity'}, t('\\infty'), {condition=mathenv}),
   s({trig='hhh', name='hbar'}, t('\\hbar'), {condition=mathenv}),
   s({trig='>>', name='much greater'}, t('\\gg '), {condition=mathenv}),
+  s({trig='<=', name='less-than-equal'}, t('\\leq '), {condition=mathenv}),
+  s({trig='>=', name='greater-than-equal'}, t('\\geq '), {condition=mathenv}),
   s({trig='<<', name='much less'}, t('\\ll '), {condition=mathenv}),
   s({trig='=>', name='implies'}, t('\\implies '), {condition=mathenv}),
   s({trig='->', name='to'}, t('\\to '), {condition=mathenv}),

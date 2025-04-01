@@ -98,11 +98,7 @@ return {
 
   s({trig='chp', name='chapter'}, fmta([[\chapter{<>}]], i(1))),
 
-  s({trig='bib', name='bibliography'}, {
-    t({[[\newpage]], ''}),
-    t({[[\bibliographystyle{plain}]], ''}),
-    t({[[\bibliography{refs.bib}]]})
-  }),
+  s({trig='bib', name='bibliography'}, t([[\printbibliography]])),
 
   s(
     {trig='(s*)sec', name='section', regTrig=true},
