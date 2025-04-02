@@ -20,7 +20,7 @@
 \RequirePackage{subcaption}
 \RequirePackage{tabularx}
 \RequirePackage{booktabs}
-\RequirePackage[style=numeric,refsection=chapter]{biblatex}
+\RequirePackage[style=nature,refsection=chapter]{biblatex}
 \RequirePackage{fancyhdr}
 \RequirePackage{mdframed}
 \RequirePackage{hyperref}
