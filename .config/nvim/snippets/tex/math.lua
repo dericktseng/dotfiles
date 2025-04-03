@@ -27,6 +27,12 @@ local autosnips = {
   s({ trig='(%b[])/', name='frac parenthesis', regTrig=true, priority=1001 },
     fmta([[\frac{<>}{<>}]], {f(capturedtrim,{}), i(1)}), {condition=mathenv}),
 
+  s({ trig=[[\left%((.+)\right%)/]], name='frac around parenthesis command', regTrig=true, priority=1002 },
+    fmta([[\frac{\left(<>\right)}{<>}]], {f(captured,{}), i(1)}), {condition=mathenv}),
+
+  s({ trig=[[\left%[(.+)\right%]/]], name='frac around bracket command', regTrig=true, priority=1002 },
+    fmta([[\frac{\left[<>\right]}{<>}]], {f(captured,{}), i(1)}), {condition=mathenv}),
+
   s({ trig='(\\%a+%b{})/', name='frac around command', regTrig=true, priority=1001 },
     fmta([[\frac{<>}{<>}]], {f(captured,{}), i(1)}), {condition=mathenv}),
 
@@ -163,6 +169,12 @@ local autosnips = {
 
 -- non-auto-snippets
 local regularsnips = {
+  s({trig='pa', name='parentheses'},
+    fmt([[\left( {} \right)]], {i(1)}), {condition=mathenv}),
+
+  s({trig='br', name='bracket'},
+    fmt([=[\left[ {} \right]]=], {i(1)}), {condition=mathenv}),
+
   s({trig='sum', name='sum', wordTrig=true},
     fmta([[\sum_{<>}^{<>} ]], {i(1), i(2)}), {condition=mathenv}),
 
@@ -179,7 +191,7 @@ local regularsnips = {
   s({trig='ssi', name='math siunitx', priority=1001, {condition=mathenv}},
     fmta([[\si{<>}]], {i(1)}), {condition=mathenv}),
 
-  s({trig='units', name='specify units', priority=1000, {condition=mathenv}},
+  s({trig='units', name='specify units', {condition=mathenv}},
     fmta([=[\left[\si{<>}\right]]=], {i(1)}), {condition=mathenv}),
 
   s({trig='int', name='integral'},
