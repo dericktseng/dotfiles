@@ -321,6 +321,26 @@ return {
   ),
 
   s(
+    {trig='theorem', name='theorem environment'},
+    fmta([[
+      \begin{theorem}<>
+      <><>
+      \end{theorem}
+    ]],
+    {i(1), t('\t'), i(2)})
+  ),
+
+  s(
+    {trig='proof', name='proof environment'},
+    fmta([[
+      \begin{proof}
+      <><>
+      \end{proof}
+    ]],
+    {t('\t'), i(1)})
+  ),
+
+  s(
     {trig='beg', name='begin environment'},
     fmta([[
       \begin{<>}<>
