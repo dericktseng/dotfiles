@@ -10,7 +10,6 @@ detailViewIconSize=16
 
 [PlayerSettings]
 ScanAtStartup=false
-ShowSystemTrayIcon=true
 
 [Shortcuts]
 NextTrack=>
@@ -20,9 +19,6 @@ Seek=Right
 file_quit=Ctrl+Q;\s
 togglePartyMode=P
 toggle_playlist=F9
-
-[UiSettings]
-ColorScheme=
 
 [Views]
 ColorScheme=Default
