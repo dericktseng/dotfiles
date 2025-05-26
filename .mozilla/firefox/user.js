@@ -136,6 +136,6 @@ user_pref("network.trr.mode", 3);
 user_pref("sidebar.main.tools", "aichat,syncedtabs,history,bookmarks");
 user_pref("sidebar.new-sidebar.has-used", true);
 user_pref("sidebar.old-sidebar.has-used", true);
-user_pref("sidebar.position_start", false);
+user_pref("sidebar.position_start", true);
 user_pref("sidebar.revamp", true);
 user_pref("sidebar.verticalTabs", true);
