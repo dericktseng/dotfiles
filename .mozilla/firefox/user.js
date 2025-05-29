@@ -131,11 +131,3 @@ user_pref("dom.private-attribution.submission.enabled", 0);
 user_pref("network.trr.custom_uri", "https://doh.libredns.gr/dns-query");
 user_pref("network.trr.uri", "https://doh.libredns.gr/dns-query");
 user_pref("network.trr.mode", 3);
-
-// sidebar vertical tabs
-user_pref("sidebar.main.tools", "aichat,syncedtabs,history,bookmarks");
-user_pref("sidebar.new-sidebar.has-used", true);
-user_pref("sidebar.old-sidebar.has-used", true);
-user_pref("sidebar.position_start", true);
-user_pref("sidebar.revamp", true);
-user_pref("sidebar.verticalTabs", true);
