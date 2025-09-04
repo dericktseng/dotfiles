@@ -9,12 +9,8 @@ alias lla="/bin/ls -lAh --group-directories-first --color=auto"
 alias df='/usr/bin/df -h'
 alias free='free --human'
 alias np="$EDITOR PKGBUILD"
-alias kh='cut -d "," -f 1 ~/.ssh/known_hosts | cut -d " " -f 1 | uniq'
-alias zshrc="$EDITOR $HOME/.zshrc"
-alias zshenv="$EDITOR $HOME/.zshenv"
+alias hosts='cut -d "," -f 1 ~/.ssh/known_hosts | cut -d " " -f 1 | uniq'
 alias src="exec /usr/bin/fish"
-alias vimrc="$EDITOR $HOME/.config/nvim/init.lua"
-alias vrc="cd $HOME/.config/nvim/ && $EDITOR"
 alias vim="/usr/bin/nvim"
 alias vv="source .venv/bin/activate.fish"
 alias open="xdg-open"
@@ -24,7 +20,6 @@ alias y="sudo dnf upgrade --refresh && flatpak update"
 alias ytdl="yt-dlp"
 alias dt="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias hd="hexdump -C"
-alias maxima="rmaxima"
 alias tmux="tmux -u"
 alias diff="diff --color=auto"
 alias governor="cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor | sort | uniq -c"
