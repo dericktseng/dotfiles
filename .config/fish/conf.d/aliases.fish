@@ -8,7 +8,6 @@ alias la="/bin/ls -A --group-directories-first --color=auto"
 alias lla="/bin/ls -lAh --group-directories-first --color=auto"
 alias df='/usr/bin/df -h'
 alias free='free --human'
-alias np="$EDITOR PKGBUILD"
 alias hosts='cut -d "," -f 1 ~/.ssh/known_hosts | cut -d " " -f 1 | uniq'
 alias src="exec /usr/bin/fish"
 alias vim="/usr/bin/nvim"
@@ -19,7 +18,6 @@ alias gdb="gdb -tui"
 alias y="sudo dnf upgrade --refresh && flatpak update"
 alias ytdl="yt-dlp"
 alias dt="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-alias hd="hexdump -C"
 alias tmux="tmux -u"
 alias diff="diff --color=auto"
 alias governor="cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor | sort | uniq -c"
