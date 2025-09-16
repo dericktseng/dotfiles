@@ -1,0 +1,11 @@
+#!/bin/bash
+
+OSU_DIR="$HOME/.var/app/com.usebottles.bottles/data/bottles/bottles/OSU/drive_c/Program Files/osu!/Songs"
+
+for f in *.osz; do
+    [ -e "$f" ] && echo "$f" || break
+    filename="${f%.*}"
+    /usr/bin/mkdir -p "$OSU_DIR/$filename/"
+    /usr/bin/unzip -qq "$f" -d "$OSU_DIR/$filename/"
+    rm "$f"
+done

@@ -1,0 +1,4 @@
+#!/bin/bash
+env WINEPREFIX=/home/derickwtseng/.var/app/com.usebottles.bottles/data/bottles/bottles/Audio \
+    WINELOADER=/home/derickwtseng/.var/app/com.usebottles.bottles/data/bottles/runners/soda-7.0-9/bin/wine \
+    /usr/bin/yabridgectl "$@"
