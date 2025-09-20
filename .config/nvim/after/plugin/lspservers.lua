@@ -1,6 +1,5 @@
 -- LSP language-specific settings
 local cmp_capability = require('cmp_nvim_lsp').default_capabilities()
-local lspconfig = require('lspconfig')
 
 -- make sure these lsp servers are installed
 local servers = {
@@ -20,31 +19,3 @@ require("mason-lspconfig").setup({
   automatic_enable = true,
   ensure_installed = servers
 })
-
--- lua_ls configuration
-lspconfig.lua_ls.setup {
-  on_init = function(client)
-    local path = client.workspace_folders[1].name
-    if vim.loop.fs_stat(path..'/.luarc.json') or vim.loop.fs_stat(path..'/.luarc.jsonc') then
-      return
-    end
-
-    client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
-      runtime = { version = 'LuaJIT' },
-      workspace = {
-        checkThirdParty = false,
-        library = { vim.env.VIMRUNTIME }
-      }
-    })
-  end,
-
-  settings = {
-    Lua = {
-      diagnostics = { globals = {'vim'} },
-      telemetry = { enable = false, },
-    }
-  }
-}
-
--- gdscript configuration
-lspconfig.gdscript.setup{}
