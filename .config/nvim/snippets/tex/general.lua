@@ -33,11 +33,7 @@ return {
   ),
 
   s({trig='ref', name='cleveref reference'},
-    fmta([[\cref{<>}]], i(1))
-  ),
-
-  s({trig='Ref', name='cleveref reference capital'},
-    fmta([[\Cref{<>}]], i(1))
+    fmta([[(\Cref{<>})]], i(1))
   ),
 
   s({trig='\\\\', name='newline', wordtrig=false},
