@@ -108,7 +108,6 @@ pkgconf
 plasma-desktop
 polkit-kde
 powertop
-profile-sync-daemon
 pulseaudio-libs
 pulseaudio-utils
 python-matplotlib
