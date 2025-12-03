@@ -7,6 +7,7 @@ autoconf
 automake
 bc
 bear
+binutils-devel
 breeze-gtk
 cargo
 clang
@@ -29,8 +30,8 @@ ffmpeg
 ffmpegthumbnailer
 ffmpegthumbs
 fira-code-fonts
-fira-mono-nerd-fonts
 fira-code-nerd-fonts
+fira-mono-nerd-fonts
 firefox
 fontconfig
 fzf
@@ -88,6 +89,7 @@ lm_sensors
 make
 mathjax
 meson
+mold
 mozilla-openh264
 mpv
 mtools
@@ -125,13 +127,13 @@ rlwrap
 rnnoise
 rust
 rust-src
+scache
 sddm
 socat
 sqlite
 sscg
 strace
 sudo
-sxhkd
 texlive-scheme-full
 tk
 tmux
