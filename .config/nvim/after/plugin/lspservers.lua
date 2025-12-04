@@ -7,10 +7,9 @@ local servers = {
   'pyright',
   'rust_analyzer',
   'clangd',
-  'lua_ls',
   'texlab',
   'ts_ls',
-  'slint_lsp'
+  'sqruff',
 }
 
 -- setup mason
