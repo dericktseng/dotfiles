@@ -10,7 +10,7 @@ require'nvim-treesitter.configs'.setup {
     'rust',
     'bash',
     'gdscript',
-    'typescript'
+    'typescript',
   },
 
   highlight = {

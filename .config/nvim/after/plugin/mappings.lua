@@ -21,6 +21,7 @@ keymap('n', '<Leader>R', [[:so %<CR>:echo 'reloaded file'<CR>]], { silent = fals
 -- keymaps
 keymap('t', '<ESC>', [[<C-\><C-N>]])
 keymap('i', '<C-C>', [[<ESC>]])
+vim.g.ftplugin_sql_omni_key = '<C-X>'
 
 -- surrounding delimiters
 keymap('x', '{', [=[<ESC>`<i{<ESC>`>la}<ESC>]=])
