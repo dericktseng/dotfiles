@@ -14,7 +14,8 @@ require('telescope').setup({
         ["i"] = {
           ["<C-t>"] = require "telescope.actions".select_tab
         }
-      }
+      },
+      dir_icon = "🗁"
     }
   },
 })

@@ -79,23 +79,23 @@ local plugins = {
 
 -- lazy.nvim optional configurations
 local opts = {
-  -- ui = {
-  --   icons = {
-  --     cmd = "⌘",
-  --     config = "🛠",
-  --     event = "📅",
-  --     ft = "📂",
-  --     init = "⚙",
-  --     keys = "🗝",
-  --     plugin = "🔌",
-  --     runtime = "💻",
-  --     require = "🌙",
-  --     source = "📄",
-  --     start = "🚀",
-  --     task = "📌",
-  --     lazy = "💤 ",
-  --   },
-  -- },
+  ui = {
+    icons = {
+      cmd = "⌘",
+      config = "🛠",
+      event = "📅",
+      ft = "📂",
+      init = "⚙",
+      keys = "🗝",
+      plugin = "🔌",
+      runtime = "💻",
+      require = "🌙",
+      source = "📄",
+      start = "🚀",
+      task = "📌",
+      lazy = "💤 ",
+    },
+  },
 }
 
 -- lua plugins
