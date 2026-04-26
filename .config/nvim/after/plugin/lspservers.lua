@@ -8,7 +8,6 @@ local servers = {
   'rust_analyzer',
   'clangd',
   'texlab',
-  'ts_ls',
   'sqruff',
 }
 
