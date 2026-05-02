@@ -1,0 +1,11 @@
+[sie][Gate#0]
+attack=5
+curveThreshold=-6
+hpfFrequency=60
+hpfMode=1
+lpfFrequency=6000
+lpfMode=1
+makeup=8
+reduction=-12
+sidechainMode=1
+sidechainPreamp=-2.7755575615628914e-17
