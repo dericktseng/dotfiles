@@ -1,4 +1,5 @@
 local fn = require('functions')
+vim.treesitter.start()
 
 vim.api.nvim_create_user_command('AutoRun', function()
   fn.autorun_cmd('cargo run')

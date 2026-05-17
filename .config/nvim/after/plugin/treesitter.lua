@@ -6,6 +6,7 @@ require('nvim-treesitter').install ({
   'javascript',
   'python',
   'rust',
+  'lua',
   'bash',
   'gdscript',
 })
