@@ -104,4 +104,19 @@ fn.local_diagnostics = function()
   })
 end
 
+--- @param diagnostic? vim.Diagnostic
+--- @param bufnr integer
+fn.on_jump = function(diagnostic, bufnr)
+  if not diagnostic then return end
+  vim.diagnostic.show(
+    diagnostic.namespace,
+    bufnr,
+    { diagnostic },
+    {
+      virtual_lines = { current_line = true },
+      virtual_text = false,
+    }
+  )
+end
+
 return fn

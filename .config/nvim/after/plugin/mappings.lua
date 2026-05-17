@@ -125,8 +125,9 @@ keymap('n', '<Leader>fq', ':Telescope quickfix<CR>')
 keymap('n', '<LocalLeader>fq', ':Telescope loclist<CR>')
 
 -- LSP Configurations
-keymap('n', ']d', function() vim.diagnostic.jump({count=1, float=true}) end)
-keymap('n', '[d', function() vim.diagnostic.jump({count=-1, float=true}) end)
+vim.diagnostic.config({ jump = { on_jump = fn.on_jump } })
+keymap('n', ']d', function() vim.diagnostic.jump{count=1} end)
+keymap('n', '[d', function() vim.diagnostic.jump{count=-1} end)
 keymap('n', '<Localleader>d', fn.local_diagnostics)
 keymap('n', '<Leader>d', ':Telescope diagnostics<CR>')
 keymap('n', '<Leader>ed', ':Telescope lsp_definitions<CR>')
