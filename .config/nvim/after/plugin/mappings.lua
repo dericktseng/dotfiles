@@ -15,7 +15,7 @@ keymap('n', '<C-Q>', [[mz[s1z=`z]])
 -- keymap('n', 'gx', [[:execute 'silent! !xdg-open ' . shellescape(expand('<cWORD>'), 1)<CR>]])
 
 -- updating
-keymap('n', '<Leader>p', ':Lazy sync<CR>')
+keymap('n', '<Leader>p', vim.pack.update)
 keymap('n', '<Leader>R', [[:so %<CR>:echo 'reloaded file'<CR>]], { silent = false })
 
 -- keymaps
@@ -125,8 +125,8 @@ keymap('n', '<Leader>fq', ':Telescope quickfix<CR>')
 keymap('n', '<LocalLeader>fq', ':Telescope loclist<CR>')
 
 -- LSP Configurations
-keymap('n', ']d', vim.diagnostic.goto_next)
-keymap('n', '[d', vim.diagnostic.goto_prev)
+keymap('n', ']d', function() vim.diagnostic.jump({count=1}) end)
+keymap('n', '[d', function() vim.diagnostic.jump({count=-1}) end)
 keymap('n', '<Localleader>d', fn.local_diagnostics)
 keymap('n', '<Leader>d', ':Telescope diagnostics<CR>')
 keymap('n', '<Leader>ed', ':Telescope lsp_definitions<CR>')

@@ -1,102 +1,41 @@
--- bootstrap lazy.nvim
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
-
--- actual list of plugins I use.
-local plugins = {
-  {
-    'hrsh7th/nvim-cmp',
-    dependencies = {
-      'hrsh7th/cmp-buffer',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-path',
-      'hrsh7th/cmp-calc',
-      'saadparwaiz1/cmp_luasnip',
-    },
-  },
-
-  {
-    'nvim-telescope/telescope.nvim',
-    dependencies = {
-      {'nvim-lua/plenary.nvim'},
-      {'nvim-telescope/telescope-fzf-native.nvim', build = 'make'},
-      {'crispgm/telescope-heading.nvim'},
-      {'nvim-telescope/telescope-file-browser.nvim'},
-      {'nvim-telescope/telescope-ui-select.nvim' },
-    }
-  },
-
-  {
-    'neovim/nvim-lspconfig',
-    dependencies = {
-      'williamboman/mason.nvim',
-      'williamboman/mason-lspconfig.nvim',
-    }
-  },
-
-  {
-    'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate'
-  },
-
-  {
-    'iamcco/markdown-preview.nvim',
-    build = 'cd app && yarn install',
-  },
-
-  {
-    -- dir = '~/Desktop/program/balance-theme.nvim',
-    'MetriC-DT/balance-theme.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      -- only enable theme when in light background mode
-      if vim.o.background == 'light' then
-        require'balance'.setup()
-      end
+-- packchange build
+vim.api.nvim_create_autocmd('PackChanged', { callback = function(ev)
+  local name, kind = ev.data.spec.name, ev.data.kind
+  if kind == 'update' or kind == 'install' then
+    if name == 'nvim-treesitter' then
+      if not ev.data.active then vim.cmd.packadd('nvim-treesitter') end
+      vim.cmd('TSUpdate'):wait()
+    elseif name == 'telescope-fzf-native.nvim' then
+      vim.system({ 'make' }, { cwd = ev.data.path }):wait()
     end
-  },
+  end
+end })
 
-  'L3MON4D3/LuaSnip',
-  'nvim-lualine/lualine.nvim',
-  'windwp/nvim-autopairs',
-  'kylechui/nvim-surround',
-  'lervag/vimtex',
-  'tpope/vim-fugitive',
-  'junegunn/vim-easy-align',
-}
+-- plugin call
+vim.pack.add({
+  { src = 'https://github.com/neovim/nvim-lspconfig' },
+  { src = 'https://github.com/OXY2DEV/markview.nvim' },
+  { src = 'https://github.com/L3MON4D3/LuaSnip', version = vim.version.range('2.*') },
+  { src = 'https://github.com/nvim-treesitter/nvim-treesitter', version = 'main' },
+  { src = 'https://github.com/nvim-lua/plenary.nvim' }, -- dep for telescope
+  { src = 'https://github.com/nvim-telescope/telescope.nvim' },
+  { src = 'https://github.com/nvim-telescope/telescope-fzf-native.nvim' },
+  { src = 'https://github.com/nvim-telescope/telescope-file-browser.nvim' },
+  { src = 'https://github.com/nvim-telescope/telescope-ui-select.nvim' },
+  { src = 'https://github.com/mason-org/mason.nvim' },
+  { src = 'https://github.com/mason-org/mason-lspconfig.nvim' },
+  { src = 'https://github.com/nvim-lualine/lualine.nvim' },
+  { src = 'https://github.com/windwp/nvim-autopairs' },
+  { src = 'https://github.com/kylechui/nvim-surround' },
+  { src = 'https://github.com/lervag/vimtex' },
+  { src = 'https://github.com/tpope/vim-fugitive' },
+  { src = 'https://github.com/MetriC-DT/balance-theme.nvim' },
+  { src = 'https://github.com/hrsh7th/nvim-cmp' },
+  { src = 'https://github.com/hrsh7th/cmp-buffer' },
+  { src = 'https://github.com/hrsh7th/cmp-nvim-lsp' },
+  { src = 'https://github.com/hrsh7th/cmp-path' },
+  { src = 'https://github.com/hrsh7th/cmp-calc' },
+  { src = 'https://github.com/saadparwaiz1/cmp_luasnip' },
+})
 
-
--- lazy.nvim optional configurations
-local opts = {
-  ui = {
-    icons = {
-      cmd = "⌘",
-      config = "🛠",
-      event = "📅",
-      ft = "📂",
-      init = "⚙",
-      keys = "🗝",
-      plugin = "🔌",
-      runtime = "💻",
-      require = "🌙",
-      source = "📄",
-      start = "🚀",
-      task = "📌",
-      lazy = "💤 ",
-    },
-  },
-}
-
--- lua plugins
-return require('lazy').setup(plugins, opts)
+if vim.o.background == 'light' then require'balance'.setup() end
