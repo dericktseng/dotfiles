@@ -4,7 +4,7 @@ local cmp_capability = require('cmp_nvim_lsp').default_capabilities()
 -- make sure these lsp servers are installed
 local servers = {
   'ruff',
-  'pyright',
+  'ty',
   'rust_analyzer',
   'clangd',
   'texlab',
