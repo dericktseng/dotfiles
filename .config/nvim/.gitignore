@@ -1,2 +1,4 @@
 lazy-lock.json
 packer_compiled.lua
+.luarc.json
+nvim-pack-lock.json

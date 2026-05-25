@@ -1,6 +1,7 @@
 #!/bin/bash
 
-act_id=$(/usr/bin/qdbus org.kde.ActivityManager /ActivityManager/Activities CurrentActivity)
-act_name=$(qdbus org.kde.ActivityManager /ActivityManager/Activities ActivityName "$act_id")
+# act_id=$(/usr/bin/qdbus org.kde.ActivityManager /ActivityManager/Activities CurrentActivity)
+# act_name=$(qdbus org.kde.ActivityManager /ActivityManager/Activities ActivityName "$act_id")
 
-/usr/bin/firefox -P "$act_name"
+# /usr/bin/firefox -P "$act_name"
+/usr/bin/firefox -P "$1"

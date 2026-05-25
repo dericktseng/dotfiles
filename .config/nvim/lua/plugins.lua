@@ -7,6 +7,8 @@ vim.api.nvim_create_autocmd('PackChanged', { callback = function(ev)
       vim.cmd('TSUpdate'):wait()
     elseif name == 'telescope-fzf-native.nvim' then
       vim.system({ 'make' }, { cwd = ev.data.path }):wait()
+    -- elseif name == 'LuaSnip' then
+    --   vim.system({ 'make install_jsregexp' }):wait()
     end
   end
 end })
