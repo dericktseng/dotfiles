@@ -9,4 +9,6 @@ if status is-interactive
 
     /usr/bin/zoxide init fish | source
     /usr/bin/fzf --fish | source
+
+    fish_config theme choose my
 end
