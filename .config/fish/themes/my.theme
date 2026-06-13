@@ -33,7 +33,7 @@ fish_color_search_match white --bold --background=brblack
 fish_color_selection white --bold --background=brblack 
 fish_color_status red 
 fish_color_user brgreen 
-fish_color_valid_path --underline=single 
+fish_color_valid_path magenta --underline=single 
 fish_pager_color_background 
 fish_pager_color_completion --reset 
 fish_pager_color_description yellow --italics 
