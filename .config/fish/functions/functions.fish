@@ -1,10 +1,3 @@
-function flame
-    perf record -F 99 -a -g -- $argv
-    perf script | stackcollapse-perf.pl > out.perf-folded
-    flamegraph.pl out.perf-folded > perf.svg
-    firefox perf.svg
-end
-
 function fixpk
     sudo pkcon -v -p repair
     sudo pkcon refresh force -c -1 -v -p

@@ -23,4 +23,3 @@ alias governor="cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor | sort
 alias grub-update="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
 alias visudo="sudo EDITOR=$EDITOR visudo"
 alias kde-reload="qdbus org.kde.KWin /KWin reconfigure"
-alias upd="flatpak update --noninteractive --user & sudo dnf upgrade"
