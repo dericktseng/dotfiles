@@ -26,3 +26,7 @@ function lscwd
         ls
     end
 end
+
+function fish_command_not_found
+    /usr/bin/echo "Command not found $argv[1]"
+end
