@@ -9,6 +9,7 @@ local servers = {
   'clangd',
   'texlab',
   'sqruff',
+  'slint_lsp'
 }
 
 -- setup mason
