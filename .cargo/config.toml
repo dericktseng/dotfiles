@@ -4,3 +4,4 @@ rustflags = ["-C", "link-arg=--ld-path=/usr/bin/mold"]
 
 [alias]
 rr = "run --release"
+br = "build --release"
